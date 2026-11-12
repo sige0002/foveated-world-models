@@ -1,0 +1,4 @@
+citing_id,cited_id,cited_title,cited_url,locator,priority_reason,scope_status
+F047,F006,Flow Matching for Generative Modeling,https://arxiv.org/abs/2210.02747v1,"§3, References",速度回帰の基礎,in_scope
+F049,,Denoising Diffusion Implicit Models,https://arxiv.org/abs/2010.02502,"§3, Appendix B",蒸留対象のサンプラー,unresolved
+F050,,Rate-Distortion Theory,https://en.wikipedia.org/wiki/Rate%E2%80%93distortion_theory,§IV-B,証明の関連基礎、本文引用の一次書誌を要確認,unresolved

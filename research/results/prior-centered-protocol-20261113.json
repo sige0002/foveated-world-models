@@ -1,0 +1,21 @@
+{
+  "created_at": "2026-11-12T18:21:36.871149+00:00",
+  "variants": [
+    "prior_centered_residual",
+    "prior_centered_flow"
+  ],
+  "steps": 400,
+  "seed": 42,
+  "dim": 128,
+  "layers": 2,
+  "cache": "runs/reference-idm-with-prior6501",
+  "comparison": "Same parameters/init/inputs versus prior_residual and prior_flow; only neural state coordinates change. Correctly compare both direct and flow controls.",
+  "evaluation": "Final400 on development64; no best checkpoint selection. Observed96 is not new confirmation.",
+  "source_hashes": {
+    "research/centered_prior_correction.py": "c01d917c84a012f503df823b11d2b9e4382161176ad7ca8a58ee9af775c8001a",
+    "research/train_cached_decoders.py": "200bc39c15fc6d86a99f9754397c3ec40d7793a261008fdbd6d6843134fbfd1d"
+  },
+  "status": "Training started, same final400 and sequential variants, session80893",
+  "threads": 2,
+  "precision_note": "float32 default highest; centered pair CPU2, previous pair CPU4; exact numerical training trajectory equality across thread settings is not claimed."
+}

@@ -1,0 +1,4 @@
+{
+  "reviewed_at": "2026-11-12T16:52:21.233442+00:00",
+  "checks": "Host inspected stochastic interpolant Theorems 6/7 and B.1 Gaussian characteristic factor and conditional expectation argument; 128D results use low-dimensional projections. Building NF W2 Lipschitz/Gronwall proof and CIFAR table. OTCFM gradient equivalence positivity assumption and 2D NPE. MultisampleFM Table 1 NFE and D.5 double Jensen transport bound. Distribution transport not paired future MSE; F035 still pending proof verification."
+}

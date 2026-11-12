@@ -1,0 +1,42 @@
+paper_id,field,item_index,kind,source_url,locator,note
+F071,social_background,1,author_claim,https://arxiv.org/html/2606.29059v2,§1,本文と指定箇所を確認。
+F071,technical_background,1,author_claim,https://arxiv.org/html/2606.29059v2,§1–2,本文と指定箇所を確認。
+F071,problem,1,author_claim,https://arxiv.org/html/2606.29059v2,§3–4,本文と指定箇所を確認。
+F071,method,1,author_claim,https://arxiv.org/html/2606.29059v2,"§3.2–3.4, §5.1, Appendix F–H",本文と指定箇所を確認。
+F071,results,1,demonstrated,https://arxiv.org/html/2606.29059v2,"§4.1–4.2, §5.2–5.5, Tables 1–2",本文と指定箇所を確認。
+F071,contributions,1,author_claim,https://arxiv.org/html/2606.29059v2,§2–3; Appendix H,本文と指定箇所を確認。
+F071,summary,1,interpretation,https://arxiv.org/html/2606.29059v2,§3–5,本文と指定箇所を確認。
+F071,remaining_issues,1,interpretation,https://arxiv.org/html/2606.29059v2,"Appendix E, J; §3.2",本文と指定箇所を確認。
+F075,social_background,1,author_claim,https://arxiv.org/html/2507.13162v2,"§1, §3",本文と指定箇所を確認。
+F075,technical_background,1,author_claim,https://arxiv.org/html/2507.13162v2,§3,本文と指定箇所を確認。
+F075,problem,1,author_claim,https://arxiv.org/html/2507.13162v2,§4–5,本文と指定箇所を確認。
+F075,method,1,author_claim,https://arxiv.org/html/2507.13162v2,"§4.1–4.2, Appendix C.2",本文と指定箇所を確認。
+F075,results,1,demonstrated,https://arxiv.org/html/2507.13162v2,Appendix C.2 Table 7,本文と指定箇所を確認。
+F075,contributions,1,author_claim,https://arxiv.org/html/2507.13162v2,§4–5,本文と指定箇所を確認。
+F075,summary,1,interpretation,https://arxiv.org/html/2507.13162v2,§4–5,本文と指定箇所を確認。
+F075,remaining_issues,1,interpretation,https://arxiv.org/html/2507.13162v2,§5; Appendix C.2,本文と指定箇所を確認。
+F076,social_background,1,author_claim,https://arxiv.org/html/2507.13942v2,§1,本文と指定箇所を確認。
+F076,technical_background,1,author_claim,https://arxiv.org/html/2507.13942v2,§2–3,本文と指定箇所を確認。
+F076,problem,1,author_claim,https://arxiv.org/html/2507.13942v2,§3,本文と指定箇所を確認。
+F076,method,1,author_claim,https://arxiv.org/html/2507.13942v2,"§3.1–3.2, §4.3",本文と指定箇所を確認。
+F076,results,1,demonstrated,https://arxiv.org/html/2507.13942v2,§5 Table 1,本文と指定箇所を確認。
+F076,contributions,1,author_claim,https://arxiv.org/html/2507.13942v2,§3–5,本文と指定箇所を確認。
+F076,summary,1,interpretation,https://arxiv.org/html/2507.13942v2,§3–5,本文と指定箇所を確認。
+F076,remaining_issues,1,interpretation,https://arxiv.org/html/2507.13942v2,"§3.3, §4.3, §5",本文と指定箇所を確認。
+F077,social_background,1,author_claim,https://arxiv.org/html/2308.13712v3,"§1, §6",本文と指定箇所を確認。
+F077,technical_background,1,author_claim,https://arxiv.org/html/2308.13712v3,§1–4,本文と指定箇所を確認。
+F077,problem,1,author_claim,https://arxiv.org/html/2308.13712v3,§4–5,本文と指定箇所を確認。
+F077,method,1,author_claim,https://arxiv.org/html/2308.13712v3,§4–5 Eq. 6–7; Appendix A,本文と指定箇所を確認。
+F077,results,1,demonstrated,https://arxiv.org/html/2308.13712v3,§4.1 Table 1,本文と指定箇所を確認。
+F077,contributions,1,author_claim,https://arxiv.org/html/2308.13712v3,§4–5; Appendix A,本文と指定箇所を確認。
+F077,summary,1,interpretation,https://arxiv.org/html/2308.13712v3,§4–6,本文と指定箇所を確認。
+F077,remaining_issues,1,interpretation,https://arxiv.org/html/2308.13712v3,"§5–6, Appendix C",本文と指定箇所を確認。
+F072,social_background,1,author_claim,https://arxiv.org/html/2610.03607v1,"Abstract, §1",著者の主張と調査者解釈は本文中に区別
+F072,technical_background,1,author_claim,https://arxiv.org/html/2610.03607v1,§1,著者の主張と調査者解釈は本文中に区別
+F072,problem,1,author_claim,https://arxiv.org/html/2610.03607v1,§3,著者の主張と調査者解釈は本文中に区別
+F072,method,1,author_claim,https://arxiv.org/html/2610.03607v1,"§3, Appendix B–C, eqs. 25–28",著者の主張と調査者解釈は本文中に区別
+F072,results,1,demonstrated,https://arxiv.org/html/2610.03607v1,"Abstract, §4, Appendix D",著者の主張と調査者解釈は本文中に区別
+F072,contributions,1,author_claim,https://arxiv.org/html/2610.03607v1,§3,著者の主張と調査者解釈は本文中に区別
+F072,summary,1,author_claim,https://arxiv.org/html/2610.03607v1,"§3, Appendix B",著者の主張と調査者解釈は本文中に区別
+F072,remaining_issues,1,interpretation,https://arxiv.org/html/2610.03607v1,Appendix B–D,原文を踏まえた調査者の解釈
+F071,method,2,demonstrated,https://github.com/facebookresearch/Flow-World-Models/blob/c15062509c509284848a344f07364562673f0e0b/models/DDT.py,"DiTwDDTHead.forward lines 783–839, 883–895",別途確認した公式code commit c15062509c509284848a344f07364562673f0e0bでは、raw noisy targetは狭いtrunkと独立にwide headへ埋め込まれる。論文v2の学習codeとの完全一致は未確認。

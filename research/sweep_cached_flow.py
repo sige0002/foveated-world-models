@@ -25,10 +25,10 @@ def main():
     assert file_hash(args.cache/'validation.pt')==manifest['cache_sha256']['validation']
     data=torch.load(args.cache/'validation.pt',weights_only=True)
     saved=torch.load(args.checkpoint,weights_only=True)
-    if saved['variant']!='flow':
+    if saved['variant'] not in ('flow', 'endpoint_flow', 'endpoint_anchored', 'noisy_residual', 'wide_flow'):
         parser.error('flow checkpoint required')
     h=data['current']
-    model=make_decoder('flow',saved['dim'],saved['layers'],h.shape[-1],data['codes'].shape[-1],int(h.shape[-2]**.5))
+    model=make_decoder(saved['variant'],saved['dim'],saved['layers'],h.shape[-1],data['codes'].shape[-1],int(h.shape[-2]**.5))
     model.load_state_dict(saved['state_dict'],strict=True)
     results=[]
     for steps in args.integration_steps:

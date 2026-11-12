@@ -1,0 +1,11 @@
+/home/sadasue/foveated-world-models/.venv/lib/python3.12/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+test_constant_code_exactly_matches_zero (research.idm.test_spatial_current_probe.SpatialKernelTests.test_constant_code_exactly_matches_zero) ... ok
+test_eigen_solution_matches_direct_ridge (research.idm.test_spatial_current_probe.SpatialKernelTests.test_eigen_solution_matches_direct_ridge) ... ok
+test_query_values_do_not_fit_training_scale_or_bandwidth (research.idm.test_spatial_current_probe.SpatialKernelTests.test_query_values_do_not_fit_training_scale_or_bandwidth) ... ok
+test_zero_and_nonzero_code_have_same_total_kernel_scale (research.idm.test_spatial_current_probe.SpatialKernelTests.test_zero_and_nonzero_code_have_same_total_kernel_scale) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.009s
+
+OK

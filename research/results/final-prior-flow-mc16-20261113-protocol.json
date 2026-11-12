@@ -1,0 +1,13 @@
+{
+  "checkpoint": "/home/sadasue/foveated-world-models/runs/reference-idm42-final-prior-flow42-20261113/prior_flow-seed42.pt",
+  "checkpoint_sha256": "69f89ddd06460816da6f7b641425d7fb6832e43ba4168aa54931897955120b3b",
+  "cache_sha256": "7b419bea1eda0f0e871ab40273bf1b59a1d67d5bf2bab23885ba9fee43ab40f4",
+  "script_sha256": "ce578561aa85923040063340694985460423331e02f8e0168724710b0de78973",
+  "noise_seed": 20261113,
+  "samples": 16,
+  "solver_steps": 4,
+  "batch_size": 8,
+  "threads": 4,
+  "primary": "Mean of16 iid draws, fixed model/solver; secondary prefix1/4 from same16. No best-of-N, no model or code optimization.",
+  "scope": "Previously observed96; independently seeded Monte Carlo evaluation, not new data."
+}

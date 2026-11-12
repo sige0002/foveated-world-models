@@ -1,0 +1,11 @@
+{
+  "paper_ids": [
+    "F001",
+    "F002",
+    "F003",
+    "F004",
+    "F005"
+  ],
+  "checks": "Host reread extracted methods/results/limits and primary fulltext table and implementation/limitations passages. RAE Appendix B.2 norm derivative equality independently rejected; not used as guarantee. All reported metrics retained in their original domains; no DINO future MSE guarantee.",
+  "reviewed_at": "2026-11-12T16:24:52.409870+00:00"
+}

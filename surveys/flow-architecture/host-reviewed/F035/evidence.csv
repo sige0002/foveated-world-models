@@ -1,0 +1,10 @@
+paper_id,field,item_index,kind,source_url,locator,note
+F035,social_background,1,author_claim,https://arxiv.org/html/2411.08314v5,§1,材料科学等で疎な条件付き観測から確率動力学を予測する需要。
+F035,technical_background,1,author_claim,https://arxiv.org/html/2411.08314v5,§1,連続条件で時刻間のpaired標本が乏しいと既存法の学習が不安定。
+F035,problem,1,author_claim,https://arxiv.org/html/2411.08314v5,§3,連続条件にまたがる条件付き分布の時間発展を学ぶ。
+F035,method,1,author_claim,https://arxiv.org/html/2411.08314v5,"§3.1–3.3 Theorems 3.1–3.2, Appendix A.1–A.2",条件ペアのidentity couplingと同じ条件分布の下で条件付き場が連続の式を満たすとする。異方的OTとmismatch kernelを用い、正密度、kernel正則性、有限条件差2次モーメント下で勾配差O(E||y0−y1||²)を主張。
+F035,results,1,demonstrated,https://arxiv.org/html/2411.08314v5,§5 Table 2,材料動力学PC軌道、128生成標本の平均の全時刻test MAEはCVSFM 0.188±0.147、Neural ODE 0.264±0.129。MAEとサンプルコスト付きの結果。
+F035,contributions,1,author_claim,https://arxiv.org/html/2411.08314v5,§3,連続条件の輸送とkernel重みで疎な非対応標本の学習を安定化する手法。
+F035,summary,1,interpretation,https://arxiv.org/html/2411.08314v5,"§3, §5",条件yの対応を近似することと、現状態と未来の真のpaired jointを保存することは別。128標本平均のMAE改善は単一標本DINO MSEの保証でない。
+F035,remaining_issues,1,author_claim,https://arxiv.org/html/2411.08314v5,§5.1,著者: kernel幅、Euclidean距離の高次元での劣化、batch・データ不足による不安定性が課題。調査者: 勾配誤差上界の定数や有限条件差の実効値は本実装では未検証。
+F035,remaining_issues,2,interpretation,https://arxiv.org/html/2411.08314v5,Theorem 3.2 and Appendix A.2 Eq A.6–A.10,ホスト確認: Theorem3.2の全θ一様上界には付録A.2で使うhθの一様有界性と微分・期待値交換等が追加で必要。大域kernel二次上界と組み合わせればO(E[r²])を得るが、A.10のlittle-o展開は点ごとのTaylor展開だけでは保証されず、mismatch分布族の追加集中条件が必要。

@@ -1,0 +1,41 @@
+paper_id,field,item_index,kind,source_url,locator,note
+F001,social_background,1,not_stated,https://arxiv.org/html/2512.11225v1,§1,本文中の記載範囲を確認。
+F001,technical_background,1,author_claim,https://arxiv.org/html/2512.11225v1,"§3.1, §4.2",確認範囲の記録。
+F001,problem,1,author_claim,https://arxiv.org/html/2512.11225v1,§3.2–3.4,確認範囲の記録。
+F001,method,1,author_claim,https://arxiv.org/html/2512.11225v1,§3.2–3.3; Appendix A,本文と指定箇所を確認。
+F001,results,1,demonstrated,https://arxiv.org/html/2512.11225v1,"§4.1 Table 1, §4.2 Table 2",本文と指定箇所を確認。
+F001,contributions,1,author_claim,https://arxiv.org/html/2512.11225v1,§2–3,確認範囲の記録。
+F001,summary,1,interpretation,https://arxiv.org/html/2512.11225v1,§3–4,確認範囲の記録。
+F001,remaining_issues,1,interpretation,https://arxiv.org/html/2512.11225v1,§4.1; Appendix D,本文と指定箇所を確認。
+F002,social_background,1,not_stated,https://arxiv.org/html/2605.07079v1,§1,本文中の記載範囲を確認。
+F002,technical_background,1,author_claim,https://arxiv.org/html/2605.07079v1,"§1, §3",確認範囲の記録。
+F002,problem,1,author_claim,https://arxiv.org/html/2605.07079v1,§3–4,確認範囲の記録。
+F002,method,1,author_claim,https://arxiv.org/html/2605.07079v1,§3; Appendix A.2,本文と指定箇所を確認。
+F002,results,1,demonstrated,https://arxiv.org/html/2605.07079v1,"§4.1, Table 1",確認範囲の記録。
+F002,contributions,1,author_claim,https://arxiv.org/html/2605.07079v1,§2–3,確認範囲の記録。
+F002,summary,1,interpretation,https://arxiv.org/html/2605.07079v1,§3–4,確認範囲の記録。
+F002,remaining_issues,1,interpretation,https://arxiv.org/html/2605.07079v1,§5; Appendix A.3,本文と指定箇所を確認。
+F003,social_background,1,not_stated,https://arxiv.org/html/2608.29029v1,§1,本文中の記載範囲を確認。
+F003,technical_background,1,author_claim,https://arxiv.org/html/2608.29029v1,"§1, §3",確認範囲の記録。
+F003,problem,1,author_claim,https://arxiv.org/html/2608.29029v1,§4–5,確認範囲の記録。
+F003,method,1,author_claim,https://arxiv.org/html/2608.29029v1,"§4.1–4.2, Eq. 10–17",本文と指定箇所を確認。
+F003,results,1,demonstrated,https://arxiv.org/html/2608.29029v1,"§5.1–5.3, Tables 1–2, 5–6",本文と指定箇所を確認。
+F003,contributions,1,author_claim,https://arxiv.org/html/2608.29029v1,"§2, §4",確認範囲の記録。
+F003,summary,1,interpretation,https://arxiv.org/html/2608.29029v1,§4–5,確認範囲の記録。
+F003,remaining_issues,1,interpretation,https://arxiv.org/html/2608.29029v1,§6; Table 5,確認範囲の記録。
+F004,social_background,1,not_stated,https://arxiv.org/html/2407.01392v1,§1,本文中の記載範囲を確認。
+F004,technical_background,1,author_claim,https://arxiv.org/html/2407.01392v1,§1–2,確認範囲の記録。
+F004,problem,1,author_claim,https://arxiv.org/html/2407.01392v1,"§1, §3",確認範囲の記録。
+F004,method,1,author_claim,https://arxiv.org/html/2407.01392v1,"§3, Appendix D.1, D.4–D.7",本文と指定箇所を確認。
+F004,results,1,demonstrated,https://arxiv.org/html/2407.01392v1,"§4.1–4.2, Fig. 3/Table 1; Appendix D.9",本文と指定箇所を確認。
+F004,contributions,1,author_claim,https://arxiv.org/html/2407.01392v1,§3; Appendix A.1–A.2,本文と指定箇所を確認。
+F004,summary,1,interpretation,https://arxiv.org/html/2407.01392v1,§3–4,確認範囲の記録。
+F004,remaining_issues,1,interpretation,https://arxiv.org/html/2407.01392v1,§5 Limitations; §4,本文と指定箇所を確認。
+F005,social_background,1,not_stated,https://arxiv.org/html/2510.11690v1,§1,本文中の記載範囲を確認。
+F005,technical_background,1,author_claim,https://arxiv.org/html/2510.11690v1,"§1, §4",確認範囲の記録。
+F005,problem,1,author_claim,https://arxiv.org/html/2510.11690v1,§3–5,確認範囲の記録。
+F005,method,1,author_claim,https://arxiv.org/html/2510.11690v1,"§3–5, Eq. 1–2, Fig. 5; Appendix C–D",本文と指定箇所を確認。
+F005,results,1,demonstrated,https://arxiv.org/html/2510.11690v1,"§4.1, Fig. 3, Table 2–3; §5.1 Table 7",本文と指定箇所を確認。
+F005,contributions,1,author_claim,https://arxiv.org/html/2510.11690v1,"§4.1 Theorem 1, Appendix B.1",本文と指定箇所を確認。
+F005,summary,1,interpretation,https://arxiv.org/html/2510.11690v1,§3–5,確認範囲の記録。
+F005,remaining_issues,1,interpretation,https://arxiv.org/html/2510.11690v1,§4.1; Appendix B.1–B.2,本文と指定箇所を確認。

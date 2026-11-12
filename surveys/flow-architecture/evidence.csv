@@ -1,0 +1,812 @@
+paper_id,field,item_index,kind,source_url,locator,note
+F001,social_background,1,not_stated,https://arxiv.org/html/2512.11225v1,§1,本文中の記載範囲を確認。
+F001,technical_background,1,author_claim,https://arxiv.org/html/2512.11225v1,"§3.1, §4.2",確認範囲の記録。
+F001,problem,1,author_claim,https://arxiv.org/html/2512.11225v1,§3.2–3.4,確認範囲の記録。
+F001,method,1,author_claim,https://arxiv.org/html/2512.11225v1,§3.2–3.3; Appendix A,本文と指定箇所を確認。
+F001,results,1,demonstrated,https://arxiv.org/html/2512.11225v1,"§4.1 Table 1, §4.2 Table 2",本文と指定箇所を確認。
+F001,contributions,1,author_claim,https://arxiv.org/html/2512.11225v1,§2–3,確認範囲の記録。
+F001,summary,1,interpretation,https://arxiv.org/html/2512.11225v1,§3–4,確認範囲の記録。
+F001,remaining_issues,1,interpretation,https://arxiv.org/html/2512.11225v1,§4.1; Appendix D,本文と指定箇所を確認。
+F002,social_background,1,not_stated,https://arxiv.org/html/2605.07079v1,§1,本文中の記載範囲を確認。
+F002,technical_background,1,author_claim,https://arxiv.org/html/2605.07079v1,"§1, §3",確認範囲の記録。
+F002,problem,1,author_claim,https://arxiv.org/html/2605.07079v1,§3–4,確認範囲の記録。
+F002,method,1,author_claim,https://arxiv.org/html/2605.07079v1,§3; Appendix A.2,本文と指定箇所を確認。
+F002,results,1,demonstrated,https://arxiv.org/html/2605.07079v1,"§4.1, Table 1",確認範囲の記録。
+F002,contributions,1,author_claim,https://arxiv.org/html/2605.07079v1,§2–3,確認範囲の記録。
+F002,summary,1,interpretation,https://arxiv.org/html/2605.07079v1,§3–4,確認範囲の記録。
+F002,remaining_issues,1,interpretation,https://arxiv.org/html/2605.07079v1,§5; Appendix A.3,本文と指定箇所を確認。
+F003,social_background,1,not_stated,https://arxiv.org/html/2608.29029v1,§1,本文中の記載範囲を確認。
+F003,technical_background,1,author_claim,https://arxiv.org/html/2608.29029v1,"§1, §3",確認範囲の記録。
+F003,problem,1,author_claim,https://arxiv.org/html/2608.29029v1,§4–5,確認範囲の記録。
+F003,method,1,author_claim,https://arxiv.org/html/2608.29029v1,"§4.1–4.2, Eq. 10–17",本文と指定箇所を確認。
+F003,results,1,demonstrated,https://arxiv.org/html/2608.29029v1,"§5.1–5.3, Tables 1–2, 5–6",本文と指定箇所を確認。
+F003,contributions,1,author_claim,https://arxiv.org/html/2608.29029v1,"§2, §4",確認範囲の記録。
+F003,summary,1,interpretation,https://arxiv.org/html/2608.29029v1,§4–5,確認範囲の記録。
+F003,remaining_issues,1,interpretation,https://arxiv.org/html/2608.29029v1,§6; Table 5,確認範囲の記録。
+F004,social_background,1,not_stated,https://arxiv.org/html/2407.01392v1,§1,本文中の記載範囲を確認。
+F004,technical_background,1,author_claim,https://arxiv.org/html/2407.01392v1,§1–2,確認範囲の記録。
+F004,problem,1,author_claim,https://arxiv.org/html/2407.01392v1,"§1, §3",確認範囲の記録。
+F004,method,1,author_claim,https://arxiv.org/html/2407.01392v1,"§3, Appendix D.1, D.4–D.7",本文と指定箇所を確認。
+F004,results,1,demonstrated,https://arxiv.org/html/2407.01392v1,"§4.1–4.2, Fig. 3/Table 1; Appendix D.9",本文と指定箇所を確認。
+F004,contributions,1,author_claim,https://arxiv.org/html/2407.01392v1,§3; Appendix A.1–A.2,本文と指定箇所を確認。
+F004,summary,1,interpretation,https://arxiv.org/html/2407.01392v1,§3–4,確認範囲の記録。
+F004,remaining_issues,1,interpretation,https://arxiv.org/html/2407.01392v1,§5 Limitations; §4,本文と指定箇所を確認。
+F005,social_background,1,not_stated,https://arxiv.org/html/2510.11690v1,§1,本文中の記載範囲を確認。
+F005,technical_background,1,author_claim,https://arxiv.org/html/2510.11690v1,"§1, §4",確認範囲の記録。
+F005,problem,1,author_claim,https://arxiv.org/html/2510.11690v1,§3–5,確認範囲の記録。
+F005,method,1,author_claim,https://arxiv.org/html/2510.11690v1,"§3–5, Eq. 1–2, Fig. 5; Appendix C–D",本文と指定箇所を確認。
+F005,results,1,demonstrated,https://arxiv.org/html/2510.11690v1,"§4.1, Fig. 3, Table 2–3; §5.1 Table 7",本文と指定箇所を確認。
+F005,contributions,1,author_claim,https://arxiv.org/html/2510.11690v1,"§4.1 Theorem 1, Appendix B.1",本文と指定箇所を確認。
+F005,summary,1,interpretation,https://arxiv.org/html/2510.11690v1,§3–5,確認範囲の記録。
+F005,remaining_issues,1,interpretation,https://arxiv.org/html/2510.11690v1,§4.1; Appendix B.1–B.2,本文と指定箇所を確認。
+F006,social_background,1,not_stated,https://arxiv.org/html/2210.02747v1,Introduction,社会的需要の明示的記載なし。
+F006,technical_background,1,author_claim,https://arxiv.org/html/2210.02747v1,§1–3,拡散経路は反復生成が高コストで、一般CNFの学習も高価。
+F006,problem,1,author_claim,https://arxiv.org/html/2210.02747v1,§3,シミュレーションを用いず、固定した条件付き確率経路の速度場から周辺速度場を学習する。
+F006,method,1,demonstrated,https://arxiv.org/html/2210.02747v1,"§3–4, Theorems 1–3; Appendix A",CFMは時刻t、データx1、条件付き経路上のxを標本化し、u_t(x|x1)を二乗回帰。p_t>0の下で周辺速度は条件付き速度の事後平均。Gaussian経路は微分可能な平均と正の標準偏差を使い、可逆アフィン写像から閉形式速度を得る。
+F006,results,1,demonstrated,https://arxiv.org/html/2210.02747v1,"§3.1–3.2, Theorems 1–2; Appendix A; §6.1, Table 1",定理1は周辺連続の式を示し、定理2はCFMとFMの勾配の一致を示す。証明は微分と積分の交換、Fubini、十分な減衰と有界性を仮定。無条件ImageNet 32ではOT経路FMが3.53 BPD/FID 5.25、拡散経路FMは3.56/8.02。
+F006,contributions,1,author_claim,https://arxiv.org/html/2210.02747v1,§3–4,条件付きflow matchingと、拡散・条件付きOT経路を統一的に扱う枠組み。
+F006,summary,1,interpretation,https://arxiv.org/html/2210.02747v1,"§3–4, §6",条件付き場の回帰で生成速度場を学ぶ方法であり、画像生成で評価された。
+F006,remaining_issues,1,interpretation,https://arxiv.org/html/2210.02747v1,"§4, §6–7, Appendix A",調査者解釈: 理論は正則性と期待損失の関係を前提とし、有限モデル・有限学習の一致や条件付き未来のpaired MSE改善を保証しない。評価は画像生成でありDINO予測は未検証。終点のσ_minが正ならデータを平滑化する。
+F007,social_background,1,not_stated,https://arxiv.org/html/2209.03003v1,§1,社会的需要の明示的記載なし。
+F007,technical_background,1,author_claim,https://arxiv.org/html/2209.03003v1,§1–2,分布間輸送の対応を学習する際、曲がったODE軌道は数値積分に多くのステップを要する。
+F007,problem,1,author_claim,https://arxiv.org/html/2209.03003v1,§2,端点間の線形補間に近い因果的ODEを学習し、輸送と生成を効率化する。
+F007,method,1,demonstrated,https://arxiv.org/html/2209.03003v1,"§2, §3.1–3.3",線形補間 X_t=(1−t)X_0+tX_1 における端点差を二乗回帰し、条件付き期待速度のODEを構成。生成端点対でreflowを繰り返す。
+F007,results,1,demonstrated,https://arxiv.org/html/2209.03003v1,"§3.1–3.4, Theorems 3.3, 3.5, 3.7; §5.2 Table 1",可微分過程と局所有界・ODE解の存在一意性を含むrectifiable条件下で周辺分布を保存。Jensenの不等式で凸輸送費用非増加を示す。各反復がrectifiableで二次距離が有限なら、直線性等の尺度の反復中最小値はO(1/K)。CIFAR-10無条件生成1 Euler stepではFID: 1-rectified 378、2-rectified 12.21、2-rectifiedの蒸留後4.85。
+F007,contributions,1,author_claim,https://arxiv.org/html/2209.03003v1,§2–3,任意結合を決定的結合へ変換するrectificationと、直線化するreflowを提案。
+F007,summary,1,interpretation,https://arxiv.org/html/2209.03003v1,§2–5,軌道を直線化して積分を粗くする生成法であり、paired future predictionのMSEを保証しない。
+F007,remaining_issues,1,author_claim,https://arxiv.org/html/2209.03003v1,"§2.3, §3.4–3.5, §5.2",著者: 一般の多次元では直線結合は最適結合とは限らず、非線形補間は凸輸送費用減少を保証しない。調査者解釈: 理想化理論は有限学習とpaired future MSEを保証しない。
+F008,social_background,1,not_stated,https://arxiv.org/html/2505.13447v1,§1,社会的需要の明示的記載なし。
+F008,technical_background,1,author_claim,https://arxiv.org/html/2505.13447v1,"§1, §3",通常のflow matchingは瞬時速度の積分を生成時に要する。
+F008,problem,1,author_claim,https://arxiv.org/html/2505.13447v1,§4,事前学習や蒸留なしに1回の評価で生成する平均速度モデルを学習する。
+F008,method,1,demonstrated,https://arxiv.org/html/2505.13447v1,"§4.1, Eqs. 3–11, Algorithms 1–2; Appendix B.3",同一ODE軌道の平均速度uを定義し、r固定の積分微分と連鎖律でu=v−(t−r)du/dtを得る。JVPと停止勾配の標本条件付き速度目標で学習し、1回のu評価で生成する。
+F008,results,1,demonstrated,https://arxiv.org/html/2505.13447v1,"§4.1, Appendix B.3; §5.2 Table 2",微分可能性などを前提に恒等式は時間積分定義から導出され、逆向きは(t−r)uのr=t境界で積分定数が消える。ImageNet 256クラス条件付きCFGでMeanFlow-XL/2は1 NFE FID 3.43、Shortcut-XL/2は10.60（Table 2）。
+F008,contributions,1,author_claim,https://arxiv.org/html/2505.13447v1,§4,平均速度と瞬時速度の恒等式に基づく直接学習を提案。
+F008,summary,1,interpretation,https://arxiv.org/html/2505.13447v1,"§4.1, §5",時間平均速度による1回生成を画像生成で評価した。平均速度は観測条件付き未来特徴平均ではない。
+F008,remaining_issues,1,interpretation,https://arxiv.org/html/2505.13447v1,"§4.1, §5.2, Appendix B.3",調査者解釈: 恒等式の厳密成立や最適化成功は有限ネットワークでは保証されない。軌道時間平均速度は観測条件付き未来特徴平均ではなく、画像FIDは未来特徴MSEを検証しない。
+F009,social_background,1,not_stated,https://arxiv.org/html/2406.07507v1,§1,社会的需要の明示的記載なし。
+F009,technical_background,1,author_claim,https://arxiv.org/html/2406.07507v1,§1,速度場による生成には推論時の数値積分が必要。
+F009,problem,1,author_claim,https://arxiv.org/html/2406.07507v1,§3,任意の時間間隔を跨ぐODEの二時刻flow mapを、蒸留または直接学習する。
+F009,method,1,demonstrated,https://arxiv.org/html/2406.07507v1,"§3.1–3.4, Algorithms 1–4","二時刻写像を境界X(s,s)=idとODE残差で既知速度場から蒸留する。直接FMMはstochastic interpolantの標本速度と逆写像の整合性を利用し、progressive FMMは多段map合成を蒸留する。"
+F009,results,1,demonstrated,https://arxiv.org/html/2406.07507v1,"§3.1–3.4, Propositions 3.7, 3.11; Appendix A; §4.2 Table 1",本文の片側Lipschitz条件と正の密度等を前提にLMD残差からW2誤差を抑える。証明は軌道差の微分不等式を使う。直接FMMの証明は損失を残差と定数に分ける。CIFAR-10で2段LMD FID 7.13、2段EMD 48.32、同教師FID 5.53。
+F009,contributions,1,author_claim,https://arxiv.org/html/2406.07507v1,"§3, Appendix C",二時刻mapを用いた直接学習・蒸留と既存一段生成法との関係を提示。
+F009,summary,1,interpretation,https://arxiv.org/html/2406.07507v1,§3–4,学習mapはODEの軌道上の端点を求めるもので、将来の条件付き平均と同義ではない。
+F009,remaining_issues,1,author_claim,https://arxiv.org/html/2406.07507v1,"§3.3, §4.1–4.2",著者: EMDは空間微分が特異・ほぼ特異な箇所で学習困難になる可能性があり、実験ではLMDが良好。調査者解釈: W2分布誤差はpaired future MSEの保証ではなく、直接学習・蒸留の理想最適解は有限モデルで保証されない。
+F010,social_background,1,author_claim,https://arxiv.org/html/2303.01469v1,"Abstract, §1",反復生成の遅延はリアルタイム利用を制約する。
+F010,technical_background,1,author_claim,https://arxiv.org/html/2303.01469v1,§1–2,拡散モデルは反復的な生成を必要とする。
+F010,problem,1,author_claim,https://arxiv.org/html/2303.01469v1,§3–5,同一確率流ODE軌道の異なる点を同じ起点に写す写像を学習し、1段・少段生成する。
+F010,method,1,demonstrated,https://arxiv.org/html/2303.01469v1,"§3–5, Algorithms 2–3",境界条件を備える写像について、教師scoreによる隣接ODE点の出力一致を蒸留。単独学習では同一ガウス雑音を異なる時刻で用い、EMAと停止勾配の目標を使う。
+F010,results,1,demonstrated,https://arxiv.org/html/2303.01469v1,"§4 Theorem 1, Appendix A.2; §6.2 Table 1",Lipschitz写像、次数p以上の局所ソルバ誤差、一致する教師と学生、および損失ゼロの条件下で離散点誤差はO(Δt^p)。証明は境界条件と局所誤差の帰納的累積。CIFAR-10の1 NFEではCD FID 3.55、同表のprogressive distillation 8.34、単独CT 8.70。
+F010,contributions,1,author_claim,https://arxiv.org/html/2303.01469v1,§3–5,一貫性写像による高速生成と、ゼロショット画像編集を提示。
+F010,summary,1,interpretation,https://arxiv.org/html/2303.01469v1,§3–6,同一軌道上の写像一致を生成・編集に使うもので、未来特徴の条件付き平均への一致は保証しない。
+F010,remaining_issues,1,interpretation,https://arxiv.org/html/2303.01469v1,"§4–6, Appendix A.2",調査者解釈: 理論のゼロ損失等は有限学習で保証されず、教師scoreと学習済み写像の誤差が残る。FIDは画像生成評価であり条件付き未来特徴のpaired MSEを保証しない。
+F011,social_background,1,not_stated,https://arxiv.org/html/2212.09748v2,§1,本文と記載箇所を確認。
+F011,technical_background,1,author_claim,https://arxiv.org/html/2212.09748v2,§1–2,本文と記載箇所を確認。
+F011,problem,1,author_claim,https://arxiv.org/html/2212.09748v2,"§1, §3",本文と記載箇所を確認。
+F011,method,1,author_claim,https://arxiv.org/html/2212.09748v2,"§3.2, Table 1, §4",本文と記載箇所を確認。
+F011,results,1,demonstrated,https://arxiv.org/html/2212.09748v2,"§5, Fig. 5–6; §5.1",本文と記載箇所を確認。
+F011,contributions,1,author_claim,https://arxiv.org/html/2212.09748v2,"§3.2, §5",本文と記載箇所を確認。
+F011,summary,1,interpretation,https://arxiv.org/html/2212.09748v2,§3–5,本文と記載箇所を確認。
+F011,remaining_issues,1,interpretation,https://arxiv.org/html/2212.09748v2,§4–6,本文と記載箇所を確認。
+F012,social_background,1,not_stated,https://arxiv.org/html/2401.08740v2,§1,本文と記載箇所を確認。
+F012,technical_background,1,author_claim,https://arxiv.org/html/2401.08740v2,§1–2,本文と記載箇所を確認。
+F012,problem,1,author_claim,https://arxiv.org/html/2401.08740v2,§2–3,本文と記載箇所を確認。
+F012,method,1,author_claim,https://arxiv.org/html/2401.08740v2,§2.1–2.5; Appendix 0.A,本文と記載箇所を確認。
+F012,results,1,demonstrated,https://arxiv.org/html/2401.08740v2,"§3.1–3.3, Tables 4–5",本文と記載箇所を確認。
+F012,contributions,1,author_claim,https://arxiv.org/html/2401.08740v2,§2; Appendix 0.A,本文と記載箇所を確認。
+F012,summary,1,interpretation,https://arxiv.org/html/2401.08740v2,§2–3,本文と記載箇所を確認。
+F012,remaining_issues,1,interpretation,https://arxiv.org/html/2401.08740v2,§2–3,本文と記載箇所を確認。
+F013,social_background,1,not_stated,https://arxiv.org/html/2209.12152v4,§1,本文と記載箇所を確認。
+F013,technical_background,1,author_claim,https://arxiv.org/html/2209.12152v4,§1,本文と記載箇所を確認。
+F013,problem,1,author_claim,https://arxiv.org/html/2209.12152v4,"§3, §5",本文と記載箇所を確認。
+F013,method,1,author_claim,https://arxiv.org/html/2209.12152v4,"§3.1, Fig. 1–2",本文と記載箇所を確認。
+F013,results,1,demonstrated,https://arxiv.org/html/2209.12152v4,"§3.1 Fig. 2, §5, Tables 1/4",本文と記載箇所を確認。
+F013,contributions,1,author_claim,https://arxiv.org/html/2209.12152v4,§1–3,本文と記載箇所を確認。
+F013,summary,1,interpretation,https://arxiv.org/html/2209.12152v4,§3–5,本文と記載箇所を確認。
+F013,remaining_issues,1,interpretation,https://arxiv.org/html/2209.12152v4,"§3.1, §6, Appendix D–E",本文と記載箇所を確認。
+F014,social_background,1,not_stated,https://arxiv.org/html/2410.06940v4,§1,本文と記載箇所を確認。
+F014,technical_background,1,author_claim,https://arxiv.org/html/2410.06940v4,§3.2,本文と記載箇所を確認。
+F014,problem,1,author_claim,https://arxiv.org/html/2410.06940v4,§3–4,本文と記載箇所を確認。
+F014,method,1,author_claim,https://arxiv.org/html/2410.06940v4,"§3.3 Eq. 8–9, §4.1",本文と記載箇所を確認。
+F014,results,1,demonstrated,https://arxiv.org/html/2410.06940v4,"§4.1–4.2, Table 2, Fig. 1",本文と記載箇所を確認。
+F014,contributions,1,author_claim,https://arxiv.org/html/2410.06940v4,"§3.3, §5",本文と記載箇所を確認。
+F014,summary,1,interpretation,https://arxiv.org/html/2410.06940v4,§3–4,本文と記載箇所を確認。
+F014,remaining_issues,1,interpretation,https://arxiv.org/html/2410.06940v4,Appendix M; §3.3,本文と記載箇所を確認。
+F015,social_background,1,not_stated,https://arxiv.org/html/2503.18414v3,§1,本文と記載箇所を確認。
+F015,technical_background,1,author_claim,https://arxiv.org/html/2503.18414v3,§3.2–3.3,本文と記載箇所を確認。
+F015,problem,1,author_claim,https://arxiv.org/html/2503.18414v3,§3–4,本文と記載箇所を確認。
+F015,method,1,author_claim,https://arxiv.org/html/2503.18414v3,§3.2–3.4 Eq. 3–5,本文と記載箇所を確認。
+F015,results,1,demonstrated,https://arxiv.org/html/2503.18414v3,§3.2 Table 1; §4.1/4.3 Table 8,本文と記載箇所を確認。
+F015,contributions,1,author_claim,https://arxiv.org/html/2503.18414v3,§3.3–3.4,本文と記載箇所を確認。
+F015,summary,1,interpretation,https://arxiv.org/html/2503.18414v3,§3–4,本文と記載箇所を確認。
+F015,remaining_issues,1,interpretation,https://arxiv.org/html/2503.18414v3,Appendix C; §3.3 Eq. 3–5,本文と記載箇所を確認。
+F016,social_background,1,author_claim,https://arxiv.org/html/2112.10752v2,"§1, §5",高解像度生成の計算資源負担はアクセスを制約する。
+F016,technical_background,1,author_claim,https://arxiv.org/html/2112.10752v2,"§1, §3",画素空間拡散の学習と逐次推論は高コスト。過大な圧縮は細部を損なう。
+F016,problem,1,author_claim,https://arxiv.org/html/2112.10752v2,§1–3,計算可能な高解像度条件付き画像生成を実現する。
+F016,method,1,demonstrated,https://arxiv.org/html/2112.10752v2,"§3.1–3.3, Eqs. 1–3",知覚圧縮器を事前学習し、固定エンコーダ潜在表現上でU-Netのノイズ二乗誤差を学習。テキスト等はcross-attention、空間整列条件は連結。
+F016,results,1,demonstrated,https://arxiv.org/html/2112.10752v2,§4.3 Table 3,ImageNet条件付き256生成でLDM-4-Gは250 DDIM steps、CFG 1.5でFID 3.60、ADM-Gは同表4.59。ガイダンス等を伴う生成品質指標。
+F016,contributions,1,author_claim,https://arxiv.org/html/2112.10752v2,§3–4,知覚圧縮空間の拡散とcross-attentionによる汎用条件付けを提示。
+F016,summary,1,interpretation,https://arxiv.org/html/2112.10752v2,§3–5,圧縮潜在上の条件付き分布生成で高解像度生成を評価したが、DINO特徴の未来MSEを評価していない。
+F016,remaining_issues,1,author_claim,https://arxiv.org/html/2112.10752v2,§5,著者: 逐次サンプリングはGANより遅く、自己符号化器の再構成誤差は画素精度を要するタスクの制約。調査者: 知覚重視の潜在圧縮がMSE最適である保証はない。
+F017,social_background,1,author_claim,https://arxiv.org/html/2206.07275v4,"§1, Appendix B",医療など予測値に加えて不確実性が意思決定に重要な応用を挙げる。
+F017,technical_background,1,author_claim,https://arxiv.org/html/2206.07275v4,§1,既存の平均回帰や単純分布仮定では多峰性と予測不確実性の記述が制約される。
+F017,problem,1,author_claim,https://arxiv.org/html/2206.07275v4,§2,条件付き応答分布を回帰と分類で学習する。
+F017,method,1,demonstrated,https://arxiv.org/html/2206.07275v4,"§2.1, Algorithms 1–2; Appendix A.1",MSEで条件付き平均推定器fを事前学習。forwardはy_t=√abar*y0+(1−√abar)*f(x)+√(1−abar)*ε、逆過程はfを条件とするノイズ予測と解析的posteriorで標本生成。
+F017,results,1,demonstrated,https://arxiv.org/html/2206.07275v4,§4.1.3 Table 1,10 UCI回帰タスク、90/10分割のRMSEを報告。BostonではCARD 2.61±0.63、GCDS 2.75±0.58、Deep Ensembles 3.17±1.05。CARDは9/10で表中最良。
+F017,contributions,1,author_claim,https://arxiv.org/html/2206.07275v4,"§2, §4",条件付き平均を中心とする拡散による分布予測とQICEを提示。
+F017,summary,1,interpretation,https://arxiv.org/html/2206.07275v4,"§2, §4",平均推定器を生成過程の中心に用いるが、生成器の標本やその標本平均が元の回帰器をpaired MSEで上回る保証はない。
+F017,remaining_issues,1,author_claim,https://arxiv.org/html/2206.07275v4,Appendix B–C,著者: Gaussian拡散と決定論的事前学習器に限定し、大規模データでの計算効率は今後の課題。調査者: UCIは高次元DINO未来特徴での検証ではない。
+F018,social_background,1,not_stated,https://arxiv.org/pdf/2206.00364v2,§1,社会的需要の明示的記載なし。
+F018,technical_background,1,author_claim,https://arxiv.org/pdf/2206.00364v2,§1–2,拡散モデルのサンプリング、ノイズ、学習、ネットワーク設計の選択肢が結び付いて把握しにくい。
+F018,problem,1,author_claim,https://arxiv.org/pdf/2206.00364v2,§1,学習と生成の設計空間を整理し、効率・生成品質を改善する。
+F018,method,1,demonstrated,https://arxiv.org/pdf/2206.00364v2,"§5 Eq. 7–8, Table 1; Appendix B.6","D(x;σ)=c_skip(σ)x+c_out(σ)F(c_in(σ)x,c_noise(σ))。独立な加法ガウス雑音とデータの代表分散σ_data²を用いてc_skip=σ_data²/(σ²+σ_data²)、入出力を標準化し出力誤差の増幅を抑える。"
+F018,results,1,demonstrated,https://arxiv.org/pdf/2206.00364v2,"§5 Table 2, Abstract",CIFAR-10条件付き生成FID 1.79、無条件1.97、35 NFE。preconditioning単独はFID改善が一貫せず、著者は学習の予測可能性を主な利点とする。
+F018,contributions,1,author_claim,https://arxiv.org/pdf/2206.00364v2,§3–5,サンプラー、ノイズ分布、損失重み、入力・出力・skipの設計を分離し体系化した。
+F018,summary,1,interpretation,https://arxiv.org/pdf/2206.00364v2,"§5, Appendix B.6",解析skipは全入力次元を出力へ通し得るが、条件付き未来平均に最適な係数とは限らず、ノイズを自動的に除くものではない。
+F018,remaining_issues,1,interpretation,https://arxiv.org/pdf/2206.00364v2,"§5, Appendix B.6",スカラー分散と独立ノイズの導出は異方性や条件付き残差の分布で要再評価。FID改善はpaired DINO MSE改善を示さない。
+F019,social_background,1,not_stated,https://arxiv.org/html/2301.11093v2,§1,社会的需要の明示的記載なし。
+F019,technical_background,1,author_claim,https://arxiv.org/html/2301.11093v2,§1,高解像度画像の拡散は潜在空間や多段超解像で複雑化する。
+F019,problem,1,author_claim,https://arxiv.org/html/2301.11093v2,"§1, §3",単一モデルの画素空間拡散を高解像度へ拡張する。
+F019,method,1,demonstrated,https://arxiv.org/html/2301.11093v2,§3.1–3.5,解像度に応じlog-SNRをシフトし、低解像度段を拡張、適所にdropoutを加え、downsamplingとU-ViTを用いる。独立ノイズ下の2×2平均化では標準偏差が半分、SNRは4倍。
+F019,results,1,demonstrated,https://arxiv.org/html/2301.11093v2,§5.1 Table 2,ImageNet 256でeval FIDは元cosine 6.87、32相当へのshiftで3.71。画像生成の評価であり点予測誤差でない。
+F019,contributions,1,author_claim,https://arxiv.org/html/2301.11093v2,"§3, §5",高解像度単一段生成のためのノイズ・モデル規模・正則化と縮小を組み合わせた。
+F019,summary,1,interpretation,https://arxiv.org/html/2301.11093v2,"§3, §5",画素解像度と相関構造に沿ってスケジュールを調整する実証であり、固定ランク出力の表現制約を解消する結果ではない。
+F019,remaining_issues,1,interpretation,https://arxiv.org/html/2301.11093v2,"§3.1, §5 Tables 2, 6",平均化のSNR計算は独立雑音の仮定に依存し、画像相関の直感を任意のDINO特徴に自動転用できない。多尺度損失は256ではFIDを悪化させた。
+F020,social_background,1,not_stated,https://arxiv.org/html/2301.10972v4,§1,社会的需要の明示的記載なし。
+F020,technical_background,1,author_claim,https://arxiv.org/html/2301.10972v4,§1,一様時刻標本化ではscheduleが学習するノイズ水準の分布を決め、高解像度の冗長性が適正scheduleを変える。
+F020,problem,1,author_claim,https://arxiv.org/html/2301.10972v4,§2–3,ノイズ曲線と入力スケールが画像生成品質に与える影響を比較する。
+F020,method,1,demonstrated,https://arxiv.org/html/2301.10972v4,"§2, Algorithms 1–3",cosine・sigmoid・線形schedule、入力スケール、入力正規化を比較し、連続時間の学習時と推論時のscheduleを別に選ぶ。
+F020,results,1,demonstrated,https://arxiv.org/html/2301.10972v4,§3.1–3.3 Tables 3–4,クラス条件付きImageNet 256、50k標本・1000 DDPM stepsでFID: 1−t scale 1が7.21、scale 0.4が3.52。固定scale 1のsigmoid最良は4.28。
+F020,contributions,1,author_claim,https://arxiv.org/html/2301.10972v4,§2–3,schedule形状と入力スケールの比較および単純な複合戦略を提示。
+F020,summary,1,interpretation,https://arxiv.org/html/2301.10972v4,§1–3,ノイズ水準の学習配分を変えて生成FIDが変わることを示す。固定768→128→768出力射影の像はscheduleだけでは拡張されない。
+F020,remaining_issues,1,author_claim,https://arxiv.org/html/2301.10972v4,§3.4,著者: 提案scheduleは画素空間でのみ実験し、潜在拡散との組合せは可能性として述べる。調査者: DINO条件付きpaired MSEに対する結果はない。
+F021,social_background,1,not_stated,https://arxiv.org/html/2511.13720v2,§1,本文の記載箇所を確認。
+F021,technical_background,1,author_claim,https://arxiv.org/html/2511.13720v2,"§1, §3",本文の記載箇所を確認。
+F021,problem,1,author_claim,https://arxiv.org/html/2511.13720v2,§3–4,本文の記載箇所を確認。
+F021,method,1,author_claim,https://arxiv.org/html/2511.13720v2,"§3.1–3.2, §4.1",本文の記載箇所を確認。
+F021,results,1,demonstrated,https://arxiv.org/html/2511.13720v2,§4.2 Table 2,本文の記載箇所を確認。
+F021,contributions,1,author_claim,https://arxiv.org/html/2511.13720v2,§2–4,本文の記載箇所を確認。
+F021,summary,1,interpretation,https://arxiv.org/html/2511.13720v2,§3–4,本文の記載箇所を確認。
+F021,remaining_issues,1,interpretation,https://arxiv.org/html/2511.13720v2,§4; Appendix B.2,本文の記載箇所を確認。
+F022,social_background,1,not_stated,https://arxiv.org/html/2611.12852v1,§1,本文の記載箇所を確認。
+F022,technical_background,1,author_claim,https://arxiv.org/html/2611.12852v1,"§4.2–4.4, Appendix A",本文の記載箇所を確認。
+F022,problem,1,author_claim,https://arxiv.org/html/2611.12852v1,§4,本文の記載箇所を確認。
+F022,method,1,author_claim,https://arxiv.org/html/2611.12852v1,§4.5 Eq.10–14; Appendix C,本文の記載箇所を確認。
+F022,results,1,demonstrated,https://arxiv.org/html/2611.12852v1,§4.5 Tables 2–3,本文の記載箇所を確認。
+F022,contributions,1,author_claim,https://arxiv.org/html/2611.12852v1,§4.2–4.5; Appendix B,本文の記載箇所を確認。
+F022,summary,1,interpretation,https://arxiv.org/html/2611.12852v1,§4.5,本文の記載箇所を確認。
+F022,remaining_issues,1,interpretation,https://arxiv.org/html/2611.12852v1,"Appendix B.2–B.4, D",本文の記載箇所を確認。
+F023,social_background,1,not_stated,https://arxiv.org/html/2605.27102v3,§1,本文の記載箇所を確認。
+F023,technical_background,1,author_claim,https://arxiv.org/html/2605.27102v3,§3.1–3.2,本文の記載箇所を確認。
+F023,problem,1,author_claim,https://arxiv.org/html/2605.27102v3,§3–4,本文の記載箇所を確認。
+F023,method,1,author_claim,https://arxiv.org/html/2605.27102v3,"§3.1, §3.4, Appendix A–C",本文の記載箇所を確認。
+F023,results,1,demonstrated,https://arxiv.org/html/2605.27102v3,"§4.2, §4.5, Table 1, Fig. 6; Appendix E",本文の記載箇所を確認。
+F023,contributions,1,author_claim,https://arxiv.org/html/2605.27102v3,"§2–3, Appendix B",本文の記載箇所を確認。
+F023,summary,1,interpretation,https://arxiv.org/html/2605.27102v3,§4,本文の記載箇所を確認。
+F023,remaining_issues,1,interpretation,https://arxiv.org/html/2605.27102v3,§3.1–3.4,本文の記載箇所を確認。
+F024,social_background,1,not_stated,https://arxiv.org/html/2512.02012v2,§1,本文の記載箇所を確認。
+F024,technical_background,1,author_claim,https://arxiv.org/html/2512.02012v2,"§1, §3–4",本文の記載箇所を確認。
+F024,problem,1,author_claim,https://arxiv.org/html/2512.02012v2,§4,本文の記載箇所を確認。
+F024,method,1,author_claim,https://arxiv.org/html/2512.02012v2,"§4.1–4.3, Algorithm 1, Appendix A",本文の記載箇所を確認。
+F024,results,1,demonstrated,https://arxiv.org/html/2512.02012v2,§5.1 Fig.6/Table 1; Table 2,本文の記載箇所を確認。
+F024,contributions,1,author_claim,https://arxiv.org/html/2512.02012v2,§4,本文の記載箇所を確認。
+F024,summary,1,interpretation,https://arxiv.org/html/2512.02012v2,§4–5,本文の記載箇所を確認。
+F024,remaining_issues,1,interpretation,https://arxiv.org/html/2512.02012v2,§4–5,本文の記載箇所を確認。
+F025,social_background,1,not_stated,https://arxiv.org/pdf/2412.06264v1,§1,本文の記載箇所を確認。
+F025,technical_background,1,author_claim,https://arxiv.org/pdf/2412.06264v1,§1–2,本文の記載箇所を確認。
+F025,problem,1,author_claim,https://arxiv.org/pdf/2412.06264v1,§1–2,本文の記載箇所を確認。
+F025,method,1,author_claim,https://arxiv.org/pdf/2412.06264v1,"§4.4–4.6, Theorems 3–4, pp.18–23",本文の記載箇所を確認。
+F025,results,1,demonstrated,https://arxiv.org/pdf/2412.06264v1,"§4.4–4.5, pp.18–21",本文の記載箇所を確認。
+F025,contributions,1,author_claim,https://arxiv.org/pdf/2412.06264v1,"§1, §5.4–5.5, §7.3–7.4, §8.3, §9.4–9.5; Appendix A",全章の主要定義と論証、仮定を確認。
+F025,summary,1,interpretation,https://arxiv.org/pdf/2412.06264v1,§4,本文の記載箇所を確認。
+F025,remaining_issues,1,interpretation,https://arxiv.org/pdf/2412.06264v1,"§4.6, §8.3 Theorem 17, §10.4; Appendix A.3",全章の主要定義と論証、仮定を確認。
+F026,social_background,1,author_claim,https://arxiv.org/html/2302.05872v3,§1,画像復元は圧縮や医療・ロボット等に関係する。
+F026,technical_background,1,author_claim,https://arxiv.org/html/2302.05872v3,§1–2,画像復元は不良設定であり、標準拡散や従来SBの学習には制約がある。
+F026,problem,1,author_claim,https://arxiv.org/html/2302.05872v3,§3,対応する劣化画像と原画像の間の拡散ブリッジを効率よく学ぶ。
+F026,method,1,demonstrated,https://arxiv.org/html/2302.05872v3,"§3.1–3.3, Proposition 3.3, Eq. 12, Appendix A",ドリフトf=0の条件付きGaussian bridgeで両端点の重み付き平均と分散を解析し、ペアから中間状態を直接標本化する。学習目標は(X_t−X_0)/σ_tで、復元時にX_0を推定する。
+F026,results,1,demonstrated,https://arxiv.org/html/2302.05872v3,§5.3 Table 6,ImageNet復元でOT-ODEへの切替によるFID差はJPEG QF5で+5.3、Gaussian deblurで−0.6。評価対象は画像分布でpaired DINO MSEではない。
+F026,contributions,1,author_claim,https://arxiv.org/html/2302.05872v3,"§3, Appendix A",片側Dirac境界のtractable SB、端点対による解析的posteriorとsimulation-free学習を示す。
+F026,summary,1,interpretation,https://arxiv.org/html/2302.05872v3,"§3, §5.3",対応端点に条件付けた中間平均は未来の条件付き平均そのものではない。推論では未来端点が未知であり予測モデルが必要。
+F026,remaining_issues,1,author_claim,https://arxiv.org/html/2302.05872v3,"§3.3, §5.3",著者: 決定論的OT-ODEは不確実性の大きいJPEG復元で悪化。調査者: paired latent MSEや低ランク出力問題の解決は未検証。
+F027,social_background,1,not_stated,https://arxiv.org/html/2309.16948v3,§1,社会的需要の明示的記載なし。
+F027,technical_background,1,author_claim,https://arxiv.org/html/2309.16948v3,§1–3,ランダムノイズからの標準拡散は観測端点を持つ画像変換に直接対応しにくい。
+F027,problem,1,author_claim,https://arxiv.org/html/2309.16948v3,§3–4,対応分布間の拡散bridgeを学び、スコアと端点予測を統一する。
+F027,method,1,demonstrated,https://arxiv.org/html/2309.16948v3,"§3.2 Theorem 2, §4 Eqs. 10–12, Appendix A.2・A.5",ペア条件付きGaussianスコアを二乗回帰し、期待損失の最適解として端点条件付き周辺scoreを得る。x0予測を橋のscoreへ変換し、端点間の分散・共分散を用いた入力・skip・出力重みを導出。
+F027,results,1,demonstrated,https://arxiv.org/html/2309.16948v3,§7.1 Table 2,"Edges→Handbags 64、画像[-1,1]のMSEでDDBM VE 0.013、Rectified Flow 0.088、I²SB 0.191。拡散等は40 NFE、同一ネット構造の比較で、DINO未来予測ではない。"
+F027,contributions,1,author_claim,https://arxiv.org/html/2309.16948v3,§3–5,拡散bridge score matching、端点予測のpreconditioningとhybrid samplerを提案。
+F027,summary,1,interpretation,https://arxiv.org/html/2309.16948v3,"§3–4, §7",実paired画像MSEを報告する有力な直接比較例だが、分布生成と条件付き平均予測は別で、単純残差回帰との差は未提示。
+F027,remaining_issues,1,interpretation,https://arxiv.org/html/2309.16948v3,"§4, §7",有限容量でのscore学習やDINO特徴への転用は未保証。解析skipが細い出力層による制約を緩和し得るが、残る雑音を消す能力は別に必要。
+F028,social_background,1,not_stated,https://arxiv.org/html/2405.15885v6,§1,社会的需要の明示的記載なし。
+F028,technical_background,1,author_claim,https://arxiv.org/html/2405.15885v6,§1–2,DDBMの数百回のネットワーク評価はサンプリングを高コストにする。
+F028,problem,1,author_claim,https://arxiv.org/html/2405.15885v6,§3–4,学習済みbridgeの再学習なしで高速なサンプリングを実現する。
+F028,method,1,demonstrated,https://arxiv.org/html/2405.15885v6,"§3–4, Propositions 3.1–3.2, Appendix B.1–B.2",離散時刻で分散パラメータρを持つ非Markov bridgeを構成。周辺分布保存はGaussian平均・分散の帰納計算で示し、ρ>0の所定重みでは離散目的がscore目的と定数差。端点予測と注入ノイズを使って更新する。
+F028,results,1,demonstrated,https://arxiv.org/html/2405.15885v6,§6.1 Table 2,Edges→Handbags 64でDBIM 20 NFEはFID 1.74、MSE 0.005、DDBM 200 NFEはFID 0.88、MSE 0.006。ηは候補から結果を選択。画像画素評価。
+F028,contributions,1,author_claim,https://arxiv.org/html/2405.15885v6,§3–4,再学習なしの確率的〜決定論的なbridge samplerと高次法を導出。
+F028,summary,1,interpretation,https://arxiv.org/html/2405.15885v6,"§4, §6",端点予測器を活かしてサンプリングを減らすが、生成平均と条件付き未来平均は区別が必要。
+F028,remaining_issues,1,author_claim,https://arxiv.org/html/2405.15885v6,§7,著者: 低NFEではぼけや失敗例が残り1段生成より遅い。再学習不要な推論法は教師モデルの能力に依存。
+F030,social_background,1,not_stated,https://arxiv.org/html/2205.07680v2,§1,社会的需要の明示的記載なし。
+F030,technical_background,1,author_claim,https://arxiv.org/html/2205.07680v2,§1–2,通常の画像変換拡散は画像条件を別途注入し、ドメイン間隔が課題。
+F030,problem,1,author_claim,https://arxiv.org/html/2205.07680v2,§3,対応する画像ドメイン間をBrownian bridgeで直接変換する。
+F030,method,1,demonstrated,https://arxiv.org/html/2205.07680v2,"§3.1, Eqs. 4–10; Appendix A","VQGAN潜在のペア(x0,y)に対し平均(1−m)x0+my、分散2(m−m²)のbridgeを用いる。分散保存の動機には端点が標準正規で比較的独立との仮定。yは逆過程の開始点であり各ステップのネット追加条件ではない。"
+F030,results,1,demonstrated,https://arxiv.org/html/2205.07680v2,"§4.1–4.3, Table 2",edges2shoesで200 sampling stepsのBBDM FID 10.924、LDM 13.020、LPIPSはそれぞれ0.183、0.173。FIDが優れても全指標で優れるわけではない。
+F030,contributions,1,author_claim,https://arxiv.org/html/2205.07680v2,§3–4,対応画像潜在間のbridgeと加速サンプリングを提示。
+F030,summary,1,interpretation,https://arxiv.org/html/2205.07680v2,§3–4,両端点の補間には観測ペアが必要であり、逆過程の標本は条件付き平均のMSE最適性を意味しない。
+F030,remaining_issues,1,interpretation,https://arxiv.org/html/2205.07680v2,"§3.1, §4",端点分散・独立性の仮定は現/未来DINO特徴で検証が必要。VQGANと画像FID中心の実験は未来特徴MSEの保証ではない。
+F029,social_background,1,not_stated,https://arxiv.org/html/2303.16852v3,§1,社会的需要の明示的記載なし。
+F029,technical_background,1,author_claim,https://arxiv.org/html/2303.16852v3,§1–2,SB近似は高次元計算や反復誤差蓄積が難しい。
+F029,problem,1,author_claim,https://arxiv.org/html/2303.16852v3,§3–4,端点周辺分布を保つ交互射影でSchrödinger bridgeを近似する。
+F029,method,1,demonstrated,https://arxiv.org/html/2303.16852v3,"§3.2–4, Theorem 8; Appendix C.3–C.6",Markov射影とreciprocal射影を交互に適用。理想化した射影・有限KL・基準測度等の仮定下の収束を主張し、KL分解、単調性と極限の一意性で論証する。実用法は標本化して端点対を更新する。
+F029,results,1,demonstrated,https://arxiv.org/html/2303.16852v3,§6 2D Experiments,2D moons→8gaussians、Euler 20 stepsの2-Wasserstein: DSBM-IMF 0.838±0.098、DSB 0.987±0.324、OT-CFM 0.716±0.187、5 seed。一般輸送の評価。
+F029,contributions,1,author_claim,https://arxiv.org/html/2303.16852v3,§3–4,IMFとそのbridge matching実装を導入。
+F029,summary,1,interpretation,https://arxiv.org/html/2303.16852v3,§3–4,端点周辺分布を保持しても実際の現フレーム・未来フレームの結合は保持されない。paired taskでは真の組を維持して評価する必要がある。
+F029,remaining_issues,1,author_claim,https://arxiv.org/html/2303.16852v3,§7,著者: cachingにサンプル生成が必要、小σでは数値的に難しく、CIFAR-10の改善は小さい。調査者: 理想射影の収束は有限ネットやpaired MSEを保証しない。
+F029,remaining_issues,2,unverified,https://arxiv.org/html/2303.16852v3,"Appendix C.3–C.6, especially C.6",Host and independent reader checked proof; weak closure and weak-to-KL steps require further justification. See f029_proof_review.md; no counterexample to IMF theorem claimed.
+F031,social_background,1,not_stated,https://arxiv.org/html/2303.08797v4,§1,社会的需要の明示的記載なし。
+F031,technical_background,1,author_claim,https://arxiv.org/html/2303.08797v4,§1,生成flowとdiffusionの設計と誤差解析を統合する必要がある。
+F031,problem,1,author_claim,https://arxiv.org/html/2303.08797v4,§2,任意の端点分布間を補間する過程から決定論的・確率的生成を構成する。
+F031,method,1,demonstrated,https://arxiv.org/html/2303.08797v4,"§2.1–2.3, Theorems 6–7","x_t=I(t,x0,x1)+γ(t)z。端点結合ν、独立標準Gaussian z、境界γ=0と正則性・モーメントを仮定。速度はE[dx_t/dt|x_t]で二次目的の最小解。"
+F031,results,1,demonstrated,https://arxiv.org/html/2303.08797v4,"§2.1–2.2 Theorems 6–7, Appendix B.1; §7.2 Figures 11–12",正則な補間、正の内部γ、独立Gaussianと有限モーメント等の下で速度の条件付き期待値が輸送方程式と二次目的を満たす。証明は特性関数のGaussian減衰と条件付き期待値の直交性を使う。128次元Gaussian混合で最初の2次元のKDE・KLを比較し、ノイズ量の中間値が最良。
+F031,contributions,1,author_claim,https://arxiv.org/html/2303.08797v4,§2–3,flowとdiffusion、score、denoiserを扱う補間枠組みと誤差評価を提示。
+F031,summary,1,interpretation,https://arxiv.org/html/2303.08797v4,§2,中間状態条件付きの平均速度は、観測Cのみを条件とする未来の平均E[Y|C]と一般に異なる。
+F031,remaining_issues,1,interpretation,https://arxiv.org/html/2303.08797v4,"§2.2, §7.2–8",γ=0では空間正則性の保証を失い、有限ネットで理想速度・高次元全分布の再現は保証されない。2次元射影KLや生成画像はpaired未来MSEでない。
+F032,social_background,1,not_stated,https://arxiv.org/html/2209.15571v3,§1,社会的需要の明示的記載なし。
+F032,technical_background,1,author_claim,https://arxiv.org/html/2209.15571v3,§1,連続正規化flowの最尤学習はODE逆伝播の負担がある。
+F032,problem,1,author_claim,https://arxiv.org/html/2209.15571v3,§2,補間密度の速度場を直接二次損失で学習し、有限時間の輸送を構成する。
+F032,method,1,demonstrated,https://arxiv.org/html/2209.15571v3,"§2 Proposition 1, Appendix B; §2.1 Proposition 3, Appendix E",独立source・targetの平滑な補間速度を二次損失で回帰。Fourier可積分性を含む仮定の下で連続の式を得る。推定速度が一様LipschitzならW2誤差は速度損失で抑えられ、証明は同一sourceからの軌道差とGronwallを用いる。
+F032,results,1,demonstrated,https://arxiv.org/html/2209.15571v3,§3.4 Table 2,無条件CIFAR-10で提案法NLL 2.99、FID 10.27、ScoreSDE 2.99、2.92。生成評価であり未来MSEではない。
+F032,contributions,1,author_claim,https://arxiv.org/html/2209.15571v3,§2,シミュレーション不要の速度二次損失と補間最適化を提示。
+F032,summary,1,interpretation,https://arxiv.org/html/2209.15571v3,§2–3,分布の輸送と尤度評価を扱い、真の観測と未来の結合保存を保証するものではない。
+F032,remaining_issues,1,interpretation,https://arxiv.org/html/2209.15571v3,"§2.1, §4, Appendix B・E",W2上界は一様Lipschitz等に依存し、真の対応組での未来MSEを直接保証しない。著者は補間関数のより広い学習を今後の課題とする。
+F033,social_background,1,not_stated,https://arxiv.org/html/2302.00482v4,§1,社会的需要の明示的記載なし。
+F033,technical_background,1,author_claim,https://arxiv.org/html/2302.00482v4,§1,CNF最尤学習はODEシミュレーションを要し、独立結合は複雑な輸送を生む。
+F033,problem,1,author_claim,https://arxiv.org/html/2302.00482v4,§3,任意sourceと端点結合を用いsimulation-freeに速度場を学習する。
+F033,method,1,demonstrated,https://arxiv.org/html/2302.00482v4,"§3.1–3.2, Theorem 3.2, Proposition 3.4, Appendix A",正の周辺密度の下でCFMとFMの期待勾配が一致。source・targetのminibatch OT結合を用いる。真のOT計画と正則性の下でσ²→0なら動的OTを得る。
+F033,results,1,demonstrated,https://arxiv.org/html/2302.00482v4,§5.1 Table 2,2D moons→8gaussians、5 seedの正規化path energyはOT-CFM 0.053±0.035、独立I-CFM 2.738±0.181。分布輸送性能である。
+F033,contributions,1,author_claim,https://arxiv.org/html/2302.00482v4,§3–5,一般化CFM、minibatch OTとSB-CFMを提案し輸送を評価。
+F033,summary,1,interpretation,https://arxiv.org/html/2302.00482v4,§3.2,minibatch OTは現実の対応を組み替え得る。sourceを現特徴とするだけでは未来とのpaired結合は維持されない。
+F033,remaining_issues,1,interpretation,https://arxiv.org/html/2302.00482v4,§3.2–5,有限batch OTは真のOTの近似であり、輸送費用低下はpaired MSEの低下を意味しない。
+F034,social_background,1,not_stated,https://arxiv.org/html/2304.14772v2,§1,社会的需要の明示的記載なし。
+F034,technical_background,1,author_claim,https://arxiv.org/html/2304.14772v2,§1–3,独立noiseとdataでは交差する条件付き経路が回帰分散と曲率を高める。
+F034,problem,1,author_claim,https://arxiv.org/html/2304.14772v2,§3–4,周辺分布を保つminibatch結合で速度場を学習しサンプリングを効率化する。
+F034,method,1,demonstrated,https://arxiv.org/html/2304.14772v2,"§3–4, Appendix D.4–D.5",BatchOT等でmini-batch両端を結合し、補間速度を回帰する。有限二次モーメント等の条件下の漸近議論と、Jensenに基づく輸送費用上界を示す。
+F034,results,1,demonstrated,https://arxiv.org/html/2304.14772v2,§6.2 Table 1,ImageNet 32でFID 10到達の近似NFEはCondOT 20、BatchOT 14。条件付き未来MSEではない。
+F034,contributions,1,author_claim,https://arxiv.org/html/2304.14772v2,§3–4,複数標本結合によるflow matching、輸送費用と直線性の解析。
+F034,summary,1,interpretation,https://arxiv.org/html/2304.14772v2,§3–4,最短の人工的結合と、時系列で実際に観測したpaired jointは一般に一致しない。
+F034,remaining_issues,1,interpretation,https://arxiv.org/html/2304.14772v2,"Appendix D.5, §6",上界や漸近保証は有限モデルのpaired MSE保証ではない。
+F036,social_background,1,not_stated,https://arxiv.org/html/2006.11239v2,§1,本文と指定箇所を確認。
+F036,technical_background,1,author_claim,https://arxiv.org/html/2006.11239v2,§1–2,本文と指定箇所を確認。
+F036,problem,1,author_claim,https://arxiv.org/html/2006.11239v2,§3–4,本文と指定箇所を確認。
+F036,method,1,author_claim,https://arxiv.org/html/2006.11239v2,"§2–3, Eq. 11–14; Appendix A",本文と指定箇所を確認。
+F036,results,1,demonstrated,https://arxiv.org/html/2006.11239v2,§4.1–4.2 Tables 1–2,本文と指定箇所を確認。
+F036,contributions,1,author_claim,https://arxiv.org/html/2006.11239v2,§3–4,本文と指定箇所を確認。
+F036,summary,1,interpretation,https://arxiv.org/html/2006.11239v2,§3–4,本文と指定箇所を確認。
+F036,remaining_issues,1,interpretation,https://arxiv.org/html/2006.11239v2,§3.2–3.4,本文と指定箇所を確認。
+F037,social_background,1,not_stated,https://arxiv.org/html/2010.02502v4,§1,本文と指定箇所を確認。
+F037,technical_background,1,author_claim,https://arxiv.org/html/2010.02502v4,§1,本文と指定箇所を確認。
+F037,problem,1,author_claim,https://arxiv.org/html/2010.02502v4,§3–4,本文と指定箇所を確認。
+F037,method,1,author_claim,https://arxiv.org/html/2010.02502v4,§3–4 Eq. 10–14; Appendix C,本文と指定箇所を確認。
+F037,results,1,demonstrated,https://arxiv.org/html/2010.02502v4,§5.1 Table 1,本文と指定箇所を確認。
+F037,contributions,1,author_claim,https://arxiv.org/html/2010.02502v4,§3.2 Theorem 1; Appendix B,本文と指定箇所を確認。
+F037,summary,1,interpretation,https://arxiv.org/html/2010.02502v4,§3–5,本文と指定箇所を確認。
+F037,remaining_issues,1,interpretation,https://arxiv.org/html/2010.02502v4,"§3.2, §5",本文と指定箇所を確認。
+F038,social_background,1,not_stated,https://arxiv.org/html/2011.13456v2,§1,本文と指定箇所を確認。
+F038,technical_background,1,author_claim,https://arxiv.org/html/2011.13456v2,§1–3,本文と指定箇所を確認。
+F038,problem,1,author_claim,https://arxiv.org/html/2011.13456v2,§3–5,本文と指定箇所を確認。
+F038,method,1,author_claim,https://arxiv.org/html/2011.13456v2,"§3.2–3.3, §4.2–4.3; Appendix D/G",本文と指定箇所を確認。
+F038,results,1,demonstrated,https://arxiv.org/html/2011.13456v2,§4.2 Table 1,本文と指定箇所を確認。
+F038,contributions,1,author_claim,https://arxiv.org/html/2011.13456v2,§3–5; Appendix D,本文と指定箇所を確認。
+F038,summary,1,interpretation,https://arxiv.org/html/2011.13456v2,§3–5,本文と指定箇所を確認。
+F038,remaining_issues,1,interpretation,https://arxiv.org/html/2011.13456v2,"§3.2, §4.3, §5",本文と指定箇所を確認。
+F039,social_background,1,not_stated,https://arxiv.org/html/2102.09672v1,§1,本文と指定箇所を確認。
+F039,technical_background,1,author_claim,https://arxiv.org/html/2102.09672v1,§1–3,本文と指定箇所を確認。
+F039,problem,1,author_claim,https://arxiv.org/html/2102.09672v1,§3–4,本文と指定箇所を確認。
+F039,method,1,author_claim,https://arxiv.org/html/2102.09672v1,"§3.1–3.3, Eq. 16–17",本文と指定箇所を確認。
+F039,results,1,demonstrated,https://arxiv.org/html/2102.09672v1,§3.4 Table 1,本文と指定箇所を確認。
+F039,contributions,1,author_claim,https://arxiv.org/html/2102.09672v1,§3–4,本文と指定箇所を確認。
+F039,summary,1,interpretation,https://arxiv.org/html/2102.09672v1,§3–4,本文と指定箇所を確認。
+F039,remaining_issues,1,interpretation,https://arxiv.org/html/2102.09672v1,§3.3–3.4,本文と指定箇所を確認。
+F040,social_background,1,author_claim,https://arxiv.org/html/2107.00630v6,§1,本文と指定箇所を確認。
+F040,technical_background,1,author_claim,https://arxiv.org/html/2107.00630v6,§1–2,本文と指定箇所を確認。
+F040,problem,1,author_claim,https://arxiv.org/html/2107.00630v6,§3–5,本文と指定箇所を確認。
+F040,method,1,author_claim,https://arxiv.org/html/2107.00630v6,§3–5; Appendix E/G/I,本文と指定箇所を確認。
+F040,results,1,demonstrated,https://arxiv.org/html/2107.00630v6,"§6.1 Table 1; §6.2, Appendix B",本文と指定箇所を確認。
+F040,contributions,1,author_claim,https://arxiv.org/html/2107.00630v6,"§5.1–5.3, Appendix G/I",本文と指定箇所を確認。
+F040,summary,1,interpretation,https://arxiv.org/html/2107.00630v6,§3–6,本文と指定箇所を確認。
+F040,remaining_issues,1,interpretation,https://arxiv.org/html/2107.00630v6,"§5.1–5.2, Appendix G",本文と指定箇所を確認。
+F035,social_background,1,author_claim,https://arxiv.org/html/2411.08314v5,§1,材料科学等で疎な条件付き観測から確率動力学を予測する需要。
+F035,technical_background,1,author_claim,https://arxiv.org/html/2411.08314v5,§1,連続条件で時刻間のpaired標本が乏しいと既存法の学習が不安定。
+F035,problem,1,author_claim,https://arxiv.org/html/2411.08314v5,§3,連続条件にまたがる条件付き分布の時間発展を学ぶ。
+F035,method,1,author_claim,https://arxiv.org/html/2411.08314v5,"§3.1–3.3 Theorems 3.1–3.2, Appendix A.1–A.2",条件ペアのidentity couplingと同じ条件分布の下で条件付き場が連続の式を満たすとする。異方的OTとmismatch kernelを用い、正密度、kernel正則性、有限条件差2次モーメント下で勾配差O(E||y0−y1||²)を主張。
+F035,results,1,demonstrated,https://arxiv.org/html/2411.08314v5,§5 Table 2,材料動力学PC軌道、128生成標本の平均の全時刻test MAEはCVSFM 0.188±0.147、Neural ODE 0.264±0.129。MAEとサンプルコスト付きの結果。
+F035,contributions,1,author_claim,https://arxiv.org/html/2411.08314v5,§3,連続条件の輸送とkernel重みで疎な非対応標本の学習を安定化する手法。
+F035,summary,1,interpretation,https://arxiv.org/html/2411.08314v5,"§3, §5",条件yの対応を近似することと、現状態と未来の真のpaired jointを保存することは別。128標本平均のMAE改善は単一標本DINO MSEの保証でない。
+F035,remaining_issues,1,author_claim,https://arxiv.org/html/2411.08314v5,§5.1,著者: kernel幅、Euclidean距離の高次元での劣化、batch・データ不足による不安定性が課題。調査者: 勾配誤差上界の定数や有限条件差の実効値は本実装では未検証。
+F035,remaining_issues,2,interpretation,https://arxiv.org/html/2411.08314v5,Theorem 3.2 and Appendix A.2 Eq A.6–A.10,ホスト確認: Theorem3.2の全θ一様上界には付録A.2で使うhθの一様有界性と微分・期待値交換等が追加で必要。大域kernel二次上界と組み合わせればO(E[r²])を得るが、A.10のlittle-o展開は点ごとのTaylor展開だけでは保証されず、mismatch分布族の追加集中条件が必要。
+F041,social_background,1,author_claim,https://arxiv.org/html/2101.12072v2,"§1, §4.1",本文と指定箇所を確認。
+F041,technical_background,1,author_claim,https://arxiv.org/html/2101.12072v2,§1,本文と指定箇所を確認。
+F041,problem,1,author_claim,https://arxiv.org/html/2101.12072v2,§3,本文と指定箇所を確認。
+F041,method,1,author_claim,https://arxiv.org/html/2101.12072v2,"§3.1–3.4, §4.2",本文と指定箇所を確認。
+F041,results,1,demonstrated,https://arxiv.org/html/2101.12072v2,§4.1–4.3 Table 2,本文と指定箇所を確認。
+F041,contributions,1,author_claim,https://arxiv.org/html/2101.12072v2,"§3, §5",本文と指定箇所を確認。
+F041,summary,1,interpretation,https://arxiv.org/html/2101.12072v2,§3–4,本文と指定箇所を確認。
+F041,remaining_issues,1,interpretation,https://arxiv.org/html/2101.12072v2,"§3.2, §4.2",本文と指定箇所を確認。
+F042,social_background,1,author_claim,https://arxiv.org/html/2107.03502v2,§1,本文と指定箇所を確認。
+F042,technical_background,1,author_claim,https://arxiv.org/html/2107.03502v2,§2–3,本文と指定箇所を確認。
+F042,problem,1,author_claim,https://arxiv.org/html/2107.03502v2,§4–6,本文と指定箇所を確認。
+F042,method,1,author_claim,https://arxiv.org/html/2107.03502v2,"§4–5, Table 1; Appendix B",本文と指定箇所を確認。
+F042,results,1,demonstrated,https://arxiv.org/html/2107.03502v2,"§6.1 Table 3, §6.3 Table 5",本文と指定箇所を確認。
+F042,contributions,1,author_claim,https://arxiv.org/html/2107.03502v2,§4–6,本文と指定箇所を確認。
+F042,summary,1,interpretation,https://arxiv.org/html/2107.03502v2,"§4, §6",本文と指定箇所を確認。
+F042,remaining_issues,1,interpretation,https://arxiv.org/html/2107.03502v2,"§4.2, §6.1–6.3",本文と指定箇所を確認。
+F043,social_background,1,author_claim,https://arxiv.org/html/2403.01742v3,§1,本文と指定箇所を確認。
+F043,technical_background,1,author_claim,https://arxiv.org/html/2403.01742v3,§1–2,本文と指定箇所を確認。
+F043,problem,1,author_claim,https://arxiv.org/html/2403.01742v3,§3–4,本文と指定箇所を確認。
+F043,method,1,author_claim,https://arxiv.org/html/2403.01742v3,"§3.2–3.4, Eq. 7–9; Appendix D–F",本文と指定箇所を確認。
+F043,results,1,demonstrated,https://arxiv.org/html/2403.01742v3,"§4.4–4.5, Appendix C.1 Table 3",本文と指定箇所を確認。
+F043,contributions,1,author_claim,https://arxiv.org/html/2403.01742v3,§3,本文と指定箇所を確認。
+F043,summary,1,interpretation,https://arxiv.org/html/2403.01742v3,§3–4,本文と指定箇所を確認。
+F043,remaining_issues,1,interpretation,https://arxiv.org/html/2403.01742v3,"§3.3–3.4, §4.4–4.5",本文と指定箇所を確認。
+F044,social_background,1,author_claim,https://arxiv.org/html/2306.05043v1,"§1, §4.1",本文と指定箇所を確認。
+F044,technical_background,1,author_claim,https://arxiv.org/html/2306.05043v1,§2.2,本文と指定箇所を確認。
+F044,problem,1,author_claim,https://arxiv.org/html/2306.05043v1,§3,本文と指定箇所を確認。
+F044,method,1,author_claim,https://arxiv.org/html/2306.05043v1,"§3.2–3.5, Eq. 14–19, Algorithms 1–2",本文と指定箇所を確認。
+F044,results,1,demonstrated,https://arxiv.org/html/2306.05043v1,"§4.1, Tables 4/8",本文と指定箇所を確認。
+F044,contributions,1,author_claim,https://arxiv.org/html/2306.05043v1,"§3.2, §4.3",本文と指定箇所を確認。
+F044,summary,1,interpretation,https://arxiv.org/html/2306.05043v1,§3–4,本文と指定箇所を確認。
+F044,remaining_issues,1,interpretation,https://arxiv.org/html/2306.05043v1,"§3.2, §4.3 Tables 2/4/6",本文と指定箇所を確認。
+F045,social_background,1,author_claim,https://arxiv.org/html/2409.02322v2,§1,本文と指定箇所を確認。
+F045,technical_background,1,author_claim,https://arxiv.org/html/2409.02322v2,§1–2,本文と指定箇所を確認。
+F045,problem,1,author_claim,https://arxiv.org/html/2409.02322v2,§3–4,本文と指定箇所を確認。
+F045,method,1,author_claim,https://arxiv.org/html/2409.02322v2,§3.1–3.3; Appendix A,本文と指定箇所を確認。
+F045,results,1,demonstrated,https://arxiv.org/html/2409.02322v2,"§4.1 Table 1, §4.4 Table 8",本文と指定箇所を確認。
+F045,contributions,1,author_claim,https://arxiv.org/html/2409.02322v2,§3,本文と指定箇所を確認。
+F045,summary,1,interpretation,https://arxiv.org/html/2409.02322v2,§3–4,本文と指定箇所を確認。
+F045,remaining_issues,1,interpretation,https://arxiv.org/html/2409.02322v2,"§5, §4.1",本文と指定箇所を確認。
+F046,social_background,1,author_claim,https://arxiv.org/html/2511.07968v2,§1,金融、医療、エネルギーなどの時系列シミュレーションに需要がある。
+F046,technical_background,1,author_claim,https://arxiv.org/html/2511.07968v2,§1–3,著者はODE flowが時系列の確率的変動を明示せず、拡散は反復回数が多いと述べる。
+F046,problem,1,author_claim,https://arxiv.org/html/2511.07968v2,§4,確率性と時系列構造を扱うflow生成器を設計する。
+F046,method,1,demonstrated,https://arxiv.org/html/2511.07968v2,§4.2–4.4,Transformer encoderの状態を移動平均のtrendと残差seasonalに分け、attentionと多尺度畳み込みを用いる。確率項を加えた目的とSDE samplingを用い、条件付き生成にも適用する。
+F046,results,1,author_claim,https://arxiv.org/html/2511.07968v2,§5.3 Figure 5,Energy・Stocks、長さ48の予測幅6–24でDiffusion-TSとCSDIより低MSEと報告。数値は図示のみで正確な値を未確認。
+F046,contributions,1,author_claim,https://arxiv.org/html/2511.07968v2,§4–5,成分分解速度場と確率的flow訓練・生成を提案。
+F046,summary,1,interpretation,https://arxiv.org/html/2511.07968v2,§4–5,時系列で条件付き予測も評価するが、単一DINO未来特徴や同容量MSE回帰との比較ではない。
+F046,remaining_issues,1,unverified,https://arxiv.org/html/2511.07968v2,"§5.3 Figure 5, §6",予測MSEに使う標本集約方法と図の厳密な数値は本文テキストで確認できない。表現分解やSDEが個別にMSE改善をもたらすとは断定できない。
+F047,social_background,1,not_stated,https://arxiv.org/html/2510.15101v1,§1,社会的需要の明示的記載なし。
+F047,technical_background,1,author_claim,https://arxiv.org/html/2510.15101v1,§1,高次元PDE予測では長期の誤差蓄積と空間解像度の負担がある。
+F047,problem,1,author_claim,https://arxiv.org/html/2510.15101v1,§3–4,latent flowの速度をFourier operatorで近似し時空間PDEを予測する。
+F047,method,1,demonstrated,https://arxiv.org/html/2510.15101v1,§3–4,畳み込みautoencoderで圧縮し、sparse conditioningとtime-conditioned Fourier layers・channel foldingを用いてflow場を学ぶ。過去15フレームから次フレームを予測する。
+F047,results,1,demonstrated,https://arxiv.org/html/2510.15101v1,"§5 Tables 2, 4",NS-vorticityでTempO/RIVER MSE 0.0563、ViT/affine-OT 0.0675。flowモデル間比較でTempOはadaptive dopri5平均560 NFE、tol 1e−5。直接MSE回帰との同予算比較ではない。
+F047,contributions,1,author_claim,https://arxiv.org/html/2510.15101v1,§3.1,FNO型速度回帰と周波数に基づく近似誤差上界を提示。
+F047,summary,1,interpretation,https://arxiv.org/html/2510.15101v1,§5,PDE場のMSEではflowの構造とpath選択が性能に影響するが、DINO特徴の有限容量予測での優位は未確認。
+F047,remaining_issues,1,unverified,https://arxiv.org/html/2510.15101v1,"§3.1 Theorem 3.1, Appendix A",コンパクト入力・出力Fourier減衰を仮定するが、任意連続有限次元写像の近似に必要なパラメータをO(K^d polylog(1/ε))とする証明段階は、入力次元や写像の複雑性への定量的根拠を確認できない。著者の上界を確立済みと扱わず、当該定量的上界は未検証とする。著者は極端な疎観測と超長期予測の限界も挙げる。
+F048,social_background,1,author_claim,https://arxiv.org/html/2307.11494v3,§1,金融、再生可能エネルギー、医療等の意思決定に時系列予測が使われる。
+F048,technical_background,1,author_claim,https://arxiv.org/html/2307.11494v3,§1–2,従来の時系列拡散は予測や補完など個別条件に合わせて学習される。
+F048,problem,1,author_claim,https://arxiv.org/html/2307.11494v3,§3,無条件拡散を予測、既存予測の改善、合成データ作成に再利用する。
+F048,method,1,demonstrated,https://arxiv.org/html/2307.11494v3,"§3.1–3.2, Algorithm 2",無条件denoiserから観測self-guidanceを構成。refinementは基底予測で初期化し、負の生成log尤度と初期値近傍の正則化をLangevinまたは勾配で反復最適化する。
+F048,results,1,demonstrated,https://arxiv.org/html/2307.11494v3,§4.2 Table 3,20回refinement、ElectricityでSeasonal NaiveのCRPS 0.069からLMC-Q 0.051、ExchangeではLMC-MS 0.011から0.013へ悪化。CRPSはpaired MSEではない。
+F048,contributions,1,author_claim,https://arxiv.org/html/2307.11494v3,§3–4,同一の無条件時系列拡散をself-guidanceと予測refinementへ適用。
+F048,summary,1,interpretation,https://arxiv.org/html/2307.11494v3,"§3.2, §4.2",初期予測を使うprior補正が有限モデルで改善する可能性を示すが、尤度最適や標本は一般に条件付き平均ではない。
+F048,remaining_issues,1,author_claim,https://arxiv.org/html/2307.11494v3,"§3.2, §4.2, §6",著者: 目的は非凸で初期値に依存し、refinement効果は基底予測器と条件に依存する。DINOのpaired MSEは未検証。
+F049,social_background,1,author_claim,https://arxiv.org/html/2202.00512v2,§1,生成モデルの推論時間・計算費用が実用を制約する。
+F049,technical_background,1,author_claim,https://arxiv.org/html/2202.00512v2,§1–2,拡散モデルの高品質生成には多数回のネット評価が必要。
+F049,problem,1,author_claim,https://arxiv.org/html/2202.00512v2,§3,多段決定論的教師の生成を段階的に少数stepへ圧縮する。
+F049,method,1,demonstrated,https://arxiv.org/html/2202.00512v2,"§3–4, Appendix G",教師のDDIM 2 stepを1 stepで再現するx予測目標を逆算し、教師を複製した学生を訓練、半減を反復。低SNRでε予測からxを復元すると誤差が増幅するため直接x・v等を用いる。
+F049,results,1,demonstrated,https://arxiv.org/html/2202.00512v2,§5.2 Table 1,無条件CIFAR-10で蒸留モデルFIDは4評価3.00、2評価4.51、1評価9.12。多数step教師の分布生成を評価。
+F049,contributions,1,author_claim,https://arxiv.org/html/2202.00512v2,§3–5,段階的蒸留と低SNRで安定な予測parameterization。
+F049,summary,1,interpretation,https://arxiv.org/html/2202.00512v2,§3–5,教師の軌道を短縮することはpaired未来の条件付き平均を改善することと異なる。
+F049,remaining_issues,1,author_claim,https://arxiv.org/html/2202.00512v2,"§5.2, §7",著者: 1–2 stepでは品質悪化が大きく、学生は教師と同じ構造・パラメータ数で評価。有限教師誤差は残る。
+F050,social_background,1,author_claim,https://arxiv.org/html/1711.06077v4,§I,画像復元は画質と元画像への再構成精度の両方が評価される。
+F050,technical_background,1,author_claim,https://arxiv.org/html/1711.06077v4,§I–III,低い平均歪みと自然画像らしい出力分布は必ずしも同時に得られない。
+F050,problem,1,author_claim,https://arxiv.org/html/1711.06077v4,§III–IV,歪み制約下で達成可能な最良の出力分布一致を定式化する。
+F050,method,1,demonstrated,https://arxiv.org/html/1711.06077v4,"§III-A, §IV Theorems 1–2, Appendix C・E",MMSE推定はE[X|Y]。分布不一致の最小値P(D)は許容歪みDに対し非増加、距離が第2引数で凸なら凸。証明は制約集合の包含と推定器の確率混合を用いる。
+F050,results,1,demonstrated,https://arxiv.org/html/1711.06077v4,"§III-A, Example 1, Appendix D",離散信号＋独立Gaussian雑音ではMMSEが連続値となり元の離散分布を保存しない。Gaussian線形例ではMSE制約とKLの境界を解析。
+F050,contributions,1,author_claim,https://arxiv.org/html/1711.06077v4,§IV–VI,知覚分布と歪みの到達可能境界を示し超解像の評価法を提案。
+F050,summary,1,interpretation,https://arxiv.org/html/1711.06077v4,§III–IV,MSE最小の条件付き平均は自然分布の標本と異なりうる。定理はパレート境界の性質であり、未最適な任意の2モデル間に必ず相反があるという意味ではない。
+F050,remaining_issues,1,interpretation,https://arxiv.org/html/1711.06077v4,§III–IV,知覚を無条件の出力分布距離で測る定義と画像復元の設定に依存。DINO特徴の品質や有限学習での改善可能性を直接評価していない。
+F051,social_background,1,author_claim,https://arxiv.org/html/2412.11673v2,§1,本文と指定箇所を確認。
+F051,technical_background,1,author_claim,https://arxiv.org/html/2412.11673v2,§1–2,本文と指定箇所を確認。
+F051,problem,1,author_claim,https://arxiv.org/html/2412.11673v2,§3,本文と指定箇所を確認。
+F051,method,1,author_claim,https://arxiv.org/html/2412.11673v2,"§3.1–3.3, §4.1, Appendix D",本文と指定箇所を確認。
+F051,results,1,demonstrated,https://arxiv.org/html/2412.11673v2,Appendix A.5 Tables 9–10,本文と指定箇所を確認。
+F051,contributions,1,author_claim,https://arxiv.org/html/2412.11673v2,§3,本文と指定箇所を確認。
+F051,summary,1,interpretation,https://arxiv.org/html/2412.11673v2,§3–4,本文と指定箇所を確認。
+F051,remaining_issues,1,interpretation,https://arxiv.org/html/2412.11673v2,Appendix B,本文と指定箇所を確認。
+F054,social_background,1,author_claim,https://arxiv.org/html/2507.19468v1,"§1, §3.3",本文と指定箇所を確認。
+F054,technical_background,1,author_claim,https://arxiv.org/html/2507.19468v1,§1–2,本文と指定箇所を確認。
+F054,problem,1,author_claim,https://arxiv.org/html/2507.19468v1,§3–4,本文と指定箇所を確認。
+F054,method,1,author_claim,https://arxiv.org/html/2507.19468v1,§3.1–3.3; Appendix A.1,本文と指定箇所を確認。
+F054,results,1,demonstrated,https://arxiv.org/html/2507.19468v1,§4.1 Table 1; Appendix C.2–C.3,本文と指定箇所を確認。
+F054,contributions,1,author_claim,https://arxiv.org/html/2507.19468v1,§2–3,本文と指定箇所を確認。
+F054,summary,1,interpretation,https://arxiv.org/html/2507.19468v1,§3–4,本文と指定箇所を確認。
+F054,remaining_issues,1,interpretation,https://arxiv.org/html/2507.19468v1,"§4.2–4.3, §5",本文と指定箇所を確認。
+F055,social_background,1,not_stated,https://arxiv.org/html/2506.09985v1,§1,記載なし: 序論で汎用的な物理世界の理解と行動への動機は述べるが、特定の社会的需要は明示しない。
+F055,technical_background,1,author_claim,https://arxiv.org/html/2506.09985v1,§1–2,著者主張: 動画から予測可能な表現を学ぶJEPAは、画素生成を要さず運動理解や潜在世界モデルに利用できる。
+F055,problem,1,author_claim,https://arxiv.org/html/2506.09985v1,"§1, §4",行動のない大規模動画と少量のロボット軌跡を用い、理解・予測・画像目標への計画を検証する。
+F055,method,1,author_claim,https://arxiv.org/html/2506.09985v1,"§2, §4",100万時間超のインターネット動画と画像で自己教師あり事前学習し、DROIDの62時間未満のロボット動画で行動条件付き予測器を追加学習する。画像目標の潜在距離を最小化するMPCを用いる。
+F055,results,1,demonstrated,https://arxiv.org/html/2506.09985v1,§4; §5 Table 4; §6 Table 5,実験結果: 実機Frankaを2拠点で用い、対象ロボットから環境別データを収集せずゼロショットで把持・移動を試験した。動画理解はSomething-Something v2 top-1 77.3、EPIC-KITCHENS-100 recall@5 39.7。
+F055,contributions,1,author_claim,https://arxiv.org/html/2506.09985v1,"§1, §4",著者主張: 大規模動画による表現と少量の行動付きデータを組み合わせたV-JEPA 2-ACで画像目標の実機計画を実証する。
+F055,summary,1,demonstrated,https://arxiv.org/html/2506.09985v1,"§2, §4–6, §9",動画から表現を学び、行動条件付き潜在予測と計画を重ね、動画理解と実機操作を評価した。
+F055,remaining_issues,1,author_claim,https://arxiv.org/html/2506.09985v1,"§6 limitations, §9",著者指摘: およそ16秒までの予測と画像目標に依存し、長い多段階課題や言語目標への拡張が課題。EPIC-KITCHENSは厨房・閉じた語彙に限定。
+F053,social_background,1,author_claim,https://arxiv.org/html/2603.19312v3,§1,著者は安価で拡張しやすいカメラ画像からの学習と、環境との追加相互作用を伴わないオフライン学習を動機に挙げる。
+F053,technical_background,1,author_claim,https://arxiv.org/html/2603.19312v3,§1–2,JEPAは予測しやすい潜在表現を学ぶが定数表現への崩壊を起こし、従来の対策は事前学習器や複数損失等に依存する。
+F053,problem,1,author_claim,https://arxiv.org/html/2603.19312v3,§3,報酬なしの画像・行動の固定軌跡から、崩壊を防ぎつつ潜在ダイナミクスを端から端まで学習し、目標画像への計画に用いる。
+F053,method,1,author_claim,https://arxiv.org/html/2603.19312v3,"§3.1, 式1–3",ViT画像符号器と行動条件付きTransformer予測器を次埋め込みのMSEとSIGRegの和で同時学習する。SIGRegはランダム射影上の正規性統計で等方ガウスに近づける。
+F053,method,2,author_claim,https://arxiv.org/html/2603.19312v3,"§3.2, 式4–5",推論時は終端潜在状態と目標画像表現の距離をCEMで最小化し、MPCで再計画する。
+F053,results,1,demonstrated,https://arxiv.org/html/2603.19312v3,"§4.2, 図6",連続行動の4環境で、PushTはPLDMより成功率が18パーセントポイント高く、Reacherでも優位だった一方、Two-RoomではPLDMとDINO-WMを下回り、CubeではDINO-WMがやや上回った。
+F053,results,2,demonstrated,https://arxiv.org/html/2603.19312v3,"§4.2, 図3",50回平均の計画時間比較でDINO-WM比最大48倍高速、同一計算量ではPushTとCubeで優位だった。
+F053,results,3,demonstrated,https://arxiv.org/html/2603.19312v3,"§5.2, 図8",3環境の物体テレポートによる予測誤差増加は対応のあるt検定でp<0.01、色変更は有意でなかった。
+F053,contributions,1,author_claim,https://arxiv.org/html/2603.19312v3,"§1, §3, §5",著者は事前学習器・停止勾配・EMAなしで画像から学ぶ2項のJEPA世界モデルと、物理量プローブ・予想違反評価を提示する。新規性は著者主張。
+F053,summary,1,interpretation,https://arxiv.org/html/2603.19312v3,§3–6,報酬なし画像軌跡から予測損失とガウス正則化で表現を学び、短期の潜在計画で複数のシミュレーション課題において競争力を示す。
+F053,remaining_issues,1,author_claim,https://arxiv.org/html/2603.19312v3,§6 Limitations,著者は短い計画範囲、十分に広いオフラインデータへの依存、低多様性データでのSIGRegの弱さ、行動ラベルへの依存を限界とする。
+F053,remaining_issues,2,unverified,https://arxiv.org/html/2603.19312v3,"§4–6, 図5–8",調査者指摘: 実機、分布外や外乱への頑健性、必要なデータ被覆量はこの実験では確認されていない。
+F052,social_background,1,author_claim,https://arxiv.org/html/2411.04983v2,"§1, §5",著者は幅広い物理環境での視覚的な推論・制御を動機に挙げる。
+F052,technical_background,1,author_claim,https://arxiv.org/html/2411.04983v2,§2–3,画像再構成や報酬予測を伴う世界モデルは計算コストやタスク依存性があり、汎用の事前学習視覚特徴を利用する。
+F052,problem,1,author_claim,https://arxiv.org/html/2411.04983v2,§3,オフラインの観測と行動の軌跡から、画像で指定した目標へ未知のタスク固有学習なしで計画する。
+F052,method,1,author_claim,https://arxiv.org/html/2411.04983v2,§3.1,凍結DINOv2の空間パッチ特徴と履歴・行動を入力する因果Transformerで次の特徴を予測する。固有感覚情報があれば追加し、画像復元器は可視化にのみ使う。
+F052,method,2,author_claim,https://arxiv.org/html/2411.04983v2,§3.2,候補行動列を潜在空間で転がし、目標画像特徴との距離をCEMで最小化する。
+F052,results,1,demonstrated,https://arxiv.org/html/2411.04983v2,"§4.3, 表1",6環境のうちMaze・Wall・Reach・PushTは各50組で成功率を測定、Reach 0.92とPushT 0.90は報酬なしオフライン条件に適応したDreamerV3の0.64と0.30を上回る。
+F052,results,2,demonstrated,https://arxiv.org/html/2411.04983v2,"§4.3, 表1",Rope・Granularは各10例のChamfer距離で0.41・0.26、同条件に適応したDreamerV3は2.49・1.05。
+F052,results,3,demonstrated,https://arxiv.org/html/2411.04983v2,"付録A.4.1, 表5",PushT訓練軌跡を200から18500に増やすと成功率0.08から0.92へ上昇。
+F052,contributions,1,author_claim,https://arxiv.org/html/2411.04983v2,"§1, §3",著者は事前学習済み空間特徴の予測による報酬不要の世界モデルと画像目標のゼロショット計画を提示する。
+F052,summary,1,interpretation,https://arxiv.org/html/2411.04983v2,§3–5,事前学習済み視覚特徴を用いてオフラインの行動条件付き予測を学び、複数のナビゲーションと操作シミュレーションで計画する。
+F052,remaining_issues,1,author_claim,https://arxiv.org/html/2411.04983v2,§5 Limitations,著者は十分な状態・行動のデータ被覆、正解行動ラベル、細かい制御への階層化を課題に挙げる。
+F052,remaining_issues,2,unverified,https://arxiv.org/html/2411.04983v2,"§4.3, §5",調査者指摘: 実機と観測外乱への頑健性は未確認。変形物の評価は10例と小規模。
+F056,social_background,1,not_stated,https://arxiv.org/html/2410.12557v3,§1,社会的需要の明示的記載なし。
+F056,technical_background,1,author_claim,https://arxiv.org/html/2410.12557v3,§1–2,多数stepのflow生成は遅く、外部教師蒸留は追加学習を要する。
+F056,problem,1,author_claim,https://arxiv.org/html/2410.12557v3,§3,単一学習で1段から多段まで利用可能な生成器を学ぶ。
+F056,method,1,demonstrated,https://arxiv.org/html/2410.12557v3,"§3–3.1, Algorithms 1–2",時刻とstep幅を条件とし、d=0の実データFM損失と、モデルの2半stepから作る停止勾配bootstrap目標を併用。2つ目の評価は生成された中間状態を使う。
+F056,results,1,demonstrated,https://arxiv.org/html/2410.12557v3,"§5.1 Table 1, §5.2",同等DiT-Bと計算量で1・4・128 stepのFID-50kを比較。著者はshortcutがfew-stepで多くの先行法を上回ると報告。画像分布生成でありpaired MSEではない。
+F056,contributions,1,author_claim,https://arxiv.org/html/2410.12557v3,§3,step幅条件と自己生成の2半step整合性による単一段階学習を提案。
+F056,summary,1,interpretation,https://arxiv.org/html/2410.12557v3,§3–5,学習時の生成中間点を取り込む設計は推論分布ずれの対照候補だが、同じ目標の繰返しで未来MSEが単調改善する保証はない。
+F056,remaining_issues,1,author_claim,https://arxiv.org/html/2410.12557v3,"§3.1, §6",著者: 初期の自己生成目標は不安定でweight decayやEMAが役立つ。有限容量のbootstrap誤差や目標分布の偏りが残り得る。
+F057,social_background,1,not_stated,https://arxiv.org/html/2503.07565v7,§1,社会的需要の明示的記載なし。
+F057,technical_background,1,author_claim,https://arxiv.org/html/2503.07565v7,§1–2,少段拡散蒸留やconsistency訓練は不安定性と調整コストがある。
+F057,problem,1,author_claim,https://arxiv.org/html/2503.07565v7,§3,1段から多段の分布写像を単一段階で学習する。
+F057,method,1,demonstrated,https://arxiv.org/html/2503.07565v7,"§3–4 Theorem 1, Appendix B.3–B.4","中間時刻を介したbootstrapと直接写像の周辺分布をMMDで合わせる。r(s,t)=max(s,t−Δ(t))でΔ≥ε>0等、周辺保存補間、無限データ・容量と各反復の厳密最小化を仮定。証明は境界分布から帰納的に正しい時間範囲を広げる。"
+F057,results,1,demonstrated,https://arxiv.org/html/2503.07565v7,§7.1 Table 1,無条件CIFAR-10、事前学習なしでIMM FIDは1 step 3.20、2 step 1.98。iCTは1 step 2.83、2 step 2.46。分布評価。
+F057,contributions,1,author_claim,https://arxiv.org/html/2503.07565v7,§3–4,分布レベルの自己bootstrapとMMDによる少段生成。
+F057,summary,1,interpretation,https://arxiv.org/html/2503.07565v7,§3–4,周辺分布の一致は各観測に対応した未来を保つことや条件付き平均MSEを保証しない。
+F057,remaining_issues,1,interpretation,https://arxiv.org/html/2503.07565v7,"§3–4, §7, Appendix B.4",理論は分布MMDと理想的最適化の収束であり、有限学習のstepごとの単調性、観測に対応する未来、paired MSEを保証しない。
+F058,social_background,1,not_stated,https://arxiv.org/html/2310.14189v1,§1,社会的需要の明示的記載なし。
+F058,technical_background,1,author_claim,https://arxiv.org/html/2310.14189v1,§1–2,旧consistency trainingは蒸留モデルより生成品質が劣り教師EMAの理論が問題。
+F058,problem,1,author_claim,https://arxiv.org/html/2310.14189v1,§3,事前訓練教師やLPIPSなしのconsistency trainingを改善する。
+F058,method,1,demonstrated,https://arxiv.org/html/2310.14189v1,"§3.2 Proposition 1, Appendix A",Diracデータ、線形パラメータ、二乗距離、均一重みのtoy例でEMA教師と学生が異なると離散幅ゼロの損失がデータ値に依存しなくなる。教師EMAを除去しpseudo-Huber、lognormal scheduleと段階的離散化を採用。
+F058,results,1,demonstrated,https://arxiv.org/html/2310.14189v1,"Abstract, §4",無条件CIFAR-10で1 step FID 2.51、2 step 2.24。元consistency trainingとの比較であり未来paired MSEではない。
+F058,contributions,1,author_claim,https://arxiv.org/html/2310.14189v1,§3–4,教師EMAの反例と一連の訓練改善を示す。
+F058,summary,1,interpretation,https://arxiv.org/html/2310.14189v1,§3.2,EMA教師の有害性は提示された極限・toy条件の結果であり、異なるbootstrap目的のEMAも一律に有害とは言えない。
+F058,remaining_issues,1,interpretation,https://arxiv.org/html/2310.14189v1,§3–4,生成分布改善は反復的未来予測の誤差が減る保証ではない。
+F059,social_background,1,not_stated,https://arxiv.org/html/2407.02398v1,§1,社会的需要の明示的記載なし。
+F059,technical_background,1,author_claim,https://arxiv.org/html/2407.02398v1,§1–3,flow軌道の直線化には従来反復rectificationやOT計算が必要。
+F059,problem,1,author_claim,https://arxiv.org/html/2407.02398v1,§3,軌道上の終点と速度の一致を学び少段生成を得る。
+F059,method,1,demonstrated,https://arxiv.org/html/2407.02398v1,"§3.2 Lemma 1, Theorem 1, Appendix A",時空間微分可能・xについて一様Lipschitzの場では軌道上速度一定と直線外挿終点の一定が同値。EMAなし・有界2階微分等の下、微小step損失の展開が速度誤差と物質微分の組合せになる。
+F059,results,1,demonstrated,https://arxiv.org/html/2407.02398v1,§4.1 Table 2,無条件CIFAR-10、2 NFEでConsistency-FM FID 5.34、consistency model 5.83と報告。画像生成であり未来MSEではない。
+F059,contributions,1,author_claim,https://arxiv.org/html/2407.02398v1,§3,速度一貫性、multi-segment学習、教師からの蒸留を提示。
+F059,summary,1,interpretation,https://arxiv.org/html/2407.02398v1,§3.2,直線性はモデル軌道の性質であり実際の未来との対応や条件付き平均を保証しない。
+F059,remaining_issues,1,interpretation,https://arxiv.org/html/2407.02398v1,"§3.2, §4",微小step近似は有限step・有限モデルに一般化できず、生成FIDだけでは反復悪化の解決を確認できない。
+F060,social_background,1,not_stated,https://arxiv.org/html/2310.02279v3,§1,社会的需要の明示的記載なし。
+F060,technical_background,1,author_claim,https://arxiv.org/html/2310.02279v3,§1,通常のconsistency modelは反復時に品質とNFEの良好な交換関係が得にくい。
+F060,problem,1,author_claim,https://arxiv.org/html/2310.02279v3,§3–4,任意時刻間のPF-ODE軌道とscoreを単一モデルで学び、多様なサンプリングを可能にする。
+F060,method,1,demonstrated,https://arxiv.org/html/2310.02279v3,"§3–4, Appendix B.1",教師PF-ODEに沿ったsoft consistencyとscore matchingを用いて任意時刻jumpを学ぶ。積分可能なscoreの下でjumpの補助関数のs→t極限はE[x|x_t]だが、有限intervalの出力は同じ平均ではない。
+F060,results,1,demonstrated,https://arxiv.org/html/2310.02279v3,"§5, Abstract",CIFAR-10の1 step FID 1.73、ImageNet 64の1 step FID 1.92を報告。画像分布・補助損失を使った蒸留で、paired未来特徴MSEではない。
+F060,contributions,1,author_claim,https://arxiv.org/html/2310.02279v3,§3–4,軌道全体のjumpとscoreを統一し、γ-samplingによる計算量調整を提示。
+F060,summary,1,interpretation,https://arxiv.org/html/2310.02279v3,"§4, Appendix B.5",軌道間jumpを条件に含めることは反復誤差への設計候補だが、未来物理時刻の反復予測におけるMSE単調性を意味しない。
+F060,remaining_issues,1,interpretation,https://arxiv.org/html/2310.02279v3,"§4, Appendix B.2・B.5, F.1–F.2",理論は最適CTMが教師PF-ODEの写像を再現し、教師の誤差等を制御できる条件に依存する。F.2は教師とoracleのTV境界および三角不等式を使う。分布のTV制御は有限モデルの未来paired MSEの単調改善を保証しない。
+F061,social_background,1,not_stated,https://arxiv.org/html/2303.09556v3,§1,本文と指定箇所を確認。
+F061,technical_background,1,author_claim,https://arxiv.org/html/2303.09556v3,§3.2–3.3,本文と指定箇所を確認。
+F061,problem,1,author_claim,https://arxiv.org/html/2303.09556v3,§3–4,本文と指定箇所を確認。
+F061,method,1,author_claim,https://arxiv.org/html/2303.09556v3,"§3.4, §4.2, Appendix B",本文と指定箇所を確認。
+F061,results,1,demonstrated,https://arxiv.org/html/2303.09556v3,"§4.2 Fig. 5, Table 1",本文と指定箇所を確認。
+F061,contributions,1,author_claim,https://arxiv.org/html/2303.09556v3,§2–3,本文と指定箇所を確認。
+F061,summary,1,interpretation,https://arxiv.org/html/2303.09556v3,§3–4,本文と指定箇所を確認。
+F061,remaining_issues,1,interpretation,https://arxiv.org/html/2303.09556v3,"§3.4, Appendix B",本文と指定箇所を確認。
+F062,social_background,1,not_stated,https://arxiv.org/html/2405.20320v2,§1,本文と指定箇所を確認。
+F062,technical_background,1,author_claim,https://arxiv.org/html/2405.20320v2,§1–2,本文と指定箇所を確認。
+F062,problem,1,author_claim,https://arxiv.org/html/2405.20320v2,§3–4,本文と指定箇所を確認。
+F062,method,1,author_claim,https://arxiv.org/html/2405.20320v2,§3–4; Appendix A/C,本文と指定箇所を確認。
+F062,results,1,demonstrated,https://arxiv.org/html/2405.20320v2,"§5.1–5.2, Tables 5–6",本文と指定箇所を確認。
+F062,contributions,1,author_claim,https://arxiv.org/html/2405.20320v2,§3–4,本文と指定箇所を確認。
+F062,summary,1,interpretation,https://arxiv.org/html/2405.20320v2,§3–5,本文と指定箇所を確認。
+F062,remaining_issues,1,interpretation,https://arxiv.org/html/2405.20320v2,"§4.1–4.2, §5.2",本文と指定箇所を確認。
+F063,social_background,1,author_claim,https://arxiv.org/html/2302.03660v3,"§1, §5",本文と指定箇所を確認。
+F063,technical_background,1,author_claim,https://arxiv.org/html/2302.03660v3,§1–2,本文と指定箇所を確認。
+F063,problem,1,author_claim,https://arxiv.org/html/2302.03660v3,§3,本文と指定箇所を確認。
+F063,method,1,author_claim,https://arxiv.org/html/2302.03660v3,"§3.1–3.3 Theorem 3.1, Proposition 3.2; Appendix B/C",本文と指定箇所を確認。
+F063,results,1,demonstrated,https://arxiv.org/html/2302.03660v3,§5 Table 2,本文と指定箇所を確認。
+F063,contributions,1,author_claim,https://arxiv.org/html/2302.03660v3,§3; Appendix A–C,本文と指定箇所を確認。
+F063,summary,1,interpretation,https://arxiv.org/html/2302.03660v3,§3–5,本文と指定箇所を確認。
+F063,remaining_issues,1,interpretation,https://arxiv.org/html/2302.03660v3,"§3.2–3.3, Appendix E",本文と指定箇所を確認。
+F064,social_background,1,not_stated,https://arxiv.org/html/2603.02337v5,§1,本文と指定箇所を確認。
+F064,technical_background,1,author_claim,https://arxiv.org/html/2603.02337v5,§2–3,本文と指定箇所を確認。
+F064,problem,1,author_claim,https://arxiv.org/html/2603.02337v5,§3–4,本文と指定箇所を確認。
+F064,method,1,author_claim,https://arxiv.org/html/2603.02337v5,"§3–4, Algorithm 1; Appendix D–F",本文と指定箇所を確認。
+F064,results,1,demonstrated,https://arxiv.org/html/2603.02337v5,Appendix G.10 Table 8,本文と指定箇所を確認。
+F064,contributions,1,author_claim,https://arxiv.org/html/2603.02337v5,"§3–4, Appendix A",本文と指定箇所を確認。
+F064,summary,1,interpretation,https://arxiv.org/html/2603.02337v5,"§4–5, Appendix G.10",本文と指定箇所を確認。
+F064,remaining_issues,1,interpretation,https://arxiv.org/html/2603.02337v5,"Appendix B, G.9–G.10",本文と指定箇所を確認。
+F065,social_background,1,not_stated,https://arxiv.org/html/2304.03283v1,§1,本文と指定箇所を確認。
+F065,technical_background,1,author_claim,https://arxiv.org/html/2304.03283v1,"§1, §3",本文と指定箇所を確認。
+F065,problem,1,author_claim,https://arxiv.org/html/2304.03283v1,§4–5,本文と指定箇所を確認。
+F065,method,1,author_claim,https://arxiv.org/html/2304.03283v1,§4.1–4.3,本文と指定箇所を確認。
+F065,results,1,demonstrated,https://arxiv.org/html/2304.03283v1,"§3, §5 Fig. 5",本文と指定箇所を確認。
+F065,contributions,1,author_claim,https://arxiv.org/html/2304.03283v1,§4–5,本文と指定箇所を確認。
+F065,summary,1,interpretation,https://arxiv.org/html/2304.03283v1,§4–6,本文と指定箇所を確認。
+F065,remaining_issues,1,interpretation,https://arxiv.org/html/2304.03283v1,§5 decoder architecture,本文と指定箇所を確認。
+F066,social_background,1,not_stated,https://arxiv.org/html/2206.09012v4,§1,社会的需要の明示的記載なし。
+F066,technical_background,1,author_claim,https://arxiv.org/html/2206.09012v4,§1,独立に学習した拡散priorと別の条件制約を組み合わせる推論が難しい。
+F066,problem,1,author_claim,https://arxiv.org/html/2206.09012v4,§2,任意の微分可能な制約下で高次元変数を近似推論する。
+F066,method,1,demonstrated,https://arxiv.org/html/2206.09012v4,"§2.1–2.2 Eq. 12, Algorithm 1",固定DDPMのノイズ予測誤差をprior項、負の対数制約を尤度項として各ノイズ時刻における点推定を勾配最適化する。初期化と時刻annealingを選ぶ。
+F066,results,1,demonstrated,https://arxiv.org/html/2206.09012v4,"§3–5, Table 1",EnviroAtlasのDurham域ではfine-tuned提案法の精度79.8%、class mean IoU 46.4%、Pittsburgh教師あり＋weakは78.9%、47.9%。画像分割であり未来MSEではない。
+F066,contributions,1,author_claim,https://arxiv.org/html/2206.09012v4,§2–5,独立した拡散priorと微分可能な外部制約を組み合わせた近似推論を提案。
+F066,summary,1,interpretation,https://arxiv.org/html/2206.09012v4,§2,得られる点は近似的なposterior modeでありposterior meanではない。未来予測では事前分布に加え現状態から未来への正当な制約または条件付き尤度が必要。
+F066,remaining_issues,1,interpretation,https://arxiv.org/html/2206.09012v4,"§2.2, §4–5",点推定は近似的なmode探索で初期値・時刻schedule・近似自由エネルギーに依存し、MSE最適の条件付き平均を保証しない。対象に根拠ある制約がなければ未来予測へ転用できない。
+F067,social_background,1,author_claim,https://arxiv.org/html/2405.18782v2,"§1, §4.3",ブラックホール画像など制約の強い科学計測の復元を扱う。
+F067,technical_background,1,author_claim,https://arxiv.org/html/2405.18782v2,§1,拡散逆問題法の近似は目的事後分布からのずれを生み得る。
+F067,problem,1,author_claim,https://arxiv.org/html/2405.18782v2,§3,尤度と拡散priorを分離し、より原理的な事後標本化を実現する。
+F067,method,1,demonstrated,https://arxiv.org/html/2405.18782v2,§3.1–3.4,尤度に基づく補助変数の標本化とGaussian denoising posteriorのprior stepを交互に行うMCMC。固定ρ、score近似誤差等の条件の下で平均Fisher情報の境界を示す。
+F067,results,1,demonstrated,https://arxiv.org/html/2405.18782v2,"§3.4 Theorem 3.1, Appendix A.2, §4.1–4.2 Table 1",固定ρ>0、有限score二乗誤差、連続時間の正則条件下でK反復の平均Fisher情報は初期KL/Kとscore誤差で抑えられる。証明はKL微分と反復間の望遠和。FFHQ 100画像のnoisy Gaussian deblur PSNRはPnP-DM EDM 29.66 dB、DPS 28.83 dB。
+F067,contributions,1,author_claim,https://arxiv.org/html/2405.18782v2,§3,Gaussian denoisingを介する分割標本化と有限時間解析を提示。
+F067,summary,1,interpretation,https://arxiv.org/html/2405.18782v2,§3,尤度p(y|x)と拡散priorが必要。出力は事後標本であってMSE最適な事後平均ではなく、未知の未来観測に対し尤度を勝手に置けない。
+F067,remaining_issues,1,author_claim,https://arxiv.org/html/2405.18782v2,"§3.4, §5, Appendix A.2",著者: 大画像の計算負荷、非線形尤度stepの有限MCMC誤差は解析外。調査者: 平均Fisher情報境界は最終反復MSEの単調性を意味しない。
+F068,social_background,1,not_stated,https://arxiv.org/html/2209.14687v4,§1,社会的需要の明示的記載なし。
+F068,technical_background,1,author_claim,https://arxiv.org/html/2209.14687v4,§1,雑音あり・非線形逆問題では厳密な測定射影が雑音を増幅し得る。
+F068,problem,1,author_claim,https://arxiv.org/html/2209.14687v4,§3,既知の測定過程に対し近似事後拡散を行う。
+F068,method,1,demonstrated,https://arxiv.org/html/2209.14687v4,"§3.1 Theorem 1, Algorithm 1",p(y|x_t)=E[p(y|x0)|x_t]をp(y|E[x0|x_t])で近似し、拡散stepに測定残差の勾配を加える。Jensen gapの境界はGaussian測定雑音、有限operator勾配と条件付き1次モーメントを仮定する。
+F068,results,1,demonstrated,https://arxiv.org/html/2209.14687v4,"§4 Table 1, Appendix A",FFHQ 256、1000検証画像、Gaussian測定雑音σ=0.05の4× SRでDPS FID 39.35、LPIPS 0.214、DDRM 62.15、0.294。分布・知覚指標であり未来MSEではない。
+F068,contributions,1,author_claim,https://arxiv.org/html/2209.14687v4,§3,非線形・雑音あり尤度の勾配を拡散に組み込む近似法。
+F068,summary,1,interpretation,https://arxiv.org/html/2209.14687v4,§3,既知operator・雑音尤度を必要とし、posterior sampleはconditional meanと異なる。時刻tのdenoiser平均は観測条件のみの未来平均でもない。
+F068,remaining_issues,1,interpretation,https://arxiv.org/html/2209.14687v4,"§3.1 Theorem 1, Appendix A, C.6","付録のGaussian密度Lipschitz定数の最大点と式には疑義がある。標準N(μ,σ²)の|φ′|最大点はμ±σ、値e^(−1/2)/(√(2π)σ²)であり、記載定数をそのまま採用しない。一般的近似法の有効性とは別。著者は推論速度を制約とする。"
+F069,social_background,1,author_claim,https://arxiv.org/html/2201.11793v3,§1,異なる劣化モデルに柔軟に対応する画像復元が医療等で必要とされる。
+F069,technical_background,1,author_claim,https://arxiv.org/html/2201.11793v3,§1–2,逆問題別の教師あり学習は制約があり、汎用事後標本法は遅い。
+F069,problem,1,author_claim,https://arxiv.org/html/2201.11793v3,§3,既存の無条件拡散を任意の既知線形逆問題へ適用する。
+F069,method,1,demonstrated,https://arxiv.org/html/2201.11793v3,"§3.2–3.3, Proposition 3.1, Theorem 3.2, Appendix C",既知線形測定のSVD基底で特異値ごとに観測とpriorを組み合わせる。前向き周辺がGaussian denoisingに一致。時刻別重み非共有と指定η条件の下でELBOがDDPM目的に一致。
+F069,results,1,demonstrated,https://arxiv.org/html/2201.11793v3,§5.2 Table 1,noiseless ImageNet 256、4× SRのPSNRはDDRM 26.55 dB/20 NFE、RED 26.08 dB/100 NFE。paired画像復元であり未来予測ではない。
+F069,contributions,1,author_claim,https://arxiv.org/html/2201.11793v3,§3,線形測定SVDと既存拡散denoiserを利用する復元枠組み。
+F069,summary,1,interpretation,https://arxiv.org/html/2201.11793v3,§3,真の現在→未来は一般に既知の逆測定ではない。前提を満たさず同じ更新を使うことはできない。
+F069,remaining_issues,1,interpretation,https://arxiv.org/html/2201.11793v3,"§3.3, §5",時刻別重み非共有などの定理仮定は通常の共有ネットと異なり、有限学習の正確な事後標本やMSE改善を保証しない。
+F070,social_background,1,not_stated,https://arxiv.org/html/2307.12348v3,§1,社会的需要の明示的記載なし。
+F070,technical_background,1,author_claim,https://arxiv.org/html/2307.12348v3,§1,超解像の拡散生成は多数stepによる推論遅延がある。
+F070,problem,1,author_claim,https://arxiv.org/html/2307.12348v3,§2,低解像と高解像の対応対を使い少数stepの復元chainを学習する。
+F070,method,1,demonstrated,https://arxiv.org/html/2307.12348v3,"§2.1 Eq. 1–8, Appendix A","x_t=x0+η_t(y0−x0)+κ√η_t ε、逆平均は(η_{t−1}/η_t)x_t+(α_t/η_t)fθ(x_t,y0,t)。Gaussian積のBayes計算で逆posteriorを導く。x0二乗回帰の理論重みは実用では省略。"
+F070,results,1,demonstrated,https://arxiv.org/html/2307.12348v3,§4.2 Table 2,ImageNet-Test、4× SR、V100の15 stepでResShift PSNR 25.01 dB、LDM-15 24.89 dB。画素復元結果。
+F070,contributions,1,author_claim,https://arxiv.org/html/2307.12348v3,§2–4,paired端点間の残差shiftとノイズscheduleによる効率的な拡散復元。
+F070,summary,1,interpretation,https://arxiv.org/html/2307.12348v3,§2,推論時に既知の明示operatorを必要とせず、情報あるsourceとpaired訓練を活かす。ただし未来生成標本のMSE最適性は別。
+F070,remaining_issues,1,author_claim,https://arxiv.org/html/2307.12348v3,"§2.1, Appendix A・B.3",著者: 人工劣化での学習は複雑な実劣化を網羅せず、重度劣化で失敗する。調査者: source skipは雑音の全次元除去やpaired未来MSEの改善を保証しない。
+F071,social_background,1,author_claim,https://arxiv.org/html/2606.29059v2,§1,本文と指定箇所を確認。
+F071,technical_background,1,author_claim,https://arxiv.org/html/2606.29059v2,§1–2,本文と指定箇所を確認。
+F071,problem,1,author_claim,https://arxiv.org/html/2606.29059v2,§3–4,本文と指定箇所を確認。
+F071,method,1,author_claim,https://arxiv.org/html/2606.29059v2,"§3.2–3.4, §5.1, Appendix F–H",本文と指定箇所を確認。
+F071,results,1,demonstrated,https://arxiv.org/html/2606.29059v2,"§4.1–4.2, §5.2–5.5, Tables 1–2",本文と指定箇所を確認。
+F071,contributions,1,author_claim,https://arxiv.org/html/2606.29059v2,§2–3; Appendix H,本文と指定箇所を確認。
+F071,summary,1,interpretation,https://arxiv.org/html/2606.29059v2,§3–5,本文と指定箇所を確認。
+F071,remaining_issues,1,interpretation,https://arxiv.org/html/2606.29059v2,"Appendix E, J; §3.2",本文と指定箇所を確認。
+F075,social_background,1,author_claim,https://arxiv.org/html/2507.13162v2,"§1, §3",本文と指定箇所を確認。
+F075,technical_background,1,author_claim,https://arxiv.org/html/2507.13162v2,§3,本文と指定箇所を確認。
+F075,problem,1,author_claim,https://arxiv.org/html/2507.13162v2,§4–5,本文と指定箇所を確認。
+F075,method,1,author_claim,https://arxiv.org/html/2507.13162v2,"§4.1–4.2, Appendix C.2",本文と指定箇所を確認。
+F075,results,1,demonstrated,https://arxiv.org/html/2507.13162v2,Appendix C.2 Table 7,本文と指定箇所を確認。
+F075,contributions,1,author_claim,https://arxiv.org/html/2507.13162v2,§4–5,本文と指定箇所を確認。
+F075,summary,1,interpretation,https://arxiv.org/html/2507.13162v2,§4–5,本文と指定箇所を確認。
+F075,remaining_issues,1,interpretation,https://arxiv.org/html/2507.13162v2,§5; Appendix C.2,本文と指定箇所を確認。
+F076,social_background,1,author_claim,https://arxiv.org/html/2507.13942v2,§1,本文と指定箇所を確認。
+F076,technical_background,1,author_claim,https://arxiv.org/html/2507.13942v2,§2–3,本文と指定箇所を確認。
+F076,problem,1,author_claim,https://arxiv.org/html/2507.13942v2,§3,本文と指定箇所を確認。
+F076,method,1,author_claim,https://arxiv.org/html/2507.13942v2,"§3.1–3.2, §4.3",本文と指定箇所を確認。
+F076,results,1,demonstrated,https://arxiv.org/html/2507.13942v2,§5 Table 1,本文と指定箇所を確認。
+F076,contributions,1,author_claim,https://arxiv.org/html/2507.13942v2,§3–5,本文と指定箇所を確認。
+F076,summary,1,interpretation,https://arxiv.org/html/2507.13942v2,§3–5,本文と指定箇所を確認。
+F076,remaining_issues,1,interpretation,https://arxiv.org/html/2507.13942v2,"§3.3, §4.3, §5",本文と指定箇所を確認。
+F077,social_background,1,author_claim,https://arxiv.org/html/2308.13712v3,"§1, §6",本文と指定箇所を確認。
+F077,technical_background,1,author_claim,https://arxiv.org/html/2308.13712v3,§1–4,本文と指定箇所を確認。
+F077,problem,1,author_claim,https://arxiv.org/html/2308.13712v3,§4–5,本文と指定箇所を確認。
+F077,method,1,author_claim,https://arxiv.org/html/2308.13712v3,§4–5 Eq. 6–7; Appendix A,本文と指定箇所を確認。
+F077,results,1,demonstrated,https://arxiv.org/html/2308.13712v3,§4.1 Table 1,本文と指定箇所を確認。
+F077,contributions,1,author_claim,https://arxiv.org/html/2308.13712v3,§4–5; Appendix A,本文と指定箇所を確認。
+F077,summary,1,interpretation,https://arxiv.org/html/2308.13712v3,§4–6,本文と指定箇所を確認。
+F077,remaining_issues,1,interpretation,https://arxiv.org/html/2308.13712v3,"§5–6, Appendix C",本文と指定箇所を確認。
+F072,social_background,1,author_claim,https://arxiv.org/html/2610.03607v1,"Abstract, §1",著者の主張と調査者解釈は本文中に区別
+F072,technical_background,1,author_claim,https://arxiv.org/html/2610.03607v1,§1,著者の主張と調査者解釈は本文中に区別
+F072,problem,1,author_claim,https://arxiv.org/html/2610.03607v1,§3,著者の主張と調査者解釈は本文中に区別
+F072,method,1,author_claim,https://arxiv.org/html/2610.03607v1,"§3, Appendix B–C, eqs. 25–28",著者の主張と調査者解釈は本文中に区別
+F072,results,1,demonstrated,https://arxiv.org/html/2610.03607v1,"Abstract, §4, Appendix D",著者の主張と調査者解釈は本文中に区別
+F072,contributions,1,author_claim,https://arxiv.org/html/2610.03607v1,§3,著者の主張と調査者解釈は本文中に区別
+F072,summary,1,author_claim,https://arxiv.org/html/2610.03607v1,"§3, Appendix B",著者の主張と調査者解釈は本文中に区別
+F072,remaining_issues,1,interpretation,https://arxiv.org/html/2610.03607v1,Appendix B–D,原文を踏まえた調査者の解釈
+F071,method,2,demonstrated,https://github.com/facebookresearch/Flow-World-Models/blob/c15062509c509284848a344f07364562673f0e0b/models/DDT.py,"DiTwDDTHead.forward lines 783–839, 883–895",別途確認した公式code commit c15062509c509284848a344f07364562673f0e0bでは、raw noisy targetは狭いtrunkと独立にwide headへ埋め込まれる。論文v2の学習codeとの完全一致は未確認。
+F073,social_background,1,not_stated,https://arxiv.org/html/2403.02957v4,§1,特定の社会的需要は記載なし。
+F073,technical_background,1,author_claim,https://arxiv.org/html/2403.02957v4,§1–3,MSE最適な条件付き平均と生成sampleは異なる。
+F073,problem,1,author_claim,https://arxiv.org/html/2403.02957v4,"§1, §4",既存拡散モデルによるAWGN除去で条件付き平均への近似を解析。
+F073,method,1,author_claim,https://arxiv.org/html/2403.02957v4,§4.1 Eq. 13–16,既知SNRに合う時刻に正規化観測を置き、逆Gaussian遷移の平均だけを逐次合成。非線形性から有限段の各Jensen gapは一般に非零。
+F073,results,1,demonstrated,https://arxiv.org/html/2403.02957v4,§5 Fig. 2,64次元128成分GMM、訓練10万・評価1万例で300段の平均鎖は解析的CMEに近いNMSE。再sample鎖と比較。
+F073,contributions,1,author_claim,https://arxiv.org/html/2403.02957v4,§4.3–4.4,著者は条件付き平均への漸近収束を主張。既知AWGN、時刻schedule、学習誤差の減衰等を仮定。
+F073,summary,1,interpretation,https://arxiv.org/html/2403.02957v4,§4–5,逐次平均による点推定の経験的結果と理論解析。
+F073,remaining_issues,1,interpretation,https://arxiv.org/html/2403.02957v4,"§4.2–4.4; Appendix B, E–F",付録BのLemma 4.1は任意の逆Gaussian平均μ=2xも許す仮定からL<1を主張するため反例がある。forward独立ノイズの条件付き平均微分公式を逆モデルに適用する結合を示していない。後続定理は補題に依存し、一般の収束証明は確認できない。経験結果の否定ではない。
+F074,social_background,1,not_stated,https://arxiv.org/html/2411.01629v2,§1,特定の社会的動機は記載なし。
+F074,technical_background,1,author_claim,https://arxiv.org/html/2411.01629v2,§1–3,拡散の前向き収縮と逆向き拡張の差が復元の難しさを左右する。
+F074,problem,1,author_claim,https://arxiv.org/html/2411.01629v2,"§1, §4",非log-concave分布を含む拡散・復元の感度と局所化を分析する。
+F074,method,1,author_claim,https://arxiv.org/html/2411.01629v2,"§2 Props. 2–3, §3–4",独立Y=X+σZでE[X|Y=y]=y+σ²∇log pY(y)、Hessianは条件付き共分散を表す。OU流のWasserstein順方向収縮と逆OT写像拡張を解析し、多尺度の曲率の裾を導入する。
+F074,results,1,demonstrated,https://arxiv.org/html/2411.01629v2,§5 Examples 1–6,厳密解析例として点質量、正規、一様、二点混合、異分散Gaussian混合を評価。二点混合でSNR依存の局所化の難所を示す。実データ予測のMSE比較ではない。
+F074,contributions,1,author_claim,https://arxiv.org/html/2411.01629v2,"§3 Theorems 1–3, §4 Theorem 4",著者は順逆写像の微小step感度と、非log-concave分布の多尺度曲率量による局所的拡張評価を導く。
+F074,summary,1,interpretation,https://arxiv.org/html/2411.01629v2,§2–5,Gaussian denoisingの条件付き平均と不確かさをscore・curvatureに結び付け、分布の輸送感度を解析。
+F074,remaining_issues,1,interpretation,https://arxiv.org/html/2411.01629v2,"§3 Theorem 3, §4 Theorem 4; Appendix A",Theorem 4は有界Hessian、制限された局所Wasserstein摂動、η→0を仮定。Theorem 3は滑らかなcompact support条件で一段の分布誤差O(η²)。学習誤差や有限stepのpaired未来MSEの改善は示さない。
+F078,social_background,1,author_claim,https://arxiv.org/html/2310.03725v3,"§1, §4",画像の欠損補完や超解像を対象とする。
+F078,technical_background,1,author_claim,https://arxiv.org/html/2310.03725v3,§1–2,独立Gaussian baseは問題固有の条件付き構造を使わない。
+F078,problem,1,author_claim,https://arxiv.org/html/2310.03725v3,§3,sourceとtargetが依存する結合で条件付き生成を学習する。
+F078,method,1,author_claim,https://arxiv.org/html/2310.03725v3,§3.1–3.4; Appendix A,"It=αt x0+βt x1+γt z、b=E[dIt/dt|It,ξ]を二乗回帰。sourceは観測m(x1)+σζとし推論時にmが利用可能。条件ξを与え輸送方程式を導く。"
+F078,results,1,demonstrated,https://arxiv.org/html/2310.03725v3,§4 Tables 2–3,ImageNet inpaintingのFID50kは独立base 1.35、依存結合1.13。64→256超解像の検証FID 2.05。サンプル品質でありpaired MSEではない。
+F078,contributions,1,author_claim,https://arxiv.org/html/2310.03725v3,"§3 Theorem 3.1, Proposition 3.1; Appendix A",著者主張: 従属結合の下で条件付き速度とscoreの回帰、確率輸送を構成。速度上界はCauchy–SchwarzとJensenの適用で導く。
+F078,summary,1,interpretation,https://arxiv.org/html/2310.03725v3,§3–4,観測に近いbaseを設計し条件付き生成の輸送を学習。
+F078,remaining_issues,1,interpretation,https://arxiv.org/html/2310.03725v3,"§3.2–3.3, §4–5",inpaintingでは見える画素とmaskを推論時に知り、超解像ではLR画像を与える。futureから算出した特徴は推論時利用不能なので真のcurrent–future対から利用可能sourceを構成する必要がある。輸送結合と実際の未来対応は一般に一致せず、低輸送costもpaired MSE改善を保証しない。
+F079,social_background,1,not_stated,https://arxiv.org/html/1903.02334v2,§1,特定の社会的需要は記載なし。
+F079,technical_background,1,author_claim,https://arxiv.org/html/1903.02334v2,§1–2,高次元の未知分布を平滑化し、そのscoreを学習する。
+F079,problem,1,author_claim,https://arxiv.org/html/1903.02334v2,"§1, §3",未知prior下で最小二乗推定と学習したenergyを結び、標本生成と記憶へ利用。
+F079,method,1,author_claim,https://arxiv.org/html/1903.02334v2,"§3 Eq. 3, §5","Y=X+N(0,Σ)なら E[X|Y=y]=y+Σ∇log pY(y)。Gaussian密度を微分しpriorで積分して導出。energy勾配の二乗denoisingを学習し、Langevin walk後に平均推定へjumpする。"
+F079,results,1,demonstrated,https://arxiv.org/html/1903.02334v2,"§4 Figs. 3–4, §5 Figs. 5–6","MNIST 784次元でσ=0.3, 0.7のdenoiseを図示し、σ=0.3, 0.15のwalk-jumpを可視化。定量的な未来予測paired MSE実験ではない。"
+F079,contributions,1,author_claim,https://arxiv.org/html/1903.02334v2,"§3, §5–6",著者主張: energy学習、Bayes jump、walk-jumpとNEBULAを組み合わせる。Gaussian平均恒等式自体は既存のMiyasawaの結果。
+F079,summary,1,interpretation,https://arxiv.org/html/1903.02334v2,§3–5,既知Gaussian汚染のもと、scoreから最小二乗条件付き平均を構成。
+F079,remaining_issues,1,interpretation,https://arxiv.org/html/1903.02334v2,"§4.1, §5",著者はjumpがposteriorやpriorの正確なsampleではなく近似的と明記し、計算・メモリコストも残す。未来予測で使うにはfutureを中心とした人工Gaussian汚染とcurrent条件付きscoreが必要で、観測currentがfutureのGaussian汚染という仮定はない。
+F080,social_background,1,author_claim,https://arxiv.org/html/1803.04189v3,§1–2,長時間露光や高精度シミュレーションなどのclean target取得負担を減らす。
+F080,technical_background,1,author_claim,https://arxiv.org/html/1803.04189v3,§2 Eq. 4–6,平方損失の最適値は入力条件付きtarget平均で決まる。
+F080,problem,1,author_claim,https://arxiv.org/html/1803.04189v3,§1–2,clean targetを収集せずに画像復元を学ぶ。
+F080,method,1,author_claim,https://arxiv.org/html/1803.04189v3,§2 Eq. 5–6,同一潜在信号の独立な破損観測をinputとtargetにして二乗回帰する。E[noisy target|input]がE[clean target|input]と一致すればpopulation riskの最適予測は同一。独立・条件付き零平均は十分条件。
+F080,results,1,demonstrated,https://arxiv.org/html/1803.04189v3,"§3 Table 1, §§3.3–3.4",Kodak Gaussian σ=25のPSNRはclean教師32.50 dB、noisy教師32.48 dB。Poisson、Bernoulli、Monte Carlo、模擬MRIも検証。
+F080,contributions,1,author_claim,https://arxiv.org/html/1803.04189v3,§2–4,著者主張: clean targetなしで統計的に同じ平方損失最適推定を学び、実用復元を実証。
+F080,summary,1,interpretation,https://arxiv.org/html/1803.04189v3,"§2, §3.1, Appendix A.3",目標雑音の条件付き平均が零なら追加雑音はpopulation optimumを変えず、有限dataでは最適化分散を増やしうる。
+F080,remaining_issues,1,interpretation,https://arxiv.org/html/1803.04189v3,"§2, §3.4, Appendix A.3",独立再観測のある同一信号が必要。未来の異なる時点を独立雑音付き同一targetとみなすことはできない。Appendix A.3の1/Nへの単純化は非相関の場合で、一般に強い相関なら消えない。MRIは実測ではなく再構成済み画像の模擬サンプリング。
+F081,social_background,1,not_stated,https://arxiv.org/pdf/2312.02696v2,§1,指定版PDFの該当箇所。
+F081,technical_background,1,author_claim,https://arxiv.org/pdf/2312.02696v2,§1–2,指定版PDFの該当箇所。
+F081,problem,1,author_claim,https://arxiv.org/pdf/2312.02696v2,§1–2,指定版PDFの該当箇所。
+F081,method,1,author_claim,https://arxiv.org/pdf/2312.02696v2,"§2.1–2.3, Appendix B",指定版PDFの該当箇所。
+F081,results,1,demonstrated,https://arxiv.org/pdf/2312.02696v2,Table 1,指定版PDFの該当箇所。
+F081,contributions,1,author_claim,https://arxiv.org/pdf/2312.02696v2,§2–3,指定版PDFの該当箇所。
+F081,summary,1,interpretation,https://arxiv.org/pdf/2312.02696v2,§2–4,指定版PDFの該当箇所。
+F081,remaining_issues,1,interpretation,https://arxiv.org/pdf/2312.02696v2,"§5, §2.1–2.2",指定版PDFの該当箇所。
+F082,social_background,1,author_claim,https://arxiv.org/pdf/2305.08891v4,§1,指定版PDFの該当箇所。
+F082,technical_background,1,author_claim,https://arxiv.org/pdf/2305.08891v4,§2,指定版PDFの該当箇所。
+F082,problem,1,author_claim,https://arxiv.org/pdf/2305.08891v4,§3,指定版PDFの該当箇所。
+F082,method,1,author_claim,https://arxiv.org/pdf/2305.08891v4,"§3 Eq. 11–16, §4.2",指定版PDFの該当箇所。
+F082,results,1,demonstrated,https://arxiv.org/pdf/2305.08891v4,§4.2 Table 3,指定版PDFの該当箇所。
+F082,contributions,1,author_claim,https://arxiv.org/pdf/2305.08891v4,§3,指定版PDFの該当箇所。
+F082,summary,1,interpretation,https://arxiv.org/pdf/2305.08891v4,§3–5,指定版PDFの該当箇所。
+F082,remaining_issues,1,interpretation,https://arxiv.org/pdf/2305.08891v4,§4.2,指定版PDFの該当箇所。
+F083,social_background,1,author_claim,https://arxiv.org/pdf/2406.12303v2,§1,指定版PDFの該当箇所。
+F083,technical_background,1,author_claim,https://arxiv.org/pdf/2406.12303v2,§1–3,指定版PDFの該当箇所。
+F083,problem,1,author_claim,https://arxiv.org/pdf/2406.12303v2,§3–4,指定版PDFの該当箇所。
+F083,method,1,author_claim,https://arxiv.org/pdf/2406.12303v2,"§3.2–3.4, Eq. 4–8",指定版PDFの該当箇所。
+F083,results,1,demonstrated,https://arxiv.org/pdf/2406.12303v2,Appendix A.1 Tables 3–4,指定版PDFの該当箇所。
+F083,contributions,1,author_claim,https://arxiv.org/pdf/2406.12303v2,§3–4,指定版PDFの該当箇所。
+F083,summary,1,interpretation,https://arxiv.org/pdf/2406.12303v2,§3–4,指定版PDFの該当箇所。
+F083,remaining_issues,1,interpretation,https://arxiv.org/pdf/2406.12303v2,"§5, §3.3",指定版PDFの該当箇所。
+F084,social_background,1,not_stated,https://arxiv.org/pdf/2105.05233v4,§1,指定版PDFの該当箇所。
+F084,technical_background,1,author_claim,https://arxiv.org/pdf/2105.05233v4,§1–3,指定版PDFの該当箇所。
+F084,problem,1,author_claim,https://arxiv.org/pdf/2105.05233v4,§3–4,指定版PDFの該当箇所。
+F084,method,1,author_claim,https://arxiv.org/pdf/2105.05233v4,"§3.1–4, Eq. 1–2",指定版PDFの該当箇所。
+F084,results,1,demonstrated,https://arxiv.org/pdf/2105.05233v4,"§3.1 Table 3, abstract",指定版PDFの該当箇所。
+F084,contributions,1,author_claim,https://arxiv.org/pdf/2105.05233v4,§3–5,指定版PDFの該当箇所。
+F084,summary,1,interpretation,https://arxiv.org/pdf/2105.05233v4,§3–5,指定版PDFの該当箇所。
+F084,remaining_issues,1,interpretation,https://arxiv.org/pdf/2105.05233v4,§7,指定版PDFの該当箇所。
+F085,social_background,1,not_stated,https://arxiv.org/pdf/2207.12598v1,§1,指定版PDFの該当箇所。
+F085,technical_background,1,author_claim,https://arxiv.org/pdf/2207.12598v1,§1–2,指定版PDFの該当箇所。
+F085,problem,1,author_claim,https://arxiv.org/pdf/2207.12598v1,§3,指定版PDFの該当箇所。
+F085,method,1,author_claim,https://arxiv.org/pdf/2207.12598v1,§3 Eq. 6–7,指定版PDFの該当箇所。
+F085,results,1,demonstrated,https://arxiv.org/pdf/2207.12598v1,§4.1–4.2 Table 1,指定版PDFの該当箇所。
+F085,contributions,1,author_claim,https://arxiv.org/pdf/2207.12598v1,§3,指定版PDFの該当箇所。
+F085,summary,1,interpretation,https://arxiv.org/pdf/2207.12598v1,§3–4,指定版PDFの該当箇所。
+F085,remaining_issues,1,interpretation,https://arxiv.org/pdf/2207.12598v1,§3–4,指定版PDFの該当箇所。
+F086,social_background,1,not_stated,https://arxiv.org/html/2303.00848v7,§1,特定の社会的動機は記載なし。
+F086,technical_background,1,author_claim,https://arxiv.org/html/2303.00848v7,"§1, §3",拡散の重み付き目的は一見ELBOから異なり、雑音scheduleも学習効率に影響する。
+F086,problem,1,author_claim,https://arxiv.org/html/2303.00848v7,§3–4,様々な重み付き拡散目的の意味と雑音scheduleの役割を分析。
+F086,method,1,author_claim,https://arxiv.org/html/2303.00848v7,"§3.2, §4 Theorem 1; Appendix A,C",log SNR λで書いた積分は重みw(λ)と端点固定なら時間scheduleの形に不変。単調増加w(t)について部分積分し、その微分を時刻分布とするGaussian加法拡張データの期待負ELBOに等価と示す。
+F086,results,1,demonstrated,https://arxiv.org/html/2303.00848v7,§5.1 Table 2,ImageNet 64のε予測cosine baseline FID 1.55、単調sigmoid重み1.46（EDM sampler）。異なる重みでFIDを比較した生成実験。
+F086,contributions,1,author_claim,https://arxiv.org/html/2303.00848v7,§4–5,著者主張: 単調重みを拡張データELBOと解釈し、適応importance samplingと新重みを提案。
+F086,summary,1,interpretation,https://arxiv.org/html/2303.00848v7,§3–5,連続時間目的の再表現と、有限標本の勾配分散に基づくschedule設計を検証。
+F086,remaining_issues,1,interpretation,https://arxiv.org/html/2303.00848v7,"§3.2, §4–6",理論の不変性は連続積分、固定λ端点・同一wとλ条件付けの下であり、Monte Carlo勾配分散と有限訓練は不変でない。加法雑音拡張とsample FIDの結果は未来paired MSEや狭い出力rankの改善を保証しない。
+F087,social_background,1,not_stated,https://arxiv.org/html/2410.11081v2,§1,特定の社会的動機は記載なし。
+F087,technical_background,1,author_claim,https://arxiv.org/html/2410.11081v2,"§1, §4",連続時間consistencyは離散化を避ける一方、接線と時間埋め込みによって学習が不安定になる。
+F087,problem,1,author_claim,https://arxiv.org/html/2410.11081v2,§3–5,少数ステップ生成の連続時間consistencyを安定化・拡張する。
+F087,method,1,author_claim,https://arxiv.org/html/2410.11081v2,"§3–4, Appendix B,D","TrigFlowでx_t=cos(t)x0+sin(t)σd z、f=cos(t)x_t−sin(t)σd Fを使いf(x,0)=xを構造的に満たす。JVP接線の正規化・時間重み学習・安定化されたtime embeddingを採用。教師あり蒸留と直接consistency訓練を区別。"
+F087,results,1,demonstrated,https://arxiv.org/html/2410.11081v2,§5 Table 1,ImageNet64の直接sCTは1 NFE FID 2.04、2 NFE 1.48。CIFAR10では1 NFE 2.85、2 NFE 2.06。画像分布評価。
+F087,contributions,1,author_claim,https://arxiv.org/html/2410.11081v2,§4–5,著者主張: 正規化と時間条件付けにより連続時間consistencyの安定性とスケールを改善。
+F087,summary,1,interpretation,https://arxiv.org/html/2410.11081v2,§3–5,境界条件をhard-codeし接線のスケールとloss分散を制御する。
+F087,remaining_issues,1,interpretation,https://arxiv.org/html/2410.11081v2,"Limitations, §3–5",著者はlatent空間でsCTが蒸留に劣ること、画像artifact、教師依存、architecture変更を制約として挙げる。boundary identityは真のfuture条件付き平均や追加反復のMSE単調改善を保証しない。
+F088,social_background,1,not_stated,https://arxiv.org/html/2410.07303v2,§1,特定の社会的動機は記載なし。
+F088,technical_background,1,author_claim,https://arxiv.org/html/2410.07303v2,§1–2,少数step生成の誤差を抑えるreflowはnoiseと生成sampleの対を再利用する。
+F088,problem,1,author_claim,https://arxiv.org/html/2410.07303v2,§2–3,rectificationを一般diffusion形式へ拡張し低step生成を改善する。
+F088,method,1,author_claim,https://arxiv.org/html/2410.07303v2,"§2.1–2.4, Appendix III",教師ODEが生成したnoise–sample対を固定してε予測を再学習。first-order積分が任意の始終点で正確であることと軌道上一定ε予測の同値を示し、区間分割や追加consistency蒸留を提案。
+F088,results,1,demonstrated,https://arxiv.org/html/2410.07303v2,§3 Table 1,COCO2017 512pxで1 step FIDはrectified flow 47.91、rectified diffusion 27.26、蒸留後22.83。教師sampleへの学習コストを伴い未来MSEではない。
+F088,contributions,1,author_claim,https://arxiv.org/html/2410.07303v2,"§2.2, Appendix III",著者主張: 道筋のEuclidean直線性ではなく軌道上の一貫したnoise予測が一般の一段ODE積分を特徴付ける。
+F088,summary,1,interpretation,https://arxiv.org/html/2410.07303v2,§2–3,教師の生成対により低stepの一貫性を学ぶ。
+F088,remaining_issues,1,interpretation,https://arxiv.org/html/2410.07303v2,"§2.2, §2.4, Appendix II",完全な一貫性の議論は理想的予測、非交差、最適化・容量誤差なしを必要とする。教師の生成対応は真の現時点–未来対ではなく、教師の偏りを継承しpaired未来MSEは保証されない。著者は低stepで追加蒸留が必要と記載。
+F089,social_background,1,not_stated,https://arxiv.org/html/2206.00927v3,§1,特定の社会的動機は記載なし。
+F089,technical_background,1,author_claim,https://arxiv.org/html/2206.00927v3,§1–3,拡散ODE生成で通常の数値積分は多数のnetwork評価を要する。
+F089,problem,1,author_claim,https://arxiv.org/html/2206.00927v3,§3,固定された学習済み拡散ODEの少数評価での数値解を改善。
+F089,method,1,author_claim,https://arxiv.org/html/2206.00927v3,§3.1–3.2,log SNRを積分変数とし線形部分を解析的に積分、ε予測の指数重み付き積分をTaylor展開し1〜3次solverを作る。
+F089,results,1,demonstrated,https://arxiv.org/html/2206.00927v3,§4 Table 1,CIFAR10 18 NFEでDPM-Solver-2のFID 3.43、RK2(t) 7.25、RK2(λ) 42.04。同じ学習済み生成器の比較。
+F089,contributions,1,author_claim,https://arxiv.org/html/2206.00927v3,§3.2; Appendix B.1–B.5,Theorem 3.2は軌道に沿うk+1階までの連続微分、状態Lipschitz、最大log-SNR刻みO(1/M)でk次収束を主張。証明は重み付きTaylor展開と逐次誤差評価。
+F089,summary,1,interpretation,https://arxiv.org/html/2206.00927v3,§3–5,積分誤差を抑える方法で、生成分布品質とNFEを検証。
+F089,remaining_issues,1,interpretation,https://arxiv.org/html/2206.00927v3,"§3.2, Appendix B",収束先は学習されたODEの厳密解であり、モデル誤差や真の条件平均との距離は制御しない。有限の大stepで誤差の単調減少やpaired MSE改善も保証されない。現在flowが拡散ODEと異なれば導出を再確認する。
+F090,social_background,1,not_stated,https://arxiv.org/html/2608.19144v1,§1,特定の社会的動機は記載なし。
+F090,technical_background,1,author_claim,https://arxiv.org/html/2608.19144v1,§1–3,endpointを知るbridgeと現状態のみ見るMarkov場の二乗回帰の差を診断。
+F090,problem,1,author_claim,https://arxiv.org/html/2608.19144v1,§2–4,coupling、bridge、Markov projectionと確率current表現を分離し、学習前の圧縮困難さを評価。
+F090,method,1,author_claim,https://arxiv.org/html/2608.19144v1,"§2.1 Theorem 1, §3 Proposition 1, Appendix D",G=∫E Tr Var(u_t|X_t)dtは条件付き期待値へのHilbert空間射影によるCFM最小損失。正の滑らかな密度とFokker–Planck一意性の下、score補正をしたSDEは同じ周辺密度経路を持つ。
+F090,results,1,demonstrated,https://arxiv.org/html/2608.19144v1,§4 Tables 3–4,CIFAR10小型20k-step pilotで独立/mini-batch OTのproxy gap 3.25/2.34、FID 50.48/49.17、KID .0454/.0470。代理値はPCAとkNNによる推定で厳密な床ではない。
+F090,contributions,1,author_claim,https://arxiv.org/html/2608.19144v1,"§3 Theorem 2, Appendix E",Theorem 2は同一初期法則、両ODEの一意性、学習場の一様Lipschitzを仮定しW2終端誤差をe^L×投影場への二乗誤差平方根で抑える。証明はcouplingとGronwall。
+F090,summary,1,interpretation,https://arxiv.org/html/2608.19144v1,§3–4,既約な局所速度回帰損失と有限モデルによる追加誤差を分離。
+F090,remaining_issues,1,interpretation,https://arxiv.org/html/2608.19144v1,"§2–4, §7, Appendix B,D,E",GはCFM教師速度の既約二乗lossであり、周辺分布再現に不可避な誤差ではない。正確な条件付き平均場ならGが正でも周辺密度経路を再現でき、Theorem 2が制御するのはGを超える誤差。OTの生成coupling変更は実際の未来対を保たない場合がある。高次元kNNは過平滑化し、端点固定path KLは閉区間で一般に特異。
+F091,social_background,1,author_claim,https://arxiv.org/pdf/2308.05732v2,§1,指定版PDFの該当箇所。
+F091,technical_background,1,author_claim,https://arxiv.org/pdf/2308.05732v2,§2,指定版PDFの該当箇所。
+F091,problem,1,author_claim,https://arxiv.org/pdf/2308.05732v2,§2–3,指定版PDFの該当箇所。
+F091,method,1,author_claim,https://arxiv.org/pdf/2308.05732v2,"§3 Eq. 3–4, §4.1",指定版PDFの該当箇所。
+F091,results,1,demonstrated,https://arxiv.org/pdf/2308.05732v2,"§4.1 Fig. 3, Appendix D",指定版PDFの該当箇所。
+F091,contributions,1,author_claim,https://arxiv.org/pdf/2308.05732v2,§3–4,指定版PDFの該当箇所。
+F091,summary,1,interpretation,https://arxiv.org/pdf/2308.05732v2,§3–4,指定版PDFの該当箇所。
+F091,remaining_issues,1,interpretation,https://arxiv.org/pdf/2308.05732v2,"§3, §5",指定版PDFの該当箇所。
+F092,social_background,1,author_claim,https://arxiv.org/pdf/2306.01984v2,§1,指定版PDFの該当箇所。
+F092,technical_background,1,author_claim,https://arxiv.org/pdf/2306.01984v2,§1–2,指定版PDFの該当箇所。
+F092,problem,1,author_claim,https://arxiv.org/pdf/2306.01984v2,§3–4,指定版PDFの該当箇所。
+F092,method,1,author_claim,https://arxiv.org/pdf/2306.01984v2,"§3 Eq. 2–4, Appendix B",指定版PDFの該当箇所。
+F092,results,1,demonstrated,https://arxiv.org/pdf/2306.01984v2,"§5 Table 1, §5.3",指定版PDFの該当箇所。
+F092,contributions,1,author_claim,https://arxiv.org/pdf/2306.01984v2,§3–5,指定版PDFの該当箇所。
+F092,summary,1,interpretation,https://arxiv.org/pdf/2306.01984v2,§3–5,指定版PDFの該当箇所。
+F092,remaining_issues,1,interpretation,https://arxiv.org/pdf/2306.01984v2,"§5 Table 1, §6",指定版PDFの該当箇所。
+F093,social_background,1,author_claim,https://arxiv.org/pdf/2309.15214v4,"§1, §5.3",指定版PDFの該当箇所。
+F093,technical_background,1,author_claim,https://arxiv.org/pdf/2309.15214v4,§2,指定版PDFの該当箇所。
+F093,problem,1,author_claim,https://arxiv.org/pdf/2309.15214v4,§2–3,指定版PDFの該当箇所。
+F093,method,1,author_claim,https://arxiv.org/pdf/2309.15214v4,"§2 Eq. 1–2, §5.2",指定版PDFの該当箇所。
+F093,results,1,demonstrated,https://arxiv.org/pdf/2309.15214v4,§3 Table 1,指定版PDFの該当箇所。
+F093,contributions,1,author_claim,https://arxiv.org/pdf/2309.15214v4,§2–3,指定版PDFの該当箇所。
+F093,summary,1,interpretation,https://arxiv.org/pdf/2309.15214v4,§2–3,指定版PDFの該当箇所。
+F093,remaining_issues,1,interpretation,https://arxiv.org/pdf/2309.15214v4,"§3.2–3.4, §5.2.1",指定版PDFの該当箇所。
+F094,social_background,1,author_claim,https://arxiv.org/pdf/2312.15796v2,§1,指定版PDFの該当箇所。
+F094,technical_background,1,author_claim,https://arxiv.org/pdf/2312.15796v2,§1–2,指定版PDFの該当箇所。
+F094,problem,1,author_claim,https://arxiv.org/pdf/2312.15796v2,§2,指定版PDFの該当箇所。
+F094,method,1,author_claim,https://arxiv.org/pdf/2312.15796v2,"§2, Appendix C",指定版PDFの該当箇所。
+F094,results,1,demonstrated,https://arxiv.org/pdf/2312.15796v2,"§5 Fig. 3, Appendix F",指定版PDFの該当箇所。
+F094,contributions,1,author_claim,https://arxiv.org/pdf/2312.15796v2,"§2, §5",指定版PDFの該当箇所。
+F094,summary,1,interpretation,https://arxiv.org/pdf/2312.15796v2,"§2, §5",指定版PDFの該当箇所。
+F094,remaining_issues,1,interpretation,https://arxiv.org/pdf/2312.15796v2,"§5, §9",指定版PDFの該当箇所。
+F095,social_background,1,author_claim,https://arxiv.org/pdf/2212.12794v2,§1,指定版PDFの該当箇所。
+F095,technical_background,1,author_claim,https://arxiv.org/pdf/2212.12794v2,§1,指定版PDFの該当箇所。
+F095,problem,1,author_claim,https://arxiv.org/pdf/2212.12794v2,§1–2,指定版PDFの該当箇所。
+F095,method,1,author_claim,https://arxiv.org/pdf/2212.12794v2,"§2, Supplements §3–4",指定版PDFの該当箇所。
+F095,results,1,demonstrated,https://arxiv.org/pdf/2212.12794v2,"§1, §3 Fig. 2",指定版PDFの該当箇所。
+F095,contributions,1,author_claim,https://arxiv.org/pdf/2212.12794v2,§2–3,指定版PDFの該当箇所。
+F095,summary,1,interpretation,https://arxiv.org/pdf/2212.12794v2,§2–3,指定版PDFの該当箇所。
+F095,remaining_issues,1,author_claim,https://arxiv.org/pdf/2212.12794v2,Conclusion,指定版PDFの該当箇所。
+F096,social_background,1,author_claim,https://arxiv.org/html/2002.09405v2,§1,流体・固体など複雑な物理simulationの高速近似を目指す。
+F096,technical_background,1,author_claim,https://arxiv.org/html/2002.09405v2,§4.3,真値状態で訓練し自己予測をrolloutすると入力分布がずれて誤差が蓄積する。
+F096,problem,1,author_claim,https://arxiv.org/html/2002.09405v2,"§1, §4–5",粒子の一段物理予測を長い未知trajectoryへ一般化する。
+F096,method,1,author_claim,https://arxiv.org/html/2002.09405v2,"§4.3, Appendix B.3",粒子をgraphで表しmessage passing後に加速度予測。過去速度へrandom-walk雑音を加え位置も整合させ、教師加速度から最終速度の雑音を引いてEuler積分後の速度を真値へ戻す。
+F096,results,1,demonstrated,https://arxiv.org/html/2002.09405v2,"§5.4 Fig. 4(g,h), Appendix C.2",ノイズ増加は一段精度を下げる一方、rollout誤差は中程度の雑音で最良。速度履歴へのrandom-walkは他の雑音形よりrolloutで良好。
+F096,contributions,1,author_claim,https://arxiv.org/html/2002.09405v2,§4–5,著者主張: graph simulatorで粒子系を扱い、雑音augmented一段教師でrolloutの累積誤差を抑える。
+F096,summary,1,interpretation,https://arxiv.org/html/2002.09405v2,"§4.3, Appendix B.3",分布ずれを模擬する入力摂動とintegratorに合ったtarget補正を併用する物理系手法。
+F096,remaining_issues,1,interpretation,https://arxiv.org/html/2002.09405v2,"§5.4, Appendix B.3,C.2",物理速度・位置とEuler積分が既知の系での結果。任意のDINO特徴には速度や同じ補正規則が自明でなく、rolloutノイズの分布と一致を実測する必要がある。最適雑音は目的依存で一段MSEと競合。
+F097,social_background,1,author_claim,https://arxiv.org/html/2010.03409v4,"§1, §4",空力・構造・布などの高コストなmesh物理simulationを扱う。
+F097,technical_background,1,author_claim,https://arxiv.org/html/2010.03409v4,§2–3,mesh形状と物理空間の近傍情報を用いた安定な長期予測が必要。
+F097,problem,1,author_claim,https://arxiv.org/html/2010.03409v4,§3–4,可変mesh上の物理dynamicsを学習し再meshingに適用。
+F097,method,1,author_claim,https://arxiv.org/html/2010.03409v4,"§3, Appendix A.2.2",mesh graphとworld-space edgesでmessage passingし、一次系では状態摂動分を教師差分から引き次状態を補正。二次clothでは位置と速度を同時に補正できず二つの加速度targetをγで混合。
+F097,results,1,demonstrated,https://arxiv.org/html/2010.03409v4,"§4 Table 1, Appendix A.2.2",変形plateで1-step RMSE 0.25×10⁻³、50-step 1.8×10⁻³、全rollout 15.1×10⁻³。cloth補正の位置優先比γ=0.1が最良。
+F097,contributions,1,author_claim,https://arxiv.org/html/2010.03409v4,§3–4,著者主張: meshとworld graphの組合せ、mesh適応、ノイズに強い一段教師を用いた学習型simulation。
+F097,summary,1,interpretation,https://arxiv.org/html/2010.03409v4,Appendix A.2.2,推論時の誤差に近い摂動と積分に対応するtargetを設計する。
+F097,remaining_issues,1,interpretation,https://arxiv.org/html/2010.03409v4,"Appendix A.2.2, §4.3",第一階と第二階で目標補正が異なり、どの状態成分を修正するかは実験的設計。物理meshやintegratorの構造を持たないDINO特徴にrollout改善を保証しない。
+F098,social_background,1,author_claim,https://arxiv.org/html/2001.06782v4,§1,多task学習のデータ効率と競合を改善する。
+F098,technical_background,1,author_claim,https://arxiv.org/html/2001.06782v4,§2,負のgradient内積、勾配norm差、大きい曲率の同時発生は最適化を阻害しうる。
+F098,problem,1,author_claim,https://arxiv.org/html/2001.06782v4,§3,共有parameterの異なるtask gradientの干渉を減らす。
+F098,method,1,author_claim,https://arxiv.org/html/2001.06782v4,§3 Algorithm 1,gradientの内積が負なら他task gradientの法線面へ射影し、順序をランダム化して集計する。非競合では変更しない。
+F098,results,1,demonstrated,https://arxiv.org/html/2001.06782v4,§5 Tables 1–2,NYUv2 MTAN＋uncertainty weightingではPCGradでmIoU 17.67→20.17、depth relative error .2592→.2467。CIFAR100 routingとの組合せ精度74.7→77.5%。
+F098,contributions,1,author_claim,https://arxiv.org/html/2001.06782v4,"§3 Theorems 1–2, Appendix A.1–A.2",二task凸・smooth、step≤1/Lで合計損失の最適点か両gradientが逆向きの停止点へ収束と主張。非凸でも曲率・角度・step条件が整う一更新では比較損失が小さい。
+F098,summary,1,interpretation,https://arxiv.org/html/2001.06782v4,§3–5,異なる損失勾配の方向を調整するmulti-task最適化。
+F098,remaining_issues,1,interpretation,https://arxiv.org/html/2001.06782v4,"§3, §5",PCGradは元の加重和の勾配と一般に異なり、合計lossの最適値や各task改善は保証しない。拡散時刻をtask化するなら負cosと勾配normを測り、固定重み・追加逆伝播費用を合わせた対照とfuture MSEで評価。
+F099,social_background,1,author_claim,https://arxiv.org/html/1711.02257v4,§1,複数予測taskを共有networkで学ぶ際の手動損失重み調整を削減する。
+F099,technical_background,1,author_claim,https://arxiv.org/html/1711.02257v4,§1–3,損失尺度・task学習速度の差により共有layerのgradientが不均衡になる。
+F099,problem,1,author_claim,https://arxiv.org/html/1711.02257v4,§3,勾配規模と相対学習速度からtask重みを動的調整する。
+F099,method,1,author_claim,https://arxiv.org/html/1711.02257v4,"§3 Eq. 1–2, Algorithm 1",共有層で各taskの重み付きgradient normを測り、平均norm×相対未学習率^αへ近づくようL1補助損失でtask重みだけ更新、重み和をtask数に正規化する。
+F099,results,1,demonstrated,https://arxiv.org/html/1711.02257v4,§5 Table 2,NYUv2+kpts ResNetでequal weightsのdepth RMS .697mからGradNorm α=1.5は.663m、keypoint error 7.80%から7.32%。
+F099,contributions,1,author_claim,https://arxiv.org/html/1711.02257v4,§3–5,著者主張: 共有層のgradient normと相対学習速度を同時に追跡し、手動grid探索を削減。
+F099,summary,1,interpretation,https://arxiv.org/html/1711.02257v4,§3–5,重み変更により異なるtaskの最適化速度と優先順位を調整。
+F099,remaining_issues,1,interpretation,https://arxiv.org/html/1711.02257v4,"§3, §5.4",動的重みは元の固定重み目的を変える。normの均衡はgradient方向の対立解消や各taskの改善を保証しない。time-bin別gradientが実際に異なるかとterminal paired MSEを実測し、追加計算を揃える。
+F100,social_background,1,author_claim,https://arxiv.org/html/1506.03099v3,"§1, §4",画像caption・文法解析・音声などの系列生成を対象とする。
+F100,technical_background,1,author_claim,https://arxiv.org/html/1506.03099v3,§2.3–2.4,teacher forcingの真値履歴と推論時の自己生成履歴が異なり、誤りが蓄積しうる。
+F100,problem,1,author_claim,https://arxiv.org/html/1506.03099v3,§2.4,学習時に自己生成履歴を段階的に導入して訓練と推論の差を減らす。
+F100,method,1,author_claim,https://arxiv.org/html/1506.03099v3,§2.4,各tokenで前tokenを真値とモデルsampleから確率的に選び、学習進行とともに真値率を減らす。実験ではsample選択を通じたgradientは計算しない。
+F100,results,1,demonstrated,https://arxiv.org/html/1506.03099v3,"§4 Tables 1,3",MSCOCO caption開発setでBLEU-4 baseline 28.8、scheduled sampling 30.6、always sampling 11.2。音声実験では真値履歴の一段予測はbaselineが良いが自由decodeではsampling系が改善。
+F100,contributions,1,author_claim,https://arxiv.org/html/1506.03099v3,"§2.4, §5",著者主張: 真値履歴から自己生成履歴へのcurriculumで系列予測の推論条件に近づける。
+F100,summary,1,interpretation,https://arxiv.org/html/1506.03099v3,§2–4,self-generated stateでの誤差蓄積に対する学習分布の介入。
+F100,remaining_issues,1,interpretation,https://arxiv.org/html/1506.03099v3,"§2.4, §4.1, §4.3",自己生成履歴と元系列targetを組み合わせると真の履歴条件付き分布を一般に保存せず、目的自体が変わる。著者はsampling確率のgradient省略やalways samplingの失敗を報告。実際のfuture条件付き平均やrollout MSEの改善は別途対照が必要。

@@ -1,0 +1,17 @@
+{
+  "source_cache": "/home/sadasue/foveated-world-models/runs/research-unused-96-prior6501",
+  "source_cache_sha256": "456a09b4e3cc3c6887732327c25d3ac7d0bd98f7c4898e4ace885298e184220f",
+  "source_manifest_sha256": "4f3c532015d0ca3ab293e775431cb653d9a5684b784c2fcb7abedfcf35bcbde6",
+  "weight_file_sha256": "bce091416db11157e7b25981d1bd7b3c69275358d46b6624801dae1759791935",
+  "encoder_state_sha256": "d3bd1a5b7938770460937f0cff58b4892bfd53c32b70d2f802e544f697b151b0",
+  "calibration_sha256": "cabb8e89384656768f258f04158353a947ab9e101acc20d5c7d41f1f1956ad8a",
+  "head42_checkpoint_sha256": "b5784dae7b2d0f0e69feec9a5305020e67fc8bab3c681b4e707eeb90c8e05f83",
+  "head42_reproduction_max_error": 0.0,
+  "query_sha256": "916ac68406c367aeb83f2322b7be54f230ceac46a5e09809d726ee16ae8356ea",
+  "precision": "float32 medium; encoderB1,headB64/B32,CPU4",
+  "count": 96,
+  "rows_exactly_preserved": true,
+  "script_sha256": "89b38d5c09ede391a70e9423c428b56c1754186d8d58324ec04df791990b3701",
+  "seconds": 67.76138241193257,
+  "scope": "Research-observed96 episodes; no longer research-unused or independent final test; no image decoding or refit"
+}

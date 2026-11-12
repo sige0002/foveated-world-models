@@ -1,0 +1,4 @@
+{
+  "reviewed_at": "2026-11-12T16:56:03.573589+00:00",
+  "checks": "Host checked TimeGrad 100 trajectory/40D LSTM and CRPS standard errors; CSDI table3 100-sample median MAE/BRITS and imputation conditioning; DiffusionTS clean prediction/Fourier loss and ETTh ContextFID; TimeDiff train future-mixup vs inference-only past, Gaussian start, table4 ablation and conflicting table6 decimal; TimeDiT AdaLN, zero/fullshot table and table8 mask/header contradiction. Distribution metrics not conflated with paired MSE."
+}

@@ -1,0 +1,20 @@
+{
+  "source": "research/idm/mature-gaussian-step6501.json",
+  "source_sha256": "77e1b14b3a4c4c0d4ae59e4571a818e04c9855864352bd0934efd68cdcc807d0",
+  "symmetric_kl_definition": "0.5*(KL(q_true||q_swapped)+KL(q_swapped||q_true)); dependence diagnostic, no action meaning asserted",
+  "balanced_binary_accuracy_upper_bound_per_pair": [
+    0.5397688130502006,
+    0.535846617925965,
+    0.5010260313187596,
+    0.5081482186824484,
+    0.5014210538189641,
+    0.5012074531464944,
+    0.533044240431555,
+    0.5399436555463195
+  ],
+  "mean_bound": 0.5200507604900884,
+  "formula": "acc*=(1+TV)/2 <= .5+.5*min(1,sqrt(symmetric_KL/2)); TV=.5*L1, KL in nats",
+  "assumptions": "Each of the eight fixed currents has an artificial equiprobable choice of its actual or cyclic-replacement future; observe one draw from the corresponding saved diagonal Gaussian, and current/pair identity. No other future-dependent inputs. Bound applies pairwise then averaged.",
+  "limits": "Not an accuracy measurement, not a mutual-information estimate, not a natural-data or action prediction guarantee. Does not apply to observing posterior mu deterministically or multiple z draws. Future replacement can be OOD.",
+  "theory_source": "https://arxiv.org/html/1206.6544v8#S1.SS1"
+}

@@ -1,0 +1,8 @@
+{
+  "all_checks_passed": true,
+  "old_results_unchanged": true,
+  "all_final_weights_identical_to_original": true,
+  "all_predictions_and_metrics_identical_to_original": true,
+  "no_variant_selects_extended_upper_boundary": true,
+  "protocol_sha256": "b72d4bb24602901afac596f4e50ba6d4814597fa4af0642bb7ceb8563773130b"
+}

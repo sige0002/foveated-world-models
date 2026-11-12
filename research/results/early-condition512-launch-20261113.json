@@ -1,0 +1,27 @@
+{
+  "protocol_sha256": "9ad567b5b0fd87686e2ca2bdd4da813572be8e71e2f08c7723b2e7cd8483ffae",
+  "worktree": "/home/sadasue/fwm-early-condition-20261113",
+  "runs": [
+    {
+      "arm": "real",
+      "session_id": 94989,
+      "output": "runs/early-condition-real-512-400-20261113",
+      "threads": 4
+    },
+    {
+      "arm": "constant",
+      "session_id": 4466,
+      "output": "runs/early-condition-constant-512-400-20261113",
+      "threads": 4
+    },
+    {
+      "arm": "rms_constant",
+      "session_id": 18796,
+      "output": "runs/early-condition-rms_constant-512-400-20261113",
+      "threads": 4
+    }
+  ],
+  "device": "cpu",
+  "first_step_gradient_audit": "all three match independent calculation",
+  "status": "running"
+}

@@ -1,0 +1,79 @@
+{
+  "source_sha256": {
+    "research/idm/local-repair512-protocol-20261113.json": "8d466b29fccd47d172dd6352e945ce6bc0ae3361e2f7ca3c33e9f967f4773d7e",
+    "research/idm/train_local_repair.py": "4558edfedcc1a7d0ecca2e1589e425346d2ad2e126d625a2b6dc961da495535c",
+    "research/idm/test_local_repair.py": "07c5218f0a23056b19345a23a88f7976bd2fff4eb6126880bd1f5c1817f0933d",
+    "research/idm/local-repair-start-audit-20261113.json": "50738c643700039c61d5c2000674feeef60e370434ed0e672d5d5b9cbead5195",
+    "research/idm/local-repair-trainer-preflight.json": "719794ccfa61ef947d8741d9d5cde4f5588d26e9472102db65a3caf155e7e164"
+  },
+  "verification": "Root independent real-cache audit and agent trainer preflight PASS; root rerun5synthetic tests PASS exit0",
+  "source_edit_freeze": "Do not edit trainer or shared imported training code while runs are active",
+  "optimizer_state": "Fresh AdamW in every arm, initialized from common pretrained model weights; not continuation of saved optimizer moments",
+  "arms": [
+    {
+      "arm": "H",
+      "seed": 42,
+      "output": "runs/idm-local-repair-H-seed42-20261113"
+    },
+    {
+      "arm": "D",
+      "seed": 42,
+      "output": "runs/idm-local-repair-D-seed42-20261113"
+    },
+    {
+      "arm": "HD",
+      "seed": 42,
+      "output": "runs/idm-local-repair-HD-seed42-20261113"
+    },
+    {
+      "arm": "K",
+      "seed": 42,
+      "output": "runs/idm-local-repair-K-seed42-20261113"
+    },
+    {
+      "arm": "H",
+      "seed": 43,
+      "output": "runs/idm-local-repair-H-seed43-20261113"
+    },
+    {
+      "arm": "D",
+      "seed": 43,
+      "output": "runs/idm-local-repair-D-seed43-20261113"
+    },
+    {
+      "arm": "HD",
+      "seed": 43,
+      "output": "runs/idm-local-repair-HD-seed43-20261113"
+    },
+    {
+      "arm": "K",
+      "seed": 43,
+      "output": "runs/idm-local-repair-K-seed43-20261113"
+    },
+    {
+      "arm": "H",
+      "seed": 44,
+      "output": "runs/idm-local-repair-H-seed44-20261113"
+    },
+    {
+      "arm": "D",
+      "seed": 44,
+      "output": "runs/idm-local-repair-D-seed44-20261113"
+    },
+    {
+      "arm": "HD",
+      "seed": 44,
+      "output": "runs/idm-local-repair-HD-seed44-20261113"
+    },
+    {
+      "arm": "K",
+      "seed": 44,
+      "output": "runs/idm-local-repair-K-seed44-20261113"
+    }
+  ],
+  "schedule": "seed42 fourCPU4 processes first; then43/44 under20 total threads",
+  "pending_diagnostics": [
+    "same-current future-swap sensitivity",
+    "independent current/code interaction measured-effect probe"
+  ]
+}

@@ -1,0 +1,1765 @@
+{
+  "scope": "Previously observed evaluation; posterior z; no target fitting. Postprojection is diagnostic, not a new trained-model result.",
+  "basis_sha256": "04e6dd5b41e67628a86998b48ec266273b6f91282c1c9d07e38a43d55ca76cfc",
+  "cache_sha256": "7b419bea1eda0f0e871ab40273bf1b59a1d67d5bf2bab23885ba9fee43ab40f4",
+  "results": [
+    {
+      "checkpoint": "runs/reference-idm42-nested512-comparison400-20261113/prior_residual-seed42.pt",
+      "checkpoint_sha256": "a8a84319d8078b3b221ba77d903d2332a4e6f809421803f246575fb967be3233",
+      "variant": "prior_residual",
+      "means": {
+        "sample_mse": 0.0855736662245666,
+        "mean_mse": 0.0855736662245666,
+        "retained_error_mse": 0.062294038982751467,
+        "discarded_error_mse": 0.023279627688073862,
+        "postprojected_mean_mse": 0.08703264409753804,
+        "discarded_prediction_correction_energy": 0.0023336033736995887
+      },
+      "rows": [
+        {
+          "episode": "1460",
+          "sample_mse": 0.09982973337173462,
+          "mean_mse": 0.09982973337173462,
+          "retained_error_mse": 0.07276097685098648,
+          "discarded_error_mse": 0.027068763971328735,
+          "postprojected_mean_mse": 0.10110104829072952,
+          "discarded_prediction_correction_energy": 0.0017578037222847342
+        },
+        {
+          "episode": "1461",
+          "sample_mse": 0.15658734738826752,
+          "mean_mse": 0.15658734738826752,
+          "retained_error_mse": 0.11720484495162964,
+          "discarded_error_mse": 0.03938249871134758,
+          "postprojected_mean_mse": 0.15843500196933746,
+          "discarded_prediction_correction_energy": 0.0020453915931284428
+        },
+        {
+          "episode": "1463",
+          "sample_mse": 0.08143026381731033,
+          "mean_mse": 0.08143026381731033,
+          "retained_error_mse": 0.059817079454660416,
+          "discarded_error_mse": 0.021613186225295067,
+          "postprojected_mean_mse": 0.0828780010342598,
+          "discarded_prediction_correction_energy": 0.0017342088976874948
+        },
+        {
+          "episode": "1464",
+          "sample_mse": 0.0656643882393837,
+          "mean_mse": 0.0656643882393837,
+          "retained_error_mse": 0.04857431724667549,
+          "discarded_error_mse": 0.01709008403122425,
+          "postprojected_mean_mse": 0.06675604730844498,
+          "discarded_prediction_correction_energy": 0.001730484887957573
+        },
+        {
+          "episode": "1466",
+          "sample_mse": 0.17850209772586823,
+          "mean_mse": 0.17850209772586823,
+          "retained_error_mse": 0.14133980870246887,
+          "discarded_error_mse": 0.03716230019927025,
+          "postprojected_mean_mse": 0.18092089891433716,
+          "discarded_prediction_correction_energy": 0.0029352169949561357
+        },
+        {
+          "episode": "1468",
+          "sample_mse": 0.18971985578536987,
+          "mean_mse": 0.18971985578536987,
+          "retained_error_mse": 0.14206300675868988,
+          "discarded_error_mse": 0.04765685275197029,
+          "postprojected_mean_mse": 0.19339828193187714,
+          "discarded_prediction_correction_energy": 0.008337068371474743
+        },
+        {
+          "episode": "1469",
+          "sample_mse": 0.07263288646936417,
+          "mean_mse": 0.07263288646936417,
+          "retained_error_mse": 0.051852237433195114,
+          "discarded_error_mse": 0.020780643448233604,
+          "postprojected_mean_mse": 0.07385333627462387,
+          "discarded_prediction_correction_energy": 0.0018260317156091332
+        },
+        {
+          "episode": "1471",
+          "sample_mse": 0.05473144352436066,
+          "mean_mse": 0.05473144352436066,
+          "retained_error_mse": 0.03731049969792366,
+          "discarded_error_mse": 0.017420941963791847,
+          "postprojected_mean_mse": 0.055853743106126785,
+          "discarded_prediction_correction_energy": 0.0017360808560624719
+        },
+        {
+          "episode": "1472",
+          "sample_mse": 0.06412079930305481,
+          "mean_mse": 0.06412079930305481,
+          "retained_error_mse": 0.045258697122335434,
+          "discarded_error_mse": 0.018862102180719376,
+          "postprojected_mean_mse": 0.06506403535604477,
+          "discarded_prediction_correction_energy": 0.001535555929876864
+        },
+        {
+          "episode": "1474",
+          "sample_mse": 0.10372480005025864,
+          "mean_mse": 0.10372480005025864,
+          "retained_error_mse": 0.07515888661146164,
+          "discarded_error_mse": 0.028565919026732445,
+          "postprojected_mean_mse": 0.10621041059494019,
+          "discarded_prediction_correction_energy": 0.002591515891253948
+        },
+        {
+          "episode": "1475",
+          "sample_mse": 0.15100307762622833,
+          "mean_mse": 0.15100307762622833,
+          "retained_error_mse": 0.11031388491392136,
+          "discarded_error_mse": 0.04068920761346817,
+          "postprojected_mean_mse": 0.15457898378372192,
+          "discarded_prediction_correction_energy": 0.0061203595250844955
+        },
+        {
+          "episode": "1477",
+          "sample_mse": 0.09685377031564713,
+          "mean_mse": 0.09685377031564713,
+          "retained_error_mse": 0.0713384822010994,
+          "discarded_error_mse": 0.02551528811454773,
+          "postprojected_mean_mse": 0.09807487577199936,
+          "discarded_prediction_correction_energy": 0.0017418423667550087
+        },
+        {
+          "episode": "1478",
+          "sample_mse": 0.09399375319480896,
+          "mean_mse": 0.09399375319480896,
+          "retained_error_mse": 0.06538810580968857,
+          "discarded_error_mse": 0.02860564924776554,
+          "postprojected_mean_mse": 0.09515225142240524,
+          "discarded_prediction_correction_energy": 0.0017181653529405594
+        },
+        {
+          "episode": "1480",
+          "sample_mse": 0.1273220032453537,
+          "mean_mse": 0.1273220032453537,
+          "retained_error_mse": 0.09274288266897202,
+          "discarded_error_mse": 0.03457912430167198,
+          "postprojected_mean_mse": 0.12858809530735016,
+          "discarded_prediction_correction_energy": 0.0023551431950181723
+        },
+        {
+          "episode": "1482",
+          "sample_mse": 0.07676021009683609,
+          "mean_mse": 0.07676021009683609,
+          "retained_error_mse": 0.05528225377202034,
+          "discarded_error_mse": 0.021477945148944855,
+          "postprojected_mean_mse": 0.07777897268533707,
+          "discarded_prediction_correction_energy": 0.001653578714467585
+        },
+        {
+          "episode": "1483",
+          "sample_mse": 0.07384716719388962,
+          "mean_mse": 0.07384716719388962,
+          "retained_error_mse": 0.05280826613306999,
+          "discarded_error_mse": 0.021038899198174477,
+          "postprojected_mean_mse": 0.07477129250764847,
+          "discarded_prediction_correction_energy": 0.002204048680141568
+        },
+        {
+          "episode": "1485",
+          "sample_mse": 0.09139072149991989,
+          "mean_mse": 0.09139072149991989,
+          "retained_error_mse": 0.06181544065475464,
+          "discarded_error_mse": 0.029575282707810402,
+          "postprojected_mean_mse": 0.09349670261144638,
+          "discarded_prediction_correction_energy": 0.002166542923077941
+        },
+        {
+          "episode": "1486",
+          "sample_mse": 0.15616977214813232,
+          "mean_mse": 0.15616977214813232,
+          "retained_error_mse": 0.11388134211301804,
+          "discarded_error_mse": 0.04228843376040459,
+          "postprojected_mean_mse": 0.16023467481136322,
+          "discarded_prediction_correction_energy": 0.004336321260780096
+        },
+        {
+          "episode": "1488",
+          "sample_mse": 0.10216913372278214,
+          "mean_mse": 0.10216913372278214,
+          "retained_error_mse": 0.07486515492200851,
+          "discarded_error_mse": 0.027303986251354218,
+          "postprojected_mean_mse": 0.10334724187850952,
+          "discarded_prediction_correction_energy": 0.002005192218348384
+        },
+        {
+          "episode": "1489",
+          "sample_mse": 0.07363484054803848,
+          "mean_mse": 0.07363484054803848,
+          "retained_error_mse": 0.05392840504646301,
+          "discarded_error_mse": 0.01970643363893032,
+          "postprojected_mean_mse": 0.07484937459230423,
+          "discarded_prediction_correction_energy": 0.00170811265707016
+        },
+        {
+          "episode": "1491",
+          "sample_mse": 0.12162045389413834,
+          "mean_mse": 0.12162045389413834,
+          "retained_error_mse": 0.09282513707876205,
+          "discarded_error_mse": 0.028795311227440834,
+          "postprojected_mean_mse": 0.12226998805999756,
+          "discarded_prediction_correction_energy": 0.0018282291712239385
+        },
+        {
+          "episode": "1492",
+          "sample_mse": 0.09532365202903748,
+          "mean_mse": 0.09532365202903748,
+          "retained_error_mse": 0.06897004693746567,
+          "discarded_error_mse": 0.026353606954216957,
+          "postprojected_mean_mse": 0.09659349173307419,
+          "discarded_prediction_correction_energy": 0.0019144251709803939
+        },
+        {
+          "episode": "1494",
+          "sample_mse": 0.11229635030031204,
+          "mean_mse": 0.11229635030031204,
+          "retained_error_mse": 0.08421751111745834,
+          "discarded_error_mse": 0.0280788391828537,
+          "postprojected_mean_mse": 0.1140005812048912,
+          "discarded_prediction_correction_energy": 0.0018727770075201988
+        },
+        {
+          "episode": "1495",
+          "sample_mse": 0.17996932566165924,
+          "mean_mse": 0.17996932566165924,
+          "retained_error_mse": 0.14065337181091309,
+          "discarded_error_mse": 0.03931593894958496,
+          "postprojected_mean_mse": 0.18061570823192596,
+          "discarded_prediction_correction_energy": 0.0018445267342031002
+        },
+        {
+          "episode": "1497",
+          "sample_mse": 0.13990731537342072,
+          "mean_mse": 0.13990731537342072,
+          "retained_error_mse": 0.10234148055315018,
+          "discarded_error_mse": 0.03756583109498024,
+          "postprojected_mean_mse": 0.14118824899196625,
+          "discarded_prediction_correction_energy": 0.0025066931266337633
+        },
+        {
+          "episode": "1499",
+          "sample_mse": 0.053755853325128555,
+          "mean_mse": 0.053755853325128555,
+          "retained_error_mse": 0.035791635513305664,
+          "discarded_error_mse": 0.01796422339975834,
+          "postprojected_mean_mse": 0.05499972775578499,
+          "discarded_prediction_correction_energy": 0.0016596512869000435
+        },
+        {
+          "episode": "1530",
+          "sample_mse": 0.0894550159573555,
+          "mean_mse": 0.0894550159573555,
+          "retained_error_mse": 0.06443487852811813,
+          "discarded_error_mse": 0.025020143017172813,
+          "postprojected_mean_mse": 0.09053970128297806,
+          "discarded_prediction_correction_energy": 0.001765869907103479
+        },
+        {
+          "episode": "1532",
+          "sample_mse": 0.12140524387359619,
+          "mean_mse": 0.12140524387359619,
+          "retained_error_mse": 0.08943017572164536,
+          "discarded_error_mse": 0.031975071877241135,
+          "postprojected_mean_mse": 0.12305618077516556,
+          "discarded_prediction_correction_energy": 0.0024757583159953356
+        },
+        {
+          "episode": "1533",
+          "sample_mse": 0.06015206500887871,
+          "mean_mse": 0.06015206500887871,
+          "retained_error_mse": 0.04235123470425606,
+          "discarded_error_mse": 0.0178008284419775,
+          "postprojected_mean_mse": 0.06139112636446953,
+          "discarded_prediction_correction_energy": 0.0017419438809156418
+        },
+        {
+          "episode": "1535",
+          "sample_mse": 0.10664769262075424,
+          "mean_mse": 0.10664769262075424,
+          "retained_error_mse": 0.08052858710289001,
+          "discarded_error_mse": 0.026119092479348183,
+          "postprojected_mean_mse": 0.10786730796098709,
+          "discarded_prediction_correction_energy": 0.001689942553639412
+        },
+        {
+          "episode": "1537",
+          "sample_mse": 0.08683925867080688,
+          "mean_mse": 0.08683925867080688,
+          "retained_error_mse": 0.062025416642427444,
+          "discarded_error_mse": 0.02481384575366974,
+          "postprojected_mean_mse": 0.08788808435201645,
+          "discarded_prediction_correction_energy": 0.0015524401096627116
+        },
+        {
+          "episode": "1538",
+          "sample_mse": 0.09884724020957947,
+          "mean_mse": 0.09884724020957947,
+          "retained_error_mse": 0.06660893559455872,
+          "discarded_error_mse": 0.03223828971385956,
+          "postprojected_mean_mse": 0.10086391121149063,
+          "discarded_prediction_correction_energy": 0.0029452613089233637
+        },
+        {
+          "episode": "1540",
+          "sample_mse": 0.050104666501283646,
+          "mean_mse": 0.050104666501283646,
+          "retained_error_mse": 0.03254760801792145,
+          "discarded_error_mse": 0.017557064071297646,
+          "postprojected_mean_mse": 0.05103155970573425,
+          "discarded_prediction_correction_energy": 0.0017851131269708276
+        },
+        {
+          "episode": "1542",
+          "sample_mse": 0.08790517598390579,
+          "mean_mse": 0.08790517598390579,
+          "retained_error_mse": 0.05917711928486824,
+          "discarded_error_mse": 0.0287280585616827,
+          "postprojected_mean_mse": 0.09030938148498535,
+          "discarded_prediction_correction_energy": 0.0037746813613921404
+        },
+        {
+          "episode": "1543",
+          "sample_mse": 0.0912042036652565,
+          "mean_mse": 0.0912042036652565,
+          "retained_error_mse": 0.0626155212521553,
+          "discarded_error_mse": 0.02858867682516575,
+          "postprojected_mean_mse": 0.09229465574026108,
+          "discarded_prediction_correction_energy": 0.0018543521873652935
+        },
+        {
+          "episode": "1545",
+          "sample_mse": 0.06649089604616165,
+          "mean_mse": 0.06649089604616165,
+          "retained_error_mse": 0.046822648495435715,
+          "discarded_error_mse": 0.019668258726596832,
+          "postprojected_mean_mse": 0.06754746288061142,
+          "discarded_prediction_correction_energy": 0.001619241782464087
+        },
+        {
+          "episode": "1547",
+          "sample_mse": 0.101659394800663,
+          "mean_mse": 0.101659394800663,
+          "retained_error_mse": 0.07181692123413086,
+          "discarded_error_mse": 0.029842475429177284,
+          "postprojected_mean_mse": 0.10373160988092422,
+          "discarded_prediction_correction_energy": 0.00293365609832108
+        },
+        {
+          "episode": "1549",
+          "sample_mse": 0.10452821105718613,
+          "mean_mse": 0.10452821105718613,
+          "retained_error_mse": 0.0723908320069313,
+          "discarded_error_mse": 0.03213738277554512,
+          "postprojected_mean_mse": 0.10600950568914413,
+          "discarded_prediction_correction_energy": 0.002286170609295368
+        },
+        {
+          "episode": "1551",
+          "sample_mse": 0.12239142507314682,
+          "mean_mse": 0.12239142507314682,
+          "retained_error_mse": 0.08641301840543747,
+          "discarded_error_mse": 0.03597841039299965,
+          "postprojected_mean_mse": 0.12464382499456406,
+          "discarded_prediction_correction_energy": 0.004244120325893164
+        },
+        {
+          "episode": "1553",
+          "sample_mse": 0.03682561591267586,
+          "mean_mse": 0.03682561591267586,
+          "retained_error_mse": 0.022985471412539482,
+          "discarded_error_mse": 0.013840146362781525,
+          "postprojected_mean_mse": 0.03760439530014992,
+          "discarded_prediction_correction_energy": 0.0016577467322349548
+        },
+        {
+          "episode": "1554",
+          "sample_mse": 0.10965985059738159,
+          "mean_mse": 0.10965985059738159,
+          "retained_error_mse": 0.07563727349042892,
+          "discarded_error_mse": 0.03402257338166237,
+          "postprojected_mean_mse": 0.11143133789300919,
+          "discarded_prediction_correction_energy": 0.002570057986304164
+        },
+        {
+          "episode": "1556",
+          "sample_mse": 0.11779165267944336,
+          "mean_mse": 0.11779165267944336,
+          "retained_error_mse": 0.08753931522369385,
+          "discarded_error_mse": 0.03025233745574951,
+          "postprojected_mean_mse": 0.11962342262268066,
+          "discarded_prediction_correction_energy": 0.0027127929497510195
+        },
+        {
+          "episode": "1558",
+          "sample_mse": 0.037230558693408966,
+          "mean_mse": 0.037230558693408966,
+          "retained_error_mse": 0.02366463653743267,
+          "discarded_error_mse": 0.013565926812589169,
+          "postprojected_mean_mse": 0.03796974569559097,
+          "discarded_prediction_correction_energy": 0.0017724413191899657
+        },
+        {
+          "episode": "180",
+          "sample_mse": 0.04964403808116913,
+          "mean_mse": 0.04964403808116913,
+          "retained_error_mse": 0.035801734775304794,
+          "discarded_error_mse": 0.013842304237186909,
+          "postprojected_mean_mse": 0.050413548946380615,
+          "discarded_prediction_correction_energy": 0.0014777089236304164
+        },
+        {
+          "episode": "181",
+          "sample_mse": 0.08426880836486816,
+          "mean_mse": 0.08426880836486816,
+          "retained_error_mse": 0.06293666362762451,
+          "discarded_error_mse": 0.021332142874598503,
+          "postprojected_mean_mse": 0.08532682806253433,
+          "discarded_prediction_correction_energy": 0.0026353851426392794
+        },
+        {
+          "episode": "182",
+          "sample_mse": 0.07602442055940628,
+          "mean_mse": 0.07602442055940628,
+          "retained_error_mse": 0.057010021060705185,
+          "discarded_error_mse": 0.019014397636055946,
+          "postprojected_mean_mse": 0.07771365344524384,
+          "discarded_prediction_correction_energy": 0.002604912267997861
+        },
+        {
+          "episode": "184",
+          "sample_mse": 0.04753202572464943,
+          "mean_mse": 0.04753202572464943,
+          "retained_error_mse": 0.032731276005506516,
+          "discarded_error_mse": 0.014800756238400936,
+          "postprojected_mean_mse": 0.04880847409367561,
+          "discarded_prediction_correction_energy": 0.0015063456958159804
+        },
+        {
+          "episode": "185",
+          "sample_mse": 0.04626382514834404,
+          "mean_mse": 0.04626382514834404,
+          "retained_error_mse": 0.03162047639489174,
+          "discarded_error_mse": 0.014643347822129726,
+          "postprojected_mean_mse": 0.047587644308805466,
+          "discarded_prediction_correction_energy": 0.001558989635668695
+        },
+        {
+          "episode": "187",
+          "sample_mse": 0.06607171893119812,
+          "mean_mse": 0.06607171893119812,
+          "retained_error_mse": 0.0493997298181057,
+          "discarded_error_mse": 0.016671989113092422,
+          "postprojected_mean_mse": 0.06692561507225037,
+          "discarded_prediction_correction_energy": 0.0018097530119121075
+        },
+        {
+          "episode": "188",
+          "sample_mse": 0.044470835477113724,
+          "mean_mse": 0.044470835477113724,
+          "retained_error_mse": 0.029938047751784325,
+          "discarded_error_mse": 0.014532786794006824,
+          "postprojected_mean_mse": 0.04560953378677368,
+          "discarded_prediction_correction_energy": 0.0016371301608160138
+        },
+        {
+          "episode": "189",
+          "sample_mse": 0.07747573405504227,
+          "mean_mse": 0.07747573405504227,
+          "retained_error_mse": 0.05872386321425438,
+          "discarded_error_mse": 0.018751872703433037,
+          "postprojected_mean_mse": 0.0790056586265564,
+          "discarded_prediction_correction_energy": 0.0022750895004719496
+        },
+        {
+          "episode": "191",
+          "sample_mse": 0.0631038248538971,
+          "mean_mse": 0.0631038248538971,
+          "retained_error_mse": 0.047308679670095444,
+          "discarded_error_mse": 0.01579514890909195,
+          "postprojected_mean_mse": 0.06424493342638016,
+          "discarded_prediction_correction_energy": 0.0022152031306177378
+        },
+        {
+          "episode": "192",
+          "sample_mse": 0.06502889096736908,
+          "mean_mse": 0.06502889096736908,
+          "retained_error_mse": 0.047152161598205566,
+          "discarded_error_mse": 0.017876727506518364,
+          "postprojected_mean_mse": 0.06623834371566772,
+          "discarded_prediction_correction_energy": 0.0020329758990556
+        },
+        {
+          "episode": "193",
+          "sample_mse": 0.06700920313596725,
+          "mean_mse": 0.06700920313596725,
+          "retained_error_mse": 0.04881012439727783,
+          "discarded_error_mse": 0.018199073150753975,
+          "postprojected_mean_mse": 0.06824684143066406,
+          "discarded_prediction_correction_energy": 0.0021073140669614077
+        },
+        {
+          "episode": "195",
+          "sample_mse": 0.04336373135447502,
+          "mean_mse": 0.04336373135447502,
+          "retained_error_mse": 0.029897376894950867,
+          "discarded_error_mse": 0.013466354459524155,
+          "postprojected_mean_mse": 0.04442859813570976,
+          "discarded_prediction_correction_energy": 0.0014488892629742622
+        },
+        {
+          "episode": "196",
+          "sample_mse": 0.07080971449613571,
+          "mean_mse": 0.07080971449613571,
+          "retained_error_mse": 0.05276913940906525,
+          "discarded_error_mse": 0.018040573224425316,
+          "postprojected_mean_mse": 0.07206358015537262,
+          "discarded_prediction_correction_energy": 0.0019541739020496607
+        },
+        {
+          "episode": "197",
+          "sample_mse": 0.04336654022336006,
+          "mean_mse": 0.04336654022336006,
+          "retained_error_mse": 0.030331039801239967,
+          "discarded_error_mse": 0.013035506010055542,
+          "postprojected_mean_mse": 0.04482900723814964,
+          "discarded_prediction_correction_energy": 0.0016778953140601516
+        },
+        {
+          "episode": "199",
+          "sample_mse": 0.07717102766036987,
+          "mean_mse": 0.07717102766036987,
+          "retained_error_mse": 0.05690765380859375,
+          "discarded_error_mse": 0.020263375714421272,
+          "postprojected_mean_mse": 0.0783826932311058,
+          "discarded_prediction_correction_energy": 0.0016356677515432239
+        },
+        {
+          "episode": "36",
+          "sample_mse": 0.16182418167591095,
+          "mean_mse": 0.16182418167591095,
+          "retained_error_mse": 0.12378840893507004,
+          "discarded_error_mse": 0.03803578019142151,
+          "postprojected_mean_mse": 0.16298146545886993,
+          "discarded_prediction_correction_energy": 0.0049901301972568035
+        },
+        {
+          "episode": "591",
+          "sample_mse": 0.06808266043663025,
+          "mean_mse": 0.06808266043663025,
+          "retained_error_mse": 0.04852905869483948,
+          "discarded_error_mse": 0.019553596153855324,
+          "postprojected_mean_mse": 0.0691157653927803,
+          "discarded_prediction_correction_energy": 0.0016112150624394417
+        },
+        {
+          "episode": "592",
+          "sample_mse": 0.040843021124601364,
+          "mean_mse": 0.040843021124601364,
+          "retained_error_mse": 0.02813774347305298,
+          "discarded_error_mse": 0.01270527858287096,
+          "postprojected_mean_mse": 0.04216349124908447,
+          "discarded_prediction_correction_energy": 0.001526316162198782
+        },
+        {
+          "episode": "594",
+          "sample_mse": 0.10270273685455322,
+          "mean_mse": 0.10270273685455322,
+          "retained_error_mse": 0.07845445722341537,
+          "discarded_error_mse": 0.024248281493782997,
+          "postprojected_mean_mse": 0.10334289073944092,
+          "discarded_prediction_correction_energy": 0.0021211544517427683
+        },
+        {
+          "episode": "596",
+          "sample_mse": 0.08193446695804596,
+          "mean_mse": 0.08193446695804596,
+          "retained_error_mse": 0.0622076690196991,
+          "discarded_error_mse": 0.019726792350411415,
+          "postprojected_mean_mse": 0.08276492357254028,
+          "discarded_prediction_correction_energy": 0.001574267284013331
+        },
+        {
+          "episode": "598",
+          "sample_mse": 0.07538075745105743,
+          "mean_mse": 0.07538075745105743,
+          "retained_error_mse": 0.05664506554603577,
+          "discarded_error_mse": 0.018735693767666817,
+          "postprojected_mean_mse": 0.07656687498092651,
+          "discarded_prediction_correction_energy": 0.0020457215141505003
+        },
+        {
+          "episode": "790",
+          "sample_mse": 0.06143658235669136,
+          "mean_mse": 0.06143658235669136,
+          "retained_error_mse": 0.04339001700282097,
+          "discarded_error_mse": 0.01804656721651554,
+          "postprojected_mean_mse": 0.06277927756309509,
+          "discarded_prediction_correction_energy": 0.002100251615047455
+        },
+        {
+          "episode": "792",
+          "sample_mse": 0.09182741492986679,
+          "mean_mse": 0.09182741492986679,
+          "retained_error_mse": 0.06604386121034622,
+          "discarded_error_mse": 0.02578355371952057,
+          "postprojected_mean_mse": 0.09364718198776245,
+          "discarded_prediction_correction_energy": 0.0022965555544942617
+        },
+        {
+          "episode": "794",
+          "sample_mse": 0.025546863675117493,
+          "mean_mse": 0.025546863675117493,
+          "retained_error_mse": 0.016096364706754684,
+          "discarded_error_mse": 0.009450499899685383,
+          "postprojected_mean_mse": 0.026326151564717293,
+          "discarded_prediction_correction_energy": 0.0014849029248580337
+        },
+        {
+          "episode": "796",
+          "sample_mse": 0.051579926162958145,
+          "mean_mse": 0.051579926162958145,
+          "retained_error_mse": 0.03642863407731056,
+          "discarded_error_mse": 0.015151296742260456,
+          "postprojected_mean_mse": 0.05272839590907097,
+          "discarded_prediction_correction_energy": 0.001553214155137539
+        },
+        {
+          "episode": "797",
+          "sample_mse": 0.06578914076089859,
+          "mean_mse": 0.06578914076089859,
+          "retained_error_mse": 0.047512978315353394,
+          "discarded_error_mse": 0.018276160582900047,
+          "postprojected_mean_mse": 0.06778589636087418,
+          "discarded_prediction_correction_energy": 0.002454004716128111
+        },
+        {
+          "episode": "799",
+          "sample_mse": 0.07263913750648499,
+          "mean_mse": 0.07263913750648499,
+          "retained_error_mse": 0.05293388292193413,
+          "discarded_error_mse": 0.01970525272190571,
+          "postprojected_mean_mse": 0.07392969727516174,
+          "discarded_prediction_correction_energy": 0.0027356233913451433
+        },
+        {
+          "episode": "941",
+          "sample_mse": 0.04651867225766182,
+          "mean_mse": 0.04651867225766182,
+          "retained_error_mse": 0.03259845823049545,
+          "discarded_error_mse": 0.013920214027166367,
+          "postprojected_mean_mse": 0.04762904718518257,
+          "discarded_prediction_correction_energy": 0.0016177404904738069
+        },
+        {
+          "episode": "942",
+          "sample_mse": 0.0550164170563221,
+          "mean_mse": 0.0550164170563221,
+          "retained_error_mse": 0.038362279534339905,
+          "discarded_error_mse": 0.01665414124727249,
+          "postprojected_mean_mse": 0.05616401135921478,
+          "discarded_prediction_correction_energy": 0.0018550078384578228
+        },
+        {
+          "episode": "944",
+          "sample_mse": 0.10638159513473511,
+          "mean_mse": 0.10638159513473511,
+          "retained_error_mse": 0.08434183150529861,
+          "discarded_error_mse": 0.022039761766791344,
+          "postprojected_mean_mse": 0.10703212022781372,
+          "discarded_prediction_correction_energy": 0.0026070773601531982
+        },
+        {
+          "episode": "945",
+          "sample_mse": 0.05356781184673309,
+          "mean_mse": 0.05356781184673309,
+          "retained_error_mse": 0.03706889599561691,
+          "discarded_error_mse": 0.016498912125825882,
+          "postprojected_mean_mse": 0.054634224623441696,
+          "discarded_prediction_correction_energy": 0.001742408494465053
+        },
+        {
+          "episode": "947",
+          "sample_mse": 0.0703916847705841,
+          "mean_mse": 0.0703916847705841,
+          "retained_error_mse": 0.05036567524075508,
+          "discarded_error_mse": 0.020026005804538727,
+          "postprojected_mean_mse": 0.07138609141111374,
+          "discarded_prediction_correction_energy": 0.0021795297507196665
+        },
+        {
+          "episode": "948",
+          "sample_mse": 0.09363184124231339,
+          "mean_mse": 0.09363184124231339,
+          "retained_error_mse": 0.07052327692508698,
+          "discarded_error_mse": 0.02310856617987156,
+          "postprojected_mean_mse": 0.09545012563467026,
+          "discarded_prediction_correction_energy": 0.0027436744421720505
+        },
+        {
+          "episode": "950",
+          "sample_mse": 0.06249561533331871,
+          "mean_mse": 0.06249561533331871,
+          "retained_error_mse": 0.04278155043721199,
+          "discarded_error_mse": 0.019714059308171272,
+          "postprojected_mean_mse": 0.06424277275800705,
+          "discarded_prediction_correction_energy": 0.002639677608385682
+        },
+        {
+          "episode": "951",
+          "sample_mse": 0.07004327327013016,
+          "mean_mse": 0.07004327327013016,
+          "retained_error_mse": 0.05009235069155693,
+          "discarded_error_mse": 0.019950933754444122,
+          "postprojected_mean_mse": 0.07176879793405533,
+          "discarded_prediction_correction_energy": 0.003955851309001446
+        },
+        {
+          "episode": "953",
+          "sample_mse": 0.16064834594726562,
+          "mean_mse": 0.16064834594726562,
+          "retained_error_mse": 0.1241830363869667,
+          "discarded_error_mse": 0.03646531701087952,
+          "postprojected_mean_mse": 0.16268877685070038,
+          "discarded_prediction_correction_energy": 0.0034219371154904366
+        },
+        {
+          "episode": "954",
+          "sample_mse": 0.0631508082151413,
+          "mean_mse": 0.0631508082151413,
+          "retained_error_mse": 0.043507035821676254,
+          "discarded_error_mse": 0.019643770530819893,
+          "postprojected_mean_mse": 0.06427054107189178,
+          "discarded_prediction_correction_energy": 0.0022436371073126793
+        },
+        {
+          "episode": "956",
+          "sample_mse": 0.06674857437610626,
+          "mean_mse": 0.06674857437610626,
+          "retained_error_mse": 0.04569365456700325,
+          "discarded_error_mse": 0.02105492353439331,
+          "postprojected_mean_mse": 0.06820156425237656,
+          "discarded_prediction_correction_energy": 0.002643759362399578
+        },
+        {
+          "episode": "957",
+          "sample_mse": 0.0648145005106926,
+          "mean_mse": 0.0648145005106926,
+          "retained_error_mse": 0.04523088037967682,
+          "discarded_error_mse": 0.01958361454308033,
+          "postprojected_mean_mse": 0.06588570028543472,
+          "discarded_prediction_correction_energy": 0.001763843116350472
+        },
+        {
+          "episode": "959",
+          "sample_mse": 0.07096811383962631,
+          "mean_mse": 0.07096811383962631,
+          "retained_error_mse": 0.04923975095152855,
+          "discarded_error_mse": 0.02172837220132351,
+          "postprojected_mean_mse": 0.07317564636468887,
+          "discarded_prediction_correction_energy": 0.003774830838665366
+        },
+        {
+          "episode": "960",
+          "sample_mse": 0.07373668998479843,
+          "mean_mse": 0.07373668998479843,
+          "retained_error_mse": 0.05221147835254669,
+          "discarded_error_mse": 0.02152520976960659,
+          "postprojected_mean_mse": 0.0756029561161995,
+          "discarded_prediction_correction_energy": 0.003764416789636016
+        },
+        {
+          "episode": "962",
+          "sample_mse": 0.09139708429574966,
+          "mean_mse": 0.09139708429574966,
+          "retained_error_mse": 0.06910068541765213,
+          "discarded_error_mse": 0.022296400740742683,
+          "postprojected_mean_mse": 0.09345660358667374,
+          "discarded_prediction_correction_energy": 0.0025033114943653345
+        },
+        {
+          "episode": "963",
+          "sample_mse": 0.10710722208023071,
+          "mean_mse": 0.10710722208023071,
+          "retained_error_mse": 0.08207046985626221,
+          "discarded_error_mse": 0.025036752223968506,
+          "postprojected_mean_mse": 0.10822796821594238,
+          "discarded_prediction_correction_energy": 0.002284394344314933
+        },
+        {
+          "episode": "965",
+          "sample_mse": 0.06556031852960587,
+          "mean_mse": 0.06556031852960587,
+          "retained_error_mse": 0.04599110782146454,
+          "discarded_error_mse": 0.019569212570786476,
+          "postprojected_mean_mse": 0.0674339234828949,
+          "discarded_prediction_correction_energy": 0.002824603347107768
+        },
+        {
+          "episode": "966",
+          "sample_mse": 0.08599943667650223,
+          "mean_mse": 0.08599943667650223,
+          "retained_error_mse": 0.06409741193056107,
+          "discarded_error_mse": 0.021902015432715416,
+          "postprojected_mean_mse": 0.08816647529602051,
+          "discarded_prediction_correction_energy": 0.002708065090700984
+        },
+        {
+          "episode": "967",
+          "sample_mse": 0.0578983835875988,
+          "mean_mse": 0.0578983835875988,
+          "retained_error_mse": 0.03909152373671532,
+          "discarded_error_mse": 0.01880686916410923,
+          "postprojected_mean_mse": 0.059415996074676514,
+          "discarded_prediction_correction_energy": 0.00195599184371531
+        },
+        {
+          "episode": "969",
+          "sample_mse": 0.09382670372724533,
+          "mean_mse": 0.09382670372724533,
+          "retained_error_mse": 0.07127007842063904,
+          "discarded_error_mse": 0.022556617856025696,
+          "postprojected_mean_mse": 0.09611613303422928,
+          "discarded_prediction_correction_energy": 0.002655791351571679
+        },
+        {
+          "episode": "971",
+          "sample_mse": 0.0866025984287262,
+          "mean_mse": 0.0866025984287262,
+          "retained_error_mse": 0.06369702517986298,
+          "discarded_error_mse": 0.022905578836798668,
+          "postprojected_mean_mse": 0.08877268433570862,
+          "discarded_prediction_correction_energy": 0.0026529282331466675
+        },
+        {
+          "episode": "972",
+          "sample_mse": 0.05869705602526665,
+          "mean_mse": 0.05869705602526665,
+          "retained_error_mse": 0.039417047053575516,
+          "discarded_error_mse": 0.01928000897169113,
+          "postprojected_mean_mse": 0.06037569046020508,
+          "discarded_prediction_correction_energy": 0.0026004903484135866
+        },
+        {
+          "episode": "973",
+          "sample_mse": 0.1083814725279808,
+          "mean_mse": 0.1083814725279808,
+          "retained_error_mse": 0.08532136678695679,
+          "discarded_error_mse": 0.023060090839862823,
+          "postprojected_mean_mse": 0.10967164486646652,
+          "discarded_prediction_correction_energy": 0.002060638042166829
+        },
+        {
+          "episode": "975",
+          "sample_mse": 0.10777240991592407,
+          "mean_mse": 0.10777240991592407,
+          "retained_error_mse": 0.08309856057167053,
+          "discarded_error_mse": 0.024673840031027794,
+          "postprojected_mean_mse": 0.11013558506965637,
+          "discarded_prediction_correction_energy": 0.0026671402156352997
+        },
+        {
+          "episode": "976",
+          "sample_mse": 0.05333961546421051,
+          "mean_mse": 0.05333961546421051,
+          "retained_error_mse": 0.036268360912799835,
+          "discarded_error_mse": 0.017071254551410675,
+          "postprojected_mean_mse": 0.054445695132017136,
+          "discarded_prediction_correction_energy": 0.0019305958412587643
+        },
+        {
+          "episode": "978",
+          "sample_mse": 0.117085300385952,
+          "mean_mse": 0.117085300385952,
+          "retained_error_mse": 0.08760447055101395,
+          "discarded_error_mse": 0.02948082983493805,
+          "postprojected_mean_mse": 0.11801186203956604,
+          "discarded_prediction_correction_energy": 0.001911232597194612
+        }
+      ]
+    },
+    {
+      "checkpoint": "runs/reference-idm42-nested512-comparison400-20261113/prior_flow-seed42.pt",
+      "checkpoint_sha256": "4d1d774403b0366a8af75f36b568b29e91b4cf84cb6de1cb1f2bc3a04ba648be",
+      "variant": "prior_flow",
+      "means": {
+        "sample_mse": 0.11011035061286141,
+        "mean_mse": 0.10064542656376337,
+        "retained_error_mse": 0.07481582577262695,
+        "discarded_error_mse": 0.025829600907551747,
+        "postprojected_mean_mse": 0.09955443009190883,
+        "discarded_prediction_correction_energy": 0.004427209464968958
+      },
+      "rows": [
+        {
+          "episode": "1460",
+          "sample_mse": 0.1255088448524475,
+          "mean_mse": 0.11633909493684769,
+          "retained_error_mse": 0.08695864677429199,
+          "discarded_error_mse": 0.029380450025200844,
+          "postprojected_mean_mse": 0.11529872566461563,
+          "discarded_prediction_correction_energy": 0.004193473141640425
+        },
+        {
+          "episode": "1461",
+          "sample_mse": 0.19876405596733093,
+          "mean_mse": 0.18902462720870972,
+          "retained_error_mse": 0.14635981619358063,
+          "discarded_error_mse": 0.04266480728983879,
+          "postprojected_mean_mse": 0.18758998811244965,
+          "discarded_prediction_correction_energy": 0.00432629557326436
+        },
+        {
+          "episode": "1463",
+          "sample_mse": 0.09701018780469894,
+          "mean_mse": 0.08777302503585815,
+          "retained_error_mse": 0.06374793499708176,
+          "discarded_error_mse": 0.024025091901421547,
+          "postprojected_mean_mse": 0.08680886030197144,
+          "discarded_prediction_correction_energy": 0.004209569189697504
+        },
+        {
+          "episode": "1464",
+          "sample_mse": 0.09031178802251816,
+          "mean_mse": 0.0809871032834053,
+          "retained_error_mse": 0.06163620948791504,
+          "discarded_error_mse": 0.019350895658135414,
+          "postprojected_mean_mse": 0.07981792837381363,
+          "discarded_prediction_correction_energy": 0.003942455630749464
+        },
+        {
+          "episode": "1466",
+          "sample_mse": 0.2313130497932434,
+          "mean_mse": 0.2211633175611496,
+          "retained_error_mse": 0.18067781627178192,
+          "discarded_error_mse": 0.04048553481698036,
+          "postprojected_mean_mse": 0.22025887668132782,
+          "discarded_prediction_correction_energy": 0.0051915268413722515
+        },
+        {
+          "episode": "1468",
+          "sample_mse": 0.24978311359882355,
+          "mean_mse": 0.23870782554149628,
+          "retained_error_mse": 0.18686629831790924,
+          "discarded_error_mse": 0.05184149369597435,
+          "postprojected_mean_mse": 0.2382015734910965,
+          "discarded_prediction_correction_energy": 0.008377566933631897
+        },
+        {
+          "episode": "1469",
+          "sample_mse": 0.09587585926055908,
+          "mean_mse": 0.08649975806474686,
+          "retained_error_mse": 0.06321356445550919,
+          "discarded_error_mse": 0.02328619547188282,
+          "postprojected_mean_mse": 0.08521466702222824,
+          "discarded_prediction_correction_energy": 0.004179116804152727
+        },
+        {
+          "episode": "1471",
+          "sample_mse": 0.07108674943447113,
+          "mean_mse": 0.06180978938937187,
+          "retained_error_mse": 0.0421043299138546,
+          "discarded_error_mse": 0.01970546506345272,
+          "postprojected_mean_mse": 0.06064756587147713,
+          "discarded_prediction_correction_energy": 0.0041111488826572895
+        },
+        {
+          "episode": "1472",
+          "sample_mse": 0.09983279556035995,
+          "mean_mse": 0.09034877270460129,
+          "retained_error_mse": 0.06911864876747131,
+          "discarded_error_mse": 0.021230125799775124,
+          "postprojected_mean_mse": 0.08892399072647095,
+          "discarded_prediction_correction_energy": 0.004006695002317429
+        },
+        {
+          "episode": "1474",
+          "sample_mse": 0.1249610036611557,
+          "mean_mse": 0.11549659818410873,
+          "retained_error_mse": 0.0841851457953453,
+          "discarded_error_mse": 0.03131144866347313,
+          "postprojected_mean_mse": 0.11523666977882385,
+          "discarded_prediction_correction_energy": 0.004749162122607231
+        },
+        {
+          "episode": "1475",
+          "sample_mse": 0.1822149157524109,
+          "mean_mse": 0.1705278605222702,
+          "retained_error_mse": 0.12611792981624603,
+          "discarded_error_mse": 0.04440993443131447,
+          "postprojected_mean_mse": 0.1703830361366272,
+          "discarded_prediction_correction_energy": 0.00795805361121893
+        },
+        {
+          "episode": "1477",
+          "sample_mse": 0.11304214596748352,
+          "mean_mse": 0.10368441790342331,
+          "retained_error_mse": 0.07584410160779953,
+          "discarded_error_mse": 0.02784031629562378,
+          "postprojected_mean_mse": 0.1025804951786995,
+          "discarded_prediction_correction_energy": 0.00417337054386735
+        },
+        {
+          "episode": "1478",
+          "sample_mse": 0.11437007784843445,
+          "mean_mse": 0.10490355640649796,
+          "retained_error_mse": 0.07388868927955627,
+          "discarded_error_mse": 0.031014859676361084,
+          "postprojected_mean_mse": 0.10365284234285355,
+          "discarded_prediction_correction_energy": 0.0041958182118833065
+        },
+        {
+          "episode": "1480",
+          "sample_mse": 0.15307804942131042,
+          "mean_mse": 0.14341668784618378,
+          "retained_error_mse": 0.10613315552473068,
+          "discarded_error_mse": 0.03728353604674339,
+          "postprojected_mean_mse": 0.14197836816310883,
+          "discarded_prediction_correction_energy": 0.004678433761000633
+        },
+        {
+          "episode": "1482",
+          "sample_mse": 0.11351881176233292,
+          "mean_mse": 0.10422074049711227,
+          "retained_error_mse": 0.08048062771558762,
+          "discarded_error_mse": 0.02374010719358921,
+          "postprojected_mean_mse": 0.10297734290361404,
+          "discarded_prediction_correction_energy": 0.004008025862276554
+        },
+        {
+          "episode": "1483",
+          "sample_mse": 0.08782809972763062,
+          "mean_mse": 0.07861106097698212,
+          "retained_error_mse": 0.05544256046414375,
+          "discarded_error_mse": 0.023168491199612617,
+          "postprojected_mean_mse": 0.07740557938814163,
+          "discarded_prediction_correction_energy": 0.004077061545103788
+        },
+        {
+          "episode": "1485",
+          "sample_mse": 0.10576397180557251,
+          "mean_mse": 0.09642356634140015,
+          "retained_error_mse": 0.06447478383779526,
+          "discarded_error_mse": 0.03194877877831459,
+          "postprojected_mean_mse": 0.0961560383439064,
+          "discarded_prediction_correction_energy": 0.004491784144192934
+        },
+        {
+          "episode": "1486",
+          "sample_mse": 0.19320647418498993,
+          "mean_mse": 0.18199855089187622,
+          "retained_error_mse": 0.13583703339099884,
+          "discarded_error_mse": 0.04616152122616768,
+          "postprojected_mean_mse": 0.18219037353992462,
+          "discarded_prediction_correction_energy": 0.006437027361243963
+        },
+        {
+          "episode": "1488",
+          "sample_mse": 0.12852832674980164,
+          "mean_mse": 0.11916375160217285,
+          "retained_error_mse": 0.08948779106140137,
+          "discarded_error_mse": 0.029675977304577827,
+          "postprojected_mean_mse": 0.11796987801790237,
+          "discarded_prediction_correction_energy": 0.004446160513907671
+        },
+        {
+          "episode": "1489",
+          "sample_mse": 0.09508819133043289,
+          "mean_mse": 0.08570585399866104,
+          "retained_error_mse": 0.06354626268148422,
+          "discarded_error_mse": 0.02215959131717682,
+          "postprojected_mean_mse": 0.08446723222732544,
+          "discarded_prediction_correction_energy": 0.004151919856667519
+        },
+        {
+          "episode": "1491",
+          "sample_mse": 0.17115230858325958,
+          "mean_mse": 0.16165541112422943,
+          "retained_error_mse": 0.13031093776226044,
+          "discarded_error_mse": 0.031344473361968994,
+          "postprojected_mean_mse": 0.15975578129291534,
+          "discarded_prediction_correction_energy": 0.004354861564934254
+        },
+        {
+          "episode": "1492",
+          "sample_mse": 0.11981236934661865,
+          "mean_mse": 0.11048325151205063,
+          "retained_error_mse": 0.08167927712202072,
+          "discarded_error_mse": 0.028803979977965355,
+          "postprojected_mean_mse": 0.10930273681879044,
+          "discarded_prediction_correction_energy": 0.004333729390054941
+        },
+        {
+          "episode": "1494",
+          "sample_mse": 0.14233742654323578,
+          "mean_mse": 0.13300560414791107,
+          "retained_error_mse": 0.1021457314491272,
+          "discarded_error_mse": 0.030859852209687233,
+          "postprojected_mean_mse": 0.13192878663539886,
+          "discarded_prediction_correction_energy": 0.0043182289227843285
+        },
+        {
+          "episode": "1495",
+          "sample_mse": 0.232032909989357,
+          "mean_mse": 0.2226247787475586,
+          "retained_error_mse": 0.18060004711151123,
+          "discarded_error_mse": 0.04202473163604736,
+          "postprojected_mean_mse": 0.22056235373020172,
+          "discarded_prediction_correction_energy": 0.00437609339132905
+        },
+        {
+          "episode": "1497",
+          "sample_mse": 0.15643876791000366,
+          "mean_mse": 0.14669102430343628,
+          "retained_error_mse": 0.10633356124162674,
+          "discarded_error_mse": 0.04035747051239014,
+          "postprojected_mean_mse": 0.1451803296804428,
+          "discarded_prediction_correction_energy": 0.004759080242365599
+        },
+        {
+          "episode": "1499",
+          "sample_mse": 0.07253260910511017,
+          "mean_mse": 0.0632191002368927,
+          "retained_error_mse": 0.04281330108642578,
+          "discarded_error_mse": 0.02040579728782177,
+          "postprojected_mean_mse": 0.062021393328905106,
+          "discarded_prediction_correction_energy": 0.004087929148226976
+        },
+        {
+          "episode": "1530",
+          "sample_mse": 0.11220771819353104,
+          "mean_mse": 0.10279545933008194,
+          "retained_error_mse": 0.07551637291908264,
+          "discarded_error_mse": 0.027279088273644447,
+          "postprojected_mean_mse": 0.10162120312452316,
+          "discarded_prediction_correction_energy": 0.004213603679090738
+        },
+        {
+          "episode": "1532",
+          "sample_mse": 0.14239341020584106,
+          "mean_mse": 0.1327584981918335,
+          "retained_error_mse": 0.09788703918457031,
+          "discarded_error_mse": 0.034871455281972885,
+          "postprojected_mean_mse": 0.13151302933692932,
+          "discarded_prediction_correction_energy": 0.0044503831304609776
+        },
+        {
+          "episode": "1533",
+          "sample_mse": 0.08095115423202515,
+          "mean_mse": 0.07170777767896652,
+          "retained_error_mse": 0.051614437252283096,
+          "discarded_error_mse": 0.020093338564038277,
+          "postprojected_mean_mse": 0.07065433263778687,
+          "discarded_prediction_correction_energy": 0.004049732815474272
+        },
+        {
+          "episode": "1535",
+          "sample_mse": 0.12093686312437057,
+          "mean_mse": 0.11164345592260361,
+          "retained_error_mse": 0.08307451754808426,
+          "discarded_error_mse": 0.028568917885422707,
+          "postprojected_mean_mse": 0.11041324585676193,
+          "discarded_prediction_correction_energy": 0.004138242918998003
+        },
+        {
+          "episode": "1537",
+          "sample_mse": 0.1156890019774437,
+          "mean_mse": 0.10625362396240234,
+          "retained_error_mse": 0.0788678452372551,
+          "discarded_error_mse": 0.027385776862502098,
+          "postprojected_mean_mse": 0.1047305092215538,
+          "discarded_prediction_correction_energy": 0.003887629136443138
+        },
+        {
+          "episode": "1538",
+          "sample_mse": 0.11246070265769958,
+          "mean_mse": 0.10321539640426636,
+          "retained_error_mse": 0.06863947957754135,
+          "discarded_error_mse": 0.034575920552015305,
+          "postprojected_mean_mse": 0.10289444774389267,
+          "discarded_prediction_correction_energy": 0.004958318080753088
+        },
+        {
+          "episode": "1540",
+          "sample_mse": 0.0670100674033165,
+          "mean_mse": 0.05771555006504059,
+          "retained_error_mse": 0.03766812011599541,
+          "discarded_error_mse": 0.020047426223754883,
+          "postprojected_mean_mse": 0.05615207180380821,
+          "discarded_prediction_correction_energy": 0.004102903883904219
+        },
+        {
+          "episode": "1542",
+          "sample_mse": 0.10561356693506241,
+          "mean_mse": 0.09613847732543945,
+          "retained_error_mse": 0.06476417928934097,
+          "discarded_error_mse": 0.03137430176138878,
+          "postprojected_mean_mse": 0.09589643031358719,
+          "discarded_prediction_correction_energy": 0.004716741386801004
+        },
+        {
+          "episode": "1543",
+          "sample_mse": 0.10270846635103226,
+          "mean_mse": 0.09350443631410599,
+          "retained_error_mse": 0.06284806877374649,
+          "discarded_error_mse": 0.03065636195242405,
+          "postprojected_mean_mse": 0.09252718836069107,
+          "discarded_prediction_correction_energy": 0.004315088037401438
+        },
+        {
+          "episode": "1545",
+          "sample_mse": 0.0846778079867363,
+          "mean_mse": 0.07529491186141968,
+          "retained_error_mse": 0.053345728665590286,
+          "discarded_error_mse": 0.02194918692111969,
+          "postprojected_mean_mse": 0.07407054305076599,
+          "discarded_prediction_correction_energy": 0.004061051178723574
+        },
+        {
+          "episode": "1547",
+          "sample_mse": 0.12431950122117996,
+          "mean_mse": 0.11485680192708969,
+          "retained_error_mse": 0.082208052277565,
+          "discarded_error_mse": 0.03264874592423439,
+          "postprojected_mean_mse": 0.11412274092435837,
+          "discarded_prediction_correction_energy": 0.00456374092027545
+        },
+        {
+          "episode": "1549",
+          "sample_mse": 0.12414401769638062,
+          "mean_mse": 0.11478444188833237,
+          "retained_error_mse": 0.08013840764760971,
+          "discarded_error_mse": 0.03464604541659355,
+          "postprojected_mean_mse": 0.11375709623098373,
+          "discarded_prediction_correction_energy": 0.00460553914308548
+        },
+        {
+          "episode": "1551",
+          "sample_mse": 0.16036324203014374,
+          "mean_mse": 0.15023177862167358,
+          "retained_error_mse": 0.11118564009666443,
+          "discarded_error_mse": 0.039046142250299454,
+          "postprojected_mean_mse": 0.14941644668579102,
+          "discarded_prediction_correction_energy": 0.005144574213773012
+        },
+        {
+          "episode": "1553",
+          "sample_mse": 0.053778067231178284,
+          "mean_mse": 0.044509757310152054,
+          "retained_error_mse": 0.028515726327896118,
+          "discarded_error_mse": 0.015994032844901085,
+          "postprojected_mean_mse": 0.043134655803442,
+          "discarded_prediction_correction_energy": 0.004056897945702076
+        },
+        {
+          "episode": "1554",
+          "sample_mse": 0.12159145623445511,
+          "mean_mse": 0.11225422471761703,
+          "retained_error_mse": 0.07576031237840652,
+          "discarded_error_mse": 0.03649391233921051,
+          "postprojected_mean_mse": 0.11155436187982559,
+          "discarded_prediction_correction_energy": 0.004629621747881174
+        },
+        {
+          "episode": "1556",
+          "sample_mse": 0.14548726379871368,
+          "mean_mse": 0.13553325831890106,
+          "retained_error_mse": 0.10247925668954849,
+          "discarded_error_mse": 0.033053986728191376,
+          "postprojected_mean_mse": 0.13456334173679352,
+          "discarded_prediction_correction_energy": 0.004351536277681589
+        },
+        {
+          "episode": "1558",
+          "sample_mse": 0.05485762655735016,
+          "mean_mse": 0.045548826456069946,
+          "retained_error_mse": 0.029802098870277405,
+          "discarded_error_mse": 0.015746725723147392,
+          "postprojected_mean_mse": 0.044107213616371155,
+          "discarded_prediction_correction_energy": 0.00407822011038661
+        },
+        {
+          "episode": "180",
+          "sample_mse": 0.06948907673358917,
+          "mean_mse": 0.06013096496462822,
+          "retained_error_mse": 0.04400424659252167,
+          "discarded_error_mse": 0.0161267202347517,
+          "postprojected_mean_mse": 0.05861606076359749,
+          "discarded_prediction_correction_energy": 0.003927966114133596
+        },
+        {
+          "episode": "181",
+          "sample_mse": 0.10750285536050797,
+          "mean_mse": 0.09768489748239517,
+          "retained_error_mse": 0.07371976226568222,
+          "discarded_error_mse": 0.02396513521671295,
+          "postprojected_mean_mse": 0.09610992670059204,
+          "discarded_prediction_correction_energy": 0.004205267410725355
+        },
+        {
+          "episode": "182",
+          "sample_mse": 0.10294468700885773,
+          "mean_mse": 0.09364522248506546,
+          "retained_error_mse": 0.07194184511899948,
+          "discarded_error_mse": 0.02170337736606598,
+          "postprojected_mean_mse": 0.09264547377824783,
+          "discarded_prediction_correction_energy": 0.004312409553676844
+        },
+        {
+          "episode": "184",
+          "sample_mse": 0.05955086275935173,
+          "mean_mse": 0.05033315345644951,
+          "retained_error_mse": 0.03335201367735863,
+          "discarded_error_mse": 0.016981136053800583,
+          "postprojected_mean_mse": 0.04942921921610832,
+          "discarded_prediction_correction_energy": 0.0038522889371961355
+        },
+        {
+          "episode": "185",
+          "sample_mse": 0.058040060102939606,
+          "mean_mse": 0.04886869713664055,
+          "retained_error_mse": 0.032044291496276855,
+          "discarded_error_mse": 0.016824403777718544,
+          "postprojected_mean_mse": 0.04801146686077118,
+          "discarded_prediction_correction_energy": 0.00383867253549397
+        },
+        {
+          "episode": "187",
+          "sample_mse": 0.08555561304092407,
+          "mean_mse": 0.07619699090719223,
+          "retained_error_mse": 0.0573621541261673,
+          "discarded_error_mse": 0.018834838643670082,
+          "postprojected_mean_mse": 0.07488803565502167,
+          "discarded_prediction_correction_energy": 0.003986577037721872
+        },
+        {
+          "episode": "188",
+          "sample_mse": 0.056707460433244705,
+          "mean_mse": 0.047468554228544235,
+          "retained_error_mse": 0.030807727947831154,
+          "discarded_error_mse": 0.016660822555422783,
+          "postprojected_mean_mse": 0.04647922143340111,
+          "discarded_prediction_correction_energy": 0.003936012275516987
+        },
+        {
+          "episode": "189",
+          "sample_mse": 0.11092589050531387,
+          "mean_mse": 0.10172056406736374,
+          "retained_error_mse": 0.08035945892333984,
+          "discarded_error_mse": 0.021361099556088448,
+          "postprojected_mean_mse": 0.10064125061035156,
+          "discarded_prediction_correction_energy": 0.004148105625063181
+        },
+        {
+          "episode": "191",
+          "sample_mse": 0.0805574506521225,
+          "mean_mse": 0.07128193229436874,
+          "retained_error_mse": 0.05306096747517586,
+          "discarded_error_mse": 0.01822095550596714,
+          "postprojected_mean_mse": 0.06999722123146057,
+          "discarded_prediction_correction_energy": 0.004133202601224184
+        },
+        {
+          "episode": "192",
+          "sample_mse": 0.08516143262386322,
+          "mean_mse": 0.07579369097948074,
+          "retained_error_mse": 0.05549788847565651,
+          "discarded_error_mse": 0.020295796915888786,
+          "postprojected_mean_mse": 0.07458405941724777,
+          "discarded_prediction_correction_energy": 0.003996846731752157
+        },
+        {
+          "episode": "193",
+          "sample_mse": 0.08721694350242615,
+          "mean_mse": 0.07775423675775528,
+          "retained_error_mse": 0.05708923935890198,
+          "discarded_error_mse": 0.0206650048494339,
+          "postprojected_mean_mse": 0.07652595639228821,
+          "discarded_prediction_correction_energy": 0.004081282764673233
+        },
+        {
+          "episode": "195",
+          "sample_mse": 0.05321861803531647,
+          "mean_mse": 0.043985869735479355,
+          "retained_error_mse": 0.02843099646270275,
+          "discarded_error_mse": 0.015554875135421753,
+          "postprojected_mean_mse": 0.0429622121155262,
+          "discarded_prediction_correction_energy": 0.0038817364256829023
+        },
+        {
+          "episode": "196",
+          "sample_mse": 0.09276360273361206,
+          "mean_mse": 0.08353686332702637,
+          "retained_error_mse": 0.06281334161758423,
+          "discarded_error_mse": 0.020723514258861542,
+          "postprojected_mean_mse": 0.0821077898144722,
+          "discarded_prediction_correction_energy": 0.004037400241941214
+        },
+        {
+          "episode": "197",
+          "sample_mse": 0.07142162322998047,
+          "mean_mse": 0.062143441289663315,
+          "retained_error_mse": 0.04640654847025871,
+          "discarded_error_mse": 0.015736892819404602,
+          "postprojected_mean_mse": 0.06090451404452324,
+          "discarded_prediction_correction_energy": 0.003938612528145313
+        },
+        {
+          "episode": "199",
+          "sample_mse": 0.10838042944669724,
+          "mean_mse": 0.09909582138061523,
+          "retained_error_mse": 0.07621590793132782,
+          "discarded_error_mse": 0.022879919037222862,
+          "postprojected_mean_mse": 0.09769093990325928,
+          "discarded_prediction_correction_energy": 0.003954896237701178
+        },
+        {
+          "episode": "36",
+          "sample_mse": 0.22216510772705078,
+          "mean_mse": 0.21109282970428467,
+          "retained_error_mse": 0.16950660943984985,
+          "discarded_error_mse": 0.04158623144030571,
+          "postprojected_mean_mse": 0.20869970321655273,
+          "discarded_prediction_correction_energy": 0.006664462387561798
+        },
+        {
+          "episode": "591",
+          "sample_mse": 0.0835215225815773,
+          "mean_mse": 0.07408598810434341,
+          "retained_error_mse": 0.05232623219490051,
+          "discarded_error_mse": 0.0217597633600235,
+          "postprojected_mean_mse": 0.07291293889284134,
+          "discarded_prediction_correction_energy": 0.003999963402748108
+        },
+        {
+          "episode": "592",
+          "sample_mse": 0.061176031827926636,
+          "mean_mse": 0.05196915939450264,
+          "retained_error_mse": 0.03699307516217232,
+          "discarded_error_mse": 0.014976083301007748,
+          "postprojected_mean_mse": 0.05101882293820381,
+          "discarded_prediction_correction_energy": 0.003909379709511995
+        },
+        {
+          "episode": "594",
+          "sample_mse": 0.119904063642025,
+          "mean_mse": 0.11064371466636658,
+          "retained_error_mse": 0.08422692865133286,
+          "discarded_error_mse": 0.02641679346561432,
+          "postprojected_mean_mse": 0.10911533981561661,
+          "discarded_prediction_correction_energy": 0.004202381242066622
+        },
+        {
+          "episode": "596",
+          "sample_mse": 0.09424347430467606,
+          "mean_mse": 0.08495057374238968,
+          "retained_error_mse": 0.06295472383499146,
+          "discarded_error_mse": 0.021995844319462776,
+          "postprojected_mean_mse": 0.08351198583841324,
+          "discarded_prediction_correction_energy": 0.0039353445172309875
+        },
+        {
+          "episode": "598",
+          "sample_mse": 0.10163400322198868,
+          "mean_mse": 0.09220670908689499,
+          "retained_error_mse": 0.07091501355171204,
+          "discarded_error_mse": 0.021291697397828102,
+          "postprojected_mean_mse": 0.09083682298660278,
+          "discarded_prediction_correction_energy": 0.004211504478007555
+        },
+        {
+          "episode": "790",
+          "sample_mse": 0.0803680568933487,
+          "mean_mse": 0.07099389284849167,
+          "retained_error_mse": 0.050229933112859726,
+          "discarded_error_mse": 0.020763961598277092,
+          "postprojected_mean_mse": 0.06961918622255325,
+          "discarded_prediction_correction_energy": 0.004338075872510672
+        },
+        {
+          "episode": "792",
+          "sample_mse": 0.11391850560903549,
+          "mean_mse": 0.1046556830406189,
+          "retained_error_mse": 0.07621456682682037,
+          "discarded_error_mse": 0.028441106900572777,
+          "postprojected_mean_mse": 0.103817880153656,
+          "discarded_prediction_correction_energy": 0.0044483947567641735
+        },
+        {
+          "episode": "794",
+          "sample_mse": 0.04022383317351341,
+          "mean_mse": 0.031065965071320534,
+          "retained_error_mse": 0.019565856084227562,
+          "discarded_error_mse": 0.011500109918415546,
+          "postprojected_mean_mse": 0.02979564107954502,
+          "discarded_prediction_correction_energy": 0.003939385525882244
+        },
+        {
+          "episode": "796",
+          "sample_mse": 0.06860874593257904,
+          "mean_mse": 0.059274062514305115,
+          "retained_error_mse": 0.04167243838310242,
+          "discarded_error_mse": 0.017601629719138145,
+          "postprojected_mean_mse": 0.05797220394015312,
+          "discarded_prediction_correction_energy": 0.003942195791751146
+        },
+        {
+          "episode": "797",
+          "sample_mse": 0.08763439953327179,
+          "mean_mse": 0.07849203050136566,
+          "retained_error_mse": 0.05771584436297417,
+          "discarded_error_mse": 0.020776189863681793,
+          "postprojected_mean_mse": 0.07798875868320465,
+          "discarded_prediction_correction_energy": 0.004376451950520277
+        },
+        {
+          "episode": "799",
+          "sample_mse": 0.08860462158918381,
+          "mean_mse": 0.07944544404745102,
+          "retained_error_mse": 0.05747104808688164,
+          "discarded_error_mse": 0.02197439782321453,
+          "postprojected_mean_mse": 0.07846686244010925,
+          "discarded_prediction_correction_energy": 0.004584563430398703
+        },
+        {
+          "episode": "941",
+          "sample_mse": 0.0688307136297226,
+          "mean_mse": 0.05971759557723999,
+          "retained_error_mse": 0.043230075389146805,
+          "discarded_error_mse": 0.016487527638673782,
+          "postprojected_mean_mse": 0.058260660618543625,
+          "discarded_prediction_correction_energy": 0.003959979396313429
+        },
+        {
+          "episode": "942",
+          "sample_mse": 0.07055877149105072,
+          "mean_mse": 0.06134074926376343,
+          "retained_error_mse": 0.042435016483068466,
+          "discarded_error_mse": 0.01890574023127556,
+          "postprojected_mean_mse": 0.06023674085736275,
+          "discarded_prediction_correction_energy": 0.004093399737030268
+        },
+        {
+          "episode": "944",
+          "sample_mse": 0.14971989393234253,
+          "mean_mse": 0.1401573121547699,
+          "retained_error_mse": 0.11567210406064987,
+          "discarded_error_mse": 0.02448520064353943,
+          "postprojected_mean_mse": 0.13836239278316498,
+          "discarded_prediction_correction_energy": 0.00428602984175086
+        },
+        {
+          "episode": "945",
+          "sample_mse": 0.06895729154348373,
+          "mean_mse": 0.059388209134340286,
+          "retained_error_mse": 0.04054225981235504,
+          "discarded_error_mse": 0.018845953047275543,
+          "postprojected_mean_mse": 0.058107588440179825,
+          "discarded_prediction_correction_energy": 0.0042244684882462025
+        },
+        {
+          "episode": "947",
+          "sample_mse": 0.0870659127831459,
+          "mean_mse": 0.07732849568128586,
+          "retained_error_mse": 0.05488624796271324,
+          "discarded_error_mse": 0.02244223654270172,
+          "postprojected_mean_mse": 0.0759066715836525,
+          "discarded_prediction_correction_energy": 0.004484778735786676
+        },
+        {
+          "episode": "948",
+          "sample_mse": 0.1221998929977417,
+          "mean_mse": 0.11260068416595459,
+          "retained_error_mse": 0.08713991194963455,
+          "discarded_error_mse": 0.025460785254836082,
+          "postprojected_mean_mse": 0.11206674575805664,
+          "discarded_prediction_correction_energy": 0.004789102356880903
+        },
+        {
+          "episode": "950",
+          "sample_mse": 0.08408151566982269,
+          "mean_mse": 0.07494914531707764,
+          "retained_error_mse": 0.05280687287449837,
+          "discarded_error_mse": 0.02214226685464382,
+          "postprojected_mean_mse": 0.07426809519529343,
+          "discarded_prediction_correction_energy": 0.004460388328880072
+        },
+        {
+          "episode": "951",
+          "sample_mse": 0.08941716700792313,
+          "mean_mse": 0.079825259745121,
+          "retained_error_mse": 0.05757817253470421,
+          "discarded_error_mse": 0.022247089073061943,
+          "postprojected_mean_mse": 0.0792546346783638,
+          "discarded_prediction_correction_energy": 0.004676118027418852
+        },
+        {
+          "episode": "953",
+          "sample_mse": 0.2558663785457611,
+          "mean_mse": 0.2462443858385086,
+          "retained_error_mse": 0.20619946718215942,
+          "discarded_error_mse": 0.04004490748047829,
+          "postprojected_mean_mse": 0.24470525979995728,
+          "discarded_prediction_correction_energy": 0.004413596820086241
+        },
+        {
+          "episode": "954",
+          "sample_mse": 0.07706007361412048,
+          "mean_mse": 0.06784927845001221,
+          "retained_error_mse": 0.04586416110396385,
+          "discarded_error_mse": 0.021985119208693504,
+          "postprojected_mean_mse": 0.06662766635417938,
+          "discarded_prediction_correction_energy": 0.004260672256350517
+        },
+        {
+          "episode": "956",
+          "sample_mse": 0.08539055287837982,
+          "mean_mse": 0.07623845338821411,
+          "retained_error_mse": 0.05264384672045708,
+          "discarded_error_mse": 0.023594608530402184,
+          "postprojected_mean_mse": 0.07515176385641098,
+          "discarded_prediction_correction_energy": 0.004580224398523569
+        },
+        {
+          "episode": "957",
+          "sample_mse": 0.08588525652885437,
+          "mean_mse": 0.07661842554807663,
+          "retained_error_mse": 0.05442856252193451,
+          "discarded_error_mse": 0.02218986116349697,
+          "postprojected_mean_mse": 0.07508337497711182,
+          "discarded_prediction_correction_energy": 0.003987819422036409
+        },
+        {
+          "episode": "959",
+          "sample_mse": 0.09902159869670868,
+          "mean_mse": 0.0895872637629509,
+          "retained_error_mse": 0.06503397971391678,
+          "discarded_error_mse": 0.02455328404903412,
+          "postprojected_mean_mse": 0.088969886302948,
+          "discarded_prediction_correction_energy": 0.004571058787405491
+        },
+        {
+          "episode": "960",
+          "sample_mse": 0.09642117470502853,
+          "mean_mse": 0.08674577623605728,
+          "retained_error_mse": 0.06278543174266815,
+          "discarded_error_mse": 0.02396034635603428,
+          "postprojected_mean_mse": 0.08617690950632095,
+          "discarded_prediction_correction_energy": 0.00459779379889369
+        },
+        {
+          "episode": "962",
+          "sample_mse": 0.11634708940982819,
+          "mean_mse": 0.10681748390197754,
+          "retained_error_mse": 0.0818888396024704,
+          "discarded_error_mse": 0.024928634986281395,
+          "postprojected_mean_mse": 0.1062447652220726,
+          "discarded_prediction_correction_energy": 0.004901499021798372
+        },
+        {
+          "episode": "963",
+          "sample_mse": 0.14533941447734833,
+          "mean_mse": 0.13587498664855957,
+          "retained_error_mse": 0.10804614424705505,
+          "discarded_error_mse": 0.027828851714730263,
+          "postprojected_mean_mse": 0.13420364260673523,
+          "discarded_prediction_correction_energy": 0.004127659369260073
+        },
+        {
+          "episode": "965",
+          "sample_mse": 0.08205951750278473,
+          "mean_mse": 0.07268299907445908,
+          "retained_error_mse": 0.05072943493723869,
+          "discarded_error_mse": 0.021953562274575233,
+          "postprojected_mean_mse": 0.07217225432395935,
+          "discarded_prediction_correction_energy": 0.00452652620151639
+        },
+        {
+          "episode": "966",
+          "sample_mse": 0.11062411963939667,
+          "mean_mse": 0.10122112184762955,
+          "retained_error_mse": 0.07678771764039993,
+          "discarded_error_mse": 0.024433398619294167,
+          "postprojected_mean_mse": 0.10085680335760117,
+          "discarded_prediction_correction_energy": 0.0049577318131923676
+        },
+        {
+          "episode": "967",
+          "sample_mse": 0.07888806611299515,
+          "mean_mse": 0.06975922733545303,
+          "retained_error_mse": 0.04841562733054161,
+          "discarded_error_mse": 0.02134360373020172,
+          "postprojected_mean_mse": 0.0687401071190834,
+          "discarded_prediction_correction_energy": 0.004131747875362635
+        },
+        {
+          "episode": "969",
+          "sample_mse": 0.12042910605669022,
+          "mean_mse": 0.11100684851408005,
+          "retained_error_mse": 0.0857698991894722,
+          "discarded_error_mse": 0.025236932560801506,
+          "postprojected_mean_mse": 0.11061594635248184,
+          "discarded_prediction_correction_energy": 0.004897300153970718
+        },
+        {
+          "episode": "971",
+          "sample_mse": 0.10947516560554504,
+          "mean_mse": 0.09992340207099915,
+          "retained_error_mse": 0.07452347129583359,
+          "discarded_error_mse": 0.02539992332458496,
+          "postprojected_mean_mse": 0.09959913045167923,
+          "discarded_prediction_correction_energy": 0.0049216169863939285
+        },
+        {
+          "episode": "972",
+          "sample_mse": 0.0727221742272377,
+          "mean_mse": 0.06353507190942764,
+          "retained_error_mse": 0.04203380271792412,
+          "discarded_error_mse": 0.021501272916793823,
+          "postprojected_mean_mse": 0.06299244612455368,
+          "discarded_prediction_correction_energy": 0.004451241809874773
+        },
+        {
+          "episode": "973",
+          "sample_mse": 0.1506769359111786,
+          "mean_mse": 0.14135684072971344,
+          "retained_error_mse": 0.11540156602859497,
+          "discarded_error_mse": 0.025955304503440857,
+          "postprojected_mean_mse": 0.13975180685520172,
+          "discarded_prediction_correction_energy": 0.004095002543181181
+        },
+        {
+          "episode": "975",
+          "sample_mse": 0.14016540348529816,
+          "mean_mse": 0.13069093227386475,
+          "retained_error_mse": 0.1031918153166771,
+          "discarded_error_mse": 0.027499139308929443,
+          "postprojected_mean_mse": 0.13022883236408234,
+          "discarded_prediction_correction_energy": 0.005047602578997612
+        },
+        {
+          "episode": "976",
+          "sample_mse": 0.07105924189090729,
+          "mean_mse": 0.06190285459160805,
+          "retained_error_mse": 0.04231957718729973,
+          "discarded_error_mse": 0.01958327926695347,
+          "postprojected_mean_mse": 0.060496896505355835,
+          "discarded_prediction_correction_energy": 0.004134467337280512
+        },
+        {
+          "episode": "978",
+          "sample_mse": 0.14630942046642303,
+          "mean_mse": 0.13684938848018646,
+          "retained_error_mse": 0.10474712401628494,
+          "discarded_error_mse": 0.03210226446390152,
+          "postprojected_mean_mse": 0.13515450060367584,
+          "discarded_prediction_correction_energy": 0.004192489665001631
+        }
+      ]
+    }
+  ]
+}

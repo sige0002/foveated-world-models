@@ -1,0 +1,41 @@
+paper_id,field,item_index,kind,source_url,locator,note
+F056,social_background,1,not_stated,https://arxiv.org/html/2410.12557v3,§1,社会的需要の明示的記載なし。
+F056,technical_background,1,author_claim,https://arxiv.org/html/2410.12557v3,§1–2,多数stepのflow生成は遅く、外部教師蒸留は追加学習を要する。
+F056,problem,1,author_claim,https://arxiv.org/html/2410.12557v3,§3,単一学習で1段から多段まで利用可能な生成器を学ぶ。
+F056,method,1,demonstrated,https://arxiv.org/html/2410.12557v3,"§3–3.1, Algorithms 1–2",時刻とstep幅を条件とし、d=0の実データFM損失と、モデルの2半stepから作る停止勾配bootstrap目標を併用。2つ目の評価は生成された中間状態を使う。
+F056,results,1,demonstrated,https://arxiv.org/html/2410.12557v3,"§5.1 Table 1, §5.2",同等DiT-Bと計算量で1・4・128 stepのFID-50kを比較。著者はshortcutがfew-stepで多くの先行法を上回ると報告。画像分布生成でありpaired MSEではない。
+F056,contributions,1,author_claim,https://arxiv.org/html/2410.12557v3,§3,step幅条件と自己生成の2半step整合性による単一段階学習を提案。
+F056,summary,1,interpretation,https://arxiv.org/html/2410.12557v3,§3–5,学習時の生成中間点を取り込む設計は推論分布ずれの対照候補だが、同じ目標の繰返しで未来MSEが単調改善する保証はない。
+F056,remaining_issues,1,author_claim,https://arxiv.org/html/2410.12557v3,"§3.1, §6",著者: 初期の自己生成目標は不安定でweight decayやEMAが役立つ。有限容量のbootstrap誤差や目標分布の偏りが残り得る。
+F057,social_background,1,not_stated,https://arxiv.org/html/2503.07565v7,§1,社会的需要の明示的記載なし。
+F057,technical_background,1,author_claim,https://arxiv.org/html/2503.07565v7,§1–2,少段拡散蒸留やconsistency訓練は不安定性と調整コストがある。
+F057,problem,1,author_claim,https://arxiv.org/html/2503.07565v7,§3,1段から多段の分布写像を単一段階で学習する。
+F057,method,1,demonstrated,https://arxiv.org/html/2503.07565v7,"§3–4 Theorem 1, Appendix B.3–B.4","中間時刻を介したbootstrapと直接写像の周辺分布をMMDで合わせる。r(s,t)=max(s,t−Δ(t))でΔ≥ε>0等、周辺保存補間、無限データ・容量と各反復の厳密最小化を仮定。証明は境界分布から帰納的に正しい時間範囲を広げる。"
+F057,results,1,demonstrated,https://arxiv.org/html/2503.07565v7,§7.1 Table 1,無条件CIFAR-10、事前学習なしでIMM FIDは1 step 3.20、2 step 1.98。iCTは1 step 2.83、2 step 2.46。分布評価。
+F057,contributions,1,author_claim,https://arxiv.org/html/2503.07565v7,§3–4,分布レベルの自己bootstrapとMMDによる少段生成。
+F057,summary,1,interpretation,https://arxiv.org/html/2503.07565v7,§3–4,周辺分布の一致は各観測に対応した未来を保つことや条件付き平均MSEを保証しない。
+F057,remaining_issues,1,interpretation,https://arxiv.org/html/2503.07565v7,"§3–4, §7, Appendix B.4",理論は分布MMDと理想的最適化の収束であり、有限学習のstepごとの単調性、観測に対応する未来、paired MSEを保証しない。
+F058,social_background,1,not_stated,https://arxiv.org/html/2310.14189v1,§1,社会的需要の明示的記載なし。
+F058,technical_background,1,author_claim,https://arxiv.org/html/2310.14189v1,§1–2,旧consistency trainingは蒸留モデルより生成品質が劣り教師EMAの理論が問題。
+F058,problem,1,author_claim,https://arxiv.org/html/2310.14189v1,§3,事前訓練教師やLPIPSなしのconsistency trainingを改善する。
+F058,method,1,demonstrated,https://arxiv.org/html/2310.14189v1,"§3.2 Proposition 1, Appendix A",Diracデータ、線形パラメータ、二乗距離、均一重みのtoy例でEMA教師と学生が異なると離散幅ゼロの損失がデータ値に依存しなくなる。教師EMAを除去しpseudo-Huber、lognormal scheduleと段階的離散化を採用。
+F058,results,1,demonstrated,https://arxiv.org/html/2310.14189v1,"Abstract, §4",無条件CIFAR-10で1 step FID 2.51、2 step 2.24。元consistency trainingとの比較であり未来paired MSEではない。
+F058,contributions,1,author_claim,https://arxiv.org/html/2310.14189v1,§3–4,教師EMAの反例と一連の訓練改善を示す。
+F058,summary,1,interpretation,https://arxiv.org/html/2310.14189v1,§3.2,EMA教師の有害性は提示された極限・toy条件の結果であり、異なるbootstrap目的のEMAも一律に有害とは言えない。
+F058,remaining_issues,1,interpretation,https://arxiv.org/html/2310.14189v1,§3–4,生成分布改善は反復的未来予測の誤差が減る保証ではない。
+F059,social_background,1,not_stated,https://arxiv.org/html/2407.02398v1,§1,社会的需要の明示的記載なし。
+F059,technical_background,1,author_claim,https://arxiv.org/html/2407.02398v1,§1–3,flow軌道の直線化には従来反復rectificationやOT計算が必要。
+F059,problem,1,author_claim,https://arxiv.org/html/2407.02398v1,§3,軌道上の終点と速度の一致を学び少段生成を得る。
+F059,method,1,demonstrated,https://arxiv.org/html/2407.02398v1,"§3.2 Lemma 1, Theorem 1, Appendix A",時空間微分可能・xについて一様Lipschitzの場では軌道上速度一定と直線外挿終点の一定が同値。EMAなし・有界2階微分等の下、微小step損失の展開が速度誤差と物質微分の組合せになる。
+F059,results,1,demonstrated,https://arxiv.org/html/2407.02398v1,§4.1 Table 2,無条件CIFAR-10、2 NFEでConsistency-FM FID 5.34、consistency model 5.83と報告。画像生成であり未来MSEではない。
+F059,contributions,1,author_claim,https://arxiv.org/html/2407.02398v1,§3,速度一貫性、multi-segment学習、教師からの蒸留を提示。
+F059,summary,1,interpretation,https://arxiv.org/html/2407.02398v1,§3.2,直線性はモデル軌道の性質であり実際の未来との対応や条件付き平均を保証しない。
+F059,remaining_issues,1,interpretation,https://arxiv.org/html/2407.02398v1,"§3.2, §4",微小step近似は有限step・有限モデルに一般化できず、生成FIDだけでは反復悪化の解決を確認できない。
+F060,social_background,1,not_stated,https://arxiv.org/html/2310.02279v3,§1,社会的需要の明示的記載なし。
+F060,technical_background,1,author_claim,https://arxiv.org/html/2310.02279v3,§1,通常のconsistency modelは反復時に品質とNFEの良好な交換関係が得にくい。
+F060,problem,1,author_claim,https://arxiv.org/html/2310.02279v3,§3–4,任意時刻間のPF-ODE軌道とscoreを単一モデルで学び、多様なサンプリングを可能にする。
+F060,method,1,demonstrated,https://arxiv.org/html/2310.02279v3,"§3–4, Appendix B.1",教師PF-ODEに沿ったsoft consistencyとscore matchingを用いて任意時刻jumpを学ぶ。積分可能なscoreの下でjumpの補助関数のs→t極限はE[x|x_t]だが、有限intervalの出力は同じ平均ではない。
+F060,results,1,demonstrated,https://arxiv.org/html/2310.02279v3,"§5, Abstract",CIFAR-10の1 step FID 1.73、ImageNet 64の1 step FID 1.92を報告。画像分布・補助損失を使った蒸留で、paired未来特徴MSEではない。
+F060,contributions,1,author_claim,https://arxiv.org/html/2310.02279v3,§3–4,軌道全体のjumpとscoreを統一し、γ-samplingによる計算量調整を提示。
+F060,summary,1,interpretation,https://arxiv.org/html/2310.02279v3,"§4, Appendix B.5",軌道間jumpを条件に含めることは反復誤差への設計候補だが、未来物理時刻の反復予測におけるMSE単調性を意味しない。
+F060,remaining_issues,1,interpretation,https://arxiv.org/html/2310.02279v3,"§4, Appendix B.2・B.5, F.1–F.2",理論は最適CTMが教師PF-ODEの写像を再現し、教師の誤差等を制御できる条件に依存する。F.2は教師とoracleのTV境界および三角不等式を使う。分布のTV制御は有限モデルの未来paired MSEの単調改善を保証しない。

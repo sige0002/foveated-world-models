@@ -1,0 +1,16 @@
+{
+  "all_checks_passed": true,
+  "checks": {
+    "spatial-current-displacement-probe": {
+      "train_cv_selection_verified": true,
+      "all_group_fold_kernel_scales_one": true,
+      "saved_predictions_reproduce_metrics": true
+    },
+    "spatial-current-boundary-audit": {
+      "train_cv_selection_verified": true,
+      "all_group_fold_kernel_scales_one": true,
+      "saved_predictions_reproduce_metrics": true
+    }
+  },
+  "script_sha256": "1a536d862f14085e8f3c74608a1b916a16a8f1aec65acfeb3d0725de1be9fd96"
+}

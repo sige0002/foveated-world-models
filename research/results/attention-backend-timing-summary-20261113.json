@@ -1,0 +1,32 @@
+{
+  "source": "research/results/attention-backend-timing-20261113.json",
+  "metrics": {
+    "inference_timings": {
+      "baseline": {
+        "median_seconds": 0.03942445284919813,
+        "min": 0.039252783311530946,
+        "max": 0.04021642690058798
+      },
+      "candidate": {
+        "median_seconds": 0.03948689210228622,
+        "min": 0.039254534686915574,
+        "max": 0.03958894389215857
+      },
+      "candidate_over_baseline": 1.0015837696803789
+    },
+    "forward_backward_timings": {
+      "baseline": {
+        "median_seconds": 0.12205839401576668,
+        "min": 0.11694776468599836,
+        "max": 0.12311869269857804
+      },
+      "candidate": {
+        "median_seconds": 0.12203438048406194,
+        "min": 0.11947475303895772,
+        "max": 0.12698356830514967
+      },
+      "candidate_over_baseline": 0.9998032619395136
+    }
+  },
+  "scope": "CPU2 B2 float32 highest; isolated correction only; no GPU measurements, no end-to-end latency claim"
+}

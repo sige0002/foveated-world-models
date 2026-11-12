@@ -1,0 +1,31 @@
+{
+  "created_at": "2026-11-12T20:40:35.435010+00:00",
+  "hypothesis": "A current-feature local spatial tangent branch improves finite-budget future-feature prediction beyond an unrestricted direct residual head. Learned coefficients use current features and existing posterior z only, never oracle coefficients or target residual.",
+  "basis": "Central x/y differences on interior14x14 of16x16; border zero. Per-patch2D coefficients .5*tanh(linear(head)); free768D residual retained.",
+  "arms": [
+    "prior_tangent_residual",
+    "prior_rotated_residual"
+  ],
+  "control": "Fixed signed channel permutation of both tangent columns preserves each patch2x2 Gram. Same coefficient head and parameter count. This tests alignment rather than arbitrary extra rank2 branch capacity.",
+  "reference": "Existing prior_residual512/400 seed42 checkpoint; same initial common weights and batch generator. Additional1538 parameters in both new arms.",
+  "settings": {
+    "cache": "runs/reference-idm42-nested512-prior10000",
+    "steps": 400,
+    "batch_size": 8,
+    "dim": 128,
+    "layers": 2,
+    "seed": 42,
+    "lr": 0.0003,
+    "threads_each": 4
+  },
+  "evaluation": "Fixed400 endpoint, dev64 and observed96; all are reused research evaluation. No checkpoint selection. Posterior reconstruction only. One seed feasibility pass; not independent test or end-to-end claim.",
+  "adoption": "Must improve both existing direct residual and rotated control on fixed endpoint errors. Report all arms; no adoption based on oracle fit or training error. If promising replicate seeds before claim.",
+  "theory_limits": "Local advection Taylor-inspired basis, not guaranteed DINO equivariance or physical camera compensation. Explicit motion prediction already exists; not novelty by itself.",
+  "unit_tests": "3 tests passed: shared initial weights/output equivalence; gradient geometry/border/rotated Gram; nonzero finite coefficient gradient.",
+  "source_sha256": {
+    "research/spatial_tangent_decoder.py": "6119288d6181b6d0739d7efc7af3c283aad882cdd567457c3682fa8d01228008",
+    "research/train_cached_decoders.py": "dcefda367bc98ed9b038a0b4c00adc0b8ffa59a2d9e9c14dd6939b962f257e50",
+    "research/test_spatial_tangent_decoder.py": "137cf169e76821b906ddf23db14df671fb50c7e9a9923eb572534589b65614df",
+    "runs/reference-idm42-nested512-prior10000/cache_manifest.json": "998ed490c2ab76209c21b76c2fcd3fa83c95d8ad100def6aad536ce069fa8471"
+  }
+}

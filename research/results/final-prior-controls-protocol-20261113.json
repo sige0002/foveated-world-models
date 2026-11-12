@@ -1,0 +1,39 @@
+{
+  "scope": "Final10000 current-only prior; already observed dev64/96; no new test claim",
+  "constant_control": {
+    "seeds": [
+      42,
+      43,
+      44
+    ],
+    "codes": "Reuse previously fixed constant code cache; only baseline updated",
+    "variant": "prior_residual"
+  },
+  "flow_control": {
+    "seed": 42,
+    "head_seed": 42,
+    "variant": "prior_flow",
+    "inference": "4 Euler steps, single-sample risk and mean of4 risk; no best-of-N"
+  },
+  "common": {
+    "steps": 400,
+    "batch_size": 8,
+    "dim": 128,
+    "layers": 2,
+    "threads": 4,
+    "lr": 0.0003,
+    "checkpoint_selection": "fixed400",
+    "train_pairs": 128,
+    "gpu": false
+  },
+  "comparisons": "Final-prior reference residual42/43/44 already complete. Constant adds same correction capacity without future code; flow compares matched seed42/head42. Extra head pretraining cost remains unmatched.",
+  "source_sha256": {
+    "research/train_cached_decoders.py": "200bc39c15fc6d86a99f9754397c3ec40d7793a261008fdbd6d6843134fbfd1d",
+    "research/prior_correction.py": "324a418b15d3399aeaed098ecd4fdff5a0d28ec631e45e7922a620f2f0cbb7c0",
+    "research/wide_head_flow.py": "7d77f315638f351bc1bc82e64c3c1c15d8d708881e8d85fd83d941ab5d89c760",
+    "research/evaluate_frozen_correction.py": "c46b7b27927afc12d81cbd9ca0b9b5ee0da32b94f1c0e0bf12d4141e79e8a3c4",
+    "research/summarize_final_controls.py": "52620c486b57a7b3d9cba209c8cf332d9ee9633a17fe9db189a995d7653cab1f"
+  },
+  "source_capture_note": "Training and model sources unchanged during runs. Summary reader extended to accept separate evaluation reports before aggregation; original source hashes retained.",
+  "analysis_script_sha256_before_evaluation_summary": "b45ef61d721382f9e7a5f01517fb6f1897ec21338a13d4e591bbeb4e4e5cfe41"
+}

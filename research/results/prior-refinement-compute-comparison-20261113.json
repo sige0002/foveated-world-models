@@ -1,0 +1,35 @@
+{
+  "summary": {
+    "prior-refinement-seed42-20261113": {
+      "metrics": {
+        "mse": 0.10791017528390512,
+        "mean_mse": 0.10791017528390512,
+        "shuffled_mse": 0.1366512905806303,
+        "copy_mse": 0.2058274668524973,
+        "prior_mse": 0.12631255760788918
+      },
+      "difference_vs_direct400": -0.0008903585257939994,
+      "ci95": [
+        -0.002740089468716178,
+        0.00037941803311696215
+      ],
+      "elapsed_seconds": 1105.0991598181427
+    },
+    "prior-residual-compute1600-seed42-20261113": {
+      "metrics": {
+        "mse": 0.11624788696644828,
+        "mean_mse": 0.11624788696644828,
+        "shuffled_mse": 0.15368275140644982,
+        "copy_mse": 0.2058274668524973,
+        "prior_mse": 0.12631255760788918
+      },
+      "difference_vs_direct400": 0.007447353156749159,
+      "ci95": [
+        0.005246449353580829,
+        0.009584459294273982
+      ],
+      "elapsed_seconds": 1120.1415209989063
+    }
+  },
+  "scope": "Development64; one seed; paired episode bootstrap conditional on fitted models. Training compute approximate, not exact FLOPs match."
+}

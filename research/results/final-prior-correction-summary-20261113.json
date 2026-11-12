@@ -1,0 +1,877 @@
+{
+  "scope": "Fixed400, head/decoder seeds42/43/44, shared encoder2900 and final10000 prior. Previously observed evaluation sets. Mean model risk, not ensemble. True-future posterior reconstruction. Additional training cost.",
+  "splits": {
+    "validation": {
+      "per_seed_mse": [
+        0.10304294206434861,
+        0.10412944247946143,
+        0.10370018688263372
+      ],
+      "mean_model_mse": 0.10362419047548126,
+      "seed_sd": 0.0005472224213563865,
+      "comparisons": {
+        "9802": {
+          "original_mse": 0.11700045573525131,
+          "relative_reduction": 0.11432660818038065,
+          "difference": -0.013376265259770058,
+          "paired_episode_bootstrap_ci95": [
+            -0.019334815171411415,
+            -0.007791194515205765
+          ]
+        },
+        "10000": {
+          "original_mse": 0.1186540926573798,
+          "relative_reduction": 0.12666990109897192,
+          "difference": -0.015029902181898555,
+          "paired_episode_bootstrap_ci95": [
+            -0.020887828616347782,
+            -0.010014628160085224
+          ]
+        }
+      },
+      "rows": [
+        {
+          "episode": "30",
+          "index": 0,
+          "mean_model_mse": 0.2250398943821589
+        },
+        {
+          "episode": "31",
+          "index": 15,
+          "mean_model_mse": 0.2263102332750956
+        },
+        {
+          "episode": "32",
+          "index": 30,
+          "mean_model_mse": 0.12886367738246918
+        },
+        {
+          "episode": "33",
+          "index": 45,
+          "mean_model_mse": 0.156501571337382
+        },
+        {
+          "episode": "34",
+          "index": 60,
+          "mean_model_mse": 0.10255694886048634
+        },
+        {
+          "episode": "35",
+          "index": 75,
+          "mean_model_mse": 0.059516423692305885
+        },
+        {
+          "episode": "37",
+          "index": 90,
+          "mean_model_mse": 0.18266954521338144
+        },
+        {
+          "episode": "38",
+          "index": 105,
+          "mean_model_mse": 0.044627549747625984
+        },
+        {
+          "episode": "39",
+          "index": 120,
+          "mean_model_mse": 0.04777049273252487
+        },
+        {
+          "episode": "183",
+          "index": 135,
+          "mean_model_mse": 0.057921603322029114
+        },
+        {
+          "episode": "186",
+          "index": 150,
+          "mean_model_mse": 0.06926562637090683
+        },
+        {
+          "episode": "190",
+          "index": 165,
+          "mean_model_mse": 0.06099329640467962
+        },
+        {
+          "episode": "194",
+          "index": 180,
+          "mean_model_mse": 0.054859635730584465
+        },
+        {
+          "episode": "198",
+          "index": 195,
+          "mean_model_mse": 0.047419593979914985
+        },
+        {
+          "episode": "590",
+          "index": 210,
+          "mean_model_mse": 0.06477903326352437
+        },
+        {
+          "episode": "593",
+          "index": 225,
+          "mean_model_mse": 0.07003880788882573
+        },
+        {
+          "episode": "595",
+          "index": 241,
+          "mean_model_mse": 0.05970308308800062
+        },
+        {
+          "episode": "597",
+          "index": 256,
+          "mean_model_mse": 0.06437654296557109
+        },
+        {
+          "episode": "599",
+          "index": 271,
+          "mean_model_mse": 0.061522247890631356
+        },
+        {
+          "episode": "791",
+          "index": 286,
+          "mean_model_mse": 0.10376154134670894
+        },
+        {
+          "episode": "793",
+          "index": 301,
+          "mean_model_mse": 0.089142012099425
+        },
+        {
+          "episode": "795",
+          "index": 316,
+          "mean_model_mse": 0.05117241541544596
+        },
+        {
+          "episode": "798",
+          "index": 331,
+          "mean_model_mse": 0.09052831679582596
+        },
+        {
+          "episode": "940",
+          "index": 346,
+          "mean_model_mse": 0.08480496456225713
+        },
+        {
+          "episode": "943",
+          "index": 361,
+          "mean_model_mse": 0.06686018904050191
+        },
+        {
+          "episode": "946",
+          "index": 376,
+          "mean_model_mse": 0.07392324507236481
+        },
+        {
+          "episode": "949",
+          "index": 391,
+          "mean_model_mse": 0.07334851970275243
+        },
+        {
+          "episode": "952",
+          "index": 406,
+          "mean_model_mse": 0.1627009411652883
+        },
+        {
+          "episode": "955",
+          "index": 421,
+          "mean_model_mse": 0.08926082402467728
+        },
+        {
+          "episode": "958",
+          "index": 436,
+          "mean_model_mse": 0.06298702458540599
+        },
+        {
+          "episode": "961",
+          "index": 451,
+          "mean_model_mse": 0.11473977317412694
+        },
+        {
+          "episode": "964",
+          "index": 466,
+          "mean_model_mse": 0.1699528843164444
+        },
+        {
+          "episode": "968",
+          "index": 482,
+          "mean_model_mse": 0.07174213727315266
+        },
+        {
+          "episode": "970",
+          "index": 497,
+          "mean_model_mse": 0.06932645787795384
+        },
+        {
+          "episode": "974",
+          "index": 512,
+          "mean_model_mse": 0.09272933999697368
+        },
+        {
+          "episode": "977",
+          "index": 527,
+          "mean_model_mse": 0.07323942333459854
+        },
+        {
+          "episode": "979",
+          "index": 542,
+          "mean_model_mse": 0.09228592862685521
+        },
+        {
+          "episode": "1462",
+          "index": 557,
+          "mean_model_mse": 0.06641291330258052
+        },
+        {
+          "episode": "1465",
+          "index": 572,
+          "mean_model_mse": 0.16512017945448557
+        },
+        {
+          "episode": "1467",
+          "index": 587,
+          "mean_model_mse": 0.09079591929912567
+        },
+        {
+          "episode": "1470",
+          "index": 602,
+          "mean_model_mse": 0.16560540099938711
+        },
+        {
+          "episode": "1473",
+          "index": 617,
+          "mean_model_mse": 0.1424089123805364
+        },
+        {
+          "episode": "1476",
+          "index": 632,
+          "mean_model_mse": 0.14747374753157297
+        },
+        {
+          "episode": "1479",
+          "index": 647,
+          "mean_model_mse": 0.06525383641322453
+        },
+        {
+          "episode": "1481",
+          "index": 662,
+          "mean_model_mse": 0.1123728280266126
+        },
+        {
+          "episode": "1484",
+          "index": 677,
+          "mean_model_mse": 0.1538190096616745
+        },
+        {
+          "episode": "1487",
+          "index": 692,
+          "mean_model_mse": 0.13400388260682425
+        },
+        {
+          "episode": "1490",
+          "index": 707,
+          "mean_model_mse": 0.0786838432153066
+        },
+        {
+          "episode": "1493",
+          "index": 723,
+          "mean_model_mse": 0.16522103548049927
+        },
+        {
+          "episode": "1496",
+          "index": 738,
+          "mean_model_mse": 0.06529755890369415
+        },
+        {
+          "episode": "1498",
+          "index": 753,
+          "mean_model_mse": 0.12438524017731349
+        },
+        {
+          "episode": "1531",
+          "index": 768,
+          "mean_model_mse": 0.14998096724351248
+        },
+        {
+          "episode": "1534",
+          "index": 783,
+          "mean_model_mse": 0.08646129816770554
+        },
+        {
+          "episode": "1536",
+          "index": 798,
+          "mean_model_mse": 0.08565646161635716
+        },
+        {
+          "episode": "1539",
+          "index": 813,
+          "mean_model_mse": 0.15890362858772278
+        },
+        {
+          "episode": "1541",
+          "index": 828,
+          "mean_model_mse": 0.10803351551294327
+        },
+        {
+          "episode": "1544",
+          "index": 843,
+          "mean_model_mse": 0.10326611498991649
+        },
+        {
+          "episode": "1546",
+          "index": 858,
+          "mean_model_mse": 0.17535535991191864
+        },
+        {
+          "episode": "1548",
+          "index": 873,
+          "mean_model_mse": 0.10210230698188145
+        },
+        {
+          "episode": "1550",
+          "index": 888,
+          "mean_model_mse": 0.09608711798985799
+        },
+        {
+          "episode": "1552",
+          "index": 903,
+          "mean_model_mse": 0.15587023893992105
+        },
+        {
+          "episode": "1555",
+          "index": 918,
+          "mean_model_mse": 0.15451810757319132
+        },
+        {
+          "episode": "1557",
+          "index": 933,
+          "mean_model_mse": 0.11076222111781438
+        },
+        {
+          "episode": "1559",
+          "index": 949,
+          "mean_model_mse": 0.050854798406362534
+        }
+      ]
+    },
+    "observed96": {
+      "per_seed_mse": [
+        0.08967507455963641,
+        0.09099171114697431,
+        0.0914233888227803
+      ],
+      "mean_model_mse": 0.09069672484313034,
+      "seed_sd": 0.0009107213516052698,
+      "comparisons": {
+        "9802": {
+          "original_mse": 0.10648947313893586,
+          "relative_reduction": 0.1483033752566404,
+          "difference": -0.015792748295805525,
+          "paired_episode_bootstrap_ci95": [
+            -0.020076325836837185,
+            -0.012070396288052307
+          ]
+        },
+        "10000": {
+          "original_mse": 0.1036306248861365,
+          "relative_reduction": 0.12480770097852067,
+          "difference": -0.012933900043006158,
+          "paired_episode_bootstrap_ci95": [
+            -0.016791681611438333,
+            -0.00985227538056077
+          ]
+        },
+        "matched_prior6501_correction": {
+          "original_mse": 0.09329692889392997,
+          "relative_reduction": 0.027870199819286956,
+          "difference": -0.0026002040507996245,
+          "paired_episode_bootstrap_ci95": [
+            -0.004417697386331081,
+            -0.0008080775464703867
+          ],
+          "scope": "Same head seeds and correction seed/steps; prior checkpoint changed"
+        }
+      },
+      "rows": [
+        {
+          "episode": "1460",
+          "index": 551,
+          "mean_model_mse": 0.10662994533777237
+        },
+        {
+          "episode": "1461",
+          "index": 552,
+          "mean_model_mse": 0.169816588362058
+        },
+        {
+          "episode": "1463",
+          "index": 566,
+          "mean_model_mse": 0.08676011612017949
+        },
+        {
+          "episode": "1464",
+          "index": 571,
+          "mean_model_mse": 0.06758150458335876
+        },
+        {
+          "episode": "1466",
+          "index": 581,
+          "mean_model_mse": 0.1942062775293986
+        },
+        {
+          "episode": "1468",
+          "index": 589,
+          "mean_model_mse": 0.21683012445767721
+        },
+        {
+          "episode": "1469",
+          "index": 594,
+          "mean_model_mse": 0.07471450418233871
+        },
+        {
+          "episode": "1471",
+          "index": 605,
+          "mean_model_mse": 0.05756458515922228
+        },
+        {
+          "episode": "1472",
+          "index": 615,
+          "mean_model_mse": 0.07011911024649937
+        },
+        {
+          "episode": "1474",
+          "index": 623,
+          "mean_model_mse": 0.12604869157075882
+        },
+        {
+          "episode": "1475",
+          "index": 627,
+          "mean_model_mse": 0.12307012577851613
+        },
+        {
+          "episode": "1477",
+          "index": 640,
+          "mean_model_mse": 0.09759542594353358
+        },
+        {
+          "episode": "1478",
+          "index": 645,
+          "mean_model_mse": 0.10025705645481746
+        },
+        {
+          "episode": "1480",
+          "index": 654,
+          "mean_model_mse": 0.14063894748687744
+        },
+        {
+          "episode": "1482",
+          "index": 669,
+          "mean_model_mse": 0.0787240241964658
+        },
+        {
+          "episode": "1483",
+          "index": 670,
+          "mean_model_mse": 0.07815530647834142
+        },
+        {
+          "episode": "1485",
+          "index": 683,
+          "mean_model_mse": 0.09158099939425786
+        },
+        {
+          "episode": "1486",
+          "index": 687,
+          "mean_model_mse": 0.1409431795279185
+        },
+        {
+          "episode": "1488",
+          "index": 700,
+          "mean_model_mse": 0.11170931905508041
+        },
+        {
+          "episode": "1489",
+          "index": 702,
+          "mean_model_mse": 0.07611974080403645
+        },
+        {
+          "episode": "1491",
+          "index": 715,
+          "mean_model_mse": 0.12991761167844137
+        },
+        {
+          "episode": "1492",
+          "index": 721,
+          "mean_model_mse": 0.10385037213563919
+        },
+        {
+          "episode": "1494",
+          "index": 731,
+          "mean_model_mse": 0.11983946959177653
+        },
+        {
+          "episode": "1495",
+          "index": 733,
+          "mean_model_mse": 0.18112854659557343
+        },
+        {
+          "episode": "1497",
+          "index": 746,
+          "mean_model_mse": 0.12638132522503534
+        },
+        {
+          "episode": "1499",
+          "index": 756,
+          "mean_model_mse": 0.05407540127635002
+        },
+        {
+          "episode": "1530",
+          "index": 765,
+          "mean_model_mse": 0.09884327898422877
+        },
+        {
+          "episode": "1532",
+          "index": 776,
+          "mean_model_mse": 0.12861786782741547
+        },
+        {
+          "episode": "1533",
+          "index": 778,
+          "mean_model_mse": 0.06185624748468399
+        },
+        {
+          "episode": "1535",
+          "index": 792,
+          "mean_model_mse": 0.10158266872167587
+        },
+        {
+          "episode": "1537",
+          "index": 799,
+          "mean_model_mse": 0.08991560339927673
+        },
+        {
+          "episode": "1538",
+          "index": 809,
+          "mean_model_mse": 0.10740301012992859
+        },
+        {
+          "episode": "1540",
+          "index": 824,
+          "mean_model_mse": 0.054287560284137726
+        },
+        {
+          "episode": "1542",
+          "index": 835,
+          "mean_model_mse": 0.08768104513486226
+        },
+        {
+          "episode": "1543",
+          "index": 838,
+          "mean_model_mse": 0.0928253506620725
+        },
+        {
+          "episode": "1545",
+          "index": 857,
+          "mean_model_mse": 0.06661198536554973
+        },
+        {
+          "episode": "1547",
+          "index": 870,
+          "mean_model_mse": 0.1046702042222023
+        },
+        {
+          "episode": "1549",
+          "index": 882,
+          "mean_model_mse": 0.10597511380910873
+        },
+        {
+          "episode": "1551",
+          "index": 897,
+          "mean_model_mse": 0.13206142683823904
+        },
+        {
+          "episode": "1553",
+          "index": 911,
+          "mean_model_mse": 0.038988025238116585
+        },
+        {
+          "episode": "1554",
+          "index": 915,
+          "mean_model_mse": 0.11382291962703069
+        },
+        {
+          "episode": "1556",
+          "index": 924,
+          "mean_model_mse": 0.1275090848406156
+        },
+        {
+          "episode": "1558",
+          "index": 942,
+          "mean_model_mse": 0.03844381247957548
+        },
+        {
+          "episode": "180",
+          "index": 122,
+          "mean_model_mse": 0.055674427499373756
+        },
+        {
+          "episode": "181",
+          "index": 128,
+          "mean_model_mse": 0.09565251817305882
+        },
+        {
+          "episode": "182",
+          "index": 134,
+          "mean_model_mse": 0.0859609122077624
+        },
+        {
+          "episode": "184",
+          "index": 139,
+          "mean_model_mse": 0.051210141430298485
+        },
+        {
+          "episode": "185",
+          "index": 143,
+          "mean_model_mse": 0.04837404191493988
+        },
+        {
+          "episode": "187",
+          "index": 153,
+          "mean_model_mse": 0.06287587558229764
+        },
+        {
+          "episode": "188",
+          "index": 156,
+          "mean_model_mse": 0.04721872011820475
+        },
+        {
+          "episode": "189",
+          "index": 163,
+          "mean_model_mse": 0.08797201265891393
+        },
+        {
+          "episode": "191",
+          "index": 169,
+          "mean_model_mse": 0.06860307107369105
+        },
+        {
+          "episode": "192",
+          "index": 172,
+          "mean_model_mse": 0.0669460395971934
+        },
+        {
+          "episode": "193",
+          "index": 177,
+          "mean_model_mse": 0.06408197929461797
+        },
+        {
+          "episode": "195",
+          "index": 183,
+          "mean_model_mse": 0.04643529032667478
+        },
+        {
+          "episode": "196",
+          "index": 189,
+          "mean_model_mse": 0.07642052074273427
+        },
+        {
+          "episode": "197",
+          "index": 194,
+          "mean_model_mse": 0.0479122040172418
+        },
+        {
+          "episode": "199",
+          "index": 204,
+          "mean_model_mse": 0.08229312052329381
+        },
+        {
+          "episode": "36",
+          "index": 76,
+          "mean_model_mse": 0.19324062764644623
+        },
+        {
+          "episode": "591",
+          "index": 215,
+          "mean_model_mse": 0.07590093463659286
+        },
+        {
+          "episode": "592",
+          "index": 224,
+          "mean_model_mse": 0.040679058680931725
+        },
+        {
+          "episode": "594",
+          "index": 234,
+          "mean_model_mse": 0.10706912726163864
+        },
+        {
+          "episode": "596",
+          "index": 247,
+          "mean_model_mse": 0.08631675193707149
+        },
+        {
+          "episode": "598",
+          "index": 264,
+          "mean_model_mse": 0.08385770271221797
+        },
+        {
+          "episode": "790",
+          "index": 278,
+          "mean_model_mse": 0.06553402543067932
+        },
+        {
+          "episode": "792",
+          "index": 296,
+          "mean_model_mse": 0.09715111802021663
+        },
+        {
+          "episode": "794",
+          "index": 309,
+          "mean_model_mse": 0.025200630227724712
+        },
+        {
+          "episode": "796",
+          "index": 317,
+          "mean_model_mse": 0.05168172592918078
+        },
+        {
+          "episode": "797",
+          "index": 329,
+          "mean_model_mse": 0.06701816121737163
+        },
+        {
+          "episode": "799",
+          "index": 341,
+          "mean_model_mse": 0.07140130549669266
+        },
+        {
+          "episode": "941",
+          "index": 351,
+          "mean_model_mse": 0.04756550366679827
+        },
+        {
+          "episode": "942",
+          "index": 353,
+          "mean_model_mse": 0.05141515905658404
+        },
+        {
+          "episode": "944",
+          "index": 365,
+          "mean_model_mse": 0.12728060285250345
+        },
+        {
+          "episode": "945",
+          "index": 367,
+          "mean_model_mse": 0.05580631271004677
+        },
+        {
+          "episode": "947",
+          "index": 377,
+          "mean_model_mse": 0.07459161182244618
+        },
+        {
+          "episode": "948",
+          "index": 384,
+          "mean_model_mse": 0.10791026304165523
+        },
+        {
+          "episode": "950",
+          "index": 396,
+          "mean_model_mse": 0.0652821883559227
+        },
+        {
+          "episode": "951",
+          "index": 401,
+          "mean_model_mse": 0.07076556235551834
+        },
+        {
+          "episode": "953",
+          "index": 412,
+          "mean_model_mse": 0.22518046696980795
+        },
+        {
+          "episode": "954",
+          "index": 415,
+          "mean_model_mse": 0.06337753683328629
+        },
+        {
+          "episode": "956",
+          "index": 428,
+          "mean_model_mse": 0.07077062378327052
+        },
+        {
+          "episode": "957",
+          "index": 430,
+          "mean_model_mse": 0.07035894443591435
+        },
+        {
+          "episode": "959",
+          "index": 443,
+          "mean_model_mse": 0.07190729677677155
+        },
+        {
+          "episode": "960",
+          "index": 448,
+          "mean_model_mse": 0.07468393445014954
+        },
+        {
+          "episode": "962",
+          "index": 456,
+          "mean_model_mse": 0.10114650428295135
+        },
+        {
+          "episode": "963",
+          "index": 460,
+          "mean_model_mse": 0.11263944953680038
+        },
+        {
+          "episode": "965",
+          "index": 471,
+          "mean_model_mse": 0.06998189290364583
+        },
+        {
+          "episode": "966",
+          "index": 474,
+          "mean_model_mse": 0.08944731205701828
+        },
+        {
+          "episode": "967",
+          "index": 481,
+          "mean_model_mse": 0.059313500920931496
+        },
+        {
+          "episode": "969",
+          "index": 489,
+          "mean_model_mse": 0.10306134074926376
+        },
+        {
+          "episode": "971",
+          "index": 500,
+          "mean_model_mse": 0.09301381806532542
+        },
+        {
+          "episode": "972",
+          "index": 506,
+          "mean_model_mse": 0.06252211208144824
+        },
+        {
+          "episode": "973",
+          "index": 508,
+          "mean_model_mse": 0.10992024342219035
+        },
+        {
+          "episode": "975",
+          "index": 518,
+          "mean_model_mse": 0.11160998543103536
+        },
+        {
+          "episode": "976",
+          "index": 525,
+          "mean_model_mse": 0.05619717140992483
+        },
+        {
+          "episode": "978",
+          "index": 535,
+          "mean_model_mse": 0.13310069839159647
+        }
+      ]
+    }
+  }
+}

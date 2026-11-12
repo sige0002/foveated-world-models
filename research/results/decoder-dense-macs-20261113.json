@@ -1,0 +1,142 @@
+{
+  "batch": 1,
+  "tokens": 256,
+  "features": 768,
+  "trainable_parameters": 13410048,
+  "total_dense_macs": 2579157376,
+  "groups": {
+    "projections": 528601472,
+    "narrow_blocks": 134414336,
+    "head_block": 1916141568
+  },
+  "records": [
+    {
+      "name": "action_proj",
+      "kind": "linear",
+      "macs": 4096
+    },
+    {
+      "name": "time_proj.0",
+      "kind": "linear",
+      "macs": 384
+    },
+    {
+      "name": "time_proj.2",
+      "kind": "linear",
+      "macs": 16384
+    },
+    {
+      "name": "state_proj",
+      "kind": "linear",
+      "macs": 25165824
+    },
+    {
+      "name": "current_proj",
+      "kind": "linear",
+      "macs": 25165824
+    },
+    {
+      "name": "blocks.0.adaLN_modulation.1",
+      "kind": "linear",
+      "macs": 98304
+    },
+    {
+      "name": "blocks.0.attn",
+      "kind": "attention_projection",
+      "macs": 16777216
+    },
+    {
+      "name": "blocks.0.attn",
+      "kind": "attention_interaction",
+      "macs": 16777216
+    },
+    {
+      "name": "blocks.0.ffn.0",
+      "kind": "linear",
+      "macs": 16777216
+    },
+    {
+      "name": "blocks.0.ffn.3",
+      "kind": "linear",
+      "macs": 16777216
+    },
+    {
+      "name": "blocks.1.adaLN_modulation.1",
+      "kind": "linear",
+      "macs": 98304
+    },
+    {
+      "name": "blocks.1.attn",
+      "kind": "attention_projection",
+      "macs": 16777216
+    },
+    {
+      "name": "blocks.1.attn",
+      "kind": "attention_interaction",
+      "macs": 16777216
+    },
+    {
+      "name": "blocks.1.ffn.0",
+      "kind": "linear",
+      "macs": 16777216
+    },
+    {
+      "name": "blocks.1.ffn.3",
+      "kind": "linear",
+      "macs": 16777216
+    },
+    {
+      "name": "trunk_to_head",
+      "kind": "linear",
+      "macs": 25165824
+    },
+    {
+      "name": "raw_state",
+      "kind": "linear",
+      "macs": 150994944
+    },
+    {
+      "name": "raw_current",
+      "kind": "linear",
+      "macs": 150994944
+    },
+    {
+      "name": "head_condition",
+      "kind": "linear",
+      "macs": 98304
+    },
+    {
+      "name": "head_block.adaLN_modulation.1",
+      "kind": "linear",
+      "macs": 3538944
+    },
+    {
+      "name": "head_block.attn",
+      "kind": "attention_projection",
+      "macs": 603979776
+    },
+    {
+      "name": "head_block.attn",
+      "kind": "attention_interaction",
+      "macs": 100663296
+    },
+    {
+      "name": "head_block.ffn.0",
+      "kind": "linear",
+      "macs": 603979776
+    },
+    {
+      "name": "head_block.ffn.3",
+      "kind": "linear",
+      "macs": 603979776
+    },
+    {
+      "name": "output",
+      "kind": "linear",
+      "macs": 150994944
+    }
+  ],
+  "quadratic_attention_fraction": 0.05203937117174195,
+  "finite_prediction": true,
+  "scope": "Analytical dense MACs verified from executed module shapes. Excludes biases, normalization, softmax, nonlinearity, memory traffic, frozen prior and vision encoder. Not measured wall-clock speed; do not infer GPU latency from MACs."
+}

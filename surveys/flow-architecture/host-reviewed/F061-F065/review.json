@@ -1,0 +1,4 @@
+{
+  "reviewed_at": "2026-11-12T17:07:02.388120+00:00",
+  "checks": "Host checked MinSNR objective conversion AppendixB and UNet FID table; RF++ one-step result, U-shaped reflow and synthetic pair compute cost; RFM premetric theorem derivative/minimum norm and sphere NLL; PreconditionedFM independent Gaussian covariance and MNIST table8 posterior-mean PSNR degradation despite SSIM gain; DiffMAE recognition/inpainting results and noisy-neighbor encoder bypass. Original coordinate MSE differs from whitened metric."
+}

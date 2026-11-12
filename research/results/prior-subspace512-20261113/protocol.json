@@ -1,0 +1,18 @@
+{
+  "primary_rank": 128,
+  "diagnostic_ranks": [
+    32,
+    64,
+    128,
+    256,
+    512,
+    768
+  ],
+  "basis": "Uncentered train512 second moment of future minus fixed current-only prior; no whitening, no mean offset.",
+  "scope": "Oracle projection floor, not predicted error. Fit/save basis before evaluation. Rank128 prespecified, not selected from eval.",
+  "source_sha256": {
+    "train": "7c2d6fe143bd83cfad43d0d919344b3070bb8a0b9a3bc598a84d410fecc798de",
+    "dev64": "bbb4d0d49e9f4a4a3500e9c78260e3feaf9da33963f5977d98c8983d122c1c09",
+    "observed96": "7b419bea1eda0f0e871ab40273bf1b59a1d67d5bf2bab23885ba9fee43ab40f4"
+  }
+}

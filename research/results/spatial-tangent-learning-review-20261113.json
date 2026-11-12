@@ -1,0 +1,12 @@
+{
+  "reviewer": "parallel idm_improvement agent, read-only",
+  "result": "No material issue found",
+  "checks": [
+    "Forward contains no target or oracle coefficient path; existing future-conditioned posterior z remains privileged reconstruction input.",
+    "Full-size common direct/tangent weights and initial outputs exact. Tangent/rotated state_dict exact; rotated Python flag differs.",
+    "Each new model13411586 parameters,1538 extra vs direct.",
+    "Batch generator seed1042 independent of added Linear initialization global RNG consumption.",
+    "All4 protocol source hashes match. Signed channel permutation applied jointly to both columns preserves local Gram."
+  ],
+  "interpretation": "Improvement would support spatial alignment at this fixed training budget. It would not establish camera compensation or better use of z; coefficients can depend on current alone, requiring separate constant-code control for that claim."
+}

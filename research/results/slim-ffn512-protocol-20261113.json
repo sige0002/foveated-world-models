@@ -1,0 +1,63 @@
+{
+  "candidate": "Only wide-head FFN expansion4 to2; all output768 and attention preserved",
+  "worktree": "/home/sadasue/fwm-ffn-audit-20261113",
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "steps": 400,
+  "batch": 8,
+  "lr": 0.0003,
+  "threads": 4,
+  "source_cache": "runs/reference-idm42-nested512-prior10000",
+  "source_hashes": {
+    "/home/sadasue/fwm-ffn-audit-20261113/research/slim_ffn_decoder.py": "f7ad9d32d3f8051c523f18610e0a5a527c27b0a1af9155495b40ce5d33f2c7b7",
+    "/home/sadasue/fwm-ffn-audit-20261113/research/train_slim_ffn.py": "b3c76aba423259e83991531f88d8a23ba4b895224e84422186a9d60325444fc6",
+    "/home/sadasue/fwm-ffn-audit-20261113/research/test_slim_ffn.py": "2647ce9ba334c83873ad873894e81dc77ff54f4870957379ae43ccc9202596dc",
+    "/home/sadasue/fwm-ffn-audit-20261113/research/ffn-source-snapshot.json": "85eb1b1dbbcace4f0eff6867a1bcbfa02860914d542bb4f8d23850bac89c0e60"
+  },
+  "tests": "2 meaningful shape/initial-output/common-weight/RNG/gradient tests PASS",
+  "arms": [
+    {
+      "expansion": 4,
+      "seed": 42,
+      "output": "runs/ffn4-seed42-512-400-20261113"
+    },
+    {
+      "expansion": 2,
+      "seed": 42,
+      "output": "runs/ffn2-seed42-512-400-20261113"
+    },
+    {
+      "expansion": 4,
+      "seed": 43,
+      "output": "runs/ffn4-seed43-512-400-20261113"
+    },
+    {
+      "expansion": 2,
+      "seed": 43,
+      "output": "runs/ffn2-seed43-512-400-20261113"
+    },
+    {
+      "expansion": 4,
+      "seed": 44,
+      "output": "runs/ffn4-seed44-512-400-20261113"
+    },
+    {
+      "expansion": 2,
+      "seed": 44,
+      "output": "runs/ffn2-seed44-512-400-20261113"
+    }
+  ],
+  "predicted_dense_MAC_reduction": 0.23417717027283874,
+  "constraints": [
+    "No output-rank bottleneck introduced",
+    "FFN internal initialization differs natively with shape; other tensors and RNG exact",
+    "No attention backend change bundled",
+    "No GPU",
+    "Benchmarks after competing training/probes finish",
+    "MSE evaluation uses future-conditioned IDM and repeatedly observed evaluation sets"
+  ],
+  "status": "Prepared, not launched; complete existing IDM and isolated timing first"
+}

@@ -1,0 +1,85 @@
+{
+  "reports": [
+    "frozen-idm-seed42-20261113.json",
+    "frozen-idm-seeds43-44-20261113.json",
+    "frozen-idm-source-anchoring-seed42-20261113.json",
+    "frozen-idm-source-anchoring-seeds43-44-20261113.json"
+  ],
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "cache_sha256": {
+    "train": "61a720dbb60dc8c323ec46d2fbf659d9c4b84686bf249d95ee85446c51b647ca",
+    "validation": "a2feaa249592b2bab7ecbf6700c8a894f7782d37919e431c36fc67f4a0096d5d"
+  },
+  "results": [
+    {
+      "variant": "noisy_residual",
+      "metric": "mse",
+      "mean": 0.18055403960170224,
+      "seed_std": 0.001479892434844694,
+      "difference_from_residual": -0.0004851002789412936,
+      "seed_differences": [
+        0.0007872821297496557,
+        -0.0013329865178093314,
+        -0.000909596448764205
+      ],
+      "paired_episode_ci95": [
+        -0.0013191110202266524,
+        0.00035999495691309334
+      ]
+    },
+    {
+      "variant": "noisy_residual",
+      "metric": "mean_mse",
+      "mean": 0.18025086292376122,
+      "seed_std": 0.0014845973361995704,
+      "difference_from_residual": -0.0007882769568823278,
+      "seed_differences": [
+        0.000497761822771281,
+        -0.0016302092699334025,
+        -0.0012323834234848619
+      ],
+      "paired_episode_ci95": [
+        -0.0016180007020011546,
+        8.519772770038471e-05
+      ]
+    },
+    {
+      "variant": "endpoint_anchored",
+      "metric": "mse",
+      "mean": 0.19405224019040665,
+      "seed_std": 0.0013213559772100895,
+      "difference_from_residual": 0.013013100309763105,
+      "seed_differences": [
+        0.01330745976883918,
+        0.014572120911907405,
+        0.011159720248542726
+      ],
+      "paired_episode_ci95": [
+        0.01102437296358403,
+        0.015119264915119855
+      ]
+    },
+    {
+      "variant": "endpoint_anchored",
+      "metric": "mean_mse",
+      "mean": 0.1936597248616939,
+      "seed_std": 0.0012837621368920317,
+      "difference_from_residual": 0.012620584981050342,
+      "seed_differences": [
+        0.012974390992894769,
+        0.014088233059737831,
+        0.010799130890518427
+      ],
+      "paired_episode_ci95": [
+        0.010664914325267697,
+        0.01464036999483748
+      ]
+    }
+  ],
+  "interval_scope": "Paired episode bootstrap conditional on these trained seeds, not training-seed uncertainty.",
+  "compute": "noisy_residual: 1 evaluation/sample; endpoint_anchored: 4 evaluations/sample; mean_mse averages 4 samples."
+}

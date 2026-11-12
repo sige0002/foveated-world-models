@@ -1,0 +1,4 @@
+citing_id,cited_id,cited_title,cited_url,locator,priority_reason,scope_status
+F081,F084,Diffusion Models Beat GANs on Image Synthesis,https://arxiv.org/abs/2105.05233v4,§1–2,改良対象のADM,in_scope
+F082,F085,Classifier-Free Diffusion Guidance,https://arxiv.org/abs/2207.12598v1,§3.4,CFGの過露光修正,in_scope
+F085,F084,Diffusion Models Beat GANs on Image Synthesis,https://arxiv.org/abs/2105.05233v4,§1–2,classifier guidanceの直接比較,in_scope

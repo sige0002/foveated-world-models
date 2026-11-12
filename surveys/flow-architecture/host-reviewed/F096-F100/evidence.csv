@@ -1,0 +1,41 @@
+paper_id,field,item_index,kind,source_url,locator,note
+F096,social_background,1,author_claim,https://arxiv.org/html/2002.09405v2,§1,流体・固体など複雑な物理simulationの高速近似を目指す。
+F096,technical_background,1,author_claim,https://arxiv.org/html/2002.09405v2,§4.3,真値状態で訓練し自己予測をrolloutすると入力分布がずれて誤差が蓄積する。
+F096,problem,1,author_claim,https://arxiv.org/html/2002.09405v2,"§1, §4–5",粒子の一段物理予測を長い未知trajectoryへ一般化する。
+F096,method,1,author_claim,https://arxiv.org/html/2002.09405v2,"§4.3, Appendix B.3",粒子をgraphで表しmessage passing後に加速度予測。過去速度へrandom-walk雑音を加え位置も整合させ、教師加速度から最終速度の雑音を引いてEuler積分後の速度を真値へ戻す。
+F096,results,1,demonstrated,https://arxiv.org/html/2002.09405v2,"§5.4 Fig. 4(g,h), Appendix C.2",ノイズ増加は一段精度を下げる一方、rollout誤差は中程度の雑音で最良。速度履歴へのrandom-walkは他の雑音形よりrolloutで良好。
+F096,contributions,1,author_claim,https://arxiv.org/html/2002.09405v2,§4–5,著者主張: graph simulatorで粒子系を扱い、雑音augmented一段教師でrolloutの累積誤差を抑える。
+F096,summary,1,interpretation,https://arxiv.org/html/2002.09405v2,"§4.3, Appendix B.3",分布ずれを模擬する入力摂動とintegratorに合ったtarget補正を併用する物理系手法。
+F096,remaining_issues,1,interpretation,https://arxiv.org/html/2002.09405v2,"§5.4, Appendix B.3,C.2",物理速度・位置とEuler積分が既知の系での結果。任意のDINO特徴には速度や同じ補正規則が自明でなく、rolloutノイズの分布と一致を実測する必要がある。最適雑音は目的依存で一段MSEと競合。
+F097,social_background,1,author_claim,https://arxiv.org/html/2010.03409v4,"§1, §4",空力・構造・布などの高コストなmesh物理simulationを扱う。
+F097,technical_background,1,author_claim,https://arxiv.org/html/2010.03409v4,§2–3,mesh形状と物理空間の近傍情報を用いた安定な長期予測が必要。
+F097,problem,1,author_claim,https://arxiv.org/html/2010.03409v4,§3–4,可変mesh上の物理dynamicsを学習し再meshingに適用。
+F097,method,1,author_claim,https://arxiv.org/html/2010.03409v4,"§3, Appendix A.2.2",mesh graphとworld-space edgesでmessage passingし、一次系では状態摂動分を教師差分から引き次状態を補正。二次clothでは位置と速度を同時に補正できず二つの加速度targetをγで混合。
+F097,results,1,demonstrated,https://arxiv.org/html/2010.03409v4,"§4 Table 1, Appendix A.2.2",変形plateで1-step RMSE 0.25×10⁻³、50-step 1.8×10⁻³、全rollout 15.1×10⁻³。cloth補正の位置優先比γ=0.1が最良。
+F097,contributions,1,author_claim,https://arxiv.org/html/2010.03409v4,§3–4,著者主張: meshとworld graphの組合せ、mesh適応、ノイズに強い一段教師を用いた学習型simulation。
+F097,summary,1,interpretation,https://arxiv.org/html/2010.03409v4,Appendix A.2.2,推論時の誤差に近い摂動と積分に対応するtargetを設計する。
+F097,remaining_issues,1,interpretation,https://arxiv.org/html/2010.03409v4,"Appendix A.2.2, §4.3",第一階と第二階で目標補正が異なり、どの状態成分を修正するかは実験的設計。物理meshやintegratorの構造を持たないDINO特徴にrollout改善を保証しない。
+F098,social_background,1,author_claim,https://arxiv.org/html/2001.06782v4,§1,多task学習のデータ効率と競合を改善する。
+F098,technical_background,1,author_claim,https://arxiv.org/html/2001.06782v4,§2,負のgradient内積、勾配norm差、大きい曲率の同時発生は最適化を阻害しうる。
+F098,problem,1,author_claim,https://arxiv.org/html/2001.06782v4,§3,共有parameterの異なるtask gradientの干渉を減らす。
+F098,method,1,author_claim,https://arxiv.org/html/2001.06782v4,§3 Algorithm 1,gradientの内積が負なら他task gradientの法線面へ射影し、順序をランダム化して集計する。非競合では変更しない。
+F098,results,1,demonstrated,https://arxiv.org/html/2001.06782v4,§5 Tables 1–2,NYUv2 MTAN＋uncertainty weightingではPCGradでmIoU 17.67→20.17、depth relative error .2592→.2467。CIFAR100 routingとの組合せ精度74.7→77.5%。
+F098,contributions,1,author_claim,https://arxiv.org/html/2001.06782v4,"§3 Theorems 1–2, Appendix A.1–A.2",二task凸・smooth、step≤1/Lで合計損失の最適点か両gradientが逆向きの停止点へ収束と主張。非凸でも曲率・角度・step条件が整う一更新では比較損失が小さい。
+F098,summary,1,interpretation,https://arxiv.org/html/2001.06782v4,§3–5,異なる損失勾配の方向を調整するmulti-task最適化。
+F098,remaining_issues,1,interpretation,https://arxiv.org/html/2001.06782v4,"§3, §5",PCGradは元の加重和の勾配と一般に異なり、合計lossの最適値や各task改善は保証しない。拡散時刻をtask化するなら負cosと勾配normを測り、固定重み・追加逆伝播費用を合わせた対照とfuture MSEで評価。
+F099,social_background,1,author_claim,https://arxiv.org/html/1711.02257v4,§1,複数予測taskを共有networkで学ぶ際の手動損失重み調整を削減する。
+F099,technical_background,1,author_claim,https://arxiv.org/html/1711.02257v4,§1–3,損失尺度・task学習速度の差により共有layerのgradientが不均衡になる。
+F099,problem,1,author_claim,https://arxiv.org/html/1711.02257v4,§3,勾配規模と相対学習速度からtask重みを動的調整する。
+F099,method,1,author_claim,https://arxiv.org/html/1711.02257v4,"§3 Eq. 1–2, Algorithm 1",共有層で各taskの重み付きgradient normを測り、平均norm×相対未学習率^αへ近づくようL1補助損失でtask重みだけ更新、重み和をtask数に正規化する。
+F099,results,1,demonstrated,https://arxiv.org/html/1711.02257v4,§5 Table 2,NYUv2+kpts ResNetでequal weightsのdepth RMS .697mからGradNorm α=1.5は.663m、keypoint error 7.80%から7.32%。
+F099,contributions,1,author_claim,https://arxiv.org/html/1711.02257v4,§3–5,著者主張: 共有層のgradient normと相対学習速度を同時に追跡し、手動grid探索を削減。
+F099,summary,1,interpretation,https://arxiv.org/html/1711.02257v4,§3–5,重み変更により異なるtaskの最適化速度と優先順位を調整。
+F099,remaining_issues,1,interpretation,https://arxiv.org/html/1711.02257v4,"§3, §5.4",動的重みは元の固定重み目的を変える。normの均衡はgradient方向の対立解消や各taskの改善を保証しない。time-bin別gradientが実際に異なるかとterminal paired MSEを実測し、追加計算を揃える。
+F100,social_background,1,author_claim,https://arxiv.org/html/1506.03099v3,"§1, §4",画像caption・文法解析・音声などの系列生成を対象とする。
+F100,technical_background,1,author_claim,https://arxiv.org/html/1506.03099v3,§2.3–2.4,teacher forcingの真値履歴と推論時の自己生成履歴が異なり、誤りが蓄積しうる。
+F100,problem,1,author_claim,https://arxiv.org/html/1506.03099v3,§2.4,学習時に自己生成履歴を段階的に導入して訓練と推論の差を減らす。
+F100,method,1,author_claim,https://arxiv.org/html/1506.03099v3,§2.4,各tokenで前tokenを真値とモデルsampleから確率的に選び、学習進行とともに真値率を減らす。実験ではsample選択を通じたgradientは計算しない。
+F100,results,1,demonstrated,https://arxiv.org/html/1506.03099v3,"§4 Tables 1,3",MSCOCO caption開発setでBLEU-4 baseline 28.8、scheduled sampling 30.6、always sampling 11.2。音声実験では真値履歴の一段予測はbaselineが良いが自由decodeではsampling系が改善。
+F100,contributions,1,author_claim,https://arxiv.org/html/1506.03099v3,"§2.4, §5",著者主張: 真値履歴から自己生成履歴へのcurriculumで系列予測の推論条件に近づける。
+F100,summary,1,interpretation,https://arxiv.org/html/1506.03099v3,§2–4,self-generated stateでの誤差蓄積に対する学習分布の介入。
+F100,remaining_issues,1,interpretation,https://arxiv.org/html/1506.03099v3,"§2.4, §4.1, §4.3",自己生成履歴と元系列targetを組み合わせると真の履歴条件付き分布を一般に保存せず、目的自体が変わる。著者はsampling確率のgradient省略やalways samplingの失敗を報告。実際のfuture条件付き平均やrollout MSEの改善は別途対照が必要。

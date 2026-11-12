@@ -1,0 +1,41 @@
+paper_id,field,item_index,kind,source_url,locator,note
+F046,social_background,1,author_claim,https://arxiv.org/html/2511.07968v2,§1,金融、医療、エネルギーなどの時系列シミュレーションに需要がある。
+F046,technical_background,1,author_claim,https://arxiv.org/html/2511.07968v2,§1–3,著者はODE flowが時系列の確率的変動を明示せず、拡散は反復回数が多いと述べる。
+F046,problem,1,author_claim,https://arxiv.org/html/2511.07968v2,§4,確率性と時系列構造を扱うflow生成器を設計する。
+F046,method,1,demonstrated,https://arxiv.org/html/2511.07968v2,§4.2–4.4,Transformer encoderの状態を移動平均のtrendと残差seasonalに分け、attentionと多尺度畳み込みを用いる。確率項を加えた目的とSDE samplingを用い、条件付き生成にも適用する。
+F046,results,1,author_claim,https://arxiv.org/html/2511.07968v2,§5.3 Figure 5,Energy・Stocks、長さ48の予測幅6–24でDiffusion-TSとCSDIより低MSEと報告。数値は図示のみで正確な値を未確認。
+F046,contributions,1,author_claim,https://arxiv.org/html/2511.07968v2,§4–5,成分分解速度場と確率的flow訓練・生成を提案。
+F046,summary,1,interpretation,https://arxiv.org/html/2511.07968v2,§4–5,時系列で条件付き予測も評価するが、単一DINO未来特徴や同容量MSE回帰との比較ではない。
+F046,remaining_issues,1,unverified,https://arxiv.org/html/2511.07968v2,"§5.3 Figure 5, §6",予測MSEに使う標本集約方法と図の厳密な数値は本文テキストで確認できない。表現分解やSDEが個別にMSE改善をもたらすとは断定できない。
+F047,social_background,1,not_stated,https://arxiv.org/html/2510.15101v1,§1,社会的需要の明示的記載なし。
+F047,technical_background,1,author_claim,https://arxiv.org/html/2510.15101v1,§1,高次元PDE予測では長期の誤差蓄積と空間解像度の負担がある。
+F047,problem,1,author_claim,https://arxiv.org/html/2510.15101v1,§3–4,latent flowの速度をFourier operatorで近似し時空間PDEを予測する。
+F047,method,1,demonstrated,https://arxiv.org/html/2510.15101v1,§3–4,畳み込みautoencoderで圧縮し、sparse conditioningとtime-conditioned Fourier layers・channel foldingを用いてflow場を学ぶ。過去15フレームから次フレームを予測する。
+F047,results,1,demonstrated,https://arxiv.org/html/2510.15101v1,"§5 Tables 2, 4",NS-vorticityでTempO/RIVER MSE 0.0563、ViT/affine-OT 0.0675。flowモデル間比較でTempOはadaptive dopri5平均560 NFE、tol 1e−5。直接MSE回帰との同予算比較ではない。
+F047,contributions,1,author_claim,https://arxiv.org/html/2510.15101v1,§3.1,FNO型速度回帰と周波数に基づく近似誤差上界を提示。
+F047,summary,1,interpretation,https://arxiv.org/html/2510.15101v1,§5,PDE場のMSEではflowの構造とpath選択が性能に影響するが、DINO特徴の有限容量予測での優位は未確認。
+F047,remaining_issues,1,unverified,https://arxiv.org/html/2510.15101v1,"§3.1 Theorem 3.1, Appendix A",コンパクト入力・出力Fourier減衰を仮定するが、任意連続有限次元写像の近似に必要なパラメータをO(K^d polylog(1/ε))とする証明段階は、入力次元や写像の複雑性への定量的根拠を確認できない。著者の上界を確立済みと扱わず、当該定量的上界は未検証とする。著者は極端な疎観測と超長期予測の限界も挙げる。
+F048,social_background,1,author_claim,https://arxiv.org/html/2307.11494v3,§1,金融、再生可能エネルギー、医療等の意思決定に時系列予測が使われる。
+F048,technical_background,1,author_claim,https://arxiv.org/html/2307.11494v3,§1–2,従来の時系列拡散は予測や補完など個別条件に合わせて学習される。
+F048,problem,1,author_claim,https://arxiv.org/html/2307.11494v3,§3,無条件拡散を予測、既存予測の改善、合成データ作成に再利用する。
+F048,method,1,demonstrated,https://arxiv.org/html/2307.11494v3,"§3.1–3.2, Algorithm 2",無条件denoiserから観測self-guidanceを構成。refinementは基底予測で初期化し、負の生成log尤度と初期値近傍の正則化をLangevinまたは勾配で反復最適化する。
+F048,results,1,demonstrated,https://arxiv.org/html/2307.11494v3,§4.2 Table 3,20回refinement、ElectricityでSeasonal NaiveのCRPS 0.069からLMC-Q 0.051、ExchangeではLMC-MS 0.011から0.013へ悪化。CRPSはpaired MSEではない。
+F048,contributions,1,author_claim,https://arxiv.org/html/2307.11494v3,§3–4,同一の無条件時系列拡散をself-guidanceと予測refinementへ適用。
+F048,summary,1,interpretation,https://arxiv.org/html/2307.11494v3,"§3.2, §4.2",初期予測を使うprior補正が有限モデルで改善する可能性を示すが、尤度最適や標本は一般に条件付き平均ではない。
+F048,remaining_issues,1,author_claim,https://arxiv.org/html/2307.11494v3,"§3.2, §4.2, §6",著者: 目的は非凸で初期値に依存し、refinement効果は基底予測器と条件に依存する。DINOのpaired MSEは未検証。
+F049,social_background,1,author_claim,https://arxiv.org/html/2202.00512v2,§1,生成モデルの推論時間・計算費用が実用を制約する。
+F049,technical_background,1,author_claim,https://arxiv.org/html/2202.00512v2,§1–2,拡散モデルの高品質生成には多数回のネット評価が必要。
+F049,problem,1,author_claim,https://arxiv.org/html/2202.00512v2,§3,多段決定論的教師の生成を段階的に少数stepへ圧縮する。
+F049,method,1,demonstrated,https://arxiv.org/html/2202.00512v2,"§3–4, Appendix G",教師のDDIM 2 stepを1 stepで再現するx予測目標を逆算し、教師を複製した学生を訓練、半減を反復。低SNRでε予測からxを復元すると誤差が増幅するため直接x・v等を用いる。
+F049,results,1,demonstrated,https://arxiv.org/html/2202.00512v2,§5.2 Table 1,無条件CIFAR-10で蒸留モデルFIDは4評価3.00、2評価4.51、1評価9.12。多数step教師の分布生成を評価。
+F049,contributions,1,author_claim,https://arxiv.org/html/2202.00512v2,§3–5,段階的蒸留と低SNRで安定な予測parameterization。
+F049,summary,1,interpretation,https://arxiv.org/html/2202.00512v2,§3–5,教師の軌道を短縮することはpaired未来の条件付き平均を改善することと異なる。
+F049,remaining_issues,1,author_claim,https://arxiv.org/html/2202.00512v2,"§5.2, §7",著者: 1–2 stepでは品質悪化が大きく、学生は教師と同じ構造・パラメータ数で評価。有限教師誤差は残る。
+F050,social_background,1,author_claim,https://arxiv.org/html/1711.06077v4,§I,画像復元は画質と元画像への再構成精度の両方が評価される。
+F050,technical_background,1,author_claim,https://arxiv.org/html/1711.06077v4,§I–III,低い平均歪みと自然画像らしい出力分布は必ずしも同時に得られない。
+F050,problem,1,author_claim,https://arxiv.org/html/1711.06077v4,§III–IV,歪み制約下で達成可能な最良の出力分布一致を定式化する。
+F050,method,1,demonstrated,https://arxiv.org/html/1711.06077v4,"§III-A, §IV Theorems 1–2, Appendix C・E",MMSE推定はE[X|Y]。分布不一致の最小値P(D)は許容歪みDに対し非増加、距離が第2引数で凸なら凸。証明は制約集合の包含と推定器の確率混合を用いる。
+F050,results,1,demonstrated,https://arxiv.org/html/1711.06077v4,"§III-A, Example 1, Appendix D",離散信号＋独立Gaussian雑音ではMMSEが連続値となり元の離散分布を保存しない。Gaussian線形例ではMSE制約とKLの境界を解析。
+F050,contributions,1,author_claim,https://arxiv.org/html/1711.06077v4,§IV–VI,知覚分布と歪みの到達可能境界を示し超解像の評価法を提案。
+F050,summary,1,interpretation,https://arxiv.org/html/1711.06077v4,§III–IV,MSE最小の条件付き平均は自然分布の標本と異なりうる。定理はパレート境界の性質であり、未最適な任意の2モデル間に必ず相反があるという意味ではない。
+F050,remaining_issues,1,interpretation,https://arxiv.org/html/1711.06077v4,§III–IV,知覚を無条件の出力分布距離で測る定義と画像復元の設定に依存。DINO特徴の品質や有限学習での改善可能性を直接評価していない。

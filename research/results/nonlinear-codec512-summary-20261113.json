@@ -1,0 +1,59 @@
+{
+  "scope": "True-future encoded codec reconstruction, not future prediction or strict nonlinear manifold lower bound. Reused evaluation.",
+  "models": [
+    {
+      "rank": 32,
+      "parameters": 673184,
+      "source": "runs/nonlinear-codec32-512-1000-20261113/results.json",
+      "sha256": "267c492cc3d9d3a98b4e8d96deb78aa90aecbb5f9baacbc661da9f4a599aedef",
+      "metrics": {
+        "train": {
+          "reconstruction_mse": 0.037333134532673284,
+          "pca_mse": 0.0484898540598806,
+          "zero_code_mse": 0.10066037796786986
+        },
+        "dev64": {
+          "reconstruction_mse": 0.044157645490486175,
+          "pca_mse": 0.05539986249641515,
+          "zero_code_mse": 0.11776175413979217
+        },
+        "observed96": {
+          "reconstruction_mse": 0.038631257300342746,
+          "pca_mse": 0.049088155307496585,
+          "zero_code_mse": 0.1029339589489003
+        }
+      }
+    },
+    {
+      "rank": 128,
+      "parameters": 722432,
+      "source": "runs/nonlinear-codec128-512-1000-20261113/results.json",
+      "sha256": "4ec775a4f1c069d48aae80348477227c78e8a565d0138a5c3b231939dc7e34db",
+      "metrics": {
+        "train": {
+          "reconstruction_mse": 0.020255504474334884,
+          "pca_mse": 0.02424817581231764,
+          "zero_code_mse": 0.10150116366276052
+        },
+        "dev64": {
+          "reconstruction_mse": 0.024174432721338235,
+          "pca_mse": 0.02793741454661358,
+          "zero_code_mse": 0.1185131873935461
+        },
+        "observed96": {
+          "reconstruction_mse": 0.021106745252230514,
+          "pca_mse": 0.02473860452300869,
+          "zero_code_mse": 0.10360032642104973
+        }
+      }
+    }
+  ],
+  "review": {
+    "tests": "3 passed; full768 initial PCA and zero-code exact verified independently",
+    "episode_overlap_train_dev_observed": 0,
+    "prior_checkpoint_step_all": 10000,
+    "prior_checkpoint_sha256_all": "2ac16fb97347e06342da9c7b986114edc32f974b0b9702503423c712015305e5",
+    "prior_weights_sha256_all": "1e68b8eb97c529646a7bbc9c6e02b7cf759c97b82a485241b85669bf7613a1d6",
+    "note": "Root checked all3 episode intersections and both cache manifest baseline identities after parallel reviewer flagged missing script checks. Post-hoc provenance audit does not alter results."
+  }
+}

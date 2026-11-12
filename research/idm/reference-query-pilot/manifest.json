@@ -1,0 +1,59 @@
+{
+  "step": 2900,
+  "parent_cache": "/home/sadasue/foveated-world-models/runs/frozen-idm-step2900",
+  "parent_cache_sha256": {
+    "train": "61a720dbb60dc8c323ec46d2fbf659d9c4b84686bf249d95ee85446c51b647ca",
+    "validation": "a2feaa249592b2bab7ecbf6700c8a894f7782d37919e431c36fc67f4a0096d5d"
+  },
+  "parent_manifest_sha256": "de7e7436ad708653dbcb0ad2b5af522f0deeb41d897d79de5212f31bacb7dfb8",
+  "mu_max_errors": {
+    "train": 0.0,
+    "validation": 0.0
+  },
+  "pairs": {
+    "train": 8,
+    "validation": 8
+  },
+  "train_scales": {
+    "raw": 41.03483963012695,
+    "centered": 0.03906523063778877,
+    "reference": 0.02975345216691494
+  },
+  "diagnostics": {
+    "train": {
+      "raw": {
+        "mean_norm_squared": 1023.9991455078125,
+        "between_pair_variance": 0.0009280589874833822,
+        "future_swap_squared_difference": 0.0006348913302645087
+      },
+      "centered": {
+        "mean_norm_squared": 2.5306458155682776e-06,
+        "between_pair_variance": 1023.9999389648438,
+        "future_swap_squared_difference": 700.525634765625
+      },
+      "reference": {
+        "mean_norm_squared": 89.33946228027344,
+        "between_pair_variance": 934.6605224609375,
+        "future_swap_squared_difference": 1207.6195068359375
+      }
+    },
+    "validation": {
+      "raw": {
+        "mean_norm_squared": 1023.9366455078125,
+        "between_pair_variance": 0.0011803164379671216,
+        "future_swap_squared_difference": 0.0010047043906524777
+      },
+      "centered": {
+        "mean_norm_squared": 122.22228240966797,
+        "between_pair_variance": 1302.335205078125,
+        "future_swap_squared_difference": 1108.5697021484375
+      },
+      "reference": {
+        "mean_norm_squared": 145.92881774902344,
+        "between_pair_variance": 766.5174560546875,
+        "future_swap_squared_difference": 1911.036865234375
+      }
+    }
+  },
+  "limitations": "Frozen-query dependence only. Future swaps may be OOD. No camera labels: camera invariance cannot be evaluated. Different train-calibrated scales change numerical units, not information. No decoder utilization or learned improvement measured."
+}

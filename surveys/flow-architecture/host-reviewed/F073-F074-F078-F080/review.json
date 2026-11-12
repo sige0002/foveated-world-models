@@ -1,0 +1,4 @@
+{
+  "reviewed_at": "2026-11-12T17:09:42.173554+00:00",
+  "checks": "Host inspected F073 Lemma4.1 and AppendixB Eq38\u201342; arbitrary smooth Gaussian mean 2x contradicts the stated universal contraction; forward covariance identity cannot be silently transferred to arbitrary reverse model. GMM experiment setup verified separately. F074 Theorems3/4 smooth compact-support/Hessian/local perturbation restrictions. F078 available corrupted-source construction and ImageNet FID tables. F079 Gaussian density differentiation Eq3 exact CME assumptions. F080 conditional-target-mean identity, Kodak table and AppendixA.3 covariance sum. No general future-MSE guarantee inferred."
+}

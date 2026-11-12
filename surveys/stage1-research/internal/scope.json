@@ -1,0 +1,15 @@
+{
+  "cutoff": "2026-11-12",
+  "objective": "Stage1 IDM/LaWM research proposals with evidence, feasibility and novelty critique",
+  "target": 50,
+  "actual_selected": 54,
+  "existing_same_version_reuse": 34,
+  "current_fulltext_investigations": 20,
+  "canonical_mapping": {
+    "S001": "L029",
+    "S006": "L003",
+    "S008": "L010"
+  },
+  "model": "gpt-6.1-terra",
+  "scope_note": "Partial means stated limitations remain. Reuse does not mean current reread. Primary-source host review completed for principal novelty obstacles; pending records not represented as fully reviewed."
+}

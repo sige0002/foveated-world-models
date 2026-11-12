@@ -1,0 +1,93 @@
+{
+  "source_sha256": {
+    "/home/sadasue/foveated-world-models/research/idm/reference-codes-seed42/cache_manifest.json": "f73b4426f85234c68470b7c45d4221fef6ded89f5af587632f2633d6e88f15d0",
+    "/home/sadasue/foveated-world-models/research/idm/observed96-reference-queries2900/validation.pt": "916ac68406c367aeb83f2322b7be54f230ceac46a5e09809d726ee16ae8356ea",
+    "/home/sadasue/foveated-world-models/research/idm/reference-query-full/train_calibration.pt": "cabb8e89384656768f258f04158353a947ab9e101acc20d5c7d41f1f1956ad8a",
+    "/home/sadasue/foveated-world-models/runs/research-unused-96-prior6501/validation.pt": "456a09b4e3cc3c6887732327c25d3ac7d0bd98f7c4898e4ace885298e184220f",
+    "/home/sadasue/foveated-world-models/research/idm/reference-comparison2000/reference-42.pt": "b5784dae7b2d0f0e69feec9a5305020e67fc8bab3c681b4e707eeb90c8e05f83"
+  },
+  "script_sha256": "1524539696370bfd55fa4f2a604ee13e9bf1ed7c3f4e8d301ee22a8cff9c6c16",
+  "results": {
+    "T2_medium_B1": {
+      "maxerror": 1.3709068298339844e-05,
+      "mse": 6.484767150344295e-13,
+      "exact": false
+    },
+    "T2_medium_B32": {
+      "maxerror": 0.0001373291015625,
+      "mse": 5.503394961969832e-11,
+      "exact": false
+    },
+    "T2_medium_B64": {
+      "maxerror": 0.0001373291015625,
+      "mse": 5.503394961969832e-11,
+      "exact": false
+    },
+    "T2_medium_B96": {
+      "maxerror": 0.0001373291015625,
+      "mse": 5.503394961969832e-11,
+      "exact": false
+    },
+    "T2_highest_B1": {
+      "maxerror": 0.0120697021484375,
+      "mse": 2.1479111182998167e-06,
+      "exact": false
+    },
+    "T2_highest_B32": {
+      "maxerror": 0.0120697021484375,
+      "mse": 2.1479111182998167e-06,
+      "exact": false
+    },
+    "T2_highest_B64": {
+      "maxerror": 0.0120697021484375,
+      "mse": 2.1479111182998167e-06,
+      "exact": false
+    },
+    "T2_highest_B96": {
+      "maxerror": 0.0120697021484375,
+      "mse": 2.1479111182998167e-06,
+      "exact": false
+    },
+    "T4_medium_B1": {
+      "maxerror": 1.3709068298339844e-05,
+      "mse": 6.484767150344295e-13,
+      "exact": false
+    },
+    "T4_medium_B32": {
+      "maxerror": 0.0001373291015625,
+      "mse": 5.503394961969832e-11,
+      "exact": false
+    },
+    "T4_medium_B64": {
+      "maxerror": 0.0001373291015625,
+      "mse": 5.503394961969832e-11,
+      "exact": false
+    },
+    "T4_medium_B96": {
+      "maxerror": 0.0001373291015625,
+      "mse": 5.503394961969832e-11,
+      "exact": false
+    },
+    "T4_highest_B1": {
+      "maxerror": 0.0120697021484375,
+      "mse": 2.1479111182998167e-06,
+      "exact": false
+    },
+    "T4_highest_B32": {
+      "maxerror": 0.0120697021484375,
+      "mse": 2.1479111182998167e-06,
+      "exact": false
+    },
+    "T4_highest_B64": {
+      "maxerror": 0.0120697021484375,
+      "mse": 2.1479111182998167e-06,
+      "exact": false
+    },
+    "T4_highest_B96": {
+      "maxerror": 0.0120697021484375,
+      "mse": 2.1479111182998167e-06,
+      "exact": false
+    }
+  },
+  "scope": "Head-only numerical reproduction; no cache mutation or evaluation-score selection"
+}

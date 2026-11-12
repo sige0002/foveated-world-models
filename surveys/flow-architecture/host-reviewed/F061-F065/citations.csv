@@ -1,0 +1,5 @@
+citing_id,cited_id,cited_title,cited_url,locator,priority_reason,scope_status
+F064,F062,Improving the Training of Rectified Flows,https://arxiv.org/abs/2405.20320v2,Appendix G.7,別のreflow対照と費用,in_scope
+F063,F025,Flow Matching Guide and Code,https://arxiv.org/abs/2412.06264v1,§3; Guide §5,多様体CFMの基礎,in_scope
+F064,,Elucidating the Design Space of Diffusion-Based Generative Models,,Appendix A,拡散前処理の先行研究,unresolved
+F065,,Masked Autoencoders Are Scalable Vision Learners,,"§2, §4",masked再構成の基礎,unresolved

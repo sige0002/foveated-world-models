@@ -1,0 +1,13 @@
+{
+  "reason": "Best completed direct512 result uses1600 updates; require same-capacity constant-code control at the same endpoint before attributing that result to code information.",
+  "cache": "runs/constant-nested512-prior10000",
+  "variant": "prior_residual",
+  "seed": 42,
+  "steps": 1600,
+  "batch_size": 8,
+  "dim": 128,
+  "layers": 2,
+  "threads": 4,
+  "comparison": "Constant512400, reference5121600 and original10000; initial400 history must reproduce existing constant512400. No early stopping.",
+  "evaluation": "Previously observed64/96; fixed1600 endpoint, no test/generalization novelty claim."
+}

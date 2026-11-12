@@ -1,0 +1,25 @@
+{
+  "observed96": {
+    "9802": {
+      "original_mse": 0.10648947313893586,
+      "correction_mean_mse": 0.09329692889392997,
+      "relative_reduction": 0.12388590023160029,
+      "difference": -0.013192544245005896,
+      "ci95": [
+        -0.017852144342355637,
+        -0.009005792769797459
+      ]
+    },
+    "10000": {
+      "original_mse": 0.1036306248861365,
+      "correction_mean_mse": 0.09329692889392997,
+      "relative_reduction": 0.09971662337808551,
+      "difference": -0.010333695992206534,
+      "ci95": [
+        -0.014987162990210995,
+        -0.006286034582687246
+      ]
+    }
+  },
+  "scope": "Existing frozen6501-based correction with head/decoder seeds42/43/44 against separately audited completed-main checkpoints; no per-split best choice.9802 is main val_loss-selected checkpoint,10000 final. Previously observed data; conditional bootstrap."
+}

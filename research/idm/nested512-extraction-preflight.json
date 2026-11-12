@@ -1,0 +1,15 @@
+{
+  "pid": 2008500,
+  "checked_at_utc": "2026-11-12T19:39:44.178240+00:00",
+  "cmdline": [
+    ".venv/bin/python",
+    "research/cache_nested_train.py"
+  ],
+  "selected_environment": {
+    "CUDA_VISIBLE_DEVICES": "",
+    "OMP_NUM_THREADS": "4"
+  },
+  "process_running": true,
+  "script_sha256": "750b742b3e185cbc14b32393bcf06de15c36d96dad358672aa5460aec785a4a8",
+  "no_process_control": true
+}

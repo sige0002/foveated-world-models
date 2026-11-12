@@ -1,0 +1,14 @@
+{
+  "reviewer": "parallel idm_improvement, read-only CPU2",
+  "finding": "No material issue",
+  "parameter_count_all_four_models": 13410048,
+  "common_initial_parameters_exact": true,
+  "basis_orthogonality_max_error": 1.48e-08,
+  "mse_decomposition_abs_error": 2.98e-08,
+  "caveats": [
+    "State is baseline+Range(P), not a subspace through zero.",
+    "Projected direct full loss includes constant discarded target energy; flow velocity loss does not. Compare generated endpoints, not training loss values.",
+    "Noise total variance is1/6 of full768 flow, active-direction variance unchanged.",
+    "Posterior z contains true future; this is not action-conditioned deployment."
+  ]
+}

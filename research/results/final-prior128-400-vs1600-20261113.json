@@ -1,0 +1,36 @@
+{
+  "sources": {
+    "runs/reference-idm42-final-prior-residual42-20261113/comparison.json": "fd77543434c09672aa00f6654a26c28a8dac02be2fd64c87e4d7b7062bf9e8a8",
+    "research/results/final-prior128-residual1600-dev64-20261113.json": "fbb33dbd3c2394b6d4d8b5484b0a86d7e868575c8a7981a67942a67c22923f22",
+    "research/results/reference-idm42-final-prior-observed96-20261113.json": "566f286bf5aaffa6033f4524a83190bb4251c54b613113254914ce5badf8bbcc",
+    "research/results/final-prior128-residual1600-observed96-20261113.json": "2185a571532aefa6e1b35893a2d9137aebab794d253615b3ca3c655c83ab3f3f"
+  },
+  "scope": "Same128 data, seed42/fixed head/prior, first400 training history exactly equal. Prespecified1600 endpoint, observed evaluation data; no early stopping or test claim. Conditional episode bootstrap seed20261113/20000 resamples.",
+  "first400_history_exact": true,
+  "train_mse": {
+    "400": 0.06204673126921989,
+    "1600": 0.022346585610648617
+  },
+  "evaluation": {
+    "dev64": {
+      "mse400": 0.10304294206434861,
+      "mse1600": 0.11362731095869094,
+      "difference": 0.010584368894342333,
+      "relative_increase": 0.10271803854098582,
+      "ci95": [
+        0.008313788956729695,
+        0.01315644021233311
+      ]
+    },
+    "observed96": {
+      "mse400": 0.08967507455963641,
+      "mse1600": 0.09843818767694756,
+      "difference": 0.00876311311731115,
+      "relative_increase": 0.09772072295834477,
+      "ci95": [
+        0.007117917667104241,
+        0.010448004458642872
+      ]
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "torch_version": "2.11.0+cu130",
+  "threads": 2,
+  "batch": 2,
+  "attention_modules": 3,
+  "inference_max_abs": 0.0,
+  "training_max_abs": 1.430511474609375e-06,
+  "parameter_gradient_relative_l2": 2.692330317968776e-07,
+  "initial_weights_exact": true,
+  "benchmark_executed": false,
+  "scope": "Research correction only; no vision encoder or frozen prior time. Same weights, no fit. Float32 highest CPU. Numerical equivalence within declared tolerance, not bitwise equivalence."
+}

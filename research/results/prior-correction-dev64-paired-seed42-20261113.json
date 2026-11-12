@@ -1,0 +1,19 @@
+{
+  "comparisons": {
+    "frozen_zero_code_prior": {
+      "difference": -0.017512023798190057,
+      "ci95": [
+        -0.02326750894426368,
+        -0.012034440504794477
+      ]
+    },
+    "original6501_posterior": {
+      "difference": -0.016684272792190313,
+      "ci95": [
+        -0.021933739219093695,
+        -0.011440882647002585
+      ]
+    }
+  },
+  "scope": "Episode bootstrap conditional on fixed seed42; design-selected validation; not confirmatory or seed uncertainty."
+}

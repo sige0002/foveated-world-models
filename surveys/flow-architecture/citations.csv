@@ -1,0 +1,77 @@
+citing_id,cited_id,cited_title,cited_url,locator,priority_reason,scope_status
+F001,F004,Diffusion Forcing: Next-token Prediction Meets Full-Sequence Diffusion,https://arxiv.org/abs/2407.01392v1,Appendix D,著者が長期予測の将来拡張として指定,in_scope
+F002,F005,Diffusion Transformers with Representation Autoencoders,https://arxiv.org/abs/2510.11690v1,"§3, Table 1",高次元特徴生成の直接比較,in_scope
+F003,,LeWorldModel,,§2–4,土台かつ計画性能の直接比較対象,unresolved
+F001,,DINO-Foresight,,§2–3,特徴予測の先行ベースライン,unresolved
+F008,F006,Flow Matching for Generative Modeling,https://arxiv.org/abs/2210.02747v1,"§3, References",瞬時速度場の基礎,in_scope
+F008,F010,Consistency Models,https://arxiv.org/abs/2303.01469v1,"§1–2, References",1段生成の直接比較基盤,in_scope
+F009,F007,Flow Straight and Fast: Learning to Generate and Transfer Data with Rectified Flow,https://arxiv.org/abs/2209.03003v1,"§1, References",速度場と軌道の関連,in_scope
+F012,F011,Scalable Diffusion Models with Transformers,https://arxiv.org/abs/2212.09748v2,§2.5,同一backboneの直接比較,in_scope
+F014,F012,SiT: Exploring Flow and Diffusion-based Generative Models with Scalable Interpolant Transformers,https://arxiv.org/abs/2401.08740v2,§3–4,flow backboneと対照,in_scope
+F015,F014,Representation Alignment for Generation: Training Diffusion Transformers Is Easier Than You Think,https://arxiv.org/abs/2410.06940v4,§3–4,発展元と直接比較,in_scope
+F015,F013,All are Worth Words: A ViT Backbone for Diffusion Models,https://arxiv.org/abs/2209.12152v4,§2–3,skip backboneの比較,in_scope
+F019,F016,High-Resolution Image Synthesis with Latent Diffusion Models,https://arxiv.org/abs/2112.10752v2,"§1, §4",画素拡散と潜在拡散の対照,in_scope
+F020,F016,High-Resolution Image Synthesis with Latent Diffusion Models,https://arxiv.org/abs/2112.10752v2,§3.4,潜在拡散への一般化は未検証,in_scope
+F022,F021,Back to Basics: Let Denoising Generative Models Denoise,https://arxiv.org/abs/2511.13720v2,§4.1–4.5,clean predictionと速度対照,in_scope
+F023,F021,Back to Basics: Let Denoising Generative Models Denoise,https://arxiv.org/abs/2511.13720v2,§2–3,clean predictionの先行研究,in_scope
+F024,,Mean Flows for One-step Generative Modeling,,§3–4,提案の直接の原手法,unresolved
+F023,,Elucidating the Design Space of Diffusion-Based Generative Models,,§2,出力skipとpreconditioningの先行手法,unresolved
+F027,F026,I²SB: Image-to-Image Schrödinger Bridge,https://arxiv.org/abs/2302.05872v3,§6–7,直接比較対象,in_scope
+F028,F027,Denoising Diffusion Bridge Models,https://arxiv.org/abs/2309.16948v3,§2–4,学習済み教師bridge,in_scope
+F030,F016,High-Resolution Image Synthesis with Latent Diffusion Models,https://arxiv.org/abs/2112.10752v2,"§3, §4",VQGAN潜在空間と比較対象,in_scope
+F031,F032,Building Normalizing Flows with Stochastic Interpolants,https://arxiv.org/abs/2209.15571v3,§1,基礎手法,in_scope
+F034,F006,Flow Matching for Generative Modeling,https://arxiv.org/abs/2210.02747v1,§2,条件付き速度回帰の基礎,in_scope
+F037,F036,Denoising Diffusion Probabilistic Models,https://arxiv.org/abs/2006.11239v2,§2–4,同一訓練目的と逆サンプラ,in_scope
+F038,F036,Denoising Diffusion Probabilistic Models,https://arxiv.org/abs/2006.11239v2,§2–4,連続時間統一の基礎,in_scope
+F039,F036,Denoising Diffusion Probabilistic Models,https://arxiv.org/abs/2006.11239v2,§2–3,改良元と対照,in_scope
+F040,F039,Improved Denoising Diffusion Probabilistic Models,https://arxiv.org/abs/2102.09672v1,"§2, §6",尤度・生成の比較,in_scope
+F035,F033,Improving and generalizing flow-based generative models with minibatch optimal transport,https://arxiv.org/abs/2302.00482v4,§3,条件付き輸送の先行手法,in_scope
+F042,F041,Autoregressive Denoising Diffusion Models for Multivariate Probabilistic Time Series Forecasting,https://arxiv.org/abs/2101.12072v2,§6.3,確率予測直接対照,in_scope
+F044,F041,Autoregressive Denoising Diffusion Models for Multivariate Probabilistic Time Series Forecasting,https://arxiv.org/abs/2101.12072v2,"§2.2, §4",逐次生成・比較,in_scope
+F044,F042,CSDI: Conditional Score-based Diffusion Models for Probabilistic Time Series Imputation,https://arxiv.org/abs/2107.03502v2,"§2.2, §4.4",非自己回帰条件設計の既存手法と直接比較,in_scope
+F043,F042,CSDI: Conditional Score-based Diffusion Models for Probabilistic Time Series Imputation,https://arxiv.org/abs/2107.03502v2,§4.5,条件付き補完の比較,in_scope
+F044,,Scheduled Sampling for Sequence Prediction with Recurrent Neural Networks,,§3.2.1,未来真値混合の先行概念,unresolved
+F047,F006,Flow Matching for Generative Modeling,https://arxiv.org/abs/2210.02747v1,"§3, References",速度回帰の基礎,in_scope
+F049,,Denoising Diffusion Implicit Models,https://arxiv.org/abs/2010.02502,"§3, Appendix B",蒸留対象のサンプラー,unresolved
+F050,,Rate-Distortion Theory,https://en.wikipedia.org/wiki/Rate%E2%80%93distortion_theory,§IV-B,証明の関連基礎、本文引用の一次書誌を要確認,unresolved
+F054,F051,DINO-Foresight: Looking into the Future with DINO,https://arxiv.org/abs/2412.11673v2,"§2, §4.1 Table 1",直接的な決定論的特徴予測比較,in_scope
+F051,,Generative Infinite-Vocabulary Transformers,,Appendix B,著者が挙げる不確実性モデルの候補,unresolved
+F054,,Anticipating Visual Representations from Unlabeled Video,,§2,特徴空間予測の基礎的先行研究,foundational_outside_scope
+F053,,LeJEPA: Provable and Scalable Self-Supervised Learning Without the Heuristics,https://arxiv.org/abs/2511.08544,§3.1 [6],SIGRegの基礎,foundational_outside_scope
+F053,F052,DINO-WM: World Models on Pre-trained Visual Features enable Zero-shot Planning,https://arxiv.org/abs/2411.04983,§4.1 [51],直接比較対象,foundational_outside_scope
+F052,,DINOv2: Learning Robust Visual Features without Supervision,https://arxiv.org/abs/2304.07193,§3.1.1,固定視覚符号器の基礎,foundational_outside_scope
+F053,,VICReg: Variance-Invariance-Covariance Regularization for Self-Supervised Learning,https://arxiv.org/abs/2105.04906,§2; References: VICReg: Variance-Invariance-Covariance Regularization for Self-Supervised Learning,LeWM本文で引用する基礎手法・比較対象・評価基盤,foundational_outside_scope
+F053,,Self-Supervised Learning from Images with a Joint-Embedding Predictive Architecture,https://arxiv.org/abs/2301.08243,§2; References: Self-Supervised Learning from Images with a Joint-Embedding Predictive Architecture,LeWM本文で引用する基礎手法・比較対象・評価基盤,foundational_outside_scope
+F053,,Revisiting Feature Prediction for Learning Visual Representations from Video,https://arxiv.org/abs/2404.08471,§2; References: Revisiting Feature Prediction for Learning Visual Representations from Video,LeWM本文で引用する基礎手法・比較対象・評価基盤,foundational_outside_scope
+F053,,Temporal Difference Learning for Model Predictive Control,https://arxiv.org/abs/2203.04955,§2; References: Temporal Difference Learning for Model Predictive Control,LeWM本文で引用する基礎手法・比較対象・評価基盤,foundational_outside_scope
+F053,,"TD-MPC2: Scalable, Robust World Models for Continuous Control",https://arxiv.org/abs/2310.16828,"§2; References: TD-MPC2: Scalable, Robust World Models for Continuous Control",LeWM本文で引用する基礎手法・比較対象・評価基盤,foundational_outside_scope
+F053,,Dream to Control: Learning Behaviors by Latent Imagination,https://arxiv.org/abs/1912.01603,§2; References: Dream to Control: Learning Behaviors by Latent Imagination,LeWM本文で引用する基礎手法・比較対象・評価基盤,foundational_outside_scope
+F053,,Mastering Diverse Domains through World Models,https://arxiv.org/abs/2301.04104,§2; References: Mastering Diverse Domains through World Models,LeWM本文で引用する基礎手法・比較対象・評価基盤,foundational_outside_scope
+F053,,Training Agents Inside of Scalable World Models,https://arxiv.org/abs/2509.24527,§2; References: Training Agents Inside of Scalable World Models,LeWM本文で引用する基礎手法・比較対象・評価基盤,foundational_outside_scope
+F053,,World Models,https://arxiv.org/abs/1803.10122,§2; References: World Models,LeWM本文で引用する基礎手法・比較対象・評価基盤,foundational_outside_scope
+F053,,DINOv2: Learning Robust Visual Features without Supervision,https://arxiv.org/abs/2304.07193,§4.1; References: DINOv2: Learning Robust Visual Features without Supervision,LeWM本文で引用する基礎手法・比較対象・評価基盤,foundational_outside_scope
+F053,,Offline Reinforcement Learning with Implicit Q-Learning,https://arxiv.org/abs/2110.06169,Appendix C.3; References: Offline Reinforcement Learning with Implicit Q-Learning,LeWM本文で引用する基礎手法・比較対象・評価基盤,foundational_outside_scope
+F053,,Joint Embedding Predictive Architectures Focus on Slow Features,https://arxiv.org/abs/2211.10831,§2; References: Joint Embedding Predictive Architectures Focus on Slow Features,LeWM本文で引用する基礎手法・比較対象・評価基盤,foundational_outside_scope
+F053,,OSVI-WM: One-Shot Visual Imitation for Unseen Tasks using World-Model-Guided Trajectory Generation,https://arxiv.org/abs/2505.20425,§2; References: OSVI-WM: One-Shot Visual Imitation for Unseen Tasks using World-Model-Guided Trajectory Generation,LeWM本文で引用する基礎手法・比較対象・評価基盤,foundational_outside_scope
+F053,,OGBench: Benchmarking Offline Goal-Conditioned RL,https://arxiv.org/abs/2410.20092,§4.1; References: OGBench: Benchmarking Offline Goal-Conditioned RL,LeWM本文で引用する基礎手法・比較対象・評価基盤,foundational_outside_scope
+F056,F049,Progressive Distillation for Fast Sampling of Diffusion Models,https://arxiv.org/abs/2202.00512v2,§4,多段教師の直接比較,in_scope
+F058,F010,Consistency Models,https://arxiv.org/abs/2303.01469v1,§2–3,教師EMA理論の対象,in_scope
+F057,F056,One Step Diffusion via Shortcut Models,https://arxiv.org/abs/2410.12557v3,§7 Table 2,少段生成の比較,in_scope
+F064,F062,Improving the Training of Rectified Flows,https://arxiv.org/abs/2405.20320v2,Appendix G.7,別のreflow対照と費用,in_scope
+F063,F025,Flow Matching Guide and Code,https://arxiv.org/abs/2412.06264v1,§3; Guide §5,多様体CFMの基礎,in_scope
+F064,,Elucidating the Design Space of Diffusion-Based Generative Models,,Appendix A,拡散前処理の先行研究,unresolved
+F065,,Masked Autoencoders Are Scalable Vision Learners,,"§2, §4",masked再構成の基礎,unresolved
+F067,F068,Diffusion Posterior Sampling for General Noisy Inverse Problems,https://arxiv.org/abs/2209.14687v4,§4.2,事後近似と復元比較,in_scope
+F067,F069,Denoising Diffusion Restoration Models,https://arxiv.org/abs/2201.11793v3,§4.2,線形逆問題直接比較,in_scope
+F071,F076,Frozen Forecasting: A Unified Evaluation,https://arxiv.org/abs/2507.13942v2,"§2, §5.1–5.3",同じDINOv3特徴で再実装した先行確率予測,in_scope
+F071,F005,Diffusion Transformers with Representation Autoencoders,https://arxiv.org/abs/2510.11690v1,"§3.2, §5.4",wide headの先行研究,in_scope
+F076,F051,DINO-Foresight: Looking into the Future with DINO,https://arxiv.org/abs/2412.11673v2,§2,決定論的凍結特徴予測,in_scope
+F077,,ResShift: Efficient Diffusion Model for Image Super-Resolution by Residual Shifting,,Appendix A.5,残差条件付き拡散の先行・比較,unresolved
+F081,F084,Diffusion Models Beat GANs on Image Synthesis,https://arxiv.org/abs/2105.05233v4,§1–2,改良対象のADM,in_scope
+F082,F085,Classifier-Free Diffusion Guidance,https://arxiv.org/abs/2207.12598v1,§3.4,CFGの過露光修正,in_scope
+F085,F084,Diffusion Models Beat GANs on Image Synthesis,https://arxiv.org/abs/2105.05233v4,§1–2,classifier guidanceの直接比較,in_scope
+F088,F089,DPM-Solver: A Fast ODE Solver for Diffusion Probabilistic Model Sampling in Around 10 Steps,https://arxiv.org/abs/2206.00927v3,§2.2,厳密ODE積分公式と数値誤差の出典,in_scope
+F090,F032,Building Normalizing Flows with Stochastic Interpolants,,§3,射影場と周辺分布一致の理論背景,in_scope
+F094,F095,GraphCast: Learning skillful medium-range global weather forecasting,https://arxiv.org/abs/2212.12794v2,"§1, §5",関連する決定論予測とperturbed ensemble比較,in_scope
+F091,,Denoising Diffusion Probabilistic Models,https://arxiv.org/abs/2006.11239,§3.1,拡散先行と目的の対応,in_scope
+F092,,Cold Diffusion: Inverting Arbitrary Image Transforms Without Noise,https://arxiv.org/abs/2208.09392,"§3, §6",非ガウスdegradationの先行,unresolved

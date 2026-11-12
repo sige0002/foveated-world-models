@@ -1,0 +1,5 @@
+citing_id,cited_id,cited_title,cited_url,locator,priority_reason,scope_status
+F001,F004,Diffusion Forcing: Next-token Prediction Meets Full-Sequence Diffusion,https://arxiv.org/abs/2407.01392v1,Appendix D,著者が長期予測の将来拡張として指定,in_scope
+F002,F005,Diffusion Transformers with Representation Autoencoders,https://arxiv.org/abs/2510.11690v1,"§3, Table 1",高次元特徴生成の直接比較,in_scope
+F003,,LeWorldModel,,§2–4,土台かつ計画性能の直接比較対象,unresolved
+F001,,DINO-Foresight,,§2–3,特徴予測の先行ベースライン,unresolved

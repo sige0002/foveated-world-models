@@ -1,0 +1,5 @@
+citing_id,cited_id,cited_title,cited_url,locator,priority_reason,scope_status
+F037,F036,Denoising Diffusion Probabilistic Models,https://arxiv.org/abs/2006.11239v2,§2–4,同一訓練目的と逆サンプラ,in_scope
+F038,F036,Denoising Diffusion Probabilistic Models,https://arxiv.org/abs/2006.11239v2,§2–4,連続時間統一の基礎,in_scope
+F039,F036,Denoising Diffusion Probabilistic Models,https://arxiv.org/abs/2006.11239v2,§2–3,改良元と対照,in_scope
+F040,F039,Improved Denoising Diffusion Probabilistic Models,https://arxiv.org/abs/2102.09672v1,"§2, §6",尤度・生成の比較,in_scope

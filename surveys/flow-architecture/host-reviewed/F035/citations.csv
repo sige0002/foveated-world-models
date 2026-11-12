@@ -1,0 +1,2 @@
+citing_id,cited_id,cited_title,cited_url,locator,priority_reason,scope_status
+F035,F033,Improving and generalizing flow-based generative models with minibatch optimal transport,https://arxiv.org/abs/2302.00482v4,§3,条件付き輸送の先行手法,in_scope

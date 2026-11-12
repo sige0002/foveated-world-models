@@ -1,0 +1,34 @@
+{
+  "created_at": "2026-11-12T21:12:23.483575+00:00",
+  "primary_channels_per_patch": 32,
+  "capacity_control_channels_per_patch": 128,
+  "distinction": "Codec latent w has256 spatial tokens; rank32 means8192 scalars, distinct from existing global IDM z32. IDM z not used to train codec.",
+  "architecture": "Fixed train-only PCA residual path plus zero-initialized nonlinear encoder/decoder adapters, per patch. Current/baseline-current context1536\u2192128, adapters hidden256. Decoder receives current,baseline,w only.",
+  "settings": {
+    "steps": 1000,
+    "batch_size": 8,
+    "lr": 0.0003,
+    "weight_decay": 0.01,
+    "gradient_clip": 1.0,
+    "seed": 42,
+    "threads_each": 4,
+    "train_pairs": 512
+  },
+  "evaluation": "Fixed1000 endpoint; log dev reconstruction every200, no early stopping. Report both ranks on train/dev64/observed96. All evaluation already observed; no final-test claim. Save true-future encoded w as downstream training labels, never as inference inputs for forecast evaluation.",
+  "initialization": "Each rank starts exactly at corresponding train-only PCA reconstruction; zero-code starts at fixed current-only prior. Nonlinear adaptation may learn useful current-only corrections too.",
+  "gate": "Reconstruction feasibility and improvement over same-rank PCA are diagnostics only. Forecast adoption requires actual decoded predictions from current+IDM condition to beat full-space direct, plus matched latent-direct vs flow comparison. No claimed forecasting gain from true-future codes.",
+  "limitations": [
+    "Not an exact VFMF VAE or RLA-WM transformer reproduction; deterministic patchwise codec, no KL or temporal attention.",
+    "Nonlinear encoded reconstruction error is achieved error, not rigorous minimum over decoder latent manifold.",
+    "Zero-code decoding is not a separately trained matched current-only baseline.",
+    "Ranks have different parameter counts; report both, no equal-compute rank claim.",
+    "Extra codec training cost must be counted in downstream comparisons."
+  ],
+  "source_sha256": {
+    "research/conditional_residual_codec.py": "31a74206474aa8965240797798148c6f4f3592378a2fc7b617c2b4687085dc26",
+    "research/train_conditional_residual_codec.py": "aad4e582f07aa3ce34473469842bcbacf2521801a5711ec85b60cb389d7c27b2",
+    "research/test_conditional_residual_codec.py": "0d2640fc9f3d5665c20bb4b01c9fb385081f1118966fc6af9956cf2cb5e0dc4e",
+    "research/results/prior-subspace512-20261113/basis128.pt": "04e6dd5b41e67628a86998b48ec266273b6f91282c1c9d07e38a43d55ca76cfc"
+  },
+  "checks": "3 unit tests passed: PCA/zero-code exact initialization; decoder rejects future argument; encoder/decoder adapters learn; invalid basis rejected."
+}

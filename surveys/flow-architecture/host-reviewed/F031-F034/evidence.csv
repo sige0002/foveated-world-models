@@ -1,0 +1,33 @@
+paper_id,field,item_index,kind,source_url,locator,note
+F031,social_background,1,not_stated,https://arxiv.org/html/2303.08797v4,§1,社会的需要の明示的記載なし。
+F031,technical_background,1,author_claim,https://arxiv.org/html/2303.08797v4,§1,生成flowとdiffusionの設計と誤差解析を統合する必要がある。
+F031,problem,1,author_claim,https://arxiv.org/html/2303.08797v4,§2,任意の端点分布間を補間する過程から決定論的・確率的生成を構成する。
+F031,method,1,demonstrated,https://arxiv.org/html/2303.08797v4,"§2.1–2.3, Theorems 6–7","x_t=I(t,x0,x1)+γ(t)z。端点結合ν、独立標準Gaussian z、境界γ=0と正則性・モーメントを仮定。速度はE[dx_t/dt|x_t]で二次目的の最小解。"
+F031,results,1,demonstrated,https://arxiv.org/html/2303.08797v4,"§2.1–2.2 Theorems 6–7, Appendix B.1; §7.2 Figures 11–12",正則な補間、正の内部γ、独立Gaussianと有限モーメント等の下で速度の条件付き期待値が輸送方程式と二次目的を満たす。証明は特性関数のGaussian減衰と条件付き期待値の直交性を使う。128次元Gaussian混合で最初の2次元のKDE・KLを比較し、ノイズ量の中間値が最良。
+F031,contributions,1,author_claim,https://arxiv.org/html/2303.08797v4,§2–3,flowとdiffusion、score、denoiserを扱う補間枠組みと誤差評価を提示。
+F031,summary,1,interpretation,https://arxiv.org/html/2303.08797v4,§2,中間状態条件付きの平均速度は、観測Cのみを条件とする未来の平均E[Y|C]と一般に異なる。
+F031,remaining_issues,1,interpretation,https://arxiv.org/html/2303.08797v4,"§2.2, §7.2–8",γ=0では空間正則性の保証を失い、有限ネットで理想速度・高次元全分布の再現は保証されない。2次元射影KLや生成画像はpaired未来MSEでない。
+F032,social_background,1,not_stated,https://arxiv.org/html/2209.15571v3,§1,社会的需要の明示的記載なし。
+F032,technical_background,1,author_claim,https://arxiv.org/html/2209.15571v3,§1,連続正規化flowの最尤学習はODE逆伝播の負担がある。
+F032,problem,1,author_claim,https://arxiv.org/html/2209.15571v3,§2,補間密度の速度場を直接二次損失で学習し、有限時間の輸送を構成する。
+F032,method,1,demonstrated,https://arxiv.org/html/2209.15571v3,"§2 Proposition 1, Appendix B; §2.1 Proposition 3, Appendix E",独立source・targetの平滑な補間速度を二次損失で回帰。Fourier可積分性を含む仮定の下で連続の式を得る。推定速度が一様LipschitzならW2誤差は速度損失で抑えられ、証明は同一sourceからの軌道差とGronwallを用いる。
+F032,results,1,demonstrated,https://arxiv.org/html/2209.15571v3,§3.4 Table 2,無条件CIFAR-10で提案法NLL 2.99、FID 10.27、ScoreSDE 2.99、2.92。生成評価であり未来MSEではない。
+F032,contributions,1,author_claim,https://arxiv.org/html/2209.15571v3,§2,シミュレーション不要の速度二次損失と補間最適化を提示。
+F032,summary,1,interpretation,https://arxiv.org/html/2209.15571v3,§2–3,分布の輸送と尤度評価を扱い、真の観測と未来の結合保存を保証するものではない。
+F032,remaining_issues,1,interpretation,https://arxiv.org/html/2209.15571v3,"§2.1, §4, Appendix B・E",W2上界は一様Lipschitz等に依存し、真の対応組での未来MSEを直接保証しない。著者は補間関数のより広い学習を今後の課題とする。
+F033,social_background,1,not_stated,https://arxiv.org/html/2302.00482v4,§1,社会的需要の明示的記載なし。
+F033,technical_background,1,author_claim,https://arxiv.org/html/2302.00482v4,§1,CNF最尤学習はODEシミュレーションを要し、独立結合は複雑な輸送を生む。
+F033,problem,1,author_claim,https://arxiv.org/html/2302.00482v4,§3,任意sourceと端点結合を用いsimulation-freeに速度場を学習する。
+F033,method,1,demonstrated,https://arxiv.org/html/2302.00482v4,"§3.1–3.2, Theorem 3.2, Proposition 3.4, Appendix A",正の周辺密度の下でCFMとFMの期待勾配が一致。source・targetのminibatch OT結合を用いる。真のOT計画と正則性の下でσ²→0なら動的OTを得る。
+F033,results,1,demonstrated,https://arxiv.org/html/2302.00482v4,§5.1 Table 2,2D moons→8gaussians、5 seedの正規化path energyはOT-CFM 0.053±0.035、独立I-CFM 2.738±0.181。分布輸送性能である。
+F033,contributions,1,author_claim,https://arxiv.org/html/2302.00482v4,§3–5,一般化CFM、minibatch OTとSB-CFMを提案し輸送を評価。
+F033,summary,1,interpretation,https://arxiv.org/html/2302.00482v4,§3.2,minibatch OTは現実の対応を組み替え得る。sourceを現特徴とするだけでは未来とのpaired結合は維持されない。
+F033,remaining_issues,1,interpretation,https://arxiv.org/html/2302.00482v4,§3.2–5,有限batch OTは真のOTの近似であり、輸送費用低下はpaired MSEの低下を意味しない。
+F034,social_background,1,not_stated,https://arxiv.org/html/2304.14772v2,§1,社会的需要の明示的記載なし。
+F034,technical_background,1,author_claim,https://arxiv.org/html/2304.14772v2,§1–3,独立noiseとdataでは交差する条件付き経路が回帰分散と曲率を高める。
+F034,problem,1,author_claim,https://arxiv.org/html/2304.14772v2,§3–4,周辺分布を保つminibatch結合で速度場を学習しサンプリングを効率化する。
+F034,method,1,demonstrated,https://arxiv.org/html/2304.14772v2,"§3–4, Appendix D.4–D.5",BatchOT等でmini-batch両端を結合し、補間速度を回帰する。有限二次モーメント等の条件下の漸近議論と、Jensenに基づく輸送費用上界を示す。
+F034,results,1,demonstrated,https://arxiv.org/html/2304.14772v2,§6.2 Table 1,ImageNet 32でFID 10到達の近似NFEはCondOT 20、BatchOT 14。条件付き未来MSEではない。
+F034,contributions,1,author_claim,https://arxiv.org/html/2304.14772v2,§3–4,複数標本結合によるflow matching、輸送費用と直線性の解析。
+F034,summary,1,interpretation,https://arxiv.org/html/2304.14772v2,§3–4,最短の人工的結合と、時系列で実際に観測したpaired jointは一般に一致しない。
+F034,remaining_issues,1,interpretation,https://arxiv.org/html/2304.14772v2,"Appendix D.5, §6",上界や漸近保証は有限モデルのpaired MSE保証ではない。

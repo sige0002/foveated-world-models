@@ -1,0 +1,12 @@
+{
+  "query_coordinate_mean": -0.11543904443169595,
+  "query_coordinate_std": 41.033431351013576,
+  "projection_bias_norm": 0.10888912953568805,
+  "projection_ones_norm": 2.54043714998388,
+  "normalization_algebra_max_error": 1.1102230246251565e-15,
+  "original_vs_preLN_normalized_rms": 0.003068010959424353,
+  "original_between_pair_variance": 1.1132946731806434e-06,
+  "preLN_between_pair_variance": 1.112042364759001e-06,
+  "scale_only_without_bias_max_difference": 1.1102230246251565e-15,
+  "limitation": "Eight held-out inputs. Algebra and representation diagnostic only; no decoder evaluation, no training improvement claim."
+}

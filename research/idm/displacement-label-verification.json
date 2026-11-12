@@ -1,0 +1,47 @@
+{
+  "all_checks_passed": true,
+  "splits": {
+    "train": {
+      "count": 128,
+      "all_original_endpoints_observed": true,
+      "valid_delta_coordinates": 1024,
+      "current_state_shape": [
+        128,
+        20
+      ],
+      "delta_shape": [
+        128,
+        8
+      ]
+    },
+    "validation": {
+      "count": 64,
+      "all_original_endpoints_observed": true,
+      "valid_delta_coordinates": 512,
+      "current_state_shape": [
+        64,
+        20
+      ],
+      "delta_shape": [
+        64,
+        8
+      ]
+    },
+    "observed96": {
+      "count": 96,
+      "all_original_endpoints_observed": true,
+      "valid_delta_coordinates": 768,
+      "current_state_shape": [
+        96,
+        20
+      ],
+      "delta_shape": [
+        96,
+        8
+      ]
+    }
+  },
+  "manifest_sha256": "1017f24029dbfe5d7d63a5ce058ccb3efb76e52de233f0fe824bf7f0aece76a1",
+  "script_sha256": "42f312d8a4ff5e61da5119e85eb9c6d67b430b14cf4ebaf74c9cc4a598d9e932",
+  "fitting": false
+}

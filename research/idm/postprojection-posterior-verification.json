@@ -1,0 +1,6 @@
+{
+  "all_checks_passed": true,
+  "constant_exact_parameter_equality": true,
+  "pinsker_formula_verified": true,
+  "result_sha256": "f6054c18ca1625464a979a8a1318222bfddb34b510317545111d3c463dacc538"
+}

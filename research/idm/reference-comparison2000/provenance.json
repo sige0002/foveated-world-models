@@ -1,0 +1,18 @@
+{
+  "research/idm/train_reference_heads.py": "f5109ddf44574366ccd4bb514832f7d33d39f4806dbe6e8c345a083b93ad7711",
+  "research/idm/cache_reference_queries.py": "df4c2ecf26e5c73dac38354d26334af444861e471059649a6623eca449a60238",
+  "research/idm/run_reference_experiment.py": "26efe61a250477235459fd44c928e2a38bd68ef255b7fe2ed0ccb26ba545a52c",
+  "research/idm/summarize_reference.py": "70560b63bbab02bb3fc2e7fe9eaaaadf2ab8ae774bae26126fc40b3c5ad40a7d",
+  "research/idm/reference-comparison2000/centered-42.pt": "ffb5561ca506d26b0291e6cea303564c3f9e27fcf3f3494adc46736f10a35161",
+  "research/idm/reference-comparison2000/raw-42.pt": "52fe82daef1caf631c69beab9d62eb08da1230a6d22c9acec5bdbb24f9ef580e",
+  "research/idm/reference-comparison2000/reference-44.pt": "d93a796e609d1b4a0ed138e3b3c9fec69405ec7a0e7dee60c4405a4f5887e335",
+  "research/idm/reference-comparison2000/reference-42.pt": "b5784dae7b2d0f0e69feec9a5305020e67fc8bab3c681b4e707eeb90c8e05f83",
+  "research/idm/reference-comparison2000/raw-44.pt": "5c0f97003f4a8b5750cc1317663813ddff8b85b4b87d121cab6945c1dc673009",
+  "research/idm/reference-comparison2000/constant-44.pt": "2e7687495ddc64bd7f519fb16190e8a6ada83ad1900a566e90b1a2b0ba89a50c",
+  "research/idm/reference-comparison2000/centered-43.pt": "8396b34cfc45f25b745063307feebdb367df454df1da66b88e07f0ceed67bbb0",
+  "research/idm/reference-comparison2000/constant-43.pt": "bc2c297ae24b537d99219b0e9c1f21882eaee0a3e6a868cd12acc6d3e79675da",
+  "research/idm/reference-comparison2000/centered-44.pt": "d26d33c6f1a169801655ea166d7565c2201edaecd44d7a730cf91e050dc15fc7",
+  "research/idm/reference-comparison2000/raw-43.pt": "4ba04993fd8dbf491f5589180bc2abffeab74ccadd01491591a0d7add8fe78a5",
+  "research/idm/reference-comparison2000/reference-43.pt": "da4aa429051e29baaf86dc7ecd4393a9779004e726e30478c954ac47f8a522a8",
+  "research/idm/reference-comparison2000/constant-42.pt": "2224c77de94bac0353c2266ae142b3b7e94735688f85348d747420018c59da0d"
+}

@@ -1,0 +1,13 @@
+{
+  "at": "2026-11-12T21:20:29.126445+00:00",
+  "parent_protocol_sha256": "1617a4b288de0fb036fb06a29ca2081f235d155fe7804a6e49a6246f261d79b4",
+  "reason": "All4 original processes terminated exit1 during pre-training row alignment; legacy128 rows lack endpoint_indices. No model updates occurred.",
+  "change": "Compare episode,index,dt and optional endpoint_indices, while keeping strict source file and codec checksum bindings. Preserve optional endpoint metadata during evaluation.",
+  "verified": "Actual512 teacher/source row identities and recomputed train statistics exact.4 unit tests passed, including legacy rows.",
+  "unchanged": "Architectures,hyperparameters,seed,source caches,codec and evaluation protocol.",
+  "new_source_sha256": {
+    "research/train_codec_predictor.py": "526ab08a9fb005146e250436e93501ef67ed931be32288be1bf0efa4b921dba3",
+    "research/test_codec_predictor.py": "aac909344a72b24cfed95029bd5fba61d61aff98cc7f0f4bd19daf32b584baa8"
+  },
+  "rerun_suffix": "-v2"
+}

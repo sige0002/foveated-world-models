@@ -1,0 +1,19 @@
+{
+  "comparisons": {
+    "mse": {
+      "difference_vs_direct400": 0.009253227792214602,
+      "ci95": [
+        0.008054110375815072,
+        0.010258082421205472
+      ]
+    },
+    "mean_mse": {
+      "difference_vs_direct400": 0.0019361386075615883,
+      "ci95": [
+        0.0007251762363011949,
+        0.002946333507134113
+      ]
+    }
+  },
+  "scope": "Paired development64 episode bootstrap conditional on seed42 fitted models, not independent confirmation."
+}

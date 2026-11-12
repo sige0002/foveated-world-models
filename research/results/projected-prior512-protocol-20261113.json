@@ -1,0 +1,40 @@
+{
+  "at": "2026-11-12T20:47:37.115219+00:00",
+  "hypothesis": "Constrain correction states/noise/velocity to train-only128D residual subspace while preserving full current conditioning and fixed posterior z. Tests prediction-space dimensionality, not IDM code width.",
+  "arms": [
+    "prior_projected_residual",
+    "prior_projected_flow"
+  ],
+  "fixed_settings": {
+    "rank": 128,
+    "train_pairs": 512,
+    "steps": 400,
+    "seed": 42,
+    "dim": 128,
+    "layers": 2,
+    "batch_size": 8,
+    "lr": 0.0003,
+    "flow_euler_steps": 4,
+    "noise_scale": 0.1,
+    "threads_per_arm": 4
+  },
+  "primary": "Original768D feature MSE at fixed400, direct vs flow sample and mean4. Compare both to existing full-space same-seed400 endpoints. No best-of-N.",
+  "geometry": "Uncentered train-only second moment of future-baseline; no whitening/mean offset. Input current/baseline remain768D, all trainable layers same as full-space controls; projected velocity and state correction rank128. No inference target supplied.",
+  "loss": "Direct original-space MSE = projected error plus fixed discarded error. Flow velocity MSE in original768D coordinates, projected teacher endpoint; preserves loss scale rather than dividing by128.",
+  "noise_caveat": "Projected standard Gaussian has same .1 coordinate std within orthonormal128D space, lower total noise energy than original768D flow. Thus a single-sample gain alone does not isolate learnability; mean4 and projected direct comparisons required. No claim of lower FLOPs since wide network is retained.",
+  "scope": "Train128-basis rank prespecified before evaluation in prepare protocol; basis fit uses512pairs. Evaluations dev64/observed96 already research-observed; posterior reconstruction only. Single seed feasibility, no novelty or held-out final-test claim.",
+  "gate": "Rank128 oracle floor .02474 on observed96 below direct .08557, so expression floor does not preclude gain. Oracle is not predicted accuracy; all ranks logged, none chosen by eval.",
+  "sources_sha256": {
+    "research/prepare_prior_subspace.py": "fed25bdc17e089a309c3657f6f5e982b9c1ec8776743c352551c4237b5e42a0d",
+    "research/projected_prior_decoder.py": "8a109c700a6d5d4082761446f724ee7bc27aa7c4735a0cd941b8718ee5a4bfd1",
+    "research/train_cached_decoders.py": "d3ecc39a05705cf02ba6cae171bed1572d095c846be2d218c9655e6150c21541",
+    "research/test_projected_prior_decoder.py": "e4c75edb72e441602ff944f0a97ce85371b1724894f5171f4f9cfffba5337840",
+    "research/results/prior-subspace512-20261113/basis128.pt": "04e6dd5b41e67628a86998b48ec266273b6f91282c1c9d07e38a43d55ca76cfc"
+  },
+  "checks": "3 unit tests passed: full-rank old flow equivalence; confined generated corrections and orthogonal MSE decomposition; invalid basis rejection.",
+  "references": [
+    "https://arxiv.org/html/2512.11225v1",
+    "https://arxiv.org/html/2605.07079v1"
+  ],
+  "reference_limits": "Not reproduction of nonlinear VAE/RLA methods; VFMF explicitly finds PCA inferior. Fixed linear subspace is a cheap controlled geometry test."
+}

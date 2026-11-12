@@ -1,0 +1,41 @@
+paper_id,field,item_index,kind,source_url,locator,note
+F073,social_background,1,not_stated,https://arxiv.org/html/2403.02957v4,§1,特定の社会的需要は記載なし。
+F073,technical_background,1,author_claim,https://arxiv.org/html/2403.02957v4,§1–3,MSE最適な条件付き平均と生成sampleは異なる。
+F073,problem,1,author_claim,https://arxiv.org/html/2403.02957v4,"§1, §4",既存拡散モデルによるAWGN除去で条件付き平均への近似を解析。
+F073,method,1,author_claim,https://arxiv.org/html/2403.02957v4,§4.1 Eq. 13–16,既知SNRに合う時刻に正規化観測を置き、逆Gaussian遷移の平均だけを逐次合成。非線形性から有限段の各Jensen gapは一般に非零。
+F073,results,1,demonstrated,https://arxiv.org/html/2403.02957v4,§5 Fig. 2,64次元128成分GMM、訓練10万・評価1万例で300段の平均鎖は解析的CMEに近いNMSE。再sample鎖と比較。
+F073,contributions,1,author_claim,https://arxiv.org/html/2403.02957v4,§4.3–4.4,著者は条件付き平均への漸近収束を主張。既知AWGN、時刻schedule、学習誤差の減衰等を仮定。
+F073,summary,1,interpretation,https://arxiv.org/html/2403.02957v4,§4–5,逐次平均による点推定の経験的結果と理論解析。
+F073,remaining_issues,1,interpretation,https://arxiv.org/html/2403.02957v4,"§4.2–4.4; Appendix B, E–F",付録BのLemma 4.1は任意の逆Gaussian平均μ=2xも許す仮定からL<1を主張するため反例がある。forward独立ノイズの条件付き平均微分公式を逆モデルに適用する結合を示していない。後続定理は補題に依存し、一般の収束証明は確認できない。経験結果の否定ではない。
+F074,social_background,1,not_stated,https://arxiv.org/html/2411.01629v2,§1,特定の社会的動機は記載なし。
+F074,technical_background,1,author_claim,https://arxiv.org/html/2411.01629v2,§1–3,拡散の前向き収縮と逆向き拡張の差が復元の難しさを左右する。
+F074,problem,1,author_claim,https://arxiv.org/html/2411.01629v2,"§1, §4",非log-concave分布を含む拡散・復元の感度と局所化を分析する。
+F074,method,1,author_claim,https://arxiv.org/html/2411.01629v2,"§2 Props. 2–3, §3–4",独立Y=X+σZでE[X|Y=y]=y+σ²∇log pY(y)、Hessianは条件付き共分散を表す。OU流のWasserstein順方向収縮と逆OT写像拡張を解析し、多尺度の曲率の裾を導入する。
+F074,results,1,demonstrated,https://arxiv.org/html/2411.01629v2,§5 Examples 1–6,厳密解析例として点質量、正規、一様、二点混合、異分散Gaussian混合を評価。二点混合でSNR依存の局所化の難所を示す。実データ予測のMSE比較ではない。
+F074,contributions,1,author_claim,https://arxiv.org/html/2411.01629v2,"§3 Theorems 1–3, §4 Theorem 4",著者は順逆写像の微小step感度と、非log-concave分布の多尺度曲率量による局所的拡張評価を導く。
+F074,summary,1,interpretation,https://arxiv.org/html/2411.01629v2,§2–5,Gaussian denoisingの条件付き平均と不確かさをscore・curvatureに結び付け、分布の輸送感度を解析。
+F074,remaining_issues,1,interpretation,https://arxiv.org/html/2411.01629v2,"§3 Theorem 3, §4 Theorem 4; Appendix A",Theorem 4は有界Hessian、制限された局所Wasserstein摂動、η→0を仮定。Theorem 3は滑らかなcompact support条件で一段の分布誤差O(η²)。学習誤差や有限stepのpaired未来MSEの改善は示さない。
+F078,social_background,1,author_claim,https://arxiv.org/html/2310.03725v3,"§1, §4",画像の欠損補完や超解像を対象とする。
+F078,technical_background,1,author_claim,https://arxiv.org/html/2310.03725v3,§1–2,独立Gaussian baseは問題固有の条件付き構造を使わない。
+F078,problem,1,author_claim,https://arxiv.org/html/2310.03725v3,§3,sourceとtargetが依存する結合で条件付き生成を学習する。
+F078,method,1,author_claim,https://arxiv.org/html/2310.03725v3,§3.1–3.4; Appendix A,"It=αt x0+βt x1+γt z、b=E[dIt/dt|It,ξ]を二乗回帰。sourceは観測m(x1)+σζとし推論時にmが利用可能。条件ξを与え輸送方程式を導く。"
+F078,results,1,demonstrated,https://arxiv.org/html/2310.03725v3,§4 Tables 2–3,ImageNet inpaintingのFID50kは独立base 1.35、依存結合1.13。64→256超解像の検証FID 2.05。サンプル品質でありpaired MSEではない。
+F078,contributions,1,author_claim,https://arxiv.org/html/2310.03725v3,"§3 Theorem 3.1, Proposition 3.1; Appendix A",著者主張: 従属結合の下で条件付き速度とscoreの回帰、確率輸送を構成。速度上界はCauchy–SchwarzとJensenの適用で導く。
+F078,summary,1,interpretation,https://arxiv.org/html/2310.03725v3,§3–4,観測に近いbaseを設計し条件付き生成の輸送を学習。
+F078,remaining_issues,1,interpretation,https://arxiv.org/html/2310.03725v3,"§3.2–3.3, §4–5",inpaintingでは見える画素とmaskを推論時に知り、超解像ではLR画像を与える。futureから算出した特徴は推論時利用不能なので真のcurrent–future対から利用可能sourceを構成する必要がある。輸送結合と実際の未来対応は一般に一致せず、低輸送costもpaired MSE改善を保証しない。
+F079,social_background,1,not_stated,https://arxiv.org/html/1903.02334v2,§1,特定の社会的需要は記載なし。
+F079,technical_background,1,author_claim,https://arxiv.org/html/1903.02334v2,§1–2,高次元の未知分布を平滑化し、そのscoreを学習する。
+F079,problem,1,author_claim,https://arxiv.org/html/1903.02334v2,"§1, §3",未知prior下で最小二乗推定と学習したenergyを結び、標本生成と記憶へ利用。
+F079,method,1,author_claim,https://arxiv.org/html/1903.02334v2,"§3 Eq. 3, §5","Y=X+N(0,Σ)なら E[X|Y=y]=y+Σ∇log pY(y)。Gaussian密度を微分しpriorで積分して導出。energy勾配の二乗denoisingを学習し、Langevin walk後に平均推定へjumpする。"
+F079,results,1,demonstrated,https://arxiv.org/html/1903.02334v2,"§4 Figs. 3–4, §5 Figs. 5–6","MNIST 784次元でσ=0.3, 0.7のdenoiseを図示し、σ=0.3, 0.15のwalk-jumpを可視化。定量的な未来予測paired MSE実験ではない。"
+F079,contributions,1,author_claim,https://arxiv.org/html/1903.02334v2,"§3, §5–6",著者主張: energy学習、Bayes jump、walk-jumpとNEBULAを組み合わせる。Gaussian平均恒等式自体は既存のMiyasawaの結果。
+F079,summary,1,interpretation,https://arxiv.org/html/1903.02334v2,§3–5,既知Gaussian汚染のもと、scoreから最小二乗条件付き平均を構成。
+F079,remaining_issues,1,interpretation,https://arxiv.org/html/1903.02334v2,"§4.1, §5",著者はjumpがposteriorやpriorの正確なsampleではなく近似的と明記し、計算・メモリコストも残す。未来予測で使うにはfutureを中心とした人工Gaussian汚染とcurrent条件付きscoreが必要で、観測currentがfutureのGaussian汚染という仮定はない。
+F080,social_background,1,author_claim,https://arxiv.org/html/1803.04189v3,§1–2,長時間露光や高精度シミュレーションなどのclean target取得負担を減らす。
+F080,technical_background,1,author_claim,https://arxiv.org/html/1803.04189v3,§2 Eq. 4–6,平方損失の最適値は入力条件付きtarget平均で決まる。
+F080,problem,1,author_claim,https://arxiv.org/html/1803.04189v3,§1–2,clean targetを収集せずに画像復元を学ぶ。
+F080,method,1,author_claim,https://arxiv.org/html/1803.04189v3,§2 Eq. 5–6,同一潜在信号の独立な破損観測をinputとtargetにして二乗回帰する。E[noisy target|input]がE[clean target|input]と一致すればpopulation riskの最適予測は同一。独立・条件付き零平均は十分条件。
+F080,results,1,demonstrated,https://arxiv.org/html/1803.04189v3,"§3 Table 1, §§3.3–3.4",Kodak Gaussian σ=25のPSNRはclean教師32.50 dB、noisy教師32.48 dB。Poisson、Bernoulli、Monte Carlo、模擬MRIも検証。
+F080,contributions,1,author_claim,https://arxiv.org/html/1803.04189v3,§2–4,著者主張: clean targetなしで統計的に同じ平方損失最適推定を学び、実用復元を実証。
+F080,summary,1,interpretation,https://arxiv.org/html/1803.04189v3,"§2, §3.1, Appendix A.3",目標雑音の条件付き平均が零なら追加雑音はpopulation optimumを変えず、有限dataでは最適化分散を増やしうる。
+F080,remaining_issues,1,interpretation,https://arxiv.org/html/1803.04189v3,"§2, §3.4, Appendix A.3",独立再観測のある同一信号が必要。未来の異なる時点を独立雑音付き同一targetとみなすことはできない。Appendix A.3の1/Nへの単純化は非相関の場合で、一般に強い相関なら消えない。MRIは実測ではなく再構成済み画像の模擬サンプリング。

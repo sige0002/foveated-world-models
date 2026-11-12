@@ -1,0 +1,37 @@
+{
+  "scope": "Fixed 512 training examples / 1600 updates / seed42. Reused observed96; true-future posterior reconstruction. Equal updates do not imply equal FLOPs. Bootstrap conditional on fitted models, excluding adaptive selection and training uncertainty.",
+  "sources": {
+    "nested512-direct-constant1600-observed96-20261113.json": "ac81e46d524c1b467b6b7c0e844ef0e52d7393ee1738f184e9d75f7c67f92f2b",
+    "nested512-flow1600-observed96-20261113.json": "41caea2742889f63f7b81fb1f3e95387b5da9849bc691671de9e3b1d92009cba"
+  },
+  "direct_mse": 0.08330355252837762,
+  "comparisons": {
+    "constant": {
+      "mse": 0.10254041677884136,
+      "minus_direct": 0.019236864250463743,
+      "relative_to_direct_percent": 23.09248965572104,
+      "paired_difference_ci95": [
+        0.015223147388314828,
+        0.02361744248482864
+      ]
+    },
+    "flow_sample": {
+      "mse": 0.1129289633827284,
+      "minus_direct": 0.029625410854350775,
+      "relative_to_direct_percent": 35.56320223469316,
+      "paired_difference_ci95": [
+        0.02738751854437093,
+        0.032152732293373745
+      ]
+    },
+    "flow_mean4": {
+      "mse": 0.10013089814068128,
+      "minus_direct": 0.016827345612303663,
+      "relative_to_direct_percent": 20.20003361389824,
+      "paired_difference_ci95": [
+        0.014690207638098703,
+        0.01924188652919838
+      ]
+    }
+  }
+}

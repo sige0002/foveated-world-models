@@ -1,0 +1,4 @@
+{
+  "reviewed_at": "2026-11-12T16:53:13.225933+00:00",
+  "checks": "Host checked DDPM simplified noise objective versus weighted variational objective and CIFAR FID; DDIM theorem1 positive sigma/weights and unshared-time caveat, step/FID table; ScoreSDE VP predictor/corrector results with unequal cost and Fokker-Planck derivation D.1; ImprovedDDPM hybrid stop-gradient/lambda and ImageNet schedule table; VDM SNR variable substitution Eq18 and likelihood/FID separation. None proves paired latent future MSE improvement."
+}

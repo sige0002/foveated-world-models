@@ -1,0 +1,12 @@
+{
+  "selection": "research/results/nested-train512-selection-20261113.json",
+  "selection_sha256": "6f549b268be91d8a20bd036283bad73d5122253dcc00676a6a989829c952051c",
+  "head": "Fixed reference42 head trained on128, calibration unchanged; encoder2900",
+  "prior": "Frozen final10000 zero-code decoder",
+  "architecture": "prior_residual, dim128 layers2, batch8 lr3e-4, decoder seed42 CPU4",
+  "primary": "train128 vs nested512, both fixed400 updates (equal update budget), no validation checkpoint selection",
+  "secondary": "Both128 and512 fixed1600 updates; additionally report512/1600 vs128/400 as equal expected-example-exposure comparison, explicitly4x update budget",
+  "controls": "constant code and prior_flow on512 fixed400, same seed42/settings; flow single-sample and mean4 risks, no best-of-N",
+  "evaluation": "Previously observed dev64/observed96 unchanged. Not independent final test. Fixed steps, report all prespecified endpoints. Posterior reconstruction only.",
+  "scope": "First scaling pass one seed; head itself not retrained to isolate correction data-size effect. No assertion that this alone validates end-to-end scaling."
+}

@@ -1,0 +1,16 @@
+/home/sadasue/foveated-world-models/.venv/lib/python3.12/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+test_common_initial_weights_and_schedules (research.idm.test_postprojection_training.HarnessTests.test_common_initial_weights_and_schedules) ... ok
+test_constant_control_is_zero34_shared_posterior_and_equal_model (research.idm.test_postprojection_training.HarnessTests.test_constant_control_is_zero34_shared_posterior_and_equal_model) ... ok
+test_diagnostic_is_rng_grad_and_update_neutral (research.idm.test_postprojection_training.HarnessTests.test_diagnostic_is_rng_grad_and_update_neutral) ... ok
+test_initial_prediction_equals_frozen_baseline (research.idm.test_postprojection_training.HarnessTests.test_initial_prediction_equals_frozen_baseline) ... ok
+test_logvar_clamped (research.idm.test_postprojection_training.HarnessTests.test_logvar_clamped) ... ok
+test_nonfinite_gradients_rejected (research.idm.test_postprojection_training.HarnessTests.test_nonfinite_gradients_rejected) ... ok
+test_objective_kl_reduction_and_frozen_inputs (research.idm.test_postprojection_training.HarnessTests.test_objective_kl_reduction_and_frozen_inputs) ... ok
+test_reconstruction_gradient_reaches_head_after_zero_gates_open (research.idm.test_postprojection_training.HarnessTests.test_reconstruction_gradient_reaches_head_after_zero_gates_open) ... ok
+test_validation_saves_every_row_and_reuses_noise (research.idm.test_postprojection_training.HarnessTests.test_validation_saves_every_row_and_reuses_noise) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.085s
+
+OK

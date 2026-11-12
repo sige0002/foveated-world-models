@@ -1,0 +1,18 @@
+{
+  "flow_mean16_mse": 0.10575717875811581,
+  "direct_mse": 0.08967507455963641,
+  "difference": 0.016082104198479403,
+  "relative_increase": 0.17933750573894813,
+  "paired_episode_ci95": [
+    0.014041874112929995,
+    0.018275066962329823
+  ],
+  "estimated_infinite_mean_risk_from16": 0.10495511052302191,
+  "scope": "Fixed models, independent noise seed, observed96, conditional episode bootstrap; posterior reconstruction;16 samples x4 solver steps vs1 direct evaluation. No model/solver fitting.",
+  "source_sha256": {
+    "research/results/final-prior-flow-mc16-20261113.json": "4bebb3654f1650c3eb6cf899544a30e6a7bf24049dd197be76c5c0f7aade7290",
+    "research/results/reference-idm42-final-prior-observed96-20261113.json": "566f286bf5aaffa6033f4524a83190bb4251c54b613113254914ce5badf8bbcc"
+  },
+  "bootstrap_seed": 20261113,
+  "bootstrap_resamples": 20000
+}

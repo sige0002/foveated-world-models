@@ -1,0 +1,51 @@
+{
+  "checkpoints": [
+    {
+      "step": 2900,
+      "sha256": "b21c76b7b938b75d1a5856078f8277f7149ada1ca282f4aab3a8a4427765b0f2"
+    },
+    {
+      "step": 6501,
+      "sha256": "9118acd806f15270a703dca5bf6d86c1534fa57034708b0996709c3bd6b3bedf"
+    }
+  ],
+  "splits": {
+    "train": {
+      "same_pairs_and_features_exact": true,
+      "count": 128,
+      "checkpoints": [
+        {
+          "step": 2900,
+          "mean_code_norm_squared": 6.260771511355758,
+          "between_example_variance_sum": 7.811454550175437e-06
+        },
+        {
+          "step": 6501,
+          "mean_code_norm_squared": 0.6819952773882174,
+          "between_example_variance_sum": 0.0001494238866009914
+        }
+      ]
+    },
+    "validation": {
+      "same_pairs_and_features_exact": true,
+      "count": 64,
+      "checkpoints": [
+        {
+          "step": 2900,
+          "mean_code_norm_squared": 6.262151571451504,
+          "between_example_variance_sum": 9.110787662724128e-06,
+          "original_decoder_mse_from_extraction": 0.14371385658159852,
+          "zero_code_mse_from_extraction": 0.21243918244726956
+        },
+        {
+          "step": 6501,
+          "mean_code_norm_squared": 0.6818022160863093,
+          "between_example_variance_sum": 0.00013860514380330724,
+          "original_decoder_mse_from_extraction": 0.12548607436474413,
+          "zero_code_mse_from_extraction": 0.12631349579896778
+        }
+      ]
+    }
+  },
+  "interpretation": "Identical frozen visual features and transitions. Code variance or zero-code damage alone does not establish action use. Decoder extraction is per-example and slightly differs numerically from batched reevaluation."
+}

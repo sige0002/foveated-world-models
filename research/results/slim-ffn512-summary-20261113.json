@@ -1,0 +1,100 @@
+{
+  "complete": true,
+  "pending": [],
+  "source_sha256": {
+    "runs/ffn4-seed42-512-400-20261113/results.json": "7bdda0d1387aee5f362f7a70594775b2eee3a3b5bdceb319f5930967b0409723",
+    "runs/ffn2-seed42-512-400-20261113/results.json": "d7fa8c24be9e74cc06995d2701026dabd817dc1f21ab230f7550f50f83c6400b",
+    "runs/ffn4-seed43-512-400-20261113/results.json": "b66697baa90430507f00a00dfd2d57a47fc5adb21b185e20eb6227c216340f04",
+    "runs/ffn2-seed43-512-400-20261113/results.json": "b38b0089a5e04454238af9bc4cc1fd8b445d2e40cdcb7c86a580db97b270454d",
+    "runs/ffn4-seed44-512-400-20261113/results.json": "346dadb91d94e792463994117015e2f70cc719f5b318dfd9248ced2503429b5d",
+    "runs/ffn2-seed44-512-400-20261113/results.json": "69097f2f0b4146987a089beb2755ac1203d32e0c213fc6b298efd3724708f854"
+  },
+  "runs": {
+    "ffn4-seed42": {
+      "mse": {
+        "train": 0.08027585720628849,
+        "dev64": 0.0983791162725538,
+        "observed96": 0.0855736662245666
+      },
+      "parameters": 13410048
+    },
+    "ffn2-seed42": {
+      "mse": {
+        "train": 0.08105241494922666,
+        "dev64": 0.09869070374406874,
+        "observed96": 0.085750884997348
+      },
+      "parameters": 11049216
+    },
+    "ffn4-seed43": {
+      "mse": {
+        "train": 0.08033439449354773,
+        "dev64": 0.09970413288101554,
+        "observed96": 0.08674841572064906
+      },
+      "parameters": 13410048
+    },
+    "ffn2-seed43": {
+      "mse": {
+        "train": 0.08131119371682871,
+        "dev64": 0.10023939306847751,
+        "observed96": 0.08770477610717838
+      },
+      "parameters": 11049216
+    },
+    "ffn4-seed44": {
+      "mse": {
+        "train": 0.07995770254274248,
+        "dev64": 0.09826412657275796,
+        "observed96": 0.08583476043228681
+      },
+      "parameters": 13410048
+    },
+    "ffn2-seed44": {
+      "mse": {
+        "train": 0.08083355960116023,
+        "dev64": 0.09837695298483595,
+        "observed96": 0.08639956395685051
+      },
+      "parameters": 11049216
+    }
+  },
+  "comparisons": {
+    "42": {
+      "difference": 0.00017721877278139195,
+      "relative_percent": 0.20709498681092592,
+      "conditional_paired_ci95": [
+        -0.00011913089547306299,
+        0.00046217742007380916
+      ]
+    },
+    "43": {
+      "difference": 0.0009563603865293165,
+      "relative_percent": 1.1024528558642834,
+      "conditional_paired_ci95": [
+        0.0006271220913428503,
+        0.001347558738295144
+      ]
+    },
+    "44": {
+      "difference": 0.0005648035245637099,
+      "relative_percent": 0.6580125833860411,
+      "conditional_paired_ci95": [
+        0.00019351636777476718,
+        0.0009638351252457747
+      ]
+    }
+  },
+  "aggregate": {
+    "ffn4_mean_risk": 0.08605228079250082,
+    "ffn2_mean_risk": 0.0866184083537923,
+    "mean_difference": 0.0005661275612914729,
+    "conditional_paired_ci95": [
+      0.0003572610531894801,
+      0.0007960187542873124
+    ],
+    "interpretation": "Mean of three risks, not prediction ensemble. Conditional episode bootstrap excludes seed/training/model-selection uncertainty."
+  },
+  "baseline_reproduction": "All four logged training objectives exactly reproduce original seed42 baseline",
+  "scope": "Reference42 posterior mean codes, fresh corrections, same512 training pairs and reused64/96. Fixed400, three decoder seeds. No independent test or executable forecasting claim."
+}

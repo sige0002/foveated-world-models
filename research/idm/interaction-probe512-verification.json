@@ -1,0 +1,17 @@
+{
+  "pass_all": true,
+  "source_files_checked": 13,
+  "fold_partition_exact": true,
+  "prior_fit_hash_and_common_scale_verified": true,
+  "kernel_strength_one": true,
+  "selection_train_minimum": true,
+  "selected_boundary_status": {
+    "zero": false,
+    "additive": false,
+    "interaction": false
+  },
+  "physical_and_normalized_metrics_recomputed": true,
+  "zero_and_additive_prior512_evaluation_reproduced": true,
+  "script_sha256": "ea8d72ac88911a038f5d64dcf783dcc39117440324b50a20fbbf48ee7b53df94",
+  "results_sha256": "906c691917fe6af3068cbdaf68ea3f00403de3a10e4f0125437f8967c1a01da1"
+}

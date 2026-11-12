@@ -1,0 +1,29 @@
+{
+  "protocol_sha256": "cf03799e97931a445570a0a43529ad33c270812813eba5415d89d101879de8b3",
+  "results": {
+    "validation": {
+      "episodes": 64,
+      "zero_mse": 0.5994091889860478,
+      "reference_mse": 0.4896382861262626,
+      "paired_mean_difference": -0.10977090285978518,
+      "percentile95": [
+        -0.18454793358864288,
+        -0.04333059013946098
+      ],
+      "relative_point_reduction": 0.18313183193849947,
+      "resample_indices_sha256": "c1089244e9c04a371da5961f5de96dfa841a7854d218fc2c93359754954a7113"
+    },
+    "observed96": {
+      "episodes": 96,
+      "zero_mse": 0.5660810064172881,
+      "reference_mse": 0.4379256847368702,
+      "paired_mean_difference": -0.1281553216804179,
+      "percentile95": [
+        -0.17756451049247687,
+        -0.08164043825693953
+      ],
+      "relative_point_reduction": 0.22639042862700798,
+      "resample_indices_sha256": "286f589632be188e4d31a5d2ac0f5f7fc0bb7728c7d1311b9faa4fe73ff787c4"
+    }
+  }
+}

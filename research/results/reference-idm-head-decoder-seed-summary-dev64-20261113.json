@@ -1,0 +1,27 @@
+{
+  "sources": {
+    "research/results/reference-idm-prior-correction-seed42-20261113.json": "77350e8222fce76a305abac6e2bc09c007a9d1dc9c605aec671cd7ccdb1921ae",
+    "research/results/reference-idm43-prior-residual43-20261113.json": "d490362d4a1e68044cb6f354633acc990bfbaf3fecbdfc104049034353dbc040",
+    "research/results/reference-idm44-prior-residual44-20261113.json": "98d77c5679853d6d9edaa3edac6c1d05bc73c5710a8533ec76b3deade1c01b86"
+  },
+  "paired_head_decoder_seeds": [
+    42,
+    43,
+    44
+  ],
+  "per_seed_mse": [
+    0.10880053380969912,
+    0.10729559743776917,
+    0.10779752169037238
+  ],
+  "mean_mse": 0.10796455097928022,
+  "seed_std": 0.0007662456906268451,
+  "original6501_mse": 0.12548480660188943,
+  "relative_reduction": 0.13962053333033075,
+  "difference": -0.017520255622609206,
+  "ci95": [
+    -0.022489878410124217,
+    -0.013135859571048071
+  ],
+  "scope": "Development64; independent reference head pretraining and correction seeds, shared frozen encoder2900/prior6501. Not three end-to-end encoder seeds. Episode bootstrap conditional on fitted models; design selection not included. Mean of per-model MSE, not prediction ensemble.96 replication pending."
+}

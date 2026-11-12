@@ -1,0 +1,5 @@
+citing_id,cited_id,cited_title,cited_url,locator,priority_reason,scope_status
+F022,F021,Back to Basics: Let Denoising Generative Models Denoise,https://arxiv.org/abs/2511.13720v2,§4.1–4.5,clean predictionと速度対照,in_scope
+F023,F021,Back to Basics: Let Denoising Generative Models Denoise,https://arxiv.org/abs/2511.13720v2,§2–3,clean predictionの先行研究,in_scope
+F024,,Mean Flows for One-step Generative Modeling,,§3–4,提案の直接の原手法,unresolved
+F023,,Elucidating the Design Space of Diffusion-Based Generative Models,,§2,出力skipとpreconditioningの先行手法,unresolved

@@ -1,0 +1,4 @@
+{
+  "reviewed_at": "2026-11-12T17:04:18.253975+00:00",
+  "checks": "Host checked shortcut Eq4 generated half-step bootstrap and EMA/weight decay instability; IMM CIFAR table and B.4 induction/infinite-data-capacity exact optimization; iCT Proposition1 fixed unequal EMA toy limit and 1/2-step FID; ConsistencyFM Lemma1 differentiated along ODE/conditions and 2NFE FID; CTM F.1 infinitesimal posterior mean identity and F.2 ideal-teacher TV dependencies. Distribution or infinitesimal claims do not imply paired prediction MSE improvement."
+}

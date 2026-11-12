@@ -1,0 +1,696 @@
+{
+  "sources": {
+    "research/results/final-prior-flow-observed96-20261113.json": "9337524461ae351a9974fb457a1f713030e81dd8f3f332aa5584e6242ee39235",
+    "research/results/reference-idm42-final-prior-observed96-20261113.json": "566f286bf5aaffa6033f4524a83190bb4251c54b613113254914ce5badf8bbcc"
+  },
+  "script_sha256": "a96ee79a705b375c57942ca2c784a9b08e3ce82ced825bc0bfdf1f7f09ff14be",
+  "samples_per_episode": 4,
+  "sample_risk": 0.11776563144909839,
+  "mean4_risk": 0.10814046308708687,
+  "estimated_predictive_variance": 0.012833557816015348,
+  "estimated_infinite_mc_mean_risk": 0.10493207363308303,
+  "direct_risk": 0.08967507455963641,
+  "mean_risk_minus_direct": 0.015256999073446626,
+  "paired_episode_ci95": [
+    0.013219047344884735,
+    0.017447111534420405
+  ],
+  "formula": "B_hat=(N*loss(mean_N)-mean_N(loss(sample)))/(N-1); V_hat=N/(N-1)*(mean_sample_loss-loss_mean_prediction)",
+  "assumptions": "Four iid generation-noise draws conditional on fixed current/code/model; all dimensions averaged identically. Current/source/posterior code fixed per episode. Same saved flow model and solver.",
+  "scope": "Descriptive reuse of already observed96. B_hat is an unbiased Monte-Carlo estimator of this fixed flow model conditional-mean risk, not an actual infinite-ensemble evaluation or guarantee. Individual estimates are not clipped. Episode bootstrap conditions on fitted models; no training/selection uncertainty or extra noise replications.",
+  "interpretation": "Sampling variance alone does not explain the observed gap to direct prediction if this conditional-mean risk estimate is representative. Does not establish failure of all flow architectures or greater-data training.",
+  "rows": [
+    {
+      "episode": "1460",
+      "index": 551,
+      "estimated_mean_risk": 0.12229827046394348,
+      "estimated_variance": 0.01261758804321289,
+      "direct_mse": 0.10564716905355453
+    },
+    {
+      "episode": "1461",
+      "index": 552,
+      "estimated_mean_risk": 0.1879822164773941,
+      "estimated_variance": 0.013099849224090576,
+      "direct_mse": 0.16670887172222137
+    },
+    {
+      "episode": "1463",
+      "index": 566,
+      "estimated_mean_risk": 0.09339394172032674,
+      "estimated_variance": 0.012708912293116251,
+      "direct_mse": 0.08238015323877335
+    },
+    {
+      "episode": "1464",
+      "index": 571,
+      "estimated_mean_risk": 0.08169337113698323,
+      "estimated_variance": 0.012855211893717447,
+      "direct_mse": 0.06638114899396896
+    },
+    {
+      "episode": "1466",
+      "index": 581,
+      "estimated_mean_risk": 0.23617655038833618,
+      "estimated_variance": 0.014431536197662354,
+      "direct_mse": 0.19327445328235626
+    },
+    {
+      "episode": "1468",
+      "index": 589,
+      "estimated_mean_risk": 0.23039359847704569,
+      "estimated_variance": 0.01382531722386678,
+      "direct_mse": 0.19740335643291473
+    },
+    {
+      "episode": "1469",
+      "index": 594,
+      "estimated_mean_risk": 0.09171398729085922,
+      "estimated_variance": 0.012643218040466309,
+      "direct_mse": 0.07455404847860336
+    },
+    {
+      "episode": "1471",
+      "index": 605,
+      "estimated_mean_risk": 0.06497447192668915,
+      "estimated_variance": 0.012461751699447632,
+      "direct_mse": 0.05741947889328003
+    },
+    {
+      "episode": "1472",
+      "index": 615,
+      "estimated_mean_risk": 0.09656404455502827,
+      "estimated_variance": 0.012933651606241861,
+      "direct_mse": 0.06926614791154861
+    },
+    {
+      "episode": "1474",
+      "index": 623,
+      "estimated_mean_risk": 0.16880108416080475,
+      "estimated_variance": 0.013027608394622803,
+      "direct_mse": 0.12678919732570648
+    },
+    {
+      "episode": "1475",
+      "index": 627,
+      "estimated_mean_risk": 0.13560806711514792,
+      "estimated_variance": 0.014009575049082438,
+      "direct_mse": 0.1253843903541565
+    },
+    {
+      "episode": "1477",
+      "index": 640,
+      "estimated_mean_risk": 0.10723956922690074,
+      "estimated_variance": 0.012980689605077107,
+      "direct_mse": 0.09853533655405045
+    },
+    {
+      "episode": "1478",
+      "index": 645,
+      "estimated_mean_risk": 0.11300608515739441,
+      "estimated_variance": 0.013113230466842651,
+      "direct_mse": 0.10132945328950882
+    },
+    {
+      "episode": "1480",
+      "index": 654,
+      "estimated_mean_risk": 0.16880236566066742,
+      "estimated_variance": 0.013248801231384277,
+      "direct_mse": 0.13425922393798828
+    },
+    {
+      "episode": "1482",
+      "index": 669,
+      "estimated_mean_risk": 0.1114190195997556,
+      "estimated_variance": 0.012724260489145914,
+      "direct_mse": 0.07747065275907516
+    },
+    {
+      "episode": "1483",
+      "index": 670,
+      "estimated_mean_risk": 0.08648734539747238,
+      "estimated_variance": 0.012546688318252563,
+      "direct_mse": 0.07825369387865067
+    },
+    {
+      "episode": "1485",
+      "index": 683,
+      "estimated_mean_risk": 0.09559094905853271,
+      "estimated_variance": 0.012752413749694824,
+      "direct_mse": 0.08941301703453064
+    },
+    {
+      "episode": "1486",
+      "index": 687,
+      "estimated_mean_risk": 0.15993042786916098,
+      "estimated_variance": 0.013853530089060465,
+      "direct_mse": 0.14663814008235931
+    },
+    {
+      "episode": "1488",
+      "index": 700,
+      "estimated_mean_risk": 0.13037943840026855,
+      "estimated_variance": 0.012971341609954834,
+      "direct_mse": 0.10665818303823471
+    },
+    {
+      "episode": "1489",
+      "index": 702,
+      "estimated_mean_risk": 0.08756203949451447,
+      "estimated_variance": 0.012679368257522583,
+      "direct_mse": 0.07535272091627121
+    },
+    {
+      "episode": "1491",
+      "index": 715,
+      "estimated_mean_risk": 0.1816949943701426,
+      "estimated_variance": 0.01313116153081258,
+      "direct_mse": 0.1293395608663559
+    },
+    {
+      "episode": "1492",
+      "index": 721,
+      "estimated_mean_risk": 0.11973454554875691,
+      "estimated_variance": 0.01279957095781962,
+      "direct_mse": 0.10122404247522354
+    },
+    {
+      "episode": "1494",
+      "index": 731,
+      "estimated_mean_risk": 0.14280350506305695,
+      "estimated_variance": 0.012732923030853271,
+      "direct_mse": 0.11831184476613998
+    },
+    {
+      "episode": "1495",
+      "index": 733,
+      "estimated_mean_risk": 0.2223936120669047,
+      "estimated_variance": 0.012874205907185871,
+      "direct_mse": 0.17745937407016754
+    },
+    {
+      "episode": "1497",
+      "index": 746,
+      "estimated_mean_risk": 0.14831922948360443,
+      "estimated_variance": 0.01333838701248169,
+      "direct_mse": 0.11987593024969101
+    },
+    {
+      "episode": "1499",
+      "index": 756,
+      "estimated_mean_risk": 0.06427736083666484,
+      "estimated_variance": 0.01251836617787679,
+      "direct_mse": 0.053619712591171265
+    },
+    {
+      "episode": "1530",
+      "index": 765,
+      "estimated_mean_risk": 0.10965745647748311,
+      "estimated_variance": 0.012794504563013712,
+      "direct_mse": 0.09697747975587845
+    },
+    {
+      "episode": "1532",
+      "index": 776,
+      "estimated_mean_risk": 0.14272565642992655,
+      "estimated_variance": 0.013370056947072346,
+      "direct_mse": 0.12773197889328003
+    },
+    {
+      "episode": "1533",
+      "index": 778,
+      "estimated_mean_risk": 0.07472534726063411,
+      "estimated_variance": 0.012543459733327229,
+      "direct_mse": 0.06069205701351166
+    },
+    {
+      "episode": "1535",
+      "index": 792,
+      "estimated_mean_risk": 0.11010104169448216,
+      "estimated_variance": 0.012771705786387125,
+      "direct_mse": 0.10628031939268112
+    },
+    {
+      "episode": "1537",
+      "index": 799,
+      "estimated_mean_risk": 0.10733648141225179,
+      "estimated_variance": 0.01286293069521586,
+      "direct_mse": 0.08958780765533447
+    },
+    {
+      "episode": "1538",
+      "index": 809,
+      "estimated_mean_risk": 0.10933107137680054,
+      "estimated_variance": 0.012395650148391724,
+      "direct_mse": 0.10705128312110901
+    },
+    {
+      "episode": "1540",
+      "index": 824,
+      "estimated_mean_risk": 0.06610419849554698,
+      "estimated_variance": 0.012751867373784382,
+      "direct_mse": 0.05392212048172951
+    },
+    {
+      "episode": "1542",
+      "index": 835,
+      "estimated_mean_risk": 0.09936915338039398,
+      "estimated_variance": 0.013418883085250854,
+      "direct_mse": 0.08841627091169357
+    },
+    {
+      "episode": "1543",
+      "index": 838,
+      "estimated_mean_risk": 0.09621619929869969,
+      "estimated_variance": 0.012559543053309122,
+      "direct_mse": 0.09178932756185532
+    },
+    {
+      "episode": "1545",
+      "index": 857,
+      "estimated_mean_risk": 0.07563773045937221,
+      "estimated_variance": 0.01267715295155843,
+      "direct_mse": 0.06669311225414276
+    },
+    {
+      "episode": "1547",
+      "index": 870,
+      "estimated_mean_risk": 0.11297296484311421,
+      "estimated_variance": 0.013070503870646158,
+      "direct_mse": 0.10684140771627426
+    },
+    {
+      "episode": "1549",
+      "index": 882,
+      "estimated_mean_risk": 0.11654636263847351,
+      "estimated_variance": 0.012582778930664062,
+      "direct_mse": 0.10725484043359756
+    },
+    {
+      "episode": "1551",
+      "index": 897,
+      "estimated_mean_risk": 0.15990586082140604,
+      "estimated_variance": 0.013894518216451008,
+      "direct_mse": 0.13634224236011505
+    },
+    {
+      "episode": "1553",
+      "index": 911,
+      "estimated_mean_risk": 0.050138031442960106,
+      "estimated_variance": 0.012556056181589762,
+      "direct_mse": 0.03875057399272919
+    },
+    {
+      "episode": "1554",
+      "index": 915,
+      "estimated_mean_risk": 0.11633080244064331,
+      "estimated_variance": 0.012539267539978027,
+      "direct_mse": 0.11253472417593002
+    },
+    {
+      "episode": "1556",
+      "index": 924,
+      "estimated_mean_risk": 0.15748529632886252,
+      "estimated_variance": 0.013960580031077066,
+      "direct_mse": 0.12382427603006363
+    },
+    {
+      "episode": "1558",
+      "index": 942,
+      "estimated_mean_risk": 0.049914310375849404,
+      "estimated_variance": 0.012717013557751972,
+      "direct_mse": 0.03810485452413559
+    },
+    {
+      "episode": "180",
+      "index": 122,
+      "estimated_mean_risk": 0.07307720681031545,
+      "estimated_variance": 0.012797782818476358,
+      "direct_mse": 0.05236652493476868
+    },
+    {
+      "episode": "181",
+      "index": 128,
+      "estimated_mean_risk": 0.10224490364392598,
+      "estimated_variance": 0.012891332308451334,
+      "direct_mse": 0.09355530142784119
+    },
+    {
+      "episode": "182",
+      "index": 134,
+      "estimated_mean_risk": 0.10642989973227183,
+      "estimated_variance": 0.012699117263158161,
+      "direct_mse": 0.08660515397787094
+    },
+    {
+      "episode": "184",
+      "index": 139,
+      "estimated_mean_risk": 0.053136758506298065,
+      "estimated_variance": 0.012462824583053589,
+      "direct_mse": 0.051239728927612305
+    },
+    {
+      "episode": "185",
+      "index": 143,
+      "estimated_mean_risk": 0.05071256558100382,
+      "estimated_variance": 0.012511154015858967,
+      "direct_mse": 0.04796691611409187
+    },
+    {
+      "episode": "187",
+      "index": 153,
+      "estimated_mean_risk": 0.07495274394750595,
+      "estimated_variance": 0.012829959392547607,
+      "direct_mse": 0.06154214218258858
+    },
+    {
+      "episode": "188",
+      "index": 156,
+      "estimated_mean_risk": 0.05136039356390635,
+      "estimated_variance": 0.012547334035237629,
+      "direct_mse": 0.04702015593647957
+    },
+    {
+      "episode": "189",
+      "index": 163,
+      "estimated_mean_risk": 0.10949205855528514,
+      "estimated_variance": 0.01248084505399068,
+      "direct_mse": 0.08831405639648438
+    },
+    {
+      "episode": "191",
+      "index": 169,
+      "estimated_mean_risk": 0.07461097091436386,
+      "estimated_variance": 0.012683063745498657,
+      "direct_mse": 0.06757300347089767
+    },
+    {
+      "episode": "192",
+      "index": 172,
+      "estimated_mean_risk": 0.0715136006474495,
+      "estimated_variance": 0.012589991092681885,
+      "direct_mse": 0.06902555376291275
+    },
+    {
+      "episode": "193",
+      "index": 177,
+      "estimated_mean_risk": 0.07585530231396358,
+      "estimated_variance": 0.012773086627324421,
+      "direct_mse": 0.06349898129701614
+    },
+    {
+      "episode": "195",
+      "index": 183,
+      "estimated_mean_risk": 0.047439957658449806,
+      "estimated_variance": 0.012487550576527912,
+      "direct_mse": 0.044788602739572525
+    },
+    {
+      "episode": "196",
+      "index": 189,
+      "estimated_mean_risk": 0.09296771138906479,
+      "estimated_variance": 0.012516796588897705,
+      "direct_mse": 0.07603248953819275
+    },
+    {
+      "episode": "197",
+      "index": 194,
+      "estimated_mean_risk": 0.06472232937812805,
+      "estimated_variance": 0.012625843286514282,
+      "direct_mse": 0.04709312319755554
+    },
+    {
+      "episode": "199",
+      "index": 204,
+      "estimated_mean_risk": 0.10344580312569936,
+      "estimated_variance": 0.01251910130182902,
+      "direct_mse": 0.08337363600730896
+    },
+    {
+      "episode": "36",
+      "index": 76,
+      "estimated_mean_risk": 0.22005518774191538,
+      "estimated_variance": 0.014211614926656086,
+      "direct_mse": 0.189647376537323
+    },
+    {
+      "episode": "591",
+      "index": 215,
+      "estimated_mean_risk": 0.08603028456370036,
+      "estimated_variance": 0.012944807608922321,
+      "direct_mse": 0.07421829551458359
+    },
+    {
+      "episode": "592",
+      "index": 224,
+      "estimated_mean_risk": 0.050727119048436485,
+      "estimated_variance": 0.01252936820189158,
+      "direct_mse": 0.040441807359457016
+    },
+    {
+      "episode": "594",
+      "index": 234,
+      "estimated_mean_risk": 0.12386197845141093,
+      "estimated_variance": 0.01296474536259969,
+      "direct_mse": 0.1079443097114563
+    },
+    {
+      "episode": "596",
+      "index": 247,
+      "estimated_mean_risk": 0.08979168782631557,
+      "estimated_variance": 0.012843867142995197,
+      "direct_mse": 0.0859542116522789
+    },
+    {
+      "episode": "598",
+      "index": 264,
+      "estimated_mean_risk": 0.10272155205408733,
+      "estimated_variance": 0.013140042622884113,
+      "direct_mse": 0.0817030742764473
+    },
+    {
+      "episode": "790",
+      "index": 278,
+      "estimated_mean_risk": 0.07148492336273193,
+      "estimated_variance": 0.012852072715759277,
+      "direct_mse": 0.06491061300039291
+    },
+    {
+      "episode": "792",
+      "index": 296,
+      "estimated_mean_risk": 0.10785412043333054,
+      "estimated_variance": 0.012608110904693604,
+      "direct_mse": 0.09846484661102295
+    },
+    {
+      "episode": "794",
+      "index": 309,
+      "estimated_mean_risk": 0.029355287551879883,
+      "estimated_variance": 0.012382999062538147,
+      "direct_mse": 0.024235546588897705
+    },
+    {
+      "episode": "796",
+      "index": 317,
+      "estimated_mean_risk": 0.06199318418900172,
+      "estimated_variance": 0.012482245763142902,
+      "direct_mse": 0.05173473432660103
+    },
+    {
+      "episode": "797",
+      "index": 329,
+      "estimated_mean_risk": 0.07872589180866878,
+      "estimated_variance": 0.012534370024998982,
+      "direct_mse": 0.06930038332939148
+    },
+    {
+      "episode": "799",
+      "index": 341,
+      "estimated_mean_risk": 0.07755649089813232,
+      "estimated_variance": 0.012568414211273193,
+      "direct_mse": 0.07167182117700577
+    },
+    {
+      "episode": "941",
+      "index": 351,
+      "estimated_mean_risk": 0.06043811639149984,
+      "estimated_variance": 0.01223913828531901,
+      "direct_mse": 0.04699977859854698
+    },
+    {
+      "episode": "942",
+      "index": 353,
+      "estimated_mean_risk": 0.05430516103903452,
+      "estimated_variance": 0.012361799677213032,
+      "direct_mse": 0.04956425353884697
+    },
+    {
+      "episode": "944",
+      "index": 365,
+      "estimated_mean_risk": 0.14773855606714884,
+      "estimated_variance": 0.013010104497273762,
+      "direct_mse": 0.1250307410955429
+    },
+    {
+      "episode": "945",
+      "index": 367,
+      "estimated_mean_risk": 0.06328414380550385,
+      "estimated_variance": 0.012878447771072388,
+      "direct_mse": 0.054943766444921494
+    },
+    {
+      "episode": "947",
+      "index": 377,
+      "estimated_mean_risk": 0.07517008731762569,
+      "estimated_variance": 0.013197829325993855,
+      "direct_mse": 0.0742800235748291
+    },
+    {
+      "episode": "948",
+      "index": 384,
+      "estimated_mean_risk": 0.12317627668380737,
+      "estimated_variance": 0.012735366821289062,
+      "direct_mse": 0.10414066910743713
+    },
+    {
+      "episode": "950",
+      "index": 396,
+      "estimated_mean_risk": 0.07643730193376541,
+      "estimated_variance": 0.012531161308288574,
+      "direct_mse": 0.06581274420022964
+    },
+    {
+      "episode": "951",
+      "index": 401,
+      "estimated_mean_risk": 0.07591525216897328,
+      "estimated_variance": 0.013069520394007364,
+      "direct_mse": 0.06409963220357895
+    },
+    {
+      "episode": "953",
+      "index": 412,
+      "estimated_mean_risk": 0.25153134266535443,
+      "estimated_variance": 0.012714584668477375,
+      "direct_mse": 0.22079049050807953
+    },
+    {
+      "episode": "954",
+      "index": 415,
+      "estimated_mean_risk": 0.0684676542878151,
+      "estimated_variance": 0.01250004768371582,
+      "direct_mse": 0.06278177350759506
+    },
+    {
+      "episode": "956",
+      "index": 428,
+      "estimated_mean_risk": 0.07965297996997833,
+      "estimated_variance": 0.012602061033248901,
+      "direct_mse": 0.06814763695001602
+    },
+    {
+      "episode": "957",
+      "index": 430,
+      "estimated_mean_risk": 0.07925426959991455,
+      "estimated_variance": 0.01251557469367981,
+      "direct_mse": 0.0685897096991539
+    },
+    {
+      "episode": "959",
+      "index": 443,
+      "estimated_mean_risk": 0.07760199407736461,
+      "estimated_variance": 0.01298995812733968,
+      "direct_mse": 0.0709495022892952
+    },
+    {
+      "episode": "960",
+      "index": 448,
+      "estimated_mean_risk": 0.07854721198479335,
+      "estimated_variance": 0.012905498345692951,
+      "direct_mse": 0.07426086068153381
+    },
+    {
+      "episode": "962",
+      "index": 456,
+      "estimated_mean_risk": 0.11577133337656657,
+      "estimated_variance": 0.012613465388615925,
+      "direct_mse": 0.09851910918951035
+    },
+    {
+      "episode": "963",
+      "index": 460,
+      "estimated_mean_risk": 0.14547300338745117,
+      "estimated_variance": 0.012828290462493896,
+      "direct_mse": 0.11391095072031021
+    },
+    {
+      "episode": "965",
+      "index": 471,
+      "estimated_mean_risk": 0.0775320256749789,
+      "estimated_variance": 0.012785752614339192,
+      "direct_mse": 0.0683080330491066
+    },
+    {
+      "episode": "966",
+      "index": 474,
+      "estimated_mean_risk": 0.10975673794746399,
+      "estimated_variance": 0.012592405080795288,
+      "direct_mse": 0.09171929955482483
+    },
+    {
+      "episode": "967",
+      "index": 481,
+      "estimated_mean_risk": 0.06701493263244629,
+      "estimated_variance": 0.012361675500869751,
+      "direct_mse": 0.05908680334687233
+    },
+    {
+      "episode": "969",
+      "index": 489,
+      "estimated_mean_risk": 0.12242062886555989,
+      "estimated_variance": 0.01253811518351237,
+      "direct_mse": 0.10382657498121262
+    },
+    {
+      "episode": "971",
+      "index": 500,
+      "estimated_mean_risk": 0.10984379053115845,
+      "estimated_variance": 0.012563705444335938,
+      "direct_mse": 0.09230928868055344
+    },
+    {
+      "episode": "972",
+      "index": 506,
+      "estimated_mean_risk": 0.06694427132606506,
+      "estimated_variance": 0.012544602155685425,
+      "direct_mse": 0.05991339683532715
+    },
+    {
+      "episode": "973",
+      "index": 508,
+      "estimated_mean_risk": 0.14338097969690958,
+      "estimated_variance": 0.012748857339223225,
+      "direct_mse": 0.10915929079055786
+    },
+    {
+      "episode": "975",
+      "index": 518,
+      "estimated_mean_risk": 0.13239176074663797,
+      "estimated_variance": 0.012607355912526447,
+      "direct_mse": 0.11149054020643234
+    },
+    {
+      "episode": "976",
+      "index": 525,
+      "estimated_mean_risk": 0.0639701063434283,
+      "estimated_variance": 0.012496550877888996,
+      "direct_mse": 0.05584065616130829
+    },
+    {
+      "episode": "978",
+      "index": 535,
+      "estimated_mean_risk": 0.151601180434227,
+      "estimated_variance": 0.013265609741210938,
+      "direct_mse": 0.12836526334285736
+    }
+  ]
+}

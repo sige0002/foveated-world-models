@@ -1,0 +1,25 @@
+{
+  "feature_dim": 768,
+  "output_rank": 128,
+  "noise_scale": 0.1,
+  "expected_unremovable_noise_mse": 0.008333333333333335,
+  "proof": "v=W f+b implies P_perp(x_final-h-b)=sigma P_perp(epsilon) for Euler integration over unit time. This is a noise contribution, not the entire MSE.",
+  "checkpoints_scope": "runs/frozen-idm-decoder-comparison-20261113/flow-seed42.pt",
+  "measurements": [
+    {
+      "steps": 1,
+      "max_projected_identity_error": 1.2918193066698697e-06,
+      "observed_orthogonal_noise_power": 0.008323755916767013
+    },
+    {
+      "steps": 4,
+      "max_projected_identity_error": 1.3582029421629893e-06,
+      "observed_orthogonal_noise_power": 0.008323755925086421
+    },
+    {
+      "steps": 16,
+      "max_projected_identity_error": 3.1126124402924837e-06,
+      "observed_orthogonal_noise_power": 0.008323755926989551
+    }
+  ]
+}

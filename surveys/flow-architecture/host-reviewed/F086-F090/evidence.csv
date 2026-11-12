@@ -1,0 +1,41 @@
+paper_id,field,item_index,kind,source_url,locator,note
+F086,social_background,1,not_stated,https://arxiv.org/html/2303.00848v7,§1,特定の社会的動機は記載なし。
+F086,technical_background,1,author_claim,https://arxiv.org/html/2303.00848v7,"§1, §3",拡散の重み付き目的は一見ELBOから異なり、雑音scheduleも学習効率に影響する。
+F086,problem,1,author_claim,https://arxiv.org/html/2303.00848v7,§3–4,様々な重み付き拡散目的の意味と雑音scheduleの役割を分析。
+F086,method,1,author_claim,https://arxiv.org/html/2303.00848v7,"§3.2, §4 Theorem 1; Appendix A,C",log SNR λで書いた積分は重みw(λ)と端点固定なら時間scheduleの形に不変。単調増加w(t)について部分積分し、その微分を時刻分布とするGaussian加法拡張データの期待負ELBOに等価と示す。
+F086,results,1,demonstrated,https://arxiv.org/html/2303.00848v7,§5.1 Table 2,ImageNet 64のε予測cosine baseline FID 1.55、単調sigmoid重み1.46（EDM sampler）。異なる重みでFIDを比較した生成実験。
+F086,contributions,1,author_claim,https://arxiv.org/html/2303.00848v7,§4–5,著者主張: 単調重みを拡張データELBOと解釈し、適応importance samplingと新重みを提案。
+F086,summary,1,interpretation,https://arxiv.org/html/2303.00848v7,§3–5,連続時間目的の再表現と、有限標本の勾配分散に基づくschedule設計を検証。
+F086,remaining_issues,1,interpretation,https://arxiv.org/html/2303.00848v7,"§3.2, §4–6",理論の不変性は連続積分、固定λ端点・同一wとλ条件付けの下であり、Monte Carlo勾配分散と有限訓練は不変でない。加法雑音拡張とsample FIDの結果は未来paired MSEや狭い出力rankの改善を保証しない。
+F087,social_background,1,not_stated,https://arxiv.org/html/2410.11081v2,§1,特定の社会的動機は記載なし。
+F087,technical_background,1,author_claim,https://arxiv.org/html/2410.11081v2,"§1, §4",連続時間consistencyは離散化を避ける一方、接線と時間埋め込みによって学習が不安定になる。
+F087,problem,1,author_claim,https://arxiv.org/html/2410.11081v2,§3–5,少数ステップ生成の連続時間consistencyを安定化・拡張する。
+F087,method,1,author_claim,https://arxiv.org/html/2410.11081v2,"§3–4, Appendix B,D","TrigFlowでx_t=cos(t)x0+sin(t)σd z、f=cos(t)x_t−sin(t)σd Fを使いf(x,0)=xを構造的に満たす。JVP接線の正規化・時間重み学習・安定化されたtime embeddingを採用。教師あり蒸留と直接consistency訓練を区別。"
+F087,results,1,demonstrated,https://arxiv.org/html/2410.11081v2,§5 Table 1,ImageNet64の直接sCTは1 NFE FID 2.04、2 NFE 1.48。CIFAR10では1 NFE 2.85、2 NFE 2.06。画像分布評価。
+F087,contributions,1,author_claim,https://arxiv.org/html/2410.11081v2,§4–5,著者主張: 正規化と時間条件付けにより連続時間consistencyの安定性とスケールを改善。
+F087,summary,1,interpretation,https://arxiv.org/html/2410.11081v2,§3–5,境界条件をhard-codeし接線のスケールとloss分散を制御する。
+F087,remaining_issues,1,interpretation,https://arxiv.org/html/2410.11081v2,"Limitations, §3–5",著者はlatent空間でsCTが蒸留に劣ること、画像artifact、教師依存、architecture変更を制約として挙げる。boundary identityは真のfuture条件付き平均や追加反復のMSE単調改善を保証しない。
+F088,social_background,1,not_stated,https://arxiv.org/html/2410.07303v2,§1,特定の社会的動機は記載なし。
+F088,technical_background,1,author_claim,https://arxiv.org/html/2410.07303v2,§1–2,少数step生成の誤差を抑えるreflowはnoiseと生成sampleの対を再利用する。
+F088,problem,1,author_claim,https://arxiv.org/html/2410.07303v2,§2–3,rectificationを一般diffusion形式へ拡張し低step生成を改善する。
+F088,method,1,author_claim,https://arxiv.org/html/2410.07303v2,"§2.1–2.4, Appendix III",教師ODEが生成したnoise–sample対を固定してε予測を再学習。first-order積分が任意の始終点で正確であることと軌道上一定ε予測の同値を示し、区間分割や追加consistency蒸留を提案。
+F088,results,1,demonstrated,https://arxiv.org/html/2410.07303v2,§3 Table 1,COCO2017 512pxで1 step FIDはrectified flow 47.91、rectified diffusion 27.26、蒸留後22.83。教師sampleへの学習コストを伴い未来MSEではない。
+F088,contributions,1,author_claim,https://arxiv.org/html/2410.07303v2,"§2.2, Appendix III",著者主張: 道筋のEuclidean直線性ではなく軌道上の一貫したnoise予測が一般の一段ODE積分を特徴付ける。
+F088,summary,1,interpretation,https://arxiv.org/html/2410.07303v2,§2–3,教師の生成対により低stepの一貫性を学ぶ。
+F088,remaining_issues,1,interpretation,https://arxiv.org/html/2410.07303v2,"§2.2, §2.4, Appendix II",完全な一貫性の議論は理想的予測、非交差、最適化・容量誤差なしを必要とする。教師の生成対応は真の現時点–未来対ではなく、教師の偏りを継承しpaired未来MSEは保証されない。著者は低stepで追加蒸留が必要と記載。
+F089,social_background,1,not_stated,https://arxiv.org/html/2206.00927v3,§1,特定の社会的動機は記載なし。
+F089,technical_background,1,author_claim,https://arxiv.org/html/2206.00927v3,§1–3,拡散ODE生成で通常の数値積分は多数のnetwork評価を要する。
+F089,problem,1,author_claim,https://arxiv.org/html/2206.00927v3,§3,固定された学習済み拡散ODEの少数評価での数値解を改善。
+F089,method,1,author_claim,https://arxiv.org/html/2206.00927v3,§3.1–3.2,log SNRを積分変数とし線形部分を解析的に積分、ε予測の指数重み付き積分をTaylor展開し1〜3次solverを作る。
+F089,results,1,demonstrated,https://arxiv.org/html/2206.00927v3,§4 Table 1,CIFAR10 18 NFEでDPM-Solver-2のFID 3.43、RK2(t) 7.25、RK2(λ) 42.04。同じ学習済み生成器の比較。
+F089,contributions,1,author_claim,https://arxiv.org/html/2206.00927v3,§3.2; Appendix B.1–B.5,Theorem 3.2は軌道に沿うk+1階までの連続微分、状態Lipschitz、最大log-SNR刻みO(1/M)でk次収束を主張。証明は重み付きTaylor展開と逐次誤差評価。
+F089,summary,1,interpretation,https://arxiv.org/html/2206.00927v3,§3–5,積分誤差を抑える方法で、生成分布品質とNFEを検証。
+F089,remaining_issues,1,interpretation,https://arxiv.org/html/2206.00927v3,"§3.2, Appendix B",収束先は学習されたODEの厳密解であり、モデル誤差や真の条件平均との距離は制御しない。有限の大stepで誤差の単調減少やpaired MSE改善も保証されない。現在flowが拡散ODEと異なれば導出を再確認する。
+F090,social_background,1,not_stated,https://arxiv.org/html/2608.19144v1,§1,特定の社会的動機は記載なし。
+F090,technical_background,1,author_claim,https://arxiv.org/html/2608.19144v1,§1–3,endpointを知るbridgeと現状態のみ見るMarkov場の二乗回帰の差を診断。
+F090,problem,1,author_claim,https://arxiv.org/html/2608.19144v1,§2–4,coupling、bridge、Markov projectionと確率current表現を分離し、学習前の圧縮困難さを評価。
+F090,method,1,author_claim,https://arxiv.org/html/2608.19144v1,"§2.1 Theorem 1, §3 Proposition 1, Appendix D",G=∫E Tr Var(u_t|X_t)dtは条件付き期待値へのHilbert空間射影によるCFM最小損失。正の滑らかな密度とFokker–Planck一意性の下、score補正をしたSDEは同じ周辺密度経路を持つ。
+F090,results,1,demonstrated,https://arxiv.org/html/2608.19144v1,§4 Tables 3–4,CIFAR10小型20k-step pilotで独立/mini-batch OTのproxy gap 3.25/2.34、FID 50.48/49.17、KID .0454/.0470。代理値はPCAとkNNによる推定で厳密な床ではない。
+F090,contributions,1,author_claim,https://arxiv.org/html/2608.19144v1,"§3 Theorem 2, Appendix E",Theorem 2は同一初期法則、両ODEの一意性、学習場の一様Lipschitzを仮定しW2終端誤差をe^L×投影場への二乗誤差平方根で抑える。証明はcouplingとGronwall。
+F090,summary,1,interpretation,https://arxiv.org/html/2608.19144v1,§3–4,既約な局所速度回帰損失と有限モデルによる追加誤差を分離。
+F090,remaining_issues,1,interpretation,https://arxiv.org/html/2608.19144v1,"§2–4, §7, Appendix B,D,E",GはCFM教師速度の既約二乗lossであり、周辺分布再現に不可避な誤差ではない。正確な条件付き平均場ならGが正でも周辺密度経路を再現でき、Theorem 2が制御するのはGを超える誤差。OTの生成coupling変更は実際の未来対を保たない場合がある。高次元kNNは過平滑化し、端点固定path KLは閉区間で一般に特異。

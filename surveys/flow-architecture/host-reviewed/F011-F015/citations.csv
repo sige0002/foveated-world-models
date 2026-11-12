@@ -1,0 +1,5 @@
+citing_id,cited_id,cited_title,cited_url,locator,priority_reason,scope_status
+F012,F011,Scalable Diffusion Models with Transformers,https://arxiv.org/abs/2212.09748v2,§2.5,同一backboneの直接比較,in_scope
+F014,F012,SiT: Exploring Flow and Diffusion-based Generative Models with Scalable Interpolant Transformers,https://arxiv.org/abs/2401.08740v2,§3–4,flow backboneと対照,in_scope
+F015,F014,Representation Alignment for Generation: Training Diffusion Transformers Is Easier Than You Think,https://arxiv.org/abs/2410.06940v4,§3–4,発展元と直接比較,in_scope
+F015,F013,All are Worth Words: A ViT Backbone for Diffusion Models,https://arxiv.org/abs/2209.12152v4,§2–3,skip backboneの比較,in_scope

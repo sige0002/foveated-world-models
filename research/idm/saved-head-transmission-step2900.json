@@ -1,0 +1,18 @@
+{
+  "checkpoint": 2900,
+  "pairs": 64,
+  "mu_reproduction_max_error": 0.0,
+  "future_swap_query_energy": 1.1071021678840622,
+  "future_swap_projected_energy": 0.04181035446694409,
+  "isotropic_same_norm_projection_expected_energy": 0.011547263027659032,
+  "actual_over_isotropic_projection_energy": 3.620802121402813,
+  "projected_coordinate_std_mean": 231.81737556583096,
+  "projected_delta_coordinate_centered_energy": 0.041471269964356995,
+  "projected_delta_radial_energy": 0.011796317877173113,
+  "projected_delta_tangent_energy": 0.029674952087183883,
+  "future_swap_layernorm_energy": 5.657934237233394e-07,
+  "future_swap_mu_energy": 3.135816733473983e-07,
+  "future_swap_logvar_energy": 1.92107338385986e-07,
+  "layernorm_first_order_relative_squared_error": 2.5623301988055877e-08,
+  "limitation": "Saved step2900 queries only. Same-current cross-episode future swaps may be OOD. Energies depend on coordinate units, and projection/LN response does not identify action information. Step6501 encoder/head response was not measured."
+}

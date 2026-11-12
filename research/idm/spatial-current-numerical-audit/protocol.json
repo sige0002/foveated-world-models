@@ -1,0 +1,36 @@
+{
+  "reason": "Numerical sensitivity at boundary-selectedalpha1e-8; all selections fixed from prior train-only CV",
+  "selected": {
+    "zero": {
+      "config": "spatial_rbf1",
+      "alpha": 1e-08
+    },
+    "original6501": {
+      "config": "spatial_rbf1",
+      "alpha": 1e-08
+    },
+    "reference42": {
+      "config": "spatial_rbf1",
+      "alpha": 0.01
+    }
+  },
+  "prior_protocol_sha256": "df170c77236b481afb9f8a592a6142eedb824b160b42b7ba75455589de8e502e",
+  "prior_selection_sha256": "0f20cd1782d3bfc7a3d4a9f9cbcc736f46195c471948cb9e41ce1eb43c554a46",
+  "geometry_change": "All current-feature means/std/Gram computations float64 instead of float32; same normalization, kernels and selected hyperparameters",
+  "reselection": false,
+  "source_sha256": {
+    "/home/sadasue/foveated-world-models/runs/frozen-idm-step6501/train.pt": "0201e2b644ca6dce7cfe17d76dd7251737c8e2a435d41d8489f0583dd89cb789",
+    "/home/sadasue/foveated-world-models/research/idm/observed-displacement-labels/train.pt": "4869894a4ce58af0ee18493931e6e0bf01636f1115b546323e9817b74b07dc0a",
+    "/home/sadasue/foveated-world-models/runs/reference-idm-with-prior6501/train.pt": "5483801a9d2dfc17788e7d251e4cfc11bed8b5749f0619da99cb9239a7213aea",
+    "/home/sadasue/foveated-world-models/runs/reference-idm-with-prior6501/cache_manifest.json": "6b5e33dbac36c60948ac49981a513955d1cd5e54c168c36b2ac5199b8fcb01ed",
+    "/home/sadasue/foveated-world-models/runs/frozen-idm-step6501/validation.pt": "711d167d2e00f2fbb0fa374c6c113347714b8b2d1349ce573a30c5b137967be4",
+    "/home/sadasue/foveated-world-models/research/idm/observed-displacement-labels/validation.pt": "a052b2054e45f4de9c3673bfb718962267af50354a3cf6ef36d9c7dc15009214",
+    "/home/sadasue/foveated-world-models/runs/reference-idm-with-prior6501/validation.pt": "cf09e8080ad8c842ca37b235f6082ee35dac152b0433576abb805002b1f4b754",
+    "/home/sadasue/foveated-world-models/research/idm/observed-displacement-labels/observed96.pt": "ef024d2e15f37d58d84e7cbe02b2f1fb3c580b80b55fe83d83d7dda75eab7a95",
+    "/home/sadasue/foveated-world-models/runs/research-unused-96-prior6501/validation.pt": "456a09b4e3cc3c6887732327c25d3ac7d0bd98f7c4898e4ace885298e184220f",
+    "/home/sadasue/foveated-world-models/runs/research-unused-96-prior6501/cache_manifest.json": "4f3c532015d0ca3ab293e775431cb653d9a5684b784c2fcb7abedfcf35bcbde6",
+    "/home/sadasue/foveated-world-models/research/idm/observed-displacement-labels/manifest.json": "1017f24029dbfe5d7d63a5ce058ccb3efb76e52de233f0fe824bf7f0aece76a1"
+  },
+  "threads": 2,
+  "script_sha256": "d37c3396c060f74894f4d7b8375ef07cce6a991b2faafb54d47669c250cbd3bc"
+}

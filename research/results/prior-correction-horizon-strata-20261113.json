@@ -1,0 +1,25 @@
+{
+  "summary": {
+    "nominal_1p2_seconds": {
+      "count": 69,
+      "actual_dt_min": 1.1999998092651367,
+      "actual_dt_max": 1.200000286102295,
+      "original6501_mse": 0.11994207882578822,
+      "direct_three_seed_mean_mse": 0.10222770809983284,
+      "relative_reduction": 0.14769104303823932
+    },
+    "shorter_than_1p2": {
+      "count": 27,
+      "actual_dt_min": 0.06666707992553711,
+      "actual_dt_max": 1.1333332061767578,
+      "original6501_mse": 0.08260543603036138,
+      "direct_three_seed_mean_mse": 0.07010656093925605,
+      "relative_reduction": 0.15130814255990865
+    }
+  },
+  "sources": {
+    "research/results/prior-correction-unused96-first-evaluation-20261113.json": "5f720c8c63f1e3af908ff5c06315eb1a323ff6855520f1c36c9768597746c370",
+    "research/results/prior-correction-unused96-seed44-20261113.json": "9c680725378f81139f0d23ca91b0a4166e5fceb8287300a861708a3dbe1b2ad5"
+  },
+  "scope": "Post-hoc descriptive split on already observed96 using recorded physical dt; fixed 1.2s tolerance1e-4. No retraining or selection. Mean per-model MSE, not an ensemble."
+}

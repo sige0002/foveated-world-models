@@ -1,0 +1,4 @@
+{
+  "reviewed_at": "2026-11-12T17:19:51.015331+00:00",
+  "checks": "Host checked F086 fixed-weight/endpoints change-of-variable invariance, importance-sampling variance distinction and monotonic integration-by-parts ELBO; F087 TrigFlow boundary/velocity and time-embedding singularity plus latent-space sCT limits; F088 exact arbitrary-interval first-order property requires constant epsilon on trajectory, teacher-pair limits and Table2; F089 semilinear Taylor construction, AppendixB regularity assumptions and Table1 NFE18 comparison; F090 projection identity, well-posed score-corrected SDE condition, excess-error rather than irreducible-gap terminal bound and Tables3/4 PCA proxy/pilot limits. No paired future-MSE guarantee inferred."
+}

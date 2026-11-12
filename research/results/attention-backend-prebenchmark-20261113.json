@@ -1,0 +1,7 @@
+{
+  "worktree": "/home/sadasue/fwm-attention-audit-20261113",
+  "source_snapshot_sha256": "85eb1b1dbbcace4f0eff6867a1bcbfa02860914d542bb4f8d23850bac89c0e60",
+  "script_sha256": "7082b8ee4144125b1f9561fa78ec8a5d7ee69850485d09fde79c96badecbc0af",
+  "correctness_result": "research/results/attention-backend-equivalence-20261113.json",
+  "timing": "Not executed; wait until competing training/probes finish. Same-weight alternating inference and forward-backward at CPU2 highest B2; repeated samples retained. Correction only, not production end-to-end."
+}

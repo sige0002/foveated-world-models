@@ -1,0 +1,56 @@
+{
+  "passed": true,
+  "training_started": false,
+  "include_constant_control": true,
+  "counts": {
+    "train": 128,
+    "validation": 64
+  },
+  "representation_shapes": {
+    "train": {
+      "direction": [
+        128,
+        1,
+        34
+      ],
+      "direction_statistics": [
+        128,
+        1,
+        34
+      ],
+      "calibrated_raw": [
+        128,
+        1,
+        34
+      ],
+      "constant": [
+        128,
+        1,
+        34
+      ]
+    },
+    "validation": {
+      "direction": [
+        64,
+        1,
+        34
+      ],
+      "direction_statistics": [
+        64,
+        1,
+        34
+      ],
+      "calibrated_raw": [
+        64,
+        1,
+        34
+      ],
+      "constant": [
+        64,
+        1,
+        34
+      ]
+    }
+  },
+  "script_sha256": "81aa460446cdd4cc3caf153ad205359a792a9a57fea1305e4450e0974706a41e"
+}

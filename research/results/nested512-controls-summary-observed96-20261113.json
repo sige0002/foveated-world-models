@@ -1,0 +1,51 @@
+{
+  "scope": "Previously observed96; fixed400; true-future posterior reconstruction. Mean per-model risks, not a prediction ensemble. Bootstrap conditions on fitted models.",
+  "sources": {
+    "research/results/nested512-direct-constant400-observed96-20261113.json": "9e62da2fb04a1c05ad2257f31699f2925c9ceff636f9ecac971737ce484c2bef",
+    "research/results/nested512-extra-constant400-observed96-20261113.json": "cbc690c3b94adcb932886addb2524ef04f3d07a99bb21ff38991b5f5b3e94089",
+    "research/results/nested512-flow400-observed96-20261113.json": "85844bdfb716a06875a4dba8e0df11b833625ba9412ab192b0376a5698d9b92b",
+    "research/results/nested512-direct43-400-observed96-20261113.json": "33b84c9c89d7dc7100553aa5f3b9bb6693593c123026a8216a560ab28408932d",
+    "research/results/nested512-direct44-400-observed96-20261113.json": "c1ad11e1695de02ca5965a55931574c89638210901804fe8c2d39321212def0a"
+  },
+  "reference_per_seed": [
+    0.0855736662245666,
+    0.0878833422708946,
+    0.08667134796269238
+  ],
+  "constant_per_seed": [
+    0.09359084634343162,
+    0.09557869281464566,
+    0.09613111719954759
+  ],
+  "reference_vs_constant": {
+    "candidate_mse": 0.08670945215271786,
+    "baseline_mse": 0.09510021878587498,
+    "difference": -0.0083907666331571,
+    "relative_reduction": 0.0882307815931479,
+    "paired_episode_ci95": [
+      -0.010807160278070821,
+      -0.006292631592239359
+    ]
+  },
+  "flow_sample_vs_direct42": {
+    "candidate_mse": 0.11011035061286141,
+    "baseline_mse": 0.0855736662245666,
+    "difference": 0.024536684388294816,
+    "relative_reduction": -0.28673171865634983,
+    "paired_episode_ci95": [
+      0.022200339451471034,
+      0.02724677397442671
+    ]
+  },
+  "flow_mean4_vs_direct42": {
+    "candidate_mse": 0.10064542656376337,
+    "baseline_mse": 0.0855736662245666,
+    "difference": 0.015071760339196771,
+    "relative_reduction": -0.17612614959892836,
+    "paired_episode_ci95": [
+      0.012774701802603278,
+      0.017734434834468023
+    ]
+  },
+  "limitations": "Additional IDM-head pretraining cost is not matched; single flow seed; constant code tests extra capacity, not semantic action identity. Equal training steps are not equal training/inference FLOPs."
+}

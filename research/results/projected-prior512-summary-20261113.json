@@ -1,0 +1,78 @@
+{
+  "source_sha256": {
+    "projected-prior512-observed96-20261113.json": "85330a87d8fdc4c670565fcc772cba3d6b2c8473baede80f59a843a20033144f",
+    "nested512-direct-constant400-observed96-20261113.json": "9e62da2fb04a1c05ad2257f31699f2925c9ceff636f9ecac971737ce484c2bef",
+    "nested512-flow400-observed96-20261113.json": "85844bdfb716a06875a4dba8e0df11b833625ba9412ab192b0376a5698d9b92b"
+  },
+  "scope": "Fixed512 train/400 updates/seed42; reused96 posterior reconstruction. Conditional bootstrap excludes model selection and training uncertainty.",
+  "metrics": {
+    "full_direct": {
+      "mse": 0.0855736662245666,
+      "mean_mse": 0.0855736662245666,
+      "shuffled_mse": 0.10546104173408821,
+      "copy_mse": 0.1814084135888455,
+      "prior_mse": 0.1042185661693414
+    },
+    "full_flow": {
+      "mse": 0.11011035061286141,
+      "mean_mse": 0.10064542656376337,
+      "shuffled_mse": 0.11955545710710187,
+      "copy_mse": 0.1814084135888455,
+      "prior_mse": 0.1042185661693414
+    },
+    "projected_direct": {
+      "mse": 0.08903000127368917,
+      "mean_mse": 0.08903000127368917,
+      "shuffled_mse": 0.10479668452171609,
+      "copy_mse": 0.1814084135888455,
+      "prior_mse": 0.1042185661693414
+    },
+    "projected_flow": {
+      "mse": 0.10440910192361723,
+      "mean_mse": 0.1015599404539292,
+      "shuffled_mse": 0.11402720053835462,
+      "copy_mse": 0.1814084135888455,
+      "prior_mse": 0.1042185661693414
+    }
+  },
+  "comparisons": {
+    "direct_compression": {
+      "difference": 0.003456335049122572,
+      "relative_change_percent": 4.03901714348931,
+      "ci95": [
+        0.0024431210389593617,
+        0.004736736451741305
+      ]
+    },
+    "flow_mean4_compression": {
+      "difference": 0.0009145138901658356,
+      "relative_change_percent": 0.9086492266853874,
+      "ci95": [
+        0.0005327787725642945,
+        0.0013054176849739934
+      ]
+    },
+    "flow_sample_compression": {
+      "difference": -0.005701248689244191,
+      "relative_change_percent": -5.177759091231382,
+      "ci95": [
+        -0.006091040695901029,
+        -0.005307510172133334
+      ]
+    },
+    "projected_flow_vs_projected_direct": {
+      "difference": 0.012529939180240035,
+      "relative_change_percent": 14.07383915644509,
+      "ci95": [
+        0.010394043043682662,
+        0.0149581421118152
+      ]
+    }
+  },
+  "estimated_mean_prediction_risk": {
+    "full_flow": 0.09749045188073069,
+    "projected_flow": 0.10061021996403319
+  },
+  "mean_risk_note": "4 iid generation-noise draws: unbiased conditional mean-risk estimator, not actual infinite ensemble performance.",
+  "decision": "Reject fixed PCA128 projection as an accuracy improvement: direct and flow mean4 worsen. Flow single-sample improves but lower noise variance does not imply better mean prediction. No conclusion against nonlinear compression methods."
+}

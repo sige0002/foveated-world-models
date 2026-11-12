@@ -1,0 +1,5 @@
+citing_id,cited_id,cited_title,cited_url,locator,priority_reason,scope_status
+F071,F076,Frozen Forecasting: A Unified Evaluation,https://arxiv.org/abs/2507.13942v2,"§2, §5.1–5.3",同じDINOv3特徴で再実装した先行確率予測,in_scope
+F071,F005,Diffusion Transformers with Representation Autoencoders,https://arxiv.org/abs/2510.11690v1,"§3.2, §5.4",wide headの先行研究,in_scope
+F076,F051,DINO-Foresight: Looking into the Future with DINO,https://arxiv.org/abs/2412.11673v2,§2,決定論的凍結特徴予測,in_scope
+F077,,ResShift: Efficient Diffusion Model for Image Super-Resolution by Residual Shifting,,Appendix A.5,残差条件付き拡散の先行・比較,unresolved

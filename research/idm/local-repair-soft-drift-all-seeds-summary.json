@@ -1,0 +1,498 @@
+{
+  "scope": "Descriptive train-only drift and recorded minibatch-gradient diagnostics of all completed H/HD42/43/44. Initial five-run snapshot is preserved separately; no result-based inclusion. No fitting, hyperparameter selection, or future-swap/probe execution.",
+  "runs": {
+    "H42": {
+      "source_sha256": "3da4ccd8091bad2c90b962bba05236d4681abb4be1c4e5db6a98f1748eb70243",
+      "checkpoint_sha256": "063be7c22cec9bd39d4bd506f229b967ff6e918540b7758a51b402506a196d63",
+      "count": 512,
+      "mean": 5.6131053587314454,
+      "quantiles": {
+        "0.5": 0.6628747880458832,
+        "0.9": 9.168553543090843,
+        "0.95": 18.666645050048814,
+        "0.99": 80.65189842224112
+      },
+      "maximum": 380.8436279296875,
+      "above_one": 213,
+      "above_ten": 47,
+      "largest_one_share": 0.1325175928941189,
+      "largest_five_share": 0.362940653817117,
+      "largest_26_share": 0.6885345305478541,
+      "mean_without_largest_one": 4.878799052330358,
+      "mean_without_largest_five": 3.611146330775572,
+      "top_five": [
+        {
+          "episode": "61",
+          "index": 507,
+          "drift": 380.8436279296875
+        },
+        {
+          "episode": "1635",
+          "index": 8368,
+          "drift": 225.25831604003906
+        },
+        {
+          "episode": "86",
+          "index": 842,
+          "drift": 190.98370361328125
+        },
+        {
+          "episode": "1502",
+          "index": 7781,
+          "drift": 148.23458862304688
+        },
+        {
+          "episode": "1141",
+          "index": 6029,
+          "drift": 97.73851776123047
+        }
+      ],
+      "gradient_diagnostics": [
+        {
+          "step": 1,
+          "head_mse_norm": 0.02168120381386315,
+          "head_weighted_drift_norm": 0.0,
+          "weighted_drift_to_mse_ratio": 0.0,
+          "minibatch_drift": 0.0,
+          "global_active_gradient_norm": 0.021681105718016624
+        },
+        {
+          "step": 10,
+          "head_mse_norm": 0.035633062985593766,
+          "head_weighted_drift_norm": 2.243120675447526,
+          "weighted_drift_to_mse_ratio": 62.950543329783535,
+          "minibatch_drift": 101.06964111328125,
+          "global_active_gradient_norm": 2.240140438079834
+        },
+        {
+          "step": 100,
+          "head_mse_norm": 0.01641867732534975,
+          "head_weighted_drift_norm": 0.12367104843977696,
+          "weighted_drift_to_mse_ratio": 7.532339298052593,
+          "minibatch_drift": 1.8366559743881226,
+          "global_active_gradient_norm": 0.12673790752887726
+        },
+        {
+          "step": 400,
+          "head_mse_norm": 0.01934677488755609,
+          "head_weighted_drift_norm": 0.19847893953196155,
+          "weighted_drift_to_mse_ratio": 10.259019432723324,
+          "minibatch_drift": 5.355893135070801,
+          "global_active_gradient_norm": 0.1970401108264923
+        }
+      ],
+      "drift_scope_failed": true
+    },
+    "H43": {
+      "source_sha256": "4babcf6eb7516e22f34b146f049834e582e4d5cd9599c75ec417ce8e28355954",
+      "checkpoint_sha256": "199849faffeb679c197a76759fe5a36b43b80281b3eb049f962d25f7af730ad0",
+      "count": 512,
+      "mean": 7.080704333370704,
+      "quantiles": {
+        "0.5": 0.8206930756568909,
+        "0.9": 8.947948741912851,
+        "0.95": 25.790581035614007,
+        "0.99": 102.37929817199695
+      },
+      "maximum": 916.09326171875,
+      "above_one": 237,
+      "above_ten": 46,
+      "largest_one_share": 0.2526930327201899,
+      "largest_five_share": 0.4081698777087476,
+      "largest_26_share": 0.6988529943200449,
+      "mean_without_largest_one": 5.301814788585226,
+      "mean_without_largest_five": 4.23190127239017,
+      "top_five": [
+        {
+          "episode": "86",
+          "index": 842,
+          "drift": 916.09326171875
+        },
+        {
+          "episode": "1527",
+          "index": 7926,
+          "drift": 197.118408203125
+        },
+        {
+          "episode": "1046",
+          "index": 5729,
+          "drift": 140.3901824951172
+        },
+        {
+          "episode": "1756",
+          "index": 9094,
+          "drift": 116.75601196289062
+        },
+        {
+          "episode": "1719",
+          "index": 8881,
+          "drift": 109.38880920410156
+        }
+      ],
+      "gradient_diagnostics": [
+        {
+          "step": 1,
+          "head_mse_norm": 0.031229511351366358,
+          "head_weighted_drift_norm": 0.0,
+          "weighted_drift_to_mse_ratio": 0.0,
+          "minibatch_drift": 0.0,
+          "global_active_gradient_norm": 0.03122945874929428
+        },
+        {
+          "step": 10,
+          "head_mse_norm": 0.019056614657037414,
+          "head_weighted_drift_norm": 0.039067429916537035,
+          "weighted_drift_to_mse_ratio": 2.050071884205825,
+          "minibatch_drift": 1.0121821165084839,
+          "global_active_gradient_norm": 0.04340552166104317
+        },
+        {
+          "step": 100,
+          "head_mse_norm": 0.02159773171337322,
+          "head_weighted_drift_norm": 0.01315411326818121,
+          "weighted_drift_to_mse_ratio": 0.6090506837825123,
+          "minibatch_drift": 0.33445537090301514,
+          "global_active_gradient_norm": 0.0249958299100399
+        },
+        {
+          "step": 400,
+          "head_mse_norm": 0.01928615453007505,
+          "head_weighted_drift_norm": 0.16333829938198965,
+          "weighted_drift_to_mse_ratio": 8.4691999707499,
+          "minibatch_drift": 3.685058355331421,
+          "global_active_gradient_norm": 0.1646982878446579
+        }
+      ],
+      "drift_scope_failed": true
+    },
+    "H44": {
+      "source_sha256": "5a3472912884402916bb0ae5142e591b78dbbe61626f859dc6052e64be9fc57c",
+      "checkpoint_sha256": "5de7519a48f68e78cc93ce22dcc2299fb19d5722f575f723c2f247a99298ed4b",
+      "count": 512,
+      "mean": 6.817528540602325,
+      "quantiles": {
+        "0.5": 0.9173880815505981,
+        "0.9": 10.149831485748301,
+        "0.95": 20.342458438873283,
+        "0.99": 96.25005561828605
+      },
+      "maximum": 453.65899658203125,
+      "above_one": 246,
+      "above_ten": 52,
+      "largest_one_share": 0.12996685271243433,
+      "largest_five_share": 0.38519605775310534,
+      "largest_26_share": 0.6702380119481524,
+      "mean_without_largest_one": 5.9430833976641075,
+      "mean_without_largest_five": 4.232779157099073,
+      "top_five": [
+        {
+          "episode": "86",
+          "index": 842,
+          "drift": 453.65899658203125
+        },
+        {
+          "episode": "61",
+          "index": 507,
+          "drift": 375.14794921875
+        },
+        {
+          "episode": "1719",
+          "index": 8881,
+          "drift": 275.07904052734375
+        },
+        {
+          "episode": "1676",
+          "index": 8633,
+          "drift": 132.95082092285156
+        },
+        {
+          "episode": "1660",
+          "index": 8531,
+          "drift": 107.7187728881836
+        }
+      ],
+      "gradient_diagnostics": [
+        {
+          "step": 1,
+          "head_mse_norm": 0.07285799062130836,
+          "head_weighted_drift_norm": 0.0,
+          "weighted_drift_to_mse_ratio": 0.0,
+          "minibatch_drift": 0.0,
+          "global_active_gradient_norm": 0.07285772264003754
+        },
+        {
+          "step": 10,
+          "head_mse_norm": 0.06360233687083393,
+          "head_weighted_drift_norm": 0.22539105258060177,
+          "weighted_drift_to_mse_ratio": 3.543754265481386,
+          "minibatch_drift": 5.522920608520508,
+          "global_active_gradient_norm": 0.27401357889175415
+        },
+        {
+          "step": 100,
+          "head_mse_norm": 0.03240405556968573,
+          "head_weighted_drift_norm": 1.2856252402357422,
+          "weighted_drift_to_mse_ratio": 39.67482519189529,
+          "minibatch_drift": 16.11107635498047,
+          "global_active_gradient_norm": 1.2899969816207886
+        },
+        {
+          "step": 400,
+          "head_mse_norm": 0.018250113900198622,
+          "head_weighted_drift_norm": 0.09418438904162216,
+          "weighted_drift_to_mse_ratio": 5.160756231806154,
+          "minibatch_drift": 2.3696391582489014,
+          "global_active_gradient_norm": 0.0952744334936142
+        }
+      ],
+      "drift_scope_failed": true
+    },
+    "HD42": {
+      "source_sha256": "a569be3fa7ad94b867f64e0938922553d5988daf5a075673872f2d51cdc4d4cf",
+      "checkpoint_sha256": "b1c7162d5e875c59fbef60849af1e87658ac302bb696b7562a86180e679f9560",
+      "count": 512,
+      "mean": 6.712424473521878,
+      "quantiles": {
+        "0.5": 0.5016881823539734,
+        "0.9": 8.687644386291524,
+        "0.95": 25.355135536193846,
+        "0.99": 96.4813897705078
+      },
+      "maximum": 665.8165283203125,
+      "above_one": 176,
+      "above_ten": 47,
+      "largest_one_share": 0.19373371156805044,
+      "largest_five_share": 0.3954152913530476,
+      "largest_26_share": 0.7466439292015301,
+      "mean_without_largest_one": 5.4225925677551645,
+      "mean_without_largest_five": 4.098251178806934,
+      "top_five": [
+        {
+          "episode": "1635",
+          "index": 8368,
+          "drift": 665.8165283203125
+        },
+        {
+          "episode": "1713",
+          "index": 8851,
+          "drift": 216.91029357910156
+        },
+        {
+          "episode": "1661",
+          "index": 8539,
+          "drift": 176.7744903564453
+        },
+        {
+          "episode": "86",
+          "index": 842,
+          "drift": 163.16195678710938
+        },
+        {
+          "episode": "1698",
+          "index": 8768,
+          "drift": 136.2847137451172
+        }
+      ],
+      "gradient_diagnostics": [
+        {
+          "step": 1,
+          "head_mse_norm": 0.021681204012665958,
+          "head_weighted_drift_norm": 0.0,
+          "weighted_drift_to_mse_ratio": 0.0,
+          "minibatch_drift": 0.0,
+          "global_active_gradient_norm": 0.03831930458545685
+        },
+        {
+          "step": 10,
+          "head_mse_norm": 0.042167109360245314,
+          "head_weighted_drift_norm": 2.2025987304883614,
+          "weighted_drift_to_mse_ratio": 52.234994617984114,
+          "minibatch_drift": 97.54212188720703,
+          "global_active_gradient_norm": 2.1960625648498535
+        },
+        {
+          "step": 100,
+          "head_mse_norm": 0.0157829633075451,
+          "head_weighted_drift_norm": 0.1232801161444495,
+          "weighted_drift_to_mse_ratio": 7.810961334841031,
+          "minibatch_drift": 1.7818148136138916,
+          "global_active_gradient_norm": 0.12716111540794373
+        },
+        {
+          "step": 400,
+          "head_mse_norm": 0.027478615346540933,
+          "head_weighted_drift_norm": 0.07922668434314056,
+          "weighted_drift_to_mse_ratio": 2.8832123942196306,
+          "minibatch_drift": 1.7843607664108276,
+          "global_active_gradient_norm": 0.0995689108967781
+        }
+      ],
+      "drift_scope_failed": true
+    },
+    "HD43": {
+      "source_sha256": "cac77e541abb9c06f4c0c6c86b5460d795cf248f842c9ad58d9fb964ba53c74a",
+      "checkpoint_sha256": "0ee821ff8895b71359c86b67658286259e7a05bfd2acb40bd826f7972b37cc7f",
+      "count": 512,
+      "mean": 7.950505908156629,
+      "quantiles": {
+        "0.5": 0.6747313737869263,
+        "0.9": 10.099928092956555,
+        "0.95": 24.393757820129395,
+        "0.99": 119.56032424926758
+      },
+      "maximum": 661.2777709960938,
+      "above_one": 219,
+      "above_ten": 52,
+      "largest_one_share": 0.16244980651504237,
+      "largest_five_share": 0.4812715795548005,
+      "largest_26_share": 0.747577101588951,
+      "mean_without_largest_one": 6.671978970606849,
+      "mean_without_largest_five": 4.16482549545739,
+      "top_five": [
+        {
+          "episode": "86",
+          "index": 842,
+          "drift": 661.2777709960938
+        },
+        {
+          "episode": "1756",
+          "index": 9094,
+          "drift": 407.0995178222656
+        },
+        {
+          "episode": "1635",
+          "index": 8368,
+          "drift": 395.84588623046875
+        },
+        {
+          "episode": "1527",
+          "index": 7926,
+          "drift": 301.1971435546875
+        },
+        {
+          "episode": "1046",
+          "index": 5729,
+          "drift": 193.67218017578125
+        }
+      ],
+      "gradient_diagnostics": [
+        {
+          "step": 1,
+          "head_mse_norm": 0.03122951120833219,
+          "head_weighted_drift_norm": 0.0,
+          "weighted_drift_to_mse_ratio": 0.0,
+          "minibatch_drift": 0.0,
+          "global_active_gradient_norm": 0.04641471430659294
+        },
+        {
+          "step": 10,
+          "head_mse_norm": 0.08381315932722429,
+          "head_weighted_drift_norm": 0.03336303792572032,
+          "weighted_drift_to_mse_ratio": 0.3980644351499025,
+          "minibatch_drift": 0.8508239984512329,
+          "global_active_gradient_norm": 0.11060985922813416
+        },
+        {
+          "step": 100,
+          "head_mse_norm": 0.024515216207002644,
+          "head_weighted_drift_norm": 0.018382245285404896,
+          "weighted_drift_to_mse_ratio": 0.749830029243393,
+          "minibatch_drift": 0.46239718794822693,
+          "global_active_gradient_norm": 0.04545671492815018
+        },
+        {
+          "step": 400,
+          "head_mse_norm": 0.026776062370061145,
+          "head_weighted_drift_norm": 0.18647701937974678,
+          "weighted_drift_to_mse_ratio": 6.964318233298205,
+          "minibatch_drift": 3.784248113632202,
+          "global_active_gradient_norm": 0.19447670876979828
+        }
+      ],
+      "drift_scope_failed": true
+    },
+    "HD44": {
+      "source_sha256": "1f641a4ecb0b0109ea0ebce0738731d6771dc73f533f7f3362595993308ff1ed",
+      "checkpoint_sha256": "5d3d778684cfb4ceab45c5c46cfd93b51d932cf7d695d6ead9391c00e9bd812a",
+      "count": 512,
+      "mean": 6.296171554249668,
+      "quantiles": {
+        "0.5": 0.7478586137294769,
+        "0.9": 9.733102416992194,
+        "0.95": 22.126203250885,
+        "0.99": 106.06827072143506
+      },
+      "maximum": 557.01025390625,
+      "above_one": 222,
+      "above_ten": 51,
+      "largest_one_share": 0.1727892327562688,
+      "largest_five_share": 0.40108000602059846,
+      "largest_26_share": 0.6831197646092453,
+      "mean_without_largest_one": 5.218453193482544,
+      "mean_without_largest_five": 3.808091422159012,
+      "top_five": [
+        {
+          "episode": "86",
+          "index": 842,
+          "drift": 557.01025390625
+        },
+        {
+          "episode": "1756",
+          "index": 9094,
+          "drift": 243.858642578125
+        },
+        {
+          "episode": "1676",
+          "index": 8633,
+          "drift": 223.6337890625
+        },
+        {
+          "episode": "1719",
+          "index": 8881,
+          "drift": 142.76470947265625
+        },
+        {
+          "episode": "1635",
+          "index": 8368,
+          "drift": 125.67008972167969
+        }
+      ],
+      "gradient_diagnostics": [
+        {
+          "step": 1,
+          "head_mse_norm": 0.07285799018342573,
+          "head_weighted_drift_norm": 0.0,
+          "weighted_drift_to_mse_ratio": 0.0,
+          "minibatch_drift": 0.0,
+          "global_active_gradient_norm": 0.0838371142745018
+        },
+        {
+          "step": 10,
+          "head_mse_norm": 0.4353106916220776,
+          "head_weighted_drift_norm": 0.2078565673381158,
+          "weighted_drift_to_mse_ratio": 0.4774901497677205,
+          "minibatch_drift": 4.337646007537842,
+          "global_active_gradient_norm": 0.622599184513092
+        },
+        {
+          "step": 100,
+          "head_mse_norm": 0.04040727746548396,
+          "head_weighted_drift_norm": 0.4908901437698694,
+          "weighted_drift_to_mse_ratio": 12.148557749014135,
+          "minibatch_drift": 9.400986671447754,
+          "global_active_gradient_norm": 0.4956566095352173
+        },
+        {
+          "step": 400,
+          "head_mse_norm": 0.03845883841572626,
+          "head_weighted_drift_norm": 0.09743684216112397,
+          "weighted_drift_to_mse_ratio": 2.533535753416851,
+          "minibatch_drift": 2.3818376064300537,
+          "global_active_gradient_norm": 0.12040703743696213
+        }
+      ],
+      "drift_scope_failed": true
+    }
+  },
+  "script_sha256": "0f16bdef9cc864b18353720aaa854f2f7c995e5bbf4233b92b0a25ab6c0175e3"
+}

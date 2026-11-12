@@ -1,0 +1,11 @@
+/home/sadasue/foveated-world-models/.venv/lib/python3.12/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+test_dual_matches_primal_with_unpenalized_intercept (research.idm.test_displacement_ridge.RidgeTests.test_dual_matches_primal_with_unpenalized_intercept) ... ok
+test_group_folds_never_split_episode (research.idm.test_displacement_ridge.RidgeTests.test_group_folds_never_split_episode) ... ok
+test_validation_not_used_in_scaler (research.idm.test_displacement_ridge.RidgeTests.test_validation_not_used_in_scaler) ... ok
+test_zero_features_and_target_floors (research.idm.test_displacement_ridge.RidgeTests.test_zero_features_and_target_floors) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.005s
+
+OK

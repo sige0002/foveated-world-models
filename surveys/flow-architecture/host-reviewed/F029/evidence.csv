@@ -1,0 +1,10 @@
+paper_id,field,item_index,kind,source_url,locator,note
+F029,social_background,1,not_stated,https://arxiv.org/html/2303.16852v3,§1,社会的需要の明示的記載なし。
+F029,technical_background,1,author_claim,https://arxiv.org/html/2303.16852v3,§1–2,SB近似は高次元計算や反復誤差蓄積が難しい。
+F029,problem,1,author_claim,https://arxiv.org/html/2303.16852v3,§3–4,端点周辺分布を保つ交互射影でSchrödinger bridgeを近似する。
+F029,method,1,demonstrated,https://arxiv.org/html/2303.16852v3,"§3.2–4, Theorem 8; Appendix C.3–C.6",Markov射影とreciprocal射影を交互に適用。理想化した射影・有限KL・基準測度等の仮定下の収束を主張し、KL分解、単調性と極限の一意性で論証する。実用法は標本化して端点対を更新する。
+F029,results,1,demonstrated,https://arxiv.org/html/2303.16852v3,§6 2D Experiments,2D moons→8gaussians、Euler 20 stepsの2-Wasserstein: DSBM-IMF 0.838±0.098、DSB 0.987±0.324、OT-CFM 0.716±0.187、5 seed。一般輸送の評価。
+F029,contributions,1,author_claim,https://arxiv.org/html/2303.16852v3,§3–4,IMFとそのbridge matching実装を導入。
+F029,summary,1,interpretation,https://arxiv.org/html/2303.16852v3,§3–4,端点周辺分布を保持しても実際の現フレーム・未来フレームの結合は保持されない。paired taskでは真の組を維持して評価する必要がある。
+F029,remaining_issues,1,author_claim,https://arxiv.org/html/2303.16852v3,§7,著者: cachingにサンプル生成が必要、小σでは数値的に難しく、CIFAR-10の改善は小さい。調査者: 理想射影の収束は有限ネットやpaired MSEを保証しない。
+F029,remaining_issues,2,unverified,https://arxiv.org/html/2303.16852v3,"Appendix C.3–C.6, especially C.6",Host and independent reader checked proof; weak closure and weak-to-KL steps require further justification. See f029_proof_review.md; no counterexample to IMF theorem claimed.

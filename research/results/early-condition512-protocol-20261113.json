@@ -1,0 +1,50 @@
+{
+  "status": "prespecified_before_training",
+  "arms": [
+    "real",
+    "constant",
+    "rms_constant"
+  ],
+  "model_seed": 42,
+  "minibatch_seed": 1042,
+  "steps": 400,
+  "batch_size": 8,
+  "cpu_threads_per_arm": 4,
+  "lr": 0.0003,
+  "weight_decay": 0.01,
+  "gradient_clip": 1,
+  "trainable_parameters": 32768,
+  "train": 512,
+  "development": 64,
+  "previously_observed": 96,
+  "fixed_endpoint": true,
+  "input": "Frozen reference42 posterior mean code; not action-conditioned forecasting",
+  "hypothesis": "Changing the code input map improves utilization inside the frozen pretrained decoder. Compare real codes to two information-free constant controls.",
+  "amendment_before_training": "Added train-RMS-scaled mean-code control after train-only gradient audit found code RMS norm 4.48895 vs mean norm 0.455668. No evaluation used for this amendment.",
+  "limitations": [
+    "Single seed pilot",
+    "Previously observed evaluation data",
+    "Constant controls have effective capacity 1024, not 32768",
+    "RMS matching does not match AdamW function-space regularization",
+    "Frozen pretrained network still requires full backpropagation",
+    "Not compute matched to output correction"
+  ],
+  "reference_observed96": {
+    "zero_code_prior": 0.1042185661693414,
+    "original_posterior": 0.103630625,
+    "output_correction400": 0.0855736662245666
+  },
+  "checks": [
+    "Exact initial zero-code prior",
+    "Nonzero first-step gradient",
+    "Frozen state unchanged",
+    "Internal zero-code output invariant",
+    "Final zero-code/cache difference <= 1e-4"
+  ],
+  "source_sha256": {
+    "/home/sadasue/fwm-early-condition-20261113/research/train_early_condition.py": "5cfffa4a3f5300cfc7f22d681354f910bb9d3537e1c0b343912aa92f74709be6",
+    "/home/sadasue/fwm-early-condition-20261113/research/early_condition_adapter.py": "5ca80922bbabac75063ad0f505942967adf9f45aa0c1cba889050153ae2680ae",
+    "/home/sadasue/fwm-early-condition-20261113/research/source_snapshots/train_early_condition-preflight-20261113.py": "c947eaa7bbfa206dff1dc4a0518fe61eb9b13f32efaeafdd85971f15b80c2bb8",
+    "/home/sadasue/foveated-world-models/research/idm/early-condition-gradient-audit-20261113.json": "fde17fa0a6b9fc5472b384f2bca96fbe11016a70485fd5ebf7a8f37abfdfef5a"
+  }
+}

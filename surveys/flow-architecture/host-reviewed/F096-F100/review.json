@@ -1,0 +1,4 @@
+{
+  "reviewed_at": "2026-11-12T17:22:10.726263+00:00",
+  "checks": "Host checked GNS AppendixC noise type, corrected acceleration target and one-step/rollout tradeoff; MeshGraphNets AppendixA.2.2 first-order correction and second-order conflicting position/velocity targets with gamma.1 plus deforming-plate table; PCGrad negative-inner-product projection and Theorem1 allowing suboptimal opposed-gradient stop, NYUv2 table; GradNorm fixed target norms and weight-only updates, renormalization and Table2; ScheduledSampling token mixing, omitted sampling gradients and MSCOCO Table1. These objectives alter optimization or training distribution; no guaranteed future-feature MSE improvement."
+}

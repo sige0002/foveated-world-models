@@ -1,0 +1,4 @@
+{
+  "reviewed_at": "2026-11-12T17:19:03.476825+00:00",
+  "checks": "Host checked primary F081 Table1 cumulative FID and equal-variance/uncorrelated activation assumptions; F082 Table3 simultaneous changes and pure-noise conditional-mean discussion; F083 algorithm1 batchwise assignment, unchanged marginal versus changed conditional noise and Appendix tables3/4; F084 AdaGN formula and Table3 same700k ablation; F085 algorithm2 Eq6 and Table1 guidance tradeoff. None establishes paired DINO future-MSE improvement."
+}

@@ -1,0 +1,24 @@
+{
+  "source_sha256": {
+    "/home/sadasue/fwm-prior-compression-20261113/research/train_compressed_prior.py": "b40a4ee820cdbdb61ed68cf40020e3941ac43d61dc78141ca6a1d5081848e43e",
+    "/home/sadasue/fwm-prior-compression-20261113/research/compressed_prior.py": "a04dcd90cd7648ce1ef420e2b2e9a53360b65e17b0b81abe736809ab5a7e7b10",
+    "/home/sadasue/fwm-prior-compression-20261113/research/prior-compression-source-snapshot.json": "85eb1b1dbbcace4f0eff6867a1bcbfa02860914d542bb4f8d23850bac89c0e60"
+  },
+  "neural_runs": [
+    {
+      "kind": "prior_teacher",
+      "output": "runs/prior-compression-prior_teacher-512-400-20261113"
+    },
+    {
+      "kind": "future",
+      "output": "runs/prior-compression-future-512-400-20261113"
+    },
+    {
+      "kind": "downstream_teacher",
+      "output": "runs/prior-compression-downstream_teacher-512-400-20261113"
+    }
+  ],
+  "shared": "Same initial student weights, minibatch stream1042,400updates, all3 source matrices; frozen400 correction42",
+  "extra_cost": "downstream_teacher has additional frozen decoder computation; not equal FLOPs",
+  "tests": "3 tests passed prior to launch; linear fit is running separately"
+}

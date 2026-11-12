@@ -1,0 +1,22 @@
+{
+  "all_checks_passed": true,
+  "checks": {
+    "train": {
+      "n": 128,
+      "targets_exactly_match_measured_labels": true,
+      "bin_counts_and_mse_contributions_reconcile": true
+    },
+    "validation": {
+      "n": 64,
+      "targets_exactly_match_measured_labels": true,
+      "bin_counts_and_mse_contributions_reconcile": true
+    },
+    "observed96": {
+      "n": 96,
+      "targets_exactly_match_measured_labels": true,
+      "bin_counts_and_mse_contributions_reconcile": true
+    }
+  },
+  "protocol_sha256": "4447681f69932d50b5078ebc2435b744d08c429a80f8059c6ff0a186c99e7004",
+  "script_sha256": "98cd4b6735201aa2a8be22f8bd7fcf71f255fa7ad60cea1339807ca02dff5a4e"
+}

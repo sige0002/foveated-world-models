@@ -1,0 +1,39 @@
+{
+  "created_at": "2026-11-12T21:18:01.453749+00:00",
+  "primary_codec_rank": 32,
+  "codec_selection": "Primary32 declared before codec training/evaluation;128 reconstruction capacity control retained but not selected as forecast primary.",
+  "arms": [
+    "direct_feature",
+    "direct_latent",
+    "flow",
+    "flow_low_noise"
+  ],
+  "settings": {
+    "predictor_dim": 128,
+    "layers": 2,
+    "heads": 4,
+    "steps": 400,
+    "seed": 42,
+    "batch_size": 8,
+    "lr": 0.0003,
+    "weight_decay": 0.01,
+    "clip": 1.0,
+    "flow_steps": 4,
+    "evaluation_draws": 4,
+    "threads_each": 4
+  },
+  "losses": "direct_feature uses decoded768D feature MSE through frozen codec; direct_latent uses normalized32D teacher latent MSE; flow uses normalized latent CFM velocity MSE with sigma1; flow_low_noise same withsigma.1. Training loss magnitudes not comparable.",
+  "calibration": "Frozen mean/std over train512 codec latents only; std floor.05 inactive (min.7209,max3.8482). Direct starts normalized0, flow isotropic sigma noise in normalized space. No current-conditioned latent prior in this pilot.",
+  "conditions": "Current768D features and existing global posterior IDM z32. Baseline is used only by frozen codec decode. True-future codec w is training teacher, never forecast evaluation input. Existing z still privileged, so not deployment evidence.",
+  "evaluation": "Fixed400 dev64/observed96 already observed, no checkpoint selection. Full768 sample risk and mean of decoded predictions primary; decoding mean latent logged separately. Compare to strong full-space direct .085574 and fullflow mean4 .100645, acknowledging different capacity and extra1000 codec training.",
+  "checks": "3 tests PASS: zero direct/init noise transport; feature gradients reach predictor while codec frozen; evaluation cannot invoke future encoder. Main verifies cachehashes, all3episode disjointness, sharedbaseline hashes, teacher checkpoint binding, row identities and train statistics.",
+  "adoption": "Must improve original-space prediction, not codec reconstruction or latent MSE only. Flow must be compared with both matched direct objectives and both noise levels. Small one-seed dev differences not publication evidence.",
+  "source_sha256": {
+    "research/train_codec_predictor.py": "b7afc118cfc92f518c5ce7e9e1eabba11c6d4f6da11175c9cd9524c0f1445960",
+    "research/test_codec_predictor.py": "8cbe04433fc42074442484a49f3667422de6abf9b2fb94e24c367c4dae180e33",
+    "research/conditional_residual_codec.py": "31a74206474aa8965240797798148c6f4f3592378a2fc7b617c2b4687085dc26",
+    "runs/nonlinear-codec32-512-1000-20261113/codec.pt": "e5aa6bc5ffc306d721035899d1d2a2b9fa34a9d544984333151c39ddfdbf3fe3",
+    "runs/nonlinear-codec32-512-1000-20261113/train-latents.pt": "dbce5eff00ff2407356199f239589879ca6735fc8e66e475e56348ce1934e6fe",
+    "runs/nonlinear-codec32-512-1000-20261113/train-latent-statistics.pt": "9d2d997cda0b101a0c0f9fadbcc76792789fc5c432a5adcc04c7a39e71eadb69"
+  }
+}

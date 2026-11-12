@@ -1,0 +1,13 @@
+{
+  "pass_all": true,
+  "source_files_checked": 19,
+  "fold_partition_exact": true,
+  "pca_orthonormal": true,
+  "kernel_strength_one": true,
+  "selection_train_minimum": true,
+  "all_selected_alphas_interior": true,
+  "physical_and_normalized_metrics_recomputed": true,
+  "mu_prior512_evaluation_reproduced": true,
+  "script_sha256": "1580f41bf28a286c2e307bfe90498fc525955e7155cc77eae6fb2400fa8cba8c",
+  "results_sha256": "9cb9aa8e28b4679f0c6bba452bde47dc99bde0900c7cb98fbedb03cde3c91e88"
+}

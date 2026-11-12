@@ -1,0 +1,75 @@
+{
+  "variants": {
+    "raw": {
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "mean_mse_mean": 0.17860584993225834,
+      "mean_mse_sd": 0.0012988972266945544,
+      "train_mean_mse": 0.08255876864980867,
+      "sample_swap_gap": -2.778212850292524e-06
+    },
+    "centered": {
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "mean_mse_mean": 0.1702861417628204,
+      "mean_mse_sd": 0.002486648074077007,
+      "train_mean_mse": 0.08064582014473369,
+      "sample_swap_gap": 0.010436253855004907
+    },
+    "reference": {
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "mean_mse_mean": 0.16096244808674479,
+      "mean_mse_sd": 0.0007213758152480518,
+      "train_mean_mse": 0.08104895835519225,
+      "sample_swap_gap": 0.026049948976530384
+    },
+    "constant": {
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "mean_mse_mean": 0.1790626902754108,
+      "mean_mse_sd": 0.0007884235294005759,
+      "train_mean_mse": 0.08259835022909101,
+      "sample_swap_gap": 0.0
+    }
+  },
+  "paired_episode_comparisons": {
+    "raw": {
+      "episode_count": 64,
+      "reference_minus_comparator": -0.017643401845513534,
+      "episode_bootstrap95": [
+        -0.021545766663136113,
+        -0.01389557684597094
+      ]
+    },
+    "centered": {
+      "episode_count": 64,
+      "reference_minus_comparator": -0.009323693676075587,
+      "episode_bootstrap95": [
+        -0.011915657791056824,
+        -0.006826572947223516
+      ]
+    },
+    "constant": {
+      "episode_count": 64,
+      "reference_minus_comparator": -0.018100242188666016,
+      "episode_bootstrap95": [
+        -0.022237337994738485,
+        -0.014226817892631517
+      ]
+    }
+  },
+  "limitation": "Posterior sees real future; fixed encoder and tiny training cache. Episode intervals condition on the evaluated seeds; no action or camera semantics tested."
+}

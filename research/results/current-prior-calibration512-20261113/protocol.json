@@ -1,0 +1,21 @@
+{
+  "primary": "channel_affine",
+  "diagnostics": [
+    "scalar",
+    "patch_scalar",
+    "global_mix",
+    "patch_mix"
+  ],
+  "fitting": "Closed-form unregularized train512 least squares; report every prespecified transform, no evaluation-based transform selection.",
+  "inputs": "Frozen final10000 baseline(current,zero code); global/patch mix additionally uses current feature. No sample-specific posterior code at inference.",
+  "precision": "Float64 sufficient statistics/coefficients; output cast to cached float32 before identical MSE reduction; CPU2.",
+  "scope": "Previously observed64/96; calibration controls to assess simple rescaling/correction explanations, not a new model novelty claim.",
+  "source_sha256": {
+    "/home/sadasue/foveated-world-models/runs/reference-idm42-nested512-prior10000/train.pt": "7c2d6fe143bd83cfad43d0d919344b3070bb8a0b9a3bc598a84d410fecc798de",
+    "/home/sadasue/foveated-world-models/runs/reference-idm42-nested512-prior10000/cache_manifest.json": "998ed490c2ab76209c21b76c2fcd3fa83c95d8ad100def6aad536ce069fa8471",
+    "/home/sadasue/foveated-world-models/runs/reference-idm42-nested512-prior10000/validation.pt": "bbb4d0d49e9f4a4a3500e9c78260e3feaf9da33963f5977d98c8983d122c1c09",
+    "/home/sadasue/foveated-world-models/runs/reference-idm42-observed96-prior10000/validation.pt": "7b419bea1eda0f0e871ab40273bf1b59a1d67d5bf2bab23885ba9fee43ab40f4",
+    "/home/sadasue/foveated-world-models/runs/reference-idm42-observed96-prior10000/cache_manifest.json": "296da56241940e7dd2eb1250ee357a258d4551192c55dcd5c6529c37cbfeba29"
+  },
+  "script_sha256": "8695394edbf7f38fc94ca546264dc6bb562ee5b8e63f67444d052e8afa1b8dcd"
+}

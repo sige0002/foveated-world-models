@@ -1,0 +1,3204 @@
+﻿論文ID,タイトル,著者,キーワード（著者）,キーワード（調査）,初回公開日,版,版公開日,学会・誌名,採択確認状況,論文URL,本文URL,社会的背景,技術的背景,取り組む課題,解決手段,結果,貢献,まとめ,残った課題,確認範囲,調査状態,レビュー状態,調査モデル,取得日時,構造分類,選定理由,優先読書,発表区分,発表区分の根拠URL,調査区分,対象期間区分,根拠,重要な引用先
+L027,WARP-JEPA: World-Model-in-the-Loop Amortized Rollout Planning for Frozen Hierarchical Joint-Embedding Predictive Architectures,,,"1. 世界モデル
+2. ロボット学習",2026-11-07,v1,2026-11-07,unknown,未確認,https://arxiv.org/abs/2611.10806,https://arxiv.org/html/2611.10806v1,1. 明示的記載なし: §1は計算時間と制御性能の技術課題を述べる。,1. 階層JEPAはオンラインの反復勾配計画に時間がかかる。,1. 凍結済み階層WMで計画を高速化し成功率を保つ。,"1. 凍結予測器に対しロールアウト費用とbest-of-K行動模倣損失で候補提案器を訓練する。学習時は凍結WMのパラメータを更新せず、行動経路の勾配を伝播する。
+2. 通常推論では複数候補を凍結WMで評価し選択するが、エピソード終端の親条件を持たないbypassでは10回の勾配降下を使う。",1. 実験結果: 4つのシミュレーション課題、30の2〜4階層モデルで、オンラインGD比の長期タスク処理速度は9.6〜18.8倍、Cubeは2.9〜3.0倍。成功率は最大33.3ポイント高い。成功率は3 seed、時間はseed 42で10課題。,1. 著者主張: 階層ごとの時間範囲に合わせTransformerとMLPを組み合わせる償却計画。,1. 学習時にWMを利用して候補を学び、通常推論時の反復最適化を減らす。,1. 著者: 凍結WMの誤りを修復できず、提案器の追加学習と終端GDが残る。Push-T 4階層では全計画器が成功率1.2%以下。,"既存architecture台帳の同一版レビューを再利用（今回の全文再読ではない）。§1, §3–6, 付録A–E",extracted,reviewed,gpt-6.1-terra,2026-11-11T16:29:29.262244+00:00,潜在世界モデル・予測計画,潜在世界モデル・予測計画の方式・比較対象,比較・基礎,未確認,,同一版の既存調査を再利用,直近1年,"社会的背景 1 [記載なし]
+https://arxiv.org/html/2611.10806v1
+§1
+明示的記載なし: §1は計算時間と制御性能の技術課題を述べる。
+
+技術的背景 1 [著者の主張]
+https://arxiv.org/html/2611.10806v1
+§1, §3
+階層JEPAはオンラインの反復勾配計画に時間がかかる。
+
+取り組む課題 1 [著者の主張]
+https://arxiv.org/html/2611.10806v1
+§1
+凍結済み階層WMで計画を高速化し成功率を保つ。
+
+貢献 1 [著者の主張]
+https://arxiv.org/html/2611.10806v1
+§1, §4
+著者主張: 階層ごとの時間範囲に合わせTransformerとMLPを組み合わせる償却計画。
+
+まとめ 1 [調査者の解釈]
+https://arxiv.org/html/2611.10806v1
+§4–6
+学習時にWMを利用して候補を学び、通常推論時の反復最適化を減らす。
+
+解決手段 1 [著者の主張]
+https://arxiv.org/html/2611.10806v1
+§4.1, 式2–3, 付録E
+凍結予測器に対しロールアウト費用とbest-of-K行動模倣損失で候補提案器を訓練する。学習時は凍結WMのパラメータを更新せず、行動経路の勾配を伝播する。
+
+解決手段 2 [著者の主張]
+https://arxiv.org/html/2611.10806v1
+§4.1, 付録E Inference
+通常推論では複数候補を凍結WMで評価し選択するが、エピソード終端の親条件を持たないbypassでは10回の勾配降下を使う。
+
+結果 1 [実証結果]
+https://arxiv.org/html/2611.10806v1
+§5.1–5.2, 表1, 付録A–B
+実験結果: 4つのシミュレーション課題、30の2〜4階層モデルで、オンラインGD比の長期タスク処理速度は9.6〜18.8倍、Cubeは2.9〜3.0倍。成功率は最大33.3ポイント高い。成功率は3 seed、時間はseed 42で10課題。
+
+残った課題 1 [著者の主張]
+https://arxiv.org/html/2611.10806v1
+§6 Limitations, 付録表S9–S10
+著者: 凍結WMの誤りを修復できず、提案器の追加学習と終端GDが残る。Push-T 4階層では全計画器が成功率1.2%以下。",
+L025,La-JEPA: Compact Robot Policies with Latent World Modeling,"1. Mateo Clémente
+2. George Z. Xue
+3. Amin Abyaneh
+4. Liheng Ma
+5. Rui Heng Yang
+6. Tongtong Cao
+7. Zhanguang Zhang
+8. Yingxue Zhang",,1. 潜在世界モデル,2026-11-05,v1,2026-11-05,,未確認,https://arxiv.org/abs/2611.08156,https://arxiv.org/html/2611.08156v1,1. 記載なし: 特定の社会的需要は序論で明示していない。,1. 生成モデル由来のworld-actionモデルやVLAは生成向け大規模バックボーンの構造と推論費用を継承する。,1. 事前学習した生成方策を持たない小型方策で、将来特徴の予測がロボット制御に寄与するかを調べる。,1. 事前学習V-JEPA 2.1の特徴空間でWorld DiTとAction DiTをゼロから学習し、訓練中は将来特徴と行動を共同予測、推論時は行動のみ生成する。,1. 実験結果: RoboTwin 2.0と指示修正済みLIBERO-Plusのシミュレーションで比較し、実機1構成4課題ではpi0.5に近い平均成功率。Fast-WAMに最大5倍高速と報告するが、入力や精度設定は各手法固有。 実機各20試行の4課題平均成功数はLa-JEPA 17.50/20、π0.5 17.25/20、Fast-WAM 16.00/20。統計的同等性を示す検定ではない。,1. 著者主張: 生成方策の事前学習なしで、JEPA特徴と訓練時の将来予測を利用する小型world-action方策を示す。,1. 事前学習済み視覚特徴で小型方策を学習し、シミュレーションと4つの実機操作課題で評価した。,1. 著者指摘: ハイパーパラメータ探索は限定的で、embodied pretrainingによる拡張は未検証。実機4課題・1ロボットの平均は広範な同等性を示さない。JEPA-WAMのRoboTwin 50課題値の一部は回帰推定。,既存architecture台帳の同一版レビューを再利用（今回の全文再読ではない）。本文の課題・方法・実験・結論・限界と関連付録を確認,extracted,reviewed,gpt-6.1-terra,2026-11-11T16:24:18.535467+00:00,潜在世界モデル・予測計画,潜在世界モデル・予測計画の方式・比較対象,比較・基礎,未確認,,同一版の既存調査を再利用,直近1年,"社会的背景 1 [記載なし]
+https://arxiv.org/html/2611.08156v1
+§1
+記載なし: 特定の社会的需要は序論で明示していない。
+
+技術的背景 1 [著者の主張]
+https://arxiv.org/html/2611.08156v1
+§1–2
+生成モデル由来のworld-actionモデルやVLAは生成向け大規模バックボーンの構造と推論費用を継承する。
+
+取り組む課題 1 [著者の主張]
+https://arxiv.org/html/2611.08156v1
+§1, §4
+事前学習した生成方策を持たない小型方策で、将来特徴の予測がロボット制御に寄与するかを調べる。
+
+解決手段 1 [著者の主張]
+https://arxiv.org/html/2611.08156v1
+§3
+事前学習V-JEPA 2.1の特徴空間でWorld DiTとAction DiTをゼロから学習し、訓練中は将来特徴と行動を共同予測、推論時は行動のみ生成する。
+
+結果 1 [実証結果]
+https://arxiv.org/html/2611.08156v1
+§5 Table 5; Appendix B–D
+実験結果: RoboTwin 2.0と指示修正済みLIBERO-Plusのシミュレーションで比較し、実機1構成4課題ではpi0.5に近い平均成功率。Fast-WAMに最大5倍高速と報告するが、入力や精度設定は各手法固有。 ホストが代表値・比較条件を原文照合して追記。
+
+貢献 1 [著者の主張]
+https://arxiv.org/html/2611.08156v1
+§1, §3
+著者主張: 生成方策の事前学習なしで、JEPA特徴と訓練時の将来予測を利用する小型world-action方策を示す。
+
+まとめ 1 [実証結果]
+https://arxiv.org/html/2611.08156v1
+§3–5
+事前学習済み視覚特徴で小型方策を学習し、シミュレーションと4つの実機操作課題で評価した。
+
+残った課題 1 [著者の主張]
+https://arxiv.org/html/2611.08156v1
+§6; Appendix B
+著者指摘: ハイパーパラメータ探索は限定的で、embodied pretrainingによる拡張は未検証。実機4課題・1ロボットの平均は広範な同等性を示さない。JEPA-WAMのRoboTwin 50課題値の一部は回帰推定。","1. JEPA-WAM: Learning Vision-Language-Action Policies with Joint-Embedding World Modeling (ID: L031)
+https://arxiv.org/abs/2608.09381
+引用位置: §2, §5, Appendix B
+優先理由: 最も近い直接比較。50課題値の一部は回帰推定
+範囲: in_scope
+
+2. LeapBot-WA: World-Anchor Action Models via Predictive Latent Alignments (ID: L030)
+https://arxiv.org/abs/2607.23969
+引用位置: §2, §5
+優先理由: 最も近い直接比較
+範囲: in_scope
+
+3. Fast-WAM: Do World Action Models Need Test-time Future Imagination? (ID: L032)
+https://arxiv.org/abs/2603.16666
+引用位置: §1, §3, §5
+優先理由: 学習時予測と推論時行動生成の基礎・直接比較
+範囲: in_scope"
+W014,UNITAS: A 3D-Native World Action Model for Embodied Manipulation,"1. Wang, Ruixiang
+2. Su, Yongyi
+3. Zhou, Wenlve
+4. Yue, Bo
+5. Liu, Hengyan
+6. Lu, Dekun
+7. Tian, Yuxin
+8. Fang, Yihan
+9. Wu, Zerui
+10. Hu, Xing
+11. Chen, Jietao
+12. Guo, Yong
+13. He, Ziyan
+14. Yuan, Junbin
+15. Liu, Guiliang
+16. Xing, Xiaofen
+17. Jia, Kui",,,2026-10-08,v1,2026-10-08,unknown,unverified,https://arxiv.org/abs/2610.12099,https://arxiv.org/html/2610.12099v1,1. 明示的な社会的背景は確認した要旨に記載なし。,1. 画像座標は視点に依存し、距離や接触の物理的関係を直接表現しない。,1. 機体をまたぐ操作と動的シーンを共通の計量3D表現で結合する。,1. 人の手・ロボットグリッパーを3D軌跡の action flow、場面を scene flow で表し、3D位置と物理時間軌跡をトークン化。,1. 1.7B パラメータで RoboTwin の条件付きシーン変位誤差は PointWorld より最大49%低減、LIBERO 99.8%、実機2課題各20試行で90%・80%、平均85%。,1. 著者提案: 観測・行動・場面動力学を共通の計量3D座標系に表す UNITAS。,1. 共通3D表現によって行動実行とシーン予測を同一モデルで評価。,"1. 著者は長時間の予測と広い実機配備を今後の課題に挙げる。
+2. 調査者指摘: シーン予測のシミュレーション例は訓練クリップ由来で、実世界例は scene-flow 教師なしの例示である。",既存architecture台帳の同一版レビューを再利用（今回の全文再読ではない）。§1・3–6の3D表現・実機/シミュレーション・予測と結論,extracted,reviewed,gpt-6.1-terra,2026-11-11T17:00:24.570234+00:00,世界予測と行動の統合,世界予測と行動の統合の方式・比較対象,比較・基礎,未確認,,同一版の既存調査を再利用,直近1年,"社会的背景 1 [記載なし]
+https://arxiv.org/html/2610.12099v1
+Abstract
+確認範囲における記載状況: 明示的な社会的背景は確認した要旨に記載なし。
+
+技術的背景 1 [著者の主張]
+https://arxiv.org/html/2610.12099v1
+Abstract
+著者の説明・提案: 画像座標は視点に依存し、距離や接触の物理的関係を直接表現しない。
+
+取り組む課題 1 [著者の主張]
+https://arxiv.org/html/2610.12099v1
+Abstract
+著者の説明・提案: 機体をまたぐ操作と動的シーンを共通の計量3D表現で結合する。
+
+解決手段 1 [著者の主張]
+https://arxiv.org/html/2610.12099v1
+Abstract
+著者の説明・提案: 人の手・ロボットグリッパーを3D軌跡の action flow、場面を scene flow で表し、3D位置と物理時間軌跡をトークン化。
+
+結果 1 [実証結果]
+https://arxiv.org/html/2610.12099v1
+Abstract
+1.7B パラメータで RoboTwin の条件付きシーン変位誤差は PointWorld より最大49%低減、LIBERO 99.8%、実機2課題各20試行で90%・80%、平均85%。
+
+貢献 1 [著者の主張]
+https://arxiv.org/html/2610.12099v1
+Abstract
+著者の説明・提案: 著者提案: 観測・行動・場面動力学を共通の計量3D座標系に表す UNITAS。
+
+まとめ 1 [著者の主張]
+https://arxiv.org/html/2610.12099v1
+Abstract
+著者の説明・提案: 共通3D表現によって行動実行とシーン予測を同一モデルで評価。
+
+残った課題 1 [著者の主張]
+https://arxiv.org/html/2610.12099v1
+§6 Conclusion
+著者の説明・提案: 著者は長時間の予測と広い実機配備を今後の課題に挙げる。
+
+残った課題 2 [調査者の解釈]
+https://arxiv.org/html/2610.12099v1
+§5 Table 4
+確認箇所からの調査者解釈: 調査者指摘: シーン予測のシミュレーション例は訓練クリップ由来で、実世界例は scene-flow 教師なしの例示である。",
+L024,RoboJEPA: Scaling Robotic Latent World Models,"1. Artem Zholus
+2. Nicolas Beltran-Velez
+3. Jianhao Yuan
+4. Sarath Chandar
+5. Tushar Nagarajan
+6. Daniel Severo
+7. Koustuv Sinha
+8. Michal Drozdzal
+9. Adriana Romero Soriano
+10. Jeannette Bohg
+11. Nicolas Ballas
+12. Mahmoud Assran",,1. 潜在世界モデル,2026-10-07,v1,2026-10-07,,未確認,https://arxiv.org/abs/2610.10515,https://arxiv.org/html/2610.10515v1,1. 記載なし: 特定の社会的需要は序論で明示していない。,1. 潜在世界モデルの性能がモデル規模・データ・計算量でどう変化し実機計画に結びつくかは未解明。,1. 複数形態の実機ロボットデータ上で予測器のスケーリング則と実機計画への対応を調べる。,1. 固定したV-JEPA 2.1表現上で22M〜8Bの行動条件付き予測器を12形態のデータで学習し、潜在ロールアウト誤差と計算量の二次べき則を推定する。画像目標に向けMPCで行動を探索する。,1. 実験結果: オフライン実機DROID動画とシミュレーションRoboCasaにおける予測誤差のスケーリングを評価し、オンライン計画成功率との相関を報告。画像目標に向けた実機ゼロショット操作も実施。 RoboJEPA 8Bの実機成功率はGrasp 67%、Lift 50%、Pick-and-Place 27%。π0.5の同順5%、0%、53%に対し全課題優位ではなく、目標指定も画像対テキストで異なる。,1. 著者主張: マルチ形態のロボット潜在予測器に関する計算量スケーリング則と、オフライン誤差を実機計画の代理指標として検証する。,1. 固定視覚表現上でロボット世界モデルを拡大し、オフライン予測と実機・シミュレーション計画の関係を調べた。,1. 著者指摘: 視覚エンコーダは固定され、固定データの複数エポック学習は飽和に近い。言語や学習済み方策による行動提案は使用しない。,既存architecture台帳の同一版レビューを再利用（今回の全文再読ではない）。本文の課題・方法・実験・結論・限界と関連付録を確認,extracted,reviewed,gpt-6.1-terra,2026-11-11T16:24:18.534521+00:00,潜在世界モデル・予測計画,潜在世界モデル・予測計画の方式・比較対象,比較・基礎,未確認,,同一版の既存調査を再利用,直近1年,"社会的背景 1 [記載なし]
+https://arxiv.org/html/2610.10515v1
+§1
+記載なし: 特定の社会的需要は序論で明示していない。
+
+技術的背景 1 [著者の主張]
+https://arxiv.org/html/2610.10515v1
+§1
+潜在世界モデルの性能がモデル規模・データ・計算量でどう変化し実機計画に結びつくかは未解明。
+
+取り組む課題 1 [著者の主張]
+https://arxiv.org/html/2610.10515v1
+§1
+複数形態の実機ロボットデータ上で予測器のスケーリング則と実機計画への対応を調べる。
+
+解決手段 1 [著者の主張]
+https://arxiv.org/html/2610.10515v1
+§2–3
+固定したV-JEPA 2.1表現上で22M〜8Bの行動条件付き予測器を12形態のデータで学習し、潜在ロールアウト誤差と計算量の二次べき則を推定する。画像目標に向けMPCで行動を探索する。
+
+結果 1 [実証結果]
+https://arxiv.org/html/2610.10515v1
+§3–4; Table 3, Table 12
+実験結果: オフライン実機DROID動画とシミュレーションRoboCasaにおける予測誤差のスケーリングを評価し、オンライン計画成功率との相関を報告。画像目標に向けた実機ゼロショット操作も実施。 ホストが代表値・比較条件を原文照合して追記。
+
+貢献 1 [著者の主張]
+https://arxiv.org/html/2610.10515v1
+§1, §3–5
+著者主張: マルチ形態のロボット潜在予測器に関する計算量スケーリング則と、オフライン誤差を実機計画の代理指標として検証する。
+
+まとめ 1 [実証結果]
+https://arxiv.org/html/2610.10515v1
+§3–5
+固定視覚表現上でロボット世界モデルを拡大し、オフライン予測と実機・シミュレーション計画の関係を調べた。
+
+残った課題 1 [著者の主張]
+https://arxiv.org/html/2610.10515v1
+§5 limitations
+著者指摘: 視覚エンコーダは固定され、固定データの複数エポック学習は飽和に近い。言語や学習済み方策による行動提案は使用しない。",
+L019,H-JEPA: End-to-End Learning of Hierarchical World Models for Visual Planning,"1. Wancong Zhang
+2. Basile Terver
+3. Michael Rabbat
+4. Yann LeCun
+5. Randall Balestriero",,"1. JEPA
+2. 階層計画
+3. DROID",2026-10-05,v2,2026-11-01,,unknown,https://arxiv.org/abs/2610.06805,https://arxiv.org/html/2610.06805v2,1. 記載なし: 導入と結論に明示的な社会背景なし。,1. 単一時間尺度のJEPAでは長期予測の誤差蓄積と探索空間の増大が課題となる。,1. 行動条件付きJEPAの時間階層と抽象化が長期の画像目標計画を改善するか検証する。,1. 各時間尺度で状態と行動を符号化し潜在予測とSIGRegを共同学習。上位階層で目標までの計画を立て、その予測を下位階層のサブゴールとする。DROIDでは逆動力学も追加。,"1. 4種のシミュレーション環境で比較し、Visual AntMazeでは3階層が平坦なLeWMの18%に対して73%の成功率をより少ない計画計算で達成した。
+2. 実ロボット収集DROID映像はオフラインで評価し、軌道のFréchet fidelityが平坦モデルより改善した。実機での閉ループ成功率ではない。",1. 著者主張: 時間階層ごとの潜在表現を共同学習し、上位予測をサブゴールにする計画法とその要因分析を提示した。,1. 複数時間尺度のJEPAと階層計画を用いて、シミュレーション成功率と実ロボット映像上のオフライン計画忠実度を評価した。,"1. 著者: 実ロボットで閉ループ制御できるかは今後の課題。
+2. 著者: DROIDのオフライン軌道類似度は完了成功の保証ではなく、実行結果は得られていない。",既存architecture台帳の同一版レビューを再利用（今回の全文再読ではない）。本文1–6、図6/9、付録E、J.1–J.2、参考文献を確認。数式・図の欠落箇所をPDFで補完。,extracted,reviewed,gpt-6.1-terra,2026-11-11T16:27:11.799901+00:00,潜在世界モデル・予測計画,潜在世界モデル・予測計画の方式・比較対象,比較・基礎,未確認,,同一版の既存調査を再利用,直近1年,"社会的背景 1 [記載なし]
+https://arxiv.org/html/2610.06805v2
+1, 6
+記載なし: 導入と結論に明示的な社会背景なし。
+
+技術的背景 1 [著者の主張]
+https://arxiv.org/html/2610.06805v2
+1
+単一時間尺度のJEPAでは長期予測の誤差蓄積と探索空間の増大が課題となる。
+
+取り組む課題 1 [著者の主張]
+https://arxiv.org/html/2610.06805v2
+1, 4
+行動条件付きJEPAの時間階層と抽象化が長期の画像目標計画を改善するか検証する。
+
+解決手段 1 [著者の主張]
+https://arxiv.org/html/2610.06805v2
+2.1–2.2, 4.3
+各時間尺度で状態と行動を符号化し潜在予測とSIGRegを共同学習。上位階層で目標までの計画を立て、その予測を下位階層のサブゴールとする。DROIDでは逆動力学も追加。
+
+結果 1 [実証結果]
+https://arxiv.org/html/2610.06805v2
+Abstract, 4.1, Fig. 6
+4種のシミュレーション環境で比較し、Visual AntMazeでは3階層が平坦なLeWMの18%に対して73%の成功率をより少ない計画計算で達成した。
+
+結果 2 [実証結果]
+https://arxiv.org/html/2610.06805v2
+4.3, Appendix J.1–J.2
+実ロボット収集DROID映像はオフラインで評価し、軌道のFréchet fidelityが平坦モデルより改善した。実機での閉ループ成功率ではない。
+
+貢献 1 [著者の主張]
+https://arxiv.org/html/2610.06805v2
+1–4
+著者主張: 時間階層ごとの潜在表現を共同学習し、上位予測をサブゴールにする計画法とその要因分析を提示した。
+
+まとめ 1 [調査者の解釈]
+https://arxiv.org/html/2610.06805v2
+2–4
+複数時間尺度のJEPAと階層計画を用いて、シミュレーション成功率と実ロボット映像上のオフライン計画忠実度を評価した。
+
+残った課題 1 [著者の主張]
+https://arxiv.org/html/2610.06805v2
+6
+著者: 実ロボットで閉ループ制御できるかは今後の課題。
+
+残った課題 2 [著者の主張]
+https://arxiv.org/html/2610.06805v2
+4.3, Appendix J.2
+著者: DROIDのオフライン軌道類似度は完了成功の保証ではなく、実行結果は得られていない。","1. LeWorldModel: Stable end-to-end joint-embedding predictive architecture from pixels (ID: L001)
+https://arxiv.org/abs/2603.19312
+引用位置: 1, 4.1, reference 53
+優先理由: 平坦モデルの比較対象
+範囲: in_scope"
+W033,CtrlWAM: Controllable World Action Models with Aligned Intent and Foresight,"1. Peng, Chensheng
+2. Ding, Wenhao
+3. Tian, Ran
+4. Zhou, Zewei
+5. Packer, Jef
+6. Igl, Maximilian
+7. Karkus, Peter
+8. Wang, Yan
+9. Tomizuka, Masayoshi
+10. Ivanovic, Boris
+11. Pavone, Marco
+12. Chen, Yuxiao",,,2026-10-01,v1,2026-10-01,arXiv,unverified,https://arxiv.org/abs/2610.00859,https://arxiv.org/html/2610.00859v1,1. 記載なし: 確認した導入に社会的背景の明示的記載はない。,1. 記録された映像と同時に行動へノイズを加える通常の学習では、摂動行動の結果と観測映像が一致しない。,1. 行動の意図と生成される映像の将来を整合させ、指示した行動に応じた反実仮想生成を改善する。,1. シミュレータで摂動行動を実行しその視覚的帰結を対にして学習。映像・行動のノイズスケジュールをずらし、可変数の周辺車両行動ストリームへ拡張する。,"1. RoboTwin動作映像生成のWorldArena 1000エピソードでEWMScore 61.75、共通初期点から同追加2000反復の通常SFTは58.70、GT-Src対照58.65。これは映像評価で実機成功率ではない。
+2. 運転動画の指令追従ではmulti-agent CtrlWAMのCmd ADE 0.981 m、SFT対照1.023 m；agent命令へのVLM評価18.94%対10.56%。",1. 反実仮想行動のシミュレータ帰結で世界・行動を整合させる学習と、運転の複数主体制御を提示。,1. 行動摂動と映像の不整合を、シミュレータで対にした帰結と異なるノイズ日程で緩和し、運転と操作動画の整合性を評価。,1. 著者指摘: 行動摂動の視覚的帰結を生成できるシミュレータが必要で、多主体拡張は運転データのみ。双方向モデルの遅延がボトルネックで閉ループ性能は今後の課題。,"既存architecture台帳の同一版レビューを再利用（今回の全文再読ではない）。§1, §3–5の問題・方法・実験・結論と限界、必要な実験付録を確認",extracted,reviewed,gpt-6.1-terra,2026-11-11T17:04:22.936163+00:00,世界予測と行動の統合,世界予測と行動の統合の方式・比較対象,比較・基礎,未確認,,同一版の既存調査を再利用,直近1年,"社会的背景 1 [記載なし]
+https://arxiv.org/html/2610.00859v1
+§1
+記載なし: 確認した導入に社会的背景の明示的記載はない。
+
+技術的背景 1 [著者の主張]
+https://arxiv.org/html/2610.00859v1
+§1, §3
+記録された映像と同時に行動へノイズを加える通常の学習では、摂動行動の結果と観測映像が一致しない。
+
+取り組む課題 1 [著者の主張]
+https://arxiv.org/html/2610.00859v1
+§1
+行動の意図と生成される映像の将来を整合させ、指示した行動に応じた反実仮想生成を改善する。
+
+解決手段 1 [著者の主張]
+https://arxiv.org/html/2610.00859v1
+§3
+シミュレータで摂動行動を実行しその視覚的帰結を対にして学習。映像・行動のノイズスケジュールをずらし、可変数の周辺車両行動ストリームへ拡張する。
+
+結果 1 [実証結果]
+https://arxiv.org/html/2610.00859v1
+§4.4, Table 3
+RoboTwin動作映像生成のWorldArena 1000エピソードでEWMScore 61.75、共通初期点から同追加2000反復の通常SFTは58.70、GT-Src対照58.65。これは映像評価で実機成功率ではない。
+
+結果 2 [実証結果]
+https://arxiv.org/html/2610.00859v1
+§4.3, Tables 1–2
+運転動画の指令追従ではmulti-agent CtrlWAMのCmd ADE 0.981 m、SFT対照1.023 m；agent命令へのVLM評価18.94%対10.56%。
+
+貢献 1 [著者の主張]
+https://arxiv.org/html/2610.00859v1
+§1, §3–4
+反実仮想行動のシミュレータ帰結で世界・行動を整合させる学習と、運転の複数主体制御を提示。
+
+まとめ 1 [調査者の解釈]
+https://arxiv.org/html/2610.00859v1
+§1, §3–4
+行動摂動と映像の不整合を、シミュレータで対にした帰結と異なるノイズ日程で緩和し、運転と操作動画の整合性を評価。
+
+残った課題 1 [著者の主張]
+https://arxiv.org/html/2610.00859v1
+§5; Appendix limitations
+著者指摘: 行動摂動の視覚的帰結を生成できるシミュレータが必要で、多主体拡張は運転データのみ。双方向モデルの遅延がボトルネックで閉ループ性能は今後の課題。","1. World Action Models are Zero-shot Policies (ID: W001)
+https://arxiv.org/abs/2602.15922
+引用位置: §1–2
+優先理由: 動画・行動共同生成の先行研究
+範囲: in_scope"
+W035,An Action Is Worth One Patch: Unified World-Action Modeling with PatchWAM,"1. Wang, Tianheng
+2. Xie, Zhou
+3. Jia, Heng
+4. Xu, Jianhua
+5. Zhang, Tong
+6. Yu, Kaicheng",,,2026-09-22,v1,2026-09-22,arXiv,unverified,https://arxiv.org/abs/2609.25961,https://arxiv.org/html/2609.25961v1,1. 記載なし: 確認した導入に社会的背景の明示的記載はない。,1. 多くのWAMは視覚生成基盤に行動専用headや別expertを追加するが、その必要性を条件を揃えて評価する余地がある。,1. 行動専用ネットワークなしで画像生成基盤が連続行動も扱えるか検討する。,1. 固定Action-as-Patch符号化で各行動を視覚潜在トークンに写し、共有transformerで未来画像と行動をflow matchingにより共同復元する。,"1. シミュレーションRoboTwin 2.0、clean/random実演を使い訓練窓の開始位置を20個に1個に間引く同条件比較で88.0%対dual expert 78.4%；各課題・条件10試行、独立seedなし。
+2. RoboTwin full-data平均96.12%は各課題clean 50・random 500実演に加え低成功7課題へ計2100拡張実演を追加した条件。clean-to-randomとは別条件。
+3. 20 denoising stepの1推論はdual expertの1.87倍、評価で使った10 stepは計時されていない。",1. 固定の行動・視覚表現接続と共有視覚モデルによって別行動expertなしの操作を実証。,1. 視覚基盤の行動適用を検討し、固定の行動パッチと共有復元でシミュレーションの操作成功を評価した。,1. 著者指摘: 実機未評価、独立seedなし。容量・トークン可視性・処理経路が同時に変わるため優位性の因果を一因には特定できず、将来画像が行動選択に寄与する証拠も確立していない。,"既存architecture台帳の同一版レビューを再利用（今回の全文再読ではない）。§1, §3–5の問題・方法・実験・結論と限界、必要な実験付録を確認",extracted,reviewed,gpt-6.1-terra,2026-11-11T17:04:22.936207+00:00,世界予測と行動の統合,世界予測と行動の統合の方式・比較対象,比較・基礎,未確認,,同一版の既存調査を再利用,直近1年,"社会的背景 1 [記載なし]
+https://arxiv.org/html/2609.25961v1
+§1
+記載なし: 確認した導入に社会的背景の明示的記載はない。
+
+技術的背景 1 [著者の主張]
+https://arxiv.org/html/2609.25961v1
+§1–2
+多くのWAMは視覚生成基盤に行動専用headや別expertを追加するが、その必要性を条件を揃えて評価する余地がある。
+
+取り組む課題 1 [著者の主張]
+https://arxiv.org/html/2609.25961v1
+§1
+行動専用ネットワークなしで画像生成基盤が連続行動も扱えるか検討する。
+
+解決手段 1 [著者の主張]
+https://arxiv.org/html/2609.25961v1
+§3
+固定Action-as-Patch符号化で各行動を視覚潜在トークンに写し、共有transformerで未来画像と行動をflow matchingにより共同復元する。
+
+結果 1 [実証結果]
+https://arxiv.org/html/2609.25961v1
+§4.1, §4.3, Table 3
+シミュレーションRoboTwin 2.0、clean/random実演を使い訓練窓の開始位置を20個に1個に間引く同条件比較で88.0%対dual expert 78.4%；各課題・条件10試行、独立seedなし。
+
+結果 2 [実証結果]
+https://arxiv.org/html/2609.25961v1
+§4.1–4.2, Table 1
+RoboTwin full-data平均96.12%は各課題clean 50・random 500実演に加え低成功7課題へ計2100拡張実演を追加した条件。clean-to-randomとは別条件。
+
+結果 3 [実証結果]
+https://arxiv.org/html/2609.25961v1
+§5.1
+20 denoising stepの1推論はdual expertの1.87倍、評価で使った10 stepは計時されていない。
+
+貢献 1 [著者の主張]
+https://arxiv.org/html/2609.25961v1
+§1, §3–4
+固定の行動・視覚表現接続と共有視覚モデルによって別行動expertなしの操作を実証。
+
+まとめ 1 [調査者の解釈]
+https://arxiv.org/html/2609.25961v1
+§1, §3–4
+視覚基盤の行動適用を検討し、固定の行動パッチと共有復元でシミュレーションの操作成功を評価した。
+
+残った課題 1 [著者の主張]
+https://arxiv.org/html/2609.25961v1
+§5–6
+著者指摘: 実機未評価、独立seedなし。容量・トークン可視性・処理経路が同時に変わるため優位性の因果を一因には特定できず、将来画像が行動選択に寄与する証拠も確立していない。","1. AHA-WAM:Asynchronous Horizon-Adaptive World-Action Modeling with Observation-Guided Context Routing (ID: 未登録)
+https://arxiv.org/abs/2606.09811
+引用位置: §2, Table 2
+優先理由: 非同期世界・行動モデルの比較
+範囲: in_scope"
+W019,GE-Act 2.0: Pretraining and Scaling a World-Action Model for Robotic Manipulation,"1. Liu, Renhang
+2. Zhao, Wenzhi
+3. Yang, Zhuo
+4. Chen, Liliang
+5. Zhou, Pengfei
+6. Chen, Shengcong
+7. Ren, Guanghui
+8. Peng, Youlun
+9. Jin, Rongjun
+10. Wang, Nan
+11. Wang, Sukai
+12. He, Xindong
+13. Feng, Jinyuan
+14. Xiong, Ziyu
+15. Zhong, Linqing
+16. Wei, Yifei
+17. Han, Feng
+18. Zhang, Long
+19. Huang, Da
+20. Zhao, Nanshu
+21. Yin, Chenghao
+22. Wu, Mo
+23. Yan, Zhaodong
+24. Hu, Kongtao
+25. Yan, Yuxiang
+26. Niyazi, Aogelijiang
+27. Fang, Yu
+28. Zeng, Jia
+29. Meng, Lizhu
+30. Lv, Daizhen
+31. Cao, Haoyu
+32. Hou, Zhiwen
+33. Ye, Lianjin
+34. Niu, Yuehan
+35. Cai, Zhikai
+36. Hu, Xuan
+37. Min, Hui
+38. Cai, Xiongfeng
+39. Liao, Yue
+40. Wu, Jing
+41. Poria, Soujanya
+42. Li, Ye
+43. Zhou, Sanping
+44. Yao, Maoqing
+45. Team, AgiBot Research",,,2026-09-04,v3,2026-10-24,unknown,unverified,https://arxiv.org/abs/2609.05588,https://arxiv.org/html/2609.05588v3,1. 明示的な社会的背景は確認した要旨に記載なし。,1. 既存 WAM は事前学習済み動画生成器に依存することが多く、直接事前学習とスケール則は未解明。,1. 操作データから WAM を一から事前学習し、未学習条件でデータ規模の影響を調べる。,1. 制御向け圧縮器、単段階動画プランナ、逆動力学モデルを別途訓練し、整合する予測だけ KASO で共同最適化する。,"1. 実機100課題20技能、機体×データ規模×課題ごと10試行、タスク別追加学習なしの OOD で、共同学習データ300時間→3万時間に増やすと G1-OP 17.1→44.1%、G2-90D 13.4→31.1%。
+2. 全条件は共通の事前学習済み構成要素から開始し、1エポックか予算上限で終了するため総学習時間や計算量を揃えた比較ではない。",1. 著者提案: 一から学ぶ視覚計画と行動の整合方法、および大規模 OOD 評価。,1. 多様な操作データの規模と事前学習方策の OOD 成功率の関係を測定。,1. 著者の限界: 人間視点動画の大規模利用は未探索で、明示的推論、長期計画、記憶、自己修正は扱わない。,既存architecture台帳の同一版レビューを再利用（今回の全文再読ではない）。§1・3–7の構成、事前学習、OOD実機評価、限界、Appendix C,extracted,reviewed,gpt-6.1-terra,2026-11-11T17:00:24.570327+00:00,世界予測と行動の統合,世界予測と行動の統合の方式・比較対象,比較・基礎,未確認,,同一版の既存調査を再利用,直近1年,"社会的背景 1 [記載なし]
+https://arxiv.org/html/2609.05588v3
+Abstract
+確認範囲における記載状況: 明示的な社会的背景は確認した要旨に記載なし。
+
+技術的背景 1 [著者の主張]
+https://arxiv.org/html/2609.05588v3
+Abstract
+著者の説明・提案: 既存 WAM は事前学習済み動画生成器に依存することが多く、直接事前学習とスケール則は未解明。
+
+取り組む課題 1 [著者の主張]
+https://arxiv.org/html/2609.05588v3
+Abstract
+著者の説明・提案: 操作データから WAM を一から事前学習し、未学習条件でデータ規模の影響を調べる。
+
+解決手段 1 [著者の主張]
+https://arxiv.org/html/2609.05588v3
+Abstract
+著者の説明・提案: 制御向け圧縮器、単段階動画プランナ、逆動力学モデルを別途訓練し、整合する予測だけ KASO で共同最適化する。
+
+貢献 1 [著者の主張]
+https://arxiv.org/html/2609.05588v3
+Abstract
+著者の説明・提案: 著者提案: 一から学ぶ視覚計画と行動の整合方法、および大規模 OOD 評価。
+
+まとめ 1 [著者の主張]
+https://arxiv.org/html/2609.05588v3
+Abstract
+著者の説明・提案: 多様な操作データの規模と事前学習方策の OOD 成功率の関係を測定。
+
+残った課題 1 [著者の主張]
+https://arxiv.org/html/2609.05588v3
+§7 Limitations and Outlook
+著者の説明・提案: 著者の限界: 人間視点動画の大規模利用は未探索で、明示的推論、長期計画、記憶、自己修正は扱わない。
+
+結果 1 [実証結果]
+https://arxiv.org/html/2609.05588v3
+§5.2 Fig. 8–9; Appendix C
+実験の報告: 実機100課題20技能、機体×データ規模×課題ごと10試行、タスク別追加学習なしの OOD で、共同学習データ300時間→3万時間に増やすと G1-OP 17.1→44.1%、G2-90D 13.4→31.1%。
+
+結果 2 [調査者の解釈]
+https://arxiv.org/html/2609.05588v3
+§5.2; §3.4.5
+確認箇所からの調査者解釈: 全条件は共通の事前学習済み構成要素から開始し、1エポックか予算上限で終了するため総学習時間や計算量を揃えた比較ではない。",
+W018,Spatially Aware World Action Model via Geometric Latent Diffusion,"1. Gonzalez, Javier Alejandro Lopetegui
+2. Pacaud, Paul
+3. Schmid, Cordelia",,,2026-09-02,v1,2026-09-02,unknown,unverified,https://arxiv.org/abs/2609.02531,https://arxiv.org/html/2609.02531v1,1. 明示的な社会的背景は確認した要旨に記載なし。,1. RGB のみの WAM は操作に有用な3D幾何を明示しない。,1. 深度情報を既存の凍結動画 VAE と統合し行動と未来状態を予測。,"1. 非線形対数変換した深度を潜在フレームにし、凍結 Wan2.1 VAE と Cosmos-Predict2 2B で RGB・深度・行動を共同予測。
+2. H100 40基で学習。32ステップの行動チャンクの先頭16ステップを開ループ実行して再観測。","1. RoboCasa 各課題50デモで76.6%、Cosmos-Policy 67.1%。
+2. UR5 実機の4分類の集計完了スコアは通常条件90.0%対 Cosmos-Policy 75.0%、ランダム化では77.5%対48.8%。",1. 著者提案: 凍結トークナイザを流用する幾何対応 SA-WAM。,1. 深度を潜在動画表現に導入して操作と未来予測を評価。,1. 著者の限界: 予測される未来と行動の不整合が残り、幾何整合性の検証と推論効率の改善が必要。,既存architecture台帳の同一版レビューを再利用（今回の全文再読ではない）。§I–VIの深度符号化、学習・外乱・実機・限界,extracted,reviewed,gpt-6.1-terra,2026-11-11T17:00:24.570309+00:00,世界予測と行動の統合,世界予測と行動の統合の方式・比較対象,比較・基礎,未確認,,同一版の既存調査を再利用,直近1年,"社会的背景 1 [記載なし]
+https://arxiv.org/html/2609.02531v1
+Abstract
+確認範囲における記載状況: 明示的な社会的背景は確認した要旨に記載なし。
+
+技術的背景 1 [著者の主張]
+https://arxiv.org/html/2609.02531v1
+Abstract
+著者の説明・提案: RGB のみの WAM は操作に有用な3D幾何を明示しない。
+
+取り組む課題 1 [著者の主張]
+https://arxiv.org/html/2609.02531v1
+Abstract
+著者の説明・提案: 深度情報を既存の凍結動画 VAE と統合し行動と未来状態を予測。
+
+貢献 1 [著者の主張]
+https://arxiv.org/html/2609.02531v1
+Abstract
+著者の説明・提案: 著者提案: 凍結トークナイザを流用する幾何対応 SA-WAM。
+
+まとめ 1 [著者の主張]
+https://arxiv.org/html/2609.02531v1
+Abstract
+著者の説明・提案: 深度を潜在動画表現に導入して操作と未来予測を評価。
+
+解決手段 1 [著者の主張]
+https://arxiv.org/html/2609.02531v1
+§III; §IV-A
+著者の説明・提案: 非線形対数変換した深度を潜在フレームにし、凍結 Wan2.1 VAE と Cosmos-Predict2 2B で RGB・深度・行動を共同予測。
+
+解決手段 2 [著者の主張]
+https://arxiv.org/html/2609.02531v1
+§IV-A Training Details
+著者の説明・提案: H100 40基で学習。32ステップの行動チャンクの先頭16ステップを開ループ実行して再観測。
+
+結果 1 [実証結果]
+https://arxiv.org/html/2609.02531v1
+§IV Table II
+実験の報告: RoboCasa 各課題50デモで76.6%、Cosmos-Policy 67.1%。
+
+結果 2 [実証結果]
+https://arxiv.org/html/2609.02531v1
+§V Fig. 5
+実験の報告: UR5 実機の4分類の集計完了スコアは通常条件90.0%対 Cosmos-Policy 75.0%、ランダム化では77.5%対48.8%。
+
+残った課題 1 [著者の主張]
+https://arxiv.org/html/2609.02531v1
+§VI Conclusion
+著者の説明・提案: 著者の限界: 予測される未来と行動の不整合が残り、幾何整合性の検証と推論効率の改善が必要。","1. Cosmos Policy: Fine-Tuning Video Models for Visuomotor Control and Planning (ID: W002)
+https://arxiv.org/abs/2601.16163
+引用位置: §I Fig. 1
+優先理由: RoboCasa の対応する直接比較対象
+範囲: in_scope"
+W022,Zero-WAM: In-Context World-Action Modeling from Human Videos for Open-Ended Task Generalization,"1. Zhou, Jiaming
+2. Zhang, Qihang
+3. Xu, Gangwei
+4. Fan, Cunxin
+5. Zhao, Yujie
+6. Wang, Ruilin
+7. Luo, Yiming
+8. Yang, Shuai
+9. Zhu, Xing
+10. Shen, Yujun
+11. Liang, Junwei
+12. Xu, Yinghao",,,2026-08-26,v2,2026-08-27,unknown,unverified,https://arxiv.org/abs/2608.26103,https://arxiv.org/html/2608.26103v2,1. 記載なし: 一般社会上の需要は確認範囲で明示なし。,1. 未学習の操作課題へのゼロショット転移にはタスク仕様の表現と対応データの不足が障害。,1. 未見課題をパラメータ更新や課題固有ロボットデータなしに人動画指示で実行する。,"1. ロボット軌跡から意味対応した人動画を生成するHumanGenと課題均衡データを構築し、言語または人動画を条件に未来動画と行動を因果的に予測。
+2. Wan-2.2-TI2V-5Bから因果動画行動MoTを構築し、課題均衡サンプリングは1エポック約40万ロボット軌跡。",1. 実験結果: RoboTwin 2.0の未見課題平均46.95%、LingBot-VA 10.0%；3評価シードのマクロ平均。実機は未見タスク構成で評価。,1. 著者主張: 大規模合成人動画によるインコンテキスト課題指定をWAMに導入。,1. 人動画を文脈とする因果動画行動モデルで未見操作を評価。,1. 調査者指摘: シミュレーションの未見課題と実機の未見構成は設定が異なり、同等の一般化とは限らない。,既存architecture台帳の同一版レビューを再利用（今回の全文再読ではない）。指定版HTMLの導入・方法・実験・結論と、評価条件または限界に関わる付録を確認。,extracted,reviewed,gpt-6.1-terra,2026-11-11T17:00:44.664225+00:00,世界予測と行動の統合,世界予測と行動の統合の方式・比較対象,比較・基礎,未確認,,同一版の既存調査を再利用,直近1年,"社会的背景 1 [記載なし]
+https://arxiv.org/html/2608.26103v2
+§1
+確認範囲を限定
+
+技術的背景 1 [著者の主張]
+https://arxiv.org/html/2608.26103v2
+§1–2
+記載箇所に基づく著者の説明。
+
+取り組む課題 1 [著者の主張]
+https://arxiv.org/html/2608.26103v2
+§1, §3
+記載箇所に基づく著者の説明。
+
+解決手段 1 [著者の主張]
+https://arxiv.org/html/2608.26103v2
+§3
+記載箇所に基づく著者の説明。
+
+結果 1 [実証結果]
+https://arxiv.org/html/2608.26103v2
+§4, Fig. 3
+指定条件下での著者報告の評価結果。
+
+貢献 1 [著者の主張]
+https://arxiv.org/html/2608.26103v2
+§3, §5
+記載箇所に基づく著者の説明。
+
+まとめ 1 [著者の主張]
+https://arxiv.org/html/2608.26103v2
+§3–5
+記載箇所に基づく著者の説明。
+
+残った課題 1 [調査者の解釈]
+https://arxiv.org/html/2608.26103v2
+§4–5
+記載内容からの調査者の解釈。
+
+解決手段 2 [著者の主張]
+https://arxiv.org/html/2608.26103v2
+§3, Appendix Implementation Details
+記載箇所に基づく著者の説明。",
+L031,JEPA-WAM: Learning Vision-Language-Action Policies with Joint-Embedding World Modeling,,,"1. 世界モデル
+2. ロボット学習",2026-08-10,v1,2026-08-10,unknown,未確認,https://arxiv.org/abs/2608.09381,https://arxiv.org/html/2608.09381v1,1. 環境の見た目や配置の変化に頑健な操作が必要。,1. 動画生成WAMのコスト、既存潜在WAMの圧縮や行動表現との分離が課題。,1. 将来遷移の学習を行動生成の共有表現に反映する。,1. 凍結V-JEPAで現在・未来を一緒に符号化した空間パッチをstop-gradient目標とし、共有予測器の遷移予測と行動生成を同時学習する。,"1. 実験結果: LIBERO-Plusの7摂動平均はロボット事前学習なしJEPA-WAM 79.2%、ResVLA 77.1%。本文の表参照とHTML上の表番号が食い違うため、7列の結果表そのもので確認した。
+2. 実験結果: RoboTwin 2.0の20課題平均clean/randomは79.9%/36.9%、事前学習なしDP3は73.9%/8.3%。
+3. 実験結果: 実機5つの両腕操作でIDと視覚・空間OODを評価した。",1. 著者主張: 空間構造を維持した現在・未来の共同目標と共有予測器。,1. 遷移予測と行動生成を共同学習し視覚・空間変化で評価する。,"1. 著者: 言語によって同じ観測から異なる遷移が生じる場合、言語非条件の予測目標は表現力が不足しうる。
+2. 調査者: HTMLの表見出しと本文参照番号に不一致があり、該当する表の項目と値を照合する必要がある。","既存architecture台帳の同一版レビューを再利用（今回の全文再読ではない）。§1, §3–6, 付録A.1, B.3, C, D–E",extracted,reviewed,gpt-6.1-terra,2026-11-11T16:29:29.262319+00:00,潜在世界モデル・予測計画,潜在世界モデル・予測計画の方式・比較対象,比較・基礎,未確認,,同一版の既存調査を再利用,直近1年,"社会的背景 1 [著者の主張]
+https://arxiv.org/html/2608.09381v1
+§1
+環境の見た目や配置の変化に頑健な操作が必要。
+
+技術的背景 1 [著者の主張]
+https://arxiv.org/html/2608.09381v1
+§1–2
+動画生成WAMのコスト、既存潜在WAMの圧縮や行動表現との分離が課題。
+
+取り組む課題 1 [著者の主張]
+https://arxiv.org/html/2608.09381v1
+§1
+将来遷移の学習を行動生成の共有表現に反映する。
+
+貢献 1 [著者の主張]
+https://arxiv.org/html/2608.09381v1
+§1, §3
+著者主張: 空間構造を維持した現在・未来の共同目標と共有予測器。
+
+まとめ 1 [調査者の解釈]
+https://arxiv.org/html/2608.09381v1
+§3–5
+遷移予測と行動生成を共同学習し視覚・空間変化で評価する。
+
+結果 1 [実証結果]
+https://arxiv.org/html/2608.09381v1
+§4.2 LIBERO-Plus, HTML表1（本文は表2と参照）
+実験結果: LIBERO-Plusの7摂動平均はロボット事前学習なしJEPA-WAM 79.2%、ResVLA 77.1%。本文の表参照とHTML上の表番号が食い違うため、7列の結果表そのもので確認した。
+
+結果 2 [実証結果]
+https://arxiv.org/html/2608.09381v1
+§4.2 RoboTwin 2.0, HTML表2（本文は表3と参照）, 付録D
+実験結果: RoboTwin 2.0の20課題平均clean/randomは79.9%/36.9%、事前学習なしDP3は73.9%/8.3%。
+
+結果 3 [実証結果]
+https://arxiv.org/html/2608.09381v1
+§4.4, 図5, 付録B.3, E
+実験結果: 実機5つの両腕操作でIDと視覚・空間OODを評価した。
+
+解決手段 1 [著者の主張]
+https://arxiv.org/html/2608.09381v1
+§3.1–3.3, 付録A.1
+凍結V-JEPAで現在・未来を一緒に符号化した空間パッチをstop-gradient目標とし、共有予測器の遷移予測と行動生成を同時学習する。
+
+残った課題 1 [著者の主張]
+https://arxiv.org/html/2608.09381v1
+§6
+著者: 言語によって同じ観測から異なる遷移が生じる場合、言語非条件の予測目標は表現力が不足しうる。
+
+残った課題 2 [調査者の解釈]
+https://arxiv.org/html/2608.09381v1
+§4.2, HTML表1–3
+調査者: HTMLの表見出しと本文参照番号に不一致があり、該当する表の項目と値を照合する必要がある。","1. V-JEPA 2: Self-Supervised Video Models Enable Understanding, Prediction and Planning (ID: L021)
+https://arxiv.org/abs/2506.09985
+引用位置: §3.1
+優先理由: 凍結視覚表現の基盤
+範囲: foundational_outside_scope"
+L030,LeapBot-WA: World-Anchor Action Models via Predictive Latent Alignments,,,"1. 世界モデル
+2. ロボット学習",2026-07-27,v2,2026-07-30,unknown,未確認,https://arxiv.org/abs/2607.23969,https://arxiv.org/html/2607.23969v2,1. ロボット操作では視覚変化に頑健で低遅延の制御が必要。,1. 画素の未来生成には計算費用がかかる。,1. 潜在表現に基づく効率的なworld-actionモデルを学ぶ。,1. V-JEPA 2.1から初期化した予測アンカーをロボットデータで適応させ、ISAEで96次元へ圧縮し、非対称MoTをflow matchingで共同学習する。推論時は重いアンカーDiTを除く。,"1. 実験結果: RoboTwin 2.0のclean/random平均91.04%/92.48%、Fast-WAM 91.90%/91.80%；各タスク100試行。
+2. 実験結果: 実機UR5で果物・容器のpick-and-placeを報告するが、図5と実機結果節に成功率・試行数の定量記載は確認できない。",1. 著者主張: 意味的な潜在アラインメントと学習時の動力学蒸留。,1. 予測潜在表現を使って訓練し、推論では行動生成を実行する。,"1. 著者: 基盤モデルの表現品質に依存し、微細な接触物理や高周波触覚は難しい。
+2. 調査者: 実機の定量的成功率・試行数は本文のReal-World Resultsと図5に確認できず、性能の統計的評価はできない。","既存architecture台帳の同一版レビューを再利用（今回の全文再読ではない）。Introduction, Methodology, Experiments, Conclusion and Limitations, 付録A–E",extracted,reviewed,gpt-6.1-terra,2026-11-11T16:29:29.262303+00:00,潜在世界モデル・予測計画,潜在世界モデル・予測計画の方式・比較対象,比較・基礎,未確認,,同一版の既存調査を再利用,直近1年,"社会的背景 1 [著者の主張]
+https://arxiv.org/html/2607.23969v2
+Introduction
+ロボット操作では視覚変化に頑健で低遅延の制御が必要。
+
+技術的背景 1 [著者の主張]
+https://arxiv.org/html/2607.23969v2
+Introduction, Related Work
+画素の未来生成には計算費用がかかる。
+
+取り組む課題 1 [著者の主張]
+https://arxiv.org/html/2607.23969v2
+Introduction
+潜在表現に基づく効率的なworld-actionモデルを学ぶ。
+
+貢献 1 [著者の主張]
+https://arxiv.org/html/2607.23969v2
+Introduction, Methodology
+著者主張: 意味的な潜在アラインメントと学習時の動力学蒸留。
+
+まとめ 1 [調査者の解釈]
+https://arxiv.org/html/2607.23969v2
+Methodology, Conclusion and Limitations
+予測潜在表現を使って訓練し、推論では行動生成を実行する。
+
+解決手段 1 [著者の主張]
+https://arxiv.org/html/2607.23969v2
+Methodology, Implementation Details, 付録A–D
+V-JEPA 2.1から初期化した予測アンカーをロボットデータで適応させ、ISAEで96次元へ圧縮し、非対称MoTをflow matchingで共同学習する。推論時は重いアンカーDiTを除く。
+
+結果 1 [実証結果]
+https://arxiv.org/html/2607.23969v2
+Simulation Results, 表1, 付録E 表8
+実験結果: RoboTwin 2.0のclean/random平均91.04%/92.48%、Fast-WAM 91.90%/91.80%；各タスク100試行。
+
+結果 2 [実証結果]
+https://arxiv.org/html/2607.23969v2
+Real-World Results, 図5
+実験結果: 実機UR5で果物・容器のpick-and-placeを報告するが、図5と実機結果節に成功率・試行数の定量記載は確認できない。
+
+残った課題 1 [著者の主張]
+https://arxiv.org/html/2607.23969v2
+Conclusion and Limitations
+著者: 基盤モデルの表現品質に依存し、微細な接触物理や高周波触覚は難しい。
+
+残った課題 2 [未確認]
+https://arxiv.org/html/2607.23969v2
+Real-World Results, 図5
+調査者: 実機の定量的成功率・試行数は本文のReal-World Resultsと図5に確認できず、性能の統計的評価はできない。",
+W028,Native Video-Action Pretraining for Generalizable Robot Control,"1. Zhang, Qihang
+2. Li, Lin
+3. Zhang, Luyao
+4. Yang, Shuai
+5. Luo, Yiming
+6. Li, Shuaiting
+7. Wang, Ruilin
+8. Wang, Junke
+9. Shao, Jiahao
+10. Xu, Gangwei
+11. Zhou, Jiaming
+12. Shen, Yishu
+13. Jin, Yudong
+14. Xu, Fangyi
+15. Ma, Shuailei
+16. Liao, Jiaqi
+17. Lu, Guanxing
+18. Shi, Zifan
+19. Wen, Yongkun
+20. Zhao, Yujie
+21. Tang, Weixuan
+22. Wang, Xinyang
+23. Li, Chaojian
+24. Zhu, Jiapeng
+25. Cheng, Ka Leong
+26. Xue, Nan
+27. Zhu, Xing
+28. Shen, Yujun
+29. Xu, Yinghao",,,2026-07-09,v2,2026-07-16,unknown,unverified,https://arxiv.org/abs/2607.08639,https://arxiv.org/html/2607.08639v2,1. 記載なし: 社会的背景の明示は確認範囲でなし。,1. 汎用動画生成器由来の画素重視表現や双方向バックボーンは身体的制御の因果性と計算要件に合わないと著者は論じる。,1. ロボット制御向けに動画・行動の表現から学習・リアルタイム実行まで統合する。,1. 意味整列視覚行動トークナイザ、因果DiTの疎MoE、複数チャンク予測、人・ロボット共同学習、Foresight Reasoningおよび少ステップ蒸留を用いる。,1. RoboTwin 2.0ではclean 93.8%、randomized 93.4%、両条件平均93.6%；最強比較法の両条件平均92.2%。実機で少数実演適応、長期操作を評価。,1. 著者主張: 制御向けにゼロから学習するネイティブ動画行動基盤モデルLingBot-VA 2.0を提示。,1. 意味行動表現と因果モデルを閉ループ制御に結びシミュレーションと実機で評価。,1. 著者指摘: 高水準プランナと方策は別々に学習し固定インターフェースで接続している。,既存architecture台帳の同一版レビューを再利用（今回の全文再読ではない）。指定版HTMLの導入・方法・実験・結論と、評価条件または限界に関わる付録を確認。,extracted,reviewed,gpt-6.1-terra,2026-11-11T17:00:44.664225+00:00,世界予測と行動の統合,世界予測と行動の統合の方式・比較対象,比較・基礎,未確認,,同一版の既存調査を再利用,直近1年,"社会的背景 1 [記載なし]
+https://arxiv.org/html/2607.08639v2
+§1
+確認範囲を限定
+
+技術的背景 1 [著者の主張]
+https://arxiv.org/html/2607.08639v2
+§1
+記載箇所に基づく著者の説明。
+
+取り組む課題 1 [著者の主張]
+https://arxiv.org/html/2607.08639v2
+§1
+記載箇所に基づく著者の説明。
+
+解決手段 1 [著者の主張]
+https://arxiv.org/html/2607.08639v2
+§2–4
+記載箇所に基づく著者の説明。
+
+結果 1 [実証結果]
+https://arxiv.org/html/2607.08639v2
+§5, Table 1
+指定条件下での著者報告の評価結果。
+
+貢献 1 [著者の主張]
+https://arxiv.org/html/2607.08639v2
+§1–4
+記載箇所に基づく著者の説明。
+
+まとめ 1 [著者の主張]
+https://arxiv.org/html/2607.08639v2
+§2–6
+記載箇所に基づく著者の説明。
+
+残った課題 1 [著者の主張]
+https://arxiv.org/html/2607.08639v2
+§6
+記載箇所に基づく著者の説明。",
+L006,Fast LeWorldModel,"1. Gao, Yuntian
+2. Xu, Xiangyu",,"1. 世界モデル
+2. 潜在計画",2026-06-24,v2,2026-09-28,unknown,未確認,https://arxiv.org/abs/2606.26217,https://arxiv.org/html/2606.26217v2,1. 社会的需要について明示的記載は確認できない。,1. LeWMでは各候補行動列を1段階遷移の自己回帰で評価し、計画コストと誤差累積が増える。,1. 行動条件付き潜在予測と計画を高速化し、複数ステップ先の予測誤差を抑える。,"1. 観測潜在状態と因果マスク付き行動プレフィックス符号器から、複数将来時点の潜在状態を並列に直接予測し、多時点損失で学習する。
+2. 推論時にCEMで行動列を評価し、任意の自己整合項を加える変種も検討する。","1. 同一計画条件の4環境平均成功率はLeWM 85.8%、Fast-LeWM 90.5%、自己整合項あり92.0%。PushTはそれぞれ96%、96%、98%。
+2. RTX 4090、同一CEM予算で通常版は動力学評価19.7秒→4.1秒、CEM全体33.7秒→16.1秒。自己整合版の全体は25.7秒。
+3. 50環境ステップの開ループ評価は5段階予測を2回連結し、4環境で評価各時点の潜在予測損失がLeWMを下回る。",1. 自己回帰遷移に代えて、行動プレフィックスの並列・多時点予測をLeWMに導入する。,1. 行動プレフィックスから複数時点を直接予測することで、同一CEM設定で成功率と計画時間を比較する。,"1. 著者は計画範囲の拡大に伴うCEMの高次元探索を限界に挙げる。
+2. 調査者指摘: 実機、分布外、外乱やデータ被覆を変えた評価は未確認。潜在損失はモデル固有の表現尺度に依存しうる。",既存architecture台帳の同一版レビューを再利用（今回の全文再読ではない）。本文§1–6、表1–2、図3–4を確認。本文HTMLに専用付録は見当たらない。,extracted,reviewed,gpt-6.1-terra,2026-11-11T16:25:39.228418+00:00,潜在世界モデル・予測計画,潜在世界モデル・予測計画の方式・比較対象,比較・基礎,未確認,,同一版の既存調査を再利用,直近1年,"社会的背景 1 [記載なし]
+https://arxiv.org/html/2606.26217v2
+§1, §6
+社会的需要について明示的記載は確認できない。
+
+技術的背景 1 [著者の主張]
+https://arxiv.org/html/2606.26217v2
+§1
+LeWMでは各候補行動列を1段階遷移の自己回帰で評価し、計画コストと誤差累積が増える。
+
+取り組む課題 1 [著者の主張]
+https://arxiv.org/html/2606.26217v2
+§1
+行動条件付き潜在予測と計画を高速化し、複数ステップ先の予測誤差を抑える。
+
+解決手段 1 [著者の主張]
+https://arxiv.org/html/2606.26217v2
+§3
+観測潜在状態と因果マスク付き行動プレフィックス符号器から、複数将来時点の潜在状態を並列に直接予測し、多時点損失で学習する。
+
+解決手段 2 [著者の主張]
+https://arxiv.org/html/2606.26217v2
+§3–4
+推論時にCEMで行動列を評価し、任意の自己整合項を加える変種も検討する。
+
+結果 1 [実証結果]
+https://arxiv.org/html/2606.26217v2
+§4.1, 表1
+同一計画条件の4環境平均成功率はLeWM 85.8%、Fast-LeWM 90.5%、自己整合項あり92.0%。PushTはそれぞれ96%、96%、98%。
+
+結果 2 [実証結果]
+https://arxiv.org/html/2606.26217v2
+§4.1, 表2
+RTX 4090、同一CEM予算で通常版は動力学評価19.7秒→4.1秒、CEM全体33.7秒→16.1秒。自己整合版の全体は25.7秒。
+
+結果 3 [実証結果]
+https://arxiv.org/html/2606.26217v2
+§4.2, 図3
+50環境ステップの開ループ評価は5段階予測を2回連結し、4環境で評価各時点の潜在予測損失がLeWMを下回る。
+
+貢献 1 [著者の主張]
+https://arxiv.org/html/2606.26217v2
+§1, §3
+自己回帰遷移に代えて、行動プレフィックスの並列・多時点予測をLeWMに導入する。
+
+まとめ 1 [調査者の解釈]
+https://arxiv.org/html/2606.26217v2
+§3–4
+行動プレフィックスから複数時点を直接予測することで、同一CEM設定で成功率と計画時間を比較する。
+
+残った課題 1 [著者の主張]
+https://arxiv.org/html/2606.26217v2
+§5
+著者は計画範囲の拡大に伴うCEMの高次元探索を限界に挙げる。
+
+残った課題 2 [未確認]
+https://arxiv.org/html/2606.26217v2
+§4–5
+調査者指摘: 実機、分布外、外乱やデータ被覆を変えた評価は未確認。潜在損失はモデル固有の表現尺度に依存しうる。","1. LeWorldModel: Stable End-to-End Joint-Embedding Predictive Architecture from Pixels (ID: L001)
+https://arxiv.org/abs/2603.19312
+引用位置: §1, §4
+優先理由: 直接基礎・比較対象
+範囲: in_scope"
+W024,RepWAM: World Action Modeling with Representation Visual-Action Tokenizers,"1. Wang, Junke
+2. Zhang, Qihang
+3. Yang, Shuai
+4. Luo, Yiming
+5. Shen, Yujun
+6. Wu, Zuxuan
+7. Jiang, Yu-Gang
+8. Xu, Yinghao",,,2026-06-11,v2,2026-06-13,unknown,unverified,https://arxiv.org/abs/2606.13674,https://arxiv.org/html/2606.13674v2,1. 記載なし: 社会的背景の明示は確認範囲でなし。,1. 画素再構成重視の動画トークナイザは指示に沿う制御に必要な意味情報を十分誘導しない。,1. 視覚状態と状態遷移を共通意味空間に表しロボット制御に転移する。,"1. 凍結視覚基盤モデルに視覚潜在を整列し、遷移を潜在行動として学習；因果的な世界・行動エキスパートをflow matchingで事前学習し実演で適応。
+2. RepViTokはPanda-70Mで学習し、AgiBot約100G潜在トークンで事前学習、複数実ロボットデータ約300Gトークンで身体適応。",1. 実機3課題各10試行で5B版は果物60%、引き出し80%、チューブ挿入60%。π0.5は各10%、50%、10%。シミュレーションで同一1.3B設定のトークナイザ置換はEasy 78.0→86.6%、Hard 76.0→83.1%。,1. 著者主張: 意味整列視覚・行動トークナイザRepViTokを提案。,1. 意味を保つ潜在空間により未来予測と行動生成を学び実機とRoboTwinで検証。,1. 著者展望: ロボット動画外の大規模インターネット・一人称人動画への拡張が今後の課題。実機は各課題10試行。,既存architecture台帳の同一版レビューを再利用（今回の全文再読ではない）。指定版HTMLの導入・方法・実験・結論と、評価条件または限界に関わる付録を確認。,extracted,reviewed,gpt-6.1-terra,2026-11-11T17:00:44.664225+00:00,世界予測と行動の統合,世界予測と行動の統合の方式・比較対象,比較・基礎,未確認,,同一版の既存調査を再利用,直近1年,"社会的背景 1 [記載なし]
+https://arxiv.org/html/2606.13674v2
+§1
+確認範囲を限定
+
+技術的背景 1 [著者の主張]
+https://arxiv.org/html/2606.13674v2
+§1–2
+記載箇所に基づく著者の説明。
+
+取り組む課題 1 [著者の主張]
+https://arxiv.org/html/2606.13674v2
+§3.1
+記載箇所に基づく著者の説明。
+
+解決手段 1 [著者の主張]
+https://arxiv.org/html/2606.13674v2
+§3.2–3.3
+記載箇所に基づく著者の説明。
+
+結果 1 [実証結果]
+https://arxiv.org/html/2606.13674v2
+§4, Fig. 2, Table 3
+指定条件下での著者報告の評価結果。
+
+貢献 1 [著者の主張]
+https://arxiv.org/html/2606.13674v2
+§3
+記載箇所に基づく著者の説明。
+
+まとめ 1 [著者の主張]
+https://arxiv.org/html/2606.13674v2
+§3–5
+記載箇所に基づく著者の説明。
+
+残った課題 1 [著者の主張]
+https://arxiv.org/html/2606.13674v2
+§5, Fig. 2
+記載箇所に基づく著者の説明。
+
+解決手段 2 [著者の主張]
+https://arxiv.org/html/2606.13674v2
+§4.1 Implementation Details
+記載箇所に基づく著者の説明。","1. Causal World Modeling for Robot Control (ID: W030)
+https://arxiv.org/abs/2601.21998
+引用位置: §4, Fig. 2
+優先理由: 実機比較対象LingBot-VA
+範囲: in_scope"
+W032,MaskWAM: Unifying Mask Prompting and Prediction for World-Action Models,"1. Yu, Hanyang
+2. Lin, Haitao
+3. Zhang, Jingbo
+4. Zhang, Wenyao
+5. Gu, Chenghao
+6. Li, Heng
+7. Tan, Ping","1. World-Action Models
+2. Mask Visual Prompting
+3. Object-Centric Manipulation",,2026-06-11,v1,2026-06-11,CoRL 2026,accepted,https://arxiv.org/abs/2606.13515,https://arxiv.org/html/2606.13515v1,1. 記載なし: 確認した導入に社会的背景の明示的記載はない。,1. RGB予測は対象外の背景にも再構成を割き、言語だけでは似た物体が密集する場面で対象の位置を曖昧にしうる。,1. 対象物を明示的に特定しつつ対象に集中した将来予測と操作を実現する。,1. Mixture of TransformersでRGB・将来マスク・行動を共同学習し、必要に応じ最初の対象マスクを入力。推論時はRGB・マスク分岐を1ステップ部分復元し行動expertへ渡す。,"1. 実機Dual-arm Xtrainerで言語明瞭な4課題・各100試行、平均成功84.3%、RGBのみ79.3%、FastWAM 79.0%。課題ごと平均100実演。
+2. 実機の言語曖昧4課題・各60試行、マスク指示付き分布内平均92.9%、π0-mask 62.9%；新規妨害物90.4%、未見対象74.6%、照明変更81.7%。
+3. シミュレーションLIBERO平均98.4%対RGB-only 97.3%；RoboTwin 2.0は選択した6ランダム化課題で92.2%対RGB-only 87.3%。",1. 物体マスクを予測と視覚的な対象指定の両方に使用する統合WAMを提案。,1. 対象の曖昧さと背景ノイズに対し将来マスク予測と初期マスク指定を併用し、シミュレーションと双腕実機で評価した。,"1. 著者指摘: 学習時のマスク教師と実行時のセグメンテーションに依存し、混雑場面での安定した自動抽出は難しい。大規模RGB・マスク・行動事前学習も未実施。
+2. 版情報の注意: arXiv v1ヘッダは2026-06-11だが本文タイトル下にAugust 24, 2026と表記される。由来未確認。","既存architecture台帳の同一版レビューを再利用（今回の全文再読ではない）。§1, §3–5の問題・方法・実験・結論と限界、必要な実験付録を確認",extracted,reviewed,gpt-6.1-terra,2026-11-11T17:04:22.936138+00:00,世界予測と行動の統合,世界予測と行動の統合の方式・比較対象,比較・基礎,Poster Poster Session 3,https://www.corl.org/program/accepted-papers | https://openreview.net/forum?id=Ih059VNeWq,同一版の既存調査を再利用,直近1年,"社会的背景 1 [記載なし]
+https://arxiv.org/html/2606.13515v1
+§1
+記載なし: 確認した導入に社会的背景の明示的記載はない。
+
+技術的背景 1 [著者の主張]
+https://arxiv.org/html/2606.13515v1
+§1
+RGB予測は対象外の背景にも再構成を割き、言語だけでは似た物体が密集する場面で対象の位置を曖昧にしうる。
+
+取り組む課題 1 [著者の主張]
+https://arxiv.org/html/2606.13515v1
+§1
+対象物を明示的に特定しつつ対象に集中した将来予測と操作を実現する。
+
+解決手段 1 [著者の主張]
+https://arxiv.org/html/2606.13515v1
+§3
+Mixture of TransformersでRGB・将来マスク・行動を共同学習し、必要に応じ最初の対象マスクを入力。推論時はRGB・マスク分岐を1ステップ部分復元し行動expertへ渡す。
+
+結果 1 [実証結果]
+https://arxiv.org/html/2606.13515v1
+§4, Table 3; Appendix A.1–A.2
+実機Dual-arm Xtrainerで言語明瞭な4課題・各100試行、平均成功84.3%、RGBのみ79.3%、FastWAM 79.0%。課題ごと平均100実演。
+
+結果 2 [実証結果]
+https://arxiv.org/html/2606.13515v1
+§4, Table 5; Appendix A.2
+実機の言語曖昧4課題・各60試行、マスク指示付き分布内平均92.9%、π0-mask 62.9%；新規妨害物90.4%、未見対象74.6%、照明変更81.7%。
+
+結果 3 [実証結果]
+https://arxiv.org/html/2606.13515v1
+§4, Tables 1–2
+シミュレーションLIBERO平均98.4%対RGB-only 97.3%；RoboTwin 2.0は選択した6ランダム化課題で92.2%対RGB-only 87.3%。
+
+貢献 1 [著者の主張]
+https://arxiv.org/html/2606.13515v1
+§1, §3
+物体マスクを予測と視覚的な対象指定の両方に使用する統合WAMを提案。
+
+まとめ 1 [調査者の解釈]
+https://arxiv.org/html/2606.13515v1
+§1, §3–4
+対象の曖昧さと背景ノイズに対し将来マスク予測と初期マスク指定を併用し、シミュレーションと双腕実機で評価した。
+
+残った課題 1 [著者の主張]
+https://arxiv.org/html/2606.13515v1
+§6
+著者指摘: 学習時のマスク教師と実行時のセグメンテーションに依存し、混雑場面での安定した自動抽出は難しい。大規模RGB・マスク・行動事前学習も未実施。
+
+残った課題 2 [未確認]
+https://arxiv.org/html/2606.13515v1
+arXiv v1 表題・ヘッダ
+版情報の注意: arXiv v1ヘッダは2026-06-11だが本文タイトル下にAugust 24, 2026と表記される。由来未確認。","1. WorldVLA: Towards Autoregressive Action World Model (ID: 未登録)
+https://arxiv.org/abs/2506.21539
+引用位置: §4, Table 1
+優先理由: LIBEROの比較対象
+範囲: foundational_outside_scope"
+W025,HiMem-WAM: Hierarchical Memory-Gated World Action Models for Robotic Manipulation,"1. Sun, Xiaoquan
+2. Zhang, Ruijian
+3. Cao, Chen
+4. Sun, Yihan
+5. Chen, Jiahui
+6. Xu, Zetian
+7. Chen, Bo
+8. Chen, Haijier
+9. Yang, Zhen
+10. Zhu, Jiarun
+11. Hong, Yijun
+12. Xu, JingZhe
+13. Pang, Jingrui
+14. Yuan, Mingqi
+15. Chen, Jiayu",,,2026-06-09,v1,2026-06-09,unknown,unverified,https://arxiv.org/abs/2606.10363,https://arxiv.org/html/2606.10363v1,1. 記載なし: 社会的背景の明示は確認範囲でなし。,1. 長期操作では遮蔽された状態や完了済み工程の記憶が必要で、固定長履歴だけでは不足する。,1. 動作の階層表現と課題状態の記憶により長期操作と外乱への頑健性を改善。,1. 光学フロー等から低次動作・高次スキル潜在を学び、スキル境界でタスク状態をゲート付きメモリに書く。テスト時は未来動画・光学フローを生成しない。,1. シミュレーションRMBenchの9課題平均成功率26.3%、π0.5は10.8%。LIBERO-PLUSの7種類の摂動平均76.0%、HoloBrain-0は75.3%。実機評価も実施。,1. 著者主張: 階層潜在行動と境界トリガー記憶を統合。,1. 階層的動作表現と履歴記憶を用いて長期操作と摂動を評価。,"1. 著者指摘: 光学フロー抽出や複数段階学習に大きな計算資源が必要。
+2. 著者指摘: 学習段階が複数で潜在行動・境界・メモリ更新の品質に依存。実機は単一双腕プラットフォームの10課題に限定。",既存architecture台帳の同一版レビューを再利用（今回の全文再読ではない）。指定版HTMLの導入・方法・実験・結論と、評価条件または限界に関わる付録を確認。,extracted,reviewed,gpt-6.1-terra,2026-11-11T17:00:44.664225+00:00,世界予測と行動の統合,世界予測と行動の統合の方式・比較対象,比較・基礎,未確認,,同一版の既存調査を再利用,直近1年,"社会的背景 1 [記載なし]
+https://arxiv.org/html/2606.10363v1
+§1
+確認範囲を限定
+
+技術的背景 1 [著者の主張]
+https://arxiv.org/html/2606.10363v1
+§1–2
+記載箇所に基づく著者の説明。
+
+取り組む課題 1 [著者の主張]
+https://arxiv.org/html/2606.10363v1
+§1
+記載箇所に基づく著者の説明。
+
+解決手段 1 [著者の主張]
+https://arxiv.org/html/2606.10363v1
+§3, Fig. 1
+記載箇所に基づく著者の説明。
+
+結果 1 [実証結果]
+https://arxiv.org/html/2606.10363v1
+§4, Tables 1 and 3
+指定条件下での著者報告の評価結果。
+
+貢献 1 [著者の主張]
+https://arxiv.org/html/2606.10363v1
+§3
+記載箇所に基づく著者の説明。
+
+まとめ 1 [著者の主張]
+https://arxiv.org/html/2606.10363v1
+§3–5
+記載箇所に基づく著者の説明。
+
+残った課題 1 [著者の主張]
+https://arxiv.org/html/2606.10363v1
+§6
+記載箇所に基づく著者の説明。
+
+残った課題 2 [著者の主張]
+https://arxiv.org/html/2606.10363v1
+§6
+記載箇所に基づく著者の説明。","1. RMBench: Memory-Dependent Robotic Manipulation Benchmark with Insights into Policy Design (ID: 未登録)
+https://arxiv.org/abs/2603.01229
+引用位置: §1, Table 1
+優先理由: 記憶依存操作の直接評価ベンチマーク（書誌確認のみ、本文は未調査の次回候補）
+範囲: unresolved
+
+2. Motus: A Unified Latent Action World Model (ID: W036)
+https://arxiv.org/abs/2512.13030
+引用位置: §1–2; References [1]
+優先理由: 潜在行動の先行研究
+範囲: in_scope"
+W021,Efficient-WAM: A 1B-Parameter World-Action Model with Low-Cost Future Imagination,"1. Li, Jiajun
+2. Guo, Tiecheng
+3. Ye, Yifan
+4. Zhang, Rongyu
+5. Chi, Xiaowei
+6. Sun, Qianpu
+7. Li, Ying
+8. Lou, Yunfan
+9. Wang, Jinqiao
+10. Lu, Zhihe
+11. Guo, Meng
+12. Zhang, Shanghang",,,2026-06-08,v3,2026-09-26,unknown,unverified,https://arxiv.org/abs/2606.10040,https://arxiv.org/html/2606.10040v3,1. 実機制御では大規模な動画生成による推論遅延と計算負荷が課題。,1. 従来WAMは未来映像予測と行動生成を結合するが、高精細予測は高コスト。,1. 低画質の未来予測でも制御性能を保ち、推論を低遅延化する。,"1. WAN-2.2-5Bから小型動画エキスパートを蒸留し、低解像度潜在表現と動画・行動の非対称デノイズを組み合わせる。
+2. RT版は観測384×320、未来192×160、動画2回・行動10回デノイズし、16行動単位で閉ループ実行。","1. 実験結果: RoboTwin 2.0のclean/randomized成功率は86.7/85.7%、RT版83.1/82.0%。実機5課題100試行ではRT版65/100成功、RTX 4090で98 ms/16行動チャンク。
+2. RT版の98 msは前処理後から行動逆正規化までの1方策呼出しで、観測取得・ロボット実行・動画復号等を除外。",1. 著者主張: 動画側圧縮と非対称デノイズを組み合わせた1Bモデルを提示。,1. コンパクトな未来表現を用い、シミュレーションと実機で制御と遅延を評価。,1. 著者指摘: 低解像度は細部を失い、糸の挿入等での精度とカメラ変動への頑健性は未評価。,既存architecture台帳の同一版レビューを再利用（今回の全文再読ではない）。指定版HTMLの導入・方法・実験・結論と、評価条件または限界に関わる付録を確認。,extracted,reviewed,gpt-6.1-terra,2026-11-11T17:00:44.664225+00:00,世界予測と行動の統合,世界予測と行動の統合の方式・比較対象,比較・基礎,未確認,,同一版の既存調査を再利用,直近1年,"社会的背景 1 [著者の主張]
+https://arxiv.org/html/2606.10040v3
+§1
+記載箇所に基づく著者の説明。
+
+技術的背景 1 [著者の主張]
+https://arxiv.org/html/2606.10040v3
+§1–2
+記載箇所に基づく著者の説明。
+
+取り組む課題 1 [著者の主張]
+https://arxiv.org/html/2606.10040v3
+§1
+記載箇所に基づく著者の説明。
+
+解決手段 1 [著者の主張]
+https://arxiv.org/html/2606.10040v3
+§3
+記載箇所に基づく著者の説明。
+
+結果 1 [実証結果]
+https://arxiv.org/html/2606.10040v3
+§4.2–4.4, Tables 1–4
+指定条件下での著者報告の評価結果。
+
+貢献 1 [著者の主張]
+https://arxiv.org/html/2606.10040v3
+§3, §5
+記載箇所に基づく著者の説明。
+
+まとめ 1 [著者の主張]
+https://arxiv.org/html/2606.10040v3
+§3–5
+記載箇所に基づく著者の説明。
+
+残った課題 1 [著者の主張]
+https://arxiv.org/html/2606.10040v3
+§5
+記載箇所に基づく著者の説明。
+
+解決手段 2 [著者の主張]
+https://arxiv.org/html/2606.10040v3
+§4.1
+記載箇所に基づく著者の説明。
+
+結果 2 [実証結果]
+https://arxiv.org/html/2606.10040v3
+§4.1
+測定範囲","1. Motus: A Unified Latent Action World Model (ID: W036)
+https://arxiv.org/abs/2512.13030
+引用位置: §2; References [1]
+優先理由: 効率化WAMの直接比較基準
+範囲: in_scope"
+W029,Unified 4D World Action Modeling from Video Priors with Asynchronous Denoising,"1. Guo, Jun
+2. Li, Qiwei
+3. Li, Peiyan
+4. Chen, Zilong
+5. Sun, Nan
+6. Su, Yifei
+7. Wang, Heyun
+8. Zhang, Yuan
+9. Li, Xinghang
+10. Liu, Huaping",,,2026-04-29,v2,2026-05-07,unknown,unverified,https://arxiv.org/abs/2604.26694,https://arxiv.org/html/2604.26694v2,1. 記載なし: 社会的背景の明示は確認範囲でなし。,1. 2D動画中心の統一モデルは明示的な3D構造と、行動速度・高品質生成の両立に課題がある。,1. 空間再構成、動画予測、低遅延の行動生成を単一モデルに統合する。,1. 事前学習DiT末尾を複製した深度分岐でRGB-Dを予測し、訓練・推論分布を合わせる非同期ノイズサンプリングで先に行動を復元する。,1. シミュレーションRoboCasa 24課題平均79.2%、UWM 60.8%；RoboTwin 50課題はclean 89.8%、randomized 90.7%。実機イヤホン梱包も評価。,1. 著者主張: 4D世界再構成と非同期行動予測を統一したX-WAMを提示。,1. 多視点RGB-D予測と高速行動復元を統合し空間再構成と操作を評価。,1. 著者指摘: 固定長文脈で履歴や自己回帰を持たず長期課題に制約があり、専用方策より遅延が大きい。,既存architecture台帳の同一版レビューを再利用（今回の全文再読ではない）。指定版HTMLの導入・方法・実験・結論と、評価条件または限界に関わる付録を確認。,extracted,reviewed,gpt-6.1-terra,2026-11-11T17:00:44.664225+00:00,世界予測と行動の統合,世界予測と行動の統合の方式・比較対象,比較・基礎,未確認,,同一版の既存調査を再利用,直近1年,"社会的背景 1 [記載なし]
+https://arxiv.org/html/2604.26694v2
+§1
+確認範囲を限定
+
+技術的背景 1 [著者の主張]
+https://arxiv.org/html/2604.26694v2
+§1–2
+記載箇所に基づく著者の説明。
+
+取り組む課題 1 [著者の主張]
+https://arxiv.org/html/2604.26694v2
+§1
+記載箇所に基づく著者の説明。
+
+解決手段 1 [著者の主張]
+https://arxiv.org/html/2604.26694v2
+§3
+記載箇所に基づく著者の説明。
+
+結果 1 [実証結果]
+https://arxiv.org/html/2604.26694v2
+§4, Tables 1–2
+指定条件下での著者報告の評価結果。
+
+貢献 1 [著者の主張]
+https://arxiv.org/html/2604.26694v2
+§3
+記載箇所に基づく著者の説明。
+
+まとめ 1 [著者の主張]
+https://arxiv.org/html/2604.26694v2
+§3–5
+記載箇所に基づく著者の説明。
+
+残った課題 1 [著者の主張]
+https://arxiv.org/html/2604.26694v2
+Appendix Limitations and Future Work
+記載箇所に基づく著者の説明。","1. Unified World Models: Coupling Video and Action Diffusion for Pretraining on Large Robotic Datasets (ID: W027)
+https://arxiv.org/abs/2504.02792
+引用位置: §2.1, Table 1
+優先理由: 直接比較される2D統一世界モデル
+範囲: foundational_outside_scope
+
+2. Fast-WAM: Do World Action Models Need Test-time Future Imagination? (ID: L032)
+https://arxiv.org/abs/2603.16666
+引用位置: Appendix Limitations and Future Work
+優先理由: 遅延比較の軽量WAM
+範囲: in_scope"
+L023,Hierarchical Planning with Latent World Models,"1. Wancong Zhang
+2. Basile Terver
+3. Artem Zholus
+4. Soham Chitnis
+5. Harsh Sutaria
+6. Mido Assran
+7. Randall Balestriero
+8. Amir Bar
+9. Yann LeCun
+10. Nicolas Ballas","1. Latent World Models
+2. Planning",1. 潜在世界モデル,2026-04-03,v3,2026-10-12,CoRL 2026,accepted,https://arxiv.org/abs/2604.03208,https://arxiv.org/html/2604.03208v3,1. 記載なし: 社会的需要の明示は確認できない。,1. 長期の潜在世界モデル計画は予測誤差の累積と探索空間の増大に悩む。従来の階層制御は方策や既知ダイナミクスなどに依存する。,1. 報酬やタスク固有方策なしに、視覚世界モデルで長期・多段階操作を計画する。,1. 共有潜在空間に複数時間尺度の予測器を学習し、高層予測を下層の中間目標に用いる階層MPC。行動エンコーダで基本行動列をマクロ行動へ圧縮する。,1. 実験結果: 実機Frankaで画像目標のpick-and-placeはCup 35/50=70%、Box 30/50=60%、単層計画は両者0%。シミュレーションの押し操作と迷路でも長期課題を評価し最大3倍少ない計画計算を報告。,1. 著者主張: 追加の階層方策や手動分解を使わず、異なる時間尺度の予測と潜在マクロ行動で階層計画を実現する。,1. オフライン軌跡で複数時間尺度を学び、画像目標の実機操作とシミュレーションで階層計画の効果を示す。,1. 著者指摘: 全手法で課題が長くなると成功率が低下し、共有表現の抽象度と中間目標の品質に改善余地がある。実機で手動中間目標を与えると単層計画もCup・Boxとも80%に回復しており、単層世界モデルの動力学自体が操作不能とは言えない。,既存architecture台帳の同一版レビューを再利用（今回の全文再読ではない）。本文の課題・方法・実験・結論・限界と関連付録を確認,extracted,reviewed,gpt-6.1-terra,2026-11-11T16:24:18.528394+00:00,潜在世界モデル・予測計画,潜在世界モデル・予測計画の方式・比較対象,比較・基礎,Poster Poster Session 3,https://www.corl.org/program/accepted-papers | https://openreview.net/forum?id=Zts11nHGLq,同一版の既存調査を再利用,直近1年,"社会的背景 1 [記載なし]
+https://arxiv.org/html/2604.03208v3
+§1
+記載なし: 社会的需要の明示は確認できない。
+
+技術的背景 1 [著者の主張]
+https://arxiv.org/html/2604.03208v3
+§1–2
+長期の潜在世界モデル計画は予測誤差の累積と探索空間の増大に悩む。従来の階層制御は方策や既知ダイナミクスなどに依存する。
+
+取り組む課題 1 [著者の主張]
+https://arxiv.org/html/2604.03208v3
+§1, §3
+報酬やタスク固有方策なしに、視覚世界モデルで長期・多段階操作を計画する。
+
+解決手段 1 [著者の主張]
+https://arxiv.org/html/2604.03208v3
+§3
+共有潜在空間に複数時間尺度の予測器を学習し、高層予測を下層の中間目標に用いる階層MPC。行動エンコーダで基本行動列をマクロ行動へ圧縮する。
+
+結果 1 [実証結果]
+https://arxiv.org/html/2604.03208v3
+§4 Table 1; Appendix H Table 16
+Cup 35/50、Box 30/50、単層0%。シミュレーション計画コストは付録H。
+
+貢献 1 [著者の主張]
+https://arxiv.org/html/2604.03208v3
+§3, §5
+著者主張: 追加の階層方策や手動分解を使わず、異なる時間尺度の予測と潜在マクロ行動で階層計画を実現する。
+
+まとめ 1 [実証結果]
+https://arxiv.org/html/2604.03208v3
+§3–5
+オフライン軌跡で複数時間尺度を学び、画像目標の実機操作とシミュレーションで階層計画の効果を示す。
+
+残った課題 1 [著者の主張]
+https://arxiv.org/html/2604.03208v3
+§6; Appendix F Table 15
+長期で成功率低下。手動中間目標を与えた単層計画はCup・Box各80%。","1. V-JEPA 2: Self-Supervised Video Models Enable Understanding, Prediction and Planning (ID: L021)
+https://arxiv.org/abs/2506.09985
+引用位置: §1–2; References [4]
+優先理由: ロボット潜在計画の基礎
+範囲: foundational_outside_scope"
+L032,Fast-WAM: Do World Action Models Need Test-time Future Imagination?,,,"1. 世界モデル
+2. ロボット学習",2026-03-17,v2,2026-03-23,unknown,未確認,https://arxiv.org/abs/2603.16666,https://arxiv.org/html/2603.16666v2,1. ロボットの実時間制御には低い推論遅延が必要。,1. 未来動画を推論時に生成するWAMは遅い。,1. 学習時の動画予測と推論時未来生成の寄与を分離する。,1. 動画拡散と行動を共同学習するが、推論時には動画生成をスキップし行動を直接生成する。未来生成のあるJoint/IDMおよび動画学習なしを統制比較する。,"1. 実験結果: RoboTwin clean/random平均はFast-WAM 91.88%/91.78%、動画共同学習なし82.76%/84.80%。未来生成型のJointは90.84%/90.32%。
+2. 実験結果: 実機Galaxea R1 Liteのタオル折りでは60時間の遠隔操作データで30k step学習、Fast-WAMの推論は190msで未来生成型より4倍超高速（RTX 5090D V2）。",1. 著者主張: 未来生成を省くWAMと統制された設計比較。,1. 動画共同学習の効果を保ちながら推論時未来生成を除く。,1. 著者: より大きな事前学習データとモデル規模の効果は今後の課題。,"既存architecture台帳の同一版レビューを再利用（今回の全文再読ではない）。§1, §3–5, 付録A",extracted,reviewed,gpt-6.1-terra,2026-11-11T16:29:29.262334+00:00,潜在世界モデル・予測計画,推論時の未来生成の必要性を検証,優先,未確認,,同一版の既存調査を再利用,直近1年,"社会的背景 1 [著者の主張]
+https://arxiv.org/html/2603.16666v2
+§1
+ロボットの実時間制御には低い推論遅延が必要。
+
+技術的背景 1 [著者の主張]
+https://arxiv.org/html/2603.16666v2
+§1–2
+未来動画を推論時に生成するWAMは遅い。
+
+取り組む課題 1 [著者の主張]
+https://arxiv.org/html/2603.16666v2
+§1
+学習時の動画予測と推論時未来生成の寄与を分離する。
+
+貢献 1 [著者の主張]
+https://arxiv.org/html/2603.16666v2
+§1, §3
+著者主張: 未来生成を省くWAMと統制された設計比較。
+
+まとめ 1 [調査者の解釈]
+https://arxiv.org/html/2603.16666v2
+§3–5
+動画共同学習の効果を保ちながら推論時未来生成を除く。
+
+結果 1 [実証結果]
+https://arxiv.org/html/2603.16666v2
+§4.3.1–4.3.2, 表1, 付録表3
+実験結果: RoboTwin clean/random平均はFast-WAM 91.88%/91.78%、動画共同学習なし82.76%/84.80%。未来生成型のJointは90.84%/90.32%。
+
+結果 2 [実証結果]
+https://arxiv.org/html/2603.16666v2
+§4.1–4.2, §4.3.3, 図3–4
+実験結果: 実機Galaxea R1 Liteのタオル折りでは60時間の遠隔操作データで30k step学習、Fast-WAMの推論は190msで未来生成型より4倍超高速（RTX 5090D V2）。
+
+解決手段 1 [著者の主張]
+https://arxiv.org/html/2603.16666v2
+§3.2–3.3, §4.3.2
+動画拡散と行動を共同学習するが、推論時には動画生成をスキップし行動を直接生成する。未来生成のあるJoint/IDMおよび動画学習なしを統制比較する。
+
+残った課題 1 [著者の主張]
+https://arxiv.org/html/2603.16666v2
+§5
+著者: より大きな事前学習データとモデル規模の効果は今後の課題。",
+L001,LeWorldModel: Stable End-to-End Joint-Embedding Predictive Architecture from Pixels,"1. Maes, Lucas
+2. Lidec, Quentin Le
+3. Scieur, Damien
+4. LeCun, Yann
+5. Balestriero, Randall",,"1. 世界モデル
+2. 潜在計画",2026-03-13,v3,2026-06-03,unknown,未確認,https://arxiv.org/abs/2603.19312,https://arxiv.org/html/2603.19312v3,1. 著者は安価で拡張しやすいカメラ画像からの学習と、環境との追加相互作用を伴わないオフライン学習を動機に挙げる。,1. JEPAは予測しやすい潜在表現を学ぶが定数表現への崩壊を起こし、従来の対策は事前学習器や複数損失等に依存する。,1. 報酬なしの画像・行動の固定軌跡から、崩壊を防ぎつつ潜在ダイナミクスを端から端まで学習し、目標画像への計画に用いる。,"1. ViT画像符号器と行動条件付きTransformer予測器を次埋め込みのMSEとSIGRegの和で同時学習する。SIGRegはランダム射影上の正規性統計で等方ガウスに近づける。
+2. 推論時は終端潜在状態と目標画像表現の距離をCEMで最小化し、MPCで再計画する。","1. 連続行動の4環境で、PushTはPLDMより成功率が18パーセントポイント高く、Reacherでも優位だった一方、Two-RoomではPLDMとDINO-WMを下回り、CubeではDINO-WMがやや上回った。
+2. 50回平均の計画時間比較でDINO-WM比最大48倍高速、同一計算量ではPushTとCubeで優位だった。
+3. 3環境の物体テレポートによる予測誤差増加は対応のあるt検定でp<0.01、色変更は有意でなかった。",1. 著者は事前学習器・停止勾配・EMAなしで画像から学ぶ2項のJEPA世界モデルと、物理量プローブ・予想違反評価を提示する。新規性は著者主張。,1. 報酬なし画像軌跡から予測損失とガウス正則化で表現を学び、短期の潜在計画で複数のシミュレーション課題において競争力を示す。,"1. 著者は短い計画範囲、十分に広いオフラインデータへの依存、低多様性データでのSIGRegの弱さ、行動ラベルへの依存を限界とする。
+2. 調査者指摘: 実機、分布外や外乱への頑健性、必要なデータ被覆量はこの実験では確認されていない。",既存architecture台帳の同一版レビューを再利用（今回の全文再読ではない）。本文§1–6、図1–8・表1、付録A・D・F.3・Gの設定と結果を確認。,extracted,reviewed,gpt-6.1-terra,2026-11-11T16:22:23.385581+00:00,潜在世界モデル・予測計画,潜在世界モデル・予測計画の方式・比較対象,比較・基礎,未確認,,同一版の既存調査を再利用,直近1年,"社会的背景 1 [著者の主張]
+https://arxiv.org/html/2603.19312v3
+§1
+著者は安価で拡張しやすいカメラ画像からの学習と、環境との追加相互作用を伴わないオフライン学習を動機に挙げる。
+
+技術的背景 1 [著者の主張]
+https://arxiv.org/html/2603.19312v3
+§1–2
+JEPAは予測しやすい潜在表現を学ぶが定数表現への崩壊を起こし、従来の対策は事前学習器や複数損失等に依存する。
+
+取り組む課題 1 [著者の主張]
+https://arxiv.org/html/2603.19312v3
+§3
+報酬なしの画像・行動の固定軌跡から、崩壊を防ぎつつ潜在ダイナミクスを端から端まで学習し、目標画像への計画に用いる。
+
+解決手段 1 [著者の主張]
+https://arxiv.org/html/2603.19312v3
+§3.1, 式1–3
+ViT画像符号器と行動条件付きTransformer予測器を次埋め込みのMSEとSIGRegの和で同時学習する。SIGRegはランダム射影上の正規性統計で等方ガウスに近づける。
+
+解決手段 2 [著者の主張]
+https://arxiv.org/html/2603.19312v3
+§3.2, 式4–5
+推論時は終端潜在状態と目標画像表現の距離をCEMで最小化し、MPCで再計画する。
+
+結果 1 [実証結果]
+https://arxiv.org/html/2603.19312v3
+§4.2, 図6
+連続行動の4環境で、PushTはPLDMより成功率が18パーセントポイント高く、Reacherでも優位だった一方、Two-RoomではPLDMとDINO-WMを下回り、CubeではDINO-WMがやや上回った。
+
+結果 2 [実証結果]
+https://arxiv.org/html/2603.19312v3
+§4.2, 図3
+50回平均の計画時間比較でDINO-WM比最大48倍高速、同一計算量ではPushTとCubeで優位だった。
+
+結果 3 [実証結果]
+https://arxiv.org/html/2603.19312v3
+§5.2, 図8
+3環境の物体テレポートによる予測誤差増加は対応のあるt検定でp<0.01、色変更は有意でなかった。
+
+貢献 1 [著者の主張]
+https://arxiv.org/html/2603.19312v3
+§1, §3, §5
+著者は事前学習器・停止勾配・EMAなしで画像から学ぶ2項のJEPA世界モデルと、物理量プローブ・予想違反評価を提示する。新規性は著者主張。
+
+まとめ 1 [調査者の解釈]
+https://arxiv.org/html/2603.19312v3
+§3–6
+報酬なし画像軌跡から予測損失とガウス正則化で表現を学び、短期の潜在計画で複数のシミュレーション課題において競争力を示す。
+
+残った課題 1 [著者の主張]
+https://arxiv.org/html/2603.19312v3
+§6 Limitations
+著者は短い計画範囲、十分に広いオフラインデータへの依存、低多様性データでのSIGRegの弱さ、行動ラベルへの依存を限界とする。
+
+残った課題 2 [未確認]
+https://arxiv.org/html/2603.19312v3
+§4–6, 図5–8
+調査者指摘: 実機、分布外や外乱への頑健性、必要なデータ被覆量はこの実験では確認されていない。","1. LeJEPA: Provable and Scalable Self-Supervised Learning Without the Heuristics (ID: 未登録)
+https://arxiv.org/abs/2511.08544
+引用位置: §3.1 [6]
+優先理由: SIGRegの基礎
+範囲: foundational_outside_scope
+
+2. DINO-WM: World Models on Pre-trained Visual Features enable Zero-shot Planning (ID: L003)
+https://arxiv.org/abs/2411.04983
+引用位置: §4.1 [51]
+優先理由: 直接比較対象
+範囲: foundational_outside_scope
+
+3. VICReg: Variance-Invariance-Covariance Regularization for Self-Supervised Learning (ID: 未登録)
+https://arxiv.org/abs/2105.04906
+引用位置: §2; References: VICReg: Variance-Invariance-Covariance Regularization for Self-Supervised Learning
+優先理由: LeWM本文で引用する基礎手法・比較対象・評価基盤
+範囲: foundational_outside_scope
+
+4. Self-Supervised Learning from Images with a Joint-Embedding Predictive Architecture (ID: 未登録)
+https://arxiv.org/abs/2301.08243
+引用位置: §2; References: Self-Supervised Learning from Images with a Joint-Embedding Predictive Architecture
+優先理由: LeWM本文で引用する基礎手法・比較対象・評価基盤
+範囲: foundational_outside_scope
+
+5. Revisiting Feature Prediction for Learning Visual Representations from Video (ID: 未登録)
+https://arxiv.org/abs/2404.08471
+引用位置: §2; References: Revisiting Feature Prediction for Learning Visual Representations from Video
+優先理由: LeWM本文で引用する基礎手法・比較対象・評価基盤
+範囲: foundational_outside_scope
+
+6. Temporal Difference Learning for Model Predictive Control (ID: 未登録)
+https://arxiv.org/abs/2203.04955
+引用位置: §2; References: Temporal Difference Learning for Model Predictive Control
+優先理由: LeWM本文で引用する基礎手法・比較対象・評価基盤
+範囲: foundational_outside_scope
+
+7. TD-MPC2: Scalable, Robust World Models for Continuous Control (ID: 未登録)
+https://arxiv.org/abs/2310.16828
+引用位置: §2; References: TD-MPC2: Scalable, Robust World Models for Continuous Control
+優先理由: LeWM本文で引用する基礎手法・比較対象・評価基盤
+範囲: foundational_outside_scope
+
+8. Dream to Control: Learning Behaviors by Latent Imagination (ID: 未登録)
+https://arxiv.org/abs/1912.01603
+引用位置: §2; References: Dream to Control: Learning Behaviors by Latent Imagination
+優先理由: LeWM本文で引用する基礎手法・比較対象・評価基盤
+範囲: foundational_outside_scope
+
+9. Mastering Diverse Domains through World Models (ID: 未登録)
+https://arxiv.org/abs/2301.04104
+引用位置: §2; References: Mastering Diverse Domains through World Models
+優先理由: LeWM本文で引用する基礎手法・比較対象・評価基盤
+範囲: foundational_outside_scope
+
+10. Training Agents Inside of Scalable World Models (ID: 未登録)
+https://arxiv.org/abs/2509.24527
+引用位置: §2; References: Training Agents Inside of Scalable World Models
+優先理由: LeWM本文で引用する基礎手法・比較対象・評価基盤
+範囲: foundational_outside_scope
+
+11. World Models (ID: 未登録)
+https://arxiv.org/abs/1803.10122
+引用位置: §2; References: World Models
+優先理由: LeWM本文で引用する基礎手法・比較対象・評価基盤
+範囲: foundational_outside_scope
+
+12. DINOv2: Learning Robust Visual Features without Supervision (ID: 未登録)
+https://arxiv.org/abs/2304.07193
+引用位置: §4.1; References: DINOv2: Learning Robust Visual Features without Supervision
+優先理由: LeWM本文で引用する基礎手法・比較対象・評価基盤
+範囲: foundational_outside_scope
+
+13. Offline Reinforcement Learning with Implicit Q-Learning (ID: 未登録)
+https://arxiv.org/abs/2110.06169
+引用位置: Appendix C.3; References: Offline Reinforcement Learning with Implicit Q-Learning
+優先理由: LeWM本文で引用する基礎手法・比較対象・評価基盤
+範囲: foundational_outside_scope
+
+14. Joint Embedding Predictive Architectures Focus on Slow Features (ID: 未登録)
+https://arxiv.org/abs/2211.10831
+引用位置: §2; References: Joint Embedding Predictive Architectures Focus on Slow Features
+優先理由: LeWM本文で引用する基礎手法・比較対象・評価基盤
+範囲: foundational_outside_scope
+
+15. OSVI-WM: One-Shot Visual Imitation for Unseen Tasks using World-Model-Guided Trajectory Generation (ID: L049)
+https://arxiv.org/abs/2505.20425
+引用位置: §2; References: OSVI-WM: One-Shot Visual Imitation for Unseen Tasks using World-Model-Guided Trajectory Generation
+優先理由: LeWM本文で引用する基礎手法・比較対象・評価基盤
+範囲: foundational_outside_scope
+
+16. OGBench: Benchmarking Offline Goal-Conditioned RL (ID: 未登録)
+https://arxiv.org/abs/2410.20092
+引用位置: §4.1; References: OGBench: Benchmarking Offline Goal-Conditioned RL
+優先理由: LeWM本文で引用する基礎手法・比較対象・評価基盤
+範囲: foundational_outside_scope"
+W001,World Action Models are Zero-shot Policies,"1. Ye, Seonghyeon
+2. Ge, Yunhao
+3. Zheng, Kaiyuan
+4. Gao, Shenyuan
+5. Yu, Sihyun
+6. Kurian, George
+7. Indupuru, Suneel
+8. Tan, You Liang
+9. Zhu, Chuning
+10. Xiang, Jiannan
+11. Malik, Ayaan
+12. Lee, Kyungmin
+13. Liang, William
+14. Ranawaka, Nadun
+15. Gu, Jiasheng
+16. Xu, Yinzhen
+17. Wang, Guanzhi
+18. Hu, Fengyuan
+19. Narayan, Avnish
+20. Bjorck, Johan
+21. Wang, Jing
+22. Kim, Gwanghyun
+23. Niu, Dantong
+24. Zheng, Ruijie
+25. Xie, Yuqi
+26. Wu, Jimmy
+27. Wang, Qi
+28. Julian, Ryan
+29. Xu, Danfei
+30. Du, Yilun
+31. Chebotar, Yevgen
+32. Reed, Scott
+33. Kautz, Jan
+34. Zhu, Yuke
+35. Fan, Linxi ""Jim""
+36. Jang, Joel",,,2026-02-17,v1,2026-02-17,CoRL 2026,accepted,https://arxiv.org/abs/2602.15922,https://arxiv.org/html/2602.15922v1,1. 記載なし: 確認した導入部に社会的需要の明示的説明はない。,1. VLAは意味の汎化に強い一方で未経験の物理動作や環境への汎化が難しい。,1. 多様なロボット経験から未学習課題へゼロショットで操作する。,1. Wan由来の14B動画拡散モデルを用い、映像の将来と行動を言語・観測に条件付けて共同生成し、閉ループ実行する。,1. 実機AgiBot G1の訓練にない10課題で平均進捗39.5%、事前学習済みVLA 16.3%；既知課題・未知環境では62.2%対27.4%。14Bモデルを7 Hzで閉ループ実行。,1. 著者主張: 多様な非反復データを使う動画・行動共同生成と異なる身体への移転を実証。,1. 多様なロボット経験から未学習課題へゼロショットで操作する。 Wan由来の14B動画拡散モデルを用い、映像の将来と行動を言語・観測に条件付けて共同生成し、閉ループ実行する。 実機AgiBot G1の訓練にない10課題で平均進捗39.5%、事前学習済みVLA 16.3%；既知課題・未知環境では62.2%対27.4%。14Bモデルを7 Hzで閉ループ実行。,1. 著者指摘: 鍵挿入などサブセンチ精度を要する操作は困難で、映像生成の誤りが動作失敗につながる。,"既存architecture台帳の同一版レビューを再利用（今回の全文再読ではない）。§1, §3–6、Fig.8–9、関連付録の選択箇所",extracted,reviewed,gpt-6.1-terra,2026-11-11T17:00:32.523528+00:00,世界予測と行動の統合,動画と行動の共同生成を制御へ使う基準,優先,Oral O2 World models and temporal representations,https://www.corl.org/program/accepted-papers | https://openreview.net/forum?id=Bshs9HDDiu,同一版の既存調査を再利用,直近1年,"社会的背景 1 [記載なし]
+https://arxiv.org/html/2602.15922v1
+§1
+導入部を確認
+
+技術的背景 1 [著者の主張]
+https://arxiv.org/html/2602.15922v1
+§1
+VLAは意味の汎化に強い一方で未経験の物理動作や環境への汎化が難しい。
+
+取り組む課題 1 [著者の主張]
+https://arxiv.org/html/2602.15922v1
+§1
+多様なロボット経験から未学習課題へゼロショットで操作する。
+
+解決手段 1 [著者の主張]
+https://arxiv.org/html/2602.15922v1
+§3–4
+Wan由来の14B動画拡散モデルを用い、映像の将来と行動を言語・観測に条件付けて共同生成し、閉ループ実行する。
+
+結果 1 [実証結果]
+https://arxiv.org/html/2602.15922v1
+§5.1, Fig.8–9; §4
+実機AgiBot G1の訓練にない10課題で平均進捗39.5%、事前学習済みVLA 16.3%；既知課題・未知環境では62.2%対27.4%。14Bモデルを7 Hzで閉ループ実行。
+
+貢献 1 [著者の主張]
+https://arxiv.org/html/2602.15922v1
+§1, §5
+著者主張: 多様な非反復データを使う動画・行動共同生成と異なる身体への移転を実証。
+
+まとめ 1 [調査者の解釈]
+https://arxiv.org/html/2602.15922v1
+§1; §3–4; §5.1, Fig.8–9; §4
+多様なロボット経験から未学習課題へゼロショットで操作する。 Wan由来の14B動画拡散モデルを用い、映像の将来と行動を言語・観測に条件付けて共同生成し、閉ループ実行する。 実機AgiBot G1の訓練にない10課題で平均進捗39.5%、事前学習済みVLA 16.3%；既知課題・未知環境では62.2%対27.4%。14Bモデルを7 Hzで閉ループ実行。
+
+残った課題 1 [著者の主張]
+https://arxiv.org/html/2602.15922v1
+§5.1, §6
+著者指摘: 鍵挿入などサブセンチ精度を要する操作は困難で、映像生成の誤りが動作失敗につながる。","1. Cosmos Policy: Fine-Tuning Video Models for Visuomotor Control and Planning (ID: W002)
+https://arxiv.org/abs/2601.16163
+引用位置: §1
+優先理由: 先行する動画方策WAM
+範囲: in_scope"
+L050,VLA-JEPA: Enhancing Vision-Language-Action Model with Latent World Model,"1. Jingwen Sun
+2. Wenyao Zhang
+3. Zekun Qi
+4. Shaojie Ren
+5. Zezhi Liu
+6. Hanxin Zhu
+7. Guangzhong Sun
+8. Xin Jin
+9. Zhibo Chen",,"1. 表現学習
+2. 世界モデル",2026-02-10,v2,2026-02-14,,未確認,https://arxiv.org/abs/2602.10098,https://arxiv.org/html/2602.10098v2,1. 記載なし: 特定の社会的需要を序論で明示しない。,1. 動画事前学習の潜在行動は画素変動や将来情報の漏洩を学び、動作に必要な状態遷移を捉え損なう場合がある。,1. 将来画像を入力に漏らさず、動画からVLA方策に有用な潜在状態変化を学ぶ。,1. 未来フレームの教師表現を現在観測のみから予測するJEPA事前学習の後、行動ヘッドを実演データで微調整する。,1. 実験結果: LIBERO、LIBERO-Plus、SimplerEnvのシミュレーションとFranka Research 3実機で評価。実機は100件の人間実演、3つの学習課題、未見課題と配置変化を含み、π0・π0.5も同じ実演で微調整。 論文のLIBERO-Plus設定で平均成功率79.5%、OpenVLA-OFT 69.6%。人間動画事前学習なしは62.9%。後発論文の指示修正版とは条件を混同できない。,1. 著者主張: 将来情報を教師目標にのみ使う潜在予測と行動微調整の二段階学習を提示する。,1. 将来情報の漏洩を防ぐ潜在表現学習をVLAに導入し、シミュレーションと実機で汎化を比較した。,1. 著者指摘: 実機では言語指示の細かい理解が不足し対象を誤る場合があり、未見課題ではπ0.5より汎化が弱い。人間動画事前学習の効果は条件依存で、LIBEROやSimplerEnvでは大きな低下が見られない場合がある。,既存architecture台帳の同一版レビューを再利用（今回の全文再読ではない）。課題・方法・実験・結論・限界と関連付録を確認,extracted,reviewed,gpt-6.1-terra,2026-11-11T16:26:56.461459+00:00,潜在世界モデル・予測計画,潜在世界モデル・予測計画の方式・比較対象,比較・基礎,未確認,,同一版の既存調査を再利用,直近1年,"社会的背景 1 [記載なし]
+https://arxiv.org/html/2602.10098v2
+§1
+記載なし: 特定の社会的需要を序論で明示しない。
+
+技術的背景 1 [著者の主張]
+https://arxiv.org/html/2602.10098v2
+§1–3
+動画事前学習の潜在行動は画素変動や将来情報の漏洩を学び、動作に必要な状態遷移を捉え損なう場合がある。
+
+取り組む課題 1 [著者の主張]
+https://arxiv.org/html/2602.10098v2
+§1, §3
+将来画像を入力に漏らさず、動画からVLA方策に有用な潜在状態変化を学ぶ。
+
+解決手段 1 [著者の主張]
+https://arxiv.org/html/2602.10098v2
+§3, Appendix A
+未来フレームの教師表現を現在観測のみから予測するJEPA事前学習の後、行動ヘッドを実演データで微調整する。
+
+結果 1 [実証結果]
+https://arxiv.org/html/2602.10098v2
+§4.3 Table 3; §4.4 Figure 4; Appendix B
+実験結果: LIBERO、LIBERO-Plus、SimplerEnvのシミュレーションとFranka Research 3実機で評価。実機は100件の人間実演、3つの学習課題、未見課題と配置変化を含み、π0・π0.5も同じ実演で微調整。 ホストが代表値・比較条件を原文照合して追記。
+
+貢献 1 [著者の主張]
+https://arxiv.org/html/2602.10098v2
+§3
+著者主張: 将来情報を教師目標にのみ使う潜在予測と行動微調整の二段階学習を提示する。
+
+まとめ 1 [実証結果]
+https://arxiv.org/html/2602.10098v2
+§3–5
+将来情報の漏洩を防ぐ潜在表現学習をVLAに導入し、シミュレーションと実機で汎化を比較した。
+
+残った課題 1 [著者の主張]
+https://arxiv.org/html/2602.10098v2
+§4.4–4.5
+著者指摘: 実機では言語指示の細かい理解が不足し対象を誤る場合があり、未見課題ではπ0.5より汎化が弱い。人間動画事前学習の効果は条件依存で、LIBEROやSimplerEnvでは大きな低下が見られない場合がある。","1. V-JEPA 2: Self-Supervised Video Models Enable Understanding, Prediction and Planning (ID: L021)
+https://arxiv.org/abs/2506.09985
+引用位置: §1, §3.1–3.2
+優先理由: 潜在動画予測の基礎
+範囲: foundational_outside_scope"
+W030,Causal World Modeling for Robot Control,"1. Li, Lin
+2. Zhang, Qihang
+3. Luo, Yiming
+4. Yang, Shuai
+5. Wang, Ruilin
+6. Han, Fei
+7. Yu, Mingrui
+8. Gao, Zelin
+9. Xue, Nan
+10. Zhu, Xing
+11. Shen, Yujun
+12. Xu, Yinghao",,,2026-01-29,v2,2026-03-22,RSS 2026,accepted,https://arxiv.org/abs/2601.21998,https://arxiv.org/html/2601.21998v2,1. 記載なし: 社会的背景の明示は確認範囲でなし。,1. 一括未来生成は観測フィードバックを取り込めず、独立チャンク生成は長期履歴や因果性が不足する。,1. 因果的な動画行動世界モデルを閉ループ操作に利用する。,1. MoTで動画と行動トークンを交互に処理し、因果attentionとKV cacheで履歴を保持、実観測を繰り返し取り込む。部分デノイズと行動実行・予測の非同期重複で高速化。,"1. シミュレーションRoboTwin 2.0ではEasy 92.9%、Hard 91.6%；LIBERO平均98.5%。実機課題と50実演の適応を評価。非同期方式は比較した同期方式の約2倍のタスク完了速度。 表3の成功率はbase 92.9%、FDM-grounded非同期90.4%、naive非同期74.3%で、速度改善には方式によって成功率の差が伴う。
+2. 実機6課題では各手法・課題20試行、π0.5と交互実行し全工程達成を成功とした。",1. 著者主張: 自己回帰拡散による動画行動統合と観測フィードバックを組み合わせたLingBot-VAを提示。,1. 因果的未来予測と動作生成を統合しシミュレーションと実機で閉ループ制御を評価。,1. 著者展望: 動画圧縮による計算削減と触覚・力・音声の追加が今後の課題。,既存architecture台帳の同一版レビューを再利用（今回の全文再読ではない）。指定版HTMLの導入・方法・実験・結論と、評価条件または限界に関わる付録を確認。,extracted,reviewed,gpt-6.1-terra,2026-11-11T17:00:44.664225+00:00,世界予測と行動の統合,世界予測と行動の統合の方式・比較対象,比較・基礎,RSS 2026 proceedings; selective Oral区分は未確認,https://www.roboticsproceedings.org/rss22/ | https://www.roboticsproceedings.org/rss22/p016.html,同一版の既存調査を再利用,直近1年,"社会的背景 1 [記載なし]
+https://arxiv.org/html/2601.21998v2
+§1
+確認範囲を限定
+
+技術的背景 1 [著者の主張]
+https://arxiv.org/html/2601.21998v2
+§1–2
+記載箇所に基づく著者の説明。
+
+取り組む課題 1 [著者の主張]
+https://arxiv.org/html/2601.21998v2
+§1
+記載箇所に基づく著者の説明。
+
+解決手段 1 [著者の主張]
+https://arxiv.org/html/2601.21998v2
+§3–4
+記載箇所に基づく著者の説明。
+
+結果 1 [実証結果]
+https://arxiv.org/html/2601.21998v2
+§5, Tables 1–3
+指定条件下での著者報告の評価結果。
+
+貢献 1 [著者の主張]
+https://arxiv.org/html/2601.21998v2
+§3–4
+記載箇所に基づく著者の説明。
+
+まとめ 1 [著者の主張]
+https://arxiv.org/html/2601.21998v2
+§3–6
+記載箇所に基づく著者の説明。
+
+残った課題 1 [著者の主張]
+https://arxiv.org/html/2601.21998v2
+§6
+記載箇所に基づく著者の説明。
+
+結果 2 [実証結果]
+https://arxiv.org/html/2601.21998v2
+Appendix Real-world Evaluation Details
+指定条件下での著者報告の評価結果。",
+W002,Cosmos Policy: Fine-Tuning Video Models for Visuomotor Control and Planning,"1. Kim, Moo Jin
+2. Gao, Yihuai
+3. Lin, Tsung-Yi
+4. Lin, Yen-Chen
+5. Ge, Yunhao
+6. Lam, Grace
+7. Liang, Percy
+8. Song, Shuran
+9. Liu, Ming-Yu
+10. Finn, Chelsea
+11. Gu, Jinwei",,,2026-01-22,v1,2026-01-22,arXiv,unverified,https://arxiv.org/abs/2601.16163,https://arxiv.org/html/2601.16163v1,1. 記載なし: 確認した導入部に社会的需要の明示的説明はない。,1. 動画生成モデルの時空間事前知識を方策に利用する従来法には複数学習段階や追加アーキテクチャがある。,1. 単一段階の実演事後学習で視覚運動制御と将来予測・計画を実現する。,1. Cosmos-Predict2-2Bの構造を変えず、行動・将来観測・価値を潜在フレームとして生成。候補の将来価値を用いたbest-of-N計画も行う。,1. 計画なしのシミュレーション成功率はLIBERO 98.5%、RoboCasa 67.1%；実機双腕タスク平均93.6%。2つの難しい実機課題で計画により平均12.5ポイント上昇。,1. 動画基盤モデルの同一拡散機構に制御・予測・価値を符号化する方式を提案。,1. 単一段階の実演事後学習で視覚運動制御と将来予測・計画を実現する。 Cosmos-Predict2-2Bの構造を変えず、行動・将来観測・価値を潜在フレームとして生成。候補の将来価値を用いたbest-of-N計画も行う。 計画なしのシミュレーション成功率はLIBERO 98.5%、RoboCasa 67.1%；実機双腕タスク平均93.6%。2つの難しい実機課題で計画により平均12.5ポイント上昇。,1. 著者指摘: モデルベース計画は行動チャンクあたり約5秒を要し動的課題を制限する。実演分布外の正確な予測には相当量のロールアウトを要する。,"既存architecture台帳の同一版レビューを再利用（今回の全文再読ではない）。§1, §3–6、実験条件と限界、付録の選択箇所",extracted,reviewed,gpt-6.1-terra,2026-11-11T17:00:32.523566+00:00,世界予測と行動の統合,世界予測と行動の統合の方式・比較対象,比較・基礎,未確認,,同一版の既存調査を再利用,直近1年,"社会的背景 1 [記載なし]
+https://arxiv.org/html/2601.16163v1
+§1
+導入部を確認
+
+技術的背景 1 [著者の主張]
+https://arxiv.org/html/2601.16163v1
+§1
+動画生成モデルの時空間事前知識を方策に利用する従来法には複数学習段階や追加アーキテクチャがある。
+
+取り組む課題 1 [著者の主張]
+https://arxiv.org/html/2601.16163v1
+§1
+単一段階の実演事後学習で視覚運動制御と将来予測・計画を実現する。
+
+解決手段 1 [著者の主張]
+https://arxiv.org/html/2601.16163v1
+§3
+Cosmos-Predict2-2Bの構造を変えず、行動・将来観測・価値を潜在フレームとして生成。候補の将来価値を用いたbest-of-N計画も行う。
+
+結果 1 [実証結果]
+https://arxiv.org/html/2601.16163v1
+§4, §5
+計画なしのシミュレーション成功率はLIBERO 98.5%、RoboCasa 67.1%；実機双腕タスク平均93.6%。2つの難しい実機課題で計画により平均12.5ポイント上昇。
+
+貢献 1 [著者の主張]
+https://arxiv.org/html/2601.16163v1
+§1, §3
+動画基盤モデルの同一拡散機構に制御・予測・価値を符号化する方式を提案。
+
+まとめ 1 [調査者の解釈]
+https://arxiv.org/html/2601.16163v1
+§1; §3; §4, §5
+単一段階の実演事後学習で視覚運動制御と将来予測・計画を実現する。 Cosmos-Predict2-2Bの構造を変えず、行動・将来観測・価値を潜在フレームとして生成。候補の将来価値を用いたbest-of-N計画も行う。 計画なしのシミュレーション成功率はLIBERO 98.5%、RoboCasa 67.1%；実機双腕タスク平均93.6%。2つの難しい実機課題で計画により平均12.5ポイント上昇。
+
+残った課題 1 [著者の主張]
+https://arxiv.org/html/2601.16163v1
+§6 Limitations and future work
+著者指摘: モデルベース計画は行動チャンクあたり約5秒を要し動的課題を制限する。実演分布外の正確な予測には相当量のロールアウトを要する。",
+W036,Motus: A Unified Latent Action World Model,"1. Bi, Hongzhe
+2. Tan, Hengkai
+3. Xie, Shenghao
+4. Wang, Zeyuan
+5. Huang, Shuhe
+6. Liu, Haitian
+7. Zhao, Ruowen
+8. Feng, Yao
+9. Xiang, Chendong
+10. Rong, Yinze
+11. Zhao, Hongyan
+12. Liu, Hanyu
+13. Su, Zhizhong
+14. Ma, Lei
+15. Su, Hang
+16. Zhu, Jun",,,2025-12-15,v2,2025-12-25,unknown,unverified,https://arxiv.org/abs/2512.13030,https://arxiv.org/html/2512.13030v2,1. 記載なし: 社会的需要の具体的説明は確認した導入範囲にない。,1. 理解・動画世界モデル・制御を別モデルに分けると、多様なデータと能力の統一利用が難しい。,1. 多様な身体・ラベルのデータから理解、未来予測、逆動力学、行動生成を単一モデルで学ぶ。,"1. 理解・動画・行動の3エキスパートをMoTと独立時刻のUniDiffuser型スケジューラで接続し、条件を変えてVLAや世界・逆動力学などを切り替える。
+2. 光学フローから潜在行動を学び、6層のデータピラミッドと動画学習・潜在行動統合学習・対象ロボットSFTの3段階で訓練する。","1. RoboTwin 2.0の50課題は清浄50例・ランダム500例/課題、4万ステップ微調整、各100試行。Motus成功率clean 88.66%、randomized 87.02%、π0.5は42.98%、43.84%。背景・照明・高さ・障害物をランダム化。
+2. 実機AC-Oneの9課題の平均部分成功率63.22%、π0.5は14.79%；Agilex-Aloha-2の5課題は各59.30%、48.60%。各課題100軌跡で学習。部分成功率は完全成功率と異なる。
+3. 同じRoboTwin randomizedで動画行動共同予測87.02%、動画を出さないVLAモード83.90%。",1. 著者主張: モーション潜在と3エキスパートを用いて、複数の生成・制御モードを一つのモデルに統合。,1. 潜在行動と統合生成器を多段階で学び、シミュレーションおよび2種類の実機で操作性能を評価。,"1. 著者展望: より汎用的なモーション事前分布とインターネット規模の汎用動画からの潜在行動学習は今後の課題。
+2. 調査者指摘: 実機の主指標は工程ごとの部分成功率であり、完全なタスク成功率として解釈できない。",既存architecture台帳の同一版レビューを再利用（今回の全文再読ではない）。指定版HTMLの導入、方法、実験、結論と、評価・実装に必要な付録を確認。,extracted,reviewed,gpt-6.1-terra,2026-11-11T17:04:51.497157+00:00,世界予測と行動の統合,世界予測と行動の統合の方式・比較対象,比較・基礎,未確認,,同一版の既存調査を再利用,直近1年,"社会的背景 1 [記載なし]
+https://arxiv.org/html/2512.13030v2
+§1
+指定範囲で具体的な記述を確認できない。
+
+技術的背景 1 [著者の主張]
+https://arxiv.org/html/2512.13030v2
+§1–3
+原文に記載された著者の説明・主張。
+
+取り組む課題 1 [著者の主張]
+https://arxiv.org/html/2512.13030v2
+§1, §3
+原文に記載された著者の説明・主張。
+
+解決手段 1 [著者の主張]
+https://arxiv.org/html/2512.13030v2
+§4.1–4.2
+原文に記載された著者の説明・主張。
+
+解決手段 2 [著者の主張]
+https://arxiv.org/html/2512.13030v2
+§4.3–4.4, Table 1
+原文に記載された著者の説明・主張。
+
+結果 1 [実証結果]
+https://arxiv.org/html/2512.13030v2
+§5.2, Table 2
+論文が指定条件で報告した結果。
+
+結果 2 [実証結果]
+https://arxiv.org/html/2512.13030v2
+§5.3, Tables 3–5
+論文が指定条件で報告した結果。
+
+結果 3 [実証結果]
+https://arxiv.org/html/2512.13030v2
+Appendix §7, Table 11
+論文が指定条件で報告した結果。
+
+貢献 1 [著者の主張]
+https://arxiv.org/html/2512.13030v2
+§4
+原文に記載された著者の説明・主張。
+
+まとめ 1 [著者の主張]
+https://arxiv.org/html/2512.13030v2
+§4–6
+原文に記載された著者の説明・主張。
+
+残った課題 1 [著者の主張]
+https://arxiv.org/html/2512.13030v2
+§6
+原文に記載された著者の説明・主張。
+
+残った課題 2 [調査者の解釈]
+https://arxiv.org/html/2512.13030v2
+§5.3, Table 3
+記載内容に基づく調査者の解釈。",
+W010,Ctrl-World: A Controllable Generative World Model for Robot Manipulation,"1. Guo, Yanjiang
+2. Shi, Lucy Xiaoyang
+3. Chen, Jianyu
+4. Finn, Chelsea",,,2025-10-11,v3,2026-03-01,arXiv,unverified,https://arxiv.org/abs/2510.10125,https://arxiv.org/html/2510.10125v3,1. 記載なし: 確認した導入部に社会的需要の明示的説明はない。,1. 汎用方策の実機評価には多数の試行、改善には追加の専門データが必要。,1. 一般的なロボット方策を想像内で閉ループ評価し、生成経験で改善する。,1. 複数視点・フレーム単位行動条件・姿勢条件付き履歴検索を持つ動画世界モデルをDROID 95k軌跡、564場面で学ぶ。,1. 20秒超の生成軌跡と実機評価に対応した順位を報告。未知指示の実機成功率は生成データでの事後学習後38.7%から83.4%。,1. 方策ループ内の複数視点世界モデルを評価と合成データによる改善に用いる。,1. 一般的なロボット方策を想像内で閉ループ評価し、生成経験で改善する。 複数視点・フレーム単位行動条件・姿勢条件付き履歴検索を持つ動画世界モデルをDROID 95k軌跡、564場面で学ぶ。 20秒超の生成軌跡と実機評価に対応した順位を報告。未知指示の実機成功率は生成データでの事後学習後38.7%から83.4%。,1. 著者指摘: 精密接触・長期推論で失敗し、初期観測に敏感。既知指示の低レベル成功改善への精度は十分でないと推測。,"既存architecture台帳の同一版レビューを再利用（今回の全文再読ではない）。§1, §3–6、実験設定・評価・限界",extracted,reviewed,gpt-6.1-terra,2026-11-11T17:00:32.523713+00:00,世界予測と行動の統合,世界予測と行動の統合の方式・比較対象,比較・基礎,未確認,,同一版の既存調査を再利用,期間外の基礎・直接関連,"社会的背景 1 [記載なし]
+https://arxiv.org/html/2510.10125v3
+§1
+導入部を確認
+
+技術的背景 1 [著者の主張]
+https://arxiv.org/html/2510.10125v3
+§1
+汎用方策の実機評価には多数の試行、改善には追加の専門データが必要。
+
+取り組む課題 1 [著者の主張]
+https://arxiv.org/html/2510.10125v3
+§1
+一般的なロボット方策を想像内で閉ループ評価し、生成経験で改善する。
+
+解決手段 1 [著者の主張]
+https://arxiv.org/html/2510.10125v3
+§3–4
+複数視点・フレーム単位行動条件・姿勢条件付き履歴検索を持つ動画世界モデルをDROID 95k軌跡、564場面で学ぶ。
+
+結果 1 [実証結果]
+https://arxiv.org/html/2510.10125v3
+§5–6
+20秒超の生成軌跡と実機評価に対応した順位を報告。未知指示の実機成功率は生成データでの事後学習後38.7%から83.4%。
+
+貢献 1 [著者の主張]
+https://arxiv.org/html/2510.10125v3
+§1, §3
+方策ループ内の複数視点世界モデルを評価と合成データによる改善に用いる。
+
+まとめ 1 [調査者の解釈]
+https://arxiv.org/html/2510.10125v3
+§1; §3–4; §5–6
+一般的なロボット方策を想像内で閉ループ評価し、生成経験で改善する。 複数視点・フレーム単位行動条件・姿勢条件付き履歴検索を持つ動画世界モデルをDROID 95k軌跡、564場面で学ぶ。 20秒超の生成軌跡と実機評価に対応した順位を報告。未知指示の実機成功率は生成データでの事後学習後38.7%から83.4%。
+
+残った課題 1 [著者の主張]
+https://arxiv.org/html/2510.10125v3
+§6
+著者指摘: 精密接触・長期推論で失敗し、初期観測に敏感。既知指示の低レベル成功改善への精度は十分でないと推測。","1. DROID: A Large-Scale In-the-Wild Robot Manipulation Dataset (ID: 未登録)
+https://arxiv.org/abs/2403.12945
+引用位置: §4, References
+優先理由: 世界モデルの訓練データ（LeWM調査済み。今回の54件とは別枠）
+範囲: foundational_outside_scope"
+L021,"V-JEPA 2: Self-Supervised Video Models Enable Understanding, Prediction and Planning","1. Mido Assran
+2. Adrien Bardes
+3. David Fan
+4. Quentin Garrido
+5. Russell Howes
+6. Mojtaba Komeili
+7. Matthew Muckley
+8. Ammar Rizvi
+9. Claire Roberts
+10. Koustuv Sinha
+11. Artem Zholus
+12. Sergio Arnaud
+13. Abha Gejji
+14. Ada Martin
+15. Francois Robert Hogan
+16. Daniel Dugas
+17. Piotr Bojanowski
+18. Vasil Khalidov
+19. Patrick Labatut
+20. Francisco Massa
+21. Marc Szafraniec
+22. Kapil Krishnakumar
+23. Yong Li
+24. Xiaodong Ma
+25. Sarath Chandar
+26. Franziska Meier
+27. Yann LeCun
+28. Michael Rabbat
+29. Nicolas Ballas",,1. 潜在世界モデル,2025-06-11,v1,2025-06-11,,未確認,https://arxiv.org/abs/2506.09985,https://arxiv.org/html/2506.09985v1,1. 記載なし: 序論で汎用的な物理世界の理解と行動への動機は述べるが、特定の社会的需要は明示しない。,1. 著者主張: 動画から予測可能な表現を学ぶJEPAは、画素生成を要さず運動理解や潜在世界モデルに利用できる。,1. 行動のない大規模動画と少量のロボット軌跡を用い、理解・予測・画像目標への計画を検証する。,1. 100万時間超のインターネット動画と画像で自己教師あり事前学習し、DROIDの62時間未満のロボット動画で行動条件付き予測器を追加学習する。画像目標の潜在距離を最小化するMPCを用いる。,1. 実験結果: 実機Frankaを2拠点で用い、対象ロボットから環境別データを収集せずゼロショットで把持・移動を試験した。動画理解はSomething-Something v2 top-1 77.3、EPIC-KITCHENS-100 recall@5 39.7。,1. 著者主張: 大規模動画による表現と少量の行動付きデータを組み合わせたV-JEPA 2-ACで画像目標の実機計画を実証する。,1. 動画から表現を学び、行動条件付き潜在予測と計画を重ね、動画理解と実機操作を評価した。,1. 著者指摘: およそ16秒までの予測と画像目標に依存し、長い多段階課題や言語目標への拡張が課題。EPIC-KITCHENSは厨房・閉じた語彙に限定。,既存architecture台帳の同一版レビューを再利用（今回の全文再読ではない）。本文の課題・方法・実験・結論・限界と関連付録を確認,extracted,reviewed,gpt-6.1-terra,2026-11-11T16:24:18.525008+00:00,潜在世界モデル・予測計画,潜在世界モデル・予測計画の方式・比較対象,比較・基礎,未確認,,同一版の既存調査を再利用,期間外の基礎・直接関連,"社会的背景 1 [記載なし]
+https://arxiv.org/html/2506.09985v1
+§1
+記載なし: 序論で汎用的な物理世界の理解と行動への動機は述べるが、特定の社会的需要は明示しない。
+
+技術的背景 1 [著者の主張]
+https://arxiv.org/html/2506.09985v1
+§1–2
+著者主張: 動画から予測可能な表現を学ぶJEPAは、画素生成を要さず運動理解や潜在世界モデルに利用できる。
+
+取り組む課題 1 [著者の主張]
+https://arxiv.org/html/2506.09985v1
+§1, §4
+行動のない大規模動画と少量のロボット軌跡を用い、理解・予測・画像目標への計画を検証する。
+
+解決手段 1 [著者の主張]
+https://arxiv.org/html/2506.09985v1
+§2, §4
+100万時間超のインターネット動画と画像で自己教師あり事前学習し、DROIDの62時間未満のロボット動画で行動条件付き予測器を追加学習する。画像目標の潜在距離を最小化するMPCを用いる。
+
+結果 1 [実証結果]
+https://arxiv.org/html/2506.09985v1
+§4; §5 Table 4; §6 Table 5
+実験結果: 実機Frankaを2拠点で用い、対象ロボットから環境別データを収集せずゼロショットで把持・移動を試験した。動画理解はSomething-Something v2 top-1 77.3、EPIC-KITCHENS-100 recall@5 39.7。
+
+貢献 1 [著者の主張]
+https://arxiv.org/html/2506.09985v1
+§1, §4
+著者主張: 大規模動画による表現と少量の行動付きデータを組み合わせたV-JEPA 2-ACで画像目標の実機計画を実証する。
+
+まとめ 1 [実証結果]
+https://arxiv.org/html/2506.09985v1
+§2, §4–6, §9
+動画から表現を学び、行動条件付き潜在予測と計画を重ね、動画理解と実機操作を評価した。
+
+残った課題 1 [著者の主張]
+https://arxiv.org/html/2506.09985v1
+§6 limitations, §9
+著者指摘: およそ16秒までの予測と画像目標に依存し、長い多段階課題や言語目標への拡張が課題。EPIC-KITCHENSは厨房・閉じた語彙に限定。",
+L049,OSVI-WM: One-Shot Visual Imitation for Unseen Tasks using World-Model-Guided Trajectory Generation,"1. Raktim Gautam Goswami
+2. Prashanth Krishnamurthy
+3. Yann LeCun
+4. Farshad Khorrami",,"1. 表現学習
+2. 世界モデル",2025-05-26,v2,2025-12-30,,未確認,https://arxiv.org/abs/2505.20425,https://arxiv.org/html/2505.20425v2,1. 記載なし: 特定の社会的需要は序論で明示しない。,1. 従来の一回提示による視覚模倣は学習済み課題の配置変更に偏り、見た目は似ていても異なる応答が必要な未見課題に弱い。,1. 新しい課題を単一の実演動画から追加微調整なしで模倣する。,1. 実演動画と初期観測を条件に学習済み世界モデルで潜在状態・行動の軌跡を生成し、物理的ウェイポイントに復号して実行する。,1. 実験結果: Meta-Worldと異形態Pick-and-Placeの2つのシミュレーション、2台のFrankaまたは人間実演を用いる3つの実機設定で、未見課題をAWDA等と比較。実機各設定は4課題中3学習・1テスト。 実機各25試行のTwo-Franka-PP/Human-Franka-PP/Human-Franka-Push成功率は96/92/100%、AWDAは88/92/76%。,1. 著者主張: 世界モデルが誘導する潜在軌跡生成により、未見課題の一回提示視覚模倣を実現する。,1. 単一の実演から世界モデルで軌跡を生成し、未見課題についてシミュレーションと実機で検証した。,1. 著者指摘: 出力は3D位置とグリッパ状態で姿勢を扱わず、単一課題に限定。訓練・テスト分割が結果に影響し、未見課題も訓練と同系統の操作課題である。,既存architecture台帳の同一版レビューを再利用（今回の全文再読ではない）。課題・方法・実験・結論・限界と関連付録を確認,extracted,reviewed,gpt-6.1-terra,2026-11-11T16:26:56.461396+00:00,潜在世界モデル・予測計画,潜在世界モデル・予測計画の方式・比較対象,比較・基礎,未確認,,同一版の既存調査を再利用,期間外の基礎・直接関連,"社会的背景 1 [記載なし]
+https://arxiv.org/html/2505.20425v2
+§1
+記載なし: 特定の社会的需要は序論で明示しない。
+
+技術的背景 1 [著者の主張]
+https://arxiv.org/html/2505.20425v2
+§1–2
+従来の一回提示による視覚模倣は学習済み課題の配置変更に偏り、見た目は似ていても異なる応答が必要な未見課題に弱い。
+
+取り組む課題 1 [著者の主張]
+https://arxiv.org/html/2505.20425v2
+§1, §4
+新しい課題を単一の実演動画から追加微調整なしで模倣する。
+
+解決手段 1 [著者の主張]
+https://arxiv.org/html/2505.20425v2
+§3
+実演動画と初期観測を条件に学習済み世界モデルで潜在状態・行動の軌跡を生成し、物理的ウェイポイントに復号して実行する。
+
+結果 1 [実証結果]
+https://arxiv.org/html/2505.20425v2
+§4 Table 2; real-world evaluation
+実験結果: Meta-Worldと異形態Pick-and-Placeの2つのシミュレーション、2台のFrankaまたは人間実演を用いる3つの実機設定で、未見課題をAWDA等と比較。実機各設定は4課題中3学習・1テスト。 ホストが代表値・比較条件を原文照合して追記。
+
+貢献 1 [著者の主張]
+https://arxiv.org/html/2505.20425v2
+§3–4
+著者主張: 世界モデルが誘導する潜在軌跡生成により、未見課題の一回提示視覚模倣を実現する。
+
+まとめ 1 [実証結果]
+https://arxiv.org/html/2505.20425v2
+§3–5
+単一の実演から世界モデルで軌跡を生成し、未見課題についてシミュレーションと実機で検証した。
+
+残った課題 1 [著者の主張]
+https://arxiv.org/html/2505.20425v2
+§5 Limitations
+著者指摘: 出力は3D位置とグリッパ状態で姿勢を扱わず、単一課題に限定。訓練・テスト分割が結果に影響し、未見課題も訓練と同系統の操作課題である。",
+W027,Unified World Models: Coupling Video and Action Diffusion for Pretraining on Large Robotic Datasets,"1. Zhu, Chuning
+2. Yu, Raymond
+3. Feng, Siyuan
+4. Burchfiel, Benjamin
+5. Shah, Paarth
+6. Gupta, Abhishek",,,2025-04-03,v3,2025-05-23,unknown,unverified,https://arxiv.org/abs/2504.02792,https://arxiv.org/html/2504.02792v3,1. 記載なし: 社会的背景の明示は確認範囲でなし。,1. 動画予測と行動予測を別々に学習する方法では、多様なロボットデータと行動なし動画の統合利用が課題。,1. 動画・行動を統一モデルで条件付き生成し、大規模なロボットデータから制御を学ぶ。,1. 動画と行動に独立拡散時刻を与える共同拡散を学習し、方策・順動力学・逆動力学の条件付けを切り替える。,"1. シミュレーション分布外評価では各手法を10万ステップ事前学習、下流1万ステップ微調整、3 seed・50初期状態で比較し、UWMが各課題で最高成功率。実機5課題でも評価。
+2. LIBEROの5下流課題平均はUWM 0.79±0.11、Diffusion Policy 0.71±0.12；表の値はシード間のばらつきを伴う。",1. 著者主張: 動画と行動の条件付き・周辺分布を単一拡散モデルに統合。,1. 共同動画行動拡散で多課題学習し、実機とシミュレーションの方策・逆動力学を検証。,1. 著者指摘: 大規模人動画からの身体差を超える学習は未実施で、順動力学の生成アーティファクトが計画を妨げ得る。,既存architecture台帳の同一版レビューを再利用（今回の全文再読ではない）。指定版HTMLの導入・方法・実験・結論と、評価条件または限界に関わる付録を確認。,extracted,reviewed,gpt-6.1-terra,2026-11-11T17:00:44.664225+00:00,世界予測と行動の統合,世界予測と行動の統合の方式・比較対象,比較・基礎,未確認,,同一版の既存調査を再利用,期間外の基礎・直接関連,"社会的背景 1 [記載なし]
+https://arxiv.org/html/2504.02792v3
+§I
+確認範囲を限定
+
+技術的背景 1 [著者の主張]
+https://arxiv.org/html/2504.02792v3
+§I–II
+記載箇所に基づく著者の説明。
+
+取り組む課題 1 [著者の主張]
+https://arxiv.org/html/2504.02792v3
+§I
+記載箇所に基づく著者の説明。
+
+解決手段 1 [著者の主張]
+https://arxiv.org/html/2504.02792v3
+§III–IV
+記載箇所に基づく著者の説明。
+
+結果 1 [実証結果]
+https://arxiv.org/html/2504.02792v3
+§V, Table II
+指定条件下での著者報告の評価結果。
+
+貢献 1 [著者の主張]
+https://arxiv.org/html/2504.02792v3
+§III–IV
+記載箇所に基づく著者の説明。
+
+まとめ 1 [著者の主張]
+https://arxiv.org/html/2504.02792v3
+§III–VII
+記載箇所に基づく著者の説明。
+
+残った課題 1 [著者の主張]
+https://arxiv.org/html/2504.02792v3
+§VII
+記載箇所に基づく著者の説明。
+
+結果 2 [実証結果]
+https://arxiv.org/html/2504.02792v3
+§V, Table II
+指定条件下での著者報告の評価結果。",
+L033,ACT-JEPA: Novel Joint-Embedding Predictive Architecture for Efficient Policy Representation Learning,,,"1. 世界モデル
+2. ロボット学習",2025-01-24,v5,2026-06-24,unknown,未確認,https://arxiv.org/abs/2501.14622,https://arxiv.org/html/2501.14622v5,1. 専門家の操作デモ収集は高コストである。,1. 模倣学習単独の環境表現は限定的で、自己教師あり予測の統合が課題。,1. 模倣行動と潜在観測系列を同時学習する。,1. ACT型の行動チャンク生成とJEPA潜在予測を共同最適化し、対象エンコーダはEMA更新する。,"1. 実験結果: Push-T、ManiSkill、Meta-Worldで、同じaction headを用いるACTに対し成功率がそれぞれ7、10、2ポイント高い。Meta-Worldは15課題×20初期状態。
+2. 実験結果: 凍結表現から将来の自己受容状態を復号するprobeで、Push-TのRMSEはACT-JEPA 0.0895、ACT 0.1424。
+3. 実験結果: 凍結表現のprobeおよび二段階学習との比較を行い、共同最適化の利点を報告。",1. 著者主張: 行動系列と潜在観測系列を共同で学ぶ構成。,1. 模倣学習とJEPAを共同最適化して表現と制御を評価する。,1. 著者: 実機評価なし、JEPA予測対象は自己受容状態のみ、データは各数百軌跡で多様性も限られる。,"既存architecture台帳の同一版レビューを再利用（今回の全文再読ではない）。§1, §3–5（付録なし）",extracted,reviewed,gpt-6.1-terra,2026-11-11T16:29:29.262352+00:00,潜在世界モデル・予測計画,潜在世界モデル・予測計画の方式・比較対象,比較・基礎,未確認,,同一版の既存調査を再利用,期間外の基礎・直接関連,"社会的背景 1 [著者の主張]
+https://arxiv.org/html/2501.14622v5
+§1
+専門家の操作デモ収集は高コストである。
+
+技術的背景 1 [著者の主張]
+https://arxiv.org/html/2501.14622v5
+§1–2
+模倣学習単独の環境表現は限定的で、自己教師あり予測の統合が課題。
+
+取り組む課題 1 [著者の主張]
+https://arxiv.org/html/2501.14622v5
+§1
+模倣行動と潜在観測系列を同時学習する。
+
+解決手段 1 [著者の主張]
+https://arxiv.org/html/2501.14622v5
+§3.2–3.3
+ACT型の行動チャンク生成とJEPA潜在予測を共同最適化し、対象エンコーダはEMA更新する。
+
+貢献 1 [著者の主張]
+https://arxiv.org/html/2501.14622v5
+§1, §3
+著者主張: 行動系列と潜在観測系列を共同で学ぶ構成。
+
+まとめ 1 [調査者の解釈]
+https://arxiv.org/html/2501.14622v5
+§3–5
+模倣学習とJEPAを共同最適化して表現と制御を評価する。
+
+結果 1 [実証結果]
+https://arxiv.org/html/2501.14622v5
+§4.1, §4.4, 表2
+実験結果: Push-T、ManiSkill、Meta-Worldで、同じaction headを用いるACTに対し成功率がそれぞれ7、10、2ポイント高い。Meta-Worldは15課題×20初期状態。
+
+結果 2 [実証結果]
+https://arxiv.org/html/2501.14622v5
+§4.3, 表1, 図3
+実験結果: 凍結表現から将来の自己受容状態を復号するprobeで、Push-TのRMSEはACT-JEPA 0.0895、ACT 0.1424。
+
+結果 3 [実証結果]
+https://arxiv.org/html/2501.14622v5
+§4.5–4.6, 図4, 表3
+実験結果: 凍結表現のprobeおよび二段階学習との比較を行い、共同最適化の利点を報告。
+
+残った課題 1 [著者の主張]
+https://arxiv.org/html/2501.14622v5
+§4.7
+著者: 実機評価なし、JEPA予測対象は自己受容状態のみ、データは各数百軌跡で多様性も限られる。","1. Learning Fine-Grained Bimanual Manipulation with Low-Cost Hardware (ID: 未登録)
+https://arxiv.org/abs/2304.13705
+引用位置: §2.1
+優先理由: 行動チャンク化の基盤
+範囲: unresolved"
+L029,LaWAM: Latent World Action Models for Efficient Dynamics-Aware Robot Policies,"1. Jialei Chen
+2. Kai Wang
+3. Kang Chen
+4. Shuaihang Chen
+5. Feng Gao
+6. Wenhao Tang
+7. Zhiyuan Li
+8. Weilin Liu
+9. Zhuyu Yao
+10. Boxun Li
+11. Yuanbo Xu
+12. Chao Yu",,"1. 潜在行動
+2. カメラ運動",2026-06-14,v2,2026-10-25,unknown,未確認,https://arxiv.org/abs/2606.15768,https://arxiv.org/html/2606.15768v2,1. 著者主張: ロボット方策に予測を組み込む既存動画生成は計算費用と画素冗長性が大きい。,1. 著者主張: LAMの逆動力学器は遷移から行動を抽出し、従来は順方向デコーダを捨てることが多い。,1. 予測的な視覚サブゴールを効率良くロボット動作生成へ統合する。,1. Stage 1は凍結DINOv3特徴の現在・将来から連続zを推定し、将来特徴MSE、補助状態予測MSE、KLで学習。Stage 2では未来不要の方策事前分布がzを予測し、保持したLaWMでサブゴールを得る。,1. 実験結果: LIBEROでは40タスク計2000試行、モデル単体187ms/動作チャンク。比較の実行条件はモデル固有の解像度・予測長を維持。,1. 著者主張: LAMの順方向デコーダを方策の予測モジュールとして再利用し、潜在行動蒸留で接続した。,1. 未来特徴予測器を蒸留された潜在行動で駆動し、画素生成なしでサブゴールを供給する。,"1. 著者限界: カメラの急激な動きが支配的な一人称映像では潜在行動が不整合になり得る。
+2. 調査者解釈: 訓練中に未来入力から別の自由な分岐を設けると予測の近道になり得るため、推論時に利用可能な条件と揃えた検証が必要。",本文の問題設定・方法・結果・結論、関連する限界・付録を確認,extracted,reviewed,gpt-6.1-terra,2026-11-12T14:01:07Z,,,,,,,,"社会的背景 1 [著者の主張]
+https://arxiv.org/html/2606.15768v2
+Abstract, §1
+著者の主張と調査者解釈は本文中に区別
+
+技術的背景 1 [著者の主張]
+https://arxiv.org/html/2606.15768v2
+§1–2
+著者の主張と調査者解釈は本文中に区別
+
+取り組む課題 1 [著者の主張]
+https://arxiv.org/html/2606.15768v2
+§3
+著者の主張と調査者解釈は本文中に区別
+
+解決手段 1 [著者の主張]
+https://arxiv.org/html/2606.15768v2
+§3.2–3.3, eqs. 4–5
+著者の主張と調査者解釈は本文中に区別
+
+結果 1 [実証結果]
+https://arxiv.org/html/2606.15768v2
+§4, Appendix F.1–F.2
+著者の主張と調査者解釈は本文中に区別
+
+貢献 1 [著者の主張]
+https://arxiv.org/html/2606.15768v2
+§1, §3
+著者の主張と調査者解釈は本文中に区別
+
+まとめ 1 [著者の主張]
+https://arxiv.org/html/2606.15768v2
+§3, §6
+著者の主張と調査者解釈は本文中に区別
+
+残った課題 1 [著者の主張]
+https://arxiv.org/html/2606.15768v2
+§5, §3.2–3.3
+著者の主張と調査者解釈は本文中に区別
+
+残った課題 2 [調査者の解釈]
+https://arxiv.org/html/2606.15768v2
+§5, §3.2–3.3
+原文を踏まえた調査者の解釈",
+S002,World Action Learning via Interaction-Centric Spectral Latent Guidance,"1. Zhiming Liu
+2. Yikun Miao
+3. Ying Chen
+4. Hongrui Yin
+5. Fangqi Zhu
+6. Xiaoyi Pang
+7. Quanxin Shou
+8. Zhengyang Yan
+9. Haodong Wang
+10. Song Guo",,"1. 潜在行動
+2. カメラ運動",2026-10-02,v1,2026-10-02,unknown,未確認,https://arxiv.org/abs/2610.03607,https://arxiv.org/html/2610.03607v1,1. 著者主張: ロボット遠隔操作データの収集は高価であり、人間一人称動画の活用が望ましい。,1. 著者主張: フレーム再構成型の行動表現はカメラ動作に支配され、人間とロボットの時間特性も異なる。,1. カメラ由来の観測者運動を相互作用から分離し、異なる身体間で動作知識を移す。,1. 背景軌跡を用いたカメラワープとカメラ補償後の相互作用残差を分け、各損失と合成軌跡損失で教師を学習。カメラ介入前後の相互作用表現の一致、分散・共分散正則化を加え、低周波DCT成分を方策へ蒸留する。,1. 実験結果: LIBERO平均99.20%、RoboTwin 2.0平均93.80%、RoboCasa–GR1平均57.7%。凍結表現でカメラ・相互作用のデコードと介入感度を評価。,1. 著者主張: カメラ運動と相互作用のルーティングおよび低周波ガイダンスを組み合わせる。,1. 観測者運動を教師側でモデル化しつつ相互作用表現への漏れを抑え、周波数領域で方策に知識を渡す。,1. 調査者解釈: カメラ介入の正しさは背景軌跡やワープ仮定に依存し、相互作用表現の統計的一致は因果的識別を一般保証しない。低周波が常に意味的という保証もない。,本文の問題設定・方法・結果・結論、関連する限界・付録を確認,extracted,reviewed,gpt-6.1-terra,2026-11-12T14:01:07Z,,,,,,,,"社会的背景 1 [著者の主張]
+https://arxiv.org/html/2610.03607v1
+Abstract, §1
+著者の主張と調査者解釈は本文中に区別
+
+技術的背景 1 [著者の主張]
+https://arxiv.org/html/2610.03607v1
+§1
+著者の主張と調査者解釈は本文中に区別
+
+取り組む課題 1 [著者の主張]
+https://arxiv.org/html/2610.03607v1
+§3
+著者の主張と調査者解釈は本文中に区別
+
+解決手段 1 [著者の主張]
+https://arxiv.org/html/2610.03607v1
+§3, Appendix B–C, eqs. 25–28
+著者の主張と調査者解釈は本文中に区別
+
+結果 1 [実証結果]
+https://arxiv.org/html/2610.03607v1
+Abstract, §4, Appendix D
+著者の主張と調査者解釈は本文中に区別
+
+貢献 1 [著者の主張]
+https://arxiv.org/html/2610.03607v1
+§3
+著者の主張と調査者解釈は本文中に区別
+
+まとめ 1 [著者の主張]
+https://arxiv.org/html/2610.03607v1
+§3, Appendix B
+著者の主張と調査者解釈は本文中に区別
+
+残った課題 1 [調査者の解釈]
+https://arxiv.org/html/2610.03607v1
+Appendix B–D
+原文を踏まえた調査者の解釈",
+S003,DiLA: Disentangled Latent Action World Models,"1. Tianqiu Zhang
+2. Muyang Lyu
+3. Yufan Zhang
+4. Fang Fang
+5. Si Wu",,"1. 潜在行動
+2. カメラ運動",2026-05-15,v1,2026-05-15,unknown,未確認,https://arxiv.org/abs/2605.15725,https://arxiv.org/html/2605.15725v1,1. 記載なし: 社会的背景の独立した明示は確認範囲になし。,1. 著者主張: 行動抽象化と高忠実度生成にはトレードオフがある。,1. 内容と空間構造を分け、抽象的行動と高品質生成を同時に学ぶ。,1. 予測ボトルネックを通る構造IDM/FDMと外観のcontent memoryを融合。教師強制で特徴予測、構造予測、行動整合、行動正則化を最適化し、生成特徴でメモリを更新する。,1. 実験結果: SSv2転送LPIPSはDiLA 0.356±0.027、AdaWorld 0.521±0.022。構造固定時の生成は静止し、限定条件で内容経路の運動漏れを検査。,1. 著者主張: 構造予測と内容分離を同時に学習する統合世界モデルを提案。,1. 構造と外観を機能的に分けることで行動転移と生成を両立する。,"1. 著者観察: ナビゲーションのカメラ運動はロボット場面で腕運動または視点変化に変換され、物理的に不自然な場合がある。
+2. 調査者解釈: 固定構造の静止出力は限定的検査であり、一般の未来情報漏れやカメラ不変性の証明ではない。",本文の問題設定・方法・結果・結論、関連する限界・付録を確認,extracted,reviewed,gpt-6.1-terra,2026-11-12T14:01:07Z,,,,,,,,"社会的背景 1 [記載なし]
+https://arxiv.org/html/2605.15725v1
+Abstract, §1
+著者の主張と調査者解釈は本文中に区別
+
+技術的背景 1 [著者の主張]
+https://arxiv.org/html/2605.15725v1
+§1–2
+著者の主張と調査者解釈は本文中に区別
+
+取り組む課題 1 [著者の主張]
+https://arxiv.org/html/2605.15725v1
+§1, §3
+著者の主張と調査者解釈は本文中に区別
+
+解決手段 1 [著者の主張]
+https://arxiv.org/html/2605.15725v1
+§3, eqs. 2–4
+著者の主張と調査者解釈は本文中に区別
+
+結果 1 [実証結果]
+https://arxiv.org/html/2605.15725v1
+§4.2–4.3, Table 2, Fig. 4
+著者の主張と調査者解釈は本文中に区別
+
+貢献 1 [著者の主張]
+https://arxiv.org/html/2605.15725v1
+§1, §3
+著者の主張と調査者解釈は本文中に区別
+
+まとめ 1 [著者の主張]
+https://arxiv.org/html/2605.15725v1
+§3–4
+著者の主張と調査者解釈は本文中に区別
+
+残った課題 1 [著者の主張]
+https://arxiv.org/html/2605.15725v1
+§4.3, §5
+著者の主張と調査者解釈は本文中に区別
+
+残った課題 2 [調査者の解釈]
+https://arxiv.org/html/2605.15725v1
+§4.3, §5
+原文を踏まえた調査者の解釈","1. Learning Latent Action World Models In The Wild (ID: S004)
+https://arxiv.org/abs/2601.05230
+引用位置: §4.2 action cycle transfer
+優先理由: 転移評価の直接的基礎
+範囲: in_scope"
+S004,Learning Latent Action World Models In The Wild,"1. Quentin Garrido
+2. Tushar Nagarajan
+3. Basile Terver
+4. Nicolas Ballas
+5. Yann LeCun
+6. Michael Rabbat",,"1. 潜在行動
+2. カメラ運動",2026-01-08,v2,2026-01-20,unknown,未確認,https://arxiv.org/abs/2601.05230,https://arxiv.org/html/2601.05230v2,1. 著者主張: 大規模な行動ラベルの取得は困難であり、ラベルなし動画から世界モデルを学ぶ。,1. 著者主張: 多様な自然動画には共通の身体や明確な単一行動空間がない。,1. 自然動画で潜在行動の情報制約と転移可能性、実行可能な制御インターフェースを調べる。,1. 凍結された映像表現上のIDM/FDMで疎・ノイズ・離散の情報制約を比較し、既知行動と過去表現を小型コントローラから潜在行動へ写像する。,1. 実験結果: カメラ相対の局所的動きが異なる物体間に転移。過去表現なしのコントローラは静止に崩壊し得る。DROIDとRECONでロールアウトと計画を評価。,1. 著者主張: 野外動画での潜在行動の制約と行動転移、既知行動からの制御を体系的に評価。,1. 自然動画のカメラ相対動作を保持し、状態条件付きコントローラを通じて制御へ利用する。,1. 著者限界: 固定の情報制約係数は動画ごとの複雑さに適応せず、凍結表現にも制限がある。将来情報を過剰に含む行動は制御に不利。,本文の問題設定・方法・結果・結論、関連する限界・付録を確認,extracted,pending,gpt-6.1-terra,2026-11-12T14:01:07Z,,,,,,,,"社会的背景 1 [著者の主張]
+https://arxiv.org/html/2601.05230v2
+Abstract, §1
+著者の主張と調査者解釈は本文中に区別
+
+技術的背景 1 [著者の主張]
+https://arxiv.org/html/2601.05230v2
+§1
+著者の主張と調査者解釈は本文中に区別
+
+取り組む課題 1 [著者の主張]
+https://arxiv.org/html/2601.05230v2
+§1, §3
+著者の主張と調査者解釈は本文中に区別
+
+解決手段 1 [著者の主張]
+https://arxiv.org/html/2601.05230v2
+§3–4, §7
+著者の主張と調査者解釈は本文中に区別
+
+結果 1 [実証結果]
+https://arxiv.org/html/2601.05230v2
+§6–7, Fig. 8–11, Appendix H
+著者の主張と調査者解釈は本文中に区別
+
+貢献 1 [著者の主張]
+https://arxiv.org/html/2601.05230v2
+§1, §5–7
+著者の主張と調査者解釈は本文中に区別
+
+まとめ 1 [著者の主張]
+https://arxiv.org/html/2601.05230v2
+§6–7
+著者の主張と調査者解釈は本文中に区別
+
+残った課題 1 [著者の主張]
+https://arxiv.org/html/2601.05230v2
+§7, §9
+著者の主張と調査者解釈は本文中に区別",
+S005,GDLAM: Group-Disentangled Latent Action Model for Highly Disentangled Embodied Pretraining,"1. Jiarui Yang
+2. Jiawei Li
+3. Jiale Zhang
+4. Hang Guo
+5. Wen Huang
+6. Maowei Hu
+7. Tao Dai
+8. Shu-Tao Xia",,"1. 潜在行動
+2. カメラ運動",unknown,v1,unknown,unknown,未確認,https://arxiv.org/abs/2609.26118,https://arxiv.org/html/2609.26118v1,1. 記載なし: 社会的背景の独立した明示は確認範囲になし。,1. 著者主張: 単一行動コードはカメラ動作、物体動作、相互作用を混合し制御性を損なう。,1. 異種の映像変化をグループ化し、行動情報を保持しながら分離と転移を改善する。,1. 各グループに独立した変分ボトルネックと空間ゲートを設け、再構成・KLに加えコード間余弦直交、グループとゲートのL1、静的・動的直交を課す。動的グループの意味は指定しない。,1. 実験結果: Table 4の全モデルはDCI 0.88、群間漏れ0.05、MI-KSG 1.22 bitsで、共有ボトルネックはそれぞれ0.57、0.22、1.10。群介入と下流転移も評価。,1. 著者主張: 分離した容量と空間ルーティング、幾何学的損失を組み合わせ、群単位の介入と転移を検証。,1. 潜在行動を複数群へ構造化し、再構成と分離を同時に学習する。,"1. 著者限界: 群数と静動分割は事前指定、視覚表現は凍結。
+2. 調査者解釈: 群別介入の対角性や直交は、それぞれが真のカメラ・行動因子に対応する識別性を保証しない。",本文の問題設定・方法・結果・結論、関連する限界・付録を確認; arXiv表示日はID年月と矛盾するため日付未確定; arXivのv1表示日2026-08-10とID 2609の年月が不整合のため版日未確定,partial,pending,gpt-6.1-terra,2026-11-12T14:01:07Z,,,,,,,,"社会的背景 1 [記載なし]
+https://arxiv.org/html/2609.26118v1
+Abstract, §1
+著者の主張と調査者解釈は本文中に区別
+
+技術的背景 1 [著者の主張]
+https://arxiv.org/html/2609.26118v1
+Abstract, §1
+著者の主張と調査者解釈は本文中に区別
+
+取り組む課題 1 [著者の主張]
+https://arxiv.org/html/2609.26118v1
+§1–3
+著者の主張と調査者解釈は本文中に区別
+
+解決手段 1 [著者の主張]
+https://arxiv.org/html/2609.26118v1
+§3, eqs. 2–3
+著者の主張と調査者解釈は本文中に区別
+
+結果 1 [実証結果]
+https://arxiv.org/html/2609.26118v1
+§4, Table 4
+著者の主張と調査者解釈は本文中に区別
+
+貢献 1 [著者の主張]
+https://arxiv.org/html/2609.26118v1
+§3–4
+著者の主張と調査者解釈は本文中に区別
+
+まとめ 1 [著者の主張]
+https://arxiv.org/html/2609.26118v1
+§3–4
+著者の主張と調査者解釈は本文中に区別
+
+残った課題 1 [著者の主張]
+https://arxiv.org/html/2609.26118v1
+§3, Appendix A, H
+著者の主張と調査者解釈は本文中に区別
+
+残った課題 2 [調査者の解釈]
+https://arxiv.org/html/2609.26118v1
+§3, Appendix A, H
+原文を踏まえた調査者の解釈",
+S019,Multi-view Consistent Latent Action Learning for World Modeling and Control,"1. Shenghua Wan
+2. Xiaohai Hu
+3. Xunlan Zhou
+4. Lei Yuan
+5. Le Gan
+6. De-Chuan Zhan",,"1. 多視点
+2. 潜在行動
+3. 幾何",2026,PMLR 306 published version,2026-07,ICML 2026,公式proceedings確認済み,https://proceedings.mlr.press/v306/wan26f.html,https://raw.githubusercontent.com/mlresearch/v306/main/assets/wan26f/wan26f.pdf,1. 記載なし: 社会的背景の独立した明示は確認範囲になし。,1. 著者主張: 単眼の潜在行動は2D変位と物理動作を混同しカメラ揺れなどに影響される。,1. 同期多視点から視点不変の潜在行動を学び、動作回帰と世界モデル制御を評価する。,1. 各視点の時空間Transformer行動トークンについてEMA教師のprototype分布を別視点の学生へ双方向cross-entropy蒸留し、centering・sharpeningと画素再構成MSEを併用。得た表現でiVideoGPTを条件付ける。,1. 多視点テストでPSNR 37.97対AdaWorldの2視点平均33.53、行動回帰テストRMSE 0.214±0.04対0.235±0.07。単眼VP2データにはランダムcropを疑似第2視点として利用。,1. 著者主張: 同期視点間の自己蒸留を潜在行動学習へ組み込み、線形モデルと実験で評価した。,1. 同期視点の行動分布を一致させ、再構成も学習して表現を動作予測・制御へ利用する。,"1. 著者限界: 同期多視点データへの依存。
+2. 調査者指摘: 定理は線形、共通原因が行動のみ、視点間・行動間の独立ノイズを仮定。整合損失単独はゼロ写像も最小化するので行動回復の一般的識別証明とはならない。",本文の問題設定・方法・結果・結論、関連する理論または限界付録,extracted,reviewed,gpt-6.1-terra,2026-11-12T14:04:00Z,,,,,,,,"社会的背景 1 [記載なし]
+https://raw.githubusercontent.com/mlresearch/v306/main/assets/wan26f/wan26f.pdf
+Abstract, §1
+著者主張と調査者解釈を区別
+
+技術的背景 1 [著者の主張]
+https://raw.githubusercontent.com/mlresearch/v306/main/assets/wan26f/wan26f.pdf
+§1–2
+著者主張と調査者解釈を区別
+
+取り組む課題 1 [著者の主張]
+https://raw.githubusercontent.com/mlresearch/v306/main/assets/wan26f/wan26f.pdf
+§1, §4
+著者主張と調査者解釈を区別
+
+解決手段 1 [著者の主張]
+https://raw.githubusercontent.com/mlresearch/v306/main/assets/wan26f/wan26f.pdf
+§3.1–3.3, Fig.1, eqs.1–4
+著者主張と調査者解釈を区別
+
+結果 1 [実証結果]
+https://raw.githubusercontent.com/mlresearch/v306/main/assets/wan26f/wan26f.pdf
+§4, Tables 1–2
+著者主張と調査者解釈を区別
+
+貢献 1 [著者の主張]
+https://raw.githubusercontent.com/mlresearch/v306/main/assets/wan26f/wan26f.pdf
+§3–4
+著者主張と調査者解釈を区別
+
+まとめ 1 [著者の主張]
+https://raw.githubusercontent.com/mlresearch/v306/main/assets/wan26f/wan26f.pdf
+§3–5
+著者主張と調査者解釈を区別
+
+残った課題 1 [著者の主張]
+https://raw.githubusercontent.com/mlresearch/v306/main/assets/wan26f/wan26f.pdf
+§3.4, §5, Appendix A
+著者主張と調査者解釈を区別
+
+残った課題 2 [調査者の解釈]
+https://raw.githubusercontent.com/mlresearch/v306/main/assets/wan26f/wan26f.pdf
+§3.4, §5, Appendix A
+原文を踏まえた調査者の解釈",
+S020,LAWM-3D: Learning 3D-Aware Latent Actions from Human Videos for Generalizable Robot World Models,"1. Jiarui Yang
+2. Jiale Zhange
+3. Jiawei Li
+4. Hang Guo
+5. Wen Huang
+6. Jinpeng Wang
+7. Peidong Liu
+8. Shu-Tao Xia",,"1. 多視点
+2. 潜在行動
+3. 幾何",2026-08-06,v1,2026-08-06,unknown,未確認,https://arxiv.org/abs/2608.05706,https://arxiv.org/html/2608.05706v1,1. 著者主張: 行動アノテーションの費用と身体間の行動空間の違いが世界モデルの適用を制約する。,1. 著者主張: 多視点を単に加えるだけでは未来外観の漏れと視点差により3D行動を十分獲得できない。,1. 人間動画から視点に頑健な3D対応潜在行動を学習しロボット世界モデルへ移す。,1. 同期視点をランダムマスクし、時空間Transformerの行動トークンをビュー間集約、Gaussian VAEで生成。現在RGB・深度から次RGB・深度を再構成し、エンコーダ中間層を凍結VGGTに角度・スケール損失で整合。,1. Ego-Exo4DのRGB PSNRは33.38対DreamDojo-D 32.56、深度PSNRは35.62対33.54。多視点のみの追加は悪化し、幾何整合との併用が改善したと報告。,1. 著者主張: ビュー集約、深度補助再構成、3D基盤モデルへの幾何整合を連結し、未来外観の近道と視点差に対処する。,1. 多視点および単眼映像を混合学習し、幾何整合と深度を使って行動表現を世界モデルに渡す。,"1. 著者限界: 凍結3D基盤モデル、同期多視点、オフライン深度と大きい計算資源に依存。
+2. 調査者解釈: 深度補助や非単射性のみで全未来情報の漏れが不可能と一般には証明できない。",本文の問題設定・方法・結果・結論、関連する理論または限界付録,extracted,reviewed,gpt-6.1-terra,2026-11-12T14:04:00Z,,,,,,,,"社会的背景 1 [著者の主張]
+https://arxiv.org/html/2608.05706v1
+Abstract, §1
+著者主張と調査者解釈を区別
+
+技術的背景 1 [著者の主張]
+https://arxiv.org/html/2608.05706v1
+§1, Appendix C
+著者主張と調査者解釈を区別
+
+取り組む課題 1 [著者の主張]
+https://arxiv.org/html/2608.05706v1
+§1, §3
+著者主張と調査者解釈を区別
+
+解決手段 1 [著者の主張]
+https://arxiv.org/html/2608.05706v1
+§3, eqs.1–6
+著者主張と調査者解釈を区別
+
+結果 1 [実証結果]
+https://arxiv.org/html/2608.05706v1
+§4, Table 1, Appendix C
+著者主張と調査者解釈を区別
+
+貢献 1 [著者の主張]
+https://arxiv.org/html/2608.05706v1
+§3
+著者主張と調査者解釈を区別
+
+まとめ 1 [著者の主張]
+https://arxiv.org/html/2608.05706v1
+§3–4
+著者主張と調査者解釈を区別
+
+残った課題 1 [著者の主張]
+https://arxiv.org/html/2608.05706v1
+§3, Appendix D–E
+著者主張と調査者解釈を区別
+
+残った課題 2 [調査者の解釈]
+https://arxiv.org/html/2608.05706v1
+§3, Appendix D–E
+原文を踏まえた調査者の解釈","1. MVP-LAM: Learning Action-Centric Latent Actions via Cross-Viewpoint Reconstruction (ID: 未登録)
+https://arxiv.org/abs/2602.03668
+引用位置: §2, §4
+優先理由: 多視点再構成の直接比較対象
+範囲: in_scope
+
+2. DreamDojo: A Generalist Robot World Model from Large-Scale Human Videos (ID: 未登録)
+https://arxiv.org/abs/2602.06949
+引用位置: §4 Table 1
+優先理由: 深度追加比較の基礎
+範囲: in_scope"
+L003,DINO-WM: World Models on Pre-trained Visual Features enable Zero-shot Planning,"1. Zhou, Gaoyue
+2. Pan, Hengkai
+3. LeCun, Yann
+4. Pinto, Lerrel",,"1. 世界モデル
+2. 潜在計画",2024-11-07,v2,2025-02-01,unknown,未確認,https://arxiv.org/abs/2411.04983,https://arxiv.org/html/2411.04983v2,1. 著者は幅広い物理環境での視覚的な推論・制御を動機に挙げる。,1. 画像再構成や報酬予測を伴う世界モデルは計算コストやタスク依存性があり、汎用の事前学習視覚特徴を利用する。,1. オフラインの観測と行動の軌跡から、画像で指定した目標へ未知のタスク固有学習なしで計画する。,"1. 凍結DINOv2の空間パッチ特徴と履歴・行動を入力する因果Transformerで次の特徴を予測する。固有感覚情報があれば追加し、画像復元器は可視化にのみ使う。
+2. 候補行動列を潜在空間で転がし、目標画像特徴との距離をCEMで最小化する。","1. 6環境のうちMaze・Wall・Reach・PushTは各50組で成功率を測定、Reach 0.92とPushT 0.90は報酬なしオフライン条件に適応したDreamerV3の0.64と0.30を上回る。
+2. Rope・Granularは各10例のChamfer距離で0.41・0.26、同条件に適応したDreamerV3は2.49・1.05。
+3. PushT訓練軌跡を200から18500に増やすと成功率0.08から0.92へ上昇。",1. 著者は事前学習済み空間特徴の予測による報酬不要の世界モデルと画像目標のゼロショット計画を提示する。,1. 事前学習済み視覚特徴を用いてオフラインの行動条件付き予測を学び、複数のナビゲーションと操作シミュレーションで計画する。,"1. 著者は十分な状態・行動のデータ被覆、正解行動ラベル、細かい制御への階層化を課題に挙げる。
+2. 調査者指摘: 実機と観測外乱への頑健性は未確認。変形物の評価は10例と小規模。",本文§1–5、表1、付録A.1・A.4.1・A.8を確認。; 同一版の既存レビュー済み台帳 L003 を再利用,extracted,reviewed,gpt-6.1-terra,2026-11-11T16:23:52.903627+00:00,潜在世界モデル・予測計画,潜在世界モデル・予測計画の方式・比較対象,比較・基礎,未確認,,同一版の既存調査を再利用,期間外の基礎・直接関連,"社会的背景 1 [著者の主張]
+https://arxiv.org/html/2411.04983v2
+§1, §5
+著者は幅広い物理環境での視覚的な推論・制御を動機に挙げる。
+
+技術的背景 1 [著者の主張]
+https://arxiv.org/html/2411.04983v2
+§2–3
+画像再構成や報酬予測を伴う世界モデルは計算コストやタスク依存性があり、汎用の事前学習視覚特徴を利用する。
+
+取り組む課題 1 [著者の主張]
+https://arxiv.org/html/2411.04983v2
+§3
+オフラインの観測と行動の軌跡から、画像で指定した目標へ未知のタスク固有学習なしで計画する。
+
+解決手段 1 [著者の主張]
+https://arxiv.org/html/2411.04983v2
+§3.1
+凍結DINOv2の空間パッチ特徴と履歴・行動を入力する因果Transformerで次の特徴を予測する。固有感覚情報があれば追加し、画像復元器は可視化にのみ使う。
+
+解決手段 2 [著者の主張]
+https://arxiv.org/html/2411.04983v2
+§3.2
+候補行動列を潜在空間で転がし、目標画像特徴との距離をCEMで最小化する。
+
+結果 1 [実証結果]
+https://arxiv.org/html/2411.04983v2
+§4.3, 表1
+6環境のうちMaze・Wall・Reach・PushTは各50組で成功率を測定、Reach 0.92とPushT 0.90は報酬なしオフライン条件に適応したDreamerV3の0.64と0.30を上回る。
+
+結果 2 [実証結果]
+https://arxiv.org/html/2411.04983v2
+§4.3, 表1
+Rope・Granularは各10例のChamfer距離で0.41・0.26、同条件に適応したDreamerV3は2.49・1.05。
+
+結果 3 [実証結果]
+https://arxiv.org/html/2411.04983v2
+付録A.4.1, 表5
+PushT訓練軌跡を200から18500に増やすと成功率0.08から0.92へ上昇。
+
+貢献 1 [著者の主張]
+https://arxiv.org/html/2411.04983v2
+§1, §3
+著者は事前学習済み空間特徴の予測による報酬不要の世界モデルと画像目標のゼロショット計画を提示する。
+
+まとめ 1 [調査者の解釈]
+https://arxiv.org/html/2411.04983v2
+§3–5
+事前学習済み視覚特徴を用いてオフラインの行動条件付き予測を学び、複数のナビゲーションと操作シミュレーションで計画する。
+
+残った課題 1 [著者の主張]
+https://arxiv.org/html/2411.04983v2
+§5 Limitations
+著者は十分な状態・行動のデータ被覆、正解行動ラベル、細かい制御への階層化を課題に挙げる。
+
+残った課題 2 [未確認]
+https://arxiv.org/html/2411.04983v2
+§4.3, §5
+調査者指摘: 実機と観測外乱への頑健性は未確認。変形物の評価は10例と小規模。","1. DINOv2: Learning Robust Visual Features without Supervision (ID: 未登録)
+https://arxiv.org/abs/2304.07193
+引用位置: §3.1.1
+優先理由: 固定視覚符号器の基礎
+範囲: foundational_outside_scope"
+L010,Causal-JEPA: Learning World Models through Object-Level Latent Masking,"1. Nam, Heejeong
+2. Lidec, Quentin Le
+3. Maes, Lucas
+4. LeCun, Yann
+5. Balestriero, Randall",,"1. 世界モデル
+2. 潜在計画",2026-02-11,v2,2026-05-28,unknown,未確認,https://arxiv.org/abs/2602.11389,https://arxiv.org/html/2602.11389v2,1. 社会的需要について明示的記載は確認できない。,1. 物体中心表現のみでは自己運動や偶然の相関に依存し、物体間相互作用を十分に学べない場合がある。,1. 物体潜在表現のマスクを用い、相互作用を利用した予測・視覚推論・目標到達計画を学ぶ。,"1. 凍結した物体中心符号器の表現の一部を履歴全体で隠し、周辺物体から欠落履歴を補完するとともに将来潜在状態を予測する。
+2. 目標画像からの潜在距離をCEMとMPCで最小化する。主実験は凍結DINOv2特徴を集約するVideoSAURを利用する。","1. CLEVRERのVideoSAUR、7スロットで4物体マスクすると反実仮想質問単位正解率68.81%、無マスク47.68%で21.13ポイント差。
+2. SAViでは4物体マスクが34.06%で無マスク41.10%を下回り、マスク2個では60.19%。
+3. PushTでC-JEPA成功率88.67%、DINO-WM 91.33%。入力特徴数は6×128対196×384で1.02%、L40s上50軌跡平均673秒対5763秒。",1. 物体単位の観測可能性を操作する学習目標と、予測上十分な影響近傍の理論的分析を提示する。,1. 物体中心の潜在履歴をマスクして予測を学び、合成動画の質問応答とPushT計画を評価する。,"1. 著者は物体符号器の品質への依存と、明示的時間因果グラフに対する影響近傍の未検証を挙げる。
+2. 著者は影響近傍を予測上十分な集合と位置づけ、真の因果親を同定するものとはしていない。
+3. 調査者指摘: 実機、分布外・外乱とデータ被覆への頑健性は未確認。過剰マスクの性能低下もある。",本文§1–6、表2・6、結論、付録G・L・M.1の計画条件・理論仮定と証明を確認。; 同一版の既存レビュー済み台帳 L010 を再利用,extracted,reviewed,gpt-6.1-terra,2026-11-11T16:27:39.948777+00:00,潜在世界モデル・予測計画,潜在世界モデル・予測計画の方式・比較対象,比較・基礎,未確認,,同一版の既存調査を再利用,直近1年,"社会的背景 1 [記載なし]
+https://arxiv.org/html/2602.11389v2
+§1, 結論
+社会的需要について明示的記載は確認できない。
+
+技術的背景 1 [著者の主張]
+https://arxiv.org/html/2602.11389v2
+§1
+物体中心表現のみでは自己運動や偶然の相関に依存し、物体間相互作用を十分に学べない場合がある。
+
+取り組む課題 1 [著者の主張]
+https://arxiv.org/html/2602.11389v2
+§1
+物体潜在表現のマスクを用い、相互作用を利用した予測・視覚推論・目標到達計画を学ぶ。
+
+解決手段 1 [著者の主張]
+https://arxiv.org/html/2602.11389v2
+§4, 図1
+凍結した物体中心符号器の表現の一部を履歴全体で隠し、周辺物体から欠落履歴を補完するとともに将来潜在状態を予測する。
+
+解決手段 2 [著者の主張]
+https://arxiv.org/html/2602.11389v2
+§5.2
+目標画像からの潜在距離をCEMとMPCで最小化する。主実験は凍結DINOv2特徴を集約するVideoSAURを利用する。
+
+結果 1 [実証結果]
+https://arxiv.org/html/2602.11389v2
+§5.1, 表2
+CLEVRERのVideoSAUR、7スロットで4物体マスクすると反実仮想質問単位正解率68.81%、無マスク47.68%で21.13ポイント差。
+
+結果 2 [実証結果]
+https://arxiv.org/html/2602.11389v2
+§5.1, 表2
+SAViでは4物体マスクが34.06%で無マスク41.10%を下回り、マスク2個では60.19%。
+
+結果 3 [実証結果]
+https://arxiv.org/html/2602.11389v2
+§5.2, 表6
+PushTでC-JEPA成功率88.67%、DINO-WM 91.33%。入力特徴数は6×128対196×384で1.02%、L40s上50軌跡平均673秒対5763秒。
+
+貢献 1 [著者の主張]
+https://arxiv.org/html/2602.11389v2
+§4, §6
+物体単位の観測可能性を操作する学習目標と、予測上十分な影響近傍の理論的分析を提示する。
+
+まとめ 1 [調査者の解釈]
+https://arxiv.org/html/2602.11389v2
+§4–6
+物体中心の潜在履歴をマスクして予測を学び、合成動画の質問応答とPushT計画を評価する。
+
+残った課題 1 [著者の主張]
+https://arxiv.org/html/2602.11389v2
+結論 Limitations
+著者は物体符号器の品質への依存と、明示的時間因果グラフに対する影響近傍の未検証を挙げる。
+
+残った課題 2 [著者の主張]
+https://arxiv.org/html/2602.11389v2
+§6, Remark 2
+著者は影響近傍を予測上十分な集合と位置づけ、真の因果親を同定するものとはしていない。
+
+残った課題 3 [未確認]
+https://arxiv.org/html/2602.11389v2
+§5–6, 表2
+調査者指摘: 実機、分布外・外乱とデータ被覆への頑健性は未確認。過剰マスクの性能低下もある。",
+S007,Iso-Dream: Isolating and Leveraging Noncontrollable Visual Dynamics in World Models,"1. Minting Pan
+2. Xiangming Zhu
+3. Yunbo Wang
+4. Xiaokang Yang",,"1. 世界モデル
+2. 動画予測",2022,NeurIPS 2022 conference PDF,2022,NeurIPS 2022,published,https://proceedings.neurips.cc/paper_files/paper/2022/file/9316769afaaeeaad42a9e3633b14e801-Paper-Conference.pdf,https://proceedings.neurips.cc/paper_files/paper/2022/file/9316769afaaeeaad42a9e3633b14e801-Paper-Conference.pdf,1. 自動運転では他車など制御できない動きの予測が意思決定に必要。,1. 従来の世界モデルは行動に無関係な動きにも容量を費やし得る。,1. 制御可能・不可能・静的要因を分け、制御や動画予測へ利用する。,1. 行動条件付き、行動なし、静的の3分枝と逆動力学を用い、必要時には外生状態の未来を注意で統合する。,1. video_easy DMC 500k stepsのWalker Walkで911±50、DreamerV2 655±47（3 seeds、5 trajectories）。ボール追加BAIRの28フレーム予測PSNR 19.51、PhyDNet 18.91。,1. 制御可能・外生・背景の分枝と、将来外生状態を使う行動学習を提示。,1. 外生運動を分離し予測するモデルを、視覚制御と行動条件付き動画予測で評価した。,1. 調査者指摘: 完全に独立した遷移の仮定は接触や相互作用で破れる可能性があり、DINO特徴上の実証ではない。,本文問題設定・方法・実験・結論を対象。付録の網羅的確認は未完了。,partial,pending,gpt-6.1-terra,2026-11-12T14:02:07.889307+00:00,,,,,,,,"社会的背景 1 [著者の主張]
+https://proceedings.neurips.cc/paper_files/paper/2022/file/9316769afaaeeaad42a9e3633b14e801-Paper-Conference.pdf
+§1
+本文の著者による記述：自動運転では他車など制御できない動きの予測が意思決定に必要。
+
+技術的背景 1 [著者の主張]
+https://proceedings.neurips.cc/paper_files/paper/2022/file/9316769afaaeeaad42a9e3633b14e801-Paper-Conference.pdf
+§1–2
+本文の著者による記述：従来の世界モデルは行動に無関係な動きにも容量を費やし得る。
+
+取り組む課題 1 [著者の主張]
+https://proceedings.neurips.cc/paper_files/paper/2022/file/9316769afaaeeaad42a9e3633b14e801-Paper-Conference.pdf
+§3.1–3.2
+本文の著者による記述：制御可能・不可能・静的要因を分け、制御や動画予測へ利用する。
+
+解決手段 1 [著者の主張]
+https://proceedings.neurips.cc/paper_files/paper/2022/file/9316769afaaeeaad42a9e3633b14e801-Paper-Conference.pdf
+§3.1–3.4, 図2
+本文の著者による記述：行動条件付き、行動なし、静的の3分枝と逆動力学を用い、必要時には外生状態の未来を注意で統合する。
+
+結果 1 [実証結果]
+https://proceedings.neurips.cc/paper_files/paper/2022/file/9316769afaaeeaad42a9e3633b14e801-Paper-Conference.pdf
+§4.2, 表1; §4.4, 表2
+本文の条件付き評価結果：video_easy DMC 500k stepsのWalker Walkで911±50、DreamerV2 655±47（3 seeds、5 trajectories）。ボール追加BAIRの28フレーム予測PSNR 19.51、PhyDNet 18.91。
+
+貢献 1 [著者の主張]
+https://proceedings.neurips.cc/paper_files/paper/2022/file/9316769afaaeeaad42a9e3633b14e801-Paper-Conference.pdf
+§3
+本文の著者による記述：制御可能・外生・背景の分枝と、将来外生状態を使う行動学習を提示。
+
+まとめ 1 [実証結果]
+https://proceedings.neurips.cc/paper_files/paper/2022/file/9316769afaaeeaad42a9e3633b14e801-Paper-Conference.pdf
+§3–4
+本文の条件付き評価結果：外生運動を分離し予測するモデルを、視覚制御と行動条件付き動画予測で評価した。
+
+残った課題 1 [調査者の解釈]
+https://proceedings.neurips.cc/paper_files/paper/2022/file/9316769afaaeeaad42a9e3633b14e801-Paper-Conference.pdf
+§3.1, §4
+本文記述に基づく調査者の解釈：調査者指摘: 完全に独立した遷移の仮定は接触や相互作用で破れる可能性があり、DINO特徴上の実証ではない。","1. DreamerV2 (ID: 未登録)
+
+引用位置: §4.1, ref [24]
+優先理由: 同条件で比較した基盤世界モデル
+範囲: unresolved"
+S009,Disentangling Propagation and Generation for Video Prediction,"1. Hang Gao
+2. Huazhe Xu
+3. Qi-Zhi Cai
+4. Ruth Wang
+5. Fisher Yu
+6. Trevor Darrell",,"1. 世界モデル
+2. 動画予測",2018-12-02,ICCV 2019 conference PDF,2019,ICCV 2019,published,https://openaccess.thecvf.com/content_ICCV_2019/papers/Gao_Disentangling_Propagation_and_Generation_for_Video_Prediction_ICCV_2019_paper.pdf,https://openaccess.thecvf.com/content_ICCV_2019/papers/Gao_Disentangling_Propagation_and_Generation_for_Video_Prediction_ICCV_2019_paper.pdf,1. 記載なし: 確認範囲では具体的な社会需要を主張していない。,1. 動きに基づく転送は鮮明だが遮蔽解除領域を推定できない。,1. 過去動画から運動と新たに露出する画素を予測する。,1. 光学フロー予測とワープ後の信頼度・遮蔽マップを使い、低信頼領域を別の文脈ネットで補完する。,1. KITTI Flowの2入力から次フレーム予測でPSNR 22.3、SSIM 0.696、LPIPS 0.114。DVFは22.1、0.683、0.163。,1. 伝播と生成の分離、ワープ後信頼度を提案。,1. 動きの転送と遮蔽部分の補完を合成し、動画フレームの精度を評価。,1. 調査者指摘: RGB画素予測であり、DINO patch特徴、行動条件付け、ロボット制御への有効性は未検証。,本文問題設定・方法・実験・結論を対象。付録の網羅的確認は未完了。,partial,pending,gpt-6.1-terra,2026-11-12T14:02:07.889375+00:00,,,,,,,,"社会的背景 1 [記載なし]
+https://openaccess.thecvf.com/content_ICCV_2019/papers/Gao_Disentangling_Propagation_and_Generation_for_Video_Prediction_ICCV_2019_paper.pdf
+§1
+指定範囲を確認した結果：記載なし: 確認範囲では具体的な社会需要を主張していない。
+
+技術的背景 1 [著者の主張]
+https://openaccess.thecvf.com/content_ICCV_2019/papers/Gao_Disentangling_Propagation_and_Generation_for_Video_Prediction_ICCV_2019_paper.pdf
+§1
+本文の著者による記述：動きに基づく転送は鮮明だが遮蔽解除領域を推定できない。
+
+取り組む課題 1 [著者の主張]
+https://openaccess.thecvf.com/content_ICCV_2019/papers/Gao_Disentangling_Propagation_and_Generation_for_Video_Prediction_ICCV_2019_paper.pdf
+§1, §3
+本文の著者による記述：過去動画から運動と新たに露出する画素を予測する。
+
+解決手段 1 [著者の主張]
+https://openaccess.thecvf.com/content_ICCV_2019/papers/Gao_Disentangling_Propagation_and_Generation_for_Video_Prediction_ICCV_2019_paper.pdf
+§3, 図2
+本文の著者による記述：光学フロー予測とワープ後の信頼度・遮蔽マップを使い、低信頼領域を別の文脈ネットで補完する。
+
+結果 1 [実証結果]
+https://openaccess.thecvf.com/content_ICCV_2019/papers/Gao_Disentangling_Propagation_and_Generation_for_Video_Prediction_ICCV_2019_paper.pdf
+§4.2, 表2
+本文の条件付き評価結果：KITTI Flowの2入力から次フレーム予測でPSNR 22.3、SSIM 0.696、LPIPS 0.114。DVFは22.1、0.683、0.163。
+
+貢献 1 [著者の主張]
+https://openaccess.thecvf.com/content_ICCV_2019/papers/Gao_Disentangling_Propagation_and_Generation_for_Video_Prediction_ICCV_2019_paper.pdf
+§1, §3
+本文の著者による記述：伝播と生成の分離、ワープ後信頼度を提案。
+
+まとめ 1 [実証結果]
+https://openaccess.thecvf.com/content_ICCV_2019/papers/Gao_Disentangling_Propagation_and_Generation_for_Video_Prediction_ICCV_2019_paper.pdf
+§3–4
+本文の条件付き評価結果：動きの転送と遮蔽部分の補完を合成し、動画フレームの精度を評価。
+
+残った課題 1 [調査者の解釈]
+https://openaccess.thecvf.com/content_ICCV_2019/papers/Gao_Disentangling_Propagation_and_Generation_for_Video_Prediction_ICCV_2019_paper.pdf
+§3–4
+本文記述に基づく調査者の解釈：調査者指摘: RGB画素予測であり、DINO patch特徴、行動条件付け、ロボット制御への有効性は未検証。","1. Deep Voxel Flow (ID: 未登録)
+
+引用位置: §4.2, ref [19]
+優先理由: 転送型の直接比較
+範囲: unresolved"
+S010,Vid-ODE: Continuous-Time Video Generation with Neural Ordinary Differential Equation,"1. Sunghyun Park
+2. Kangyeol Kim
+3. Junsoo Lee
+4. Jaegul Choo
+5. Joonseok Lee
+6. Sookyung Kim
+7. Edward Choi",,"1. 世界モデル
+2. 動画予測",2020-10-16,AAAI 2021 conference PDF,2021,AAAI 2021,published,https://ojs.aaai.org/index.php/AAAI/article/download/16342/16149,https://ojs.aaai.org/index.php/AAAI/article/download/16342/16149,1. 不規則な観測間隔や欠損を伴う気候データなどを対象に挙げる。,1. 固定フレーム間隔の動画モデルは未観測時刻や不規則入力への対応が難しい。,1. 不規則な観測から任意時刻に動画を補間・外挿する。,1. ODE-ConvGRUで履歴を符号化し、ODEソルバで潜在状態を時刻へ進め、フロー・差分・マスクを合成して画素生成する。,1. KTH外挿の表1でSSIM 0.878、LPIPS 0.080、PSNR 28.19。ODE-Convは0.768、0.429、24.31。,1. 時間連続動画生成へのODE-ConvGRUと画素合成の組合せを提案。,1. 連続時間の潜在動力学を積分し、動画の補間と外挿を評価。,1. 調査者指摘: 行動の順序付き合成・接触イベント・凍結DINO特徴は対象外。ODE潜在状態の整合だけで画像デコーダを含む半群性は保証されない。,本文問題設定・方法・実験・結論を対象。付録の網羅的確認は未完了。,partial,pending,gpt-6.1-terra,2026-11-12T14:02:07.889413+00:00,,,,,,,,"社会的背景 1 [著者の主張]
+https://ojs.aaai.org/index.php/AAAI/article/download/16342/16149
+§1
+本文の著者による記述：不規則な観測間隔や欠損を伴う気候データなどを対象に挙げる。
+
+技術的背景 1 [著者の主張]
+https://ojs.aaai.org/index.php/AAAI/article/download/16342/16149
+§1–2
+本文の著者による記述：固定フレーム間隔の動画モデルは未観測時刻や不規則入力への対応が難しい。
+
+取り組む課題 1 [著者の主張]
+https://ojs.aaai.org/index.php/AAAI/article/download/16342/16149
+§3
+本文の著者による記述：不規則な観測から任意時刻に動画を補間・外挿する。
+
+解決手段 1 [著者の主張]
+https://ojs.aaai.org/index.php/AAAI/article/download/16342/16149
+§3, 図2
+本文の著者による記述：ODE-ConvGRUで履歴を符号化し、ODEソルバで潜在状態を時刻へ進め、フロー・差分・マスクを合成して画素生成する。
+
+結果 1 [実証結果]
+https://ojs.aaai.org/index.php/AAAI/article/download/16342/16149
+§4.1–4.2, 表1
+本文の条件付き評価結果：KTH外挿の表1でSSIM 0.878、LPIPS 0.080、PSNR 28.19。ODE-Convは0.768、0.429、24.31。
+
+貢献 1 [著者の主張]
+https://ojs.aaai.org/index.php/AAAI/article/download/16342/16149
+§3
+本文の著者による記述：時間連続動画生成へのODE-ConvGRUと画素合成の組合せを提案。
+
+まとめ 1 [実証結果]
+https://ojs.aaai.org/index.php/AAAI/article/download/16342/16149
+§3–4
+本文の条件付き評価結果：連続時間の潜在動力学を積分し、動画の補間と外挿を評価。
+
+残った課題 1 [調査者の解釈]
+https://ojs.aaai.org/index.php/AAAI/article/download/16342/16149
+§3–4
+本文記述に基づく調査者の解釈：調査者指摘: 行動の順序付き合成・接触イベント・凍結DINO特徴は対象外。ODE潜在状態の整合だけで画像デコーダを含む半群性は保証されない。","1. Neural Ordinary Differential Equations (ID: 未登録)
+https://arxiv.org/abs/1806.07366
+引用位置: §2, ref Chen et al. 2018
+優先理由: 連続時間の基礎
+範囲: unresolved"
+S016,Semigroup-JEPA: Latent Dynamics Consistency for Zero-Shot Physics Generalization,"1. Andy Zeyi Liu
+2. Haoran Sun
+3. Lucas Baker
+4. Randall Balestriero
+5. John Sous",,"1. 世界モデル
+2. 時間合成
+3. 潜在行動",2026-09-09,v1,2026-09-09,arXiv,preprint,https://arxiv.org/abs/2609.10464,https://arxiv.org/html/2609.10464v1,1. 異なる重力環境への適応を世界モデルの課題として挙げる。,1. 凍結視覚特徴モデルや一段教師強制学習では長期・物理条件分布外の予測が課題。,1. 訓練範囲外の重力下での長期状態予測とロボット制御表現を評価する。,1. 重力・行動条件付き予測器を自己回帰的に共有反復し、割引多段誤差をencoderとpredictorの両方へ逆伝播しSIGRegを用いる。無制御・固定重力では反復が履歴上の離散半群を成す。,1. 44段の正方形rolloutでは位置・速度・回転誤差がDINO-WM比31–48%低下。Arm Catcher Ballでは個別に訓練したdiffusion policyの平均成功率が9.5%から23.3%。,1. 著者は利益の大部分を予測器単独より共同学習表現に帰属し、線形特徴モデルで誤差伝播を解析。,1. 重力を与えて多段rolloutを共同学習し、分布外重力での物理予測と凍結encoder上の制御を比較。,"1. 著者限界: 変化させた物理量は単一スカラー重力、形状転移は不均一。調査者指摘: 凍結DINOへの改善を直接証明せず、任意時間の独立した直接予測と分割予測の整合損失でもない。
+2. 調査者確認: v1の概要・§4・Appendix D.5.2は表現側の寄与を強調するが、Introductionの再初期化記述はpredictorへ帰属し、寄与の説明に不整合がある。共同学習と凍結DINOの差のみを確実な比較条件とする。",本文§1–5、方法・実験・結論、対象主張に必要な付録を確認。全付録・全証明の網羅的検証は未実施。,extracted,reviewed,gpt-6.1-terra,2026-11-12T14:03:55.126098+00:00,,,,,,,,"社会的背景 1 [著者の主張]
+https://arxiv.org/html/2609.10464v1
+§1
+本文の著者による記述：異なる重力環境への適応を世界モデルの課題として挙げる。
+
+技術的背景 1 [著者の主張]
+https://arxiv.org/html/2609.10464v1
+§1–2
+本文の著者による記述：凍結視覚特徴モデルや一段教師強制学習では長期・物理条件分布外の予測が課題。
+
+取り組む課題 1 [著者の主張]
+https://arxiv.org/html/2609.10464v1
+§2–3
+本文の著者による記述：訓練範囲外の重力下での長期状態予測とロボット制御表現を評価する。
+
+解決手段 1 [著者の主張]
+https://arxiv.org/html/2609.10464v1
+§2.1, 付録H.1, H.6
+本文の著者による記述：重力・行動条件付き予測器を自己回帰的に共有反復し、割引多段誤差をencoderとpredictorの両方へ逆伝播しSIGRegを用いる。無制御・固定重力では反復が履歴上の離散半群を成す。
+
+結果 1 [実証結果]
+https://arxiv.org/html/2609.10464v1
+§3, 図3–4
+本文の条件付き評価結果：44段の正方形rolloutでは位置・速度・回転誤差がDINO-WM比31–48%低下。Arm Catcher Ballでは個別に訓練したdiffusion policyの平均成功率が9.5%から23.3%。
+
+貢献 1 [著者の主張]
+https://arxiv.org/html/2609.10464v1
+§4, 付録D.5, H
+本文の著者による記述：著者は利益の大部分を予測器単独より共同学習表現に帰属し、線形特徴モデルで誤差伝播を解析。
+
+まとめ 1 [実証結果]
+https://arxiv.org/html/2609.10464v1
+§2–4
+本文の条件付き評価結果：重力を与えて多段rolloutを共同学習し、分布外重力での物理予測と凍結encoder上の制御を比較。
+
+残った課題 1 [調査者の解釈]
+https://arxiv.org/html/2609.10464v1
+§5 Limitations, §2.1, 付録H.1
+本文記述に基づく調査者の解釈：著者限界: 変化させた物理量は単一スカラー重力、形状転移は不均一。調査者指摘: 凍結DINOへの改善を直接証明せず、任意時間の独立した直接予測と分割予測の整合損失でもない。
+
+残った課題 2 [調査者の解釈]
+https://arxiv.org/html/2609.10464v1
+Abstract; Introduction re-initialization paragraph; §4; Appendix D.5.2
+ホストの原文比較。表現由来の優位という説明とpredictor帰属の説明が併存し、一般的な寄与分解を断定しない。","1. DINO-WM: World Models on Pre-trained Visual Features enable Zero-shot Planning (ID: L003)
+https://arxiv.org/abs/2411.04983
+引用位置: §2–4
+優先理由: 直接比較と凍結特徴との差
+範囲: in_scope"
+S017,World Models as Group Actions,"1. Zijie Wang
+2. Wei Zhang
+3. Weiming Zhang
+4. Fanqi Zhang
+5. Xiao Tan
+6. Yipeng Qin
+7. Guanbin Li",,"1. 世界モデル
+2. 時間合成
+3. 潜在行動",2026-05-23,v1,2026-05-23,arXiv,preprint,https://arxiv.org/abs/2605.24578,https://arxiv.org/html/2605.24578v1,1. 記載なし: 本文の導入は世界モデルの行動忠実性を技術課題として扱う。,1. 視覚的に自然な動画でも同一、逆、行動合成に対する運動整合が破れ得る。,1. 平面ナビゲーション動画モデルの局所的な行動合成忠実性を学習・評価する。,1. 既存軌跡からidentity・inverse・短区間compositionを合成し、自由rolloutの潜在端点間L2正則化を適用。GACとGARを復元状態で評価。,1. RECONでNWMのGAC集約誤差は1.73、正則化後1.50。成分の局所合成誤差は0.79±0.52から0.60±0.40。,1. 群作用の同一・逆・合成を潜在rollout損失と計測指標へ具体化したと著者が主張。,1. 局所ego-motionの代数条件を生成動画モデルの潜在状態へ適用し、行動忠実性を検査。,1. 著者限界: 同じ変位の再配分は小回転・短区間の局所近似で、一般の非可換SE(2)、接触や操りへの保証はない。,本文§1–5、方法・実験・結論、対象主張に必要な付録を確認。全付録・全証明の網羅的検証は未実施。,extracted,reviewed,gpt-6.1-terra,2026-11-12T14:03:55.126098+00:00,,,,,,,,"社会的背景 1 [記載なし]
+https://arxiv.org/html/2605.24578v1
+§1
+指定範囲を確認した結果：記載なし: 本文の導入は世界モデルの行動忠実性を技術課題として扱う。
+
+技術的背景 1 [著者の主張]
+https://arxiv.org/html/2605.24578v1
+§1–2
+本文の著者による記述：視覚的に自然な動画でも同一、逆、行動合成に対する運動整合が破れ得る。
+
+取り組む課題 1 [著者の主張]
+https://arxiv.org/html/2605.24578v1
+§2–4
+本文の著者による記述：平面ナビゲーション動画モデルの局所的な行動合成忠実性を学習・評価する。
+
+解決手段 1 [著者の主張]
+https://arxiv.org/html/2605.24578v1
+§3, 付録A.4, B, C
+本文の著者による記述：既存軌跡からidentity・inverse・短区間compositionを合成し、自由rolloutの潜在端点間L2正則化を適用。GACとGARを復元状態で評価。
+
+結果 1 [実証結果]
+https://arxiv.org/html/2605.24578v1
+§4.1–4.2, 表1
+本文の条件付き評価結果：RECONでNWMのGAC集約誤差は1.73、正則化後1.50。成分の局所合成誤差は0.79±0.52から0.60±0.40。
+
+貢献 1 [著者の主張]
+https://arxiv.org/html/2605.24578v1
+§1, §3
+本文の著者による記述：群作用の同一・逆・合成を潜在rollout損失と計測指標へ具体化したと著者が主張。
+
+まとめ 1 [実証結果]
+https://arxiv.org/html/2605.24578v1
+§2–4
+本文の条件付き評価結果：局所ego-motionの代数条件を生成動画モデルの潜在状態へ適用し、行動忠実性を検査。
+
+残った課題 1 [著者の主張]
+https://arxiv.org/html/2605.24578v1
+付録A.4, H
+本文の著者による記述：著者限界: 同じ変位の再配分は小回転・短区間の局所近似で、一般の非可換SE(2)、接触や操りへの保証はない。","1. Navigation World Models (ID: 未登録)
+
+引用位置: §2.2, §4
+優先理由: 行動条件付き動画モデル比較基盤
+範囲: unresolved"
+S018,Olaf-World: Orienting Latent Actions for Video World Modeling,"1. Yuxin Jiang
+2. Yuchao Gu
+3. Ivor W. Tsang
+4. Mike Zheng Shou",,"1. 世界モデル
+2. 時間合成
+3. 潜在行動",2026-02-10,v2,2026-05-26,ICML 2026,published,https://arxiv.org/abs/2602.10104,https://arxiv.org/html/2602.10104v2,1. 制御ラベルは大量映像に対して希少である。,1. 未来フレーム条件付き潜在行動は再構成できても場面情報漏洩や文脈間座標不整合が起こり得る。,1. ラベルなし動画から文脈を超えて転用可能な潜在行動と条件付き動画モデルを学ぶ。,1. 各遷移のβ-VAEに加え、区間潜在行動平均の射影と凍結動画encoderの時間差分平均をcosine整列し、凍結LAMで動画生成器を事前学習する。,1. MINDの一人称→三人称の行動線形probe Macro-F1は0.6250、同条件AdaWorld 0.4820。逆方向は0.5904対0.4999。,1. SeqΔ-REPAによる系列単位の行動効果整列と動画世界モデルへの転用を提示。,1. 凍結動画特徴の変化で潜在行動を整列し、クロスドメインの可読性・転用を評価。,1. 著者限界: 衝突時の障害物幻覚、イベント曖昧性、単一効果への複数要因混入。接触豊富な操作や階層潜在行動は今後の課題。,本文§1–5、方法・実験・結論、対象主張に必要な付録を確認。全付録・全証明の網羅的検証は未実施。,extracted,reviewed,gpt-6.1-terra,2026-11-12T14:03:55.126098+00:00,,,,,,,,"社会的背景 1 [著者の主張]
+https://arxiv.org/html/2602.10104v2
+§1
+本文の著者による記述：制御ラベルは大量映像に対して希少である。
+
+技術的背景 1 [著者の主張]
+https://arxiv.org/html/2602.10104v2
+§3.1, 付録A
+本文の著者による記述：未来フレーム条件付き潜在行動は再構成できても場面情報漏洩や文脈間座標不整合が起こり得る。
+
+取り組む課題 1 [著者の主張]
+https://arxiv.org/html/2602.10104v2
+§3
+本文の著者による記述：ラベルなし動画から文脈を超えて転用可能な潜在行動と条件付き動画モデルを学ぶ。
+
+解決手段 1 [著者の主張]
+https://arxiv.org/html/2602.10104v2
+§3.1–3.2, 式1–4
+本文の著者による記述：各遷移のβ-VAEに加え、区間潜在行動平均の射影と凍結動画encoderの時間差分平均をcosine整列し、凍結LAMで動画生成器を事前学習する。
+
+結果 1 [実証結果]
+https://arxiv.org/html/2602.10104v2
+§4.1–4.2, 表1
+本文の条件付き評価結果：MINDの一人称→三人称の行動線形probe Macro-F1は0.6250、同条件AdaWorld 0.4820。逆方向は0.5904対0.4999。
+
+貢献 1 [著者の主張]
+https://arxiv.org/html/2602.10104v2
+§3–4
+本文の著者による記述：SeqΔ-REPAによる系列単位の行動効果整列と動画世界モデルへの転用を提示。
+
+まとめ 1 [実証結果]
+https://arxiv.org/html/2602.10104v2
+§3–4
+本文の条件付き評価結果：凍結動画特徴の変化で潜在行動を整列し、クロスドメインの可読性・転用を評価。
+
+残った課題 1 [著者の主張]
+https://arxiv.org/html/2602.10104v2
+付録D failure cases, E.1
+本文の著者による記述：著者限界: 衝突時の障害物幻覚、イベント曖昧性、単一効果への複数要因混入。接触豊富な操作や階層潜在行動は今後の課題。","1. AdaWorld (ID: 未登録)
+
+引用位置: §4.1, references Gao et al. 2025a
+優先理由: 潜在行動の同条件比較
+範囲: unresolved"
+S021,RAR: Rate-Adaptive Rollout for Time-Consistent Interactive World Models,"1. Yaoyang Liu
+2. Dongyu Yan
+3. Yihua Du
+4. Shengju Qian
+5. Zeke Xie
+6. Xin Wang
+7. Ying-Cong Chen
+8. Long Chen",,"1. 世界モデル
+2. 可変時間
+3. イベント",2026-10-12,v1,2026-10-12,arXiv,preprint,https://arxiv.org/abs/2610.16302,https://arxiv.org/html/2610.16302v1,1. 対話型世界モデルは実行性能が変化しても世界を意図した速度で進める必要がある。,1. 固定時間レートでは実行速度との不整合と解像度・物理時間長のトレードオフが起こる。,1. 動画世界モデルで物理時間の整合を保ちつつ生成レートを制御し途中変更する。,1. 動画と制御を複数strideで同期サンプリングし、累積物理時刻によるStride-RoPEを用いて履歴を維持したままレート切替。,1. Doomで同一生成フレーム数において14 FPSは15.1秒、70 FPSは3.0秒をカバーし、LPIPSは0.4279対0.3852。未学習中間レートも評価。,1. 物理時間に整合した位置表現とmulti-stride訓練、オンラインレート変更を提示。,1. 複数の時間間隔で動画と操作を学習し、一定予算下の時間長や途中切替を評価。,1. 調査者指摘: 切替評価は与えたスケジュールであり、接触予測に基づく自律gateや潜在行動IDMは本文確認範囲で示されない。範囲外レートではSRが悪化し、切替評価はケース選別・全体較正を用いる。,本文の問題設定・方法・実験・結論・限界と重要付録を確認。全付録を網羅したものではない。,extracted,reviewed,gpt-6.1-terra,2026-11-12T14:05:43.772222+00:00,,,,,,,,"社会的背景 1 [著者の主張]
+https://arxiv.org/html/2610.16302v1
+§1
+本文の著者による記述：対話型世界モデルは実行性能が変化しても世界を意図した速度で進める必要がある。
+
+技術的背景 1 [著者の主張]
+https://arxiv.org/html/2610.16302v1
+§1
+本文の著者による記述：固定時間レートでは実行速度との不整合と解像度・物理時間長のトレードオフが起こる。
+
+取り組む課題 1 [著者の主張]
+https://arxiv.org/html/2610.16302v1
+§3–4
+本文の著者による記述：動画世界モデルで物理時間の整合を保ちつつ生成レートを制御し途中変更する。
+
+解決手段 1 [著者の主張]
+https://arxiv.org/html/2610.16302v1
+§3.2–3.3, 式4–9
+本文の著者による記述：動画と制御を複数strideで同期サンプリングし、累積物理時刻によるStride-RoPEを用いて履歴を維持したままレート切替。
+
+結果 1 [実証結果]
+https://arxiv.org/html/2610.16302v1
+§4.1–4.2, 表1
+本文の条件付き評価結果：Doomで同一生成フレーム数において14 FPSは15.1秒、70 FPSは3.0秒をカバーし、LPIPSは0.4279対0.3852。未学習中間レートも評価。
+
+貢献 1 [著者の主張]
+https://arxiv.org/html/2610.16302v1
+§3–4
+本文の著者による記述：物理時間に整合した位置表現とmulti-stride訓練、オンラインレート変更を提示。
+
+まとめ 1 [実証結果]
+https://arxiv.org/html/2610.16302v1
+§3–4
+本文の条件付き評価結果：複数の時間間隔で動画と操作を学習し、一定予算下の時間長や途中切替を評価。
+
+残った課題 1 [調査者の解釈]
+https://arxiv.org/html/2610.16302v1
+§4.2, 付録D–E
+本文記述に基づく調査者の解釈：調査者指摘: 切替評価は与えたスケジュールであり、接触予測に基づく自律gateや潜在行動IDMは本文確認範囲で示されない。範囲外レートではSRが悪化し、切替評価はケース選別・全体較正を用いる。","1. Matrix-Game 2.0 (ID: 未登録)
+
+引用位置: §4.1, He et al. 2025
+優先理由: 初期化元の動画世界モデル
+範囲: unresolved"
+S022,WALL-WM: Carving World Action Modeling at the Event Joints,"1. Shalfun Li
+2. Victor Yao
+3. Charles Yang
+4. Truth Qu
+5. Regis Cheng
+6. Ryan Yu
+7. Howard Lu
+8. Newton Von
+9. Vincent Chen
+10. Yohann Tang
+11. Maeve Zhang
+12. Ellie Ma
+13. Gody Li
+14. Starrick Liu
+15. Sage Yang
+16. Lorien Shu
+17. J.W. Gao
+18. Ethan Chen
+19. Colin Ye
+20. Yu Sun
+21. Elise Mon
+22. PS Zhang
+23. Neo Li
+24. Lily Li
+25. James Wang
+26. Ping Yang
+27. Chris Pan
+28. Lucy Liang
+29. Hang Su
+30. Roy Gan
+31. Hao Wang
+32. Qian Wang",,"1. 世界モデル
+2. 可変時間
+3. イベント",2026-06-01,v2,2026-09-06,arXiv,preprint,https://arxiv.org/abs/2606.01955,https://arxiv.org/html/2606.01955v2,1. 多様な指示・場面で一般化する実ロボット操作を目指す。,1. 固定長action chunkは言語の意味的イベントと動画・制御の時間粒度を揃えにくい。,1. 意味イベントを単位に動画と操作を学習し、可変長イベント実行と固定長実行を支える。,1. イベントcaption付き動画でVideo DiTを事前学習し凍結、その上でaction DiTを学ぶ。観測から次イベント説明と残り時間を推定し、可変長の動画・行動区間を生成する。,1. 実機Generalization suiteの平均Task Progressはイベント方式53.75、事前学習済み固定長・VI-SAなし基準22.0。両者は実行方式と視点間注意の両方が異なる。,1. イベント単位の動画・行動事前学習、残り時間推定、イベント実行を一体化したと著者は主張。,1. イベントに基づく可変時間の動画と行動の生成・実行を、多様な実ロボットタスクで評価。,1. 著者限界: 詳細captionと時間境界の整備に依存し、自己教師ありイベント境界発見は将来課題。評価対象プラットフォームと事前学習の整合やチューニング量に優位がある。,本文の問題設定・方法・実験・結論・限界と重要付録を確認。全付録を網羅したものではない。,extracted,reviewed,gpt-6.1-terra,2026-11-12T14:05:43.772222+00:00,,,,,,,,"社会的背景 1 [著者の主張]
+https://arxiv.org/html/2606.01955v2
+§1
+本文の著者による記述：多様な指示・場面で一般化する実ロボット操作を目指す。
+
+技術的背景 1 [著者の主張]
+https://arxiv.org/html/2606.01955v2
+§1
+本文の著者による記述：固定長action chunkは言語の意味的イベントと動画・制御の時間粒度を揃えにくい。
+
+取り組む課題 1 [著者の主張]
+https://arxiv.org/html/2606.01955v2
+§3, §5
+本文の著者による記述：意味イベントを単位に動画と操作を学習し、可変長イベント実行と固定長実行を支える。
+
+解決手段 1 [著者の主張]
+https://arxiv.org/html/2606.01955v2
+§3.3–3.4, §5.1–5.5
+本文の著者による記述：イベントcaption付き動画でVideo DiTを事前学習し凍結、その上でaction DiTを学ぶ。観測から次イベント説明と残り時間を推定し、可変長の動画・行動区間を生成する。
+
+結果 1 [実証結果]
+https://arxiv.org/html/2606.01955v2
+§7.2.4–7.2.5, 表4
+本文の条件付き評価結果：実機Generalization suiteの平均Task Progressはイベント方式53.75、事前学習済み固定長・VI-SAなし基準22.0。両者は実行方式と視点間注意の両方が異なる。
+
+貢献 1 [著者の主張]
+https://arxiv.org/html/2606.01955v2
+§3–5
+本文の著者による記述：イベント単位の動画・行動事前学習、残り時間推定、イベント実行を一体化したと著者は主張。
+
+まとめ 1 [実証結果]
+https://arxiv.org/html/2606.01955v2
+§5, §7
+本文の条件付き評価結果：イベントに基づく可変時間の動画と行動の生成・実行を、多様な実ロボットタスクで評価。
+
+残った課題 1 [著者の主張]
+https://arxiv.org/html/2606.01955v2
+§8 Future Work, Evaluation advantages
+本文の著者による記述：著者限界: 詳細captionと時間境界の整備に依存し、自己教師ありイベント境界発見は将来課題。評価対象プラットフォームと事前学習の整合やチューニング量に優位がある。","1. DreamZero (ID: 未登録)
+
+引用位置: §7.2.4
+優先理由: 実機比較候補
+範囲: unresolved"
+S011,Saccadic Corollary Discharge Underlies Stable Visual Perception,"1. James Cavanaugh
+2. Rebecca A. Berman
+3. Wilsaan M. Joiner
+4. Robert H. Wurtz",,"1. Stage1
+2. latent action
+3. cross-disciplinary",2016-01-06,published journal version,2016-01-06,Journal of Neuroscience,published,https://doi.org/10.1523/JNEUROSCI.2054-15.2016,https://cnbc.cmu.edu/braingroup/papers/cavanaugh_etal_2016.pdf,1. 記載なし: 応用上の社会的需要は明示されていない。,1. サッカードで網膜像が移動しても視覚は安定し、その補償に運動信号のコピーが使われるという仮説がある。,1. 特定された上丘―視床MD―前頭眼野経路の信号が知覚に寄与するかを調べる。,1. 2頭のマカクで眼球方向知覚を報告させ、視床MDの信号をムシモールで可逆的に抑制し、眼球運動と知覚のずれを比較した。,1. MD抑制で知覚された眼球方向は変化したが実際のサッカードのベクトルは変わらず、知覚と運動が解離した。,1. 視覚安定性に関連する内部信号の経路を介入で検証した。,1. 運動の内部コピーが視覚知覚に寄与するという仮説を、経路抑制と知覚報告により支持した。,1. 2頭の霊長類の眼球運動の実験であり、画像から推定したカメラ運動が運動指令のコピーと同一であるとは示していない。,本文のIntroduction、Materials and Methods、Results、Discussion、主要図表と参考文献。,extracted,pending,gpt-6.1-terra,2026-11-12T14:01:53Z,,,,,,,,"社会的背景 1 [記載なし]
+https://cnbc.cmu.edu/braingroup/papers/cavanaugh_etal_2016.pdf
+Introduction
+本文の該当節を確認。雑誌掲載版PDFを使用。
+
+技術的背景 1 [著者の主張]
+https://cnbc.cmu.edu/braingroup/papers/cavanaugh_etal_2016.pdf
+Introduction, Fig. 1
+本文の該当節を確認。雑誌掲載版PDFを使用。
+
+取り組む課題 1 [著者の主張]
+https://cnbc.cmu.edu/braingroup/papers/cavanaugh_etal_2016.pdf
+Introduction
+本文の該当節を確認。雑誌掲載版PDFを使用。
+
+解決手段 1 [実証結果]
+https://cnbc.cmu.edu/braingroup/papers/cavanaugh_etal_2016.pdf
+Materials and Methods; Figs. 2–3
+本文の該当節を確認。雑誌掲載版PDFを使用。
+
+結果 1 [実証結果]
+https://cnbc.cmu.edu/braingroup/papers/cavanaugh_etal_2016.pdf
+Results; Figs. 4–6
+本文の該当節を確認。雑誌掲載版PDFを使用。
+
+貢献 1 [著者の主張]
+https://cnbc.cmu.edu/braingroup/papers/cavanaugh_etal_2016.pdf
+Discussion
+本文の該当節を確認。雑誌掲載版PDFを使用。
+
+まとめ 1 [調査者の解釈]
+https://cnbc.cmu.edu/braingroup/papers/cavanaugh_etal_2016.pdf
+Abstract; Discussion
+本文の該当節を確認。雑誌掲載版PDFを使用。
+
+残った課題 1 [調査者の解釈]
+https://cnbc.cmu.edu/braingroup/papers/cavanaugh_etal_2016.pdf
+Materials and Methods; Discussion
+本文の該当節を確認。雑誌掲載版PDFを使用。","1. Corollary discharge contributes to perceived eye location in monkeys (ID: 未登録)
+https://doi.org/10.1152/jn.00362.2013
+引用位置: Introduction; References
+優先理由: サッカード知覚実験の基礎
+範囲: in_scope"
+S012,Prediction Error Associated With the Perceptual Segmentation of Naturalistic Events,"1. Jeffrey M. Zacks
+2. Christopher A. Kurby
+3. Michelle L. Eisenberg
+4. Nayiri Haroutunian",,"1. Stage1
+2. latent action
+3. cross-disciplinary",2011-06-14,PMC author manuscript,2021-12-08,Journal of Cognitive Neuroscience,published,https://doi.org/10.1162/jocn_a_00078,https://pmc.ncbi.nlm.nih.gov/articles/PMC8653780/,1. 記載なし: 特定の社会的応用需要は示されていない。,1. イベント分節理論は予測誤差の一時的上昇とイベントモデルの更新を結び付ける。,1. 自然活動動画の主観的イベント境界を横断する予測の難易度と脳活動を検証する。,1. 固定カメラの5種類の日常活動動画について、事前の境界評定を用いて5秒先を予測させ、4実験のうち1実験でfMRIを測った。,1. 4実験で境界を横断する予測が難しく、実験3では自信も低下した。予測試行中の右黒質応答は境界横断で大きかった。,1. 自然イベントの境界と行動上の予測困難を対応付けた。,1. 事前評定した境界の横断は5秒先の予測困難と関連する。,1. 動画再開後の中脳・線条体応答の境界効果は画像類似度を統制すると有意でなく、視覚変化と予測誤差を識別できない。動画にカメラ移動はない。,本文のIntroduction、Materials and Methods、Results、Discussion、主要図表と参考文献。,extracted,pending,gpt-6.1-terra,2026-11-12T14:01:53Z,,,,,,,,"社会的背景 1 [記載なし]
+https://pmc.ncbi.nlm.nih.gov/articles/PMC8653780/
+Introduction
+本文の該当節を確認。著者最終稿（PMC）を使用。
+
+技術的背景 1 [著者の主張]
+https://pmc.ncbi.nlm.nih.gov/articles/PMC8653780/
+Introduction
+本文の該当節を確認。著者最終稿（PMC）を使用。
+
+取り組む課題 1 [著者の主張]
+https://pmc.ncbi.nlm.nih.gov/articles/PMC8653780/
+Introduction
+本文の該当節を確認。著者最終稿（PMC）を使用。
+
+解決手段 1 [実証結果]
+https://pmc.ncbi.nlm.nih.gov/articles/PMC8653780/
+Experimental Methods
+本文の該当節を確認。著者最終稿（PMC）を使用。
+
+結果 1 [実証結果]
+https://pmc.ncbi.nlm.nih.gov/articles/PMC8653780/
+Results; Figs. 2–3
+本文の該当節を確認。著者最終稿（PMC）を使用。
+
+貢献 1 [著者の主張]
+https://pmc.ncbi.nlm.nih.gov/articles/PMC8653780/
+Discussion
+本文の該当節を確認。著者最終稿（PMC）を使用。
+
+まとめ 1 [調査者の解釈]
+https://pmc.ncbi.nlm.nih.gov/articles/PMC8653780/
+Results; Discussion
+本文の該当節を確認。著者最終稿（PMC）を使用。
+
+残った課題 1 [著者の主張]
+https://pmc.ncbi.nlm.nih.gov/articles/PMC8653780/
+Results; Discussion; Materials
+本文の該当節を確認。著者最終稿（PMC）を使用。","1. Event perception: A mind-brain perspective (ID: 未登録)
+https://doi.org/10.1037/0033-295X.114.2.273
+引用位置: Introduction; References
+優先理由: イベント分節理論の基礎
+範囲: in_scope"
+S013,Challenging Common Assumptions in the Unsupervised Learning of Disentangled Representations,"1. Francesco Locatello
+2. Stefan Bauer
+3. Mario Lucic
+4. Gunnar Rätsch
+5. Sylvain Gelly
+6. Bernhard Schölkopf
+7. Olivier Bachem",,"1. Stage1
+2. latent action
+3. cross-disciplinary",2019,proceedings version,2019,"ICML 2019, PMLR 97",published,https://proceedings.mlr.press/v97/locatello19a.html,https://proceedings.mlr.press/v97/locatello19a/locatello19a.pdf,1. 記載なし: 特定の社会的需要は明示されていない。,1. 教師なし表現の各座標を真の生成要因に対応付ける手法が広く研究されている。,1. 無監督分離の識別可能性と既存手法・選択基準の妥当性を検討する。,1. 独立した成分を持つ連続潜在分布に対して同じ観測分布を与える完全に混合された可逆変換を構成し、各種VAEを7データセットと乱数種で評価する。,1. d>1の積分布に対し分布を保存し各成分を混合する可逆変換が存在し、観測周辺分布のみでは真の分離を選べない。,1. 無監督分離の不可能性を明示的構成で示し、手法と選択の実験的評価を行った。,1. モデルとデータの帰納バイアスを明示せずには、同じ観測分布から真の要因分離を一般に保証できない。,1. 定理は指定された独立連続潜在分布と観測周辺分布の設定に関するもので、時間対応・介入など追加情報がある全手法の不可能性を主張しない。,本文の問題設定・方法・結果・結論・限界、主要図表。証明付録の完全な精査は未完了。,partial,pending,gpt-6.1-terra,2026-11-12T14:01:53Z,,,,,,,,"社会的背景 1 [記載なし]
+https://proceedings.mlr.press/v97/locatello19a/locatello19a.pdf
+Introduction
+論文本文に基づく要約。未検証の数学的詳細・全付録を含むためpartial。
+
+技術的背景 1 [著者の主張]
+https://proceedings.mlr.press/v97/locatello19a/locatello19a.pdf
+§1–2
+論文本文に基づく要約。未検証の数学的詳細・全付録を含むためpartial。
+
+取り組む課題 1 [著者の主張]
+https://proceedings.mlr.press/v97/locatello19a/locatello19a.pdf
+§1, §3–5
+論文本文に基づく要約。未検証の数学的詳細・全付録を含むためpartial。
+
+解決手段 1 [実証結果]
+https://proceedings.mlr.press/v97/locatello19a/locatello19a.pdf
+§3 Theorem 1; §4
+論文本文に基づく要約。未検証の数学的詳細・全付録を含むためpartial。
+
+結果 1 [実証結果]
+https://proceedings.mlr.press/v97/locatello19a/locatello19a.pdf
+§3 Theorem 1
+論文本文に基づく要約。未検証の数学的詳細・全付録を含むためpartial。
+
+貢献 1 [著者の主張]
+https://proceedings.mlr.press/v97/locatello19a/locatello19a.pdf
+§3–5
+論文本文に基づく要約。未検証の数学的詳細・全付録を含むためpartial。
+
+まとめ 1 [調査者の解釈]
+https://proceedings.mlr.press/v97/locatello19a/locatello19a.pdf
+§3
+論文本文に基づく要約。未検証の数学的詳細・全付録を含むためpartial。
+
+残った課題 1 [調査者の解釈]
+https://proceedings.mlr.press/v97/locatello19a/locatello19a.pdf
+§3 Theorem 1, footnote 3
+論文本文に基づく要約。未検証の数学的詳細・全付録を含むためpartial。","1. Nonlinear independent component analysis: Existence and uniqueness results (ID: 未登録)
+https://doi.org/10.1016/S0893-6080(99)00040-3
+引用位置: §3; References
+優先理由: 非線形ICAの非一意性
+範囲: in_scope"
+S014,The Incomplete Rosetta Stone problem: Identifiability results for Multi-view Nonlinear ICA,"1. Luigi Gresele
+2. Paul K. Rubenstein
+3. Arash Mehrjou
+4. Francesco Locatello
+5. Bernhard Schölkopf",,"1. Stage1
+2. latent action
+3. cross-disciplinary",2020,PMLR proceedings version,2020,"UAI 2019, PMLR 115",published,https://proceedings.mlr.press/v115/gresele20a.html,https://proceedings.mlr.press/v115/gresele20a/gresele20a.pdf,1. 記載なし: 社会的需要は特定せず、神経画像等を応用例として挙げる。,1. 単一観測の非線形ICAは一般に識別できず、同一ソースの複数観測を追加情報として活用する。,1. 成分ごとのノイズと非線形混合を持つ複数ビューから共通の独立ソースをどの条件で回復できるかを調べる。,1. 対応する観測対と非対応対の分類、可逆で滑らかな写像、十分に異なるビュー等を仮定し識別定理を導く。,1. 1つが無雑音の2ビューでは無限データと仮定された分類器のもと、成分ごとの可逆変換まで独立成分を回復できる。2ビューが共に有雑音なら各汚染は残る。,1. 独立成分の複数ビューに対する識別条件と複数ノイズ観測の拡張を示した。,1. 適切な生成仮定と対応観測を追加すると単一ビューより強い識別結果が得られる。,1. 一般のカメラ画像やDINO特徴が可逆性、成分独立性、成分別ノイズ、十分に異なるビューを満たすとは示されない。著者は多数ビュー極限の有限ビュー拡張も課題とした。,本文の問題設定・方法・結果・結論・限界、主要図表。証明付録の完全な精査は未完了。,partial,pending,gpt-6.1-terra,2026-11-12T14:01:53Z,,,,,,,,"社会的背景 1 [記載なし]
+https://proceedings.mlr.press/v115/gresele20a/gresele20a.pdf
+§1; §4
+論文本文に基づく要約。未検証の数学的詳細・全付録を含むためpartial。
+
+技術的背景 1 [著者の主張]
+https://proceedings.mlr.press/v115/gresele20a/gresele20a.pdf
+§1–2
+論文本文に基づく要約。未検証の数学的詳細・全付録を含むためpartial。
+
+取り組む課題 1 [著者の主張]
+https://proceedings.mlr.press/v115/gresele20a/gresele20a.pdf
+§3
+論文本文に基づく要約。未検証の数学的詳細・全付録を含むためpartial。
+
+解決手段 1 [実証結果]
+https://proceedings.mlr.press/v115/gresele20a/gresele20a.pdf
+§3.1 Theorem 1; §3.2–3.3
+論文本文に基づく要約。未検証の数学的詳細・全付録を含むためpartial。
+
+結果 1 [実証結果]
+https://proceedings.mlr.press/v115/gresele20a/gresele20a.pdf
+§3.1 Theorem 1; §3.2 Theorem 5
+論文本文に基づく要約。未検証の数学的詳細・全付録を含むためpartial。
+
+貢献 1 [著者の主張]
+https://proceedings.mlr.press/v115/gresele20a/gresele20a.pdf
+§3–4
+論文本文に基づく要約。未検証の数学的詳細・全付録を含むためpartial。
+
+まとめ 1 [調査者の解釈]
+https://proceedings.mlr.press/v115/gresele20a/gresele20a.pdf
+§3
+論文本文に基づく要約。未検証の数学的詳細・全付録を含むためpartial。
+
+残った課題 1 [調査者の解釈]
+https://proceedings.mlr.press/v115/gresele20a/gresele20a.pdf
+§3–4
+論文本文に基づく要約。未検証の数学的詳細・全付録を含むためpartial。","1. Nonlinear ICA of Temporally Dependent Stationary Sources (ID: 未登録)
+https://proceedings.mlr.press/v54/hyvarinen17a.html
+引用位置: §3.1.1; References
+優先理由: 時間依存を用いる関連識別定理
+範囲: in_scope"
+S015,Guaranteed Discovery of Control-Endogenous Latent States with Multi-Step Inverse Models,"1. Alex Lamb
+2. Riashat Islam
+3. Yonathan Efroni
+4. Aniket Didolkar
+5. Dipendra Misra
+6. Dylan Foster
+7. Lekan Molu
+8. Rajan Chari
+9. Akshay Krishnamurthy
+10. John Langford",,"1. Stage1
+2. latent action
+3. cross-disciplinary",2022-07-17,arXiv v2,2022-12-27,arXiv preprint,unverified,https://arxiv.org/abs/2207.08229v2,https://arxiv.org/html/2207.08229v2,1. 豊富な感覚入力から制御に関係する情報だけを抽出できれば探索やナビゲーションに有用である。,1. 観測にはエージェントの制御で変化する状態と外生的な妨害が混在する。,1. 既知の実行行動と観測列から、外生的な情報を捨て制御に必要な状態を発見する。,1. 複数時間差の観測から実行された行動を予測する逆モデルに離散情報ボトルネックを組み合わせ、ロボットアーム、迷路、Matterportで評価する。,1. 仮定を置いたexogenous block MDPで制御内生状態の回復を理論解析し、3領域で選んだ比較手法より対象状態を捉え外生雑音を抑制した。,1. 多段逆モデルと離散ボトルネックによる制御内生状態の発見法と条件付き保証を提示した。,1. 実行行動という教師信号と環境仮定のもとで、制御に関係した状態の抽出を目指す。,1. 著者は離散ボトルネックと決定的な内生ダイナミクスへの依存を制限とする。調査者解釈: 行動ラベルのない端点条件付き潜在行動に保証は移らない。,本文の問題設定・方法・結果・結論・限界、主要図表。証明付録の完全な精査は未完了。,partial,pending,gpt-6.1-terra,2026-11-12T14:01:53Z,,,,,,,,"社会的背景 1 [著者の主張]
+https://arxiv.org/html/2207.08229v2
+§1; §7
+論文本文に基づく要約。未検証の数学的詳細・全付録を含むためpartial。
+
+技術的背景 1 [著者の主張]
+https://arxiv.org/html/2207.08229v2
+§1–3
+論文本文に基づく要約。未検証の数学的詳細・全付録を含むためpartial。
+
+取り組む課題 1 [著者の主張]
+https://arxiv.org/html/2207.08229v2
+§3–4
+論文本文に基づく要約。未検証の数学的詳細・全付録を含むためpartial。
+
+解決手段 1 [実証結果]
+https://arxiv.org/html/2207.08229v2
+§4–6
+論文本文に基づく要約。未検証の数学的詳細・全付録を含むためpartial。
+
+結果 1 [実証結果]
+https://arxiv.org/html/2207.08229v2
+§5–6
+論文本文に基づく要約。未検証の数学的詳細・全付録を含むためpartial。
+
+貢献 1 [著者の主張]
+https://arxiv.org/html/2207.08229v2
+§4–5
+論文本文に基づく要約。未検証の数学的詳細・全付録を含むためpartial。
+
+まとめ 1 [調査者の解釈]
+https://arxiv.org/html/2207.08229v2
+§3–7
+論文本文に基づく要約。未検証の数学的詳細・全付録を含むためpartial。
+
+残った課題 1 [著者の主張]
+https://arxiv.org/html/2207.08229v2
+§7; §3–5
+論文本文に基づく要約。未検証の数学的詳細・全付録を含むためpartial。","1. Provably Filtering Exogenous Distractors Using Multistep Inverse Dynamics (ID: 未登録)
+https://openreview.net/forum?id=RQLLzMCefQu
+引用位置: §2; References
+優先理由: 多段逆動力学による外生要因除外の直接先行
+範囲: in_scope"

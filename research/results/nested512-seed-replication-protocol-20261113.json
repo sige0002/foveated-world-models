@@ -1,0 +1,15 @@
+{
+  "reason": "Replicate prespecified fixed400 endpoint after first seed42 scaling improvement; evaluation data already observed, not confirmatory test",
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "head": "Frozen reference heads trained on128 each; encoder2900/calibration128 shared",
+  "prior": "Frozen final10000",
+  "train": "Identical nested512 h/y/baseline/rows, only frozen code head seed differs",
+  "correction": "prior_residual dim128 layers2 batch8 lr3e-4 fixed400; decoder seed paired to head seed",
+  "controls": "Constant nested512 fixed400 seeds42/43/44; same capacity and update budget",
+  "evaluation": "Same64/96 observed pairs; report all three, no seed selection; mean per-model risk not ensemble",
+  "scope": "Does not retrain IDM heads on512 or original encoder; additional code training history and original prior remain shared"
+}

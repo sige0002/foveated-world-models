@@ -1,0 +1,150 @@
+{
+  "summary": {
+    "flow": {
+      "seeds": [
+        42
+      ],
+      "metrics": {
+        "mse": {
+          "mean": 0.1960844510467723,
+          "seed_std": null
+        },
+        "mean_mse": {
+          "mean": 0.18564025027444586,
+          "seed_std": null
+        },
+        "shuffled_mse": {
+          "mean": 0.20912299794144928,
+          "seed_std": null
+        },
+        "copy_mse": {
+          "mean": 0.2058274668524973,
+          "seed_std": null
+        }
+      }
+    },
+    "residual": {
+      "seeds": [
+        42
+      ],
+      "metrics": {
+        "mse": {
+          "mean": 0.16529915941646323,
+          "seed_std": null
+        },
+        "mean_mse": {
+          "mean": 0.16529915941646323,
+          "seed_std": null
+        },
+        "shuffled_mse": {
+          "mean": 0.19218647095840424,
+          "seed_std": null
+        },
+        "copy_mse": {
+          "mean": 0.2058274668524973,
+          "seed_std": null
+        }
+      }
+    },
+    "wide_flow": {
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "metrics": {
+        "mse": {
+          "mean": 0.17314376208620766,
+          "seed_std": 0.0034643969720745305
+        },
+        "mean_mse": {
+          "mean": 0.1602642549551092,
+          "seed_std": 0.003115297683892009
+        },
+        "shuffled_mse": {
+          "mean": 0.1988754014018923,
+          "seed_std": 0.004740992601070958
+        },
+        "copy_mse": {
+          "mean": 0.2058274668524973,
+          "seed_std": 0.0
+        }
+      }
+    },
+    "wide_residual": {
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "metrics": {
+        "mse": {
+          "mean": 0.14104486730260155,
+          "seed_std": 0.0020031038271121028
+        },
+        "mean_mse": {
+          "mean": 0.14104486730260155,
+          "seed_std": 0.0020031038271121028
+        },
+        "shuffled_mse": {
+          "mean": 0.1783323222771287,
+          "seed_std": 0.0007239887284137556
+        },
+        "copy_mse": {
+          "mean": 0.2058274668524973,
+          "seed_std": 0.0
+        }
+      }
+    }
+  },
+  "comparisons": [
+    {
+      "predictor": "wide_flow",
+      "flow_metric": "mse",
+      "baseline": "wide_residual",
+      "baseline_metric": "mse",
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "difference": 0.032098894783606134,
+      "seed_differences": [
+        0.026670798019040376,
+        0.037021353491581976,
+        0.03260453284019604
+      ],
+      "episode_bootstrap_ci95": [
+        0.02882249805843458,
+        0.03558816445777969
+      ]
+    },
+    {
+      "predictor": "wide_flow",
+      "flow_metric": "mean_mse",
+      "baseline": "wide_residual",
+      "baseline_metric": "mse",
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "difference": 0.019219387652507674,
+      "seed_differences": [
+        0.014252310036681592,
+        0.02384071925189346,
+        0.019565133668947965
+      ],
+      "episode_bootstrap_ci95": [
+        0.016099993052193895,
+        0.02254240472781627
+      ]
+    }
+  ],
+  "interval_scope": "Paired episode bootstrap conditional on the trained seeds; not uncertainty over all training seeds.",
+  "compute_note": "flow mse uses individual 4-step samples; flow mean_mse averages 4 samples (16 network calls).",
+  "cache_sha256": {
+    "train": "d8a563db2ac106307e63af612af230fefda78a3ddcd78e96457b674b55fe83e9",
+    "validation": "7f5d9a99c8ca8fee5d850a5ff69bc750e6abe038469c157207a7b54cf5ea293b"
+  }
+}

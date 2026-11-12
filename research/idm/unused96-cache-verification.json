@@ -1,0 +1,46 @@
+{
+  "cache_sha256": "456a09b4e3cc3c6887732327c25d3ac7d0bd98f7c4898e4ace885298e184220f",
+  "count": 96,
+  "all_checks_passed": true,
+  "tensor_shapes": {
+    "current": [
+      96,
+      1,
+      256,
+      768
+    ],
+    "future": [
+      96,
+      1,
+      256,
+      768
+    ],
+    "codes": [
+      96,
+      1,
+      32
+    ],
+    "baseline": [
+      96,
+      1,
+      256,
+      768
+    ],
+    "original_codes": [
+      96,
+      1,
+      32
+    ]
+  },
+  "precision": "Features/queries/original posterior: float32 medium B1; adapted head: medium B64/B32; baseline and original decoder reevaluation: highest B2; CPU4",
+  "diagnostics": {
+    "baseline_per_example_mse_max_difference": 3.55839729309082e-05,
+    "baseline_prediction_max_abs_difference": 0.03598594665527344,
+    "original_per_example_mse_max_difference": 2.629309892654419e-05,
+    "baseline_medium_b1_mse": 0.10957542061805725,
+    "baseline_highest_b2_mse": 0.10957641154527664,
+    "original_medium_b1_mse": 0.10944055952131748,
+    "original_highest_b2_mse": 0.10944114803957443
+  },
+  "verification_script_sha256": "1316a0b929cf8711554f0c8ff3b3e7032759934196acfcee73eeb0646a948543"
+}

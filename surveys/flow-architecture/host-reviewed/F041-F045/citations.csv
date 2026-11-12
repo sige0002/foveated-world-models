@@ -1,0 +1,6 @@
+citing_id,cited_id,cited_title,cited_url,locator,priority_reason,scope_status
+F042,F041,Autoregressive Denoising Diffusion Models for Multivariate Probabilistic Time Series Forecasting,https://arxiv.org/abs/2101.12072v2,§6.3,確率予測直接対照,in_scope
+F044,F041,Autoregressive Denoising Diffusion Models for Multivariate Probabilistic Time Series Forecasting,https://arxiv.org/abs/2101.12072v2,"§2.2, §4",逐次生成・比較,in_scope
+F044,F042,CSDI: Conditional Score-based Diffusion Models for Probabilistic Time Series Imputation,https://arxiv.org/abs/2107.03502v2,"§2.2, §4.4",非自己回帰条件設計の既存手法と直接比較,in_scope
+F043,F042,CSDI: Conditional Score-based Diffusion Models for Probabilistic Time Series Imputation,https://arxiv.org/abs/2107.03502v2,§4.5,条件付き補完の比較,in_scope
+F044,,Scheduled Sampling for Sequence Prediction with Recurrent Neural Networks,,§3.2.1,未来真値混合の先行概念,unresolved

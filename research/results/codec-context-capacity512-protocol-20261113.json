@@ -1,0 +1,64 @@
+{
+  "experiment": "codec context and capacity controls",
+  "script_sha256": "0dde2b28d2efe3e64ae314c7376ace6a9edbc8534de6b2f2a973cca3bec693c1",
+  "codec": "runs/nonlinear-codec32-512-1000-20261113",
+  "steps": 400,
+  "seed": 42,
+  "batch_size": 8,
+  "lr": 0.0003,
+  "baseline_context": true,
+  "flow_sigma": 1,
+  "euler_steps": 4,
+  "evaluation_draws": 4,
+  "arms": [
+    {
+      "name": "small-direct",
+      "variant": "direct_latent",
+      "dim": 128,
+      "layers": 2,
+      "output": "runs/codec-context-small-direct-512-400-20261113"
+    },
+    {
+      "name": "small-flow",
+      "variant": "flow",
+      "dim": 128,
+      "layers": 2,
+      "output": "runs/codec-context-small-flow-512-400-20261113"
+    },
+    {
+      "name": "large-direct",
+      "variant": "direct_latent",
+      "dim": 384,
+      "layers": 4,
+      "output": "runs/codec-context-large-direct-512-400-20261113"
+    },
+    {
+      "name": "large-flow",
+      "variant": "flow",
+      "dim": 384,
+      "layers": 4,
+      "output": "runs/codec-context-large-flow-512-400-20261113"
+    },
+    {
+      "name": "large-feature",
+      "variant": "direct_feature",
+      "dim": 384,
+      "layers": 4,
+      "output": "runs/codec-context-large-feature-512-400-20261113"
+    }
+  ],
+  "parameters_trainable": {
+    "small": 820000,
+    "large": 11417120
+  },
+  "fixed_codec_parameters": 673184,
+  "primary_metric": "observed96 mean_mse; flow averages decoded predictions",
+  "limitations": [
+    "Reused dev64 and observed96, not fresh test",
+    "Future-conditioned IDM: posterior reconstruction",
+    "Fixed endpoint, no checkpoint selection",
+    "Same-capacity direct/flow initial weights match; cross-capacity flow noise streams differ",
+    "Not compute matched to full-space baseline; codec adds 1000 training steps"
+  ],
+  "schedule": "First four arms CPU4 each; fifth after a slot frees. No GPU."
+}

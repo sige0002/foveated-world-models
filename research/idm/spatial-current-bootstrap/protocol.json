@@ -1,0 +1,10 @@
+{
+  "source": "/home/sadasue/foveated-world-models/research/idm/spatial-current-boundary-audit/results.json",
+  "source_sha256": "21ad8920a7241b3562924acdb3c5aa4fd68ed1eab469efc8cc116f6a52bbae37",
+  "seed": 20261113,
+  "resamples": 10000,
+  "interval": "Paired episode bootstrap percentile95%; mean normalized8D MSE(reference minuszero)",
+  "models": "Already fixed train-CV-selected models; no fitting/reselection",
+  "scope": "Conditional on trained representations, scalers, CV choices and fitted models; does not cover training/model-selection uncertainty or adaptivity from previously observed research sets",
+  "script_sha256": "2120d0bf6229c2f7abc5f6c79f0919723acced2f9e8c15394cb932e8ca3aedee"
+}

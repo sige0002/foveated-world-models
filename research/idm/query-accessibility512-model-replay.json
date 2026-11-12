@@ -1,0 +1,21 @@
+{
+  "model_class": "research.idm.train_reference_heads.Model",
+  "precision": "medium",
+  "threads": 4,
+  "inference_mode": true,
+  "batches": [
+    64,
+    32
+  ],
+  "max_error": 0.0,
+  "mse": 0.0,
+  "exact": true,
+  "source_sha256": {
+    "/home/sadasue/foveated-world-models/research/idm/observed96-reference-queries2900/validation.pt": "916ac68406c367aeb83f2322b7be54f230ceac46a5e09809d726ee16ae8356ea",
+    "/home/sadasue/foveated-world-models/research/idm/reference-query-full/train_calibration.pt": "cabb8e89384656768f258f04158353a947ab9e101acc20d5c7d41f1f1956ad8a",
+    "/home/sadasue/foveated-world-models/runs/research-unused-96-prior6501/validation.pt": "456a09b4e3cc3c6887732327c25d3ac7d0bd98f7c4898e4ace885298e184220f",
+    "/home/sadasue/foveated-world-models/research/idm/reference-comparison2000/reference-42.pt": "b5784dae7b2d0f0e69feec9a5305020e67fc8bab3c681b4e707eeb90c8e05f83"
+  },
+  "script_sha256": "b6398681e5d8bd6471d894f75722db170c38aa48c974fad204ffa3619adfc05d",
+  "scope": "Single final original-Model replay; cache unchanged; no fitting or model selection"
+}

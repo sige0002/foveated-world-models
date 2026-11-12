@@ -1,0 +1,12 @@
+{
+  "43": {
+    "path": "/home/sadasue/foveated-world-models/runs/research-observed96-idm43-prior6501",
+    "cache_sha256": "a2a480e4a90d06614e45c066bef7b69a53529f21506d9cf539d1f19b3ce0fa54",
+    "head_checkpoint_sha256": "da4aa429051e29baaf86dc7ecd4393a9779004e726e30478c954ac47f8a522a8"
+  },
+  "44": {
+    "path": "/home/sadasue/foveated-world-models/runs/research-observed96-idm44-prior6501",
+    "cache_sha256": "1bab1f74a2ae485df81739442ce30af06d02f9a8a17fb8edf77f841d54fffe41",
+    "head_checkpoint_sha256": "d93a796e609d1b4a0ed138e3b3c9fec69405ec7a0e7dee60c4405a4f5887e335"
+  }
+}

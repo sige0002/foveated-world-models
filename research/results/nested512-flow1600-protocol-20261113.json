@@ -1,0 +1,16 @@
+{
+  "reason": "Direct512 benefits from1600 updates; test same extended update budget for flow rather than infer failure from400 only. Both fixed endpoints reported, no evaluation-best checkpoint selection.",
+  "variant": "prior_flow",
+  "cache": "runs/reference-idm42-nested512-prior10000",
+  "seed": 42,
+  "head_seed": 42,
+  "steps": 1600,
+  "batch_size": 8,
+  "dim": 128,
+  "layers": 2,
+  "threads": 4,
+  "expected_initial400": "Same manualseed and minibatch order as completed400 flow; verify history equality",
+  "inference": "4 Euler steps, sample risk and mean4 risk; no best-of-N",
+  "comparison": "Nested512 direct400/direct1600 and flow400. Equal updates are not equal FLOPs.",
+  "scope": "Already observed dev64/96; true-future posterior reconstruction, fixed128-trained IDM. This is a further exploratory experiment motivated by data-scaling results, not an unseen-test confirmation."
+}

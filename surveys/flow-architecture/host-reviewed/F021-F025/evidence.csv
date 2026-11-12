@@ -1,0 +1,41 @@
+paper_id,field,item_index,kind,source_url,locator,note
+F021,social_background,1,not_stated,https://arxiv.org/html/2511.13720v2,§1,本文の記載箇所を確認。
+F021,technical_background,1,author_claim,https://arxiv.org/html/2511.13720v2,"§1, §3",本文の記載箇所を確認。
+F021,problem,1,author_claim,https://arxiv.org/html/2511.13720v2,§3–4,本文の記載箇所を確認。
+F021,method,1,author_claim,https://arxiv.org/html/2511.13720v2,"§3.1–3.2, §4.1",本文の記載箇所を確認。
+F021,results,1,demonstrated,https://arxiv.org/html/2511.13720v2,§4.2 Table 2,本文の記載箇所を確認。
+F021,contributions,1,author_claim,https://arxiv.org/html/2511.13720v2,§2–4,本文の記載箇所を確認。
+F021,summary,1,interpretation,https://arxiv.org/html/2511.13720v2,§3–4,本文の記載箇所を確認。
+F021,remaining_issues,1,interpretation,https://arxiv.org/html/2511.13720v2,§4; Appendix B.2,本文の記載箇所を確認。
+F022,social_background,1,not_stated,https://arxiv.org/html/2611.12852v1,§1,本文の記載箇所を確認。
+F022,technical_background,1,author_claim,https://arxiv.org/html/2611.12852v1,"§4.2–4.4, Appendix A",本文の記載箇所を確認。
+F022,problem,1,author_claim,https://arxiv.org/html/2611.12852v1,§4,本文の記載箇所を確認。
+F022,method,1,author_claim,https://arxiv.org/html/2611.12852v1,§4.5 Eq.10–14; Appendix C,本文の記載箇所を確認。
+F022,results,1,demonstrated,https://arxiv.org/html/2611.12852v1,§4.5 Tables 2–3,本文の記載箇所を確認。
+F022,contributions,1,author_claim,https://arxiv.org/html/2611.12852v1,§4.2–4.5; Appendix B,本文の記載箇所を確認。
+F022,summary,1,interpretation,https://arxiv.org/html/2611.12852v1,§4.5,本文の記載箇所を確認。
+F022,remaining_issues,1,interpretation,https://arxiv.org/html/2611.12852v1,"Appendix B.2–B.4, D",本文の記載箇所を確認。
+F023,social_background,1,not_stated,https://arxiv.org/html/2605.27102v3,§1,本文の記載箇所を確認。
+F023,technical_background,1,author_claim,https://arxiv.org/html/2605.27102v3,§3.1–3.2,本文の記載箇所を確認。
+F023,problem,1,author_claim,https://arxiv.org/html/2605.27102v3,§3–4,本文の記載箇所を確認。
+F023,method,1,author_claim,https://arxiv.org/html/2605.27102v3,"§3.1, §3.4, Appendix A–C",本文の記載箇所を確認。
+F023,results,1,demonstrated,https://arxiv.org/html/2605.27102v3,"§4.2, §4.5, Table 1, Fig. 6; Appendix E",本文の記載箇所を確認。
+F023,contributions,1,author_claim,https://arxiv.org/html/2605.27102v3,"§2–3, Appendix B",本文の記載箇所を確認。
+F023,summary,1,interpretation,https://arxiv.org/html/2605.27102v3,§4,本文の記載箇所を確認。
+F023,remaining_issues,1,interpretation,https://arxiv.org/html/2605.27102v3,§3.1–3.4,本文の記載箇所を確認。
+F024,social_background,1,not_stated,https://arxiv.org/html/2512.02012v2,§1,本文の記載箇所を確認。
+F024,technical_background,1,author_claim,https://arxiv.org/html/2512.02012v2,"§1, §3–4",本文の記載箇所を確認。
+F024,problem,1,author_claim,https://arxiv.org/html/2512.02012v2,§4,本文の記載箇所を確認。
+F024,method,1,author_claim,https://arxiv.org/html/2512.02012v2,"§4.1–4.3, Algorithm 1, Appendix A",本文の記載箇所を確認。
+F024,results,1,demonstrated,https://arxiv.org/html/2512.02012v2,§5.1 Fig.6/Table 1; Table 2,本文の記載箇所を確認。
+F024,contributions,1,author_claim,https://arxiv.org/html/2512.02012v2,§4,本文の記載箇所を確認。
+F024,summary,1,interpretation,https://arxiv.org/html/2512.02012v2,§4–5,本文の記載箇所を確認。
+F024,remaining_issues,1,interpretation,https://arxiv.org/html/2512.02012v2,§4–5,本文の記載箇所を確認。
+F025,social_background,1,not_stated,https://arxiv.org/pdf/2412.06264v1,§1,本文の記載箇所を確認。
+F025,technical_background,1,author_claim,https://arxiv.org/pdf/2412.06264v1,§1–2,本文の記載箇所を確認。
+F025,problem,1,author_claim,https://arxiv.org/pdf/2412.06264v1,§1–2,本文の記載箇所を確認。
+F025,method,1,author_claim,https://arxiv.org/pdf/2412.06264v1,"§4.4–4.6, Theorems 3–4, pp.18–23",本文の記載箇所を確認。
+F025,results,1,demonstrated,https://arxiv.org/pdf/2412.06264v1,"§4.4–4.5, pp.18–21",本文の記載箇所を確認。
+F025,contributions,1,author_claim,https://arxiv.org/pdf/2412.06264v1,"§1, §5.4–5.5, §7.3–7.4, §8.3, §9.4–9.5; Appendix A",全章の主要定義と論証、仮定を確認。
+F025,summary,1,interpretation,https://arxiv.org/pdf/2412.06264v1,§4,本文の記載箇所を確認。
+F025,remaining_issues,1,interpretation,https://arxiv.org/pdf/2412.06264v1,"§4.6, §8.3 Theorem 17, §10.4; Appendix A.3",全章の主要定義と論証、仮定を確認。

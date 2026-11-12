@@ -1,0 +1,37 @@
+{
+  "original_checkpoint_step": 2900,
+  "original_mse": 0.14371173665858805,
+  "seed": 42,
+  "bootstrap_samples": 20000,
+  "bootstrap_seed": 2026,
+  "comparisons": [
+    {
+      "variant": "wide_residual",
+      "metric": "mse",
+      "mean_difference_to_original": -0.0003542433842085302,
+      "paired_episode_bootstrap_95": [
+        -0.006045714826905168,
+        0.005690425453940404
+      ]
+    },
+    {
+      "variant": "wide_flow",
+      "metric": "mse",
+      "mean_difference_to_original": 0.026316554634831846,
+      "paired_episode_bootstrap_95": [
+        0.019739888329058885,
+        0.03332406493427696
+      ]
+    },
+    {
+      "variant": "wide_flow",
+      "metric": "mean_mse",
+      "mean_difference_to_original": 0.013898066652473062,
+      "paired_episode_bootstrap_95": [
+        0.007351163447310682,
+        0.02086022450239397
+      ]
+    }
+  ],
+  "interpretation": "Descriptive comparison on identical validation episodes. Different training histories/capacities and extra IDM head training; not a controlled algorithm comparison. Intervals condition on fitted models and omit seed/selection uncertainty; validation has guided development."
+}

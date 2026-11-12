@@ -1,0 +1,197 @@
+{
+  "source": "research/idm/postprojection-comparison400/results.json",
+  "source_sha256": "76b5e34e1372ccdb41e37054df2ee332674eded524b4d46c79a2c29458611ddb",
+  "summary": {
+    "direction": {
+      "train": {
+        "mean_mse": 0.06451094284420833,
+        "sample_mse": 0.06478302140021697,
+        "prior_mse": 0.11036006439826451
+      },
+      "validation": {
+        "mean_mse": 0.12503758276579902,
+        "sample_mse": 0.12495550879975781,
+        "prior_mse": 0.12631255760788918
+      },
+      "gradient_diagnostics": [
+        {
+          "step": 1,
+          "head_mse_gradient_norm": 0.0,
+          "head_raw_kl_gradient_norm": 7.5511429934749215,
+          "head_weighted_kl_gradient_norm": 0.0003775571496737461
+        },
+        {
+          "step": 10,
+          "head_mse_gradient_norm": 4.4810546418350447e-05,
+          "head_raw_kl_gradient_norm": 1.8754684762279292,
+          "head_weighted_kl_gradient_norm": 9.377342381139647e-05
+        },
+        {
+          "step": 100,
+          "head_mse_gradient_norm": 0.003564363113980349,
+          "head_raw_kl_gradient_norm": 2.5210620403083595,
+          "head_weighted_kl_gradient_norm": 0.00012605310201541797
+        },
+        {
+          "step": 400,
+          "head_mse_gradient_norm": 0.002702272208109807,
+          "head_raw_kl_gradient_norm": 4.653829733894917,
+          "head_weighted_kl_gradient_norm": 0.00023269148669474588
+        }
+      ]
+    },
+    "direction_statistics": {
+      "train": {
+        "mean_mse": 0.06353022222174332,
+        "sample_mse": 0.06390988448401913,
+        "prior_mse": 0.11036006439826451
+      },
+      "validation": {
+        "mean_mse": 0.12191356479888782,
+        "sample_mse": 0.12201260583242401,
+        "prior_mse": 0.12631255760788918
+      },
+      "gradient_diagnostics": [
+        {
+          "step": 1,
+          "head_mse_gradient_norm": 0.0,
+          "head_raw_kl_gradient_norm": 8.3366598773805,
+          "head_weighted_kl_gradient_norm": 0.000416832993869025
+        },
+        {
+          "step": 10,
+          "head_mse_gradient_norm": 4.746567701600097e-05,
+          "head_raw_kl_gradient_norm": 2.35176577211839,
+          "head_weighted_kl_gradient_norm": 0.0001175882886059195
+        },
+        {
+          "step": 100,
+          "head_mse_gradient_norm": 0.002618456087061269,
+          "head_raw_kl_gradient_norm": 2.9485602949639937,
+          "head_weighted_kl_gradient_norm": 0.0001474280147481997
+        },
+        {
+          "step": 400,
+          "head_mse_gradient_norm": 0.00426889104141458,
+          "head_raw_kl_gradient_norm": 10.115519902402562,
+          "head_weighted_kl_gradient_norm": 0.0005057759951201281
+        }
+      ]
+    },
+    "calibrated_raw": {
+      "train": {
+        "mean_mse": 0.06695675279479474,
+        "sample_mse": 0.06754297025327105,
+        "prior_mse": 0.11036006439826451
+      },
+      "validation": {
+        "mean_mse": 0.12040686624823138,
+        "sample_mse": 0.1204177628387697,
+        "prior_mse": 0.12631255760788918
+      },
+      "gradient_diagnostics": [
+        {
+          "step": 1,
+          "head_mse_gradient_norm": 0.0,
+          "head_raw_kl_gradient_norm": 16.460526364743078,
+          "head_weighted_kl_gradient_norm": 0.000823026318237154
+        },
+        {
+          "step": 10,
+          "head_mse_gradient_norm": 3.4637991370969035e-05,
+          "head_raw_kl_gradient_norm": 6.575291039430602,
+          "head_weighted_kl_gradient_norm": 0.0003287645519715301
+        },
+        {
+          "step": 100,
+          "head_mse_gradient_norm": 0.0012256350734937364,
+          "head_raw_kl_gradient_norm": 10.0838780840082,
+          "head_weighted_kl_gradient_norm": 0.00050419390420041
+        },
+        {
+          "step": 400,
+          "head_mse_gradient_norm": 0.003591271909395304,
+          "head_raw_kl_gradient_norm": 19.480189663547556,
+          "head_weighted_kl_gradient_norm": 0.0009740094831773778
+        }
+      ]
+    },
+    "constant": {
+      "train": {
+        "mean_mse": 0.061919529471197166,
+        "sample_mse": 0.06214945801184513,
+        "prior_mse": 0.11036006439826451
+      },
+      "validation": {
+        "mean_mse": 0.12432518682908267,
+        "sample_mse": 0.12445868505164981,
+        "prior_mse": 0.12631255760788918
+      },
+      "gradient_diagnostics": [
+        {
+          "step": 1,
+          "head_mse_gradient_norm": 0.0,
+          "head_raw_kl_gradient_norm": 0.4052176551197946,
+          "head_weighted_kl_gradient_norm": 2.0260882755989728e-05
+        },
+        {
+          "step": 10,
+          "head_mse_gradient_norm": 8.606586402588116e-06,
+          "head_raw_kl_gradient_norm": 0.22836677290987425,
+          "head_weighted_kl_gradient_norm": 1.1418338645493713e-05
+        },
+        {
+          "step": 100,
+          "head_mse_gradient_norm": 0.0010791234333506546,
+          "head_raw_kl_gradient_norm": 0.23997222273466426,
+          "head_weighted_kl_gradient_norm": 1.1998611136733214e-05
+        },
+        {
+          "step": 400,
+          "head_mse_gradient_norm": 0.0008731333254890974,
+          "head_raw_kl_gradient_norm": 0.9975050731363496,
+          "head_weighted_kl_gradient_norm": 4.987525365681748e-05
+        }
+      ]
+    }
+  },
+  "comparisons": {
+    "direction_statistics minus direction": {
+      "difference": -0.0031240179669111967,
+      "ci95": [
+        -0.004893301687843632,
+        -0.001496722613228487
+      ]
+    },
+    "calibrated_raw minus direction": {
+      "difference": -0.004630716517567635,
+      "ci95": [
+        -0.007210382606717758,
+        -0.002301581087522209
+      ]
+    },
+    "direction_statistics minus constant": {
+      "difference": -0.0024116220301948488,
+      "ci95": [
+        -0.004423850384773687,
+        -0.0006361287101753996
+      ]
+    },
+    "calibrated_raw minus constant": {
+      "difference": -0.003918320580851287,
+      "ci95": [
+        -0.006523551726422739,
+        -0.0015466418815776714
+      ]
+    },
+    "calibrated_raw minus direction_statistics": {
+      "difference": -0.0015066985506564379,
+      "ci95": [
+        -0.0027896803949261084,
+        -0.00024245667736977347
+      ]
+    }
+  },
+  "fairness_verified": true,
+  "scope": "Development64; one joint-training seed; posterior-mean code reconstruction, not deployed prediction. Conditional paired bootstrap and exploratory multiple comparisons, no multiplicity adjustment. Previous reference1024D head used extra2000 updates/different encoder and is not a budget-matched comparator."
+}

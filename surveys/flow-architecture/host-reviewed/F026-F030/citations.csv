@@ -1,0 +1,4 @@
+citing_id,cited_id,cited_title,cited_url,locator,priority_reason,scope_status
+F027,F026,I²SB: Image-to-Image Schrödinger Bridge,https://arxiv.org/abs/2302.05872v3,§6–7,直接比較対象,in_scope
+F028,F027,Denoising Diffusion Bridge Models,https://arxiv.org/abs/2309.16948v3,§2–4,学習済み教師bridge,in_scope
+F030,F016,High-Resolution Image Synthesis with Latent Diffusion Models,https://arxiv.org/abs/2112.10752v2,"§3, §4",VQGAN潜在空間と比較対象,in_scope

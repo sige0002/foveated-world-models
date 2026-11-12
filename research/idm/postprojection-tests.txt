@@ -1,0 +1,12 @@
+test_constant_coordinate_values (research.idm.test_postprojection_representations.RepresentationTests.test_constant_coordinate_values) ... ok
+test_equal_input_shape_and_recover_calibrated_raw (research.idm.test_postprojection_representations.RepresentationTests.test_equal_input_shape_and_recover_calibrated_raw) ... ok
+test_exact_reconstruction_and_affine_shift (research.idm.test_postprojection_representations.RepresentationTests.test_exact_reconstruction_and_affine_shift) ... ok
+test_finite_epsilon_does_not_claim_scale_invariance (research.idm.test_postprojection_representations.RepresentationTests.test_finite_epsilon_does_not_claim_scale_invariance) ... ok
+test_invalid_shape_or_variant_rejected (research.idm.test_postprojection_representations.RepresentationTests.test_invalid_shape_or_variant_rejected) ... ok
+test_train_calibration_fixed_under_validation (research.idm.test_postprojection_representations.RepresentationTests.test_train_calibration_fixed_under_validation) ... ok
+test_heads_have_identical_capacity_and_initial_values (research.idm.test_postprojection_representations.SharedHeadTests.test_heads_have_identical_capacity_and_initial_values) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.009s
+
+OK

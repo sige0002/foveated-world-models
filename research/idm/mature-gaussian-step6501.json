@@ -1,0 +1,20 @@
+{
+  "symmetric_KL_per_pair": [
+    0.012652467931374471,
+    0.010279840133840909,
+    8.421922136603368e-06,
+    0.0005311477415760161,
+    1.6155151651138428e-05,
+    1.1663544807834136e-05,
+    0.008735374605587296,
+    0.01276396494722416
+  ],
+  "symmetric_KL_mean": 0.005624879497274804,
+  "posterior_variance_mean": 0.04037885879536551,
+  "future_mu_difference_posterior_mahalanobis_mean": 0.011150366447307585,
+  "query_sha256": "b5c75c4732d56fa6e75201def50b67016c219ab411373fea81a11f8b634bac4a",
+  "weights_sha256": "9026f4535a6ab322cb12752035ff82f2087b77d42f830a879f5738cc8565906a",
+  "script_sha256": "cb26586fc7afc148f470059f0ea8990a33e6602f3ce30854debaba7c2d14ff9b",
+  "precision": "float64 head on highest float32 encoder Q; CPU2",
+  "definition": "0.5*(KL(q_true||q_swapped)+KL(q_swapped||q_true)); dependence diagnostic, no action meaning asserted"
+}

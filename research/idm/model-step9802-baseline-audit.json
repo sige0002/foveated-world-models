@@ -1,0 +1,4132 @@
+{
+  "metadata": {
+    "checkpoint_step": 9802,
+    "named_checkpoint": "/media/sadasue/SSD1/foveated-world-models/runs/stage1-gb10-main-20261112/checkpoints/epoch=2-step=9802.ckpt",
+    "named_checkpoint_sha256": "0899bc6ce9d362fce413cb92b6d7ca352f9ab4be85e7cac879c61953aaa8b9d3",
+    "snapshot_sha256": "f1b444011f3519fe55563d51154d09f8c525a5042e8385664279e5ebcf333ee2",
+    "model_config": {
+      "vision_model_id": "/media/sadasue/SSD1/foveated-world-models/models/dinov3-vitb16-pretrain-lvd1689m",
+      "dim": 1024,
+      "enc_layers": 24,
+      "ffn_expansion_factor": 4,
+      "num_heads": 16,
+      "max_state_dim": 32,
+      "num_embodiments": 32,
+      "codebook_size": 32,
+      "code_dim": 32,
+      "num_queries": 1,
+      "num_frames": 2,
+      "image_hw": [
+        256,
+        256
+      ],
+      "patch_size": 16,
+      "image_aug": true,
+      "dual_view_aug": true,
+      "dec_layers": 12,
+      "dropout": 0.0,
+      "warmup_steps": 5000,
+      "enc_add_state": false,
+      "enc_modal_mask": true,
+      "lambda_aux": 1.0,
+      "loss_type": "smooth_l1",
+      "state_loss_type": "l2",
+      "latent_layer_to_use": -2,
+      "multi_input": false,
+      "norm_latents": true,
+      "norm_latents_type": "ln",
+      "lambda_diversity": 0.0,
+      "vq_type": "vae",
+      "vq_kwargs": {
+        "layer_norm": true,
+        "beta": 5e-05
+      },
+      "wandb_offline": true,
+      "exclude_bias_norm_from_wd": true
+    },
+    "config_sha256": "ff3f56b858eb408502973313e4647715482ffd6cac395df08da6d74dc4687ec7",
+    "vision_state_sha256": "e388732f0c6b5600372cb270cd04899b017e90b3697b581e52c35ed44b7d04bf",
+    "vision_state_equals6501": true,
+    "model_config_equals6501": true,
+    "feature_normalization": {
+      "enabled": true,
+      "type": "ln",
+      "latent_layer": -2,
+      "verification": "Identical model config and complete vision_encoder state including normalization buffers; sourcecode hashes recorded, no vision recomputation"
+    },
+    "source_caches": {
+      "validation": {
+        "path": "/home/sadasue/foveated-world-models/runs/reference-idm-with-prior6501/validation.pt",
+        "sha256": "cf09e8080ad8c842ca37b235f6082ee35dac152b0433576abb805002b1f4b754",
+        "manifest_sha256": "6b5e33dbac36c60948ac49981a513955d1cd5e54c168c36b2ac5199b8fcb01ed",
+        "h_y_rows_preserved": true
+      },
+      "observed96": {
+        "path": "/home/sadasue/foveated-world-models/runs/research-unused-96-prior6501/validation.pt",
+        "sha256": "456a09b4e3cc3c6887732327c25d3ac7d0bd98f7c4898e4ace885298e184220f",
+        "manifest_sha256": "4f3c532015d0ca3ab293e775431cb653d9a5684b784c2fcb7abedfcf35bcbde6",
+        "h_y_rows_preserved": true
+      },
+      "train": {
+        "path": "/home/sadasue/foveated-world-models/runs/reference-idm-with-prior6501/train.pt",
+        "sha256": "5483801a9d2dfc17788e7d251e4cfc11bed8b5749f0619da99cb9239a7213aea",
+        "manifest_sha256": "6b5e33dbac36c60948ac49981a513955d1cd5e54c168c36b2ac5199b8fcb01ed",
+        "h_y_rows_preserved": true
+      }
+    },
+    "cache_sha256": {
+      "validation": "30c31ff435e560ee2552d64ba52474d841e4dd177de9d9c3baa623e27854cf9a",
+      "observed96": "9e5311384cb107d250c4518c5aa25a0efbede6c737c94cf280cada5b61ee3e20",
+      "train": "8587dc9000983975f8da754188a970ed1ba88e5ef1a9623ec9e21820d86ab85c"
+    },
+    "precision": "Encoder/VAE medium float32 B1; decoder highest float32 B2; CPU4",
+    "conditioning_mean": "Original named9802 true-future posterior mu; baseline=original9802 decoder(current,zero code)",
+    "main_run_summary": {
+      "global_step": 10000,
+      "fit_seconds_including_validation": 17363.317158375867,
+      "parameters": {
+        "IDM": {
+          "total": 309432352,
+          "trainable": 309432352
+        },
+        "LaWM": {
+          "total": 228286720,
+          "trainable": 228286720
+        },
+        "state_predictor": {
+          "total": 102893568,
+          "trainable": 102893568
+        },
+        "DINO": {
+          "total": 85660416,
+          "trainable": 0
+        }
+      },
+      "metrics": {
+        "train_loss": 0.15743888914585114,
+        "train/recon_loss": 0.15072324872016907,
+        "train/vq_loss": 0.00185204460285604,
+        "train/perplexity": 0.0,
+        "train/cos_sim_metric": 0.9302106499671936,
+        "train/l1_loss_metric": 0.19100706279277802,
+        "train/state_loss": 0.004863587208092213,
+        "train/lr": 0.0003000000142492354,
+        "val_loss": 0.16279402375221252,
+        "val/recon_loss": 0.14976459741592407,
+        "val/vq_loss": 0.0,
+        "val/perplexity": 0.0,
+        "val/cos_sim_metric": 0.9360065460205078,
+        "val/l1_loss_metric": 0.18985065817832947,
+        "val/state_loss": 0.013029518537223339
+      },
+      "cuda_peak_allocated_bytes": 13199726592,
+      "cuda_peak_reserved_bytes": 13847494656,
+      "torch_version": "2.11.0+cu130",
+      "cuda_version": "13.0",
+      "checkpoint": "/media/sadasue/SSD1/foveated-world-models/runs/stage1-gb10-main-20261112/checkpoints/final.ckpt"
+    },
+    "script_sha256": "9274f4062a36ea31e45b8334d6efd1a8588c70aa9ec9f3c79957dd5d3d24631c",
+    "source_code_sha256": {
+      "vendor/lawam/latent_action_model/core/lam_model.py": "4c6092399add79b835bf6d1cfea4e5747e745843de5be359758678952d7ee1cb",
+      "vendor/lawam/latent_action_model/core/vjepa_encoder.py": "da3ebc54fe9b28a1ab0b1c4abf82bf0877a7fd12c41579115776c1fa2fe1dc93",
+      "vendor/lawam/latent_action_model/core/utils/lam_encoder.py": "db55c9946db8acc1474b01380e182f151a562abdcea8daa1a8bc575daffd115d",
+      "vendor/lawam/latent_action_model/core/utils/lam_decoder.py": "8bf31b43c4530d5a835cba4f001ada5d404ff5002673a68956c010a829079137"
+    },
+    "seconds": 228.81308580911718,
+    "scope": "Named9802 snapshot, not final10000; original sources unchanged. Observed96 is research-observed, not independent finaltest. Cached rows preserve source metadata, including any historical reference_mse fields; use this audit result for9802 errors."
+  },
+  "results": {
+    "validation": {
+      "count": 64,
+      "original9802_mse": 0.11700045573525131,
+      "zero9802_mse": 0.11795689217979088,
+      "zero6501_mse": 0.12631255760788918,
+      "rows": [
+        {
+          "source_row": {
+            "index": 0,
+            "episode": "30",
+            "dt": 1.2000000476837158,
+            "reference_mse": 0.3226451575756073,
+            "reference_zero_z_mse": 0.3590669631958008
+          },
+          "original9802_mse": 0.261457622051239,
+          "zero9802_mse": 0.2647436857223511,
+          "zero6501_mse": 0.2766384780406952
+        },
+        {
+          "source_row": {
+            "index": 15,
+            "episode": "31",
+            "dt": 1.2000000476837158,
+            "reference_mse": 0.32256218791007996,
+            "reference_zero_z_mse": 0.3652803599834442
+          },
+          "original9802_mse": 0.2655731439590454,
+          "zero9802_mse": 0.2701845169067383,
+          "zero6501_mse": 0.2836993932723999
+        },
+        {
+          "source_row": {
+            "index": 30,
+            "episode": "32",
+            "dt": 1.1999998092651367,
+            "reference_mse": 0.13164035975933075,
+            "reference_zero_z_mse": 0.18880201876163483
+          },
+          "original9802_mse": 0.09886547923088074,
+          "zero9802_mse": 0.099820077419281,
+          "zero6501_mse": 0.112857885658741
+        },
+        {
+          "source_row": {
+            "index": 45,
+            "episode": "33",
+            "dt": 1.1999998092651367,
+            "reference_mse": 0.21196691691875458,
+            "reference_zero_z_mse": 0.30101919174194336
+          },
+          "original9802_mse": 0.17474497854709625,
+          "zero9802_mse": 0.1762424260377884,
+          "zero6501_mse": 0.18809020519256592
+        },
+        {
+          "source_row": {
+            "index": 60,
+            "episode": "34",
+            "dt": 1.2000007629394531,
+            "reference_mse": 0.14750610291957855,
+            "reference_zero_z_mse": 0.20769494771957397
+          },
+          "original9802_mse": 0.15949797630310059,
+          "zero9802_mse": 0.15503087639808655,
+          "zero6501_mse": 0.11624441295862198
+        },
+        {
+          "source_row": {
+            "index": 75,
+            "episode": "35",
+            "dt": 0.8333339691162109,
+            "reference_mse": 0.086565762758255,
+            "reference_zero_z_mse": 0.14902733266353607
+          },
+          "original9802_mse": 0.07209988683462143,
+          "zero9802_mse": 0.07203786820173264,
+          "zero6501_mse": 0.08271832019090652
+        },
+        {
+          "source_row": {
+            "index": 90,
+            "episode": "37",
+            "dt": 1.1999998092651367,
+            "reference_mse": 0.2476475089788437,
+            "reference_zero_z_mse": 0.33526611328125
+          },
+          "original9802_mse": 0.19615519046783447,
+          "zero9802_mse": 0.20032267272472382,
+          "zero6501_mse": 0.22489602863788605
+        },
+        {
+          "source_row": {
+            "index": 105,
+            "episode": "38",
+            "dt": 1.1999998092651367,
+            "reference_mse": 0.06809315085411072,
+            "reference_zero_z_mse": 0.13720710575580597
+          },
+          "original9802_mse": 0.04823368787765503,
+          "zero9802_mse": 0.04927704110741615,
+          "zero6501_mse": 0.054088935256004333
+        },
+        {
+          "source_row": {
+            "index": 120,
+            "episode": "39",
+            "dt": 0.5666666030883789,
+            "reference_mse": 0.07010502368211746,
+            "reference_zero_z_mse": 0.13641931116580963
+          },
+          "original9802_mse": 0.053975701332092285,
+          "zero9802_mse": 0.054367274045944214,
+          "zero6501_mse": 0.06469523161649704
+        },
+        {
+          "source_row": {
+            "index": 135,
+            "episode": "183",
+            "dt": 1.2000000476837158,
+            "reference_mse": 0.07150222361087799,
+            "reference_zero_z_mse": 0.13588303327560425
+          },
+          "original9802_mse": 0.06463814526796341,
+          "zero9802_mse": 0.06457497924566269,
+          "zero6501_mse": 0.06780822575092316
+        },
+        {
+          "source_row": {
+            "index": 150,
+            "episode": "186",
+            "dt": 1.1999998092651367,
+            "reference_mse": 0.0944703221321106,
+            "reference_zero_z_mse": 0.15837924182415009
+          },
+          "original9802_mse": 0.08134648203849792,
+          "zero9802_mse": 0.08237476646900177,
+          "zero6501_mse": 0.08465239405632019
+        },
+        {
+          "source_row": {
+            "index": 165,
+            "episode": "190",
+            "dt": 1.2000000476837158,
+            "reference_mse": 0.08482110500335693,
+            "reference_zero_z_mse": 0.14860200881958008
+          },
+          "original9802_mse": 0.06803405284881592,
+          "zero9802_mse": 0.06826325505971909,
+          "zero6501_mse": 0.08011911064386368
+        },
+        {
+          "source_row": {
+            "index": 180,
+            "episode": "194",
+            "dt": 1.2000000476837158,
+            "reference_mse": 0.07525679469108582,
+            "reference_zero_z_mse": 0.14198468625545502
+          },
+          "original9802_mse": 0.06335795670747757,
+          "zero9802_mse": 0.06429200619459152,
+          "zero6501_mse": 0.07433099299669266
+        },
+        {
+          "source_row": {
+            "index": 195,
+            "episode": "198",
+            "dt": 1.2000000476837158,
+            "reference_mse": 0.06644216924905777,
+            "reference_zero_z_mse": 0.13141973316669464
+          },
+          "original9802_mse": 0.05564272403717041,
+          "zero9802_mse": 0.05695347115397453,
+          "zero6501_mse": 0.06124528869986534
+        },
+        {
+          "source_row": {
+            "index": 210,
+            "episode": "590",
+            "dt": 1.1999998092651367,
+            "reference_mse": 0.07410065084695816,
+            "reference_zero_z_mse": 0.13757821917533875
+          },
+          "original9802_mse": 0.06626280397176743,
+          "zero9802_mse": 0.0657985508441925,
+          "zero6501_mse": 0.07108841091394424
+        },
+        {
+          "source_row": {
+            "index": 225,
+            "episode": "593",
+            "dt": 1.2000000476837158,
+            "reference_mse": 0.09553363919258118,
+            "reference_zero_z_mse": 0.16709022223949432
+          },
+          "original9802_mse": 0.07504463940858841,
+          "zero9802_mse": 0.075914166867733,
+          "zero6501_mse": 0.08589643239974976
+        },
+        {
+          "source_row": {
+            "index": 241,
+            "episode": "595",
+            "dt": 1.200000286102295,
+            "reference_mse": 0.09549062699079514,
+            "reference_zero_z_mse": 0.15214169025421143
+          },
+          "original9802_mse": 0.0723356381058693,
+          "zero9802_mse": 0.07068630307912827,
+          "zero6501_mse": 0.0858558639883995
+        },
+        {
+          "source_row": {
+            "index": 256,
+            "episode": "597",
+            "dt": 1.200000286102295,
+            "reference_mse": 0.09589148312807083,
+            "reference_zero_z_mse": 0.16563890874385834
+          },
+          "original9802_mse": 0.07530304044485092,
+          "zero9802_mse": 0.07437185198068619,
+          "zero6501_mse": 0.0863751545548439
+        },
+        {
+          "source_row": {
+            "index": 271,
+            "episode": "599",
+            "dt": 1.2000000476837158,
+            "reference_mse": 0.10142016410827637,
+            "reference_zero_z_mse": 0.16733939945697784
+          },
+          "original9802_mse": 0.06407200545072556,
+          "zero9802_mse": 0.06516841799020767,
+          "zero6501_mse": 0.0788414478302002
+        },
+        {
+          "source_row": {
+            "index": 286,
+            "episode": "791",
+            "dt": 1.200000286102295,
+            "reference_mse": 0.16557087004184723,
+            "reference_zero_z_mse": 0.2413300722837448
+          },
+          "original9802_mse": 0.100982166826725,
+          "zero9802_mse": 0.10232311487197876,
+          "zero6501_mse": 0.11539127677679062
+        },
+        {
+          "source_row": {
+            "index": 301,
+            "episode": "793",
+            "dt": 1.200000286102295,
+            "reference_mse": 0.1296442151069641,
+            "reference_zero_z_mse": 0.2081047147512436
+          },
+          "original9802_mse": 0.14876368641853333,
+          "zero9802_mse": 0.1471683830022812,
+          "zero6501_mse": 0.1154133677482605
+        },
+        {
+          "source_row": {
+            "index": 316,
+            "episode": "795",
+            "dt": 0.10000038146972656,
+            "reference_mse": 0.07891974598169327,
+            "reference_zero_z_mse": 0.14234308898448944
+          },
+          "original9802_mse": 0.058516670018434525,
+          "zero9802_mse": 0.05897548794746399,
+          "zero6501_mse": 0.06304944306612015
+        },
+        {
+          "source_row": {
+            "index": 331,
+            "episode": "798",
+            "dt": 1.2000000476837158,
+            "reference_mse": 0.11931321769952774,
+            "reference_zero_z_mse": 0.19776229560375214
+          },
+          "original9802_mse": 0.10190507024526596,
+          "zero9802_mse": 0.1056312546133995,
+          "zero6501_mse": 0.11382285505533218
+        },
+        {
+          "source_row": {
+            "index": 346,
+            "episode": "940",
+            "dt": 1.066666603088379,
+            "reference_mse": 0.10300809890031815,
+            "reference_zero_z_mse": 0.18203985691070557
+          },
+          "original9802_mse": 0.08743784576654434,
+          "zero9802_mse": 0.08885390311479568,
+          "zero6501_mse": 0.0826253667473793
+        },
+        {
+          "source_row": {
+            "index": 361,
+            "episode": "943",
+            "dt": 0.46666669845581055,
+            "reference_mse": 0.09068743139505386,
+            "reference_zero_z_mse": 0.16711455583572388
+          },
+          "original9802_mse": 0.06737250834703445,
+          "zero9802_mse": 0.06901700049638748,
+          "zero6501_mse": 0.07562417536973953
+        },
+        {
+          "source_row": {
+            "index": 376,
+            "episode": "946",
+            "dt": 0.8999996185302734,
+            "reference_mse": 0.10791710019111633,
+            "reference_zero_z_mse": 0.19556982815265656
+          },
+          "original9802_mse": 0.0778314545750618,
+          "zero9802_mse": 0.07847153395414352,
+          "zero6501_mse": 0.08383167535066605
+        },
+        {
+          "source_row": {
+            "index": 391,
+            "episode": "949",
+            "dt": 1.0333333015441895,
+            "reference_mse": 0.09798329323530197,
+            "reference_zero_z_mse": 0.18331164121627808
+          },
+          "original9802_mse": 0.07148908823728561,
+          "zero9802_mse": 0.07439254224300385,
+          "zero6501_mse": 0.07683145254850388
+        },
+        {
+          "source_row": {
+            "index": 406,
+            "episode": "952",
+            "dt": 1.200000286102295,
+            "reference_mse": 0.19750894606113434,
+            "reference_zero_z_mse": 0.2656182646751404
+          },
+          "original9802_mse": 0.1807987242937088,
+          "zero9802_mse": 0.18181212246418,
+          "zero6501_mse": 0.20711569488048553
+        },
+        {
+          "source_row": {
+            "index": 421,
+            "episode": "955",
+            "dt": 1.1999998092651367,
+            "reference_mse": 0.1610783338546753,
+            "reference_zero_z_mse": 0.23695456981658936
+          },
+          "original9802_mse": 0.10732612013816833,
+          "zero9802_mse": 0.10721013695001602,
+          "zero6501_mse": 0.10575640201568604
+        },
+        {
+          "source_row": {
+            "index": 436,
+            "episode": "958",
+            "dt": 1.2000000476837158,
+            "reference_mse": 0.08419328182935715,
+            "reference_zero_z_mse": 0.15954245626926422
+          },
+          "original9802_mse": 0.06364063173532486,
+          "zero9802_mse": 0.06339970231056213,
+          "zero6501_mse": 0.06789187341928482
+        },
+        {
+          "source_row": {
+            "index": 451,
+            "episode": "961",
+            "dt": 1.1999998092651367,
+            "reference_mse": 0.19849996268749237,
+            "reference_zero_z_mse": 0.25815650820732117
+          },
+          "original9802_mse": 0.1533880978822708,
+          "zero9802_mse": 0.15052910149097443,
+          "zero6501_mse": 0.13025178015232086
+        },
+        {
+          "source_row": {
+            "index": 466,
+            "episode": "964",
+            "dt": 1.200000286102295,
+            "reference_mse": 0.18870705366134644,
+            "reference_zero_z_mse": 0.25953349471092224
+          },
+          "original9802_mse": 0.17108802497386932,
+          "zero9802_mse": 0.17040647566318512,
+          "zero6501_mse": 0.19899815320968628
+        },
+        {
+          "source_row": {
+            "index": 482,
+            "episode": "968",
+            "dt": 1.2000000476837158,
+            "reference_mse": 0.11010265350341797,
+            "reference_zero_z_mse": 0.1804051548242569
+          },
+          "original9802_mse": 0.08127614110708237,
+          "zero9802_mse": 0.08390778303146362,
+          "zero6501_mse": 0.09909325838088989
+        },
+        {
+          "source_row": {
+            "index": 497,
+            "episode": "970",
+            "dt": 0.4333329200744629,
+            "reference_mse": 0.10144790261983871,
+            "reference_zero_z_mse": 0.17833411693572998
+          },
+          "original9802_mse": 0.07989955693483353,
+          "zero9802_mse": 0.08069350570440292,
+          "zero6501_mse": 0.08875260502099991
+        },
+        {
+          "source_row": {
+            "index": 512,
+            "episode": "974",
+            "dt": 1.2000000476837158,
+            "reference_mse": 0.12739184498786926,
+            "reference_zero_z_mse": 0.19107502698898315
+          },
+          "original9802_mse": 0.10351035743951797,
+          "zero9802_mse": 0.10372854024171829,
+          "zero6501_mse": 0.11598655581474304
+        },
+        {
+          "source_row": {
+            "index": 527,
+            "episode": "977",
+            "dt": 1.2000000476837158,
+            "reference_mse": 0.11610754579305649,
+            "reference_zero_z_mse": 0.18929331004619598
+          },
+          "original9802_mse": 0.0729660615324974,
+          "zero9802_mse": 0.07317062467336655,
+          "zero6501_mse": 0.08910950273275375
+        },
+        {
+          "source_row": {
+            "index": 542,
+            "episode": "979",
+            "dt": 1.1999998092651367,
+            "reference_mse": 0.14470221102237701,
+            "reference_zero_z_mse": 0.2240481823682785
+          },
+          "original9802_mse": 0.10051354765892029,
+          "zero9802_mse": 0.10238874703645706,
+          "zero6501_mse": 0.10009392350912094
+        },
+        {
+          "source_row": {
+            "index": 557,
+            "episode": "1462",
+            "dt": 1.2000000476837158,
+            "reference_mse": 0.09763041883707047,
+            "reference_zero_z_mse": 0.15618868172168732
+          },
+          "original9802_mse": 0.06840259581804276,
+          "zero9802_mse": 0.06914252042770386,
+          "zero6501_mse": 0.07667306810617447
+        },
+        {
+          "source_row": {
+            "index": 572,
+            "episode": "1465",
+            "dt": 1.2000000476837158,
+            "reference_mse": 0.1783035397529602,
+            "reference_zero_z_mse": 0.24393945932388306
+          },
+          "original9802_mse": 0.17174631357192993,
+          "zero9802_mse": 0.1723334938287735,
+          "zero6501_mse": 0.17399996519088745
+        },
+        {
+          "source_row": {
+            "index": 587,
+            "episode": "1467",
+            "dt": 0.5,
+            "reference_mse": 0.09837258607149124,
+            "reference_zero_z_mse": 0.14611516892910004
+          },
+          "original9802_mse": 0.11972708255052567,
+          "zero9802_mse": 0.11623070389032364,
+          "zero6501_mse": 0.11121021956205368
+        },
+        {
+          "source_row": {
+            "index": 602,
+            "episode": "1470",
+            "dt": 1.1999998092651367,
+            "reference_mse": 0.16996407508850098,
+            "reference_zero_z_mse": 0.25307559967041016
+          },
+          "original9802_mse": 0.1280219405889511,
+          "zero9802_mse": 0.1309710592031479,
+          "zero6501_mse": 0.16642428934574127
+        },
+        {
+          "source_row": {
+            "index": 617,
+            "episode": "1473",
+            "dt": 1.2000000476837158,
+            "reference_mse": 0.20928843319416046,
+            "reference_zero_z_mse": 0.2827991545200348
+          },
+          "original9802_mse": 0.22614465653896332,
+          "zero9802_mse": 0.2268756777048111,
+          "zero6501_mse": 0.22842176258563995
+        },
+        {
+          "source_row": {
+            "index": 632,
+            "episode": "1476",
+            "dt": 1.2000000476837158,
+            "reference_mse": 0.1858624368906021,
+            "reference_zero_z_mse": 0.2605254352092743
+          },
+          "original9802_mse": 0.18613512814044952,
+          "zero9802_mse": 0.18638382852077484,
+          "zero6501_mse": 0.17731447517871857
+        },
+        {
+          "source_row": {
+            "index": 647,
+            "episode": "1479",
+            "dt": 1.2000000476837158,
+            "reference_mse": 0.10101119428873062,
+            "reference_zero_z_mse": 0.15573464334011078
+          },
+          "original9802_mse": 0.07239077240228653,
+          "zero9802_mse": 0.07283652573823929,
+          "zero6501_mse": 0.08207476139068604
+        },
+        {
+          "source_row": {
+            "index": 662,
+            "episode": "1481",
+            "dt": 1.1999998092651367,
+            "reference_mse": 0.13138368725776672,
+            "reference_zero_z_mse": 0.20269052684307098
+          },
+          "original9802_mse": 0.11363372951745987,
+          "zero9802_mse": 0.11447539925575256,
+          "zero6501_mse": 0.1245989203453064
+        },
+        {
+          "source_row": {
+            "index": 677,
+            "episode": "1484",
+            "dt": 1.1999998092651367,
+            "reference_mse": 0.17405013740062714,
+            "reference_zero_z_mse": 0.2654496133327484
+          },
+          "original9802_mse": 0.12468353658914566,
+          "zero9802_mse": 0.12603285908699036,
+          "zero6501_mse": 0.14866402745246887
+        },
+        {
+          "source_row": {
+            "index": 692,
+            "episode": "1487",
+            "dt": 1.2000000476837158,
+            "reference_mse": 0.153930202126503,
+            "reference_zero_z_mse": 0.21226626634597778
+          },
+          "original9802_mse": 0.13883759081363678,
+          "zero9802_mse": 0.13919369876384735,
+          "zero6501_mse": 0.1355471909046173
+        },
+        {
+          "source_row": {
+            "index": 707,
+            "episode": "1490",
+            "dt": 1.2000000476837158,
+            "reference_mse": 0.11319264769554138,
+            "reference_zero_z_mse": 0.1747293919324875
+          },
+          "original9802_mse": 0.08478975296020508,
+          "zero9802_mse": 0.08539903163909912,
+          "zero6501_mse": 0.08643203228712082
+        },
+        {
+          "source_row": {
+            "index": 723,
+            "episode": "1493",
+            "dt": 1.2000000476837158,
+            "reference_mse": 0.23799191415309906,
+            "reference_zero_z_mse": 0.3129596412181854
+          },
+          "original9802_mse": 0.2526956796646118,
+          "zero9802_mse": 0.2534599006175995,
+          "zero6501_mse": 0.25435325503349304
+        },
+        {
+          "source_row": {
+            "index": 738,
+            "episode": "1496",
+            "dt": 1.2000000476837158,
+            "reference_mse": 0.10111081600189209,
+            "reference_zero_z_mse": 0.16264517605304718
+          },
+          "original9802_mse": 0.07305695861577988,
+          "zero9802_mse": 0.0738154873251915,
+          "zero6501_mse": 0.07668723911046982
+        },
+        {
+          "source_row": {
+            "index": 753,
+            "episode": "1498",
+            "dt": 1.200000286102295,
+            "reference_mse": 0.17532126605510712,
+            "reference_zero_z_mse": 0.2649877369403839
+          },
+          "original9802_mse": 0.11684983223676682,
+          "zero9802_mse": 0.11931958794593811,
+          "zero6501_mse": 0.14203667640686035
+        },
+        {
+          "source_row": {
+            "index": 768,
+            "episode": "1531",
+            "dt": 1.2000000476837158,
+            "reference_mse": 0.22442036867141724,
+            "reference_zero_z_mse": 0.3017040491104126
+          },
+          "original9802_mse": 0.2321838140487671,
+          "zero9802_mse": 0.23291927576065063,
+          "zero6501_mse": 0.22790198028087616
+        },
+        {
+          "source_row": {
+            "index": 783,
+            "episode": "1534",
+            "dt": 1.2000000476837158,
+            "reference_mse": 0.12278354167938232,
+            "reference_zero_z_mse": 0.18253552913665771
+          },
+          "original9802_mse": 0.09629104286432266,
+          "zero9802_mse": 0.096906878054142,
+          "zero6501_mse": 0.09936966747045517
+        },
+        {
+          "source_row": {
+            "index": 798,
+            "episode": "1536",
+            "dt": 0.8333330154418945,
+            "reference_mse": 0.11172661185264587,
+            "reference_zero_z_mse": 0.1880304217338562
+          },
+          "original9802_mse": 0.08867587894201279,
+          "zero9802_mse": 0.09010037034749985,
+          "zero6501_mse": 0.1024060845375061
+        },
+        {
+          "source_row": {
+            "index": 813,
+            "episode": "1539",
+            "dt": 1.2000000476837158,
+            "reference_mse": 0.20737667381763458,
+            "reference_zero_z_mse": 0.2693540155887604
+          },
+          "original9802_mse": 0.19154135882854462,
+          "zero9802_mse": 0.19166065752506256,
+          "zero6501_mse": 0.18385295569896698
+        },
+        {
+          "source_row": {
+            "index": 828,
+            "episode": "1541",
+            "dt": 1.200000286102295,
+            "reference_mse": 0.19507747888565063,
+            "reference_zero_z_mse": 0.2670939266681671
+          },
+          "original9802_mse": 0.11765436083078384,
+          "zero9802_mse": 0.12020937353372574,
+          "zero6501_mse": 0.16457875072956085
+        },
+        {
+          "source_row": {
+            "index": 843,
+            "episode": "1544",
+            "dt": 1.2000000476837158,
+            "reference_mse": 0.11523154377937317,
+            "reference_zero_z_mse": 0.16917598247528076
+          },
+          "original9802_mse": 0.10602962970733643,
+          "zero9802_mse": 0.10630889981985092,
+          "zero6501_mse": 0.10563171654939651
+        },
+        {
+          "source_row": {
+            "index": 858,
+            "episode": "1546",
+            "dt": 1.2000000476837158,
+            "reference_mse": 0.21967387199401855,
+            "reference_zero_z_mse": 0.27310729026794434
+          },
+          "original9802_mse": 0.1947319358587265,
+          "zero9802_mse": 0.1950293630361557,
+          "zero6501_mse": 0.18747186660766602
+        },
+        {
+          "source_row": {
+            "index": 873,
+            "episode": "1548",
+            "dt": 1.2000000476837158,
+            "reference_mse": 0.1660895198583603,
+            "reference_zero_z_mse": 0.24123327434062958
+          },
+          "original9802_mse": 0.11468660831451416,
+          "zero9802_mse": 0.11821913719177246,
+          "zero6501_mse": 0.12474704533815384
+        },
+        {
+          "source_row": {
+            "index": 888,
+            "episode": "1550",
+            "dt": 1.200000286102295,
+            "reference_mse": 0.18489472568035126,
+            "reference_zero_z_mse": 0.2775692045688629
+          },
+          "original9802_mse": 0.11876106262207031,
+          "zero9802_mse": 0.12223746627569199,
+          "zero6501_mse": 0.1637839823961258
+        },
+        {
+          "source_row": {
+            "index": 903,
+            "episode": "1552",
+            "dt": 1.1999998092651367,
+            "reference_mse": 0.20908330380916595,
+            "reference_zero_z_mse": 0.2528580129146576
+          },
+          "original9802_mse": 0.11561468988656998,
+          "zero9802_mse": 0.11934485286474228,
+          "zero6501_mse": 0.18059973418712616
+        },
+        {
+          "source_row": {
+            "index": 918,
+            "episode": "1555",
+            "dt": 1.2000000476837158,
+            "reference_mse": 0.21409495174884796,
+            "reference_zero_z_mse": 0.2745090425014496
+          },
+          "original9802_mse": 0.1903465837240219,
+          "zero9802_mse": 0.19142162799835205,
+          "zero6501_mse": 0.18310976028442383
+        },
+        {
+          "source_row": {
+            "index": 933,
+            "episode": "1557",
+            "dt": 1.200000286102295,
+            "reference_mse": 0.21728356182575226,
+            "reference_zero_z_mse": 0.31367382407188416
+          },
+          "original9802_mse": 0.14056339859962463,
+          "zero9802_mse": 0.14719876646995544,
+          "zero6501_mse": 0.20815472304821014
+        },
+        {
+          "source_row": {
+            "index": 949,
+            "episode": "1559",
+            "dt": 0.9333333969116211,
+            "reference_mse": 0.09609225392341614,
+            "reference_zero_z_mse": 0.14477898180484772
+          },
+          "original9802_mse": 0.058486323803663254,
+          "zero9802_mse": 0.0587104894220829,
+          "zero6501_mse": 0.058175962418317795
+        }
+      ]
+    },
+    "observed96": {
+      "count": 96,
+      "original9802_mse": 0.10648947313893586,
+      "zero9802_mse": 0.10724804532947019,
+      "zero6501_mse": 0.10957641593025376,
+      "rows": [
+        {
+          "source_row": {
+            "episode": "1460",
+            "index": 551,
+            "endpoint_indices": [
+              180,
+              205
+            ],
+            "dt": 0.8333334922790527,
+            "original6501_mse": 0.1292000114917755,
+            "reference_mse": 0.1292094588279724,
+            "baseline_mse": 0.12773579359054565,
+            "reference_zero_z_mse": 0.12773674726486206,
+            "original6501_mse_medium_b1": 0.1292094588279724,
+            "baseline_mse_medium_b1": 0.12773674726486206
+          },
+          "original9802_mse": 0.11256054788827896,
+          "zero9802_mse": 0.11344810575246811,
+          "zero6501_mse": 0.12773579359054565
+        },
+        {
+          "source_row": {
+            "episode": "1461",
+            "index": 552,
+            "endpoint_indices": [
+              0,
+              36
+            ],
+            "dt": 1.2000000476837158,
+            "original6501_mse": 0.17280344665050507,
+            "reference_mse": 0.1728166788816452,
+            "baseline_mse": 0.17502808570861816,
+            "reference_zero_z_mse": 0.17503565549850464,
+            "original6501_mse_medium_b1": 0.1728166788816452,
+            "baseline_mse_medium_b1": 0.17503565549850464
+          },
+          "original9802_mse": 0.17336219549179077,
+          "zero9802_mse": 0.17376810312271118,
+          "zero6501_mse": 0.17502808570861816
+        },
+        {
+          "source_row": {
+            "episode": "1463",
+            "index": 566,
+            "endpoint_indices": [
+              144,
+              167
+            ],
+            "dt": 0.7666664123535156,
+            "original6501_mse": 0.12009938806295395,
+            "reference_mse": 0.1201256811618805,
+            "baseline_mse": 0.11794978380203247,
+            "reference_zero_z_mse": 0.11798537522554398,
+            "original6501_mse_medium_b1": 0.1201256811618805,
+            "baseline_mse_medium_b1": 0.11798537522554398
+          },
+          "original9802_mse": 0.09954500198364258,
+          "zero9802_mse": 0.10187221318483353,
+          "zero6501_mse": 0.11794978380203247
+        },
+        {
+          "source_row": {
+            "episode": "1464",
+            "index": 571,
+            "endpoint_indices": [
+              144,
+              154
+            ],
+            "dt": 0.33333301544189453,
+            "original6501_mse": 0.09043953567743301,
+            "reference_mse": 0.09044283628463745,
+            "baseline_mse": 0.08720538765192032,
+            "reference_zero_z_mse": 0.0872112438082695,
+            "original6501_mse_medium_b1": 0.09044283628463745,
+            "baseline_mse_medium_b1": 0.0872112438082695
+          },
+          "original9802_mse": 0.08503370732069016,
+          "zero9802_mse": 0.0838758647441864,
+          "zero6501_mse": 0.08720538765192032
+        },
+        {
+          "source_row": {
+            "episode": "1466",
+            "index": 581,
+            "endpoint_indices": [
+              144,
+              180
+            ],
+            "dt": 1.1999998092651367,
+            "original6501_mse": 0.2176145315170288,
+            "reference_mse": 0.21760153770446777,
+            "baseline_mse": 0.2205687165260315,
+            "reference_zero_z_mse": 0.22056229412555695,
+            "original6501_mse_medium_b1": 0.21760153770446777,
+            "baseline_mse_medium_b1": 0.22056229412555695
+          },
+          "original9802_mse": 0.2132158875465393,
+          "zero9802_mse": 0.21391351521015167,
+          "zero6501_mse": 0.2205687165260315
+        },
+        {
+          "source_row": {
+            "episode": "1468",
+            "index": 589,
+            "endpoint_indices": [
+              36,
+              72
+            ],
+            "dt": 1.2000000476837158,
+            "original6501_mse": 0.266233891248703,
+            "reference_mse": 0.2662184536457062,
+            "baseline_mse": 0.2685443162918091,
+            "reference_zero_z_mse": 0.2685340940952301,
+            "original6501_mse_medium_b1": 0.2662184536457062,
+            "baseline_mse_medium_b1": 0.2685340940952301
+          },
+          "original9802_mse": 0.28006109595298767,
+          "zero9802_mse": 0.2777707576751709,
+          "zero6501_mse": 0.2685443162918091
+        },
+        {
+          "source_row": {
+            "episode": "1469",
+            "index": 594,
+            "endpoint_indices": [
+              0,
+              36
+            ],
+            "dt": 1.2000000476837158,
+            "original6501_mse": 0.08561073988676071,
+            "reference_mse": 0.08561179786920547,
+            "baseline_mse": 0.08479070663452148,
+            "reference_zero_z_mse": 0.08478787541389465,
+            "original6501_mse_medium_b1": 0.08561179786920547,
+            "baseline_mse_medium_b1": 0.08478787541389465
+          },
+          "original9802_mse": 0.08436653017997742,
+          "zero9802_mse": 0.08479604870080948,
+          "zero6501_mse": 0.08479070663452148
+        },
+        {
+          "source_row": {
+            "episode": "1471",
+            "index": 605,
+            "endpoint_indices": [
+              0,
+              36
+            ],
+            "dt": 1.2000000476837158,
+            "original6501_mse": 0.06775390356779099,
+            "reference_mse": 0.06775418668985367,
+            "baseline_mse": 0.06665521115064621,
+            "reference_zero_z_mse": 0.0666588768362999,
+            "original6501_mse_medium_b1": 0.06775418668985367,
+            "baseline_mse_medium_b1": 0.0666588768362999
+          },
+          "original9802_mse": 0.06516024470329285,
+          "zero9802_mse": 0.06588613241910934,
+          "zero6501_mse": 0.06665521115064621
+        },
+        {
+          "source_row": {
+            "episode": "1472",
+            "index": 615,
+            "endpoint_indices": [
+              180,
+              185
+            ],
+            "dt": 0.16666650772094727,
+            "original6501_mse": 0.08744612336158752,
+            "reference_mse": 0.08744622021913528,
+            "baseline_mse": 0.08437123149633408,
+            "reference_zero_z_mse": 0.0843641385436058,
+            "original6501_mse_medium_b1": 0.08744622021913528,
+            "baseline_mse_medium_b1": 0.0843641385436058
+          },
+          "original9802_mse": 0.09271332621574402,
+          "zero9802_mse": 0.09093063324689865,
+          "zero6501_mse": 0.08437123149633408
+        },
+        {
+          "source_row": {
+            "episode": "1474",
+            "index": 623,
+            "endpoint_indices": [
+              72,
+              108
+            ],
+            "dt": 1.1999998092651367,
+            "original6501_mse": 0.14916563034057617,
+            "reference_mse": 0.14916977286338806,
+            "baseline_mse": 0.14628444612026215,
+            "reference_zero_z_mse": 0.14629967510700226,
+            "original6501_mse_medium_b1": 0.14916977286338806,
+            "baseline_mse_medium_b1": 0.14629967510700226
+          },
+          "original9802_mse": 0.12070339918136597,
+          "zero9802_mse": 0.12228253483772278,
+          "zero6501_mse": 0.14628444612026215
+        },
+        {
+          "source_row": {
+            "episode": "1475",
+            "index": 627,
+            "endpoint_indices": [
+              36,
+              72
+            ],
+            "dt": 1.2000000476837158,
+            "original6501_mse": 0.21716447174549103,
+            "reference_mse": 0.21714983880519867,
+            "baseline_mse": 0.22062957286834717,
+            "reference_zero_z_mse": 0.220616415143013,
+            "original6501_mse_medium_b1": 0.21714983880519867,
+            "baseline_mse_medium_b1": 0.220616415143013
+          },
+          "original9802_mse": 0.2255951315164566,
+          "zero9802_mse": 0.2268143892288208,
+          "zero6501_mse": 0.22062957286834717
+        },
+        {
+          "source_row": {
+            "episode": "1477",
+            "index": 640,
+            "endpoint_indices": [
+              144,
+              180
+            ],
+            "dt": 1.1999998092651367,
+            "original6501_mse": 0.11136127263307571,
+            "reference_mse": 0.1113601103425026,
+            "baseline_mse": 0.11277610808610916,
+            "reference_zero_z_mse": 0.112769715487957,
+            "original6501_mse_medium_b1": 0.1113601103425026,
+            "baseline_mse_medium_b1": 0.112769715487957
+          },
+          "original9802_mse": 0.11038452386856079,
+          "zero9802_mse": 0.11233341693878174,
+          "zero6501_mse": 0.11277610808610916
+        },
+        {
+          "source_row": {
+            "episode": "1478",
+            "index": 645,
+            "endpoint_indices": [
+              108,
+              144
+            ],
+            "dt": 1.200000286102295,
+            "original6501_mse": 0.10990402847528458,
+            "reference_mse": 0.10990803688764572,
+            "baseline_mse": 0.11108213663101196,
+            "reference_zero_z_mse": 0.11107899993658066,
+            "original6501_mse_medium_b1": 0.10990803688764572,
+            "baseline_mse_medium_b1": 0.11107899993658066
+          },
+          "original9802_mse": 0.10320930927991867,
+          "zero9802_mse": 0.10445643216371536,
+          "zero6501_mse": 0.11108213663101196
+        },
+        {
+          "source_row": {
+            "episode": "1480",
+            "index": 654,
+            "endpoint_indices": [
+              72,
+              108
+            ],
+            "dt": 1.1999998092651367,
+            "original6501_mse": 0.14519624412059784,
+            "reference_mse": 0.14519385993480682,
+            "baseline_mse": 0.1472116857767105,
+            "reference_zero_z_mse": 0.14720883965492249,
+            "original6501_mse_medium_b1": 0.14519385993480682,
+            "baseline_mse_medium_b1": 0.14720883965492249
+          },
+          "original9802_mse": 0.15948668122291565,
+          "zero9802_mse": 0.1600904017686844,
+          "zero6501_mse": 0.1472116857767105
+        },
+        {
+          "source_row": {
+            "episode": "1482",
+            "index": 669,
+            "endpoint_indices": [
+              144,
+              155
+            ],
+            "dt": 0.366666316986084,
+            "original6501_mse": 0.1073848232626915,
+            "reference_mse": 0.10738569498062134,
+            "baseline_mse": 0.10470163822174072,
+            "reference_zero_z_mse": 0.1046924814581871,
+            "original6501_mse_medium_b1": 0.10738569498062134,
+            "baseline_mse_medium_b1": 0.1046924814581871
+          },
+          "original9802_mse": 0.12779061496257782,
+          "zero9802_mse": 0.12404278665781021,
+          "zero6501_mse": 0.10470163822174072
+        },
+        {
+          "source_row": {
+            "episode": "1483",
+            "index": 670,
+            "endpoint_indices": [
+              0,
+              36
+            ],
+            "dt": 1.2000000476837158,
+            "original6501_mse": 0.08800983428955078,
+            "reference_mse": 0.08800803869962692,
+            "baseline_mse": 0.08672180026769638,
+            "reference_zero_z_mse": 0.08671820908784866,
+            "original6501_mse_medium_b1": 0.08800803869962692,
+            "baseline_mse_medium_b1": 0.08671820908784866
+          },
+          "original9802_mse": 0.08465621620416641,
+          "zero9802_mse": 0.0856977328658104,
+          "zero6501_mse": 0.08672180026769638
+        },
+        {
+          "source_row": {
+            "episode": "1485",
+            "index": 683,
+            "endpoint_indices": [
+              108,
+              144
+            ],
+            "dt": 1.200000286102295,
+            "original6501_mse": 0.12292194366455078,
+            "reference_mse": 0.122923843562603,
+            "baseline_mse": 0.12220760434865952,
+            "reference_zero_z_mse": 0.12220290303230286,
+            "original6501_mse_medium_b1": 0.122923843562603,
+            "baseline_mse_medium_b1": 0.12220290303230286
+          },
+          "original9802_mse": 0.10992857068777084,
+          "zero9802_mse": 0.11332827061414719,
+          "zero6501_mse": 0.12220760434865952
+        },
+        {
+          "source_row": {
+            "episode": "1486",
+            "index": 687,
+            "endpoint_indices": [
+              36,
+              72
+            ],
+            "dt": 1.2000000476837158,
+            "original6501_mse": 0.21714209020137787,
+            "reference_mse": 0.2171357125043869,
+            "baseline_mse": 0.22085154056549072,
+            "reference_zero_z_mse": 0.2208440750837326,
+            "original6501_mse_medium_b1": 0.2171357125043869,
+            "baseline_mse_medium_b1": 0.2208440750837326
+          },
+          "original9802_mse": 0.22444497048854828,
+          "zero9802_mse": 0.2252935767173767,
+          "zero6501_mse": 0.22085154056549072
+        },
+        {
+          "source_row": {
+            "episode": "1488",
+            "index": 700,
+            "endpoint_indices": [
+              108,
+              144
+            ],
+            "dt": 1.200000286102295,
+            "original6501_mse": 0.11633589118719101,
+            "reference_mse": 0.11633314937353134,
+            "baseline_mse": 0.11693745851516724,
+            "reference_zero_z_mse": 0.11693655699491501,
+            "original6501_mse_medium_b1": 0.11633314937353134,
+            "baseline_mse_medium_b1": 0.11693655699491501
+          },
+          "original9802_mse": 0.11015091091394424,
+          "zero9802_mse": 0.11213385313749313,
+          "zero6501_mse": 0.11693745851516724
+        },
+        {
+          "source_row": {
+            "episode": "1489",
+            "index": 702,
+            "endpoint_indices": [
+              0,
+              36
+            ],
+            "dt": 1.2000000476837158,
+            "original6501_mse": 0.08562802523374557,
+            "reference_mse": 0.08562618494033813,
+            "baseline_mse": 0.08497051149606705,
+            "reference_zero_z_mse": 0.0849662497639656,
+            "original6501_mse_medium_b1": 0.08562618494033813,
+            "baseline_mse_medium_b1": 0.0849662497639656
+          },
+          "original9802_mse": 0.08203298598527908,
+          "zero9802_mse": 0.08268794417381287,
+          "zero6501_mse": 0.08497051149606705
+        },
+        {
+          "source_row": {
+            "episode": "1491",
+            "index": 715,
+            "endpoint_indices": [
+              108,
+              144
+            ],
+            "dt": 1.200000286102295,
+            "original6501_mse": 0.1283743530511856,
+            "reference_mse": 0.12836365401744843,
+            "baseline_mse": 0.1314973533153534,
+            "reference_zero_z_mse": 0.13148774206638336,
+            "original6501_mse_medium_b1": 0.12836365401744843,
+            "baseline_mse_medium_b1": 0.13148774206638336
+          },
+          "original9802_mse": 0.13015298545360565,
+          "zero9802_mse": 0.131710484623909,
+          "zero6501_mse": 0.1314973533153534
+        },
+        {
+          "source_row": {
+            "episode": "1492",
+            "index": 721,
+            "endpoint_indices": [
+              144,
+              170
+            ],
+            "dt": 0.866666316986084,
+            "original6501_mse": 0.1610146015882492,
+            "reference_mse": 0.16102641820907593,
+            "baseline_mse": 0.15850020945072174,
+            "reference_zero_z_mse": 0.15850497782230377,
+            "original6501_mse_medium_b1": 0.16102641820907593,
+            "baseline_mse_medium_b1": 0.15850497782230377
+          },
+          "original9802_mse": 0.12941215932369232,
+          "zero9802_mse": 0.13075940310955048,
+          "zero6501_mse": 0.15850020945072174
+        },
+        {
+          "source_row": {
+            "episode": "1494",
+            "index": 731,
+            "endpoint_indices": [
+              144,
+              173
+            ],
+            "dt": 0.9666666984558105,
+            "original6501_mse": 0.12442195415496826,
+            "reference_mse": 0.12441509962081909,
+            "baseline_mse": 0.12659931182861328,
+            "reference_zero_z_mse": 0.12659740447998047,
+            "original6501_mse_medium_b1": 0.12441509962081909,
+            "baseline_mse_medium_b1": 0.12659740447998047
+          },
+          "original9802_mse": 0.11956799775362015,
+          "zero9802_mse": 0.12204637378454208,
+          "zero6501_mse": 0.12659931182861328
+        },
+        {
+          "source_row": {
+            "episode": "1495",
+            "index": 733,
+            "endpoint_indices": [
+              36,
+              72
+            ],
+            "dt": 1.2000000476837158,
+            "original6501_mse": 0.19278348982334137,
+            "reference_mse": 0.19278861582279205,
+            "baseline_mse": 0.19431988894939423,
+            "reference_zero_z_mse": 0.19431091845035553,
+            "original6501_mse_medium_b1": 0.19278861582279205,
+            "baseline_mse_medium_b1": 0.19431091845035553
+          },
+          "original9802_mse": 0.21104933321475983,
+          "zero9802_mse": 0.21177621185779572,
+          "zero6501_mse": 0.19431988894939423
+        },
+        {
+          "source_row": {
+            "episode": "1497",
+            "index": 746,
+            "endpoint_indices": [
+              72,
+              108
+            ],
+            "dt": 1.1999998092651367,
+            "original6501_mse": 0.17708079516887665,
+            "reference_mse": 0.17708106338977814,
+            "baseline_mse": 0.18048083782196045,
+            "reference_zero_z_mse": 0.1804773211479187,
+            "original6501_mse_medium_b1": 0.17708106338977814,
+            "baseline_mse_medium_b1": 0.1804773211479187
+          },
+          "original9802_mse": 0.1955234557390213,
+          "zero9802_mse": 0.19449402391910553,
+          "zero6501_mse": 0.18048083782196045
+        },
+        {
+          "source_row": {
+            "episode": "1499",
+            "index": 756,
+            "endpoint_indices": [
+              0,
+              36
+            ],
+            "dt": 1.2000000476837158,
+            "original6501_mse": 0.0697578564286232,
+            "reference_mse": 0.06975605338811874,
+            "baseline_mse": 0.06860926002264023,
+            "reference_zero_z_mse": 0.06860784441232681,
+            "original6501_mse_medium_b1": 0.06975605338811874,
+            "baseline_mse_medium_b1": 0.06860784441232681
+          },
+          "original9802_mse": 0.06026129052042961,
+          "zero9802_mse": 0.060735177248716354,
+          "zero6501_mse": 0.06860926002264023
+        },
+        {
+          "source_row": {
+            "episode": "1530",
+            "index": 765,
+            "endpoint_indices": [
+              144,
+              180
+            ],
+            "dt": 1.1999998092651367,
+            "original6501_mse": 0.1033748909831047,
+            "reference_mse": 0.10337713360786438,
+            "baseline_mse": 0.10362842679023743,
+            "reference_zero_z_mse": 0.1036313995718956,
+            "original6501_mse_medium_b1": 0.10337713360786438,
+            "baseline_mse_medium_b1": 0.1036313995718956
+          },
+          "original9802_mse": 0.09779313206672668,
+          "zero9802_mse": 0.09900442510843277,
+          "zero6501_mse": 0.10362842679023743
+        },
+        {
+          "source_row": {
+            "episode": "1532",
+            "index": 776,
+            "endpoint_indices": [
+              108,
+              144
+            ],
+            "dt": 1.200000286102295,
+            "original6501_mse": 0.14572323858737946,
+            "reference_mse": 0.145723357796669,
+            "baseline_mse": 0.1476077288389206,
+            "reference_zero_z_mse": 0.14760486781597137,
+            "original6501_mse_medium_b1": 0.145723357796669,
+            "baseline_mse_medium_b1": 0.14760486781597137
+          },
+          "original9802_mse": 0.14466075599193573,
+          "zero9802_mse": 0.14636977016925812,
+          "zero6501_mse": 0.1476077288389206
+        },
+        {
+          "source_row": {
+            "episode": "1533",
+            "index": 778,
+            "endpoint_indices": [
+              0,
+              36
+            ],
+            "dt": 1.2000000476837158,
+            "original6501_mse": 0.07898113876581192,
+            "reference_mse": 0.07898569107055664,
+            "baseline_mse": 0.07780299335718155,
+            "reference_zero_z_mse": 0.07780859619379044,
+            "original6501_mse_medium_b1": 0.07898569107055664,
+            "baseline_mse_medium_b1": 0.07780859619379044
+          },
+          "original9802_mse": 0.07192425429821014,
+          "zero9802_mse": 0.07253912091255188,
+          "zero6501_mse": 0.07780299335718155
+        },
+        {
+          "source_row": {
+            "episode": "1535",
+            "index": 792,
+            "endpoint_indices": [
+              144,
+              180
+            ],
+            "dt": 1.1999998092651367,
+            "original6501_mse": 0.11805758625268936,
+            "reference_mse": 0.11805924773216248,
+            "baseline_mse": 0.11992069333791733,
+            "reference_zero_z_mse": 0.1199091449379921,
+            "original6501_mse_medium_b1": 0.11805924773216248,
+            "baseline_mse_medium_b1": 0.1199091449379921
+          },
+          "original9802_mse": 0.11287561058998108,
+          "zero9802_mse": 0.11437273770570755,
+          "zero6501_mse": 0.11992069333791733
+        },
+        {
+          "source_row": {
+            "episode": "1537",
+            "index": 799,
+            "endpoint_indices": [
+              0,
+              36
+            ],
+            "dt": 1.2000000476837158,
+            "original6501_mse": 0.09812770038843155,
+            "reference_mse": 0.09813224524259567,
+            "baseline_mse": 0.09548913687467575,
+            "reference_zero_z_mse": 0.09549859166145325,
+            "original6501_mse_medium_b1": 0.09813224524259567,
+            "baseline_mse_medium_b1": 0.09549859166145325
+          },
+          "original9802_mse": 0.09365019202232361,
+          "zero9802_mse": 0.09363052994012833,
+          "zero6501_mse": 0.09548913687467575
+        },
+        {
+          "source_row": {
+            "episode": "1538",
+            "index": 809,
+            "endpoint_indices": [
+              108,
+              144
+            ],
+            "dt": 1.200000286102295,
+            "original6501_mse": 0.1939312219619751,
+            "reference_mse": 0.19394302368164062,
+            "baseline_mse": 0.1965906172990799,
+            "reference_zero_z_mse": 0.1966131329536438,
+            "original6501_mse_medium_b1": 0.19394302368164062,
+            "baseline_mse_medium_b1": 0.1966131329536438
+          },
+          "original9802_mse": 0.15245972573757172,
+          "zero9802_mse": 0.1596505343914032,
+          "zero6501_mse": 0.1965906172990799
+        },
+        {
+          "source_row": {
+            "episode": "1540",
+            "index": 824,
+            "endpoint_indices": [
+              180,
+              204
+            ],
+            "dt": 0.8000001907348633,
+            "original6501_mse": 0.06046945974230766,
+            "reference_mse": 0.06046849861741066,
+            "baseline_mse": 0.05958225950598717,
+            "reference_zero_z_mse": 0.059579506516456604,
+            "original6501_mse_medium_b1": 0.06046849861741066,
+            "baseline_mse_medium_b1": 0.059579506516456604
+          },
+          "original9802_mse": 0.060055192559957504,
+          "zero9802_mse": 0.06044338643550873,
+          "zero6501_mse": 0.05958225950598717
+        },
+        {
+          "source_row": {
+            "episode": "1542",
+            "index": 835,
+            "endpoint_indices": [
+              144,
+              180
+            ],
+            "dt": 1.1999998092651367,
+            "original6501_mse": 0.11869925260543823,
+            "reference_mse": 0.11869794130325317,
+            "baseline_mse": 0.1176045760512352,
+            "reference_zero_z_mse": 0.11761917918920517,
+            "original6501_mse_medium_b1": 0.11869794130325317,
+            "baseline_mse_medium_b1": 0.11761917918920517
+          },
+          "original9802_mse": 0.1566290259361267,
+          "zero9802_mse": 0.1619487851858139,
+          "zero6501_mse": 0.1176045760512352
+        },
+        {
+          "source_row": {
+            "episode": "1543",
+            "index": 838,
+            "endpoint_indices": [
+              36,
+              72
+            ],
+            "dt": 1.2000000476837158,
+            "original6501_mse": 0.11462658643722534,
+            "reference_mse": 0.1146288514137268,
+            "baseline_mse": 0.11533995717763901,
+            "reference_zero_z_mse": 0.1153407022356987,
+            "original6501_mse_medium_b1": 0.1146288514137268,
+            "baseline_mse_medium_b1": 0.1153407022356987
+          },
+          "original9802_mse": 0.10239575058221817,
+          "zero9802_mse": 0.10665780305862427,
+          "zero6501_mse": 0.11533995717763901
+        },
+        {
+          "source_row": {
+            "episode": "1545",
+            "index": 857,
+            "endpoint_indices": [
+              252,
+              270
+            ],
+            "dt": 0.6000003814697266,
+            "original6501_mse": 0.07981891185045242,
+            "reference_mse": 0.079820916056633,
+            "baseline_mse": 0.07953905314207077,
+            "reference_zero_z_mse": 0.0795423611998558,
+            "original6501_mse_medium_b1": 0.079820916056633,
+            "baseline_mse_medium_b1": 0.0795423611998558
+          },
+          "original9802_mse": 0.07340306043624878,
+          "zero9802_mse": 0.07358243316411972,
+          "zero6501_mse": 0.07953905314207077
+        },
+        {
+          "source_row": {
+            "episode": "1547",
+            "index": 870,
+            "endpoint_indices": [
+              180,
+              216
+            ],
+            "dt": 1.1999998092651367,
+            "original6501_mse": 0.11660852283239365,
+            "reference_mse": 0.11661455035209656,
+            "baseline_mse": 0.11625265330076218,
+            "reference_zero_z_mse": 0.11626201122999191,
+            "original6501_mse_medium_b1": 0.11661455035209656,
+            "baseline_mse_medium_b1": 0.11626201122999191
+          },
+          "original9802_mse": 0.15025074779987335,
+          "zero9802_mse": 0.15783172845840454,
+          "zero6501_mse": 0.11625265330076218
+        },
+        {
+          "source_row": {
+            "episode": "1549",
+            "index": 882,
+            "endpoint_indices": [
+              108,
+              144
+            ],
+            "dt": 1.200000286102295,
+            "original6501_mse": 0.1581634283065796,
+            "reference_mse": 0.15815067291259766,
+            "baseline_mse": 0.16123469173908234,
+            "reference_zero_z_mse": 0.1612348109483719,
+            "original6501_mse_medium_b1": 0.15815067291259766,
+            "baseline_mse_medium_b1": 0.1612348109483719
+          },
+          "original9802_mse": 0.12096673250198364,
+          "zero9802_mse": 0.12286267429590225,
+          "zero6501_mse": 0.16123469173908234
+        },
+        {
+          "source_row": {
+            "episode": "1551",
+            "index": 897,
+            "endpoint_indices": [
+              180,
+              216
+            ],
+            "dt": 1.1999998092651367,
+            "original6501_mse": 0.1701485961675644,
+            "reference_mse": 0.17015357315540314,
+            "baseline_mse": 0.16546927392482758,
+            "reference_zero_z_mse": 0.16545997560024261,
+            "original6501_mse_medium_b1": 0.17015357315540314,
+            "baseline_mse_medium_b1": 0.16545997560024261
+          },
+          "original9802_mse": 0.23506617546081543,
+          "zero9802_mse": 0.23120848834514618,
+          "zero6501_mse": 0.16546927392482758
+        },
+        {
+          "source_row": {
+            "episode": "1553",
+            "index": 911,
+            "endpoint_indices": [
+              180,
+              185
+            ],
+            "dt": 0.16666650772094727,
+            "original6501_mse": 0.056210797280073166,
+            "reference_mse": 0.05620807036757469,
+            "baseline_mse": 0.054948996752500534,
+            "reference_zero_z_mse": 0.0549483597278595,
+            "original6501_mse_medium_b1": 0.05620807036757469,
+            "baseline_mse_medium_b1": 0.0549483597278595
+          },
+          "original9802_mse": 0.045871470123529434,
+          "zero9802_mse": 0.045991431921720505,
+          "zero6501_mse": 0.054948996752500534
+        },
+        {
+          "source_row": {
+            "episode": "1554",
+            "index": 915,
+            "endpoint_indices": [
+              108,
+              144
+            ],
+            "dt": 1.200000286102295,
+            "original6501_mse": 0.17529897391796112,
+            "reference_mse": 0.17527849972248077,
+            "baseline_mse": 0.17782478034496307,
+            "reference_zero_z_mse": 0.17780159413814545,
+            "original6501_mse_medium_b1": 0.17527849972248077,
+            "baseline_mse_medium_b1": 0.17780159413814545
+          },
+          "original9802_mse": 0.13087768852710724,
+          "zero9802_mse": 0.13394583761692047,
+          "zero6501_mse": 0.17782478034496307
+        },
+        {
+          "source_row": {
+            "episode": "1556",
+            "index": 924,
+            "endpoint_indices": [
+              0,
+              36
+            ],
+            "dt": 1.2000000476837158,
+            "original6501_mse": 0.1361193209886551,
+            "reference_mse": 0.13611944019794464,
+            "baseline_mse": 0.1360446810722351,
+            "reference_zero_z_mse": 0.13604331016540527,
+            "original6501_mse_medium_b1": 0.13611944019794464,
+            "baseline_mse_medium_b1": 0.13604331016540527
+          },
+          "original9802_mse": 0.1373155564069748,
+          "zero9802_mse": 0.13863904774188995,
+          "zero6501_mse": 0.1360446810722351
+        },
+        {
+          "source_row": {
+            "episode": "1558",
+            "index": 942,
+            "endpoint_indices": [
+              216,
+              218
+            ],
+            "dt": 0.06666707992553711,
+            "original6501_mse": 0.05035243555903435,
+            "reference_mse": 0.050361886620521545,
+            "baseline_mse": 0.04935615137219429,
+            "reference_zero_z_mse": 0.04935724660754204,
+            "original6501_mse_medium_b1": 0.050361886620521545,
+            "baseline_mse_medium_b1": 0.04935724660754204
+          },
+          "original9802_mse": 0.04528849944472313,
+          "zero9802_mse": 0.045532986521720886,
+          "zero6501_mse": 0.04935615137219429
+        },
+        {
+          "source_row": {
+            "episode": "180",
+            "index": 122,
+            "endpoint_indices": [
+              36,
+              72
+            ],
+            "dt": 1.2000000476837158,
+            "original6501_mse": 0.05630527064204216,
+            "reference_mse": 0.05630699172616005,
+            "baseline_mse": 0.05683701112866402,
+            "reference_zero_z_mse": 0.056837525218725204,
+            "original6501_mse_medium_b1": 0.05630699172616005,
+            "baseline_mse_medium_b1": 0.056837525218725204
+          },
+          "original9802_mse": 0.0672091618180275,
+          "zero9802_mse": 0.06657897680997849,
+          "zero6501_mse": 0.05683701112866402
+        },
+        {
+          "source_row": {
+            "episode": "181",
+            "index": 128,
+            "endpoint_indices": [
+              72,
+              108
+            ],
+            "dt": 1.1999998092651367,
+            "original6501_mse": 0.1205778643488884,
+            "reference_mse": 0.12058018893003464,
+            "baseline_mse": 0.12013500928878784,
+            "reference_zero_z_mse": 0.1201384887099266,
+            "original6501_mse_medium_b1": 0.12058018893003464,
+            "baseline_mse_medium_b1": 0.1201384887099266
+          },
+          "original9802_mse": 0.10513406991958618,
+          "zero9802_mse": 0.10521913319826126,
+          "zero6501_mse": 0.12013500928878784
+        },
+        {
+          "source_row": {
+            "episode": "182",
+            "index": 134,
+            "endpoint_indices": [
+              108,
+              136
+            ],
+            "dt": 0.9333333969116211,
+            "original6501_mse": 0.08904824405908585,
+            "reference_mse": 0.08906076103448868,
+            "baseline_mse": 0.08953788876533508,
+            "reference_zero_z_mse": 0.0895569697022438,
+            "original6501_mse_medium_b1": 0.08906076103448868,
+            "baseline_mse_medium_b1": 0.0895569697022438
+          },
+          "original9802_mse": 0.10368796437978745,
+          "zero9802_mse": 0.1030290499329567,
+          "zero6501_mse": 0.08953788876533508
+        },
+        {
+          "source_row": {
+            "episode": "184",
+            "index": 139,
+            "endpoint_indices": [
+              0,
+              36
+            ],
+            "dt": 1.2000000476837158,
+            "original6501_mse": 0.06953347474336624,
+            "reference_mse": 0.06952956318855286,
+            "baseline_mse": 0.06999558955430984,
+            "reference_zero_z_mse": 0.06998952478170395,
+            "original6501_mse_medium_b1": 0.06952956318855286,
+            "baseline_mse_medium_b1": 0.06998952478170395
+          },
+          "original9802_mse": 0.059713076800107956,
+          "zero9802_mse": 0.06141477823257446,
+          "zero6501_mse": 0.06999558955430984
+        },
+        {
+          "source_row": {
+            "episode": "185",
+            "index": 143,
+            "endpoint_indices": [
+              0,
+              36
+            ],
+            "dt": 1.2000000476837158,
+            "original6501_mse": 0.06690184772014618,
+            "reference_mse": 0.06689930707216263,
+            "baseline_mse": 0.06733871251344681,
+            "reference_zero_z_mse": 0.06733984500169754,
+            "original6501_mse_medium_b1": 0.06689930707216263,
+            "baseline_mse_medium_b1": 0.06733984500169754
+          },
+          "original9802_mse": 0.059071313589811325,
+          "zero9802_mse": 0.06046263501048088,
+          "zero6501_mse": 0.06733871251344681
+        },
+        {
+          "source_row": {
+            "episode": "187",
+            "index": 153,
+            "endpoint_indices": [
+              36,
+              72
+            ],
+            "dt": 1.2000000476837158,
+            "original6501_mse": 0.0749775841832161,
+            "reference_mse": 0.07497458904981613,
+            "baseline_mse": 0.07550565153360367,
+            "reference_zero_z_mse": 0.07550536841154099,
+            "original6501_mse_medium_b1": 0.07497458904981613,
+            "baseline_mse_medium_b1": 0.07550536841154099
+          },
+          "original9802_mse": 0.07578588277101517,
+          "zero9802_mse": 0.07592834532260895,
+          "zero6501_mse": 0.07550565153360367
+        },
+        {
+          "source_row": {
+            "episode": "188",
+            "index": 156,
+            "endpoint_indices": [
+              0,
+              36
+            ],
+            "dt": 1.2000000476837158,
+            "original6501_mse": 0.06772299855947495,
+            "reference_mse": 0.06772736459970474,
+            "baseline_mse": 0.06810253113508224,
+            "reference_zero_z_mse": 0.0681043341755867,
+            "original6501_mse_medium_b1": 0.06772736459970474,
+            "baseline_mse_medium_b1": 0.0681043341755867
+          },
+          "original9802_mse": 0.057256679981946945,
+          "zero9802_mse": 0.05864448845386505,
+          "zero6501_mse": 0.06810253113508224
+        },
+        {
+          "source_row": {
+            "episode": "189",
+            "index": 163,
+            "endpoint_indices": [
+              72,
+              100
+            ],
+            "dt": 0.933333158493042,
+            "original6501_mse": 0.09365858882665634,
+            "reference_mse": 0.09366804361343384,
+            "baseline_mse": 0.09264736622571945,
+            "reference_zero_z_mse": 0.09265106171369553,
+            "original6501_mse_medium_b1": 0.09366804361343384,
+            "baseline_mse_medium_b1": 0.09265106171369553
+          },
+          "original9802_mse": 0.10312622785568237,
+          "zero9802_mse": 0.10255539417266846,
+          "zero6501_mse": 0.09264736622571945
+        },
+        {
+          "source_row": {
+            "episode": "191",
+            "index": 169,
+            "endpoint_indices": [
+              72,
+              108
+            ],
+            "dt": 1.1999998092651367,
+            "original6501_mse": 0.08333596587181091,
+            "reference_mse": 0.08333569020032883,
+            "baseline_mse": 0.08307670801877975,
+            "reference_zero_z_mse": 0.0830719918012619,
+            "original6501_mse_medium_b1": 0.08333569020032883,
+            "baseline_mse_medium_b1": 0.0830719918012619
+          },
+          "original9802_mse": 0.0874844416975975,
+          "zero9802_mse": 0.0870978832244873,
+          "zero6501_mse": 0.08307670801877975
+        },
+        {
+          "source_row": {
+            "episode": "192",
+            "index": 172,
+            "endpoint_indices": [
+              36,
+              72
+            ],
+            "dt": 1.2000000476837158,
+            "original6501_mse": 0.09500832110643387,
+            "reference_mse": 0.09500522166490555,
+            "baseline_mse": 0.0948719009757042,
+            "reference_zero_z_mse": 0.09487191587686539,
+            "original6501_mse_medium_b1": 0.09500522166490555,
+            "baseline_mse_medium_b1": 0.09487191587686539
+          },
+          "original9802_mse": 0.08170468360185623,
+          "zero9802_mse": 0.08201273530721664,
+          "zero6501_mse": 0.0948719009757042
+        },
+        {
+          "source_row": {
+            "episode": "193",
+            "index": 177,
+            "endpoint_indices": [
+              72,
+              108
+            ],
+            "dt": 1.1999998092651367,
+            "original6501_mse": 0.09833365678787231,
+            "reference_mse": 0.09834250062704086,
+            "baseline_mse": 0.09818819165229797,
+            "reference_zero_z_mse": 0.09819859266281128,
+            "original6501_mse_medium_b1": 0.09834250062704086,
+            "baseline_mse_medium_b1": 0.09819859266281128
+          },
+          "original9802_mse": 0.07876566052436829,
+          "zero9802_mse": 0.07918211072683334,
+          "zero6501_mse": 0.09818819165229797
+        },
+        {
+          "source_row": {
+            "episode": "195",
+            "index": 183,
+            "endpoint_indices": [
+              0,
+              36
+            ],
+            "dt": 1.2000000476837158,
+            "original6501_mse": 0.05904831364750862,
+            "reference_mse": 0.059059545397758484,
+            "baseline_mse": 0.05945563316345215,
+            "reference_zero_z_mse": 0.05946521833539009,
+            "original6501_mse_medium_b1": 0.059059545397758484,
+            "baseline_mse_medium_b1": 0.05946521833539009
+          },
+          "original9802_mse": 0.050800200551748276,
+          "zero9802_mse": 0.051832497119903564,
+          "zero6501_mse": 0.05945563316345215
+        },
+        {
+          "source_row": {
+            "episode": "196",
+            "index": 189,
+            "endpoint_indices": [
+              72,
+              106
+            ],
+            "dt": 1.1333332061767578,
+            "original6501_mse": 0.08093900233507156,
+            "reference_mse": 0.08095524460077286,
+            "baseline_mse": 0.08097481727600098,
+            "reference_zero_z_mse": 0.08098629862070084,
+            "original6501_mse_medium_b1": 0.08095524460077286,
+            "baseline_mse_medium_b1": 0.08098629862070084
+          },
+          "original9802_mse": 0.0891328752040863,
+          "zero9802_mse": 0.0873924121260643,
+          "zero6501_mse": 0.08097481727600098
+        },
+        {
+          "source_row": {
+            "episode": "197",
+            "index": 194,
+            "endpoint_indices": [
+              144,
+              157
+            ],
+            "dt": 0.4333329200744629,
+            "original6501_mse": 0.058454424142837524,
+            "reference_mse": 0.058445945382118225,
+            "baseline_mse": 0.05890832841396332,
+            "reference_zero_z_mse": 0.058901865035295486,
+            "original6501_mse_medium_b1": 0.058445945382118225,
+            "baseline_mse_medium_b1": 0.058901865035295486
+          },
+          "original9802_mse": 0.07067098468542099,
+          "zero9802_mse": 0.06719531863927841,
+          "zero6501_mse": 0.05890832841396332
+        },
+        {
+          "source_row": {
+            "episode": "199",
+            "index": 204,
+            "endpoint_indices": [
+              144,
+              180
+            ],
+            "dt": 1.1999998092651367,
+            "original6501_mse": 0.09339266270399094,
+            "reference_mse": 0.09337624907493591,
+            "baseline_mse": 0.09249672293663025,
+            "reference_zero_z_mse": 0.09247652441263199,
+            "original6501_mse_medium_b1": 0.09337624907493591,
+            "baseline_mse_medium_b1": 0.09247652441263199
+          },
+          "original9802_mse": 0.09237947314977646,
+          "zero9802_mse": 0.09010913968086243,
+          "zero6501_mse": 0.09249672293663025
+        },
+        {
+          "source_row": {
+            "episode": "36",
+            "index": 76,
+            "endpoint_indices": [
+              0,
+              36
+            ],
+            "dt": 1.2000000476837158,
+            "original6501_mse": 0.24106363952159882,
+            "reference_mse": 0.24104374647140503,
+            "baseline_mse": 0.24651135504245758,
+            "reference_zero_z_mse": 0.24649198353290558,
+            "original6501_mse_medium_b1": 0.24104374647140503,
+            "baseline_mse_medium_b1": 0.24649198353290558
+          },
+          "original9802_mse": 0.21220248937606812,
+          "zero9802_mse": 0.21697962284088135,
+          "zero6501_mse": 0.24651135504245758
+        },
+        {
+          "source_row": {
+            "episode": "591",
+            "index": 215,
+            "endpoint_indices": [
+              108,
+              144
+            ],
+            "dt": 1.200000286102295,
+            "original6501_mse": 0.08809467405080795,
+            "reference_mse": 0.08808374404907227,
+            "baseline_mse": 0.08828502893447876,
+            "reference_zero_z_mse": 0.08828255534172058,
+            "original6501_mse_medium_b1": 0.08808374404907227,
+            "baseline_mse_medium_b1": 0.08828255534172058
+          },
+          "original9802_mse": 0.07710444182157516,
+          "zero9802_mse": 0.07783522456884384,
+          "zero6501_mse": 0.08828502893447876
+        },
+        {
+          "source_row": {
+            "episode": "592",
+            "index": 224,
+            "endpoint_indices": [
+              216,
+              225
+            ],
+            "dt": 0.3000001907348633,
+            "original6501_mse": 0.046749185770750046,
+            "reference_mse": 0.046744972467422485,
+            "baseline_mse": 0.04709884524345398,
+            "reference_zero_z_mse": 0.04709668084979057,
+            "original6501_mse_medium_b1": 0.046744972467422485,
+            "baseline_mse_medium_b1": 0.04709668084979057
+          },
+          "original9802_mse": 0.04512259364128113,
+          "zero9802_mse": 0.045106250792741776,
+          "zero6501_mse": 0.04709884524345398
+        },
+        {
+          "source_row": {
+            "episode": "594",
+            "index": 234,
+            "endpoint_indices": [
+              72,
+              108
+            ],
+            "dt": 1.1999998092651367,
+            "original6501_mse": 0.13964402675628662,
+            "reference_mse": 0.13965445756912231,
+            "baseline_mse": 0.13514405488967896,
+            "reference_zero_z_mse": 0.13516400754451752,
+            "original6501_mse_medium_b1": 0.13965445756912231,
+            "baseline_mse_medium_b1": 0.13516400754451752
+          },
+          "original9802_mse": 0.10559749603271484,
+          "zero9802_mse": 0.10608965158462524,
+          "zero6501_mse": 0.13514405488967896
+        },
+        {
+          "source_row": {
+            "episode": "596",
+            "index": 247,
+            "endpoint_indices": [
+              36,
+              72
+            ],
+            "dt": 1.2000000476837158,
+            "original6501_mse": 0.09413790702819824,
+            "reference_mse": 0.09413322061300278,
+            "baseline_mse": 0.09476398676633835,
+            "reference_zero_z_mse": 0.09475921839475632,
+            "original6501_mse_medium_b1": 0.09413322061300278,
+            "baseline_mse_medium_b1": 0.09475921839475632
+          },
+          "original9802_mse": 0.0810595452785492,
+          "zero9802_mse": 0.08135715872049332,
+          "zero6501_mse": 0.09476398676633835
+        },
+        {
+          "source_row": {
+            "episode": "598",
+            "index": 264,
+            "endpoint_indices": [
+              108,
+              144
+            ],
+            "dt": 1.200000286102295,
+            "original6501_mse": 0.08404936641454697,
+            "reference_mse": 0.08404692262411118,
+            "baseline_mse": 0.0845922902226448,
+            "reference_zero_z_mse": 0.08458781987428665,
+            "original6501_mse_medium_b1": 0.08404692262411118,
+            "baseline_mse_medium_b1": 0.08458781987428665
+          },
+          "original9802_mse": 0.09922289848327637,
+          "zero9802_mse": 0.09946528822183609,
+          "zero6501_mse": 0.0845922902226448
+        },
+        {
+          "source_row": {
+            "episode": "790",
+            "index": 278,
+            "endpoint_indices": [
+              36,
+              72
+            ],
+            "dt": 1.2000000476837158,
+            "original6501_mse": 0.08018795400857925,
+            "reference_mse": 0.0801921859383583,
+            "baseline_mse": 0.08026402443647385,
+            "reference_zero_z_mse": 0.08027447760105133,
+            "original6501_mse_medium_b1": 0.0801921859383583,
+            "baseline_mse_medium_b1": 0.08027447760105133
+          },
+          "original9802_mse": 0.07115738838911057,
+          "zero9802_mse": 0.07310371845960617,
+          "zero6501_mse": 0.08026402443647385
+        },
+        {
+          "source_row": {
+            "episode": "792",
+            "index": 296,
+            "endpoint_indices": [
+              216,
+              252
+            ],
+            "dt": 1.1999998092651367,
+            "original6501_mse": 0.11320940405130386,
+            "reference_mse": 0.11319956183433533,
+            "baseline_mse": 0.1123460903763771,
+            "reference_zero_z_mse": 0.11234075576066971,
+            "original6501_mse_medium_b1": 0.11319956183433533,
+            "baseline_mse_medium_b1": 0.11234075576066971
+          },
+          "original9802_mse": 0.1023021712899208,
+          "zero9802_mse": 0.10386180877685547,
+          "zero6501_mse": 0.1123460903763771
+        },
+        {
+          "source_row": {
+            "episode": "794",
+            "index": 309,
+            "endpoint_indices": [
+              216,
+              220
+            ],
+            "dt": 0.13333368301391602,
+            "original6501_mse": 0.031936850398778915,
+            "reference_mse": 0.03194092586636543,
+            "baseline_mse": 0.03201168403029442,
+            "reference_zero_z_mse": 0.03201275318861008,
+            "original6501_mse_medium_b1": 0.03194092586636543,
+            "baseline_mse_medium_b1": 0.03201275318861008
+          },
+          "original9802_mse": 0.026667892932891846,
+          "zero9802_mse": 0.02690456621348858,
+          "zero6501_mse": 0.03201168403029442
+        },
+        {
+          "source_row": {
+            "episode": "796",
+            "index": 317,
+            "endpoint_indices": [
+              0,
+              36
+            ],
+            "dt": 1.2000000476837158,
+            "original6501_mse": 0.06346195191144943,
+            "reference_mse": 0.0634613111615181,
+            "baseline_mse": 0.06396760791540146,
+            "reference_zero_z_mse": 0.0639614537358284,
+            "original6501_mse_medium_b1": 0.0634613111615181,
+            "baseline_mse_medium_b1": 0.0639614537358284
+          },
+          "original9802_mse": 0.07283327728509903,
+          "zero9802_mse": 0.068855881690979,
+          "zero6501_mse": 0.06396760791540146
+        },
+        {
+          "source_row": {
+            "episode": "797",
+            "index": 329,
+            "endpoint_indices": [
+              180,
+              212
+            ],
+            "dt": 1.066666603088379,
+            "original6501_mse": 0.0842813029885292,
+            "reference_mse": 0.08428028970956802,
+            "baseline_mse": 0.08390118926763535,
+            "reference_zero_z_mse": 0.08389779180288315,
+            "original6501_mse_medium_b1": 0.08428028970956802,
+            "baseline_mse_medium_b1": 0.08389779180288315
+          },
+          "original9802_mse": 0.07118048518896103,
+          "zero9802_mse": 0.07622193545103073,
+          "zero6501_mse": 0.08390118926763535
+        },
+        {
+          "source_row": {
+            "episode": "799",
+            "index": 341,
+            "endpoint_indices": [
+              180,
+              214
+            ],
+            "dt": 1.1333332061767578,
+            "original6501_mse": 0.08369775861501694,
+            "reference_mse": 0.08368244022130966,
+            "baseline_mse": 0.08460119366645813,
+            "reference_zero_z_mse": 0.08458475023508072,
+            "original6501_mse_medium_b1": 0.08368244022130966,
+            "baseline_mse_medium_b1": 0.08458475023508072
+          },
+          "original9802_mse": 0.07974375784397125,
+          "zero9802_mse": 0.08128008246421814,
+          "zero6501_mse": 0.08460119366645813
+        },
+        {
+          "source_row": {
+            "episode": "941",
+            "index": 351,
+            "endpoint_indices": [
+              144,
+              149
+            ],
+            "dt": 0.16666650772094727,
+            "original6501_mse": 0.052102312445640564,
+            "reference_mse": 0.052103906869888306,
+            "baseline_mse": 0.052048396319150925,
+            "reference_zero_z_mse": 0.05204860493540764,
+            "original6501_mse_medium_b1": 0.052103906869888306,
+            "baseline_mse_medium_b1": 0.05204860493540764
+          },
+          "original9802_mse": 0.053639840334653854,
+          "zero9802_mse": 0.05413210391998291,
+          "zero6501_mse": 0.052048396319150925
+        },
+        {
+          "source_row": {
+            "episode": "942",
+            "index": 353,
+            "endpoint_indices": [
+              36,
+              72
+            ],
+            "dt": 1.2000000476837158,
+            "original6501_mse": 0.07729005068540573,
+            "reference_mse": 0.0772976502776146,
+            "baseline_mse": 0.07754425704479218,
+            "reference_zero_z_mse": 0.07755500823259354,
+            "original6501_mse_medium_b1": 0.0772976502776146,
+            "baseline_mse_medium_b1": 0.07755500823259354
+          },
+          "original9802_mse": 0.0613790787756443,
+          "zero9802_mse": 0.06167159974575043,
+          "zero6501_mse": 0.07754425704479218
+        },
+        {
+          "source_row": {
+            "episode": "944",
+            "index": 365,
+            "endpoint_indices": [
+              108,
+              144
+            ],
+            "dt": 1.200000286102295,
+            "original6501_mse": 0.14966322481632233,
+            "reference_mse": 0.14965379238128662,
+            "baseline_mse": 0.14993368089199066,
+            "reference_zero_z_mse": 0.1499294489622116,
+            "original6501_mse_medium_b1": 0.14965379238128662,
+            "baseline_mse_medium_b1": 0.1499294489622116
+          },
+          "original9802_mse": 0.13297663629055023,
+          "zero9802_mse": 0.13114258646965027,
+          "zero6501_mse": 0.14993368089199066
+        },
+        {
+          "source_row": {
+            "episode": "945",
+            "index": 367,
+            "endpoint_indices": [
+              0,
+              36
+            ],
+            "dt": 1.2000000476837158,
+            "original6501_mse": 0.06059534475207329,
+            "reference_mse": 0.060592055320739746,
+            "baseline_mse": 0.060487691313028336,
+            "reference_zero_z_mse": 0.06048266962170601,
+            "original6501_mse_medium_b1": 0.060592055320739746,
+            "baseline_mse_medium_b1": 0.06048266962170601
+          },
+          "original9802_mse": 0.059880245476961136,
+          "zero9802_mse": 0.0586526095867157,
+          "zero6501_mse": 0.060487691313028336
+        },
+        {
+          "source_row": {
+            "episode": "947",
+            "index": 377,
+            "endpoint_indices": [
+              0,
+              36
+            ],
+            "dt": 1.2000000476837158,
+            "original6501_mse": 0.09352296590805054,
+            "reference_mse": 0.09352216124534607,
+            "baseline_mse": 0.09346253424882889,
+            "reference_zero_z_mse": 0.0934639647603035,
+            "original6501_mse_medium_b1": 0.09352216124534607,
+            "baseline_mse_medium_b1": 0.0934639647603035
+          },
+          "original9802_mse": 0.07858686149120331,
+          "zero9802_mse": 0.08064224570989609,
+          "zero6501_mse": 0.09346253424882889
+        },
+        {
+          "source_row": {
+            "episode": "948",
+            "index": 384,
+            "endpoint_indices": [
+              72,
+              108
+            ],
+            "dt": 1.1999998092651367,
+            "original6501_mse": 0.11476554721593857,
+            "reference_mse": 0.11477381736040115,
+            "baseline_mse": 0.11544344574213028,
+            "reference_zero_z_mse": 0.11544527858495712,
+            "original6501_mse_medium_b1": 0.11477381736040115,
+            "baseline_mse_medium_b1": 0.11544527858495712
+          },
+          "original9802_mse": 0.1168077290058136,
+          "zero9802_mse": 0.11663162708282471,
+          "zero6501_mse": 0.11544344574213028
+        },
+        {
+          "source_row": {
+            "episode": "950",
+            "index": 396,
+            "endpoint_indices": [
+              144,
+              167
+            ],
+            "dt": 0.7666664123535156,
+            "original6501_mse": 0.07889869064092636,
+            "reference_mse": 0.07888156920671463,
+            "baseline_mse": 0.07916412502527237,
+            "reference_zero_z_mse": 0.07915686070919037,
+            "original6501_mse_medium_b1": 0.07888156920671463,
+            "baseline_mse_medium_b1": 0.07915686070919037
+          },
+          "original9802_mse": 0.07005415111780167,
+          "zero9802_mse": 0.0712529718875885,
+          "zero6501_mse": 0.07916412502527237
+        },
+        {
+          "source_row": {
+            "episode": "951",
+            "index": 401,
+            "endpoint_indices": [
+              144,
+              180
+            ],
+            "dt": 1.1999998092651367,
+            "original6501_mse": 0.08411682397127151,
+            "reference_mse": 0.08411365747451782,
+            "baseline_mse": 0.08432266861200333,
+            "reference_zero_z_mse": 0.08431696891784668,
+            "original6501_mse_medium_b1": 0.08411365747451782,
+            "baseline_mse_medium_b1": 0.08431696891784668
+          },
+          "original9802_mse": 0.08926257491111755,
+          "zero9802_mse": 0.0906798467040062,
+          "zero6501_mse": 0.08432266861200333
+        },
+        {
+          "source_row": {
+            "episode": "953",
+            "index": 412,
+            "endpoint_indices": [
+              108,
+              144
+            ],
+            "dt": 1.200000286102295,
+            "original6501_mse": 0.22760240733623505,
+            "reference_mse": 0.22759544849395752,
+            "baseline_mse": 0.22561979293823242,
+            "reference_zero_z_mse": 0.22561098635196686,
+            "original6501_mse_medium_b1": 0.22759544849395752,
+            "baseline_mse_medium_b1": 0.22561098635196686
+          },
+          "original9802_mse": 0.22344541549682617,
+          "zero9802_mse": 0.22037982940673828,
+          "zero6501_mse": 0.22561979293823242
+        },
+        {
+          "source_row": {
+            "episode": "954",
+            "index": 415,
+            "endpoint_indices": [
+              36,
+              72
+            ],
+            "dt": 1.2000000476837158,
+            "original6501_mse": 0.09151490777730942,
+            "reference_mse": 0.09151925891637802,
+            "baseline_mse": 0.09115353971719742,
+            "reference_zero_z_mse": 0.09116879850625992,
+            "original6501_mse_medium_b1": 0.09151925891637802,
+            "baseline_mse_medium_b1": 0.09116879850625992
+          },
+          "original9802_mse": 0.06914643198251724,
+          "zero9802_mse": 0.07016070932149887,
+          "zero6501_mse": 0.09115353971719742
+        },
+        {
+          "source_row": {
+            "episode": "956",
+            "index": 428,
+            "endpoint_indices": [
+              144,
+              163
+            ],
+            "dt": 0.6333332061767578,
+            "original6501_mse": 0.07985746115446091,
+            "reference_mse": 0.07986072450876236,
+            "baseline_mse": 0.08057890832424164,
+            "reference_zero_z_mse": 0.0805852860212326,
+            "original6501_mse_medium_b1": 0.07986072450876236,
+            "baseline_mse_medium_b1": 0.0805852860212326
+          },
+          "original9802_mse": 0.07585360109806061,
+          "zero9802_mse": 0.07599935680627823,
+          "zero6501_mse": 0.08057890832424164
+        },
+        {
+          "source_row": {
+            "episode": "957",
+            "index": 430,
+            "endpoint_indices": [
+              36,
+              72
+            ],
+            "dt": 1.2000000476837158,
+            "original6501_mse": 0.08943381905555725,
+            "reference_mse": 0.08943665772676468,
+            "baseline_mse": 0.08954116702079773,
+            "reference_zero_z_mse": 0.08954156190156937,
+            "original6501_mse_medium_b1": 0.08943665772676468,
+            "baseline_mse_medium_b1": 0.08954156190156937
+          },
+          "original9802_mse": 0.07037133723497391,
+          "zero9802_mse": 0.07123701274394989,
+          "zero6501_mse": 0.08954116702079773
+        },
+        {
+          "source_row": {
+            "episode": "959",
+            "index": 443,
+            "endpoint_indices": [
+              108,
+              144
+            ],
+            "dt": 1.200000286102295,
+            "original6501_mse": 0.08173280209302902,
+            "reference_mse": 0.08172962814569473,
+            "baseline_mse": 0.08177608251571655,
+            "reference_zero_z_mse": 0.08177297562360764,
+            "original6501_mse_medium_b1": 0.08172962814569473,
+            "baseline_mse_medium_b1": 0.08177297562360764
+          },
+          "original9802_mse": 0.10569832473993301,
+          "zero9802_mse": 0.10575324296951294,
+          "zero6501_mse": 0.08177608251571655
+        },
+        {
+          "source_row": {
+            "episode": "960",
+            "index": 448,
+            "endpoint_indices": [
+              108,
+              139
+            ],
+            "dt": 1.0333333015441895,
+            "original6501_mse": 0.08280056715011597,
+            "reference_mse": 0.08280494809150696,
+            "baseline_mse": 0.08321702480316162,
+            "reference_zero_z_mse": 0.08321695029735565,
+            "original6501_mse_medium_b1": 0.08280494809150696,
+            "baseline_mse_medium_b1": 0.08321695029735565
+          },
+          "original9802_mse": 0.09912770241498947,
+          "zero9802_mse": 0.09977946430444717,
+          "zero6501_mse": 0.08321702480316162
+        },
+        {
+          "source_row": {
+            "episode": "962",
+            "index": 456,
+            "endpoint_indices": [
+              72,
+              108
+            ],
+            "dt": 1.1999998092651367,
+            "original6501_mse": 0.10886123776435852,
+            "reference_mse": 0.10886643081903458,
+            "baseline_mse": 0.11006694287061691,
+            "reference_zero_z_mse": 0.11007490754127502,
+            "original6501_mse_medium_b1": 0.10886643081903458,
+            "baseline_mse_medium_b1": 0.11007490754127502
+          },
+          "original9802_mse": 0.11527792364358902,
+          "zero9802_mse": 0.11532225459814072,
+          "zero6501_mse": 0.11006694287061691
+        },
+        {
+          "source_row": {
+            "episode": "963",
+            "index": 460,
+            "endpoint_indices": [
+              36,
+              72
+            ],
+            "dt": 1.2000000476837158,
+            "original6501_mse": 0.12336061149835587,
+            "reference_mse": 0.12336035817861557,
+            "baseline_mse": 0.1224365234375,
+            "reference_zero_z_mse": 0.12242262810468674,
+            "original6501_mse_medium_b1": 0.12336035817861557,
+            "baseline_mse_medium_b1": 0.12242262810468674
+          },
+          "original9802_mse": 0.13305994868278503,
+          "zero9802_mse": 0.13460399210453033,
+          "zero6501_mse": 0.1224365234375
+        },
+        {
+          "source_row": {
+            "episode": "965",
+            "index": 471,
+            "endpoint_indices": [
+              108,
+              135
+            ],
+            "dt": 0.9000000953674316,
+            "original6501_mse": 0.08337981253862381,
+            "reference_mse": 0.08336350321769714,
+            "baseline_mse": 0.0826859101653099,
+            "reference_zero_z_mse": 0.08266521990299225,
+            "original6501_mse_medium_b1": 0.08336350321769714,
+            "baseline_mse_medium_b1": 0.08266521990299225
+          },
+          "original9802_mse": 0.07655978947877884,
+          "zero9802_mse": 0.08092664927244186,
+          "zero6501_mse": 0.0826859101653099
+        },
+        {
+          "source_row": {
+            "episode": "966",
+            "index": 474,
+            "endpoint_indices": [
+              72,
+              108
+            ],
+            "dt": 1.1999998092651367,
+            "original6501_mse": 0.09640606492757797,
+            "reference_mse": 0.096406489610672,
+            "baseline_mse": 0.09742733091115952,
+            "reference_zero_z_mse": 0.09742196649312973,
+            "original6501_mse_medium_b1": 0.096406489610672,
+            "baseline_mse_medium_b1": 0.09742196649312973
+          },
+          "original9802_mse": 0.105250783264637,
+          "zero9802_mse": 0.10585658997297287,
+          "zero6501_mse": 0.09742733091115952
+        },
+        {
+          "source_row": {
+            "episode": "967",
+            "index": 481,
+            "endpoint_indices": [
+              144,
+              153
+            ],
+            "dt": 0.2999997138977051,
+            "original6501_mse": 0.07303429394960403,
+            "reference_mse": 0.07303467392921448,
+            "baseline_mse": 0.07318037003278732,
+            "reference_zero_z_mse": 0.07317610830068588,
+            "original6501_mse_medium_b1": 0.07303467392921448,
+            "baseline_mse_medium_b1": 0.07317610830068588
+          },
+          "original9802_mse": 0.06572151929140091,
+          "zero9802_mse": 0.06774494796991348,
+          "zero6501_mse": 0.07318037003278732
+        },
+        {
+          "source_row": {
+            "episode": "969",
+            "index": 489,
+            "endpoint_indices": [
+              72,
+              108
+            ],
+            "dt": 1.1999998092651367,
+            "original6501_mse": 0.10663577169179916,
+            "reference_mse": 0.1066470518708229,
+            "baseline_mse": 0.10739654302597046,
+            "reference_zero_z_mse": 0.10740136355161667,
+            "original6501_mse_medium_b1": 0.1066470518708229,
+            "baseline_mse_medium_b1": 0.10740136355161667
+          },
+          "original9802_mse": 0.11479543894529343,
+          "zero9802_mse": 0.11530029773712158,
+          "zero6501_mse": 0.10739654302597046
+        },
+        {
+          "source_row": {
+            "episode": "971",
+            "index": 500,
+            "endpoint_indices": [
+              72,
+              108
+            ],
+            "dt": 1.1999998092651367,
+            "original6501_mse": 0.11057543754577637,
+            "reference_mse": 0.11056999117136002,
+            "baseline_mse": 0.11150013655424118,
+            "reference_zero_z_mse": 0.1115003302693367,
+            "original6501_mse_medium_b1": 0.11056999117136002,
+            "baseline_mse_medium_b1": 0.1115003302693367
+          },
+          "original9802_mse": 0.11395075172185898,
+          "zero9802_mse": 0.11365514993667603,
+          "zero6501_mse": 0.11150013655424118
+        },
+        {
+          "source_row": {
+            "episode": "972",
+            "index": 506,
+            "endpoint_indices": [
+              108,
+              137
+            ],
+            "dt": 0.9666666984558105,
+            "original6501_mse": 0.07727763056755066,
+            "reference_mse": 0.07728321105241776,
+            "baseline_mse": 0.07743581384420395,
+            "reference_zero_z_mse": 0.07744316756725311,
+            "original6501_mse_medium_b1": 0.07728321105241776,
+            "baseline_mse_medium_b1": 0.07744316756725311
+          },
+          "original9802_mse": 0.06699103862047195,
+          "zero9802_mse": 0.06897848099470139,
+          "zero6501_mse": 0.07743581384420395
+        },
+        {
+          "source_row": {
+            "episode": "973",
+            "index": 508,
+            "endpoint_indices": [
+              36,
+              72
+            ],
+            "dt": 1.2000000476837158,
+            "original6501_mse": 0.12274499982595444,
+            "reference_mse": 0.1227215826511383,
+            "baseline_mse": 0.12178697437047958,
+            "reference_zero_z_mse": 0.12175825983285904,
+            "original6501_mse_medium_b1": 0.1227215826511383,
+            "baseline_mse_medium_b1": 0.12175825983285904
+          },
+          "original9802_mse": 0.13340215384960175,
+          "zero9802_mse": 0.1333046704530716,
+          "zero6501_mse": 0.12178697437047958
+        },
+        {
+          "source_row": {
+            "episode": "975",
+            "index": 518,
+            "endpoint_indices": [
+              72,
+              108
+            ],
+            "dt": 1.1999998092651367,
+            "original6501_mse": 0.11794921010732651,
+            "reference_mse": 0.11793137341737747,
+            "baseline_mse": 0.1187305673956871,
+            "reference_zero_z_mse": 0.11871509999036789,
+            "original6501_mse_medium_b1": 0.11793137341737747,
+            "baseline_mse_medium_b1": 0.11871509999036789
+          },
+          "original9802_mse": 0.12606936693191528,
+          "zero9802_mse": 0.12670481204986572,
+          "zero6501_mse": 0.1187305673956871
+        },
+        {
+          "source_row": {
+            "episode": "976",
+            "index": 525,
+            "endpoint_indices": [
+              144,
+              155
+            ],
+            "dt": 0.366666316986084,
+            "original6501_mse": 0.06737260520458221,
+            "reference_mse": 0.06737168878316879,
+            "baseline_mse": 0.06737752258777618,
+            "reference_zero_z_mse": 0.06738188862800598,
+            "original6501_mse_medium_b1": 0.06737168878316879,
+            "baseline_mse_medium_b1": 0.06738188862800598
+          },
+          "original9802_mse": 0.06356742233037949,
+          "zero9802_mse": 0.064296655356884,
+          "zero6501_mse": 0.06737752258777618
+        },
+        {
+          "source_row": {
+            "episode": "978",
+            "index": 535,
+            "endpoint_indices": [
+              144,
+              180
+            ],
+            "dt": 1.1999998092651367,
+            "original6501_mse": 0.16154243052005768,
+            "reference_mse": 0.1615455001592636,
+            "baseline_mse": 0.16199129819869995,
+            "reference_zero_z_mse": 0.16198332607746124,
+            "original6501_mse_medium_b1": 0.1615455001592636,
+            "baseline_mse_medium_b1": 0.16198332607746124
+          },
+          "original9802_mse": 0.13414357602596283,
+          "zero9802_mse": 0.13413044810295105,
+          "zero6501_mse": 0.16199129819869995
+        }
+      ]
+    },
+    "train": {
+      "count": 128,
+      "original9802_mse": 0.1029108965449268,
+      "zero9802_mse": 0.10343318425293546,
+      "zero6501_mse": 0.11036006439826451,
+      "rows": [
+        {
+          "source_row": {
+            "index": 0,
+            "episode": "0",
+            "dt": 1.2000000476837158
+          },
+          "original9802_mse": 0.20685924589633942,
+          "zero9802_mse": 0.20930582284927368,
+          "zero6501_mse": 0.21594329178333282
+        },
+        {
+          "source_row": {
+            "index": 72,
+            "episode": "5",
+            "dt": 1.1999998092651367
+          },
+          "original9802_mse": 0.14516332745552063,
+          "zero9802_mse": 0.14570210874080658,
+          "zero6501_mse": 0.18918751180171967
+        },
+        {
+          "source_row": {
+            "index": 144,
+            "episode": "11",
+            "dt": 1.1999998092651367
+          },
+          "original9802_mse": 0.14208148419857025,
+          "zero9802_mse": 0.14146287739276886,
+          "zero6501_mse": 0.13870768249034882
+        },
+        {
+          "source_row": {
+            "index": 217,
+            "episode": "16",
+            "dt": 1.1999998092651367
+          },
+          "original9802_mse": 0.10381627827882767,
+          "zero9802_mse": 0.10391849279403687,
+          "zero6501_mse": 0.08419984579086304
+        },
+        {
+          "source_row": {
+            "index": 289,
+            "episode": "22",
+            "dt": 1.1999998092651367
+          },
+          "original9802_mse": 0.07105831056833267,
+          "zero9802_mse": 0.07132095843553543,
+          "zero6501_mse": 0.08073227107524872
+        },
+        {
+          "source_row": {
+            "index": 362,
+            "episode": "28",
+            "dt": 1.1999998092651367
+          },
+          "original9802_mse": 0.07351969927549362,
+          "zero9802_mse": 0.07420006394386292,
+          "zero6501_mse": 0.0799311175942421
+        },
+        {
+          "source_row": {
+            "index": 434,
+            "episode": "54",
+            "dt": 0.8666667938232422
+          },
+          "original9802_mse": 0.08963503688573837,
+          "zero9802_mse": 0.08968695998191833,
+          "zero6501_mse": 0.09990537166595459
+        },
+        {
+          "source_row": {
+            "index": 507,
+            "episode": "61",
+            "dt": 1.200000286102295
+          },
+          "original9802_mse": 0.19111652672290802,
+          "zero9802_mse": 0.19380106031894684,
+          "zero6501_mse": 0.27683210372924805
+        },
+        {
+          "source_row": {
+            "index": 579,
+            "episode": "67",
+            "dt": 1.2000007629394531
+          },
+          "original9802_mse": 0.09987633675336838,
+          "zero9802_mse": 0.09473884105682373,
+          "zero6501_mse": 0.06893754750490189
+        },
+        {
+          "source_row": {
+            "index": 651,
+            "episode": "74",
+            "dt": 1.2000000476837158
+          },
+          "original9802_mse": 0.13606373965740204,
+          "zero9802_mse": 0.13622573018074036,
+          "zero6501_mse": 0.13912369310855865
+        },
+        {
+          "source_row": {
+            "index": 724,
+            "episode": "78",
+            "dt": 1.1999998092651367
+          },
+          "original9802_mse": 0.08769360184669495,
+          "zero9802_mse": 0.08758073300123215,
+          "zero6501_mse": 0.0941840186715126
+        },
+        {
+          "source_row": {
+            "index": 796,
+            "episode": "83",
+            "dt": 1.1999998092651367
+          },
+          "original9802_mse": 0.06869127601385117,
+          "zero9802_mse": 0.06843235343694687,
+          "zero6501_mse": 0.08208369463682175
+        },
+        {
+          "source_row": {
+            "index": 869,
+            "episode": "87",
+            "dt": 1.1999998092651367
+          },
+          "original9802_mse": 0.08975645154714584,
+          "zero9802_mse": 0.08922333270311356,
+          "zero6501_mse": 0.10669562965631485
+        },
+        {
+          "source_row": {
+            "index": 941,
+            "episode": "92",
+            "dt": 1.1999998092651367
+          },
+          "original9802_mse": 0.0759926438331604,
+          "zero9802_mse": 0.07639848440885544,
+          "zero6501_mse": 0.0917942151427269
+        },
+        {
+          "source_row": {
+            "index": 1014,
+            "episode": "96",
+            "dt": 1.1999998092651367
+          },
+          "original9802_mse": 0.11669518798589706,
+          "zero9802_mse": 0.1154402494430542,
+          "zero6501_mse": 0.10721424221992493
+        },
+        {
+          "source_row": {
+            "index": 1086,
+            "episode": "101",
+            "dt": 1.2000007629394531
+          },
+          "original9802_mse": 0.19882608950138092,
+          "zero9802_mse": 0.19702763855457306,
+          "zero6501_mse": 0.24171537160873413
+        },
+        {
+          "source_row": {
+            "index": 1159,
+            "episode": "106",
+            "dt": 1.1999998092651367
+          },
+          "original9802_mse": 0.23534619808197021,
+          "zero9802_mse": 0.23936699330806732,
+          "zero6501_mse": 0.30764833092689514
+        },
+        {
+          "source_row": {
+            "index": 1231,
+            "episode": "111",
+            "dt": 1.1999998092651367
+          },
+          "original9802_mse": 0.27396389842033386,
+          "zero9802_mse": 0.2726800739765167,
+          "zero6501_mse": 0.26410913467407227
+        },
+        {
+          "source_row": {
+            "index": 1303,
+            "episode": "116",
+            "dt": 1.1999998092651367
+          },
+          "original9802_mse": 0.1646425575017929,
+          "zero9802_mse": 0.16788245737552643,
+          "zero6501_mse": 0.1748616099357605
+        },
+        {
+          "source_row": {
+            "index": 1376,
+            "episode": "143",
+            "dt": 1.1999998092651367
+          },
+          "original9802_mse": 0.064078688621521,
+          "zero9802_mse": 0.06481054425239563,
+          "zero6501_mse": 0.073969267308712
+        },
+        {
+          "source_row": {
+            "index": 1448,
+            "episode": "154",
+            "dt": 0.9000000953674316
+          },
+          "original9802_mse": 0.09901540726423264,
+          "zero9802_mse": 0.09391830116510391,
+          "zero6501_mse": 0.08197826892137527
+        },
+        {
+          "source_row": {
+            "index": 1521,
+            "episode": "167",
+            "dt": 1.2000000476837158
+          },
+          "original9802_mse": 0.0526859275996685,
+          "zero9802_mse": 0.05298163369297981,
+          "zero6501_mse": 0.05656146630644798
+        },
+        {
+          "source_row": {
+            "index": 1593,
+            "episode": "200",
+            "dt": 1.1999998092651367
+          },
+          "original9802_mse": 0.08425509929656982,
+          "zero9802_mse": 0.08481654524803162,
+          "zero6501_mse": 0.10264816880226135
+        },
+        {
+          "source_row": {
+            "index": 1666,
+            "episode": "216",
+            "dt": 1.1999998092651367
+          },
+          "original9802_mse": 0.07951748371124268,
+          "zero9802_mse": 0.08028343319892883,
+          "zero6501_mse": 0.09881573170423508
+        },
+        {
+          "source_row": {
+            "index": 1738,
+            "episode": "229",
+            "dt": 0.4333329200744629
+          },
+          "original9802_mse": 0.11894229054450989,
+          "zero9802_mse": 0.11441857367753983,
+          "zero6501_mse": 0.08870240300893784
+        },
+        {
+          "source_row": {
+            "index": 1811,
+            "episode": "244",
+            "dt": 1.2000000476837158
+          },
+          "original9802_mse": 0.07304870337247849,
+          "zero9802_mse": 0.07471706718206406,
+          "zero6501_mse": 0.07821434736251831
+        },
+        {
+          "source_row": {
+            "index": 1883,
+            "episode": "258",
+            "dt": 1.200000286102295
+          },
+          "original9802_mse": 0.08326847106218338,
+          "zero9802_mse": 0.08268571645021439,
+          "zero6501_mse": 0.09419625997543335
+        },
+        {
+          "source_row": {
+            "index": 1955,
+            "episode": "272",
+            "dt": 1.200000286102295
+          },
+          "original9802_mse": 0.07541205734014511,
+          "zero9802_mse": 0.07731796056032181,
+          "zero6501_mse": 0.08250384032726288
+        },
+        {
+          "source_row": {
+            "index": 2028,
+            "episode": "287",
+            "dt": 1.1999998092651367
+          },
+          "original9802_mse": 0.07539530843496323,
+          "zero9802_mse": 0.07552354782819748,
+          "zero6501_mse": 0.07634847611188889
+        },
+        {
+          "source_row": {
+            "index": 2100,
+            "episode": "301",
+            "dt": 1.2000000476837158
+          },
+          "original9802_mse": 0.04676293209195137,
+          "zero9802_mse": 0.04736484959721565,
+          "zero6501_mse": 0.05395977571606636
+        },
+        {
+          "source_row": {
+            "index": 2173,
+            "episode": "312",
+            "dt": 1.1999998092651367
+          },
+          "original9802_mse": 0.08183654397726059,
+          "zero9802_mse": 0.076952263712883,
+          "zero6501_mse": 0.06960388273000717
+        },
+        {
+          "source_row": {
+            "index": 2245,
+            "episode": "324",
+            "dt": 1.2000000476837158
+          },
+          "original9802_mse": 0.048288241028785706,
+          "zero9802_mse": 0.04960605874657631,
+          "zero6501_mse": 0.05958746001124382
+        },
+        {
+          "source_row": {
+            "index": 2318,
+            "episode": "336",
+            "dt": 1.2000000476837158
+          },
+          "original9802_mse": 0.04299303516745567,
+          "zero9802_mse": 0.043501440435647964,
+          "zero6501_mse": 0.051489755511283875
+        },
+        {
+          "source_row": {
+            "index": 2390,
+            "episode": "347",
+            "dt": 1.2000000476837158
+          },
+          "original9802_mse": 0.08723130822181702,
+          "zero9802_mse": 0.08741775900125504,
+          "zero6501_mse": 0.09463254362344742
+        },
+        {
+          "source_row": {
+            "index": 2462,
+            "episode": "366",
+            "dt": 1.2000000476837158
+          },
+          "original9802_mse": 0.08168384432792664,
+          "zero9802_mse": 0.0823778286576271,
+          "zero6501_mse": 0.08169098198413849
+        },
+        {
+          "source_row": {
+            "index": 2535,
+            "episode": "386",
+            "dt": 1.2000000476837158
+          },
+          "original9802_mse": 0.08233600109815598,
+          "zero9802_mse": 0.08234278857707977,
+          "zero6501_mse": 0.08687109500169754
+        },
+        {
+          "source_row": {
+            "index": 2607,
+            "episode": "399",
+            "dt": 1.1999998092651367
+          },
+          "original9802_mse": 0.0934649184346199,
+          "zero9802_mse": 0.09409109503030777,
+          "zero6501_mse": 0.119418203830719
+        },
+        {
+          "source_row": {
+            "index": 2680,
+            "episode": "413",
+            "dt": 1.2000000476837158
+          },
+          "original9802_mse": 0.06136666610836983,
+          "zero9802_mse": 0.061737146228551865,
+          "zero6501_mse": 0.07026301324367523
+        },
+        {
+          "source_row": {
+            "index": 2752,
+            "episode": "424",
+            "dt": 1.2000000476837158
+          },
+          "original9802_mse": 0.07794295996427536,
+          "zero9802_mse": 0.07842272520065308,
+          "zero6501_mse": 0.0829237625002861
+        },
+        {
+          "source_row": {
+            "index": 2825,
+            "episode": "434",
+            "dt": 1.2000000476837158
+          },
+          "original9802_mse": 0.07475162297487259,
+          "zero9802_mse": 0.0737617239356041,
+          "zero6501_mse": 0.07992774248123169
+        },
+        {
+          "source_row": {
+            "index": 2897,
+            "episode": "443",
+            "dt": 0.10000038146972656
+          },
+          "original9802_mse": 0.06592560559511185,
+          "zero9802_mse": 0.06570526212453842,
+          "zero6501_mse": 0.061151813715696335
+        },
+        {
+          "source_row": {
+            "index": 2970,
+            "episode": "454",
+            "dt": 1.2000000476837158
+          },
+          "original9802_mse": 0.06513877958059311,
+          "zero9802_mse": 0.06737866252660751,
+          "zero6501_mse": 0.09024063497781754
+        },
+        {
+          "source_row": {
+            "index": 3042,
+            "episode": "464",
+            "dt": 1.1999998092651367
+          },
+          "original9802_mse": 0.08106691390275955,
+          "zero9802_mse": 0.08219639211893082,
+          "zero6501_mse": 0.08974563330411911
+        },
+        {
+          "source_row": {
+            "index": 3114,
+            "episode": "477",
+            "dt": 1.2000000476837158
+          },
+          "original9802_mse": 0.09333499521017075,
+          "zero9802_mse": 0.09068139642477036,
+          "zero6501_mse": 0.07926536351442337
+        },
+        {
+          "source_row": {
+            "index": 3187,
+            "episode": "490",
+            "dt": 1.1999998092651367
+          },
+          "original9802_mse": 0.0761900544166565,
+          "zero9802_mse": 0.07690205425024033,
+          "zero6501_mse": 0.08128411322832108
+        },
+        {
+          "source_row": {
+            "index": 3259,
+            "episode": "504",
+            "dt": 1.1999998092651367
+          },
+          "original9802_mse": 0.06920233368873596,
+          "zero9802_mse": 0.0701141506433487,
+          "zero6501_mse": 0.07356158643960953
+        },
+        {
+          "source_row": {
+            "index": 3332,
+            "episode": "516",
+            "dt": 1.1999998092651367
+          },
+          "original9802_mse": 0.06928709894418716,
+          "zero9802_mse": 0.07040945440530777,
+          "zero6501_mse": 0.08077581971883774
+        },
+        {
+          "source_row": {
+            "index": 3404,
+            "episode": "528",
+            "dt": 0.03333330154418945
+          },
+          "original9802_mse": 0.03740369528532028,
+          "zero9802_mse": 0.03708677366375923,
+          "zero6501_mse": 0.03627072647213936
+        },
+        {
+          "source_row": {
+            "index": 3477,
+            "episode": "570",
+            "dt": 1.1999998092651367
+          },
+          "original9802_mse": 0.06352674961090088,
+          "zero9802_mse": 0.06436403840780258,
+          "zero6501_mse": 0.07341346889734268
+        },
+        {
+          "source_row": {
+            "index": 3549,
+            "episode": "582",
+            "dt": 1.2000000476837158
+          },
+          "original9802_mse": 0.08531376719474792,
+          "zero9802_mse": 0.08851370960474014,
+          "zero6501_mse": 0.10667762160301208
+        },
+        {
+          "source_row": {
+            "index": 3622,
+            "episode": "603",
+            "dt": 1.2000000476837158
+          },
+          "original9802_mse": 0.0684625580906868,
+          "zero9802_mse": 0.06953547149896622,
+          "zero6501_mse": 0.08450967073440552
+        },
+        {
+          "source_row": {
+            "index": 3694,
+            "episode": "613",
+            "dt": 1.1999998092651367
+          },
+          "original9802_mse": 0.060942839831113815,
+          "zero9802_mse": 0.06108288839459419,
+          "zero6501_mse": 0.08059552311897278
+        },
+        {
+          "source_row": {
+            "index": 3766,
+            "episode": "622",
+            "dt": 1.1999998092651367
+          },
+          "original9802_mse": 0.07345510274171829,
+          "zero9802_mse": 0.07436876744031906,
+          "zero6501_mse": 0.08052307367324829
+        },
+        {
+          "source_row": {
+            "index": 3839,
+            "episode": "633",
+            "dt": 1.2000000476837158
+          },
+          "original9802_mse": 0.06664054840803146,
+          "zero9802_mse": 0.06815155595541,
+          "zero6501_mse": 0.07508160918951035
+        },
+        {
+          "source_row": {
+            "index": 3911,
+            "episode": "646",
+            "dt": 0.8333334922790527
+          },
+          "original9802_mse": 0.08614803105592728,
+          "zero9802_mse": 0.08601308614015579,
+          "zero6501_mse": 0.09169100970029831
+        },
+        {
+          "source_row": {
+            "index": 3984,
+            "episode": "663",
+            "dt": 0.1333332061767578
+          },
+          "original9802_mse": 0.04229050874710083,
+          "zero9802_mse": 0.041980404406785965,
+          "zero6501_mse": 0.04349994659423828
+        },
+        {
+          "source_row": {
+            "index": 4056,
+            "episode": "676",
+            "dt": 1.1999998092651367
+          },
+          "original9802_mse": 0.0741167739033699,
+          "zero9802_mse": 0.07559823244810104,
+          "zero6501_mse": 0.10227043181657791
+        },
+        {
+          "source_row": {
+            "index": 4129,
+            "episode": "688",
+            "dt": 0.8666667938232422
+          },
+          "original9802_mse": 0.10687887668609619,
+          "zero9802_mse": 0.10761254280805588,
+          "zero6501_mse": 0.11780186742544174
+        },
+        {
+          "source_row": {
+            "index": 4201,
+            "episode": "703",
+            "dt": 1.1999998092651367
+          },
+          "original9802_mse": 0.09533620625734329,
+          "zero9802_mse": 0.09670781344175339,
+          "zero6501_mse": 0.13277946412563324
+        },
+        {
+          "source_row": {
+            "index": 4274,
+            "episode": "714",
+            "dt": 0.8333334922790527
+          },
+          "original9802_mse": 0.0812537744641304,
+          "zero9802_mse": 0.08141660690307617,
+          "zero6501_mse": 0.09479542821645737
+        },
+        {
+          "source_row": {
+            "index": 4346,
+            "episode": "728",
+            "dt": 1.2000000476837158
+          },
+          "original9802_mse": 0.07900158315896988,
+          "zero9802_mse": 0.07880234718322754,
+          "zero6501_mse": 0.0871211588382721
+        },
+        {
+          "source_row": {
+            "index": 4418,
+            "episode": "741",
+            "dt": 1.2000000476837158
+          },
+          "original9802_mse": 0.08533681184053421,
+          "zero9802_mse": 0.08792153000831604,
+          "zero6501_mse": 0.09595025330781937
+        },
+        {
+          "source_row": {
+            "index": 4491,
+            "episode": "755",
+            "dt": 1.2000000476837158
+          },
+          "original9802_mse": 0.08726481348276138,
+          "zero9802_mse": 0.08315766602754593,
+          "zero6501_mse": 0.08242994546890259
+        },
+        {
+          "source_row": {
+            "index": 4563,
+            "episode": "767",
+            "dt": 0.9000005722045898
+          },
+          "original9802_mse": 0.026895269751548767,
+          "zero9802_mse": 0.027476176619529724,
+          "zero6501_mse": 0.033610377460718155
+        },
+        {
+          "source_row": {
+            "index": 4636,
+            "episode": "777",
+            "dt": 1.1999998092651367
+          },
+          "original9802_mse": 0.07242275029420853,
+          "zero9802_mse": 0.07327622920274734,
+          "zero6501_mse": 0.08446694165468216
+        },
+        {
+          "source_row": {
+            "index": 4708,
+            "episode": "787",
+            "dt": 1.1999998092651367
+          },
+          "original9802_mse": 0.10314901918172836,
+          "zero9802_mse": 0.10547976940870285,
+          "zero6501_mse": 0.09390754252672195
+        },
+        {
+          "source_row": {
+            "index": 4781,
+            "episode": "842",
+            "dt": 1.2000000476837158
+          },
+          "original9802_mse": 0.09192029386758804,
+          "zero9802_mse": 0.09087049961090088,
+          "zero6501_mse": 0.08851303905248642
+        },
+        {
+          "source_row": {
+            "index": 4853,
+            "episode": "856",
+            "dt": 1.0
+          },
+          "original9802_mse": 0.09912123531103134,
+          "zero9802_mse": 0.09949637204408646,
+          "zero6501_mse": 0.10947337746620178
+        },
+        {
+          "source_row": {
+            "index": 4925,
+            "episode": "872",
+            "dt": 1.2000000476837158
+          },
+          "original9802_mse": 0.11006030440330505,
+          "zero9802_mse": 0.11198645085096359,
+          "zero6501_mse": 0.11240950226783752
+        },
+        {
+          "source_row": {
+            "index": 4998,
+            "episode": "884",
+            "dt": 1.2000000476837158
+          },
+          "original9802_mse": 0.06597339361906052,
+          "zero9802_mse": 0.06524104624986649,
+          "zero6501_mse": 0.0724894180893898
+        },
+        {
+          "source_row": {
+            "index": 5070,
+            "episode": "894",
+            "dt": 1.200000286102295
+          },
+          "original9802_mse": 0.09174784272909164,
+          "zero9802_mse": 0.09284207969903946,
+          "zero6501_mse": 0.12114585191011429
+        },
+        {
+          "source_row": {
+            "index": 5143,
+            "episode": "907",
+            "dt": 0.5999999046325684
+          },
+          "original9802_mse": 0.08405890315771103,
+          "zero9802_mse": 0.08588755875825882,
+          "zero6501_mse": 0.09036672115325928
+        },
+        {
+          "source_row": {
+            "index": 5215,
+            "episode": "921",
+            "dt": 0.09999990463256836
+          },
+          "original9802_mse": 0.02899589203298092,
+          "zero9802_mse": 0.029598722234368324,
+          "zero6501_mse": 0.03671065345406532
+        },
+        {
+          "source_row": {
+            "index": 5288,
+            "episode": "937",
+            "dt": 1.2000000476837158
+          },
+          "original9802_mse": 0.05943670868873596,
+          "zero9802_mse": 0.059425950050354004,
+          "zero6501_mse": 0.07442864775657654
+        },
+        {
+          "source_row": {
+            "index": 5360,
+            "episode": "988",
+            "dt": 1.1999998092651367
+          },
+          "original9802_mse": 0.10505274683237076,
+          "zero9802_mse": 0.10942789167165756,
+          "zero6501_mse": 0.11033657193183899
+        },
+        {
+          "source_row": {
+            "index": 5433,
+            "episode": "999",
+            "dt": 0.46666669845581055
+          },
+          "original9802_mse": 0.048881590366363525,
+          "zero9802_mse": 0.04891204461455345,
+          "zero6501_mse": 0.052779704332351685
+        },
+        {
+          "source_row": {
+            "index": 5505,
+            "episode": "1012",
+            "dt": 1.2000000476837158
+          },
+          "original9802_mse": 0.06841210275888443,
+          "zero9802_mse": 0.0692727193236351,
+          "zero6501_mse": 0.09080364555120468
+        },
+        {
+          "source_row": {
+            "index": 5577,
+            "episode": "1023",
+            "dt": 1.1999998092651367
+          },
+          "original9802_mse": 0.09699151664972305,
+          "zero9802_mse": 0.09943252056837082,
+          "zero6501_mse": 0.10650304704904556
+        },
+        {
+          "source_row": {
+            "index": 5650,
+            "episode": "1034",
+            "dt": 1.1999998092651367
+          },
+          "original9802_mse": 0.08806166052818298,
+          "zero9802_mse": 0.08988773822784424,
+          "zero6501_mse": 0.10337574034929276
+        },
+        {
+          "source_row": {
+            "index": 5722,
+            "episode": "1045",
+            "dt": 1.1999998092651367
+          },
+          "original9802_mse": 0.09079429507255554,
+          "zero9802_mse": 0.09306620806455612,
+          "zero6501_mse": 0.11655233055353165
+        },
+        {
+          "source_row": {
+            "index": 5795,
+            "episode": "1056",
+            "dt": 1.200000286102295
+          },
+          "original9802_mse": 0.1196189820766449,
+          "zero9802_mse": 0.11937511712312698,
+          "zero6501_mse": 0.1155654788017273
+        },
+        {
+          "source_row": {
+            "index": 5867,
+            "episode": "1069",
+            "dt": 1.2000000476837158
+          },
+          "original9802_mse": 0.05749015510082245,
+          "zero9802_mse": 0.05794887617230415,
+          "zero6501_mse": 0.06409544497728348
+        },
+        {
+          "source_row": {
+            "index": 5940,
+            "episode": "1082",
+            "dt": 1.1999998092651367
+          },
+          "original9802_mse": 0.11325526237487793,
+          "zero9802_mse": 0.11295291781425476,
+          "zero6501_mse": 0.09644319862127304
+        },
+        {
+          "source_row": {
+            "index": 6012,
+            "episode": "1097",
+            "dt": 1.2000000476837158
+          },
+          "original9802_mse": 0.13902954757213593,
+          "zero9802_mse": 0.13872922956943512,
+          "zero6501_mse": 0.12600256502628326
+        },
+        {
+          "source_row": {
+            "index": 6085,
+            "episode": "1152",
+            "dt": 1.1999998092651367
+          },
+          "original9802_mse": 0.08756793290376663,
+          "zero9802_mse": 0.08841300755739212,
+          "zero6501_mse": 0.09031582623720169
+        },
+        {
+          "source_row": {
+            "index": 6157,
+            "episode": "1163",
+            "dt": 1.200000286102295
+          },
+          "original9802_mse": 0.10234732180833817,
+          "zero9802_mse": 0.10257041454315186,
+          "zero6501_mse": 0.11198825389146805
+        },
+        {
+          "source_row": {
+            "index": 6229,
+            "episode": "1173",
+            "dt": 0.8000001907348633
+          },
+          "original9802_mse": 0.05130230262875557,
+          "zero9802_mse": 0.05213094875216484,
+          "zero6501_mse": 0.0527520626783371
+        },
+        {
+          "source_row": {
+            "index": 6302,
+            "episode": "1185",
+            "dt": 1.200000286102295
+          },
+          "original9802_mse": 0.10060835629701614,
+          "zero9802_mse": 0.10277669876813889,
+          "zero6501_mse": 0.12106790393590927
+        },
+        {
+          "source_row": {
+            "index": 6374,
+            "episode": "1195",
+            "dt": 1.2000000476837158
+          },
+          "original9802_mse": 0.07170330733060837,
+          "zero9802_mse": 0.06805988401174545,
+          "zero6501_mse": 0.06391075253486633
+        },
+        {
+          "source_row": {
+            "index": 6447,
+            "episode": "1205",
+            "dt": 1.1999998092651367
+          },
+          "original9802_mse": 0.18052971363067627,
+          "zero9802_mse": 0.183411106467247,
+          "zero6501_mse": 0.1883401870727539
+        },
+        {
+          "source_row": {
+            "index": 6519,
+            "episode": "1217",
+            "dt": 1.1999998092651367
+          },
+          "original9802_mse": 0.05779830738902092,
+          "zero9802_mse": 0.057330530136823654,
+          "zero6501_mse": 0.10308914631605148
+        },
+        {
+          "source_row": {
+            "index": 6592,
+            "episode": "1229",
+            "dt": 0.4333333969116211
+          },
+          "original9802_mse": 0.06284249573945999,
+          "zero9802_mse": 0.06399670988321304,
+          "zero6501_mse": 0.06257102638483047
+        },
+        {
+          "source_row": {
+            "index": 6664,
+            "episode": "1241",
+            "dt": 0.4333333969116211
+          },
+          "original9802_mse": 0.06414172798395157,
+          "zero9802_mse": 0.06578012555837631,
+          "zero6501_mse": 0.06953829526901245
+        },
+        {
+          "source_row": {
+            "index": 6737,
+            "episode": "1254",
+            "dt": 1.2000000476837158
+          },
+          "original9802_mse": 0.13108772039413452,
+          "zero9802_mse": 0.13381637632846832,
+          "zero6501_mse": 0.13724297285079956
+        },
+        {
+          "source_row": {
+            "index": 6809,
+            "episode": "1268",
+            "dt": 1.1999998092651367
+          },
+          "original9802_mse": 0.16725151240825653,
+          "zero9802_mse": 0.16456860303878784,
+          "zero6501_mse": 0.17584264278411865
+        },
+        {
+          "source_row": {
+            "index": 6881,
+            "episode": "1279",
+            "dt": 1.1999998092651367
+          },
+          "original9802_mse": 0.09366186708211899,
+          "zero9802_mse": 0.09630947560071945,
+          "zero6501_mse": 0.09069908410310745
+        },
+        {
+          "source_row": {
+            "index": 6954,
+            "episode": "1292",
+            "dt": 1.2000000476837158
+          },
+          "original9802_mse": 0.10979976505041122,
+          "zero9802_mse": 0.10529953986406326,
+          "zero6501_mse": 0.0804462879896164
+        },
+        {
+          "source_row": {
+            "index": 7026,
+            "episode": "1303",
+            "dt": 1.1999998092651367
+          },
+          "original9802_mse": 0.17594976723194122,
+          "zero9802_mse": 0.17465151846408844,
+          "zero6501_mse": 0.16188958287239075
+        },
+        {
+          "source_row": {
+            "index": 7099,
+            "episode": "1314",
+            "dt": 1.1999998092651367
+          },
+          "original9802_mse": 0.09330446273088455,
+          "zero9802_mse": 0.09498324245214462,
+          "zero6501_mse": 0.09341884404420853
+        },
+        {
+          "source_row": {
+            "index": 7171,
+            "episode": "1326",
+            "dt": 1.200000286102295
+          },
+          "original9802_mse": 0.09324055165052414,
+          "zero9802_mse": 0.0917489230632782,
+          "zero6501_mse": 0.1002596840262413
+        },
+        {
+          "source_row": {
+            "index": 7244,
+            "episode": "1337",
+            "dt": 0.6333341598510742
+          },
+          "original9802_mse": 0.07868244498968124,
+          "zero9802_mse": 0.07781996577978134,
+          "zero6501_mse": 0.08968857675790787
+        },
+        {
+          "source_row": {
+            "index": 7316,
+            "episode": "1349",
+            "dt": 1.1999998092651367
+          },
+          "original9802_mse": 0.1695052534341812,
+          "zero9802_mse": 0.16580882668495178,
+          "zero6501_mse": 0.1580294519662857
+        },
+        {
+          "source_row": {
+            "index": 7388,
+            "episode": "1360",
+            "dt": 0.03333330154418945
+          },
+          "original9802_mse": 0.04331807792186737,
+          "zero9802_mse": 0.04228923097252846,
+          "zero6501_mse": 0.04160048067569733
+        },
+        {
+          "source_row": {
+            "index": 7461,
+            "episode": "1373",
+            "dt": 1.1999998092651367
+          },
+          "original9802_mse": 0.0982876718044281,
+          "zero9802_mse": 0.10035300999879837,
+          "zero6501_mse": 0.09765737503767014
+        },
+        {
+          "source_row": {
+            "index": 7533,
+            "episode": "1387",
+            "dt": 1.200000286102295
+          },
+          "original9802_mse": 0.10672884434461594,
+          "zero9802_mse": 0.10840284824371338,
+          "zero6501_mse": 0.11068910360336304
+        },
+        {
+          "source_row": {
+            "index": 7606,
+            "episode": "1432",
+            "dt": 1.2000000476837158
+          },
+          "original9802_mse": 0.23434990644454956,
+          "zero9802_mse": 0.23534856736660004,
+          "zero6501_mse": 0.24669712781906128
+        },
+        {
+          "source_row": {
+            "index": 7678,
+            "episode": "1444",
+            "dt": 1.2000000476837158
+          },
+          "original9802_mse": 0.2016349583864212,
+          "zero9802_mse": 0.2027178257703781,
+          "zero6501_mse": 0.19825981557369232
+        },
+        {
+          "source_row": {
+            "index": 7751,
+            "episode": "1457",
+            "dt": 1.2000000476837158
+          },
+          "original9802_mse": 0.23325423896312714,
+          "zero9802_mse": 0.23380206525325775,
+          "zero6501_mse": 0.2342289686203003
+        },
+        {
+          "source_row": {
+            "index": 7823,
+            "episode": "1509",
+            "dt": 1.200000286102295
+          },
+          "original9802_mse": 0.10626915842294693,
+          "zero9802_mse": 0.10978754609823227,
+          "zero6501_mse": 0.11649980396032333
+        },
+        {
+          "source_row": {
+            "index": 7896,
+            "episode": "1521",
+            "dt": 0.5333333015441895
+          },
+          "original9802_mse": 0.153629332780838,
+          "zero9802_mse": 0.15158671140670776,
+          "zero6501_mse": 0.1473538875579834
+        },
+        {
+          "source_row": {
+            "index": 7968,
+            "episode": "1564",
+            "dt": 1.2000000476837158
+          },
+          "original9802_mse": 0.10689850896596909,
+          "zero9802_mse": 0.11003988981246948,
+          "zero6501_mse": 0.12145233154296875
+        },
+        {
+          "source_row": {
+            "index": 8040,
+            "episode": "1575",
+            "dt": 1.200000286102295
+          },
+          "original9802_mse": 0.12516936659812927,
+          "zero9802_mse": 0.1281212717294693,
+          "zero6501_mse": 0.17096514999866486
+        },
+        {
+          "source_row": {
+            "index": 8113,
+            "episode": "1586",
+            "dt": 1.1999998092651367
+          },
+          "original9802_mse": 0.17081160843372345,
+          "zero9802_mse": 0.16915293037891388,
+          "zero6501_mse": 0.15684598684310913
+        },
+        {
+          "source_row": {
+            "index": 8185,
+            "episode": "1605",
+            "dt": 0.8333334922790527
+          },
+          "original9802_mse": 0.11378435045480728,
+          "zero9802_mse": 0.11394008249044418,
+          "zero6501_mse": 0.1124461218714714
+        },
+        {
+          "source_row": {
+            "index": 8258,
+            "episode": "1617",
+            "dt": 1.1999998092651367
+          },
+          "original9802_mse": 0.26158982515335083,
+          "zero9802_mse": 0.26093199849128723,
+          "zero6501_mse": 0.22842223942279816
+        },
+        {
+          "source_row": {
+            "index": 8330,
+            "episode": "1628",
+            "dt": 0.6333332061767578
+          },
+          "original9802_mse": 0.1038791835308075,
+          "zero9802_mse": 0.10607647895812988,
+          "zero6501_mse": 0.10363412648439407
+        },
+        {
+          "source_row": {
+            "index": 8403,
+            "episode": "1641",
+            "dt": 1.1999998092651367
+          },
+          "original9802_mse": 0.09133687615394592,
+          "zero9802_mse": 0.0930631160736084,
+          "zero6501_mse": 0.10589230805635452
+        },
+        {
+          "source_row": {
+            "index": 8475,
+            "episode": "1652",
+            "dt": 1.2000000476837158
+          },
+          "original9802_mse": 0.17591500282287598,
+          "zero9802_mse": 0.17844049632549286,
+          "zero6501_mse": 0.18920965492725372
+        },
+        {
+          "source_row": {
+            "index": 8548,
+            "episode": "1662",
+            "dt": 1.1999998092651367
+          },
+          "original9802_mse": 0.09396389126777649,
+          "zero9802_mse": 0.09576096385717392,
+          "zero6501_mse": 0.09625961631536484
+        },
+        {
+          "source_row": {
+            "index": 8620,
+            "episode": "1674",
+            "dt": 1.1999998092651367
+          },
+          "original9802_mse": 0.13745011389255524,
+          "zero9802_mse": 0.13874278962612152,
+          "zero6501_mse": 0.14815117418766022
+        },
+        {
+          "source_row": {
+            "index": 8692,
+            "episode": "1685",
+            "dt": 1.200000286102295
+          },
+          "original9802_mse": 0.13318662345409393,
+          "zero9802_mse": 0.13889798521995544,
+          "zero6501_mse": 0.17698150873184204
+        },
+        {
+          "source_row": {
+            "index": 8765,
+            "episode": "1697",
+            "dt": 0.23333311080932617
+          },
+          "original9802_mse": 0.1007009744644165,
+          "zero9802_mse": 0.1029880940914154,
+          "zero6501_mse": 0.11392122507095337
+        },
+        {
+          "source_row": {
+            "index": 8837,
+            "episode": "1711",
+            "dt": 1.2000000476837158
+          },
+          "original9802_mse": 0.16299226880073547,
+          "zero9802_mse": 0.16524022817611694,
+          "zero6501_mse": 0.1731995791196823
+        },
+        {
+          "source_row": {
+            "index": 8910,
+            "episode": "1724",
+            "dt": 1.1999998092651367
+          },
+          "original9802_mse": 0.18560504913330078,
+          "zero9802_mse": 0.18257413804531097,
+          "zero6501_mse": 0.17883379757404327
+        },
+        {
+          "source_row": {
+            "index": 8982,
+            "episode": "1737",
+            "dt": 1.200000286102295
+          },
+          "original9802_mse": 0.1476081758737564,
+          "zero9802_mse": 0.14944042265415192,
+          "zero6501_mse": 0.1881587952375412
+        },
+        {
+          "source_row": {
+            "index": 9055,
+            "episode": "1750",
+            "dt": 1.1999998092651367
+          },
+          "original9802_mse": 0.13641171157360077,
+          "zero9802_mse": 0.14334163069725037,
+          "zero6501_mse": 0.10271188616752625
+        },
+        {
+          "source_row": {
+            "index": 9127,
+            "episode": "1761",
+            "dt": 1.2000000476837158
+          },
+          "original9802_mse": 0.11643173545598984,
+          "zero9802_mse": 0.11760043352842331,
+          "zero6501_mse": 0.1308222860097885
+        },
+        {
+          "source_row": {
+            "index": 9200,
+            "episode": "1773",
+            "dt": 0.8333330154418945
+          },
+          "original9802_mse": 0.110099196434021,
+          "zero9802_mse": 0.11159977316856384,
+          "zero6501_mse": 0.11457421630620956
+        }
+      ]
+    }
+  }
+}

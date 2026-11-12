@@ -1,0 +1,97 @@
+{
+  "source_sha256": {
+    "local-repair512-summary-20261113.json": "accfbfa07144d6fbce693ccd65ea80090c25fd797e01e91434c671beec38557c",
+    "local-repair-probes-20261113/results.json": "5320c40a6c70fcc4e0662f8ec25b18d23708303c499cd8925bd32c53648e387c",
+    "local-repair-swaps-20261113/results.json": "a6df6bb8ba1070cb15c72a8b7af7d30debf0b2fedce6de4e96af8ee9dc7e6617",
+    "local-repair-soft-drift-all-seeds-summary.json": "a20bb6d51142c4339a97cbc93ec03505a1e1c9cd6097de3182ac023a56dc45d1"
+  },
+  "scope": "Descriptive aggregation of completed fixed experiments; no new fitting, selection, or confidence intervals.",
+  "groups": {
+    "zero": {
+      "validation": {
+        "normalized_mse_old128_scale": 0.42001288663077985,
+        "right_gripper_mse": 0.08593878976979279
+      },
+      "observed96": {
+        "normalized_mse_old128_scale": 0.40262879368282417,
+        "right_gripper_mse": 0.07672471792325362
+      }
+    },
+    "F": {
+      "validation": {
+        "normalized_mse_old128_scale": 0.29198174793155957,
+        "right_gripper_mse": 0.0893235785837592
+      },
+      "observed96": {
+        "normalized_mse_old128_scale": 0.2755935855833926,
+        "right_gripper_mse": 0.08061981346537901
+      },
+      "swap_mean": {
+        "symmetric_kl": 2033.1839131024908,
+        "mean_difference_squared": 43.81779842281002,
+        "mean_difference_mahalanobis_squared": 4039.6996069182933,
+        "logvar_difference_squared": 37.05322327104607,
+        "decoder_output_difference_mse": 0.031094800680875778,
+        "true_future_mse": 0.10784841328859329,
+        "swapped_code_true_target_mse": 0.13979794085025787
+      }
+    },
+    "H": {
+      "validation": {
+        "normalized_mse_old128_scale": 0.2867062975941652,
+        "right_gripper_mse": 0.08855891804932839
+      },
+      "observed96": {
+        "normalized_mse_old128_scale": 0.27741489958457877,
+        "right_gripper_mse": 0.08191286673020023
+      },
+      "swap_mean": {
+        "symmetric_kl": 2001.0689991169697,
+        "mean_difference_squared": 43.059996180716325,
+        "mean_difference_mahalanobis_squared": 3975.4697789472507,
+        "logvar_difference_squared": 37.05322327104607,
+        "decoder_output_difference_mse": 0.032899693896373115,
+        "true_future_mse": 0.10765925546487172,
+        "swapped_code_true_target_mse": 0.1403145690759023
+      }
+    },
+    "D": {
+      "validation": {
+        "normalized_mse_old128_scale": 0.29198174793155957,
+        "right_gripper_mse": 0.0893235785837592
+      },
+      "observed96": {
+        "normalized_mse_old128_scale": 0.2755935855833926,
+        "right_gripper_mse": 0.08061981346537901
+      },
+      "swap_mean": {
+        "symmetric_kl": 2033.1839131024908,
+        "mean_difference_squared": 43.81779842281002,
+        "mean_difference_mahalanobis_squared": 4039.6996069182933,
+        "logvar_difference_squared": 37.05322327104607,
+        "decoder_output_difference_mse": 0.050282929092645645,
+        "true_future_mse": 0.10586483279863994,
+        "swapped_code_true_target_mse": 0.15596030155817667
+      }
+    },
+    "HD": {
+      "validation": {
+        "normalized_mse_old128_scale": 0.2859849378019098,
+        "right_gripper_mse": 0.08754160218266605
+      },
+      "observed96": {
+        "normalized_mse_old128_scale": 0.27172689528632676,
+        "right_gripper_mse": 0.07986337294775496
+      },
+      "swap_mean": {
+        "symmetric_kl": 1739.9186539453776,
+        "mean_difference_squared": 42.316705613412914,
+        "mean_difference_mahalanobis_squared": 3453.1690886040665,
+        "logvar_difference_squared": 37.05322327104607,
+        "decoder_output_difference_mse": 0.047165961315234504,
+        "true_future_mse": 0.10367212444543839,
+        "swapped_code_true_target_mse": 0.14907163878281912
+      }
+    }
+  }
+}

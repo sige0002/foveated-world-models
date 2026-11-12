@@ -1,0 +1,136 @@
+{
+  "no_training": true,
+  "no_real_checkpoint_loaded": true,
+  "no_probe_fitting": true,
+  "threads": 2,
+  "shapes": {
+    "train": {
+      "query": [
+        512,
+        1,
+        1024
+      ],
+      "current": [
+        512,
+        196608
+      ],
+      "state": [
+        512,
+        20
+      ],
+      "target": [
+        512,
+        8
+      ]
+    },
+    "validation": {
+      "query": [
+        64,
+        1,
+        1024
+      ],
+      "current": [
+        64,
+        196608
+      ],
+      "state": [
+        64,
+        20
+      ],
+      "target": [
+        64,
+        8
+      ]
+    },
+    "observed96": {
+      "query": [
+        96,
+        1,
+        1024
+      ],
+      "current": [
+        96,
+        196608
+      ],
+      "state": [
+        96,
+        20
+      ],
+      "target": [
+        96,
+        8
+      ]
+    }
+  },
+  "future_swap": {
+    "selected_cache_rows": [
+      0,
+      9,
+      18,
+      27,
+      36,
+      45,
+      54,
+      63
+    ],
+    "source_future_cache_rows": [
+      1,
+      10,
+      19,
+      28,
+      37,
+      46,
+      55,
+      0
+    ],
+    "query_shape": [
+      64,
+      1,
+      1024
+    ]
+  },
+  "common_target_scale": [
+    0.046271285478880986,
+    0.15202477708877632,
+    0.11072854679758153,
+    0.41020598912814255,
+    0.03946705774362348,
+    0.09138466839064097,
+    0.05628522143665134,
+    0.2558332155027622
+  ],
+  "source_hashes": {
+    "/home/sadasue/foveated-world-models/runs/reference-idm42-nested512-prior10000/cache_manifest.json": "998ed490c2ab76209c21b76c2fcd3fa83c95d8ad100def6aad536ce069fa8471",
+    "/home/sadasue/foveated-world-models/runs/reference-idm42-observed96-prior10000/cache_manifest.json": "296da56241940e7dd2eb1250ee357a258d4551192c55dcd5c6529c37cbfeba29",
+    "/home/sadasue/foveated-world-models/runs/reference-idm42-nested512-prior10000/train.pt": "7c2d6fe143bd83cfad43d0d919344b3070bb8a0b9a3bc598a84d410fecc798de",
+    "/home/sadasue/foveated-world-models/runs/reference-idm42-nested512-prior10000/validation.pt": "bbb4d0d49e9f4a4a3500e9c78260e3feaf9da33963f5977d98c8983d122c1c09",
+    "/home/sadasue/foveated-world-models/runs/reference-idm42-observed96-prior10000/validation.pt": "7b419bea1eda0f0e871ab40273bf1b59a1d67d5bf2bab23885ba9fee43ab40f4",
+    "/home/sadasue/foveated-world-models/research/results/nested-train512-selection-20261113.json": "6f549b268be91d8a20bd036283bad73d5122253dcc00676a6a989829c952051c",
+    "/home/sadasue/foveated-world-models/research/idm/reference-query-full/manifest.json": "636199923866c2970e86771da3a5516de9a8d30f0c726d84070976d10151e7ce",
+    "/home/sadasue/foveated-world-models/research/idm/observed96-reference-queries2900/manifest.json": "8795c7e7492f2a0c73872b27e92ae5d7160a8220524d1cc0643fe9bf98a7e777",
+    "/home/sadasue/foveated-world-models/research/idm/nested512-independent-verification.json": "bc0e0051cb9e80213395d50e959ad91d2f73fc8051aa509000382fba4320ee25",
+    "/home/sadasue/foveated-world-models/research/idm/query-accessibility512/protocol.json": "df4c29e2aa57308ef49f166de07c0d50fce8a301234b48c14fd9792512512bd2",
+    "/home/sadasue/foveated-world-models/research/idm/reference-query-full/train.pt": "59f0251bdcce5c7dca1a277768ef719c18f567e3b3c3164073171d74861f397c",
+    "/home/sadasue/foveated-world-models/runs/reference-idm42-nested512-prior10000/additional_queries.pt": "1c54725833e894d364fd47376e70ef0ea3bb291ee08779ddccb7181eceaf67ae",
+    "/home/sadasue/foveated-world-models/research/idm/reference-query-full/validation.pt": "83fdd36c590ab211c0a734c24ff198e5d8d2ace70738b1ec822f7a1d339e7ce6",
+    "/home/sadasue/foveated-world-models/research/idm/observed96-reference-queries2900/validation.pt": "916ac68406c367aeb83f2322b7be54f230ceac46a5e09809d726ee16ae8356ea",
+    "/home/sadasue/foveated-world-models/research/idm/reference-comparison2000/reference-42.pt": "b5784dae7b2d0f0e69feec9a5305020e67fc8bab3c681b4e707eeb90c8e05f83",
+    "/home/sadasue/foveated-world-models/research/idm/reference-query-full/train_calibration.pt": "cabb8e89384656768f258f04158353a947ab9e101acc20d5c7d41f1f1956ad8a",
+    "/home/sadasue/foveated-world-models/runs/reference-idm42-nested512-comparison400-20261113/prior_residual-seed42.pt": "a8a84319d8078b3b221ba77d903d2332a4e6f809421803f246575fb967be3233",
+    "/home/sadasue/foveated-world-models/runs/reference-idm42-nested512-comparison400-20261113/comparison.json": "520d18803bd3ebdd7f9d9d9eb81af8047d032a2bd7dd148d6e732521863c3bfb"
+  },
+  "label_hashes": {
+    "/home/sadasue/foveated-world-models/research/idm/nested512-displacement-probe/protocol.json": "2c1e05730a780ca7ac3b2a20cb0e4c46f6cd21bc8e1cf2a725aae4fbec271969",
+    "/home/sadasue/foveated-world-models/research/idm/nested512-displacement-probe/results.json": "38a0c2128a8148e097aa94d452b3222eeda6305a06206c0f88a511cb7d171989",
+    "/home/sadasue/foveated-world-models/research/idm/nested512-displacement-probe/train_labels.pt": "460ba5aea603779d6fae7a4317d8adb7a5f98d282196b0cdc0df6186a7d2d305",
+    "/home/sadasue/foveated-world-models/research/idm/observed-displacement-labels/validation.pt": "a052b2054e45f4de9c3673bfb718962267af50354a3cf6ef36d9c7dc15009214",
+    "/home/sadasue/foveated-world-models/research/idm/observed-displacement-labels/observed96.pt": "ef024d2e15f37d58d84e7cbe02b2f1fb3c580b80b55fe83d83d7dda75eab7a95",
+    "/home/sadasue/foveated-world-models/research/idm/nested512-displacement-probe/fit_artifacts.pt": "2662e807f55155bdee8434ccf180da308a0df147964a270b3672c5001cae62d3"
+  },
+  "script_hashes": {
+    "research/idm/local_repair_evaluation_common.py": "c0d2d500d90390437ae6140b6b11cb92c4a73b903929315574ae11a96bda22d3",
+    "research/idm/evaluate_local_repair_probes.py": "f3732368163e83206b5ad18cf450271350a98312bb2b8b496acbe8c28de27741",
+    "research/idm/evaluate_local_repair_swaps.py": "b173ce145660201260a9e5bb1e5a695d6c381db8784fe6fe964647bf8298c418",
+    "research/idm/test_local_repair_evaluation.py": "b727fb5c411edfca23e15b05125317d9d20b47984a9b6d539c805b20ea461eaf"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "all_checks_passed": true,
+  "counts": {
+    "train": 128,
+    "validation": 64
+  },
+  "reconstruction_max_abs_error": {
+    "train": 0.00341796875,
+    "validation": 0.0029296875
+  },
+  "calibration_exactly_train_refit": true,
+  "representations_exactly_reproduced": true,
+  "manifest_sha256": "21460691508e268aa6a4bdc5b37dc96af584379f23f1e745490785d5fbac627a",
+  "verification_script_sha256": "c357d0cee212396d83044d568339c3ed9a7c6017e374b915d01039be2c4adad1"
+}

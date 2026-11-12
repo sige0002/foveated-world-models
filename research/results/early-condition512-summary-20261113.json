@@ -1,0 +1,32 @@
+{
+  "complete": false,
+  "pending": [
+    "real",
+    "constant",
+    "rms_constant"
+  ],
+  "source_sha256": {
+    "research/results/early-condition512-protocol-20261113.json": "9ad567b5b0fd87686e2ca2bdd4da813572be8e71e2f08c7723b2e7cd8483ffae"
+  },
+  "first_step_independent_gradient_audit": {
+    "real": {
+      "step": 1,
+      "mse": 0.08516573905944824,
+      "preclip_gradient_norm": 0.012433596886694431
+    },
+    "constant": {
+      "step": 1,
+      "mse": 0.08516573905944824,
+      "preclip_gradient_norm": 0.0010591933969408274
+    },
+    "rms_constant": {
+      "step": 1,
+      "mse": 0.08516573905944824,
+      "preclip_gradient_norm": 0.010434475727379322
+    }
+  },
+  "models": {},
+  "real_code_comparisons": {},
+  "scope": "Single seed fixed400, future-conditioned posterior reconstruction on reused evaluation data. Conditional paired intervals exclude training and adaptive selection uncertainty. Constants have different effective capacity; RMS matching does not match function-space regularization. Concurrent wall time is not an isolated speed benchmark.",
+  "script_sha256": "e6c4060c5e8fd6eb5ddff84f32e8a35bae3c111c304cfc30bb598b610c018aad"
+}

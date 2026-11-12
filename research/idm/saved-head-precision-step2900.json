@@ -1,0 +1,17 @@
+{
+  "medium": {
+    "future_swap_mu_energy": 7.1117092375061475e-06,
+    "mu_between_example_variance": 9.110787686950061e-06,
+    "mu_max_abs_vs_float64": 0.003288310175084741
+  },
+  "highest": {
+    "future_swap_mu_energy": 3.136784130219894e-07,
+    "mu_between_example_variance": 6.752743502147496e-07,
+    "mu_max_abs_vs_float64": 9.94078145244437e-07
+  },
+  "highest64": {
+    "future_swap_mu_energy": 3.135816733474424e-07,
+    "mu_between_example_variance": 6.751623801816475e-07,
+    "mu_max_abs_vs_float64": 0.0
+  }
+}

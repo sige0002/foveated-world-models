@@ -1,0 +1,96 @@
+{
+  "source_sha256": {
+    "horizon-prior512-observed96-20261113.json": "a39396c6ba67929cdb42bed8342a88bb347e541f7deadb447ea155cd0ca0305c",
+    "nested512-direct-constant400-observed96-20261113.json": "9e62da2fb04a1c05ad2257f31699f2925c9ceff636f9ecac971737ce484c2bef",
+    "nested512-flow400-observed96-20261113.json": "85844bdfb716a06875a4dba8e0df11b833625ba9412ab192b0376a5698d9b92b"
+  },
+  "scope": "Fixed512/400/seed42, known pair horizon, reused96 posterior reconstruction. Short pairs tail-confounded. Conditional CI excludes training/model selection uncertainty.",
+  "strata": {
+    "all": {
+      "count": 96,
+      "mean_mse": {
+        "direct": 0.0855736662245666,
+        "flow": 0.10064542656376337,
+        "horizon_direct": 0.08570360198306541,
+        "horizon_flow": 0.10063151836705704
+      },
+      "comparisons": {
+        "direct": {
+          "difference": 0.00012993575849880776,
+          "relative_change_percent": 0.15184082233643537,
+          "paired_ci95": [
+            1.3557218092804154e-05,
+            0.0002534399032204721
+          ]
+        },
+        "flow": {
+          "difference": -1.3908196706324816e-05,
+          "relative_change_percent": -0.013819005176074484,
+          "paired_ci95": [
+            -6.467022612923756e-05,
+            3.662624658318232e-05
+          ]
+        }
+      }
+    },
+    "nominal": {
+      "count": 69,
+      "mean_mse": {
+        "direct": 0.09378993225054465,
+        "flow": 0.1096838333144568,
+        "horizon_direct": 0.09400095930997876,
+        "horizon_flow": 0.10974686501034792
+      },
+      "comparisons": {
+        "direct": {
+          "difference": 0.00021102705943411675,
+          "relative_change_percent": 0.22499969279259346,
+          "paired_ci95": [
+            6.064702014344326e-05,
+            0.00036793810220948166
+          ]
+        },
+        "flow": {
+          "difference": 6.30316958911177e-05,
+          "relative_change_percent": 0.057466714999288016,
+          "paired_ci95": [
+            1.637188150830891e-05,
+            0.00011538980609696838
+          ]
+        }
+      }
+    },
+    "short": {
+      "count": 27,
+      "mean_mse": {
+        "direct": 0.06457654193595604,
+        "flow": 0.07754727597865793,
+        "horizon_direct": 0.06449924436984239,
+        "horizon_flow": 0.07733674361198037
+      },
+      "comparisons": {
+        "direct": {
+          "difference": -7.72975661136486e-05,
+          "relative_change_percent": -0.11969914119945857,
+          "paired_ci95": [
+            -0.0002201306357703827,
+            6.70569258983488e-05
+          ]
+        },
+        "flow": {
+          "difference": -0.00021053236667756682,
+          "relative_change_percent": -0.2714890549288973,
+          "paired_ci95": [
+            -0.00030593196171577327,
+            -0.00012409152739025937
+          ]
+        }
+      }
+    }
+  },
+  "head_norms": {
+    "horizon_direct": 0.526334285736084,
+    "horizon_flow": 0.32787248492240906
+  },
+  "decision": "No meaningful overall benefit in this fixed-budget pilot. Do not attribute earlier flow/direct gap mainly to missing duration; do not claim duration never matters or camera/action causality."
+}

@@ -1,0 +1,23 @@
+{
+  "target_papers": 100,
+  "cutoff": "2026-11-13",
+  "language": "ja",
+  "objective": "Stage1 latent feature prediction: architecture changes for substantially lower held-out MSE against strong residual regression; no presumed improvement",
+  "coverage": [
+    "flow/rectified-flow foundations",
+    "feature-space generative world models",
+    "representation geometry and autoencoding",
+    "conditional forecasting and bridges",
+    "mean prediction and distillation",
+    "optimization and loss parameterization",
+    "conditional information and action use"
+  ],
+  "exclusions": [
+    "unrelated applications without transferable mechanism",
+    "duplicate versions counted as separate papers",
+    "abstract-only reading counted complete"
+  ],
+  "reuse": "reuse same-version prior extraction only if relevant; distinguish reused from newly read",
+  "current_experiment": "docs/stage1-latent-flow.md",
+  "parallel_idm_research": "research/idm (independent agent; not automatically counted among 100)"
+}

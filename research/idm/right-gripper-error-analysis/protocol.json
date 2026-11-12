@@ -1,0 +1,17 @@
+{
+  "source": "/home/sadasue/foveated-world-models/research/idm/spatial-current-boundary-audit/results.json",
+  "source_sha256": "21ad8920a7241b3562924acdb3c5aa4fd68ed1eab469efc8cc116f6a52bbae37",
+  "target": "right measured gripper endpoint delta, target index7/preparedstate index19; source units, not command",
+  "static_threshold": 0.01,
+  "static_rule": "abs(delta)<=.01, inherited gripper target floor, fixed before evaluation analysis",
+  "small_large_boundary": 0.7268722057342529,
+  "boundary_rule": "Median absolute nonstatic target among train128 only; small:(tau,boundary],large:>boundary; ties retained, empty bins allowed",
+  "prediction_detection": "abs(prediction)>tau; otherwise missed movement when target active. Opposite signs count separately.",
+  "outlier_counts": [
+    1,
+    3,
+    5
+  ],
+  "scope": "Descriptive analysis of already observed evaluation predictions; no training, threshold selection or prediction correction from evaluation labels",
+  "script_sha256": "fceb36449d4f4bcaecb2b060dba6a84abe93f524ac00b24a61a061eb712f5737"
+}

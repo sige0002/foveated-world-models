@@ -1,0 +1,11 @@
+{
+  "paper_ids": [
+    "F006",
+    "F007",
+    "F008",
+    "F009",
+    "F010"
+  ],
+  "reviewed_at": "2026-11-12T16:27:13.361728+00:00",
+  "checks": "Host checked primary fulltext theorem assumptions and numerical result tables against extraction. Generation FID, transport W2, and trajectory-time average are not interpreted as future conditional-mean MSE guarantees."
+}

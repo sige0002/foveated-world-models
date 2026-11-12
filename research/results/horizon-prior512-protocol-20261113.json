@@ -1,0 +1,39 @@
+{
+  "created_at": "2026-11-12T21:01:39.501794+00:00",
+  "hypothesis": "Explicit physical pair duration improves conditional prediction when training/evaluation mix nominal1.2s and shorter tail intervals. Separate from flow integration time.",
+  "arms": [
+    "prior_horizon_residual",
+    "prior_horizon_flow"
+  ],
+  "fixed_settings": {
+    "train_pairs": 512,
+    "steps": 400,
+    "seed": 42,
+    "batch_size": 8,
+    "dim": 128,
+    "layers": 2,
+    "lr": 0.0003,
+    "flow_steps": 4,
+    "noise_scale": 0.1,
+    "threads_each": 4,
+    "skip_final_train_evaluation": true
+  },
+  "encoding": "r=dt/1.2; snap within1e-4 of1. Features(r-1,r\u00b2-1), Linear2\u2192128 bias-free zero initialized.256 extra parameters. Original common weights and global RNG stream preserved.",
+  "control": "Existing full direct/flow512 fixed400 seed42; equivalent to constant nominal physical input, where new head is inactive. Compare source/initialization and generated endpoints, not training-loss magnitudes.",
+  "data_counts": {
+    "train512_short": 79,
+    "dev64_short": 11,
+    "observed96_short": 27
+  },
+  "evaluation": "Fixed400 endpoint. Overall and predeclared abs(dt-1.2)<1e-4 nominal vs shorter groups; full768 MSE, flow sample andmean4. No checkpoint choice. Same reused64/96, posterior reconstruction only.",
+  "deployment_boundary": "dt denotes the requested pair endpoint time known to the prediction query. Actual future termination time is NOT available for a fixed1.2s deployment request. No automatic termination prediction claim.",
+  "confounding": "Shorter pairs arise from tail selection, not randomized horizon sampling. Gain may exploit episode-end correlation, not duration dynamics. Success on these pairs requires later non-tail variable-horizon data before broader claim.",
+  "tests": "2 tests passed: common params/global RNG and nominal condition exact; finite horizon gradient after3 updates opens existing zero AdaLN gates; rejects invalid dt.",
+  "source_sha256": {
+    "research/horizon_prior_decoder.py": "6f18210f769c374fc009e8443e7c396a5783c862b84751acb7cc51a336918339",
+    "research/train_cached_decoders.py": "8d50a701dc0aaee229370b6a838eff7e373d31c05f1c9d3fef414214f57920c5",
+    "research/test_horizon_prior_decoder.py": "e8733e8234dc6055b72d00f01dd470c9bd627575cbcf321f6f00dea51aa19977",
+    "runs/reference-idm42-nested512-prior10000/cache_manifest.json": "998ed490c2ab76209c21b76c2fcd3fa83c95d8ad100def6aad536ce069fa8471"
+  },
+  "novelty": "Duration conditioning is established/basic, not a standalone conference contribution. This addresses a potential input omission before interpreting architecture failures."
+}

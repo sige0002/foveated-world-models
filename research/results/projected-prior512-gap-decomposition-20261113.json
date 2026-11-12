@@ -1,0 +1,9 @@
+{
+  "gap_flow_mean4_minus_direct": 0.015071760339196771,
+  "retained_gap": 0.012521786789875484,
+  "discarded_gap": 0.0025499732194778843,
+  "retained_fraction_of_gap": 0.8308111665835324,
+  "postprojection_only_flow_improvement": 0.0010909964718545384,
+  "postprojection_only_direct_change": 0.0014589778729714453,
+  "scope": "Descriptive fixed model/rank128 decomposition. Retained directions were chosen from train512 prior residual energy, not from evaluation flow/direct errors. Does not prove unique cause."
+}

@@ -1,0 +1,53 @@
+{
+  "sources": {
+    "research/results/prior-correction-unused96-first-evaluation-20261113.json": "5f720c8c63f1e3af908ff5c06315eb1a323ff6855520f1c36c9768597746c370",
+    "research/results/prior-correction-unused96-seed44-20261113.json": "9c680725378f81139f0d23ca91b0a4166e5fceb8287300a861708a3dbe1b2ad5"
+  },
+  "cache_sha256": {
+    "validation": "456a09b4e3cc3c6887732327c25d3ac7d0bd98f7c4898e4ace885298e184220f"
+  },
+  "episodes": 96,
+  "metrics": {
+    "original6501": 0.10944114803957443,
+    "zero_code_prior": 0.10957641593025376,
+    "direct_correction_mean": 0.09319363546092063,
+    "direct_correction_seed_std": 0.00015288378556847,
+    "direct_seed_mse": {
+      "42": 0.0930663794473124,
+      "43": 0.09336322516901419,
+      "44": 0.09315130176643531
+    },
+    "constant_code_correction": 0.11035936490710203,
+    "flow_single_sample_expected_mse": 0.11847432043092947,
+    "flow_mean4": 0.10867777563786755
+  },
+  "relative_improvement_vs_original": 0.14845890115095117,
+  "comparisons": {
+    "direct_mean_vs_original": {
+      "difference": -0.016247512578653794,
+      "ci95": [
+        -0.01969790978570624,
+        -0.013302427086616974
+      ],
+      "fraction_episodes_lower": 0.9791666666666666
+    },
+    "direct_seed42_vs_constant": {
+      "difference": -0.017292985459789634,
+      "ci95": [
+        -0.021126000979954065,
+        -0.01378380429329506
+      ],
+      "fraction_episodes_lower": 0.9375
+    },
+    "direct_seed42_vs_flow_mean4": {
+      "difference": -0.015611396190555146,
+      "ci95": [
+        -0.018044936400353134,
+        -0.01335981160858258
+      ],
+      "fraction_episodes_lower": 0.9895833333333334
+    }
+  },
+  "scope": "Research-unused validation, not external test; frozen step400 models; posterior codes use true future; three decoder seeds share one IDM seed42. Direct mean is mean of per-model MSE, not a prediction ensemble. Bootstrap is paired by episode conditional on trained models, not training or design-selection uncertainty.",
+  "compute": "Direct correction 1 head call plus frozen large decoder; flow sample 4 head calls, mean4 16 plus frozen decoder. Improved IDM requires reference query and separately trained head. Not equal training history versus original Stage1."
+}

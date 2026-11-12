@@ -1,0 +1,12 @@
+{
+  "worktree": "/home/sadasue/fwm-prior-compression-20261113",
+  "files_sha256": {
+    "/home/sadasue/fwm-prior-compression-20261113/research/compressed_prior.py": "a04dcd90cd7648ce1ef420e2b2e9a53360b65e17b0b81abe736809ab5a7e7b10",
+    "/home/sadasue/fwm-prior-compression-20261113/research/test_compressed_prior.py": "c87f029fa1084cafb685aaa1385a0cbe4fafd5e78a0c37728ca6b51a2f3aab17",
+    "/home/sadasue/fwm-prior-compression-20261113/research/fit_linear_prior.py": "ca6b007d0dc46eda31513c64273e781ec5df35d0158f5dbb07c613b17c137d55",
+    "/home/sadasue/fwm-prior-compression-20261113/research/prior-compression-source-snapshot.json": "85eb1b1dbbcace4f0eff6867a1bcbfa02860914d542bb4f8d23850bac89c0e60"
+  },
+  "tests": "3 tests PASS; current-only interface, exact initial current, fixed-decoder gradient route, train-only affine recovery",
+  "linear_output": "runs/linear-prior512-20261113",
+  "neural_status": "trainer not yet built; no neural runs started"
+}

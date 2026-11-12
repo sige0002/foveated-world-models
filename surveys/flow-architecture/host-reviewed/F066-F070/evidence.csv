@@ -1,0 +1,41 @@
+paper_id,field,item_index,kind,source_url,locator,note
+F066,social_background,1,not_stated,https://arxiv.org/html/2206.09012v4,§1,社会的需要の明示的記載なし。
+F066,technical_background,1,author_claim,https://arxiv.org/html/2206.09012v4,§1,独立に学習した拡散priorと別の条件制約を組み合わせる推論が難しい。
+F066,problem,1,author_claim,https://arxiv.org/html/2206.09012v4,§2,任意の微分可能な制約下で高次元変数を近似推論する。
+F066,method,1,demonstrated,https://arxiv.org/html/2206.09012v4,"§2.1–2.2 Eq. 12, Algorithm 1",固定DDPMのノイズ予測誤差をprior項、負の対数制約を尤度項として各ノイズ時刻における点推定を勾配最適化する。初期化と時刻annealingを選ぶ。
+F066,results,1,demonstrated,https://arxiv.org/html/2206.09012v4,"§3–5, Table 1",EnviroAtlasのDurham域ではfine-tuned提案法の精度79.8%、class mean IoU 46.4%、Pittsburgh教師あり＋weakは78.9%、47.9%。画像分割であり未来MSEではない。
+F066,contributions,1,author_claim,https://arxiv.org/html/2206.09012v4,§2–5,独立した拡散priorと微分可能な外部制約を組み合わせた近似推論を提案。
+F066,summary,1,interpretation,https://arxiv.org/html/2206.09012v4,§2,得られる点は近似的なposterior modeでありposterior meanではない。未来予測では事前分布に加え現状態から未来への正当な制約または条件付き尤度が必要。
+F066,remaining_issues,1,interpretation,https://arxiv.org/html/2206.09012v4,"§2.2, §4–5",点推定は近似的なmode探索で初期値・時刻schedule・近似自由エネルギーに依存し、MSE最適の条件付き平均を保証しない。対象に根拠ある制約がなければ未来予測へ転用できない。
+F067,social_background,1,author_claim,https://arxiv.org/html/2405.18782v2,"§1, §4.3",ブラックホール画像など制約の強い科学計測の復元を扱う。
+F067,technical_background,1,author_claim,https://arxiv.org/html/2405.18782v2,§1,拡散逆問題法の近似は目的事後分布からのずれを生み得る。
+F067,problem,1,author_claim,https://arxiv.org/html/2405.18782v2,§3,尤度と拡散priorを分離し、より原理的な事後標本化を実現する。
+F067,method,1,demonstrated,https://arxiv.org/html/2405.18782v2,§3.1–3.4,尤度に基づく補助変数の標本化とGaussian denoising posteriorのprior stepを交互に行うMCMC。固定ρ、score近似誤差等の条件の下で平均Fisher情報の境界を示す。
+F067,results,1,demonstrated,https://arxiv.org/html/2405.18782v2,"§3.4 Theorem 3.1, Appendix A.2, §4.1–4.2 Table 1",固定ρ>0、有限score二乗誤差、連続時間の正則条件下でK反復の平均Fisher情報は初期KL/Kとscore誤差で抑えられる。証明はKL微分と反復間の望遠和。FFHQ 100画像のnoisy Gaussian deblur PSNRはPnP-DM EDM 29.66 dB、DPS 28.83 dB。
+F067,contributions,1,author_claim,https://arxiv.org/html/2405.18782v2,§3,Gaussian denoisingを介する分割標本化と有限時間解析を提示。
+F067,summary,1,interpretation,https://arxiv.org/html/2405.18782v2,§3,尤度p(y|x)と拡散priorが必要。出力は事後標本であってMSE最適な事後平均ではなく、未知の未来観測に対し尤度を勝手に置けない。
+F067,remaining_issues,1,author_claim,https://arxiv.org/html/2405.18782v2,"§3.4, §5, Appendix A.2",著者: 大画像の計算負荷、非線形尤度stepの有限MCMC誤差は解析外。調査者: 平均Fisher情報境界は最終反復MSEの単調性を意味しない。
+F068,social_background,1,not_stated,https://arxiv.org/html/2209.14687v4,§1,社会的需要の明示的記載なし。
+F068,technical_background,1,author_claim,https://arxiv.org/html/2209.14687v4,§1,雑音あり・非線形逆問題では厳密な測定射影が雑音を増幅し得る。
+F068,problem,1,author_claim,https://arxiv.org/html/2209.14687v4,§3,既知の測定過程に対し近似事後拡散を行う。
+F068,method,1,demonstrated,https://arxiv.org/html/2209.14687v4,"§3.1 Theorem 1, Algorithm 1",p(y|x_t)=E[p(y|x0)|x_t]をp(y|E[x0|x_t])で近似し、拡散stepに測定残差の勾配を加える。Jensen gapの境界はGaussian測定雑音、有限operator勾配と条件付き1次モーメントを仮定する。
+F068,results,1,demonstrated,https://arxiv.org/html/2209.14687v4,"§4 Table 1, Appendix A",FFHQ 256、1000検証画像、Gaussian測定雑音σ=0.05の4× SRでDPS FID 39.35、LPIPS 0.214、DDRM 62.15、0.294。分布・知覚指標であり未来MSEではない。
+F068,contributions,1,author_claim,https://arxiv.org/html/2209.14687v4,§3,非線形・雑音あり尤度の勾配を拡散に組み込む近似法。
+F068,summary,1,interpretation,https://arxiv.org/html/2209.14687v4,§3,既知operator・雑音尤度を必要とし、posterior sampleはconditional meanと異なる。時刻tのdenoiser平均は観測条件のみの未来平均でもない。
+F068,remaining_issues,1,interpretation,https://arxiv.org/html/2209.14687v4,"§3.1 Theorem 1, Appendix A, C.6","付録のGaussian密度Lipschitz定数の最大点と式には疑義がある。標準N(μ,σ²)の|φ′|最大点はμ±σ、値e^(−1/2)/(√(2π)σ²)であり、記載定数をそのまま採用しない。一般的近似法の有効性とは別。著者は推論速度を制約とする。"
+F069,social_background,1,author_claim,https://arxiv.org/html/2201.11793v3,§1,異なる劣化モデルに柔軟に対応する画像復元が医療等で必要とされる。
+F069,technical_background,1,author_claim,https://arxiv.org/html/2201.11793v3,§1–2,逆問題別の教師あり学習は制約があり、汎用事後標本法は遅い。
+F069,problem,1,author_claim,https://arxiv.org/html/2201.11793v3,§3,既存の無条件拡散を任意の既知線形逆問題へ適用する。
+F069,method,1,demonstrated,https://arxiv.org/html/2201.11793v3,"§3.2–3.3, Proposition 3.1, Theorem 3.2, Appendix C",既知線形測定のSVD基底で特異値ごとに観測とpriorを組み合わせる。前向き周辺がGaussian denoisingに一致。時刻別重み非共有と指定η条件の下でELBOがDDPM目的に一致。
+F069,results,1,demonstrated,https://arxiv.org/html/2201.11793v3,§5.2 Table 1,noiseless ImageNet 256、4× SRのPSNRはDDRM 26.55 dB/20 NFE、RED 26.08 dB/100 NFE。paired画像復元であり未来予測ではない。
+F069,contributions,1,author_claim,https://arxiv.org/html/2201.11793v3,§3,線形測定SVDと既存拡散denoiserを利用する復元枠組み。
+F069,summary,1,interpretation,https://arxiv.org/html/2201.11793v3,§3,真の現在→未来は一般に既知の逆測定ではない。前提を満たさず同じ更新を使うことはできない。
+F069,remaining_issues,1,interpretation,https://arxiv.org/html/2201.11793v3,"§3.3, §5",時刻別重み非共有などの定理仮定は通常の共有ネットと異なり、有限学習の正確な事後標本やMSE改善を保証しない。
+F070,social_background,1,not_stated,https://arxiv.org/html/2307.12348v3,§1,社会的需要の明示的記載なし。
+F070,technical_background,1,author_claim,https://arxiv.org/html/2307.12348v3,§1,超解像の拡散生成は多数stepによる推論遅延がある。
+F070,problem,1,author_claim,https://arxiv.org/html/2307.12348v3,§2,低解像と高解像の対応対を使い少数stepの復元chainを学習する。
+F070,method,1,demonstrated,https://arxiv.org/html/2307.12348v3,"§2.1 Eq. 1–8, Appendix A","x_t=x0+η_t(y0−x0)+κ√η_t ε、逆平均は(η_{t−1}/η_t)x_t+(α_t/η_t)fθ(x_t,y0,t)。Gaussian積のBayes計算で逆posteriorを導く。x0二乗回帰の理論重みは実用では省略。"
+F070,results,1,demonstrated,https://arxiv.org/html/2307.12348v3,§4.2 Table 2,ImageNet-Test、4× SR、V100の15 stepでResShift PSNR 25.01 dB、LDM-15 24.89 dB。画素復元結果。
+F070,contributions,1,author_claim,https://arxiv.org/html/2307.12348v3,§2–4,paired端点間の残差shiftとノイズscheduleによる効率的な拡散復元。
+F070,summary,1,interpretation,https://arxiv.org/html/2307.12348v3,§2,推論時に既知の明示operatorを必要とせず、情報あるsourceとpaired訓練を活かす。ただし未来生成標本のMSE最適性は別。
+F070,remaining_issues,1,author_claim,https://arxiv.org/html/2307.12348v3,"§2.1, Appendix A・B.3",著者: 人工劣化での学習は複雑な実劣化を網羅せず、重度劣化で失敗する。調査者: source skipは雑音の全次元除去やpaired未来MSEの改善を保証しない。

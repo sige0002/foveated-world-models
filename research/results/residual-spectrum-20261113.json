@@ -1,0 +1,47 @@
+{
+  "dimension": 768,
+  "train_pairs": 128,
+  "val_pairs": 64,
+  "participation_rank": 26.795549423750476,
+  "train_copy_mse": 0.17891663389313117,
+  "val_copy_mse": 0.2058274645880058,
+  "val_train_mean_residual_mse": 0.20586911005877648,
+  "rows": [
+    {
+      "rank": 16,
+      "train_centered_variance_fraction": 0.4639741511377817,
+      "val_oracle_projection_mse": 0.10697561804489424
+    },
+    {
+      "rank": 32,
+      "train_centered_variance_fraction": 0.5672949820030435,
+      "val_oracle_projection_mse": 0.08684598280889703
+    },
+    {
+      "rank": 64,
+      "train_centered_variance_fraction": 0.6784813400619522,
+      "val_oracle_projection_mse": 0.06529258480999264
+    },
+    {
+      "rank": 128,
+      "train_centered_variance_fraction": 0.794427983051782,
+      "val_oracle_projection_mse": 0.04275455420281316
+    },
+    {
+      "rank": 256,
+      "train_centered_variance_fraction": 0.9017154351229911,
+      "val_oracle_projection_mse": 0.021321837882120817
+    },
+    {
+      "rank": 512,
+      "train_centered_variance_fraction": 0.9787230492195937,
+      "val_oracle_projection_mse": 0.0050311738051456965
+    },
+    {
+      "rank": 768,
+      "train_centered_variance_fraction": 1.0,
+      "val_oracle_projection_mse": 9.296250863935611e-31
+    }
+  ],
+  "interpretation": "PCA fitted only on train patch residuals. Oracle projection uses future features; values are NOT prediction accuracy. No dimensionality was selected using validation."
+}

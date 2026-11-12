@@ -1,0 +1,21 @@
+citing_id,cited_id,cited_title,cited_url,locator,priority_reason,scope_status
+F054,F051,DINO-Foresight: Looking into the Future with DINO,https://arxiv.org/abs/2412.11673v2,"§2, §4.1 Table 1",直接的な決定論的特徴予測比較,in_scope
+F051,,Generative Infinite-Vocabulary Transformers,,Appendix B,著者が挙げる不確実性モデルの候補,unresolved
+F054,,Anticipating Visual Representations from Unlabeled Video,,§2,特徴空間予測の基礎的先行研究,foundational_outside_scope
+F053,,LeJEPA: Provable and Scalable Self-Supervised Learning Without the Heuristics,https://arxiv.org/abs/2511.08544,§3.1 [6],SIGRegの基礎,foundational_outside_scope
+F053,F052,DINO-WM: World Models on Pre-trained Visual Features enable Zero-shot Planning,https://arxiv.org/abs/2411.04983,§4.1 [51],直接比較対象,foundational_outside_scope
+F052,,DINOv2: Learning Robust Visual Features without Supervision,https://arxiv.org/abs/2304.07193,§3.1.1,固定視覚符号器の基礎,foundational_outside_scope
+F053,,VICReg: Variance-Invariance-Covariance Regularization for Self-Supervised Learning,https://arxiv.org/abs/2105.04906,§2; References: VICReg: Variance-Invariance-Covariance Regularization for Self-Supervised Learning,LeWM本文で引用する基礎手法・比較対象・評価基盤,foundational_outside_scope
+F053,,Self-Supervised Learning from Images with a Joint-Embedding Predictive Architecture,https://arxiv.org/abs/2301.08243,§2; References: Self-Supervised Learning from Images with a Joint-Embedding Predictive Architecture,LeWM本文で引用する基礎手法・比較対象・評価基盤,foundational_outside_scope
+F053,,Revisiting Feature Prediction for Learning Visual Representations from Video,https://arxiv.org/abs/2404.08471,§2; References: Revisiting Feature Prediction for Learning Visual Representations from Video,LeWM本文で引用する基礎手法・比較対象・評価基盤,foundational_outside_scope
+F053,,Temporal Difference Learning for Model Predictive Control,https://arxiv.org/abs/2203.04955,§2; References: Temporal Difference Learning for Model Predictive Control,LeWM本文で引用する基礎手法・比較対象・評価基盤,foundational_outside_scope
+F053,,"TD-MPC2: Scalable, Robust World Models for Continuous Control",https://arxiv.org/abs/2310.16828,"§2; References: TD-MPC2: Scalable, Robust World Models for Continuous Control",LeWM本文で引用する基礎手法・比較対象・評価基盤,foundational_outside_scope
+F053,,Dream to Control: Learning Behaviors by Latent Imagination,https://arxiv.org/abs/1912.01603,§2; References: Dream to Control: Learning Behaviors by Latent Imagination,LeWM本文で引用する基礎手法・比較対象・評価基盤,foundational_outside_scope
+F053,,Mastering Diverse Domains through World Models,https://arxiv.org/abs/2301.04104,§2; References: Mastering Diverse Domains through World Models,LeWM本文で引用する基礎手法・比較対象・評価基盤,foundational_outside_scope
+F053,,Training Agents Inside of Scalable World Models,https://arxiv.org/abs/2509.24527,§2; References: Training Agents Inside of Scalable World Models,LeWM本文で引用する基礎手法・比較対象・評価基盤,foundational_outside_scope
+F053,,World Models,https://arxiv.org/abs/1803.10122,§2; References: World Models,LeWM本文で引用する基礎手法・比較対象・評価基盤,foundational_outside_scope
+F053,,DINOv2: Learning Robust Visual Features without Supervision,https://arxiv.org/abs/2304.07193,§4.1; References: DINOv2: Learning Robust Visual Features without Supervision,LeWM本文で引用する基礎手法・比較対象・評価基盤,foundational_outside_scope
+F053,,Offline Reinforcement Learning with Implicit Q-Learning,https://arxiv.org/abs/2110.06169,Appendix C.3; References: Offline Reinforcement Learning with Implicit Q-Learning,LeWM本文で引用する基礎手法・比較対象・評価基盤,foundational_outside_scope
+F053,,Joint Embedding Predictive Architectures Focus on Slow Features,https://arxiv.org/abs/2211.10831,§2; References: Joint Embedding Predictive Architectures Focus on Slow Features,LeWM本文で引用する基礎手法・比較対象・評価基盤,foundational_outside_scope
+F053,,OSVI-WM: One-Shot Visual Imitation for Unseen Tasks using World-Model-Guided Trajectory Generation,https://arxiv.org/abs/2505.20425,§2; References: OSVI-WM: One-Shot Visual Imitation for Unseen Tasks using World-Model-Guided Trajectory Generation,LeWM本文で引用する基礎手法・比較対象・評価基盤,foundational_outside_scope
+F053,,OGBench: Benchmarking Offline Goal-Conditioned RL,https://arxiv.org/abs/2410.20092,§4.1; References: OGBench: Benchmarking Offline Goal-Conditioned RL,LeWM本文で引用する基礎手法・比較対象・評価基盤,foundational_outside_scope

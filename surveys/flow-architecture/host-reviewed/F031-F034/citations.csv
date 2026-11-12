@@ -1,0 +1,3 @@
+citing_id,cited_id,cited_title,cited_url,locator,priority_reason,scope_status
+F031,F032,Building Normalizing Flows with Stochastic Interpolants,https://arxiv.org/abs/2209.15571v3,§1,基礎手法,in_scope
+F034,F006,Flow Matching for Generative Modeling,https://arxiv.org/abs/2210.02747v1,§2,条件付き速度回帰の基礎,in_scope

@@ -1,0 +1,4 @@
+citing_id,cited_id,cited_title,cited_url,locator,priority_reason,scope_status
+F056,F049,Progressive Distillation for Fast Sampling of Diffusion Models,https://arxiv.org/abs/2202.00512v2,§4,多段教師の直接比較,in_scope
+F058,F010,Consistency Models,https://arxiv.org/abs/2303.01469v1,§2–3,教師EMA理論の対象,in_scope
+F057,F056,One Step Diffusion via Shortcut Models,https://arxiv.org/abs/2410.12557v3,§7 Table 2,少段生成の比較,in_scope

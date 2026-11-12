@@ -1,0 +1,4 @@
+{
+  "reviewed_at": "2026-11-12T17:07:35.229467+00:00",
+  "checks": "Host checked PnP prior free-energy point-mode objective and segmentation comparison; PnPDM Theorem3.1 fixed rho Fisher bound/score error and deblur table; DPS table1 and Appendix Eq37\u201341 incorrect Gaussian derivative extrema/constant, retained caveat; DDRM Theorem3.2 unshared weights/specified eta vs practical settings and SR PSNR; ResShift posterior parameterization/omitted training weight and runtime PSNR table. Known measurement likelihood assumptions do not hold automatically for future prediction."
+}

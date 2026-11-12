@@ -1,0 +1,41 @@
+paper_id,field,item_index,kind,source_url,locator,note
+F016,social_background,1,author_claim,https://arxiv.org/html/2112.10752v2,"§1, §5",高解像度生成の計算資源負担はアクセスを制約する。
+F016,technical_background,1,author_claim,https://arxiv.org/html/2112.10752v2,"§1, §3",画素空間拡散の学習と逐次推論は高コスト。過大な圧縮は細部を損なう。
+F016,problem,1,author_claim,https://arxiv.org/html/2112.10752v2,§1–3,計算可能な高解像度条件付き画像生成を実現する。
+F016,method,1,demonstrated,https://arxiv.org/html/2112.10752v2,"§3.1–3.3, Eqs. 1–3",知覚圧縮器を事前学習し、固定エンコーダ潜在表現上でU-Netのノイズ二乗誤差を学習。テキスト等はcross-attention、空間整列条件は連結。
+F016,results,1,demonstrated,https://arxiv.org/html/2112.10752v2,§4.3 Table 3,ImageNet条件付き256生成でLDM-4-Gは250 DDIM steps、CFG 1.5でFID 3.60、ADM-Gは同表4.59。ガイダンス等を伴う生成品質指標。
+F016,contributions,1,author_claim,https://arxiv.org/html/2112.10752v2,§3–4,知覚圧縮空間の拡散とcross-attentionによる汎用条件付けを提示。
+F016,summary,1,interpretation,https://arxiv.org/html/2112.10752v2,§3–5,圧縮潜在上の条件付き分布生成で高解像度生成を評価したが、DINO特徴の未来MSEを評価していない。
+F016,remaining_issues,1,author_claim,https://arxiv.org/html/2112.10752v2,§5,著者: 逐次サンプリングはGANより遅く、自己符号化器の再構成誤差は画素精度を要するタスクの制約。調査者: 知覚重視の潜在圧縮がMSE最適である保証はない。
+F017,social_background,1,author_claim,https://arxiv.org/html/2206.07275v4,"§1, Appendix B",医療など予測値に加えて不確実性が意思決定に重要な応用を挙げる。
+F017,technical_background,1,author_claim,https://arxiv.org/html/2206.07275v4,§1,既存の平均回帰や単純分布仮定では多峰性と予測不確実性の記述が制約される。
+F017,problem,1,author_claim,https://arxiv.org/html/2206.07275v4,§2,条件付き応答分布を回帰と分類で学習する。
+F017,method,1,demonstrated,https://arxiv.org/html/2206.07275v4,"§2.1, Algorithms 1–2; Appendix A.1",MSEで条件付き平均推定器fを事前学習。forwardはy_t=√abar*y0+(1−√abar)*f(x)+√(1−abar)*ε、逆過程はfを条件とするノイズ予測と解析的posteriorで標本生成。
+F017,results,1,demonstrated,https://arxiv.org/html/2206.07275v4,§4.1.3 Table 1,10 UCI回帰タスク、90/10分割のRMSEを報告。BostonではCARD 2.61±0.63、GCDS 2.75±0.58、Deep Ensembles 3.17±1.05。CARDは9/10で表中最良。
+F017,contributions,1,author_claim,https://arxiv.org/html/2206.07275v4,"§2, §4",条件付き平均を中心とする拡散による分布予測とQICEを提示。
+F017,summary,1,interpretation,https://arxiv.org/html/2206.07275v4,"§2, §4",平均推定器を生成過程の中心に用いるが、生成器の標本やその標本平均が元の回帰器をpaired MSEで上回る保証はない。
+F017,remaining_issues,1,author_claim,https://arxiv.org/html/2206.07275v4,Appendix B–C,著者: Gaussian拡散と決定論的事前学習器に限定し、大規模データでの計算効率は今後の課題。調査者: UCIは高次元DINO未来特徴での検証ではない。
+F018,social_background,1,not_stated,https://arxiv.org/pdf/2206.00364v2,§1,社会的需要の明示的記載なし。
+F018,technical_background,1,author_claim,https://arxiv.org/pdf/2206.00364v2,§1–2,拡散モデルのサンプリング、ノイズ、学習、ネットワーク設計の選択肢が結び付いて把握しにくい。
+F018,problem,1,author_claim,https://arxiv.org/pdf/2206.00364v2,§1,学習と生成の設計空間を整理し、効率・生成品質を改善する。
+F018,method,1,demonstrated,https://arxiv.org/pdf/2206.00364v2,"§5 Eq. 7–8, Table 1; Appendix B.6","D(x;σ)=c_skip(σ)x+c_out(σ)F(c_in(σ)x,c_noise(σ))。独立な加法ガウス雑音とデータの代表分散σ_data²を用いてc_skip=σ_data²/(σ²+σ_data²)、入出力を標準化し出力誤差の増幅を抑える。"
+F018,results,1,demonstrated,https://arxiv.org/pdf/2206.00364v2,"§5 Table 2, Abstract",CIFAR-10条件付き生成FID 1.79、無条件1.97、35 NFE。preconditioning単独はFID改善が一貫せず、著者は学習の予測可能性を主な利点とする。
+F018,contributions,1,author_claim,https://arxiv.org/pdf/2206.00364v2,§3–5,サンプラー、ノイズ分布、損失重み、入力・出力・skipの設計を分離し体系化した。
+F018,summary,1,interpretation,https://arxiv.org/pdf/2206.00364v2,"§5, Appendix B.6",解析skipは全入力次元を出力へ通し得るが、条件付き未来平均に最適な係数とは限らず、ノイズを自動的に除くものではない。
+F018,remaining_issues,1,interpretation,https://arxiv.org/pdf/2206.00364v2,"§5, Appendix B.6",スカラー分散と独立ノイズの導出は異方性や条件付き残差の分布で要再評価。FID改善はpaired DINO MSE改善を示さない。
+F019,social_background,1,not_stated,https://arxiv.org/html/2301.11093v2,§1,社会的需要の明示的記載なし。
+F019,technical_background,1,author_claim,https://arxiv.org/html/2301.11093v2,§1,高解像度画像の拡散は潜在空間や多段超解像で複雑化する。
+F019,problem,1,author_claim,https://arxiv.org/html/2301.11093v2,"§1, §3",単一モデルの画素空間拡散を高解像度へ拡張する。
+F019,method,1,demonstrated,https://arxiv.org/html/2301.11093v2,§3.1–3.5,解像度に応じlog-SNRをシフトし、低解像度段を拡張、適所にdropoutを加え、downsamplingとU-ViTを用いる。独立ノイズ下の2×2平均化では標準偏差が半分、SNRは4倍。
+F019,results,1,demonstrated,https://arxiv.org/html/2301.11093v2,§5.1 Table 2,ImageNet 256でeval FIDは元cosine 6.87、32相当へのshiftで3.71。画像生成の評価であり点予測誤差でない。
+F019,contributions,1,author_claim,https://arxiv.org/html/2301.11093v2,"§3, §5",高解像度単一段生成のためのノイズ・モデル規模・正則化と縮小を組み合わせた。
+F019,summary,1,interpretation,https://arxiv.org/html/2301.11093v2,"§3, §5",画素解像度と相関構造に沿ってスケジュールを調整する実証であり、固定ランク出力の表現制約を解消する結果ではない。
+F019,remaining_issues,1,interpretation,https://arxiv.org/html/2301.11093v2,"§3.1, §5 Tables 2, 6",平均化のSNR計算は独立雑音の仮定に依存し、画像相関の直感を任意のDINO特徴に自動転用できない。多尺度損失は256ではFIDを悪化させた。
+F020,social_background,1,not_stated,https://arxiv.org/html/2301.10972v4,§1,社会的需要の明示的記載なし。
+F020,technical_background,1,author_claim,https://arxiv.org/html/2301.10972v4,§1,一様時刻標本化ではscheduleが学習するノイズ水準の分布を決め、高解像度の冗長性が適正scheduleを変える。
+F020,problem,1,author_claim,https://arxiv.org/html/2301.10972v4,§2–3,ノイズ曲線と入力スケールが画像生成品質に与える影響を比較する。
+F020,method,1,demonstrated,https://arxiv.org/html/2301.10972v4,"§2, Algorithms 1–3",cosine・sigmoid・線形schedule、入力スケール、入力正規化を比較し、連続時間の学習時と推論時のscheduleを別に選ぶ。
+F020,results,1,demonstrated,https://arxiv.org/html/2301.10972v4,§3.1–3.3 Tables 3–4,クラス条件付きImageNet 256、50k標本・1000 DDPM stepsでFID: 1−t scale 1が7.21、scale 0.4が3.52。固定scale 1のsigmoid最良は4.28。
+F020,contributions,1,author_claim,https://arxiv.org/html/2301.10972v4,§2–3,schedule形状と入力スケールの比較および単純な複合戦略を提示。
+F020,summary,1,interpretation,https://arxiv.org/html/2301.10972v4,§1–3,ノイズ水準の学習配分を変えて生成FIDが変わることを示す。固定768→128→768出力射影の像はscheduleだけでは拡張されない。
+F020,remaining_issues,1,author_claim,https://arxiv.org/html/2301.10972v4,§3.4,著者: 提案scheduleは画素空間でのみ実験し、潜在拡散との組合せは可能性として述べる。調査者: DINO条件付きpaired MSEに対する結果はない。

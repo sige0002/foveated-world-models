@@ -1,0 +1,67 @@
+{
+  "variants": {
+    "raw": {
+      "seeds": [
+        42
+      ],
+      "mean_mse_mean": 0.18034386006183922,
+      "mean_mse_sd": null,
+      "train_mean_mse": 0.14401699887093855,
+      "sample_swap_gap": 3.450317308306694e-06
+    },
+    "centered": {
+      "seeds": [
+        42
+      ],
+      "mean_mse_mean": 0.1754397612530738,
+      "mean_mse_sd": null,
+      "train_mean_mse": 0.1370059432083508,
+      "sample_swap_gap": 0.005497946694958955
+    },
+    "reference": {
+      "seeds": [
+        42
+      ],
+      "mean_mse_mean": 0.16994343971600756,
+      "mean_mse_sd": null,
+      "train_mean_mse": 0.13437313353279023,
+      "sample_swap_gap": 0.016961029323283583
+    },
+    "constant": {
+      "seeds": [
+        42
+      ],
+      "mean_mse_mean": 0.18057062866864726,
+      "mean_mse_sd": null,
+      "train_mean_mse": 0.14369094850553665,
+      "sample_swap_gap": 0.0
+    }
+  },
+  "paired_episode_comparisons": {
+    "raw": {
+      "episode_count": 64,
+      "reference_minus_comparator": -0.010400420345831662,
+      "episode_bootstrap95": [
+        -0.012534973940637429,
+        -0.008400704211089762
+      ]
+    },
+    "centered": {
+      "episode_count": 64,
+      "reference_minus_comparator": -0.005496321537066251,
+      "episode_bootstrap95": [
+        -0.007147513289237395,
+        -0.00393147261493141
+      ]
+    },
+    "constant": {
+      "episode_count": 64,
+      "reference_minus_comparator": -0.010627188952639699,
+      "episode_bootstrap95": [
+        -0.012830773201130796,
+        -0.008529790621832949
+      ]
+    }
+  },
+  "limitation": "Posterior sees real future; fixed encoder and tiny training cache. Episode intervals condition on the evaluated seeds; no action or camera semantics tested."
+}

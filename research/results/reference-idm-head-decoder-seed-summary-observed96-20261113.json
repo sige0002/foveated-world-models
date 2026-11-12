@@ -1,0 +1,33 @@
+{
+  "sources": {
+    "research/results/prior-correction-unused96-first-evaluation-20261113.json": "5f720c8c63f1e3af908ff5c06315eb1a323ff6855520f1c36c9768597746c370",
+    "research/results/reference-idm43-decoder43-observed96-20261113.json": "247e9f9ec96e102f64e972e6a276acc92314530332d255d93e4e5ca292cd678d",
+    "research/results/reference-idm44-decoder44-observed96-20261113.json": "a8c96a0b30ff09729c1fdff18283f9e49051519118926e5f78db0a5c5ff75717"
+  },
+  "head_decoder_seeds": [
+    42,
+    43,
+    44
+  ],
+  "per_seed_mse": [
+    0.0930663794473124,
+    0.09298493427922949,
+    0.09383947295524801
+  ],
+  "mean_mse": 0.09329692889392997,
+  "seed_std": 0.0004716183549276065,
+  "original6501_mse": 0.10944114803957443,
+  "relative_reduction": 0.14751507485837623,
+  "difference": -0.016144219145644456,
+  "ci95": [
+    -0.01942846299805549,
+    -0.013340727859758773
+  ],
+  "nominal_1p2": {
+    "count": 69,
+    "mean_mse": 0.10228165024936488,
+    "original_mse": 0.11994207882578822,
+    "relative_reduction": 0.1472413080489835
+  },
+  "scope": "Observed96, not a fresh test. Head and correction seeds varied, frozen encoder/prior shared. Fixed final400, same pairs/features/prior and train-only calibration. Episode bootstrap conditional on fitted models; not design-selection uncertainty. Average model MSE, not an ensemble. Final10000/named9802 baseline audit pending."
+}

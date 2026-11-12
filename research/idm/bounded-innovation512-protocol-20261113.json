@@ -1,0 +1,55 @@
+{
+  "status": "prespecified_before_first_fit",
+  "arms": [
+    "future",
+    "recoding",
+    "noise"
+  ],
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "required_runs": 9,
+  "updates": 400,
+  "batch_size": 8,
+  "optimizer": "AdamW",
+  "learning_rate": 0.0003,
+  "weight_decay": {
+    "ndim_ge_2": 0.01,
+    "ndim_lt_2": 0.0
+  },
+  "clip_global_norm": 1.0,
+  "additional_dimensions": 8,
+  "hard_rate_upper_bound_nat": 1,
+  "initialization": "Normal nonzero head weights, common per seed; old32 decoder projection preserved, new8 columns zero",
+  "training_samples_per_example": 1,
+  "evaluation": "four independent draw losses averaged, not averaged predictions",
+  "minibatch_generator": "seed+1000",
+  "training_noise_generator": "seed+2000",
+  "evaluation_noise_generator": "30261113 + split ordinal",
+  "precision": "CPU float32 highest",
+  "conditioning_definition": "C,Y are raw observations determining all cached query inputs. Loss target is phi(Y). C is not asserted identical to decoder DINO features.",
+  "information_scope": "Conditional on fixed learned weights, I(Y;W|C,z0)<=1 nat for a single independent Gaussian draw; not a deterministic-mean or prediction-ensemble bound.",
+  "observed_sets": "512 train; 64 and96 already research-observed evaluation; no fresh final test",
+  "launch_requires": "root review and explicit --train",
+  "seed_scope": "Head initialization+batch+noise vary; common decoder initial weights",
+  "worktree": "/home/sadasue/fwm-bounded-innovation-20261113",
+  "implementation_sha256": {
+    "research/bounded_innovation.py": "7e91ab22a455fe3613b9616f20e90c96101c63453a06687cfbf4a12ba2473616",
+    "research/train_bounded_innovation.py": "c4044c323785b90f140154b2083650a325cac34e7a0a9d0074d9b53745c30ea1",
+    "research/test_bounded_innovation.py": "7bdfe5b68f5958902d20380743a3dd518aa77dfe1d08159a20753c509b2975ec",
+    "research/preflight_bounded_innovation.py": "63eba10b37e5682380da02c389abfaf2199de80d1b6f1ca2606c3541b34b0609",
+    "research/bounded-innovation-protocol.json": "30e6bf3b4a8ef450bede72df78d16f7574514833d2a5b5b62306372e2dbedef0",
+    "research/bounded-innovation-source-snapshot.json": "d8ea047c6c3f99d584af0e46b44110d1826ae810ad3bc19c5e94c0c342caaed4"
+  },
+  "threads_per_run": 2,
+  "concurrency": 3,
+  "preflight_sha256": "c812db678df3b2c557f52e8078f8f137ce342d3c0626de4b8962c8e9870beac7",
+  "primary_comparisons": [
+    "future-minus-recoding",
+    "future-minus-noise"
+  ],
+  "fixed_endpoint": true,
+  "scope_note": "All 9 runs required; do not select seeds or stop arms based on interim risk. Already observed evaluation; no novelty claim."
+}

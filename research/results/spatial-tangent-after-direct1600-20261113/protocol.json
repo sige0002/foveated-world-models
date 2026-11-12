@@ -1,0 +1,27 @@
+{
+  "source_sha256": {
+    "/home/sadasue/foveated-world-models/runs/reference-idm42-nested512-prior10000/train.pt": "7c2d6fe143bd83cfad43d0d919344b3070bb8a0b9a3bc598a84d410fecc798de",
+    "/home/sadasue/foveated-world-models/runs/reference-idm42-nested512-prior10000/validation.pt": "bbb4d0d49e9f4a4a3500e9c78260e3feaf9da33963f5977d98c8983d122c1c09",
+    "/home/sadasue/foveated-world-models/runs/reference-idm42-observed96-prior10000/validation.pt": "7b419bea1eda0f0e871ab40273bf1b59a1d67d5bf2bab23885ba9fee43ab40f4",
+    "runs/reference-idm42-nested512-residual1600-20261113/prior_residual-seed42.pt": "f72cda54a8bd68e843481573dcbbef09e68d91e4e5cc133829c0909ea8bd5dec"
+  },
+  "script_sha256": "c7ebfccbf4e7e4c20a92fefe9ff0dcb68ea63ca08a595a20aa023e211b83e3d2",
+  "primary": "Current-feature central-difference x/y basis; independent2D coefficient per interior patch, oracle optimized from true future residual to fixed prior. Box [-.5,.5] feature-grid units.",
+  "diagnostics": "Unbounded local coefficients; shared global x/y coefficients; rank2 random directions with current-gradient column norms; prior-feature gradients. Outer border patches remain uncorrected.",
+  "random_seed": 20261113,
+  "threads": 2,
+  "error_anchor": "runs/reference-idm42-nested512-residual1600-20261113/prior_residual-seed42.pt",
+  "scope": "Oracle representability of error, not learnability or inference performance. True future fits every coefficient, including validation. No coefficient is a deployable prediction. DINO feature warping need not equal image motion/re-encoding; central differences are only a tangent approximation. Half-patch bound is prespecified and not calibrated physical motion.",
+  "sources_context": [
+    {
+      "paper": "Unsupervised Learning for Physical Interaction through Video Prediction",
+      "url": "https://arxiv.org/abs/1605.07157",
+      "read": "NeurIPS PDF method overview of DNA/CDNA/STP; pixel advection, not evidence for DINO equivariance"
+    },
+    {
+      "paper": "Dynamic Filter Networks",
+      "url": "https://arxiv.org/abs/1605.09673",
+      "read": "NeurIPS PDF method overview of input-dependent local filtering; established design, not novelty claim"
+    }
+  ]
+}

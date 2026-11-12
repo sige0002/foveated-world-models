@@ -1,0 +1,90 @@
+{
+  "scope": "Codec32 primary, fixed1000 codec+400 predictor steps, one seed, reused observed96. Posterior IDM z. Different total capacity and extra codec training vs full-space baseline; matched capacity among4new predictors. Conditional bootstrap excludes selection/training uncertainty.",
+  "reference_full_direct_mse": 0.0855736662245666,
+  "source_sha256": {
+    "runs/codec32-direct_feature-512-400-20261113-v2/results.json": "77a6c59ca8e77d8723a0be9205d5d06494f7ef8095c0e651edb5be5dbf8d5868",
+    "runs/codec32-direct_latent-512-400-20261113-v2/results.json": "8f9d1172d2a278e060644c5d6d7dd0adb2a41f4fc6df7c9f3db964a49c60dcac",
+    "runs/codec32-flow-512-400-20261113-v2/results.json": "6bc4dee6d77e8317c9d929f8250ddb1f416ee66483ede0748424b336a09457b8",
+    "runs/codec32-flow_low_noise-512-400-20261113-v2/results.json": "a4a588d43a31d9a53025134cca1c9499fe0a71143eadf91c69e22f26a45557db"
+  },
+  "models": {
+    "direct_feature": {
+      "predictor_parameters": 721696,
+      "dev_metrics": {
+        "sample_mse": 0.10516498249489814,
+        "mean_mse": 0.10516498249489814,
+        "decode_mean_latent_mse": 0.10516498249489814
+      },
+      "observed96_metrics": {
+        "sample_mse": 0.09288579825079069,
+        "mean_mse": 0.09288579825079069,
+        "decode_mean_latent_mse": 0.09288579825079069
+      },
+      "difference_vs_full_direct": 0.007312132026224087,
+      "relative_change_percent": 8.54483902446721,
+      "paired_ci95": [
+        0.00610414489589554,
+        0.008658162904127189
+      ]
+    },
+    "direct_latent": {
+      "predictor_parameters": 721696,
+      "dev_metrics": {
+        "sample_mse": 0.10500009101815522,
+        "mean_mse": 0.10500009101815522,
+        "decode_mean_latent_mse": 0.10500009101815522
+      },
+      "observed96_metrics": {
+        "sample_mse": 0.09199954295763746,
+        "mean_mse": 0.09199954295763746,
+        "decode_mean_latent_mse": 0.09199954295763746
+      },
+      "difference_vs_full_direct": 0.006425876733070861,
+      "relative_change_percent": 7.5091754468106675,
+      "paired_ci95": [
+        0.00528762570223383,
+        0.007716284770867784
+      ]
+    },
+    "flow": {
+      "predictor_parameters": 721696,
+      "dev_metrics": {
+        "sample_mse": 0.1379577731131576,
+        "mean_mse": 0.11684313172008842,
+        "decode_mean_latent_mse": 0.11716105265077204
+      },
+      "observed96_metrics": {
+        "sample_mse": 0.12015175582685818,
+        "mean_mse": 0.10173489523973937,
+        "decode_mean_latent_mse": 0.10198719337737809
+      },
+      "difference_vs_full_direct": 0.01616122901517277,
+      "relative_change_percent": 18.88575040452478,
+      "paired_ci95": [
+        0.013626715631592864,
+        0.019071247944278488
+      ]
+    },
+    "flow_low_noise": {
+      "predictor_parameters": 721696,
+      "dev_metrics": {
+        "sample_mse": 0.1343755710986443,
+        "mean_mse": 0.12183205195469782,
+        "decode_mean_latent_mse": 0.12207014649175107
+      },
+      "observed96_metrics": {
+        "sample_mse": 0.11761808857166518,
+        "mean_mse": 0.105949817574583,
+        "decode_mean_latent_mse": 0.10614565026480705
+      },
+      "difference_vs_full_direct": 0.020376151350016396,
+      "relative_change_percent": 23.811240360491624,
+      "paired_ci95": [
+        0.017210498247489645,
+        0.02401411663837886
+      ]
+    }
+  },
+  "decision": "Nonlinear codec improves achieved reconstruction, but all4forecast variants fail to beat strong full-space direct. Do not treat compression reconstruction as future prediction. This small patchwise codec is not a reproduction or refutation of VFMF/RLA-WM.",
+  "remaining_architecture_confound": "Predictor conditions on current and IDM z; baseline enters only frozen decode. Strong full-space correction also sees baseline in state/raw path. Extra full-space context and larger capacity differ; failure cannot be attributed uniquely to nonlinear compression."
+}

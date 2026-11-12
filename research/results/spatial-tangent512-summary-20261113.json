@@ -1,0 +1,30 @@
+{
+  "source_sha256": "301f644348d9723cdde8255c836c33cc5872fcf93f2a971d4d1c522adf4914c7",
+  "scope": "One seed fixed400,512 train, reused observed96 posterior reconstruction; paired interval conditional on trained models excludes seed/adaptive selection uncertainty.",
+  "mse": {
+    "prior_residual": 0.0855736662245666,
+    "prior_tangent_residual": 0.08530497374401118,
+    "prior_rotated_residual": 0.08578538756895189
+  },
+  "comparisons": {
+    "tangent_minus_direct": {
+      "difference": -0.0002686924805554251,
+      "relative_reduction_percent": 0.31398967978104597,
+      "paired_ci95": [
+        -0.000547431654316218,
+        -1.6593025065962518e-06
+      ],
+      "better_episode_count": 50
+    },
+    "tangent_minus_rotated": {
+      "difference": -0.0004804138249407212,
+      "relative_reduction_percent": 0.5600182485094751,
+      "paired_ci95": [
+        -0.000830304190943328,
+        -0.00014268966624513284
+      ],
+      "better_episode_count": 53
+    }
+  },
+  "decision": "Small numerical improvement only; do not claim dominant MSE gain or novelty. Check intervals and replicate only as bounded mechanism test; current evidence does not justify replacing strong baseline."
+}

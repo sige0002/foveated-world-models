@@ -1,0 +1,4 @@
+citing_id,cited_id,cited_title,cited_url,locator,priority_reason,scope_status
+F008,F006,Flow Matching for Generative Modeling,https://arxiv.org/abs/2210.02747v1,"§3, References",瞬時速度場の基礎,in_scope
+F008,F010,Consistency Models,https://arxiv.org/abs/2303.01469v1,"§1–2, References",1段生成の直接比較基盤,in_scope
+F009,F007,Flow Straight and Fast: Learning to Generate and Transfer Data with Rectified Flow,https://arxiv.org/abs/2209.03003v1,"§1, References",速度場と軌道の関連,in_scope

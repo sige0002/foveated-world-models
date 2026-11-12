@@ -1,0 +1,23 @@
+{
+  "train": {
+    "rows": 128,
+    "features_targets_baseline_rows_identical": true,
+    "codes_shape": [
+      128,
+      1,
+      32
+    ],
+    "codes_constant": true
+  },
+  "validation": {
+    "rows": 64,
+    "features_targets_baseline_rows_identical": true,
+    "codes_shape": [
+      64,
+      1,
+      32
+    ],
+    "codes_constant": true
+  },
+  "constant_train_validation_equal": true
+}

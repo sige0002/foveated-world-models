@@ -1,0 +1,39 @@
+{
+  "checkpoint": 6501,
+  "source": "/home/sadasue/foveated-world-models/runs/reference-idm-with-prior6501",
+  "source_cache_sha256": {
+    "train": "5483801a9d2dfc17788e7d251e4cfc11bed8b5749f0619da99cb9239a7213aea",
+    "validation": "cf09e8080ad8c842ca37b235f6082ee35dac152b0433576abb805002b1f4b754"
+  },
+  "source_manifest_sha256": "6b5e33dbac36c60948ac49981a513955d1cd5e54c168c36b2ac5199b8fcb01ed",
+  "weights_sha256": "9026f4535a6ab322cb12752035ff82f2087b77d42f830a879f5738cc8565906a",
+  "config_sha256": "d5c751aaee764935499415b064c1a3991655aefcaabfbbfde8265dcea312208f",
+  "script_sha256": "fb167f80d3c4057a59f006497a7e2f51a4b3cb5401dd826d3e4f522fb848773b",
+  "representation_script_sha256": "0946c5a352fcc2f3f26541ef2ec8d6a56149b718cdef339730c0b66592f0091d",
+  "output_sha256": {
+    "train.pt": "8d5109497244f316cce154f91981c67e0ecde23171a89428cc4c52ef9ace8986",
+    "validation.pt": "183497c126f3220855ff6eec5845cdfe790c055b9602fa718f2f8ddaed4a50cc",
+    "train_calibration.pt": "e53d93b09e6868614444d46597b37e588033cf8e10e35aa190b24cfdae4e039f"
+  },
+  "threads": 2,
+  "precision": "float32 highest",
+  "batch_size": 1,
+  "torch_version": "2.11.0+cu130",
+  "counts": {
+    "train": 128,
+    "validation": 64
+  },
+  "same_source_and6501_features_and_episode_index_dt": true,
+  "episode_overlap": 0,
+  "calibration_split": "train only",
+  "variants": [
+    "direction",
+    "direction_statistics",
+    "calibrated_raw"
+  ],
+  "output_dim": 34,
+  "raw_calibration": "Per-coordinate train mean/std, population std with floor1e-3",
+  "statistics_calibration": "Train mean/std of per-example projected coordinate mean and log sqrt(var+1e-5); floor1e-3",
+  "seconds": 507.76050168811344,
+  "limitations": "Frozen encoder features only; all34D variants require a fresh identical-capacity head. No learned LayerNorm affine. Finite epsilon retains weak scale dependence in direction. No fitting of predictive heads, decoder evaluation or semantic claims."
+}

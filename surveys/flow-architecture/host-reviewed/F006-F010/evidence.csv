@@ -1,0 +1,41 @@
+paper_id,field,item_index,kind,source_url,locator,note
+F006,social_background,1,not_stated,https://arxiv.org/html/2210.02747v1,Introduction,社会的需要の明示的記載なし。
+F006,technical_background,1,author_claim,https://arxiv.org/html/2210.02747v1,§1–3,拡散経路は反復生成が高コストで、一般CNFの学習も高価。
+F006,problem,1,author_claim,https://arxiv.org/html/2210.02747v1,§3,シミュレーションを用いず、固定した条件付き確率経路の速度場から周辺速度場を学習する。
+F006,method,1,demonstrated,https://arxiv.org/html/2210.02747v1,"§3–4, Theorems 1–3; Appendix A",CFMは時刻t、データx1、条件付き経路上のxを標本化し、u_t(x|x1)を二乗回帰。p_t>0の下で周辺速度は条件付き速度の事後平均。Gaussian経路は微分可能な平均と正の標準偏差を使い、可逆アフィン写像から閉形式速度を得る。
+F006,results,1,demonstrated,https://arxiv.org/html/2210.02747v1,"§3.1–3.2, Theorems 1–2; Appendix A; §6.1, Table 1",定理1は周辺連続の式を示し、定理2はCFMとFMの勾配の一致を示す。証明は微分と積分の交換、Fubini、十分な減衰と有界性を仮定。無条件ImageNet 32ではOT経路FMが3.53 BPD/FID 5.25、拡散経路FMは3.56/8.02。
+F006,contributions,1,author_claim,https://arxiv.org/html/2210.02747v1,§3–4,条件付きflow matchingと、拡散・条件付きOT経路を統一的に扱う枠組み。
+F006,summary,1,interpretation,https://arxiv.org/html/2210.02747v1,"§3–4, §6",条件付き場の回帰で生成速度場を学ぶ方法であり、画像生成で評価された。
+F006,remaining_issues,1,interpretation,https://arxiv.org/html/2210.02747v1,"§4, §6–7, Appendix A",調査者解釈: 理論は正則性と期待損失の関係を前提とし、有限モデル・有限学習の一致や条件付き未来のpaired MSE改善を保証しない。評価は画像生成でありDINO予測は未検証。終点のσ_minが正ならデータを平滑化する。
+F007,social_background,1,not_stated,https://arxiv.org/html/2209.03003v1,§1,社会的需要の明示的記載なし。
+F007,technical_background,1,author_claim,https://arxiv.org/html/2209.03003v1,§1–2,分布間輸送の対応を学習する際、曲がったODE軌道は数値積分に多くのステップを要する。
+F007,problem,1,author_claim,https://arxiv.org/html/2209.03003v1,§2,端点間の線形補間に近い因果的ODEを学習し、輸送と生成を効率化する。
+F007,method,1,demonstrated,https://arxiv.org/html/2209.03003v1,"§2, §3.1–3.3",線形補間 X_t=(1−t)X_0+tX_1 における端点差を二乗回帰し、条件付き期待速度のODEを構成。生成端点対でreflowを繰り返す。
+F007,results,1,demonstrated,https://arxiv.org/html/2209.03003v1,"§3.1–3.4, Theorems 3.3, 3.5, 3.7; §5.2 Table 1",可微分過程と局所有界・ODE解の存在一意性を含むrectifiable条件下で周辺分布を保存。Jensenの不等式で凸輸送費用非増加を示す。各反復がrectifiableで二次距離が有限なら、直線性等の尺度の反復中最小値はO(1/K)。CIFAR-10無条件生成1 Euler stepではFID: 1-rectified 378、2-rectified 12.21、2-rectifiedの蒸留後4.85。
+F007,contributions,1,author_claim,https://arxiv.org/html/2209.03003v1,§2–3,任意結合を決定的結合へ変換するrectificationと、直線化するreflowを提案。
+F007,summary,1,interpretation,https://arxiv.org/html/2209.03003v1,§2–5,軌道を直線化して積分を粗くする生成法であり、paired future predictionのMSEを保証しない。
+F007,remaining_issues,1,author_claim,https://arxiv.org/html/2209.03003v1,"§2.3, §3.4–3.5, §5.2",著者: 一般の多次元では直線結合は最適結合とは限らず、非線形補間は凸輸送費用減少を保証しない。調査者解釈: 理想化理論は有限学習とpaired future MSEを保証しない。
+F008,social_background,1,not_stated,https://arxiv.org/html/2505.13447v1,§1,社会的需要の明示的記載なし。
+F008,technical_background,1,author_claim,https://arxiv.org/html/2505.13447v1,"§1, §3",通常のflow matchingは瞬時速度の積分を生成時に要する。
+F008,problem,1,author_claim,https://arxiv.org/html/2505.13447v1,§4,事前学習や蒸留なしに1回の評価で生成する平均速度モデルを学習する。
+F008,method,1,demonstrated,https://arxiv.org/html/2505.13447v1,"§4.1, Eqs. 3–11, Algorithms 1–2; Appendix B.3",同一ODE軌道の平均速度uを定義し、r固定の積分微分と連鎖律でu=v−(t−r)du/dtを得る。JVPと停止勾配の標本条件付き速度目標で学習し、1回のu評価で生成する。
+F008,results,1,demonstrated,https://arxiv.org/html/2505.13447v1,"§4.1, Appendix B.3; §5.2 Table 2",微分可能性などを前提に恒等式は時間積分定義から導出され、逆向きは(t−r)uのr=t境界で積分定数が消える。ImageNet 256クラス条件付きCFGでMeanFlow-XL/2は1 NFE FID 3.43、Shortcut-XL/2は10.60（Table 2）。
+F008,contributions,1,author_claim,https://arxiv.org/html/2505.13447v1,§4,平均速度と瞬時速度の恒等式に基づく直接学習を提案。
+F008,summary,1,interpretation,https://arxiv.org/html/2505.13447v1,"§4.1, §5",時間平均速度による1回生成を画像生成で評価した。平均速度は観測条件付き未来特徴平均ではない。
+F008,remaining_issues,1,interpretation,https://arxiv.org/html/2505.13447v1,"§4.1, §5.2, Appendix B.3",調査者解釈: 恒等式の厳密成立や最適化成功は有限ネットワークでは保証されない。軌道時間平均速度は観測条件付き未来特徴平均ではなく、画像FIDは未来特徴MSEを検証しない。
+F009,social_background,1,not_stated,https://arxiv.org/html/2406.07507v1,§1,社会的需要の明示的記載なし。
+F009,technical_background,1,author_claim,https://arxiv.org/html/2406.07507v1,§1,速度場による生成には推論時の数値積分が必要。
+F009,problem,1,author_claim,https://arxiv.org/html/2406.07507v1,§3,任意の時間間隔を跨ぐODEの二時刻flow mapを、蒸留または直接学習する。
+F009,method,1,demonstrated,https://arxiv.org/html/2406.07507v1,"§3.1–3.4, Algorithms 1–4","二時刻写像を境界X(s,s)=idとODE残差で既知速度場から蒸留する。直接FMMはstochastic interpolantの標本速度と逆写像の整合性を利用し、progressive FMMは多段map合成を蒸留する。"
+F009,results,1,demonstrated,https://arxiv.org/html/2406.07507v1,"§3.1–3.4, Propositions 3.7, 3.11; Appendix A; §4.2 Table 1",本文の片側Lipschitz条件と正の密度等を前提にLMD残差からW2誤差を抑える。証明は軌道差の微分不等式を使う。直接FMMの証明は損失を残差と定数に分ける。CIFAR-10で2段LMD FID 7.13、2段EMD 48.32、同教師FID 5.53。
+F009,contributions,1,author_claim,https://arxiv.org/html/2406.07507v1,"§3, Appendix C",二時刻mapを用いた直接学習・蒸留と既存一段生成法との関係を提示。
+F009,summary,1,interpretation,https://arxiv.org/html/2406.07507v1,§3–4,学習mapはODEの軌道上の端点を求めるもので、将来の条件付き平均と同義ではない。
+F009,remaining_issues,1,author_claim,https://arxiv.org/html/2406.07507v1,"§3.3, §4.1–4.2",著者: EMDは空間微分が特異・ほぼ特異な箇所で学習困難になる可能性があり、実験ではLMDが良好。調査者解釈: W2分布誤差はpaired future MSEの保証ではなく、直接学習・蒸留の理想最適解は有限モデルで保証されない。
+F010,social_background,1,author_claim,https://arxiv.org/html/2303.01469v1,"Abstract, §1",反復生成の遅延はリアルタイム利用を制約する。
+F010,technical_background,1,author_claim,https://arxiv.org/html/2303.01469v1,§1–2,拡散モデルは反復的な生成を必要とする。
+F010,problem,1,author_claim,https://arxiv.org/html/2303.01469v1,§3–5,同一確率流ODE軌道の異なる点を同じ起点に写す写像を学習し、1段・少段生成する。
+F010,method,1,demonstrated,https://arxiv.org/html/2303.01469v1,"§3–5, Algorithms 2–3",境界条件を備える写像について、教師scoreによる隣接ODE点の出力一致を蒸留。単独学習では同一ガウス雑音を異なる時刻で用い、EMAと停止勾配の目標を使う。
+F010,results,1,demonstrated,https://arxiv.org/html/2303.01469v1,"§4 Theorem 1, Appendix A.2; §6.2 Table 1",Lipschitz写像、次数p以上の局所ソルバ誤差、一致する教師と学生、および損失ゼロの条件下で離散点誤差はO(Δt^p)。証明は境界条件と局所誤差の帰納的累積。CIFAR-10の1 NFEではCD FID 3.55、同表のprogressive distillation 8.34、単独CT 8.70。
+F010,contributions,1,author_claim,https://arxiv.org/html/2303.01469v1,§3–5,一貫性写像による高速生成と、ゼロショット画像編集を提示。
+F010,summary,1,interpretation,https://arxiv.org/html/2303.01469v1,§3–6,同一軌道上の写像一致を生成・編集に使うもので、未来特徴の条件付き平均への一致は保証しない。
+F010,remaining_issues,1,interpretation,https://arxiv.org/html/2303.01469v1,"§4–6, Appendix A.2",調査者解釈: 理論のゼロ損失等は有限学習で保証されず、教師scoreと学習済み写像の誤差が残る。FIDは画像生成評価であり条件付き未来特徴のpaired MSEを保証しない。

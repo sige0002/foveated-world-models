@@ -1,0 +1,23 @@
+{
+  "all_checks_passed": true,
+  "frozen_predictions_exactly_reproduced": true,
+  "metrics": {
+    "zero": {
+      "train": 0.3949378416242788,
+      "validation": 0.9439275423755948,
+      "observed96": 0.8667471685015369
+    },
+    "original6501": {
+      "train": 0.38004578863653526,
+      "validation": 0.9084159263799707,
+      "observed96": 0.8391084649878074
+    },
+    "reference42": {
+      "train": 0.04816097848648161,
+      "validation": 0.7320786294661179,
+      "observed96": 0.6033417288535092
+    }
+  },
+  "protocol_sha256": "0db2c1a185c4e9ef9cacd11eb19b61a74c9b3fdd6d1715188c2fa37a686485c6",
+  "script_sha256": "9b94415b61c22bd0f8cbfa447c5746d1a5f69e98dc38ebbc3f1702efd3deff46"
+}

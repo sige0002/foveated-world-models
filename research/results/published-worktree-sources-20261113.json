@@ -1,0 +1,110 @@
+{
+  "files": [
+    {
+      "destination": "research/slim_ffn_decoder.py",
+      "source_worktree": "fwm-ffn-audit-20261113",
+      "sha256": "f7ad9d32d3f8051c523f18610e0a5a527c27b0a1af9155495b40ce5d33f2c7b7"
+    },
+    {
+      "destination": "research/train_slim_ffn.py",
+      "source_worktree": "fwm-ffn-audit-20261113",
+      "sha256": "b3c76aba423259e83991531f88d8a23ba4b895224e84422186a9d60325444fc6"
+    },
+    {
+      "destination": "research/test_slim_ffn.py",
+      "source_worktree": "fwm-ffn-audit-20261113",
+      "sha256": "2647ce9ba334c83873ad873894e81dc77ff54f4870957379ae43ccc9202596dc"
+    },
+    {
+      "destination": "research/benchmark_slim_ffn.py",
+      "source_worktree": "fwm-ffn-audit-20261113",
+      "sha256": "3c7f38a4f211e9f016c35c7775b59e4964967fc02f1bc56a554d30aaf5943ce8"
+    },
+    {
+      "destination": "research/benchmark_original_decoder.py",
+      "source_worktree": "fwm-ffn-audit-20261113",
+      "sha256": "f83fec427172efcfeb5bc33df91a28e5efe1663cff89e2c48b9e3d022018a7a3"
+    },
+    {
+      "destination": "research/compare_attention_backend.py",
+      "source_worktree": "fwm-attention-audit-20261113",
+      "sha256": "7082b8ee4144125b1f9561fa78ec8a5d7ee69850485d09fde79c96badecbc0af"
+    },
+    {
+      "destination": "research/compressed_prior.py",
+      "source_worktree": "fwm-prior-compression-20261113",
+      "sha256": "a04dcd90cd7648ce1ef420e2b2e9a53360b65e17b0b81abe736809ab5a7e7b10"
+    },
+    {
+      "destination": "research/fit_linear_prior.py",
+      "source_worktree": "fwm-prior-compression-20261113",
+      "sha256": "ca6b007d0dc46eda31513c64273e781ec5df35d0158f5dbb07c613b17c137d55"
+    },
+    {
+      "destination": "research/train_compressed_prior.py",
+      "source_worktree": "fwm-prior-compression-20261113",
+      "sha256": "b40a4ee820cdbdb61ed68cf40020e3941ac43d61dc78141ca6a1d5081848e43e"
+    },
+    {
+      "destination": "research/test_compressed_prior.py",
+      "source_worktree": "fwm-prior-compression-20261113",
+      "sha256": "c87f029fa1084cafb685aaa1385a0cbe4fafd5e78a0c37728ca6b51a2f3aab17"
+    },
+    {
+      "destination": "research/early_condition_adapter.py",
+      "source_worktree": "fwm-early-condition-20261113",
+      "sha256": "5ca80922bbabac75063ad0f505942967adf9f45aa0c1cba889050153ae2680ae"
+    },
+    {
+      "destination": "research/train_early_condition.py",
+      "source_worktree": "fwm-early-condition-20261113",
+      "sha256": "5cfffa4a3f5300cfc7f22d681354f910bb9d3537e1c0b343912aa92f74709be6"
+    },
+    {
+      "destination": "research/test_early_condition.py",
+      "source_worktree": "fwm-early-condition-20261113",
+      "sha256": "e3efd748da5f1131fefa78f15019e89e9fc27cbade3a7b7f97a57da9bb75612c"
+    },
+    {
+      "destination": "research/bounded_innovation.py",
+      "source_worktree": "fwm-bounded-innovation-20261113",
+      "sha256": "7e91ab22a455fe3613b9616f20e90c96101c63453a06687cfbf4a12ba2473616"
+    },
+    {
+      "destination": "research/train_bounded_innovation.py",
+      "source_worktree": "fwm-bounded-innovation-20261113",
+      "sha256": "c4044c323785b90f140154b2083650a325cac34e7a0a9d0074d9b53745c30ea1"
+    },
+    {
+      "destination": "research/test_bounded_innovation.py",
+      "source_worktree": "fwm-bounded-innovation-20261113",
+      "sha256": "7bdfe5b68f5958902d20380743a3dd518aa77dfe1d08159a20753c509b2975ec"
+    },
+    {
+      "destination": "research/preflight_bounded_innovation.py",
+      "source_worktree": "fwm-bounded-innovation-20261113",
+      "sha256": "63eba10b37e5682380da02c389abfaf2199de80d1b6f1ca2606c3541b34b0609"
+    },
+    {
+      "destination": "research/bounded-innovation-source-snapshot.json",
+      "source_worktree": "fwm-bounded-innovation-20261113",
+      "sha256": "d8ea047c6c3f99d584af0e46b44110d1826ae810ad3bc19c5e94c0c342caaed4"
+    },
+    {
+      "destination": "research/bounded-innovation-protocol.json",
+      "source_worktree": "fwm-bounded-innovation-20261113",
+      "sha256": "30e6bf3b4a8ef450bede72df78d16f7574514833d2a5b5b62306372e2dbedef0"
+    },
+    {
+      "destination": "research/bounded-all-arm-preflight-20261113.json",
+      "source_worktree": "fwm-bounded-innovation-20261113",
+      "sha256": "c812db678df3b2c557f52e8078f8f137ce342d3c0626de4b8962c8e9870beac7"
+    },
+    {
+      "destination": "research/bounded-innovation-implementation-hashes.json",
+      "source_worktree": "fwm-bounded-innovation-20261113",
+      "sha256": "537cfdf6219d98db078154f655b945b3fbbac1d8c015f1972057e19b2b9c0866"
+    }
+  ],
+  "note": "Exact source copies for review; original worktrees and running experiments unchanged. Checkpoints and caches remain local."
+}

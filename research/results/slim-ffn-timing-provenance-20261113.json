@@ -1,0 +1,9 @@
+{
+  "worktree": "/home/sadasue/fwm-ffn-audit-20261113",
+  "script_sha256": "3c7f38a4f211e9f016c35c7775b59e4964967fc02f1bc56a554d30aaf5943ce8",
+  "result_sha256": "b451bebac989c5c201796ad0af3990e54064580ed4494d96ec7112d3ef5073ba",
+  "timing_schedule": "Seed42/43 fits all terminal, no competing training/probes, agent CPU calculation paused. Benchmark completed before launching fixed seed44 fits. No model selection by timing.",
+  "cpu": "CPU2 threads float32 highest, warm unpinned scheduling, 10 alternating repetitions; B1/B8",
+  "scope": "includes frozen current-only prior separately; excludes DINO encoder and IDM; no GPU timing",
+  "prior_vs_cached_features": "Exactly0 max absolute at both B1/B8 in benchmark"
+}

@@ -1,0 +1,12 @@
+{
+  "reviewed_at": "2026-11-12T16:50:14.715130+00:00",
+  "reviewed_ids": [
+    "F026",
+    "F027",
+    "F028",
+    "F030"
+  ],
+  "pending_ids": [],
+  "checks": "Host verified I2SB Gaussian bridge proposition and OT-ODE result/limitations, DDBM covariance preconditioning and paired-image MSE, DBIM weighted objective equivalence and NFE/MSE/failure cases, BBDM variance independence assumption and FID/LPIPS comparison. F029 remains pending independent audit of C.6 convergence proof.",
+  "followup": "F029 separately reviewed with unresolved proof transitions recorded in host-reviewed/F029."
+}

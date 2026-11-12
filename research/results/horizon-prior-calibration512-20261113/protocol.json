@@ -1,0 +1,10 @@
+{
+  "primary": "Fixed linear time interpolation b+(1-r)(current-b), r=dt/1.2.",
+  "secondary": "Add c*r*(1-r)*(current-b), scalar c fitted by train-only least squares. Both preserve b at1.2s and current at0. No eval tuning.",
+  "scope": "Current-only diagnostic; time query uses actual pair duration, not unknown future termination. Short intervals are tail-confounded.",
+  "source_sha256": {
+    "train": "7c2d6fe143bd83cfad43d0d919344b3070bb8a0b9a3bc598a84d410fecc798de",
+    "dev64": "bbb4d0d49e9f4a4a3500e9c78260e3feaf9da33963f5977d98c8983d122c1c09",
+    "observed96": "7b419bea1eda0f0e871ab40273bf1b59a1d67d5bf2bab23885ba9fee43ab40f4"
+  }
+}

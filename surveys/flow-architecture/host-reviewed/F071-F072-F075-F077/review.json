@@ -1,0 +1,4 @@
+{
+  "reviewed_at": "2026-11-12T17:08:40.732892+00:00",
+  "checks": "Host checked FlowWM mode-coverage F1 and best-of-N AP definition, raw-target independent head path in pinned official code; Orbis 30-step flow and FVD/frame120 FID table; FrozenForecasting mean-of-metrics vs best-of10 table; RDDM dual residual/noise schedules and task table. WING F072 exact same-version reviewed S002 reused from stage1-research/internal; only ID/pending flag differ. Code/paper equivalence not claimed."
+}

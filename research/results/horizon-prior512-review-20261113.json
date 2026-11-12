@@ -1,0 +1,11 @@
+{
+  "reviewer": "parallel idm_improvement read-only CPU",
+  "finding": "No material forward implementation issue",
+  "initialization": "Common initial parameters and global RNG exact for direct/flow,256 extra parameters. Nominal1.2s has zero extra feature.",
+  "gradient": "Existing zero-initialized AdaLN blocks initially block both code and horizon condition gradients. Root test now checks nonzero gradient after3 optimizer updates; independent reviewer confirmed gate-open gradient.",
+  "interpretation": [
+    "Known requested horizon is admissible; unknown future episode termination cannot be supplied to a fixed1.2s deployment forecast.",
+    "Post-training common weights may differ; nominal architectural equivalence is not final-model equivalence.",
+    "Wrong-code gap includes cross-horizon code mismatch, so is not action-usefulness proof."
+  ]
+}

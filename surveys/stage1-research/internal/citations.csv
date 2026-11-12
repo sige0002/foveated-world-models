@@ -1,0 +1,55 @@
+citing_id,cited_id,cited_title,cited_url,locator,priority_reason,scope_status
+W001,W002,Cosmos Policy: Fine-Tuning Video Models for Visuomotor Control and Planning,https://arxiv.org/abs/2601.16163,§1,先行する動画方策WAM,in_scope
+W010,,DROID: A Large-Scale In-the-Wild Robot Manipulation Dataset,https://arxiv.org/abs/2403.12945,"§4, References",世界モデルの訓練データ（LeWM調査済み。今回の54件とは別枠）,foundational_outside_scope
+W018,W002,Cosmos Policy: Fine-Tuning Video Models for Visuomotor Control and Planning,https://arxiv.org/abs/2601.16163,§I Fig. 1,RoboCasa の対応する直接比較対象,in_scope
+W029,W027,Unified World Models: Coupling Video and Action Diffusion for Pretraining on Large Robotic Datasets,https://arxiv.org/abs/2504.02792,"§2.1, Table 1",直接比較される2D統一世界モデル,foundational_outside_scope
+W024,W030,Causal World Modeling for Robot Control,https://arxiv.org/abs/2601.21998,"§4, Fig. 2",実機比較対象LingBot-VA,in_scope
+W029,L032,Fast-WAM: Do World Action Models Need Test-time Future Imagination?,https://arxiv.org/abs/2603.16666,Appendix Limitations and Future Work,遅延比較の軽量WAM,in_scope
+W025,,RMBench: Memory-Dependent Robotic Manipulation Benchmark with Insights into Policy Design,https://arxiv.org/abs/2603.01229,"§1, Table 1",記憶依存操作の直接評価ベンチマーク（書誌確認のみ、本文は未調査の次回候補）,unresolved
+W032,,WorldVLA: Towards Autoregressive Action World Model,https://arxiv.org/abs/2506.21539,"§4, Table 1",LIBEROの比較対象,foundational_outside_scope
+W033,W001,World Action Models are Zero-shot Policies,https://arxiv.org/abs/2602.15922,§1–2,動画・行動共同生成の先行研究,in_scope
+W035,,AHA-WAM:Asynchronous Horizon-Adaptive World-Action Modeling with Observation-Guided Context Routing,https://arxiv.org/abs/2606.09811,"§2, Table 2",非同期世界・行動モデルの比較,in_scope
+W021,W036,Motus: A Unified Latent Action World Model,https://arxiv.org/abs/2512.13030,§2; References [1],効率化WAMの直接比較基準,in_scope
+W025,W036,Motus: A Unified Latent Action World Model,https://arxiv.org/abs/2512.13030,§1–2; References [1],潜在行動の先行研究,in_scope
+L001,,LeJEPA: Provable and Scalable Self-Supervised Learning Without the Heuristics,https://arxiv.org/abs/2511.08544,§3.1 [6],SIGRegの基礎,foundational_outside_scope
+L001,L003,DINO-WM: World Models on Pre-trained Visual Features enable Zero-shot Planning,https://arxiv.org/abs/2411.04983,§4.1 [51],直接比較対象,foundational_outside_scope
+L006,L001,LeWorldModel: Stable End-to-End Joint-Embedding Predictive Architecture from Pixels,https://arxiv.org/abs/2603.19312,"§1, §4",直接基礎・比較対象,in_scope
+L025,L031,JEPA-WAM: Learning Vision-Language-Action Policies with Joint-Embedding World Modeling,https://arxiv.org/abs/2608.09381,"§2, §5, Appendix B",最も近い直接比較。50課題値の一部は回帰推定,in_scope
+L025,L030,LeapBot-WA: World-Anchor Action Models via Predictive Latent Alignments,https://arxiv.org/abs/2607.23969,"§2, §5",最も近い直接比較,in_scope
+L025,L032,Fast-WAM: Do World Action Models Need Test-time Future Imagination?,https://arxiv.org/abs/2603.16666,"§1, §3, §5",学習時予測と推論時行動生成の基礎・直接比較,in_scope
+L023,L021,"V-JEPA 2: Self-Supervised Video Models Enable Understanding, Prediction and Planning",https://arxiv.org/abs/2506.09985,§1–2; References [4],ロボット潜在計画の基礎,foundational_outside_scope
+L050,L021,"V-JEPA 2: Self-Supervised Video Models Enable Understanding, Prediction and Planning",https://arxiv.org/abs/2506.09985,"§1, §3.1–3.2",潜在動画予測の基礎,foundational_outside_scope
+L001,,VICReg: Variance-Invariance-Covariance Regularization for Self-Supervised Learning,https://arxiv.org/abs/2105.04906,§2; References: VICReg: Variance-Invariance-Covariance Regularization for Self-Supervised Learning,LeWM本文で引用する基礎手法・比較対象・評価基盤,foundational_outside_scope
+L001,,Self-Supervised Learning from Images with a Joint-Embedding Predictive Architecture,https://arxiv.org/abs/2301.08243,§2; References: Self-Supervised Learning from Images with a Joint-Embedding Predictive Architecture,LeWM本文で引用する基礎手法・比較対象・評価基盤,foundational_outside_scope
+L001,,Revisiting Feature Prediction for Learning Visual Representations from Video,https://arxiv.org/abs/2404.08471,§2; References: Revisiting Feature Prediction for Learning Visual Representations from Video,LeWM本文で引用する基礎手法・比較対象・評価基盤,foundational_outside_scope
+L001,,Temporal Difference Learning for Model Predictive Control,https://arxiv.org/abs/2203.04955,§2; References: Temporal Difference Learning for Model Predictive Control,LeWM本文で引用する基礎手法・比較対象・評価基盤,foundational_outside_scope
+L001,,"TD-MPC2: Scalable, Robust World Models for Continuous Control",https://arxiv.org/abs/2310.16828,"§2; References: TD-MPC2: Scalable, Robust World Models for Continuous Control",LeWM本文で引用する基礎手法・比較対象・評価基盤,foundational_outside_scope
+L001,,Dream to Control: Learning Behaviors by Latent Imagination,https://arxiv.org/abs/1912.01603,§2; References: Dream to Control: Learning Behaviors by Latent Imagination,LeWM本文で引用する基礎手法・比較対象・評価基盤,foundational_outside_scope
+L001,,Mastering Diverse Domains through World Models,https://arxiv.org/abs/2301.04104,§2; References: Mastering Diverse Domains through World Models,LeWM本文で引用する基礎手法・比較対象・評価基盤,foundational_outside_scope
+L001,,Training Agents Inside of Scalable World Models,https://arxiv.org/abs/2509.24527,§2; References: Training Agents Inside of Scalable World Models,LeWM本文で引用する基礎手法・比較対象・評価基盤,foundational_outside_scope
+L001,,World Models,https://arxiv.org/abs/1803.10122,§2; References: World Models,LeWM本文で引用する基礎手法・比較対象・評価基盤,foundational_outside_scope
+L001,,DINOv2: Learning Robust Visual Features without Supervision,https://arxiv.org/abs/2304.07193,§4.1; References: DINOv2: Learning Robust Visual Features without Supervision,LeWM本文で引用する基礎手法・比較対象・評価基盤,foundational_outside_scope
+L001,,Offline Reinforcement Learning with Implicit Q-Learning,https://arxiv.org/abs/2110.06169,Appendix C.3; References: Offline Reinforcement Learning with Implicit Q-Learning,LeWM本文で引用する基礎手法・比較対象・評価基盤,foundational_outside_scope
+L001,,Joint Embedding Predictive Architectures Focus on Slow Features,https://arxiv.org/abs/2211.10831,§2; References: Joint Embedding Predictive Architectures Focus on Slow Features,LeWM本文で引用する基礎手法・比較対象・評価基盤,foundational_outside_scope
+L001,L049,OSVI-WM: One-Shot Visual Imitation for Unseen Tasks using World-Model-Guided Trajectory Generation,https://arxiv.org/abs/2505.20425,§2; References: OSVI-WM: One-Shot Visual Imitation for Unseen Tasks using World-Model-Guided Trajectory Generation,LeWM本文で引用する基礎手法・比較対象・評価基盤,foundational_outside_scope
+L001,,OGBench: Benchmarking Offline Goal-Conditioned RL,https://arxiv.org/abs/2410.20092,§4.1; References: OGBench: Benchmarking Offline Goal-Conditioned RL,LeWM本文で引用する基礎手法・比較対象・評価基盤,foundational_outside_scope
+L019,L001,LeWorldModel: Stable end-to-end joint-embedding predictive architecture from pixels,https://arxiv.org/abs/2603.19312,"1, 4.1, reference 53",平坦モデルの比較対象,in_scope
+L031,L021,"V-JEPA 2: Self-Supervised Video Models Enable Understanding, Prediction and Planning",https://arxiv.org/abs/2506.09985,§3.1,凍結視覚表現の基盤,foundational_outside_scope
+L033,,Learning Fine-Grained Bimanual Manipulation with Low-Cost Hardware,https://arxiv.org/abs/2304.13705,§2.1,行動チャンク化の基盤,unresolved
+S003,S004,Learning Latent Action World Models In The Wild,https://arxiv.org/abs/2601.05230,§4.2 action cycle transfer,転移評価の直接的基礎,in_scope
+S020,,MVP-LAM: Learning Action-Centric Latent Actions via Cross-Viewpoint Reconstruction,https://arxiv.org/abs/2602.03668,"§2, §4",多視点再構成の直接比較対象,in_scope
+S020,,DreamDojo: A Generalist Robot World Model from Large-Scale Human Videos,https://arxiv.org/abs/2602.06949,§4 Table 1,深度追加比較の基礎,in_scope
+L003,,DINOv2: Learning Robust Visual Features without Supervision,https://arxiv.org/abs/2304.07193,§3.1.1,固定視覚符号器の基礎,foundational_outside_scope
+S007,,DreamerV2,,"§4.1, ref [24]",同条件で比較した基盤世界モデル,unresolved
+S009,,Deep Voxel Flow,,"§4.2, ref [19]",転送型の直接比較,unresolved
+S010,,Neural Ordinary Differential Equations,https://arxiv.org/abs/1806.07366,"§2, ref Chen et al. 2018",連続時間の基礎,unresolved
+S016,L003,DINO-WM: World Models on Pre-trained Visual Features enable Zero-shot Planning,https://arxiv.org/abs/2411.04983,§2–4,直接比較と凍結特徴との差,in_scope
+S017,,Navigation World Models,,"§2.2, §4",行動条件付き動画モデル比較基盤,unresolved
+S018,,AdaWorld,,"§4.1, references Gao et al. 2025a",潜在行動の同条件比較,unresolved
+S021,,Matrix-Game 2.0,,"§4.1, He et al. 2025",初期化元の動画世界モデル,unresolved
+S022,,DreamZero,,§7.2.4,実機比較候補,unresolved
+S011,,Corollary discharge contributes to perceived eye location in monkeys,https://doi.org/10.1152/jn.00362.2013,Introduction; References,サッカード知覚実験の基礎,in_scope
+S012,,Event perception: A mind-brain perspective,https://doi.org/10.1037/0033-295X.114.2.273,Introduction; References,イベント分節理論の基礎,in_scope
+S013,,Nonlinear independent component analysis: Existence and uniqueness results,https://doi.org/10.1016/S0893-6080(99)00040-3,§3; References,非線形ICAの非一意性,in_scope
+S014,,Nonlinear ICA of Temporally Dependent Stationary Sources,https://proceedings.mlr.press/v54/hyvarinen17a.html,§3.1.1; References,時間依存を用いる関連識別定理,in_scope
+S015,,Provably Filtering Exogenous Distractors Using Multistep Inverse Dynamics,https://openreview.net/forum?id=RQLLzMCefQu,§2; References,多段逆動力学による外生要因除外の直接先行,in_scope

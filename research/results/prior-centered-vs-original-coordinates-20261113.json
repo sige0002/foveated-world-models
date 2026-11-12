@@ -1,0 +1,33 @@
+{
+  "comparisons": {
+    "prior_centered_residual/mse": {
+      "difference": 0.002280935470480472,
+      "ci95": [
+        0.0009306781998020598,
+        0.0034465385047951712
+      ]
+    },
+    "prior_centered_residual/mean_mse": {
+      "difference": 0.002280935470480472,
+      "ci95": [
+        0.0009527090951451101,
+        0.0034322905456065176
+      ]
+    },
+    "prior_centered_flow/mse": {
+      "difference": 0.0036526595940813422,
+      "ci95": [
+        0.00016871077241376048,
+        0.007254757711780257
+      ]
+    },
+    "prior_centered_flow/mean_mse": {
+      "difference": 0.002909671631641686,
+      "ci95": [
+        -0.0005566457242821343,
+        0.006530967424623666
+      ]
+    }
+  },
+  "scope": "Development64, seed42, same parameters/init; new CPU2 vs oldCPU4, no exact numerical trajectory equality claim. Conditional episode bootstrap, no independent replication."
+}

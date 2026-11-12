@@ -1,0 +1,19 @@
+{
+  "created_at": "2026-11-12T18:09:12.633960+00:00",
+  "hypothesis": "Endpoint MSE with unrolled four-step prior correction can remove CFM objective mismatch; deterministic control distinguishes recurrence from stochastic smoothing.",
+  "variants": [
+    "prior_terminal",
+    "prior_refinement"
+  ],
+  "seed": 42,
+  "steps": 400,
+  "cache": "runs/reference-idm-with-prior6501",
+  "controls": [
+    "prior_residual",
+    "prior_flow"
+  ],
+  "selection": "Fixed final step400; validation64 is developmental; previous unused96 already observed and is not fresh confirmatory evidence for new designs.",
+  "compute": "Same parameters and initialization; terminal/refinement backpropagate four calls versus one for residual/CFM, so not training-compute matched.",
+  "decision": "Compare final validation64 MSE with direct .1088005338; for stochastic also report mean4 and sample MSE; do not select the best intermediate checkpoint. Preserve main GPU training.",
+  "additional_compute_control": "Direct residual1600 updates, fixed endpoint, approximates four times forward/backward calls; optimizer-update counts and exact FLOPs differ. No exact compute-equality claim."
+}

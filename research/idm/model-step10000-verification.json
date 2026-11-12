@@ -1,0 +1,24 @@
+{
+  "step": 10000,
+  "all_checks_passed": true,
+  "observed_visual_state_hash_matches": true,
+  "splits": {
+    "validation": {
+      "count": 64,
+      "h_y_rows_exact": true,
+      "zero_mse_reproduction_max_error": 0.0
+    },
+    "observed96": {
+      "count": 96,
+      "h_y_rows_exact": true,
+      "zero_mse_reproduction_max_error": 0.0
+    },
+    "train": {
+      "count": 128,
+      "h_y_rows_exact": true,
+      "zero_mse_reproduction_max_error": 0.0
+    }
+  },
+  "manifest_sha256": "65639f6b33a5c6919cec736e0682773ddc7ad9000eaf3d7e50a4cc9cb02fba61",
+  "script_sha256": "a97d97173f969abc4afe6c0dba19c0dcfcca2ea809a7a983960c9ad701870be5"
+}

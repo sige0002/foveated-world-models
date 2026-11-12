@@ -1,0 +1,9 @@
+paper_id,field,item_index,kind,source_url,locator,note
+F072,social_background,1,author_claim,https://arxiv.org/html/2610.03607v1,"Abstract, §1",著者の主張と調査者解釈は本文中に区別
+F072,technical_background,1,author_claim,https://arxiv.org/html/2610.03607v1,§1,著者の主張と調査者解釈は本文中に区別
+F072,problem,1,author_claim,https://arxiv.org/html/2610.03607v1,§3,著者の主張と調査者解釈は本文中に区別
+F072,method,1,author_claim,https://arxiv.org/html/2610.03607v1,"§3, Appendix B–C, eqs. 25–28",著者の主張と調査者解釈は本文中に区別
+F072,results,1,demonstrated,https://arxiv.org/html/2610.03607v1,"Abstract, §4, Appendix D",著者の主張と調査者解釈は本文中に区別
+F072,contributions,1,author_claim,https://arxiv.org/html/2610.03607v1,§3,著者の主張と調査者解釈は本文中に区別
+F072,summary,1,author_claim,https://arxiv.org/html/2610.03607v1,"§3, Appendix B",著者の主張と調査者解釈は本文中に区別
+F072,remaining_issues,1,interpretation,https://arxiv.org/html/2610.03607v1,Appendix B–D,原文を踏まえた調査者の解釈

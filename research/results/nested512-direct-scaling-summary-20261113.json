@@ -1,0 +1,183 @@
+{
+  "splits": {
+    "validation": {
+      "means": {
+        "128_400_42": 0.10304294206434861,
+        "512_400_42": 0.0983791162725538,
+        "128_400_43": 0.10412944247946143,
+        "512_400_43": 0.10043187194969505,
+        "128_400_44": 0.10370018688263372,
+        "512_400_44": 0.09885571454651654,
+        "128_1600_42": 0.11362731095869094,
+        "512_1600_42": 0.09595444798469543,
+        "original10000": 0.1186540926573798,
+        "128_400_mean3": 0.10362419047548126,
+        "512_400_mean3": 0.09922223425625512
+      },
+      "seed_sd_512_400": 0.0010743388621515344,
+      "comparisons": {
+        "512_400_mean3_vs_128_400_mean3": {
+          "candidate_mse": 0.09922223425625512,
+          "baseline_mse": 0.10362419047548126,
+          "difference": -0.00440195621922612,
+          "relative_reduction": 0.042480005865693005,
+          "ci95": [
+            -0.006265560536121483,
+            -0.002498155313757403
+          ]
+        },
+        "512_400_mean3_vs_original10000": {
+          "candidate_mse": 0.09922223425625512,
+          "baseline_mse": 0.1186540926573798,
+          "difference": -0.019431858401124675,
+          "relative_reduction": 0.16376896882297387,
+          "ci95": [
+            -0.024473909823670207,
+            -0.01502299054700416
+          ]
+        },
+        "512_1600_42_vs_512_400_42": {
+          "candidate_mse": 0.09595444798469543,
+          "baseline_mse": 0.0983791162725538,
+          "difference": -0.002424668287858367,
+          "relative_reduction": 0.024646168615104824,
+          "ci95": [
+            -0.004410034920147155,
+            -0.000577802791667637
+          ]
+        },
+        "512_1600_42_vs_128_1600_42": {
+          "candidate_mse": 0.09595444798469543,
+          "baseline_mse": 0.11362731095869094,
+          "difference": -0.017672862973995507,
+          "relative_reduction": 0.15553358453075117,
+          "ci95": [
+            -0.021462227923620958,
+            -0.014246868001646363
+          ]
+        },
+        "512_1600_42_vs_128_400_42": {
+          "candidate_mse": 0.09595444798469543,
+          "baseline_mse": 0.10304294206434861,
+          "difference": -0.007088494079653174,
+          "relative_reduction": 0.0687916507200127,
+          "ci95": [
+            -0.00935359231516486,
+            -0.004918536535114983
+          ]
+        },
+        "512_1600_42_vs_original10000": {
+          "candidate_mse": 0.09595444798469543,
+          "baseline_mse": 0.1186540926573798,
+          "difference": -0.02269964467268437,
+          "relative_reduction": 0.1913094117893669,
+          "ci95": [
+            -0.029332365001027937,
+            -0.01696469938178782
+          ]
+        }
+      }
+    },
+    "observed96": {
+      "means": {
+        "128_400_42": 0.08967507455963641,
+        "512_400_42": 0.0855736662245666,
+        "128_400_43": 0.09099171114697431,
+        "512_400_43": 0.0878833422708946,
+        "128_400_44": 0.0914233888227803,
+        "512_400_44": 0.08667134796269238,
+        "128_1600_42": 0.09843818767694756,
+        "512_1600_42": 0.08330355252837762,
+        "original10000": 0.1036306248861365,
+        "128_400_mean3": 0.09069672484313034,
+        "512_400_mean3": 0.08670945215271786
+      },
+      "seed_sd_512_400": 0.001155309398697365,
+      "comparisons": {
+        "512_400_mean3_vs_128_400_mean3": {
+          "candidate_mse": 0.08670945215271786,
+          "baseline_mse": 0.09069672484313034,
+          "difference": -0.003987272690412484,
+          "relative_reduction": 0.043962697631131586,
+          "ci95": [
+            -0.005932989676754611,
+            -0.002168898355577974
+          ]
+        },
+        "512_400_mean3_vs_original10000": {
+          "candidate_mse": 0.08670945215271786,
+          "baseline_mse": 0.1036306248861365,
+          "difference": -0.016921172733418643,
+          "relative_reduction": 0.1632835153894968,
+          "ci95": [
+            -0.02034456383262295,
+            -0.01393834896928941
+          ]
+        },
+        "512_1600_42_vs_512_400_42": {
+          "candidate_mse": 0.08330355252837762,
+          "baseline_mse": 0.0855736662245666,
+          "difference": -0.0022701136961889765,
+          "relative_reduction": 0.02652818088022113,
+          "ci95": [
+            -0.003960762786058088,
+            -0.0006871989399466361
+          ]
+        },
+        "512_1600_42_vs_128_1600_42": {
+          "candidate_mse": 0.08330355252837762,
+          "baseline_mse": 0.09843818767694756,
+          "difference": -0.015134635148569942,
+          "relative_reduction": 0.15374760045601898,
+          "ci95": [
+            -0.018327553625567816,
+            -0.01227829755613736
+          ]
+        },
+        "512_1600_42_vs_128_400_42": {
+          "candidate_mse": 0.08330355252837762,
+          "baseline_mse": 0.08967507455963641,
+          "difference": -0.006371522031258792,
+          "relative_reduction": 0.071051204167347,
+          "ci95": [
+            -0.008811526354111266,
+            -0.004256042584408231
+          ]
+        },
+        "512_1600_42_vs_original10000": {
+          "candidate_mse": 0.08330355252837762,
+          "baseline_mse": 0.1036306248861365,
+          "difference": -0.02032707235775888,
+          "relative_reduction": 0.19614927903882784,
+          "ci95": [
+            -0.025101614066322022,
+            -0.016092219183337884
+          ]
+        }
+      }
+    }
+  },
+  "scope": "Previously observed64/96, fixed endpoints.400 has3 paired head/decoder seeds;1600 onlyseed42.Encoder2900/prior10000/calibration128 shared; heads frozen from128. Mean risk is not an ensemble. Conditional bootstrap excludes training/selection uncertainty.",
+  "bootstrap_seed": 20261113,
+  "bootstrap_resamples": 20000,
+  "sources": {
+    "research/idm/model-step10000-baseline-audit.json": "603c4e286bbb1b94852dff95e78402b9ed57a3f7226a26683d7acd6b0e4eec85",
+    "runs/reference-idm42-final-prior-residual42-20261113/comparison.json": "fd77543434c09672aa00f6654a26c28a8dac02be2fd64c87e4d7b7062bf9e8a8",
+    "research/results/nested512-direct400-dev64-20261113.json": "66c500fd5a66f8b6cfecfa57659b9bc2e69c501709f11dd40c23fa29f04de1f4",
+    "runs/reference-idm43-final-prior-residual43-20261113/comparison.json": "90936a606a18353a24b3c4179373355453f200c29bd1931606833fc8118b0909",
+    "research/results/nested512-direct43-400-dev64-20261113.json": "ce3573d5fdbdb066410faf0a03b89c14a8dae595a26ccfc8d2bccd9b657324ae",
+    "runs/reference-idm44-final-prior-residual44-20261113/comparison.json": "a13df9cef1865cc51978d9ab3135fc38822d0ca0b4b4257d0cafef1b7e9499d4",
+    "research/results/nested512-direct44-400-dev64-20261113.json": "69892c345af4433b4f2e281d9527cc91e390cf97c15f90bebf5cd3b6d0ef40fa",
+    "research/results/final-prior128-residual1600-dev64-20261113.json": "fbb33dbd3c2394b6d4d8b5484b0a86d7e868575c8a7981a67942a67c22923f22",
+    "research/results/nested512-direct1600-dev64-20261113.json": "1cb0bd885daaa3c940760456af7fdfacfced404a783f2f187728928880642b95",
+    "research/results/reference-idm42-final-prior-observed96-20261113.json": "566f286bf5aaffa6033f4524a83190bb4251c54b613113254914ce5badf8bbcc",
+    "research/results/nested512-direct-constant400-observed96-20261113.json": "9e62da2fb04a1c05ad2257f31699f2925c9ceff636f9ecac971737ce484c2bef",
+    "research/results/reference-idm43-final-prior-observed96-20261113.json": "a9f7a0e45bf3f933533ccedbe197a6df7487dcd674de1c02cfcb4c4792eac9cd",
+    "research/results/nested512-direct43-400-observed96-20261113.json": "33b84c9c89d7dc7100553aa5f3b9bb6693593c123026a8216a560ab28408932d",
+    "research/results/reference-idm44-final-prior-observed96-20261113.json": "0c27712db350cdebb3c9e88776948175da49d571ad5e13cceda1d82d22f80079",
+    "research/results/nested512-direct44-400-observed96-20261113.json": "c1ad11e1695de02ca5965a55931574c89638210901804fe8c2d39321212def0a",
+    "research/results/final-prior128-residual1600-observed96-20261113.json": "2185a571532aefa6e1b35893a2d9137aebab794d253615b3ca3c655c83ab3f3f",
+    "research/results/nested512-direct1600-observed96-20261113.json": "aac6d2ff1e01fcdf4820de041eccc52e87ad8462a4c64b327e6fd633b607698c"
+  },
+  "script_sha256": "10d411d3ad2f1670ae62cf3f5a52137f76823a2aa4fe88a8ecb3fa141737f6b4"
+}

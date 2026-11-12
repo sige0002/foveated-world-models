@@ -1,0 +1,4 @@
+{
+  "reviewed_at": "2026-11-12T17:22:10.725701+00:00",
+  "checks": "Host checked PDE-Refiner Eq4 GT-noise train versus own prediction inference, initial MSE and rollout-correlation metric; DYffusion Alg1, look-ahead loss and Table1 where SST MSE loses to Dropout/MCVD; CorrDiff conditional-mean residual decomposition, Table1 32-member mean MAE and Sec5.2.1 MSE; GenCast 2-state conditional diffusion, 12-hour autoregression and ENS comparison rather than matched deterministic backbone; GraphCast 36.7M/16layer residual processor and 1-to-12-step weighted MSE training. No DINO one-step transfer guarantee."
+}

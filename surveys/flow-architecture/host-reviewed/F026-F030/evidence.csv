@@ -1,0 +1,33 @@
+paper_id,field,item_index,kind,source_url,locator,note
+F026,social_background,1,author_claim,https://arxiv.org/html/2302.05872v3,§1,画像復元は圧縮や医療・ロボット等に関係する。
+F026,technical_background,1,author_claim,https://arxiv.org/html/2302.05872v3,§1–2,画像復元は不良設定であり、標準拡散や従来SBの学習には制約がある。
+F026,problem,1,author_claim,https://arxiv.org/html/2302.05872v3,§3,対応する劣化画像と原画像の間の拡散ブリッジを効率よく学ぶ。
+F026,method,1,demonstrated,https://arxiv.org/html/2302.05872v3,"§3.1–3.3, Proposition 3.3, Eq. 12, Appendix A",ドリフトf=0の条件付きGaussian bridgeで両端点の重み付き平均と分散を解析し、ペアから中間状態を直接標本化する。学習目標は(X_t−X_0)/σ_tで、復元時にX_0を推定する。
+F026,results,1,demonstrated,https://arxiv.org/html/2302.05872v3,§5.3 Table 6,ImageNet復元でOT-ODEへの切替によるFID差はJPEG QF5で+5.3、Gaussian deblurで−0.6。評価対象は画像分布でpaired DINO MSEではない。
+F026,contributions,1,author_claim,https://arxiv.org/html/2302.05872v3,"§3, Appendix A",片側Dirac境界のtractable SB、端点対による解析的posteriorとsimulation-free学習を示す。
+F026,summary,1,interpretation,https://arxiv.org/html/2302.05872v3,"§3, §5.3",対応端点に条件付けた中間平均は未来の条件付き平均そのものではない。推論では未来端点が未知であり予測モデルが必要。
+F026,remaining_issues,1,author_claim,https://arxiv.org/html/2302.05872v3,"§3.3, §5.3",著者: 決定論的OT-ODEは不確実性の大きいJPEG復元で悪化。調査者: paired latent MSEや低ランク出力問題の解決は未検証。
+F027,social_background,1,not_stated,https://arxiv.org/html/2309.16948v3,§1,社会的需要の明示的記載なし。
+F027,technical_background,1,author_claim,https://arxiv.org/html/2309.16948v3,§1–3,ランダムノイズからの標準拡散は観測端点を持つ画像変換に直接対応しにくい。
+F027,problem,1,author_claim,https://arxiv.org/html/2309.16948v3,§3–4,対応分布間の拡散bridgeを学び、スコアと端点予測を統一する。
+F027,method,1,demonstrated,https://arxiv.org/html/2309.16948v3,"§3.2 Theorem 2, §4 Eqs. 10–12, Appendix A.2・A.5",ペア条件付きGaussianスコアを二乗回帰し、期待損失の最適解として端点条件付き周辺scoreを得る。x0予測を橋のscoreへ変換し、端点間の分散・共分散を用いた入力・skip・出力重みを導出。
+F027,results,1,demonstrated,https://arxiv.org/html/2309.16948v3,§7.1 Table 2,"Edges→Handbags 64、画像[-1,1]のMSEでDDBM VE 0.013、Rectified Flow 0.088、I²SB 0.191。拡散等は40 NFE、同一ネット構造の比較で、DINO未来予測ではない。"
+F027,contributions,1,author_claim,https://arxiv.org/html/2309.16948v3,§3–5,拡散bridge score matching、端点予測のpreconditioningとhybrid samplerを提案。
+F027,summary,1,interpretation,https://arxiv.org/html/2309.16948v3,"§3–4, §7",実paired画像MSEを報告する有力な直接比較例だが、分布生成と条件付き平均予測は別で、単純残差回帰との差は未提示。
+F027,remaining_issues,1,interpretation,https://arxiv.org/html/2309.16948v3,"§4, §7",有限容量でのscore学習やDINO特徴への転用は未保証。解析skipが細い出力層による制約を緩和し得るが、残る雑音を消す能力は別に必要。
+F028,social_background,1,not_stated,https://arxiv.org/html/2405.15885v6,§1,社会的需要の明示的記載なし。
+F028,technical_background,1,author_claim,https://arxiv.org/html/2405.15885v6,§1–2,DDBMの数百回のネットワーク評価はサンプリングを高コストにする。
+F028,problem,1,author_claim,https://arxiv.org/html/2405.15885v6,§3–4,学習済みbridgeの再学習なしで高速なサンプリングを実現する。
+F028,method,1,demonstrated,https://arxiv.org/html/2405.15885v6,"§3–4, Propositions 3.1–3.2, Appendix B.1–B.2",離散時刻で分散パラメータρを持つ非Markov bridgeを構成。周辺分布保存はGaussian平均・分散の帰納計算で示し、ρ>0の所定重みでは離散目的がscore目的と定数差。端点予測と注入ノイズを使って更新する。
+F028,results,1,demonstrated,https://arxiv.org/html/2405.15885v6,§6.1 Table 2,Edges→Handbags 64でDBIM 20 NFEはFID 1.74、MSE 0.005、DDBM 200 NFEはFID 0.88、MSE 0.006。ηは候補から結果を選択。画像画素評価。
+F028,contributions,1,author_claim,https://arxiv.org/html/2405.15885v6,§3–4,再学習なしの確率的〜決定論的なbridge samplerと高次法を導出。
+F028,summary,1,interpretation,https://arxiv.org/html/2405.15885v6,"§4, §6",端点予測器を活かしてサンプリングを減らすが、生成平均と条件付き未来平均は区別が必要。
+F028,remaining_issues,1,author_claim,https://arxiv.org/html/2405.15885v6,§7,著者: 低NFEではぼけや失敗例が残り1段生成より遅い。再学習不要な推論法は教師モデルの能力に依存。
+F030,social_background,1,not_stated,https://arxiv.org/html/2205.07680v2,§1,社会的需要の明示的記載なし。
+F030,technical_background,1,author_claim,https://arxiv.org/html/2205.07680v2,§1–2,通常の画像変換拡散は画像条件を別途注入し、ドメイン間隔が課題。
+F030,problem,1,author_claim,https://arxiv.org/html/2205.07680v2,§3,対応する画像ドメイン間をBrownian bridgeで直接変換する。
+F030,method,1,demonstrated,https://arxiv.org/html/2205.07680v2,"§3.1, Eqs. 4–10; Appendix A","VQGAN潜在のペア(x0,y)に対し平均(1−m)x0+my、分散2(m−m²)のbridgeを用いる。分散保存の動機には端点が標準正規で比較的独立との仮定。yは逆過程の開始点であり各ステップのネット追加条件ではない。"
+F030,results,1,demonstrated,https://arxiv.org/html/2205.07680v2,"§4.1–4.3, Table 2",edges2shoesで200 sampling stepsのBBDM FID 10.924、LDM 13.020、LPIPSはそれぞれ0.183、0.173。FIDが優れても全指標で優れるわけではない。
+F030,contributions,1,author_claim,https://arxiv.org/html/2205.07680v2,§3–4,対応画像潜在間のbridgeと加速サンプリングを提示。
+F030,summary,1,interpretation,https://arxiv.org/html/2205.07680v2,§3–4,両端点の補間には観測ペアが必要であり、逆過程の標本は条件付き平均のMSE最適性を意味しない。
+F030,remaining_issues,1,interpretation,https://arxiv.org/html/2205.07680v2,"§3.1, §4",端点分散・独立性の仮定は現/未来DINO特徴で検証が必要。VQGANと画像FID中心の実験は未来特徴MSEの保証ではない。

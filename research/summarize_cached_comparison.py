@@ -6,7 +6,7 @@ from pathlib import Path
 import numpy as np
 
 
-def summarize(paths):
+def summarize(paths, predictor='flow', baselines=('residual', 'refinement')):
     records = [json.loads(Path(p).read_text()) for p in paths]
     hashes = records[0]['cache_manifest']['cache_sha256']
     if any(r['cache_manifest']['cache_sha256'] != hashes for r in records):
@@ -27,17 +27,17 @@ def summarize(paths):
                                         for key in ('mse','mean_mse','shuffled_mse','copy_mse')})
     comparisons = []
     rng = np.random.default_rng(2026)
-    for baseline in ('residual','refinement'):
-        seeds = sorted({s for kind,s in index if kind=='flow'} & {s for kind,s in index if kind==baseline})
+    for baseline in baselines:
+        seeds = sorted({s for kind,s in index if kind==predictor} & {s for kind,s in index if kind==baseline})
         if not seeds:
             continue
         for metric in ('mse','mean_mse'):
-            per_seed = np.array([[a[metric]-b['mse'] for a,b in zip(index['flow',s]['validation']['rows'],index[baseline,s]['validation']['rows'])] for s in seeds])
+            per_seed = np.array([[a[metric]-b['mse'] for a,b in zip(index[predictor,s]['validation']['rows'],index[baseline,s]['validation']['rows'])] for s in seeds])
             episodes = sorted({r[0] for r in reference})
             # Pair comparisons and aggregate within an episode before resampling.
             per_episode = np.array([per_seed[:,[i for i,r in enumerate(reference) if r[0]==ep]].mean() for ep in episodes])
             sampled = per_episode[rng.integers(len(episodes),size=(10000,len(episodes)))].mean(1)
-            comparisons.append(dict(flow_metric=metric, baseline=baseline, seeds=seeds,
+            comparisons.append(dict(predictor=predictor, flow_metric=metric, baseline=baseline, baseline_metric='mse', seeds=seeds,
                                     difference=float(per_episode.mean()), seed_differences=per_seed.mean(1).tolist(),
                                     episode_bootstrap_ci95=np.quantile(sampled,[.025,.975]).tolist()))
     return dict(summary=summary, comparisons=comparisons,
@@ -50,10 +50,12 @@ def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--reports',type=Path,nargs='+',required=True)
     parser.add_argument('--output',type=Path,required=True)
+    parser.add_argument('--predictor',default='flow')
+    parser.add_argument('--baselines',nargs='+',default=['residual','refinement'])
     args=parser.parse_args()
     if args.output.exists():
         parser.error('output already exists')
-    result=summarize(args.reports)
+    result=summarize(args.reports,args.predictor,args.baselines)
     args.output.parent.mkdir(parents=True,exist_ok=True)
     args.output.write_text(json.dumps(result,indent=2,allow_nan=False)+'\n')
     print(json.dumps(result,indent=2))

@@ -1,0 +1,141 @@
+{
+  "protocol_sha256": "33dcc3db4ffe6dd5c583d0e8c2d2246d5d67517b09974044016c1e3bfb0a6d28",
+  "results": {
+    "zero": {
+      "chosen": {
+        "config": "spatial_rbf1",
+        "alpha": 1e-08
+      },
+      "float32_gram_spectrum": {
+        "min_eigenvalue": -6.494861060057941e-16,
+        "max_eigenvalue": 19.276765022095987,
+        "negative_eigenvalues_clipped": 1,
+        "near_zero_abs_below1e10": 1,
+        "regularized_condition_after_clipping": 1927676503.2095988,
+        "positive_subspace_condition": 197.97609411793684
+      },
+      "float64_gram_spectrum": {
+        "min_eigenvalue": -4.134177727288156e-16,
+        "max_eigenvalue": 19.276341417456194,
+        "negative_eigenvalues_clipped": 1,
+        "near_zero_abs_below1e10": 1,
+        "regularized_condition_after_clipping": 1927634142.7456195,
+        "positive_subspace_condition": 197.9390680909248
+      },
+      "evaluation": {
+        "train": {
+          "float64_geometry_normalized_mse": 3.7456863600364484e-16,
+          "float32_geometry_normalized_mse": 1.0255551754530347e-10,
+          "normalized_mse_change": -1.0255514297666747e-10,
+          "max_abs_prediction_change": 1.2297297739660706e-05,
+          "prediction_change_normalized_mse": 1.0238534884980794e-10
+        },
+        "validation": {
+          "float64_geometry_normalized_mse": 0.5994129371705104,
+          "float32_geometry_normalized_mse": 0.5994091889860478,
+          "normalized_mse_change": 3.7481844625819605e-06,
+          "max_abs_prediction_change": 3.3407428796816685e-05,
+          "prediction_change_normalized_mse": 5.888330053045865e-10
+        },
+        "observed96": {
+          "float64_geometry_normalized_mse": 0.5660824987569698,
+          "float32_geometry_normalized_mse": 0.5660810064172881,
+          "normalized_mse_change": 1.4923396817190238e-06,
+          "max_abs_prediction_change": 3.1641281497296614e-05,
+          "prediction_change_normalized_mse": 7.466593737860787e-10
+        }
+      }
+    },
+    "original6501": {
+      "chosen": {
+        "config": "spatial_rbf1",
+        "alpha": 1e-08
+      },
+      "float32_gram_spectrum": {
+        "min_eigenvalue": 4.2649797573302385e-16,
+        "max_eigenvalue": 49.7790672724411,
+        "negative_eigenvalues_clipped": 0,
+        "near_zero_abs_below1e10": 1,
+        "regularized_condition_after_clipping": 4977906515.937405,
+        "positive_subspace_condition": 966.6614171387913
+      },
+      "float64_gram_spectrum": {
+        "min_eigenvalue": -2.367898139657281e-16,
+        "max_eigenvalue": 49.77900361609541,
+        "negative_eigenvalues_clipped": 1,
+        "near_zero_abs_below1e10": 1,
+        "regularized_condition_after_clipping": 4977900362.609541,
+        "positive_subspace_condition": 966.5018799980137
+      },
+      "evaluation": {
+        "train": {
+          "float64_geometry_normalized_mse": 1.145783114796922e-15,
+          "float32_geometry_normalized_mse": 1.0890223982877941e-10,
+          "normalized_mse_change": -1.0890109404566461e-10,
+          "max_abs_prediction_change": 1.2010749592117342e-05,
+          "prediction_change_normalized_mse": 1.0860068464219764e-10
+        },
+        "validation": {
+          "float64_geometry_normalized_mse": 0.5855240230313674,
+          "float32_geometry_normalized_mse": 0.5855205684023975,
+          "normalized_mse_change": 3.4546289698900168e-06,
+          "max_abs_prediction_change": 3.481200859506428e-05,
+          "prediction_change_normalized_mse": 6.230175369764962e-10
+        },
+        "observed96": {
+          "float64_geometry_normalized_mse": 0.5319114032342611,
+          "float32_geometry_normalized_mse": 0.5319082045925555,
+          "normalized_mse_change": 3.198641705615124e-06,
+          "max_abs_prediction_change": 3.140852315586251e-05,
+          "prediction_change_normalized_mse": 6.618861782280705e-10
+        }
+      }
+    },
+    "reference42": {
+      "chosen": {
+        "config": "spatial_rbf1",
+        "alpha": 0.01
+      },
+      "float32_gram_spectrum": {
+        "min_eigenvalue": -3.017877329734974e-17,
+        "max_eigenvalue": 12.388289070110584,
+        "negative_eigenvalues_clipped": 1,
+        "near_zero_abs_below1e10": 1,
+        "regularized_condition_after_clipping": 1239.8289070110584,
+        "positive_subspace_condition": 229.20267097595826
+      },
+      "float64_gram_spectrum": {
+        "min_eigenvalue": 2.146175535871664e-16,
+        "max_eigenvalue": 12.38815483774803,
+        "negative_eigenvalues_clipped": 0,
+        "near_zero_abs_below1e10": 1,
+        "regularized_condition_after_clipping": 1239.815483774776,
+        "positive_subspace_condition": 229.15920516081673
+      },
+      "evaluation": {
+        "train": {
+          "float64_geometry_normalized_mse": 0.0005183940777853645,
+          "float32_geometry_normalized_mse": 0.0005186020969065861,
+          "normalized_mse_change": -2.0801912122166404e-07,
+          "max_abs_prediction_change": 1.2209249489081309e-05,
+          "prediction_change_normalized_mse": 6.227266336276352e-11
+        },
+        "validation": {
+          "float64_geometry_normalized_mse": 0.48964255016961605,
+          "float32_geometry_normalized_mse": 0.48963828612626265,
+          "normalized_mse_change": 4.26404335340802e-06,
+          "max_abs_prediction_change": 2.499492780938528e-05,
+          "prediction_change_normalized_mse": 3.158853845534253e-10
+        },
+        "observed96": {
+          "float64_geometry_normalized_mse": 0.4379271004350407,
+          "float32_geometry_normalized_mse": 0.4379256847368702,
+          "normalized_mse_change": 1.4156981704704918e-06,
+          "max_abs_prediction_change": 3.074766224003822e-05,
+          "prediction_change_normalized_mse": 3.979050806731277e-10
+        }
+      }
+    }
+  },
+  "interpretation": "Centered kernels have a constant-vector nullspace, so regularized full condition number is large atalpha1e-8. Report positive-subspace conditioning and actual prediction sensitivity too. No hyperparameter or model selection changed using these evaluations."
+}

@@ -1,0 +1,37 @@
+{
+  "status": "implementation/preflight only; no training launched",
+  "arms": [
+    "future",
+    "recoding",
+    "noise"
+  ],
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "required_runs": 9,
+  "updates": 400,
+  "batch_size": 8,
+  "optimizer": "AdamW",
+  "learning_rate": 0.0003,
+  "weight_decay": {
+    "ndim_ge_2": 0.01,
+    "ndim_lt_2": 0.0
+  },
+  "clip_global_norm": 1.0,
+  "additional_dimensions": 8,
+  "hard_rate_upper_bound_nat": 1,
+  "initialization": "Normal nonzero head weights, common per seed; old32 decoder projection preserved, new8 columns zero",
+  "training_samples_per_example": 1,
+  "evaluation": "four independent draw losses averaged, not averaged predictions",
+  "minibatch_generator": "seed+1000",
+  "training_noise_generator": "seed+2000",
+  "evaluation_noise_generator": "30261113 + split ordinal",
+  "precision": "CPU float32 highest",
+  "conditioning_definition": "C,Y are raw observations determining all cached query inputs. Loss target is phi(Y). C is not asserted identical to decoder DINO features.",
+  "information_scope": "Conditional on fixed learned weights, I(Y;W|C,z0)<=1 nat for a single independent Gaussian draw; not a deterministic-mean or prediction-ensemble bound.",
+  "observed_sets": "512 train; 64 and96 already research-observed evaluation; no fresh final test",
+  "launch_requires": "root review and explicit --train",
+  "seed_scope": "Head initialization+batch+noise vary; common decoder initial weights"
+}

@@ -1,0 +1,158 @@
+{
+  "complete": true,
+  "pending": [],
+  "source_sha256": {
+    "runs/linear-prior512-20261113/results.json": "26db2aac0b2a4a9acc19ae64b2059b5ef147cc1b7ad84dbce95c9b6fa0634d0f",
+    "runs/prior-compression-prior_teacher-512-400-20261113/results.json": "6e8e0f924b8ede4dfc7a330a0948413605e2a6e54afce235de46a242d59d7815",
+    "runs/prior-compression-future-512-400-20261113/results.json": "65d76fb688ef3d5f2a32d8920ca01597868d855f205e51c8054725c4c5b14e5d",
+    "runs/prior-compression-downstream_teacher-512-400-20261113/results.json": "7ca3a7078eb33c0c1fa836a1cd46c1aab69d2c3045b86144afd53322ae0542ae"
+  },
+  "models": {
+    "linear": {
+      "metrics": {
+        "train": {
+          "prior_teacher_mse": 0.03302842937227979,
+          "prior_future_mse": 0.13573848915621056,
+          "final_future_mse": 0.11189426998680574,
+          "final_teacher_mse": 0.030943392501285416,
+          "reference_final_mse": 0.08027585720628849,
+          "reference_prior_mse": 0.10224843382457038
+        },
+        "dev64": {
+          "prior_teacher_mse": 0.034436337620718405,
+          "prior_future_mse": 0.15698619215982035,
+          "final_future_mse": 0.13281647948315367,
+          "final_teacher_mse": 0.0337995420122752,
+          "reference_final_mse": 0.0983791162725538,
+          "reference_prior_mse": 0.11916549759916961
+        },
+        "observed96": {
+          "prior_teacher_mse": 0.03378855036377596,
+          "prior_future_mse": 0.13620740633147457,
+          "final_future_mse": 0.11533538694493473,
+          "final_teacher_mse": 0.03182903095148504,
+          "reference_final_mse": 0.0855736662245666,
+          "reference_prior_mse": 0.1042185661693414
+        }
+      },
+      "final_difference": 0.029761720720368128,
+      "final_relative_change_percent": 34.77906467424916,
+      "conditional_paired_ci95": [
+        0.02500248365977313,
+        0.03471309796635371
+      ],
+      "downstream_to_prior_distortion_ratio": 0.9420064077566439,
+      "derived_error_cross_term": -0.002067310231116906
+    },
+    "prior_teacher": {
+      "metrics": {
+        "train": {
+          "prior_teacher_mse": 0.020578411757014692,
+          "prior_future_mse": 0.12385065936905448,
+          "final_future_mse": 0.10144489357116981,
+          "final_teacher_mse": 0.020132579425990116,
+          "reference_final_mse": 0.08027585720628849,
+          "reference_prior_mse": 0.10224843382457038
+        },
+        "dev64": {
+          "prior_teacher_mse": 0.02635489948443137,
+          "prior_future_mse": 0.14894725917838514,
+          "final_future_mse": 0.12551643000915647,
+          "final_teacher_mse": 0.02596987393917516,
+          "reference_final_mse": 0.0983791162725538,
+          "reference_prior_mse": 0.11916549759916961
+        },
+        "observed96": {
+          "prior_teacher_mse": 0.024847227468853816,
+          "prior_future_mse": 0.12802484088266888,
+          "final_future_mse": 0.10835783433867618,
+          "final_teacher_mse": 0.023819688765797764,
+          "reference_final_mse": 0.0855736662245666,
+          "reference_prior_mse": 0.1042185661693414
+        }
+      },
+      "final_difference": 0.022784168114109587,
+      "final_relative_change_percent": 26.625209739545646,
+      "conditional_paired_ci95": [
+        0.019707721379139304,
+        0.025919803981378206
+      ],
+      "downstream_to_prior_distortion_ratio": 0.9586457400792874,
+      "derived_error_cross_term": -0.0010355206516881738
+    },
+    "future": {
+      "metrics": {
+        "train": {
+          "prior_teacher_mse": 0.03983207550481893,
+          "prior_future_mse": 0.11220600207525422,
+          "final_future_mse": 0.10965440039581154,
+          "final_teacher_mse": 0.03648376995624858,
+          "reference_final_mse": 0.08027585720628849,
+          "reference_prior_mse": 0.10224843382457038
+        },
+        "dev64": {
+          "prior_teacher_mse": 0.04520970952580683,
+          "prior_future_mse": 0.14586982340551913,
+          "final_future_mse": 0.14013561105821282,
+          "final_teacher_mse": 0.04367311761598103,
+          "reference_final_mse": 0.0983791162725538,
+          "reference_prior_mse": 0.11916549759916961
+        },
+        "observed96": {
+          "prior_teacher_mse": 0.044432697216204055,
+          "prior_future_mse": 0.12581007124390453,
+          "final_future_mse": 0.12288126364971201,
+          "final_teacher_mse": 0.04157522338209674,
+          "reference_final_mse": 0.0855736662245666,
+          "reference_prior_mse": 0.1042185661693414
+        }
+      },
+      "final_difference": 0.03730759742514541,
+      "final_relative_change_percent": 43.59705394325515,
+      "conditional_paired_ci95": [
+        0.033581862236799986,
+        0.04116475505773753
+      ],
+      "downstream_to_prior_distortion_ratio": 0.9356898407449091,
+      "derived_error_cross_term": -0.004267625956951321
+    },
+    "downstream_teacher": {
+      "metrics": {
+        "train": {
+          "prior_teacher_mse": 0.021098071611049818,
+          "prior_future_mse": 0.12389349336444866,
+          "final_future_mse": 0.10029144731015549,
+          "final_teacher_mse": 0.019389047227377887,
+          "reference_final_mse": 0.08027585720628849,
+          "reference_prior_mse": 0.10224843382457038
+        },
+        "dev64": {
+          "prior_teacher_mse": 0.026108666046638973,
+          "prior_future_mse": 0.14844962576171383,
+          "final_future_mse": 0.12445253331679851,
+          "final_teacher_mse": 0.024726028641453013,
+          "reference_final_mse": 0.0983791162725538,
+          "reference_prior_mse": 0.11916549759916961
+        },
+        "observed96": {
+          "prior_teacher_mse": 0.024732447306935985,
+          "prior_future_mse": 0.12779358467863253,
+          "final_future_mse": 0.10729020478902385,
+          "final_teacher_mse": 0.02296206195023842,
+          "reference_final_mse": 0.0855736662245666,
+          "reference_prior_mse": 0.1042185661693414
+        }
+      },
+      "final_difference": 0.02171653856445725,
+      "final_relative_change_percent": 25.377595144127223,
+      "conditional_paired_ci95": [
+        0.01886873283559301,
+        0.02464686390255034
+      ],
+      "downstream_to_prior_distortion_ratio": 0.9284185129467121,
+      "derived_error_cross_term": -0.0012455233857811693
+    }
+  },
+  "cross_term_definition": "Derived 2 E[(teacher_final-Y) dot (student_final-teacher_final)] per feature, from squared-error identity. Uses true future for diagnosis only.",
+  "scope": "All fixed endpoints, common current-only inputs and frozen correction; single neural seed, reused64/96. Conditional bootstrap excludes model-selection/training uncertainty. Ratio is observed nonlinear error propagation, not a global Lipschitz constant or causal proof."
+}

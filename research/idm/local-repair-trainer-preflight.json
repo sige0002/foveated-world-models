@@ -1,0 +1,96 @@
+{
+  "no_updates": true,
+  "threads": 2,
+  "source_hashes": {
+    "/home/sadasue/foveated-world-models/runs/reference-idm42-nested512-prior10000/cache_manifest.json": "998ed490c2ab76209c21b76c2fcd3fa83c95d8ad100def6aad536ce069fa8471",
+    "/home/sadasue/foveated-world-models/runs/reference-idm42-observed96-prior10000/cache_manifest.json": "296da56241940e7dd2eb1250ee357a258d4551192c55dcd5c6529c37cbfeba29",
+    "/home/sadasue/foveated-world-models/runs/reference-idm42-nested512-prior10000/train.pt": "7c2d6fe143bd83cfad43d0d919344b3070bb8a0b9a3bc598a84d410fecc798de",
+    "/home/sadasue/foveated-world-models/runs/reference-idm42-nested512-prior10000/validation.pt": "bbb4d0d49e9f4a4a3500e9c78260e3feaf9da33963f5977d98c8983d122c1c09",
+    "/home/sadasue/foveated-world-models/runs/reference-idm42-observed96-prior10000/validation.pt": "7b419bea1eda0f0e871ab40273bf1b59a1d67d5bf2bab23885ba9fee43ab40f4",
+    "/home/sadasue/foveated-world-models/research/results/nested-train512-selection-20261113.json": "6f549b268be91d8a20bd036283bad73d5122253dcc00676a6a989829c952051c",
+    "/home/sadasue/foveated-world-models/research/idm/reference-query-full/manifest.json": "636199923866c2970e86771da3a5516de9a8d30f0c726d84070976d10151e7ce",
+    "/home/sadasue/foveated-world-models/research/idm/observed96-reference-queries2900/manifest.json": "8795c7e7492f2a0c73872b27e92ae5d7160a8220524d1cc0643fe9bf98a7e777",
+    "/home/sadasue/foveated-world-models/research/idm/nested512-independent-verification.json": "bc0e0051cb9e80213395d50e959ad91d2f73fc8051aa509000382fba4320ee25",
+    "/home/sadasue/foveated-world-models/research/idm/query-accessibility512/protocol.json": "df4c29e2aa57308ef49f166de07c0d50fce8a301234b48c14fd9792512512bd2",
+    "/home/sadasue/foveated-world-models/research/idm/reference-query-full/train.pt": "59f0251bdcce5c7dca1a277768ef719c18f567e3b3c3164073171d74861f397c",
+    "/home/sadasue/foveated-world-models/runs/reference-idm42-nested512-prior10000/additional_queries.pt": "1c54725833e894d364fd47376e70ef0ea3bb291ee08779ddccb7181eceaf67ae",
+    "/home/sadasue/foveated-world-models/research/idm/reference-query-full/validation.pt": "83fdd36c590ab211c0a734c24ff198e5d8d2ace70738b1ec822f7a1d339e7ce6",
+    "/home/sadasue/foveated-world-models/research/idm/observed96-reference-queries2900/validation.pt": "916ac68406c367aeb83f2322b7be54f230ceac46a5e09809d726ee16ae8356ea",
+    "/home/sadasue/foveated-world-models/research/idm/reference-comparison2000/reference-42.pt": "b5784dae7b2d0f0e69feec9a5305020e67fc8bab3c681b4e707eeb90c8e05f83",
+    "/home/sadasue/foveated-world-models/research/idm/reference-query-full/train_calibration.pt": "cabb8e89384656768f258f04158353a947ab9e101acc20d5c7d41f1f1956ad8a",
+    "/home/sadasue/foveated-world-models/runs/reference-idm42-nested512-comparison400-20261113/prior_residual-seed42.pt": "a8a84319d8078b3b221ba77d903d2332a4e6f809421803f246575fb967be3233",
+    "/home/sadasue/foveated-world-models/runs/reference-idm42-nested512-comparison400-20261113/comparison.json": "520d18803bd3ebdd7f9d9d9eb81af8047d032a2bd7dd148d6e732521863c3bfb"
+  },
+  "rows": {
+    "train": 512,
+    "validation": 64,
+    "observed96": 96
+  },
+  "posterior": {
+    "train": {
+      "mean32_vs_full64_max_abs": 0.0,
+      "cached_mu_max_abs": 0.010408684611320496
+    },
+    "validation": {
+      "mean32_vs_full64_max_abs": 0.0,
+      "cached_mu_max_abs": 0.00800544023513794
+    },
+    "observed96": {
+      "mean32_vs_full64_max_abs": 0.0,
+      "cached_mu_max_abs": 0.0120697021484375
+    }
+  },
+  "arms": {
+    "F": {
+      "initial": {
+        "head": "de51565d343d32dde9c7bca2b7338befd54eb6dfb8da43873690d5bcc072a1bc",
+        "decoder": "e0112f6c8f2bf57e5580fbc96f44631f8a614dbbbcf04eac9db46d63680ac793",
+        "constant_mu": "b821f9c0f3f4772a432510aea68e55d6fd11b1b05a36f01e3fb47abcf0e8f677"
+      },
+      "first8_mse": 0.13369552791118622,
+      "mean32_exact_reference": true,
+      "trainable_parameters": 0
+    },
+    "H": {
+      "initial": {
+        "head": "de51565d343d32dde9c7bca2b7338befd54eb6dfb8da43873690d5bcc072a1bc",
+        "decoder": "e0112f6c8f2bf57e5580fbc96f44631f8a614dbbbcf04eac9db46d63680ac793",
+        "constant_mu": "b821f9c0f3f4772a432510aea68e55d6fd11b1b05a36f01e3fb47abcf0e8f677"
+      },
+      "first8_mse": 0.13369552791118622,
+      "mean32_exact_reference": true,
+      "trainable_parameters": 270624
+    },
+    "D": {
+      "initial": {
+        "head": "de51565d343d32dde9c7bca2b7338befd54eb6dfb8da43873690d5bcc072a1bc",
+        "decoder": "e0112f6c8f2bf57e5580fbc96f44631f8a614dbbbcf04eac9db46d63680ac793",
+        "constant_mu": "b821f9c0f3f4772a432510aea68e55d6fd11b1b05a36f01e3fb47abcf0e8f677"
+      },
+      "first8_mse": 0.13369552791118622,
+      "mean32_exact_reference": true,
+      "trainable_parameters": 13410048
+    },
+    "HD": {
+      "initial": {
+        "head": "de51565d343d32dde9c7bca2b7338befd54eb6dfb8da43873690d5bcc072a1bc",
+        "decoder": "e0112f6c8f2bf57e5580fbc96f44631f8a614dbbbcf04eac9db46d63680ac793",
+        "constant_mu": "b821f9c0f3f4772a432510aea68e55d6fd11b1b05a36f01e3fb47abcf0e8f677"
+      },
+      "first8_mse": 0.13369552791118622,
+      "mean32_exact_reference": true,
+      "trainable_parameters": 13680672
+    },
+    "K": {
+      "initial": {
+        "head": "de51565d343d32dde9c7bca2b7338befd54eb6dfb8da43873690d5bcc072a1bc",
+        "decoder": "e0112f6c8f2bf57e5580fbc96f44631f8a614dbbbcf04eac9db46d63680ac793",
+        "constant_mu": "b821f9c0f3f4772a432510aea68e55d6fd11b1b05a36f01e3fb47abcf0e8f677"
+      },
+      "first8_mse": 0.1598898321390152,
+      "mean32_exact_reference": null,
+      "trainable_parameters": 13410048
+    }
+  },
+  "script_sha256": "4558edfedcc1a7d0ecca2e1589e425346d2ad2e126d625a2b6dc961da495535c"
+}

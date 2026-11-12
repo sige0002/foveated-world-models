@@ -1,0 +1,30 @@
+{
+  "worktree": "/home/sadasue/fwm-prior-compression-20261113",
+  "source_cache": "runs/reference-idm42-nested512-prior10000",
+  "correction_checkpoint": "runs/reference-idm42-nested512-comparison400-20261113/prior_residual-seed42.pt",
+  "target": "Final future-feature MSE and inference time after replacing current-only prior, correction remains fixed",
+  "linear_reference": {
+    "model": "current + centered per-patch affine residual",
+    "fit": "float64 train512 covariance, fixed ridge .01, all train patches equally weighted",
+    "target": "cached current-only prior"
+  },
+  "neural_arms": [
+    "prior_teacher",
+    "future",
+    "downstream_teacher"
+  ],
+  "neural_architecture": "fullwidth current residual13.41M; input current only, internal constant zero32 code; original prior_residual factory with baseline=current",
+  "neural_steps": 400,
+  "neural_seed": 42,
+  "batch": 8,
+  "lr": 0.0003,
+  "downstream_loss": "MSE(D(X,Z,g(X)),D(X,Z,b(X))) + .1*MSE(g(X),b(X))",
+  "decisions": [
+    "No selection of lambda/checkpoint using observed64/96",
+    "Report teacher approximation, current-only future MSE, final future MSE, final teacher disagreement separately",
+    "Do not infer action semantics or executable forecasts from posterior reconstruction",
+    "Known knowledge-distillation/linear-ridge baseline; no novelty claim",
+    "Compression alone does not fulfill large-MSE-improvement goal"
+  ],
+  "status": "Linear and neural designs fixed before fitting; no training started"
+}

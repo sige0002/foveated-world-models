@@ -1,0 +1,292 @@
+{
+  "checkpoint": 6501,
+  "indices": [
+    0,
+    9,
+    18,
+    27,
+    36,
+    45,
+    54,
+    63
+  ],
+  "rows": [
+    {
+      "index": 0,
+      "episode": "30",
+      "dt": 1.2000000476837158,
+      "reference_mse": 0.26949408650398254,
+      "reference_zero_z_mse": 0.2766326665878296
+    },
+    {
+      "index": 135,
+      "episode": "183",
+      "dt": 1.2000000476837158,
+      "reference_mse": 0.06752429902553558,
+      "reference_zero_z_mse": 0.06780606508255005
+    },
+    {
+      "index": 271,
+      "episode": "599",
+      "dt": 1.2000000476837158,
+      "reference_mse": 0.07836184650659561,
+      "reference_zero_z_mse": 0.0788465142250061
+    },
+    {
+      "index": 406,
+      "episode": "952",
+      "dt": 1.200000286102295,
+      "reference_mse": 0.20763011276721954,
+      "reference_zero_z_mse": 0.2071150541305542
+    },
+    {
+      "index": 542,
+      "episode": "979",
+      "dt": 1.1999998092651367,
+      "reference_mse": 0.09903985261917114,
+      "reference_zero_z_mse": 0.10009516030550003
+    },
+    {
+      "index": 677,
+      "episode": "1484",
+      "dt": 1.1999998092651367,
+      "reference_mse": 0.1500689834356308,
+      "reference_zero_z_mse": 0.14867109060287476
+    },
+    {
+      "index": 813,
+      "episode": "1539",
+      "dt": 1.2000000476837158,
+      "reference_mse": 0.1775674819946289,
+      "reference_zero_z_mse": 0.18385274708271027
+    },
+    {
+      "index": 949,
+      "episode": "1559",
+      "dt": 0.9333333969116211,
+      "reference_mse": 0.059073153883218765,
+      "reference_zero_z_mse": 0.058178529143333435
+    }
+  ],
+  "threads": 2,
+  "batch_size": 1,
+  "torch_version": "2.11.0+cu130",
+  "source_cache_sha256": "711d167d2e00f2fbb0fa374c6c113347714b8b2d1349ce573a30c5b137967be4",
+  "weights_sha256": "9026f4535a6ab322cb12752035ff82f2087b77d42f830a879f5738cc8565906a",
+  "script_sha256": "eaedc6f124556d6774026c8151f6b6cc5b29019b0d5861a2ab6a5c85b16ecb3b",
+  "query_tensor_sha256": "b5c75c4732d56fa6e75201def50b67016c219ab411373fea81a11f8b634bac4a",
+  "responses": {
+    "highest_full": {
+      "query": {
+        "future_response_energy": 74102.95682365404,
+        "common_mean_energy": 74887316.92171976,
+        "between_pair_variance": 27128.67360812466
+      },
+      "projection": {
+        "future_response_energy": 103242.5588629595,
+        "common_mean_energy": 358336682.0477319,
+        "between_pair_variance": 37546.59638296053
+      },
+      "layernorm": {
+        "future_response_energy": 0.001325103168605209,
+        "common_mean_energy": 38.580416970775765,
+        "between_pair_variance": 0.0004859879515643345
+      },
+      "mu": {
+        "future_response_energy": 0.0004487513532524539,
+        "common_mean_energy": 0.6798482702268622,
+        "between_pair_variance": 0.00016466879173932447
+      },
+      "logvar": {
+        "future_response_energy": 0.0001996230560550316,
+        "common_mean_energy": 336.90130297774283,
+        "between_pair_variance": 7.312691140270999e-05
+      }
+    },
+    "medium_full": {
+      "query": {
+        "future_response_energy": 74099.95605484782,
+        "common_mean_energy": 74880184.08738777,
+        "between_pair_variance": 27129.085593189542
+      },
+      "projection": {
+        "future_response_energy": 102408.88049119673,
+        "common_mean_energy": 358328458.05330646,
+        "between_pair_variance": 37134.60916073262
+      },
+      "layernorm": {
+        "future_response_energy": 0.0013285794117598657,
+        "common_mean_energy": 38.58045235901084,
+        "between_pair_variance": 0.0004862870520548346
+      },
+      "mu": {
+        "future_response_energy": 0.0004336744106162582,
+        "common_mean_energy": 0.6810177481965644,
+        "between_pair_variance": 0.00016027087674862217
+      },
+      "logvar": {
+        "future_response_energy": 0.0002905097557146519,
+        "common_mean_energy": 336.69524424864164,
+        "between_pair_variance": 0.00010556523530880213
+      }
+    },
+    "medium_head_highest_query": {
+      "query": {
+        "future_response_energy": 74102.95682365404,
+        "common_mean_energy": 74887316.92171976,
+        "between_pair_variance": 27128.67360812466
+      },
+      "projection": {
+        "future_response_energy": 102646.81290190291,
+        "common_mean_energy": 358372019.8712779,
+        "between_pair_variance": 37229.08889792918
+      },
+      "layernorm": {
+        "future_response_energy": 0.0013291431084305836,
+        "common_mean_energy": 38.580469800962206,
+        "between_pair_variance": 0.0004857286484126009
+      },
+      "mu": {
+        "future_response_energy": 0.0004381984720389642,
+        "common_mean_energy": 0.680862141615216,
+        "between_pair_variance": 0.00016164582549392514
+      },
+      "logvar": {
+        "future_response_energy": 0.0002884517628771732,
+        "common_mean_energy": 336.68841059345334,
+        "between_pair_variance": 0.00010302814610696487
+      }
+    },
+    "float64_head_highest_query": {
+      "query": {
+        "future_response_energy": 74102.95682759458,
+        "common_mean_energy": 74887316.81750411,
+        "between_pair_variance": 27128.67360664194
+      },
+      "projection": {
+        "future_response_energy": 103243.25213461588,
+        "common_mean_energy": 358336667.2304205,
+        "between_pair_variance": 37546.425901998606
+      },
+      "layernorm": {
+        "future_response_energy": 0.0013251157536467504,
+        "common_mean_energy": 38.58041529499137,
+        "between_pair_variance": 0.00048598864177560566
+      },
+      "mu": {
+        "future_response_energy": 0.0004487496704813549,
+        "common_mean_energy": 0.6798480676343736,
+        "between_pair_variance": 0.0001646661639025751
+      },
+      "logvar": {
+        "future_response_energy": 0.0001996200186747956,
+        "common_mean_energy": 336.9012906550038,
+        "between_pair_variance": 7.312842575773782e-05
+      }
+    }
+  },
+  "isotropic_controls": {
+    "query": {
+      "actual_energy": 74102.95682759458,
+      "isotropic_mean_energy": 74102.956823654,
+      "actual_over_isotropic": 1.000000000053177
+    },
+    "projection": {
+      "actual_energy": 103243.25213461588,
+      "isotropic_mean_energy": 931.3024738465814,
+      "actual_over_isotropic": 110.85899053632677
+    },
+    "layernorm": {
+      "actual_energy": 0.0013251157536467504,
+      "isotropic_mean_energy": 4.587385759943855e-05,
+      "actual_over_isotropic": 28.886076362214816
+    },
+    "mu": {
+      "actual_energy": 0.0004487496704813549,
+      "isotropic_mean_energy": 1.0672779602651456e-05,
+      "actual_over_isotropic": 42.04618545386914
+    },
+    "logvar": {
+      "actual_energy": 0.0001996200186747956,
+      "isotropic_mean_energy": 1.5216914993154748e-05,
+      "actual_over_isotropic": 13.118297550100902
+    }
+  },
+  "geometry": {
+    "projected_coordinate_std_mean": 3345.570606279479,
+    "delta_centered_energy": 103147.57678477501,
+    "delta_radial_energy": 88127.90022674025,
+    "delta_tangent_energy": 15019.676558034755,
+    "LN_jacobian_relative_error": 0.0005056920634721431,
+    "medium_mu_cached_max_error": 0.0
+  },
+  "precision_differences": {
+    "highest_full": {
+      "query": {
+        "max_abs": 0.0,
+        "difference_energy": 0.0
+      },
+      "projection": {
+        "max_abs": 0.008064705287324614,
+        "difference_energy": 9.141648171014076e-05
+      },
+      "layernorm": {
+        "max_abs": 2.414254030913554e-06,
+        "difference_energy": 8.311083832368978e-12
+      },
+      "mu": {
+        "max_abs": 9.790078498994603e-07,
+        "difference_energy": 2.292450633109075e-12
+      },
+      "logvar": {
+        "max_abs": 1.2495064649620247e-06,
+        "difference_energy": 4.225121181881118e-12
+      }
+    },
+    "medium_full": {
+      "query": {
+        "max_abs": 0.10211181640625,
+        "difference_energy": 0.4730150726590272
+      },
+      "projection": {
+        "max_abs": 1.78314196485735,
+        "difference_energy": 9.42675210743137
+      },
+      "layernorm": {
+        "max_abs": 0.0004119468087999678,
+        "difference_energy": 5.541791416457262e-07
+      },
+      "mu": {
+        "max_abs": 0.004085428193338847,
+        "difference_energy": 5.105871557438295e-05
+      },
+      "logvar": {
+        "max_abs": 0.005271709926595758,
+        "difference_energy": 0.00012070106928664014
+      }
+    },
+    "medium_head_highest_query": {
+      "query": {
+        "max_abs": 0.0,
+        "difference_energy": 0.0
+      },
+      "projection": {
+        "max_abs": 2.1686791197416824,
+        "difference_energy": 10.553814259722712
+      },
+      "layernorm": {
+        "max_abs": 0.00041433099459098344,
+        "difference_energy": 5.690926368237355e-07
+      },
+      "mu": {
+        "max_abs": 0.0044611758740029095,
+        "difference_energy": 5.162954573593538e-05
+      },
+      "logvar": {
+        "max_abs": 0.005271709926595758,
+        "difference_energy": 0.0001197650259777746
+      }
+    }
+  },
+  "limitations": "Sensitivity only: cross-episode future swap may be OOD, not action counterfactual. Coordinate energies are not mutual information. Fixed eight uniformly spaced cached validation rows; no fitting, no vision extraction, no decoder evaluation. Full highest/medium differences include encoder arithmetic; fixed highest Q comparisons isolate head arithmetic. Isotropic control: 64 fixed seed713 directions per row at identical query perturbation norm; head evaluated float64 for geometric comparison."
+}

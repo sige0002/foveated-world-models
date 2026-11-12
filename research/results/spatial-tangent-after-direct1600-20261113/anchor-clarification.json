@@ -1,0 +1,6 @@
+{
+  "note": "Original protocol.primary uses fixed prior as generic wording. Actual error anchor is the direct1600 checkpoint named in protocol.error_anchor. This clarification changes no source protocol, hashes or numerical results.",
+  "protocol_sha256": "d039959cbac335e76f3dddc4e8d8f8f3b8605ee5ae6dfee96f4ac17a696fedcf",
+  "actual_anchor": "runs/reference-idm42-nested512-residual1600-20261113/prior_residual-seed42.pt",
+  "observed96_anchor_mse_reference": 0.08330355252837762
+}

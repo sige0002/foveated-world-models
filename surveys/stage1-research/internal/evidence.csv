@@ -1,0 +1,488 @@
+paper_id,field,item_index,kind,source_url,locator,note
+W001,social_background,1,not_stated,https://arxiv.org/html/2602.15922v1,§1,導入部を確認
+W001,technical_background,1,author_claim,https://arxiv.org/html/2602.15922v1,§1,VLAは意味の汎化に強い一方で未経験の物理動作や環境への汎化が難しい。
+W001,problem,1,author_claim,https://arxiv.org/html/2602.15922v1,§1,多様なロボット経験から未学習課題へゼロショットで操作する。
+W001,method,1,author_claim,https://arxiv.org/html/2602.15922v1,§3–4,Wan由来の14B動画拡散モデルを用い、映像の将来と行動を言語・観測に条件付けて共同生成し、閉ループ実行する。
+W001,results,1,demonstrated,https://arxiv.org/html/2602.15922v1,"§5.1, Fig.8–9; §4",実機AgiBot G1の訓練にない10課題で平均進捗39.5%、事前学習済みVLA 16.3%；既知課題・未知環境では62.2%対27.4%。14Bモデルを7 Hzで閉ループ実行。
+W001,contributions,1,author_claim,https://arxiv.org/html/2602.15922v1,"§1, §5",著者主張: 多様な非反復データを使う動画・行動共同生成と異なる身体への移転を実証。
+W001,summary,1,interpretation,https://arxiv.org/html/2602.15922v1,"§1; §3–4; §5.1, Fig.8–9; §4",多様なロボット経験から未学習課題へゼロショットで操作する。 Wan由来の14B動画拡散モデルを用い、映像の将来と行動を言語・観測に条件付けて共同生成し、閉ループ実行する。 実機AgiBot G1の訓練にない10課題で平均進捗39.5%、事前学習済みVLA 16.3%；既知課題・未知環境では62.2%対27.4%。14Bモデルを7 Hzで閉ループ実行。
+W001,remaining_issues,1,author_claim,https://arxiv.org/html/2602.15922v1,"§5.1, §6",著者指摘: 鍵挿入などサブセンチ精度を要する操作は困難で、映像生成の誤りが動作失敗につながる。
+W002,social_background,1,not_stated,https://arxiv.org/html/2601.16163v1,§1,導入部を確認
+W002,technical_background,1,author_claim,https://arxiv.org/html/2601.16163v1,§1,動画生成モデルの時空間事前知識を方策に利用する従来法には複数学習段階や追加アーキテクチャがある。
+W002,problem,1,author_claim,https://arxiv.org/html/2601.16163v1,§1,単一段階の実演事後学習で視覚運動制御と将来予測・計画を実現する。
+W002,method,1,author_claim,https://arxiv.org/html/2601.16163v1,§3,Cosmos-Predict2-2Bの構造を変えず、行動・将来観測・価値を潜在フレームとして生成。候補の将来価値を用いたbest-of-N計画も行う。
+W002,results,1,demonstrated,https://arxiv.org/html/2601.16163v1,"§4, §5",計画なしのシミュレーション成功率はLIBERO 98.5%、RoboCasa 67.1%；実機双腕タスク平均93.6%。2つの難しい実機課題で計画により平均12.5ポイント上昇。
+W002,contributions,1,author_claim,https://arxiv.org/html/2601.16163v1,"§1, §3",動画基盤モデルの同一拡散機構に制御・予測・価値を符号化する方式を提案。
+W002,summary,1,interpretation,https://arxiv.org/html/2601.16163v1,"§1; §3; §4, §5",単一段階の実演事後学習で視覚運動制御と将来予測・計画を実現する。 Cosmos-Predict2-2Bの構造を変えず、行動・将来観測・価値を潜在フレームとして生成。候補の将来価値を用いたbest-of-N計画も行う。 計画なしのシミュレーション成功率はLIBERO 98.5%、RoboCasa 67.1%；実機双腕タスク平均93.6%。2つの難しい実機課題で計画により平均12.5ポイント上昇。
+W002,remaining_issues,1,author_claim,https://arxiv.org/html/2601.16163v1,§6 Limitations and future work,著者指摘: モデルベース計画は行動チャンクあたり約5秒を要し動的課題を制限する。実演分布外の正確な予測には相当量のロールアウトを要する。
+W010,social_background,1,not_stated,https://arxiv.org/html/2510.10125v3,§1,導入部を確認
+W010,technical_background,1,author_claim,https://arxiv.org/html/2510.10125v3,§1,汎用方策の実機評価には多数の試行、改善には追加の専門データが必要。
+W010,problem,1,author_claim,https://arxiv.org/html/2510.10125v3,§1,一般的なロボット方策を想像内で閉ループ評価し、生成経験で改善する。
+W010,method,1,author_claim,https://arxiv.org/html/2510.10125v3,§3–4,複数視点・フレーム単位行動条件・姿勢条件付き履歴検索を持つ動画世界モデルをDROID 95k軌跡、564場面で学ぶ。
+W010,results,1,demonstrated,https://arxiv.org/html/2510.10125v3,§5–6,20秒超の生成軌跡と実機評価に対応した順位を報告。未知指示の実機成功率は生成データでの事後学習後38.7%から83.4%。
+W010,contributions,1,author_claim,https://arxiv.org/html/2510.10125v3,"§1, §3",方策ループ内の複数視点世界モデルを評価と合成データによる改善に用いる。
+W010,summary,1,interpretation,https://arxiv.org/html/2510.10125v3,§1; §3–4; §5–6,一般的なロボット方策を想像内で閉ループ評価し、生成経験で改善する。 複数視点・フレーム単位行動条件・姿勢条件付き履歴検索を持つ動画世界モデルをDROID 95k軌跡、564場面で学ぶ。 20秒超の生成軌跡と実機評価に対応した順位を報告。未知指示の実機成功率は生成データでの事後学習後38.7%から83.4%。
+W010,remaining_issues,1,author_claim,https://arxiv.org/html/2510.10125v3,§6,著者指摘: 精密接触・長期推論で失敗し、初期観測に敏感。既知指示の低レベル成功改善への精度は十分でないと推測。
+W014,social_background,1,not_stated,https://arxiv.org/html/2610.12099v1,Abstract,確認範囲における記載状況: 明示的な社会的背景は確認した要旨に記載なし。
+W014,technical_background,1,author_claim,https://arxiv.org/html/2610.12099v1,Abstract,著者の説明・提案: 画像座標は視点に依存し、距離や接触の物理的関係を直接表現しない。
+W014,problem,1,author_claim,https://arxiv.org/html/2610.12099v1,Abstract,著者の説明・提案: 機体をまたぐ操作と動的シーンを共通の計量3D表現で結合する。
+W014,method,1,author_claim,https://arxiv.org/html/2610.12099v1,Abstract,著者の説明・提案: 人の手・ロボットグリッパーを3D軌跡の action flow、場面を scene flow で表し、3D位置と物理時間軌跡をトークン化。
+W014,results,1,demonstrated,https://arxiv.org/html/2610.12099v1,Abstract,1.7B パラメータで RoboTwin の条件付きシーン変位誤差は PointWorld より最大49%低減、LIBERO 99.8%、実機2課題各20試行で90%・80%、平均85%。
+W014,contributions,1,author_claim,https://arxiv.org/html/2610.12099v1,Abstract,著者の説明・提案: 著者提案: 観測・行動・場面動力学を共通の計量3D座標系に表す UNITAS。
+W014,summary,1,author_claim,https://arxiv.org/html/2610.12099v1,Abstract,著者の説明・提案: 共通3D表現によって行動実行とシーン予測を同一モデルで評価。
+W018,social_background,1,not_stated,https://arxiv.org/html/2609.02531v1,Abstract,確認範囲における記載状況: 明示的な社会的背景は確認した要旨に記載なし。
+W018,technical_background,1,author_claim,https://arxiv.org/html/2609.02531v1,Abstract,著者の説明・提案: RGB のみの WAM は操作に有用な3D幾何を明示しない。
+W018,problem,1,author_claim,https://arxiv.org/html/2609.02531v1,Abstract,著者の説明・提案: 深度情報を既存の凍結動画 VAE と統合し行動と未来状態を予測。
+W018,contributions,1,author_claim,https://arxiv.org/html/2609.02531v1,Abstract,著者の説明・提案: 著者提案: 凍結トークナイザを流用する幾何対応 SA-WAM。
+W018,summary,1,author_claim,https://arxiv.org/html/2609.02531v1,Abstract,著者の説明・提案: 深度を潜在動画表現に導入して操作と未来予測を評価。
+W019,social_background,1,not_stated,https://arxiv.org/html/2609.05588v3,Abstract,確認範囲における記載状況: 明示的な社会的背景は確認した要旨に記載なし。
+W019,technical_background,1,author_claim,https://arxiv.org/html/2609.05588v3,Abstract,著者の説明・提案: 既存 WAM は事前学習済み動画生成器に依存することが多く、直接事前学習とスケール則は未解明。
+W019,problem,1,author_claim,https://arxiv.org/html/2609.05588v3,Abstract,著者の説明・提案: 操作データから WAM を一から事前学習し、未学習条件でデータ規模の影響を調べる。
+W019,method,1,author_claim,https://arxiv.org/html/2609.05588v3,Abstract,著者の説明・提案: 制御向け圧縮器、単段階動画プランナ、逆動力学モデルを別途訓練し、整合する予測だけ KASO で共同最適化する。
+W019,contributions,1,author_claim,https://arxiv.org/html/2609.05588v3,Abstract,著者の説明・提案: 著者提案: 一から学ぶ視覚計画と行動の整合方法、および大規模 OOD 評価。
+W019,summary,1,author_claim,https://arxiv.org/html/2609.05588v3,Abstract,著者の説明・提案: 多様な操作データの規模と事前学習方策の OOD 成功率の関係を測定。
+W019,remaining_issues,1,author_claim,https://arxiv.org/html/2609.05588v3,§7 Limitations and Outlook,著者の説明・提案: 著者の限界: 人間視点動画の大規模利用は未探索で、明示的推論、長期計画、記憶、自己修正は扱わない。
+W014,remaining_issues,1,author_claim,https://arxiv.org/html/2610.12099v1,§6 Conclusion,著者の説明・提案: 著者は長時間の予測と広い実機配備を今後の課題に挙げる。
+W014,remaining_issues,2,interpretation,https://arxiv.org/html/2610.12099v1,§5 Table 4,確認箇所からの調査者解釈: 調査者指摘: シーン予測のシミュレーション例は訓練クリップ由来で、実世界例は scene-flow 教師なしの例示である。
+W018,method,1,author_claim,https://arxiv.org/html/2609.02531v1,§III; §IV-A,著者の説明・提案: 非線形対数変換した深度を潜在フレームにし、凍結 Wan2.1 VAE と Cosmos-Predict2 2B で RGB・深度・行動を共同予測。
+W018,method,2,author_claim,https://arxiv.org/html/2609.02531v1,§IV-A Training Details,著者の説明・提案: H100 40基で学習。32ステップの行動チャンクの先頭16ステップを開ループ実行して再観測。
+W018,results,1,demonstrated,https://arxiv.org/html/2609.02531v1,§IV Table II,実験の報告: RoboCasa 各課題50デモで76.6%、Cosmos-Policy 67.1%。
+W018,results,2,demonstrated,https://arxiv.org/html/2609.02531v1,§V Fig. 5,実験の報告: UR5 実機の4分類の集計完了スコアは通常条件90.0%対 Cosmos-Policy 75.0%、ランダム化では77.5%対48.8%。
+W018,remaining_issues,1,author_claim,https://arxiv.org/html/2609.02531v1,§VI Conclusion,著者の説明・提案: 著者の限界: 予測される未来と行動の不整合が残り、幾何整合性の検証と推論効率の改善が必要。
+W019,results,1,demonstrated,https://arxiv.org/html/2609.05588v3,§5.2 Fig. 8–9; Appendix C,実験の報告: 実機100課題20技能、機体×データ規模×課題ごと10試行、タスク別追加学習なしの OOD で、共同学習データ300時間→3万時間に増やすと G1-OP 17.1→44.1%、G2-90D 13.4→31.1%。
+W019,results,2,interpretation,https://arxiv.org/html/2609.05588v3,§5.2; §3.4.5,確認箇所からの調査者解釈: 全条件は共通の事前学習済み構成要素から開始し、1エポックか予算上限で終了するため総学習時間や計算量を揃えた比較ではない。
+W021,social_background,1,author_claim,https://arxiv.org/html/2606.10040v3,§1,記載箇所に基づく著者の説明。
+W021,technical_background,1,author_claim,https://arxiv.org/html/2606.10040v3,§1–2,記載箇所に基づく著者の説明。
+W021,problem,1,author_claim,https://arxiv.org/html/2606.10040v3,§1,記載箇所に基づく著者の説明。
+W021,method,1,author_claim,https://arxiv.org/html/2606.10040v3,§3,記載箇所に基づく著者の説明。
+W021,results,1,demonstrated,https://arxiv.org/html/2606.10040v3,"§4.2–4.4, Tables 1–4",指定条件下での著者報告の評価結果。
+W021,contributions,1,author_claim,https://arxiv.org/html/2606.10040v3,"§3, §5",記載箇所に基づく著者の説明。
+W021,summary,1,author_claim,https://arxiv.org/html/2606.10040v3,§3–5,記載箇所に基づく著者の説明。
+W021,remaining_issues,1,author_claim,https://arxiv.org/html/2606.10040v3,§5,記載箇所に基づく著者の説明。
+W022,social_background,1,not_stated,https://arxiv.org/html/2608.26103v2,§1,確認範囲を限定
+W022,technical_background,1,author_claim,https://arxiv.org/html/2608.26103v2,§1–2,記載箇所に基づく著者の説明。
+W022,problem,1,author_claim,https://arxiv.org/html/2608.26103v2,"§1, §3",記載箇所に基づく著者の説明。
+W022,method,1,author_claim,https://arxiv.org/html/2608.26103v2,§3,記載箇所に基づく著者の説明。
+W022,results,1,demonstrated,https://arxiv.org/html/2608.26103v2,"§4, Fig. 3",指定条件下での著者報告の評価結果。
+W022,contributions,1,author_claim,https://arxiv.org/html/2608.26103v2,"§3, §5",記載箇所に基づく著者の説明。
+W022,summary,1,author_claim,https://arxiv.org/html/2608.26103v2,§3–5,記載箇所に基づく著者の説明。
+W022,remaining_issues,1,interpretation,https://arxiv.org/html/2608.26103v2,§4–5,記載内容からの調査者の解釈。
+W024,social_background,1,not_stated,https://arxiv.org/html/2606.13674v2,§1,確認範囲を限定
+W024,technical_background,1,author_claim,https://arxiv.org/html/2606.13674v2,§1–2,記載箇所に基づく著者の説明。
+W024,problem,1,author_claim,https://arxiv.org/html/2606.13674v2,§3.1,記載箇所に基づく著者の説明。
+W024,method,1,author_claim,https://arxiv.org/html/2606.13674v2,§3.2–3.3,記載箇所に基づく著者の説明。
+W024,results,1,demonstrated,https://arxiv.org/html/2606.13674v2,"§4, Fig. 2, Table 3",指定条件下での著者報告の評価結果。
+W024,contributions,1,author_claim,https://arxiv.org/html/2606.13674v2,§3,記載箇所に基づく著者の説明。
+W024,summary,1,author_claim,https://arxiv.org/html/2606.13674v2,§3–5,記載箇所に基づく著者の説明。
+W024,remaining_issues,1,author_claim,https://arxiv.org/html/2606.13674v2,"§5, Fig. 2",記載箇所に基づく著者の説明。
+W025,social_background,1,not_stated,https://arxiv.org/html/2606.10363v1,§1,確認範囲を限定
+W025,technical_background,1,author_claim,https://arxiv.org/html/2606.10363v1,§1–2,記載箇所に基づく著者の説明。
+W025,problem,1,author_claim,https://arxiv.org/html/2606.10363v1,§1,記載箇所に基づく著者の説明。
+W025,method,1,author_claim,https://arxiv.org/html/2606.10363v1,"§3, Fig. 1",記載箇所に基づく著者の説明。
+W025,results,1,demonstrated,https://arxiv.org/html/2606.10363v1,"§4, Tables 1 and 3",指定条件下での著者報告の評価結果。
+W025,contributions,1,author_claim,https://arxiv.org/html/2606.10363v1,§3,記載箇所に基づく著者の説明。
+W025,summary,1,author_claim,https://arxiv.org/html/2606.10363v1,§3–5,記載箇所に基づく著者の説明。
+W025,remaining_issues,1,author_claim,https://arxiv.org/html/2606.10363v1,§6,記載箇所に基づく著者の説明。
+W027,social_background,1,not_stated,https://arxiv.org/html/2504.02792v3,§I,確認範囲を限定
+W027,technical_background,1,author_claim,https://arxiv.org/html/2504.02792v3,§I–II,記載箇所に基づく著者の説明。
+W027,problem,1,author_claim,https://arxiv.org/html/2504.02792v3,§I,記載箇所に基づく著者の説明。
+W027,method,1,author_claim,https://arxiv.org/html/2504.02792v3,§III–IV,記載箇所に基づく著者の説明。
+W027,results,1,demonstrated,https://arxiv.org/html/2504.02792v3,"§V, Table II",指定条件下での著者報告の評価結果。
+W027,contributions,1,author_claim,https://arxiv.org/html/2504.02792v3,§III–IV,記載箇所に基づく著者の説明。
+W027,summary,1,author_claim,https://arxiv.org/html/2504.02792v3,§III–VII,記載箇所に基づく著者の説明。
+W027,remaining_issues,1,author_claim,https://arxiv.org/html/2504.02792v3,§VII,記載箇所に基づく著者の説明。
+W028,social_background,1,not_stated,https://arxiv.org/html/2607.08639v2,§1,確認範囲を限定
+W028,technical_background,1,author_claim,https://arxiv.org/html/2607.08639v2,§1,記載箇所に基づく著者の説明。
+W028,problem,1,author_claim,https://arxiv.org/html/2607.08639v2,§1,記載箇所に基づく著者の説明。
+W028,method,1,author_claim,https://arxiv.org/html/2607.08639v2,§2–4,記載箇所に基づく著者の説明。
+W028,results,1,demonstrated,https://arxiv.org/html/2607.08639v2,"§5, Table 1",指定条件下での著者報告の評価結果。
+W028,contributions,1,author_claim,https://arxiv.org/html/2607.08639v2,§1–4,記載箇所に基づく著者の説明。
+W028,summary,1,author_claim,https://arxiv.org/html/2607.08639v2,§2–6,記載箇所に基づく著者の説明。
+W028,remaining_issues,1,author_claim,https://arxiv.org/html/2607.08639v2,§6,記載箇所に基づく著者の説明。
+W029,social_background,1,not_stated,https://arxiv.org/html/2604.26694v2,§1,確認範囲を限定
+W029,technical_background,1,author_claim,https://arxiv.org/html/2604.26694v2,§1–2,記載箇所に基づく著者の説明。
+W029,problem,1,author_claim,https://arxiv.org/html/2604.26694v2,§1,記載箇所に基づく著者の説明。
+W029,method,1,author_claim,https://arxiv.org/html/2604.26694v2,§3,記載箇所に基づく著者の説明。
+W029,results,1,demonstrated,https://arxiv.org/html/2604.26694v2,"§4, Tables 1–2",指定条件下での著者報告の評価結果。
+W029,contributions,1,author_claim,https://arxiv.org/html/2604.26694v2,§3,記載箇所に基づく著者の説明。
+W029,summary,1,author_claim,https://arxiv.org/html/2604.26694v2,§3–5,記載箇所に基づく著者の説明。
+W029,remaining_issues,1,author_claim,https://arxiv.org/html/2604.26694v2,Appendix Limitations and Future Work,記載箇所に基づく著者の説明。
+W030,social_background,1,not_stated,https://arxiv.org/html/2601.21998v2,§1,確認範囲を限定
+W030,technical_background,1,author_claim,https://arxiv.org/html/2601.21998v2,§1–2,記載箇所に基づく著者の説明。
+W030,problem,1,author_claim,https://arxiv.org/html/2601.21998v2,§1,記載箇所に基づく著者の説明。
+W030,method,1,author_claim,https://arxiv.org/html/2601.21998v2,§3–4,記載箇所に基づく著者の説明。
+W030,results,1,demonstrated,https://arxiv.org/html/2601.21998v2,"§5, Tables 1–3",指定条件下での著者報告の評価結果。
+W030,contributions,1,author_claim,https://arxiv.org/html/2601.21998v2,§3–4,記載箇所に基づく著者の説明。
+W030,summary,1,author_claim,https://arxiv.org/html/2601.21998v2,§3–6,記載箇所に基づく著者の説明。
+W030,remaining_issues,1,author_claim,https://arxiv.org/html/2601.21998v2,§6,記載箇所に基づく著者の説明。
+W021,method,2,author_claim,https://arxiv.org/html/2606.10040v3,§4.1,記載箇所に基づく著者の説明。
+W021,results,2,demonstrated,https://arxiv.org/html/2606.10040v3,§4.1,測定範囲
+W022,method,2,author_claim,https://arxiv.org/html/2608.26103v2,"§3, Appendix Implementation Details",記載箇所に基づく著者の説明。
+W024,method,2,author_claim,https://arxiv.org/html/2606.13674v2,§4.1 Implementation Details,記載箇所に基づく著者の説明。
+W025,remaining_issues,2,author_claim,https://arxiv.org/html/2606.10363v1,§6,記載箇所に基づく著者の説明。
+W027,results,2,demonstrated,https://arxiv.org/html/2504.02792v3,"§V, Table II",指定条件下での著者報告の評価結果。
+W030,results,2,demonstrated,https://arxiv.org/html/2601.21998v2,Appendix Real-world Evaluation Details,指定条件下での著者報告の評価結果。
+W032,social_background,1,not_stated,https://arxiv.org/html/2606.13515v1,§1,記載なし: 確認した導入に社会的背景の明示的記載はない。
+W032,technical_background,1,author_claim,https://arxiv.org/html/2606.13515v1,§1,RGB予測は対象外の背景にも再構成を割き、言語だけでは似た物体が密集する場面で対象の位置を曖昧にしうる。
+W032,problem,1,author_claim,https://arxiv.org/html/2606.13515v1,§1,対象物を明示的に特定しつつ対象に集中した将来予測と操作を実現する。
+W032,method,1,author_claim,https://arxiv.org/html/2606.13515v1,§3,Mixture of TransformersでRGB・将来マスク・行動を共同学習し、必要に応じ最初の対象マスクを入力。推論時はRGB・マスク分岐を1ステップ部分復元し行動expertへ渡す。
+W032,results,1,demonstrated,https://arxiv.org/html/2606.13515v1,"§4, Table 3; Appendix A.1–A.2",実機Dual-arm Xtrainerで言語明瞭な4課題・各100試行、平均成功84.3%、RGBのみ79.3%、FastWAM 79.0%。課題ごと平均100実演。
+W032,results,2,demonstrated,https://arxiv.org/html/2606.13515v1,"§4, Table 5; Appendix A.2",実機の言語曖昧4課題・各60試行、マスク指示付き分布内平均92.9%、π0-mask 62.9%；新規妨害物90.4%、未見対象74.6%、照明変更81.7%。
+W032,results,3,demonstrated,https://arxiv.org/html/2606.13515v1,"§4, Tables 1–2",シミュレーションLIBERO平均98.4%対RGB-only 97.3%；RoboTwin 2.0は選択した6ランダム化課題で92.2%対RGB-only 87.3%。
+W032,contributions,1,author_claim,https://arxiv.org/html/2606.13515v1,"§1, §3",物体マスクを予測と視覚的な対象指定の両方に使用する統合WAMを提案。
+W032,summary,1,interpretation,https://arxiv.org/html/2606.13515v1,"§1, §3–4",対象の曖昧さと背景ノイズに対し将来マスク予測と初期マスク指定を併用し、シミュレーションと双腕実機で評価した。
+W032,remaining_issues,1,author_claim,https://arxiv.org/html/2606.13515v1,§6,著者指摘: 学習時のマスク教師と実行時のセグメンテーションに依存し、混雑場面での安定した自動抽出は難しい。大規模RGB・マスク・行動事前学習も未実施。
+W032,remaining_issues,2,unverified,https://arxiv.org/html/2606.13515v1,arXiv v1 表題・ヘッダ,"版情報の注意: arXiv v1ヘッダは2026-06-11だが本文タイトル下にAugust 24, 2026と表記される。由来未確認。"
+W033,social_background,1,not_stated,https://arxiv.org/html/2610.00859v1,§1,記載なし: 確認した導入に社会的背景の明示的記載はない。
+W033,technical_background,1,author_claim,https://arxiv.org/html/2610.00859v1,"§1, §3",記録された映像と同時に行動へノイズを加える通常の学習では、摂動行動の結果と観測映像が一致しない。
+W033,problem,1,author_claim,https://arxiv.org/html/2610.00859v1,§1,行動の意図と生成される映像の将来を整合させ、指示した行動に応じた反実仮想生成を改善する。
+W033,method,1,author_claim,https://arxiv.org/html/2610.00859v1,§3,シミュレータで摂動行動を実行しその視覚的帰結を対にして学習。映像・行動のノイズスケジュールをずらし、可変数の周辺車両行動ストリームへ拡張する。
+W033,results,1,demonstrated,https://arxiv.org/html/2610.00859v1,"§4.4, Table 3",RoboTwin動作映像生成のWorldArena 1000エピソードでEWMScore 61.75、共通初期点から同追加2000反復の通常SFTは58.70、GT-Src対照58.65。これは映像評価で実機成功率ではない。
+W033,results,2,demonstrated,https://arxiv.org/html/2610.00859v1,"§4.3, Tables 1–2",運転動画の指令追従ではmulti-agent CtrlWAMのCmd ADE 0.981 m、SFT対照1.023 m；agent命令へのVLM評価18.94%対10.56%。
+W033,contributions,1,author_claim,https://arxiv.org/html/2610.00859v1,"§1, §3–4",反実仮想行動のシミュレータ帰結で世界・行動を整合させる学習と、運転の複数主体制御を提示。
+W033,summary,1,interpretation,https://arxiv.org/html/2610.00859v1,"§1, §3–4",行動摂動と映像の不整合を、シミュレータで対にした帰結と異なるノイズ日程で緩和し、運転と操作動画の整合性を評価。
+W033,remaining_issues,1,author_claim,https://arxiv.org/html/2610.00859v1,§5; Appendix limitations,著者指摘: 行動摂動の視覚的帰結を生成できるシミュレータが必要で、多主体拡張は運転データのみ。双方向モデルの遅延がボトルネックで閉ループ性能は今後の課題。
+W035,social_background,1,not_stated,https://arxiv.org/html/2609.25961v1,§1,記載なし: 確認した導入に社会的背景の明示的記載はない。
+W035,technical_background,1,author_claim,https://arxiv.org/html/2609.25961v1,§1–2,多くのWAMは視覚生成基盤に行動専用headや別expertを追加するが、その必要性を条件を揃えて評価する余地がある。
+W035,problem,1,author_claim,https://arxiv.org/html/2609.25961v1,§1,行動専用ネットワークなしで画像生成基盤が連続行動も扱えるか検討する。
+W035,method,1,author_claim,https://arxiv.org/html/2609.25961v1,§3,固定Action-as-Patch符号化で各行動を視覚潜在トークンに写し、共有transformerで未来画像と行動をflow matchingにより共同復元する。
+W035,results,1,demonstrated,https://arxiv.org/html/2609.25961v1,"§4.1, §4.3, Table 3",シミュレーションRoboTwin 2.0、clean/random実演を使い訓練窓の開始位置を20個に1個に間引く同条件比較で88.0%対dual expert 78.4%；各課題・条件10試行、独立seedなし。
+W035,results,2,demonstrated,https://arxiv.org/html/2609.25961v1,"§4.1–4.2, Table 1",RoboTwin full-data平均96.12%は各課題clean 50・random 500実演に加え低成功7課題へ計2100拡張実演を追加した条件。clean-to-randomとは別条件。
+W035,results,3,demonstrated,https://arxiv.org/html/2609.25961v1,§5.1,20 denoising stepの1推論はdual expertの1.87倍、評価で使った10 stepは計時されていない。
+W035,contributions,1,author_claim,https://arxiv.org/html/2609.25961v1,"§1, §3–4",固定の行動・視覚表現接続と共有視覚モデルによって別行動expertなしの操作を実証。
+W035,summary,1,interpretation,https://arxiv.org/html/2609.25961v1,"§1, §3–4",視覚基盤の行動適用を検討し、固定の行動パッチと共有復元でシミュレーションの操作成功を評価した。
+W035,remaining_issues,1,author_claim,https://arxiv.org/html/2609.25961v1,§5–6,著者指摘: 実機未評価、独立seedなし。容量・トークン可視性・処理経路が同時に変わるため優位性の因果を一因には特定できず、将来画像が行動選択に寄与する証拠も確立していない。
+W036,social_background,1,not_stated,https://arxiv.org/html/2512.13030v2,§1,指定範囲で具体的な記述を確認できない。
+W036,technical_background,1,author_claim,https://arxiv.org/html/2512.13030v2,§1–3,原文に記載された著者の説明・主張。
+W036,problem,1,author_claim,https://arxiv.org/html/2512.13030v2,"§1, §3",原文に記載された著者の説明・主張。
+W036,method,1,author_claim,https://arxiv.org/html/2512.13030v2,§4.1–4.2,原文に記載された著者の説明・主張。
+W036,method,2,author_claim,https://arxiv.org/html/2512.13030v2,"§4.3–4.4, Table 1",原文に記載された著者の説明・主張。
+W036,results,1,demonstrated,https://arxiv.org/html/2512.13030v2,"§5.2, Table 2",論文が指定条件で報告した結果。
+W036,results,2,demonstrated,https://arxiv.org/html/2512.13030v2,"§5.3, Tables 3–5",論文が指定条件で報告した結果。
+W036,results,3,demonstrated,https://arxiv.org/html/2512.13030v2,"Appendix §7, Table 11",論文が指定条件で報告した結果。
+W036,contributions,1,author_claim,https://arxiv.org/html/2512.13030v2,§4,原文に記載された著者の説明・主張。
+W036,summary,1,author_claim,https://arxiv.org/html/2512.13030v2,§4–6,原文に記載された著者の説明・主張。
+W036,remaining_issues,1,author_claim,https://arxiv.org/html/2512.13030v2,§6,原文に記載された著者の説明・主張。
+W036,remaining_issues,2,interpretation,https://arxiv.org/html/2512.13030v2,"§5.3, Table 3",記載内容に基づく調査者の解釈。
+L021,social_background,1,not_stated,https://arxiv.org/html/2506.09985v1,§1,記載なし: 序論で汎用的な物理世界の理解と行動への動機は述べるが、特定の社会的需要は明示しない。
+L021,technical_background,1,author_claim,https://arxiv.org/html/2506.09985v1,§1–2,著者主張: 動画から予測可能な表現を学ぶJEPAは、画素生成を要さず運動理解や潜在世界モデルに利用できる。
+L021,problem,1,author_claim,https://arxiv.org/html/2506.09985v1,"§1, §4",行動のない大規模動画と少量のロボット軌跡を用い、理解・予測・画像目標への計画を検証する。
+L021,method,1,author_claim,https://arxiv.org/html/2506.09985v1,"§2, §4",100万時間超のインターネット動画と画像で自己教師あり事前学習し、DROIDの62時間未満のロボット動画で行動条件付き予測器を追加学習する。画像目標の潜在距離を最小化するMPCを用いる。
+L021,results,1,demonstrated,https://arxiv.org/html/2506.09985v1,§4; §5 Table 4; §6 Table 5,実験結果: 実機Frankaを2拠点で用い、対象ロボットから環境別データを収集せずゼロショットで把持・移動を試験した。動画理解はSomething-Something v2 top-1 77.3、EPIC-KITCHENS-100 recall@5 39.7。
+L021,contributions,1,author_claim,https://arxiv.org/html/2506.09985v1,"§1, §4",著者主張: 大規模動画による表現と少量の行動付きデータを組み合わせたV-JEPA 2-ACで画像目標の実機計画を実証する。
+L021,summary,1,demonstrated,https://arxiv.org/html/2506.09985v1,"§2, §4–6, §9",動画から表現を学び、行動条件付き潜在予測と計画を重ね、動画理解と実機操作を評価した。
+L021,remaining_issues,1,author_claim,https://arxiv.org/html/2506.09985v1,"§6 limitations, §9",著者指摘: およそ16秒までの予測と画像目標に依存し、長い多段階課題や言語目標への拡張が課題。EPIC-KITCHENSは厨房・閉じた語彙に限定。
+L023,social_background,1,not_stated,https://arxiv.org/html/2604.03208v3,§1,記載なし: 社会的需要の明示は確認できない。
+L023,technical_background,1,author_claim,https://arxiv.org/html/2604.03208v3,§1–2,長期の潜在世界モデル計画は予測誤差の累積と探索空間の増大に悩む。従来の階層制御は方策や既知ダイナミクスなどに依存する。
+L023,problem,1,author_claim,https://arxiv.org/html/2604.03208v3,"§1, §3",報酬やタスク固有方策なしに、視覚世界モデルで長期・多段階操作を計画する。
+L023,method,1,author_claim,https://arxiv.org/html/2604.03208v3,§3,共有潜在空間に複数時間尺度の予測器を学習し、高層予測を下層の中間目標に用いる階層MPC。行動エンコーダで基本行動列をマクロ行動へ圧縮する。
+L023,results,1,demonstrated,https://arxiv.org/html/2604.03208v3,§4 Table 1; Appendix H Table 16,Cup 35/50、Box 30/50、単層0%。シミュレーション計画コストは付録H。
+L023,contributions,1,author_claim,https://arxiv.org/html/2604.03208v3,"§3, §5",著者主張: 追加の階層方策や手動分解を使わず、異なる時間尺度の予測と潜在マクロ行動で階層計画を実現する。
+L023,summary,1,demonstrated,https://arxiv.org/html/2604.03208v3,§3–5,オフライン軌跡で複数時間尺度を学び、画像目標の実機操作とシミュレーションで階層計画の効果を示す。
+L023,remaining_issues,1,author_claim,https://arxiv.org/html/2604.03208v3,§6; Appendix F Table 15,長期で成功率低下。手動中間目標を与えた単層計画はCup・Box各80%。
+L024,social_background,1,not_stated,https://arxiv.org/html/2610.10515v1,§1,記載なし: 特定の社会的需要は序論で明示していない。
+L024,technical_background,1,author_claim,https://arxiv.org/html/2610.10515v1,§1,潜在世界モデルの性能がモデル規模・データ・計算量でどう変化し実機計画に結びつくかは未解明。
+L024,problem,1,author_claim,https://arxiv.org/html/2610.10515v1,§1,複数形態の実機ロボットデータ上で予測器のスケーリング則と実機計画への対応を調べる。
+L024,method,1,author_claim,https://arxiv.org/html/2610.10515v1,§2–3,固定したV-JEPA 2.1表現上で22M〜8Bの行動条件付き予測器を12形態のデータで学習し、潜在ロールアウト誤差と計算量の二次べき則を推定する。画像目標に向けMPCで行動を探索する。
+L024,results,1,demonstrated,https://arxiv.org/html/2610.10515v1,"§3–4; Table 3, Table 12",実験結果: オフライン実機DROID動画とシミュレーションRoboCasaにおける予測誤差のスケーリングを評価し、オンライン計画成功率との相関を報告。画像目標に向けた実機ゼロショット操作も実施。 ホストが代表値・比較条件を原文照合して追記。
+L024,contributions,1,author_claim,https://arxiv.org/html/2610.10515v1,"§1, §3–5",著者主張: マルチ形態のロボット潜在予測器に関する計算量スケーリング則と、オフライン誤差を実機計画の代理指標として検証する。
+L024,summary,1,demonstrated,https://arxiv.org/html/2610.10515v1,§3–5,固定視覚表現上でロボット世界モデルを拡大し、オフライン予測と実機・シミュレーション計画の関係を調べた。
+L024,remaining_issues,1,author_claim,https://arxiv.org/html/2610.10515v1,§5 limitations,著者指摘: 視覚エンコーダは固定され、固定データの複数エポック学習は飽和に近い。言語や学習済み方策による行動提案は使用しない。
+L025,social_background,1,not_stated,https://arxiv.org/html/2611.08156v1,§1,記載なし: 特定の社会的需要は序論で明示していない。
+L025,technical_background,1,author_claim,https://arxiv.org/html/2611.08156v1,§1–2,生成モデル由来のworld-actionモデルやVLAは生成向け大規模バックボーンの構造と推論費用を継承する。
+L025,problem,1,author_claim,https://arxiv.org/html/2611.08156v1,"§1, §4",事前学習した生成方策を持たない小型方策で、将来特徴の予測がロボット制御に寄与するかを調べる。
+L025,method,1,author_claim,https://arxiv.org/html/2611.08156v1,§3,事前学習V-JEPA 2.1の特徴空間でWorld DiTとAction DiTをゼロから学習し、訓練中は将来特徴と行動を共同予測、推論時は行動のみ生成する。
+L025,results,1,demonstrated,https://arxiv.org/html/2611.08156v1,§5 Table 5; Appendix B–D,実験結果: RoboTwin 2.0と指示修正済みLIBERO-Plusのシミュレーションで比較し、実機1構成4課題ではpi0.5に近い平均成功率。Fast-WAMに最大5倍高速と報告するが、入力や精度設定は各手法固有。 ホストが代表値・比較条件を原文照合して追記。
+L025,contributions,1,author_claim,https://arxiv.org/html/2611.08156v1,"§1, §3",著者主張: 生成方策の事前学習なしで、JEPA特徴と訓練時の将来予測を利用する小型world-action方策を示す。
+L025,summary,1,demonstrated,https://arxiv.org/html/2611.08156v1,§3–5,事前学習済み視覚特徴で小型方策を学習し、シミュレーションと4つの実機操作課題で評価した。
+L025,remaining_issues,1,author_claim,https://arxiv.org/html/2611.08156v1,§6; Appendix B,著者指摘: ハイパーパラメータ探索は限定的で、embodied pretrainingによる拡張は未検証。実機4課題・1ロボットの平均は広範な同等性を示さない。JEPA-WAMのRoboTwin 50課題値の一部は回帰推定。
+L049,social_background,1,not_stated,https://arxiv.org/html/2505.20425v2,§1,記載なし: 特定の社会的需要は序論で明示しない。
+L049,technical_background,1,author_claim,https://arxiv.org/html/2505.20425v2,§1–2,従来の一回提示による視覚模倣は学習済み課題の配置変更に偏り、見た目は似ていても異なる応答が必要な未見課題に弱い。
+L049,problem,1,author_claim,https://arxiv.org/html/2505.20425v2,"§1, §4",新しい課題を単一の実演動画から追加微調整なしで模倣する。
+L049,method,1,author_claim,https://arxiv.org/html/2505.20425v2,§3,実演動画と初期観測を条件に学習済み世界モデルで潜在状態・行動の軌跡を生成し、物理的ウェイポイントに復号して実行する。
+L049,results,1,demonstrated,https://arxiv.org/html/2505.20425v2,§4 Table 2; real-world evaluation,実験結果: Meta-Worldと異形態Pick-and-Placeの2つのシミュレーション、2台のFrankaまたは人間実演を用いる3つの実機設定で、未見課題をAWDA等と比較。実機各設定は4課題中3学習・1テスト。 ホストが代表値・比較条件を原文照合して追記。
+L049,contributions,1,author_claim,https://arxiv.org/html/2505.20425v2,§3–4,著者主張: 世界モデルが誘導する潜在軌跡生成により、未見課題の一回提示視覚模倣を実現する。
+L049,summary,1,demonstrated,https://arxiv.org/html/2505.20425v2,§3–5,単一の実演から世界モデルで軌跡を生成し、未見課題についてシミュレーションと実機で検証した。
+L049,remaining_issues,1,author_claim,https://arxiv.org/html/2505.20425v2,§5 Limitations,著者指摘: 出力は3D位置とグリッパ状態で姿勢を扱わず、単一課題に限定。訓練・テスト分割が結果に影響し、未見課題も訓練と同系統の操作課題である。
+L050,social_background,1,not_stated,https://arxiv.org/html/2602.10098v2,§1,記載なし: 特定の社会的需要を序論で明示しない。
+L050,technical_background,1,author_claim,https://arxiv.org/html/2602.10098v2,§1–3,動画事前学習の潜在行動は画素変動や将来情報の漏洩を学び、動作に必要な状態遷移を捉え損なう場合がある。
+L050,problem,1,author_claim,https://arxiv.org/html/2602.10098v2,"§1, §3",将来画像を入力に漏らさず、動画からVLA方策に有用な潜在状態変化を学ぶ。
+L050,method,1,author_claim,https://arxiv.org/html/2602.10098v2,"§3, Appendix A",未来フレームの教師表現を現在観測のみから予測するJEPA事前学習の後、行動ヘッドを実演データで微調整する。
+L050,results,1,demonstrated,https://arxiv.org/html/2602.10098v2,§4.3 Table 3; §4.4 Figure 4; Appendix B,実験結果: LIBERO、LIBERO-Plus、SimplerEnvのシミュレーションとFranka Research 3実機で評価。実機は100件の人間実演、3つの学習課題、未見課題と配置変化を含み、π0・π0.5も同じ実演で微調整。 ホストが代表値・比較条件を原文照合して追記。
+L050,contributions,1,author_claim,https://arxiv.org/html/2602.10098v2,§3,著者主張: 将来情報を教師目標にのみ使う潜在予測と行動微調整の二段階学習を提示する。
+L050,summary,1,demonstrated,https://arxiv.org/html/2602.10098v2,§3–5,将来情報の漏洩を防ぐ潜在表現学習をVLAに導入し、シミュレーションと実機で汎化を比較した。
+L050,remaining_issues,1,author_claim,https://arxiv.org/html/2602.10098v2,§4.4–4.5,著者指摘: 実機では言語指示の細かい理解が不足し対象を誤る場合があり、未見課題ではπ0.5より汎化が弱い。人間動画事前学習の効果は条件依存で、LIBEROやSimplerEnvでは大きな低下が見られない場合がある。
+L001,social_background,1,author_claim,https://arxiv.org/html/2603.19312v3,§1,著者は安価で拡張しやすいカメラ画像からの学習と、環境との追加相互作用を伴わないオフライン学習を動機に挙げる。
+L001,technical_background,1,author_claim,https://arxiv.org/html/2603.19312v3,§1–2,JEPAは予測しやすい潜在表現を学ぶが定数表現への崩壊を起こし、従来の対策は事前学習器や複数損失等に依存する。
+L001,problem,1,author_claim,https://arxiv.org/html/2603.19312v3,§3,報酬なしの画像・行動の固定軌跡から、崩壊を防ぎつつ潜在ダイナミクスを端から端まで学習し、目標画像への計画に用いる。
+L001,method,1,author_claim,https://arxiv.org/html/2603.19312v3,"§3.1, 式1–3",ViT画像符号器と行動条件付きTransformer予測器を次埋め込みのMSEとSIGRegの和で同時学習する。SIGRegはランダム射影上の正規性統計で等方ガウスに近づける。
+L001,method,2,author_claim,https://arxiv.org/html/2603.19312v3,"§3.2, 式4–5",推論時は終端潜在状態と目標画像表現の距離をCEMで最小化し、MPCで再計画する。
+L001,results,1,demonstrated,https://arxiv.org/html/2603.19312v3,"§4.2, 図6",連続行動の4環境で、PushTはPLDMより成功率が18パーセントポイント高く、Reacherでも優位だった一方、Two-RoomではPLDMとDINO-WMを下回り、CubeではDINO-WMがやや上回った。
+L001,results,2,demonstrated,https://arxiv.org/html/2603.19312v3,"§4.2, 図3",50回平均の計画時間比較でDINO-WM比最大48倍高速、同一計算量ではPushTとCubeで優位だった。
+L001,results,3,demonstrated,https://arxiv.org/html/2603.19312v3,"§5.2, 図8",3環境の物体テレポートによる予測誤差増加は対応のあるt検定でp<0.01、色変更は有意でなかった。
+L001,contributions,1,author_claim,https://arxiv.org/html/2603.19312v3,"§1, §3, §5",著者は事前学習器・停止勾配・EMAなしで画像から学ぶ2項のJEPA世界モデルと、物理量プローブ・予想違反評価を提示する。新規性は著者主張。
+L001,summary,1,interpretation,https://arxiv.org/html/2603.19312v3,§3–6,報酬なし画像軌跡から予測損失とガウス正則化で表現を学び、短期の潜在計画で複数のシミュレーション課題において競争力を示す。
+L001,remaining_issues,1,author_claim,https://arxiv.org/html/2603.19312v3,§6 Limitations,著者は短い計画範囲、十分に広いオフラインデータへの依存、低多様性データでのSIGRegの弱さ、行動ラベルへの依存を限界とする。
+L001,remaining_issues,2,unverified,https://arxiv.org/html/2603.19312v3,"§4–6, 図5–8",調査者指摘: 実機、分布外や外乱への頑健性、必要なデータ被覆量はこの実験では確認されていない。
+L006,social_background,1,not_stated,https://arxiv.org/html/2606.26217v2,"§1, §6",社会的需要について明示的記載は確認できない。
+L006,technical_background,1,author_claim,https://arxiv.org/html/2606.26217v2,§1,LeWMでは各候補行動列を1段階遷移の自己回帰で評価し、計画コストと誤差累積が増える。
+L006,problem,1,author_claim,https://arxiv.org/html/2606.26217v2,§1,行動条件付き潜在予測と計画を高速化し、複数ステップ先の予測誤差を抑える。
+L006,method,1,author_claim,https://arxiv.org/html/2606.26217v2,§3,観測潜在状態と因果マスク付き行動プレフィックス符号器から、複数将来時点の潜在状態を並列に直接予測し、多時点損失で学習する。
+L006,method,2,author_claim,https://arxiv.org/html/2606.26217v2,§3–4,推論時にCEMで行動列を評価し、任意の自己整合項を加える変種も検討する。
+L006,results,1,demonstrated,https://arxiv.org/html/2606.26217v2,"§4.1, 表1",同一計画条件の4環境平均成功率はLeWM 85.8%、Fast-LeWM 90.5%、自己整合項あり92.0%。PushTはそれぞれ96%、96%、98%。
+L006,results,2,demonstrated,https://arxiv.org/html/2606.26217v2,"§4.1, 表2",RTX 4090、同一CEM予算で通常版は動力学評価19.7秒→4.1秒、CEM全体33.7秒→16.1秒。自己整合版の全体は25.7秒。
+L006,results,3,demonstrated,https://arxiv.org/html/2606.26217v2,"§4.2, 図3",50環境ステップの開ループ評価は5段階予測を2回連結し、4環境で評価各時点の潜在予測損失がLeWMを下回る。
+L006,contributions,1,author_claim,https://arxiv.org/html/2606.26217v2,"§1, §3",自己回帰遷移に代えて、行動プレフィックスの並列・多時点予測をLeWMに導入する。
+L006,summary,1,interpretation,https://arxiv.org/html/2606.26217v2,§3–4,行動プレフィックスから複数時点を直接予測することで、同一CEM設定で成功率と計画時間を比較する。
+L006,remaining_issues,1,author_claim,https://arxiv.org/html/2606.26217v2,§5,著者は計画範囲の拡大に伴うCEMの高次元探索を限界に挙げる。
+L006,remaining_issues,2,unverified,https://arxiv.org/html/2606.26217v2,§4–5,調査者指摘: 実機、分布外、外乱やデータ被覆を変えた評価は未確認。潜在損失はモデル固有の表現尺度に依存しうる。
+L019,social_background,1,not_stated,https://arxiv.org/html/2610.06805v2,"1, 6",記載なし: 導入と結論に明示的な社会背景なし。
+L019,technical_background,1,author_claim,https://arxiv.org/html/2610.06805v2,1,単一時間尺度のJEPAでは長期予測の誤差蓄積と探索空間の増大が課題となる。
+L019,problem,1,author_claim,https://arxiv.org/html/2610.06805v2,"1, 4",行動条件付きJEPAの時間階層と抽象化が長期の画像目標計画を改善するか検証する。
+L019,method,1,author_claim,https://arxiv.org/html/2610.06805v2,"2.1–2.2, 4.3",各時間尺度で状態と行動を符号化し潜在予測とSIGRegを共同学習。上位階層で目標までの計画を立て、その予測を下位階層のサブゴールとする。DROIDでは逆動力学も追加。
+L019,results,1,demonstrated,https://arxiv.org/html/2610.06805v2,"Abstract, 4.1, Fig. 6",4種のシミュレーション環境で比較し、Visual AntMazeでは3階層が平坦なLeWMの18%に対して73%の成功率をより少ない計画計算で達成した。
+L019,results,2,demonstrated,https://arxiv.org/html/2610.06805v2,"4.3, Appendix J.1–J.2",実ロボット収集DROID映像はオフラインで評価し、軌道のFréchet fidelityが平坦モデルより改善した。実機での閉ループ成功率ではない。
+L019,contributions,1,author_claim,https://arxiv.org/html/2610.06805v2,1–4,著者主張: 時間階層ごとの潜在表現を共同学習し、上位予測をサブゴールにする計画法とその要因分析を提示した。
+L019,summary,1,interpretation,https://arxiv.org/html/2610.06805v2,2–4,複数時間尺度のJEPAと階層計画を用いて、シミュレーション成功率と実ロボット映像上のオフライン計画忠実度を評価した。
+L019,remaining_issues,1,author_claim,https://arxiv.org/html/2610.06805v2,6,著者: 実ロボットで閉ループ制御できるかは今後の課題。
+L019,remaining_issues,2,author_claim,https://arxiv.org/html/2610.06805v2,"4.3, Appendix J.2",著者: DROIDのオフライン軌道類似度は完了成功の保証ではなく、実行結果は得られていない。
+L027,social_background,1,not_stated,https://arxiv.org/html/2611.10806v1,§1,明示的記載なし: §1は計算時間と制御性能の技術課題を述べる。
+L027,technical_background,1,author_claim,https://arxiv.org/html/2611.10806v1,"§1, §3",階層JEPAはオンラインの反復勾配計画に時間がかかる。
+L027,problem,1,author_claim,https://arxiv.org/html/2611.10806v1,§1,凍結済み階層WMで計画を高速化し成功率を保つ。
+L027,contributions,1,author_claim,https://arxiv.org/html/2611.10806v1,"§1, §4",著者主張: 階層ごとの時間範囲に合わせTransformerとMLPを組み合わせる償却計画。
+L027,summary,1,interpretation,https://arxiv.org/html/2611.10806v1,§4–6,学習時にWMを利用して候補を学び、通常推論時の反復最適化を減らす。
+L030,social_background,1,author_claim,https://arxiv.org/html/2607.23969v2,Introduction,ロボット操作では視覚変化に頑健で低遅延の制御が必要。
+L030,technical_background,1,author_claim,https://arxiv.org/html/2607.23969v2,"Introduction, Related Work",画素の未来生成には計算費用がかかる。
+L030,problem,1,author_claim,https://arxiv.org/html/2607.23969v2,Introduction,潜在表現に基づく効率的なworld-actionモデルを学ぶ。
+L030,contributions,1,author_claim,https://arxiv.org/html/2607.23969v2,"Introduction, Methodology",著者主張: 意味的な潜在アラインメントと学習時の動力学蒸留。
+L030,summary,1,interpretation,https://arxiv.org/html/2607.23969v2,"Methodology, Conclusion and Limitations",予測潜在表現を使って訓練し、推論では行動生成を実行する。
+L031,social_background,1,author_claim,https://arxiv.org/html/2608.09381v1,§1,環境の見た目や配置の変化に頑健な操作が必要。
+L031,technical_background,1,author_claim,https://arxiv.org/html/2608.09381v1,§1–2,動画生成WAMのコスト、既存潜在WAMの圧縮や行動表現との分離が課題。
+L031,problem,1,author_claim,https://arxiv.org/html/2608.09381v1,§1,将来遷移の学習を行動生成の共有表現に反映する。
+L031,contributions,1,author_claim,https://arxiv.org/html/2608.09381v1,"§1, §3",著者主張: 空間構造を維持した現在・未来の共同目標と共有予測器。
+L031,summary,1,interpretation,https://arxiv.org/html/2608.09381v1,§3–5,遷移予測と行動生成を共同学習し視覚・空間変化で評価する。
+L032,social_background,1,author_claim,https://arxiv.org/html/2603.16666v2,§1,ロボットの実時間制御には低い推論遅延が必要。
+L032,technical_background,1,author_claim,https://arxiv.org/html/2603.16666v2,§1–2,未来動画を推論時に生成するWAMは遅い。
+L032,problem,1,author_claim,https://arxiv.org/html/2603.16666v2,§1,学習時の動画予測と推論時未来生成の寄与を分離する。
+L032,contributions,1,author_claim,https://arxiv.org/html/2603.16666v2,"§1, §3",著者主張: 未来生成を省くWAMと統制された設計比較。
+L032,summary,1,interpretation,https://arxiv.org/html/2603.16666v2,§3–5,動画共同学習の効果を保ちながら推論時未来生成を除く。
+L033,social_background,1,author_claim,https://arxiv.org/html/2501.14622v5,§1,専門家の操作デモ収集は高コストである。
+L033,technical_background,1,author_claim,https://arxiv.org/html/2501.14622v5,§1–2,模倣学習単独の環境表現は限定的で、自己教師あり予測の統合が課題。
+L033,problem,1,author_claim,https://arxiv.org/html/2501.14622v5,§1,模倣行動と潜在観測系列を同時学習する。
+L033,method,1,author_claim,https://arxiv.org/html/2501.14622v5,§3.2–3.3,ACT型の行動チャンク生成とJEPA潜在予測を共同最適化し、対象エンコーダはEMA更新する。
+L033,contributions,1,author_claim,https://arxiv.org/html/2501.14622v5,"§1, §3",著者主張: 行動系列と潜在観測系列を共同で学ぶ構成。
+L033,summary,1,interpretation,https://arxiv.org/html/2501.14622v5,§3–5,模倣学習とJEPAを共同最適化して表現と制御を評価する。
+L027,method,1,author_claim,https://arxiv.org/html/2611.10806v1,"§4.1, 式2–3, 付録E",凍結予測器に対しロールアウト費用とbest-of-K行動模倣損失で候補提案器を訓練する。学習時は凍結WMのパラメータを更新せず、行動経路の勾配を伝播する。
+L027,method,2,author_claim,https://arxiv.org/html/2611.10806v1,"§4.1, 付録E Inference",通常推論では複数候補を凍結WMで評価し選択するが、エピソード終端の親条件を持たないbypassでは10回の勾配降下を使う。
+L027,results,1,demonstrated,https://arxiv.org/html/2611.10806v1,"§5.1–5.2, 表1, 付録A–B",実験結果: 4つのシミュレーション課題、30の2〜4階層モデルで、オンラインGD比の長期タスク処理速度は9.6〜18.8倍、Cubeは2.9〜3.0倍。成功率は最大33.3ポイント高い。成功率は3 seed、時間はseed 42で10課題。
+L027,remaining_issues,1,author_claim,https://arxiv.org/html/2611.10806v1,"§6 Limitations, 付録表S9–S10",著者: 凍結WMの誤りを修復できず、提案器の追加学習と終端GDが残る。Push-T 4階層では全計画器が成功率1.2%以下。
+L030,method,1,author_claim,https://arxiv.org/html/2607.23969v2,"Methodology, Implementation Details, 付録A–D",V-JEPA 2.1から初期化した予測アンカーをロボットデータで適応させ、ISAEで96次元へ圧縮し、非対称MoTをflow matchingで共同学習する。推論時は重いアンカーDiTを除く。
+L030,results,1,demonstrated,https://arxiv.org/html/2607.23969v2,"Simulation Results, 表1, 付録E 表8",実験結果: RoboTwin 2.0のclean/random平均91.04%/92.48%、Fast-WAM 91.90%/91.80%；各タスク100試行。
+L030,results,2,demonstrated,https://arxiv.org/html/2607.23969v2,"Real-World Results, 図5",実験結果: 実機UR5で果物・容器のpick-and-placeを報告するが、図5と実機結果節に成功率・試行数の定量記載は確認できない。
+L030,remaining_issues,1,author_claim,https://arxiv.org/html/2607.23969v2,Conclusion and Limitations,著者: 基盤モデルの表現品質に依存し、微細な接触物理や高周波触覚は難しい。
+L030,remaining_issues,2,unverified,https://arxiv.org/html/2607.23969v2,"Real-World Results, 図5",調査者: 実機の定量的成功率・試行数は本文のReal-World Resultsと図5に確認できず、性能の統計的評価はできない。
+L031,results,1,demonstrated,https://arxiv.org/html/2608.09381v1,"§4.2 LIBERO-Plus, HTML表1（本文は表2と参照）",実験結果: LIBERO-Plusの7摂動平均はロボット事前学習なしJEPA-WAM 79.2%、ResVLA 77.1%。本文の表参照とHTML上の表番号が食い違うため、7列の結果表そのもので確認した。
+L031,results,2,demonstrated,https://arxiv.org/html/2608.09381v1,"§4.2 RoboTwin 2.0, HTML表2（本文は表3と参照）, 付録D",実験結果: RoboTwin 2.0の20課題平均clean/randomは79.9%/36.9%、事前学習なしDP3は73.9%/8.3%。
+L031,results,3,demonstrated,https://arxiv.org/html/2608.09381v1,"§4.4, 図5, 付録B.3, E",実験結果: 実機5つの両腕操作でIDと視覚・空間OODを評価した。
+L031,method,1,author_claim,https://arxiv.org/html/2608.09381v1,"§3.1–3.3, 付録A.1",凍結V-JEPAで現在・未来を一緒に符号化した空間パッチをstop-gradient目標とし、共有予測器の遷移予測と行動生成を同時学習する。
+L031,remaining_issues,1,author_claim,https://arxiv.org/html/2608.09381v1,§6,著者: 言語によって同じ観測から異なる遷移が生じる場合、言語非条件の予測目標は表現力が不足しうる。
+L031,remaining_issues,2,interpretation,https://arxiv.org/html/2608.09381v1,"§4.2, HTML表1–3",調査者: HTMLの表見出しと本文参照番号に不一致があり、該当する表の項目と値を照合する必要がある。
+L032,results,1,demonstrated,https://arxiv.org/html/2603.16666v2,"§4.3.1–4.3.2, 表1, 付録表3",実験結果: RoboTwin clean/random平均はFast-WAM 91.88%/91.78%、動画共同学習なし82.76%/84.80%。未来生成型のJointは90.84%/90.32%。
+L032,results,2,demonstrated,https://arxiv.org/html/2603.16666v2,"§4.1–4.2, §4.3.3, 図3–4",実験結果: 実機Galaxea R1 Liteのタオル折りでは60時間の遠隔操作データで30k step学習、Fast-WAMの推論は190msで未来生成型より4倍超高速（RTX 5090D V2）。
+L032,method,1,author_claim,https://arxiv.org/html/2603.16666v2,"§3.2–3.3, §4.3.2",動画拡散と行動を共同学習するが、推論時には動画生成をスキップし行動を直接生成する。未来生成のあるJoint/IDMおよび動画学習なしを統制比較する。
+L032,remaining_issues,1,author_claim,https://arxiv.org/html/2603.16666v2,§5,著者: より大きな事前学習データとモデル規模の効果は今後の課題。
+L033,results,1,demonstrated,https://arxiv.org/html/2501.14622v5,"§4.1, §4.4, 表2",実験結果: Push-T、ManiSkill、Meta-Worldで、同じaction headを用いるACTに対し成功率がそれぞれ7、10、2ポイント高い。Meta-Worldは15課題×20初期状態。
+L033,results,2,demonstrated,https://arxiv.org/html/2501.14622v5,"§4.3, 表1, 図3",実験結果: 凍結表現から将来の自己受容状態を復号するprobeで、Push-TのRMSEはACT-JEPA 0.0895、ACT 0.1424。
+L033,results,3,demonstrated,https://arxiv.org/html/2501.14622v5,"§4.5–4.6, 図4, 表3",実験結果: 凍結表現のprobeおよび二段階学習との比較を行い、共同最適化の利点を報告。
+L033,remaining_issues,1,author_claim,https://arxiv.org/html/2501.14622v5,§4.7,著者: 実機評価なし、JEPA予測対象は自己受容状態のみ、データは各数百軌跡で多様性も限られる。
+L029,social_background,1,author_claim,https://arxiv.org/html/2606.15768v2,"Abstract, §1",著者の主張と調査者解釈は本文中に区別
+L029,technical_background,1,author_claim,https://arxiv.org/html/2606.15768v2,§1–2,著者の主張と調査者解釈は本文中に区別
+L029,problem,1,author_claim,https://arxiv.org/html/2606.15768v2,§3,著者の主張と調査者解釈は本文中に区別
+L029,method,1,author_claim,https://arxiv.org/html/2606.15768v2,"§3.2–3.3, eqs. 4–5",著者の主張と調査者解釈は本文中に区別
+L029,results,1,demonstrated,https://arxiv.org/html/2606.15768v2,"§4, Appendix F.1–F.2",著者の主張と調査者解釈は本文中に区別
+L029,contributions,1,author_claim,https://arxiv.org/html/2606.15768v2,"§1, §3",著者の主張と調査者解釈は本文中に区別
+L029,summary,1,author_claim,https://arxiv.org/html/2606.15768v2,"§3, §6",著者の主張と調査者解釈は本文中に区別
+L029,remaining_issues,1,author_claim,https://arxiv.org/html/2606.15768v2,"§5, §3.2–3.3",著者の主張と調査者解釈は本文中に区別
+S002,social_background,1,author_claim,https://arxiv.org/html/2610.03607v1,"Abstract, §1",著者の主張と調査者解釈は本文中に区別
+S002,technical_background,1,author_claim,https://arxiv.org/html/2610.03607v1,§1,著者の主張と調査者解釈は本文中に区別
+S002,problem,1,author_claim,https://arxiv.org/html/2610.03607v1,§3,著者の主張と調査者解釈は本文中に区別
+S002,method,1,author_claim,https://arxiv.org/html/2610.03607v1,"§3, Appendix B–C, eqs. 25–28",著者の主張と調査者解釈は本文中に区別
+S002,results,1,demonstrated,https://arxiv.org/html/2610.03607v1,"Abstract, §4, Appendix D",著者の主張と調査者解釈は本文中に区別
+S002,contributions,1,author_claim,https://arxiv.org/html/2610.03607v1,§3,著者の主張と調査者解釈は本文中に区別
+S002,summary,1,author_claim,https://arxiv.org/html/2610.03607v1,"§3, Appendix B",著者の主張と調査者解釈は本文中に区別
+S003,social_background,1,not_stated,https://arxiv.org/html/2605.15725v1,"Abstract, §1",著者の主張と調査者解釈は本文中に区別
+S003,technical_background,1,author_claim,https://arxiv.org/html/2605.15725v1,§1–2,著者の主張と調査者解釈は本文中に区別
+S003,problem,1,author_claim,https://arxiv.org/html/2605.15725v1,"§1, §3",著者の主張と調査者解釈は本文中に区別
+S003,method,1,author_claim,https://arxiv.org/html/2605.15725v1,"§3, eqs. 2–4",著者の主張と調査者解釈は本文中に区別
+S003,results,1,demonstrated,https://arxiv.org/html/2605.15725v1,"§4.2–4.3, Table 2, Fig. 4",著者の主張と調査者解釈は本文中に区別
+S003,contributions,1,author_claim,https://arxiv.org/html/2605.15725v1,"§1, §3",著者の主張と調査者解釈は本文中に区別
+S003,summary,1,author_claim,https://arxiv.org/html/2605.15725v1,§3–4,著者の主張と調査者解釈は本文中に区別
+S003,remaining_issues,1,author_claim,https://arxiv.org/html/2605.15725v1,"§4.3, §5",著者の主張と調査者解釈は本文中に区別
+S004,social_background,1,author_claim,https://arxiv.org/html/2601.05230v2,"Abstract, §1",著者の主張と調査者解釈は本文中に区別
+S004,technical_background,1,author_claim,https://arxiv.org/html/2601.05230v2,§1,著者の主張と調査者解釈は本文中に区別
+S004,problem,1,author_claim,https://arxiv.org/html/2601.05230v2,"§1, §3",著者の主張と調査者解釈は本文中に区別
+S004,method,1,author_claim,https://arxiv.org/html/2601.05230v2,"§3–4, §7",著者の主張と調査者解釈は本文中に区別
+S004,results,1,demonstrated,https://arxiv.org/html/2601.05230v2,"§6–7, Fig. 8–11, Appendix H",著者の主張と調査者解釈は本文中に区別
+S004,contributions,1,author_claim,https://arxiv.org/html/2601.05230v2,"§1, §5–7",著者の主張と調査者解釈は本文中に区別
+S004,summary,1,author_claim,https://arxiv.org/html/2601.05230v2,§6–7,著者の主張と調査者解釈は本文中に区別
+S004,remaining_issues,1,author_claim,https://arxiv.org/html/2601.05230v2,"§7, §9",著者の主張と調査者解釈は本文中に区別
+S005,social_background,1,not_stated,https://arxiv.org/html/2609.26118v1,"Abstract, §1",著者の主張と調査者解釈は本文中に区別
+S005,technical_background,1,author_claim,https://arxiv.org/html/2609.26118v1,"Abstract, §1",著者の主張と調査者解釈は本文中に区別
+S005,problem,1,author_claim,https://arxiv.org/html/2609.26118v1,§1–3,著者の主張と調査者解釈は本文中に区別
+S005,method,1,author_claim,https://arxiv.org/html/2609.26118v1,"§3, eqs. 2–3",著者の主張と調査者解釈は本文中に区別
+S005,results,1,demonstrated,https://arxiv.org/html/2609.26118v1,"§4, Table 4",著者の主張と調査者解釈は本文中に区別
+S005,contributions,1,author_claim,https://arxiv.org/html/2609.26118v1,§3–4,著者の主張と調査者解釈は本文中に区別
+S005,summary,1,author_claim,https://arxiv.org/html/2609.26118v1,§3–4,著者の主張と調査者解釈は本文中に区別
+S005,remaining_issues,1,author_claim,https://arxiv.org/html/2609.26118v1,"§3, Appendix A, H",著者の主張と調査者解釈は本文中に区別
+S019,social_background,1,not_stated,https://raw.githubusercontent.com/mlresearch/v306/main/assets/wan26f/wan26f.pdf,"Abstract, §1",著者主張と調査者解釈を区別
+S019,technical_background,1,author_claim,https://raw.githubusercontent.com/mlresearch/v306/main/assets/wan26f/wan26f.pdf,§1–2,著者主張と調査者解釈を区別
+S019,problem,1,author_claim,https://raw.githubusercontent.com/mlresearch/v306/main/assets/wan26f/wan26f.pdf,"§1, §4",著者主張と調査者解釈を区別
+S019,method,1,author_claim,https://raw.githubusercontent.com/mlresearch/v306/main/assets/wan26f/wan26f.pdf,"§3.1–3.3, Fig.1, eqs.1–4",著者主張と調査者解釈を区別
+S019,results,1,demonstrated,https://raw.githubusercontent.com/mlresearch/v306/main/assets/wan26f/wan26f.pdf,"§4, Tables 1–2",著者主張と調査者解釈を区別
+S019,contributions,1,author_claim,https://raw.githubusercontent.com/mlresearch/v306/main/assets/wan26f/wan26f.pdf,§3–4,著者主張と調査者解釈を区別
+S019,summary,1,author_claim,https://raw.githubusercontent.com/mlresearch/v306/main/assets/wan26f/wan26f.pdf,§3–5,著者主張と調査者解釈を区別
+S019,remaining_issues,1,author_claim,https://raw.githubusercontent.com/mlresearch/v306/main/assets/wan26f/wan26f.pdf,"§3.4, §5, Appendix A",著者主張と調査者解釈を区別
+S020,social_background,1,author_claim,https://arxiv.org/html/2608.05706v1,"Abstract, §1",著者主張と調査者解釈を区別
+S020,technical_background,1,author_claim,https://arxiv.org/html/2608.05706v1,"§1, Appendix C",著者主張と調査者解釈を区別
+S020,problem,1,author_claim,https://arxiv.org/html/2608.05706v1,"§1, §3",著者主張と調査者解釈を区別
+S020,method,1,author_claim,https://arxiv.org/html/2608.05706v1,"§3, eqs.1–6",著者主張と調査者解釈を区別
+S020,results,1,demonstrated,https://arxiv.org/html/2608.05706v1,"§4, Table 1, Appendix C",著者主張と調査者解釈を区別
+S020,contributions,1,author_claim,https://arxiv.org/html/2608.05706v1,§3,著者主張と調査者解釈を区別
+S020,summary,1,author_claim,https://arxiv.org/html/2608.05706v1,§3–4,著者主張と調査者解釈を区別
+S020,remaining_issues,1,author_claim,https://arxiv.org/html/2608.05706v1,"§3, Appendix D–E",著者主張と調査者解釈を区別
+L029,remaining_issues,2,interpretation,https://arxiv.org/html/2606.15768v2,"§5, §3.2–3.3",原文を踏まえた調査者の解釈
+S002,remaining_issues,1,interpretation,https://arxiv.org/html/2610.03607v1,Appendix B–D,原文を踏まえた調査者の解釈
+S003,remaining_issues,2,interpretation,https://arxiv.org/html/2605.15725v1,"§4.3, §5",原文を踏まえた調査者の解釈
+S005,remaining_issues,2,interpretation,https://arxiv.org/html/2609.26118v1,"§3, Appendix A, H",原文を踏まえた調査者の解釈
+S019,remaining_issues,2,interpretation,https://raw.githubusercontent.com/mlresearch/v306/main/assets/wan26f/wan26f.pdf,"§3.4, §5, Appendix A",原文を踏まえた調査者の解釈
+S020,remaining_issues,2,interpretation,https://arxiv.org/html/2608.05706v1,"§3, Appendix D–E",原文を踏まえた調査者の解釈
+L003,social_background,1,author_claim,https://arxiv.org/html/2411.04983v2,"§1, §5",著者は幅広い物理環境での視覚的な推論・制御を動機に挙げる。
+L003,technical_background,1,author_claim,https://arxiv.org/html/2411.04983v2,§2–3,画像再構成や報酬予測を伴う世界モデルは計算コストやタスク依存性があり、汎用の事前学習視覚特徴を利用する。
+L003,problem,1,author_claim,https://arxiv.org/html/2411.04983v2,§3,オフラインの観測と行動の軌跡から、画像で指定した目標へ未知のタスク固有学習なしで計画する。
+L003,method,1,author_claim,https://arxiv.org/html/2411.04983v2,§3.1,凍結DINOv2の空間パッチ特徴と履歴・行動を入力する因果Transformerで次の特徴を予測する。固有感覚情報があれば追加し、画像復元器は可視化にのみ使う。
+L003,method,2,author_claim,https://arxiv.org/html/2411.04983v2,§3.2,候補行動列を潜在空間で転がし、目標画像特徴との距離をCEMで最小化する。
+L003,results,1,demonstrated,https://arxiv.org/html/2411.04983v2,"§4.3, 表1",6環境のうちMaze・Wall・Reach・PushTは各50組で成功率を測定、Reach 0.92とPushT 0.90は報酬なしオフライン条件に適応したDreamerV3の0.64と0.30を上回る。
+L003,results,2,demonstrated,https://arxiv.org/html/2411.04983v2,"§4.3, 表1",Rope・Granularは各10例のChamfer距離で0.41・0.26、同条件に適応したDreamerV3は2.49・1.05。
+L003,results,3,demonstrated,https://arxiv.org/html/2411.04983v2,"付録A.4.1, 表5",PushT訓練軌跡を200から18500に増やすと成功率0.08から0.92へ上昇。
+L003,contributions,1,author_claim,https://arxiv.org/html/2411.04983v2,"§1, §3",著者は事前学習済み空間特徴の予測による報酬不要の世界モデルと画像目標のゼロショット計画を提示する。
+L003,summary,1,interpretation,https://arxiv.org/html/2411.04983v2,§3–5,事前学習済み視覚特徴を用いてオフラインの行動条件付き予測を学び、複数のナビゲーションと操作シミュレーションで計画する。
+L003,remaining_issues,1,author_claim,https://arxiv.org/html/2411.04983v2,§5 Limitations,著者は十分な状態・行動のデータ被覆、正解行動ラベル、細かい制御への階層化を課題に挙げる。
+L003,remaining_issues,2,unverified,https://arxiv.org/html/2411.04983v2,"§4.3, §5",調査者指摘: 実機と観測外乱への頑健性は未確認。変形物の評価は10例と小規模。
+L010,social_background,1,not_stated,https://arxiv.org/html/2602.11389v2,"§1, 結論",社会的需要について明示的記載は確認できない。
+L010,technical_background,1,author_claim,https://arxiv.org/html/2602.11389v2,§1,物体中心表現のみでは自己運動や偶然の相関に依存し、物体間相互作用を十分に学べない場合がある。
+L010,problem,1,author_claim,https://arxiv.org/html/2602.11389v2,§1,物体潜在表現のマスクを用い、相互作用を利用した予測・視覚推論・目標到達計画を学ぶ。
+L010,method,1,author_claim,https://arxiv.org/html/2602.11389v2,"§4, 図1",凍結した物体中心符号器の表現の一部を履歴全体で隠し、周辺物体から欠落履歴を補完するとともに将来潜在状態を予測する。
+L010,method,2,author_claim,https://arxiv.org/html/2602.11389v2,§5.2,目標画像からの潜在距離をCEMとMPCで最小化する。主実験は凍結DINOv2特徴を集約するVideoSAURを利用する。
+L010,results,1,demonstrated,https://arxiv.org/html/2602.11389v2,"§5.1, 表2",CLEVRERのVideoSAUR、7スロットで4物体マスクすると反実仮想質問単位正解率68.81%、無マスク47.68%で21.13ポイント差。
+L010,results,2,demonstrated,https://arxiv.org/html/2602.11389v2,"§5.1, 表2",SAViでは4物体マスクが34.06%で無マスク41.10%を下回り、マスク2個では60.19%。
+L010,results,3,demonstrated,https://arxiv.org/html/2602.11389v2,"§5.2, 表6",PushTでC-JEPA成功率88.67%、DINO-WM 91.33%。入力特徴数は6×128対196×384で1.02%、L40s上50軌跡平均673秒対5763秒。
+L010,contributions,1,author_claim,https://arxiv.org/html/2602.11389v2,"§4, §6",物体単位の観測可能性を操作する学習目標と、予測上十分な影響近傍の理論的分析を提示する。
+L010,summary,1,interpretation,https://arxiv.org/html/2602.11389v2,§4–6,物体中心の潜在履歴をマスクして予測を学び、合成動画の質問応答とPushT計画を評価する。
+L010,remaining_issues,1,author_claim,https://arxiv.org/html/2602.11389v2,結論 Limitations,著者は物体符号器の品質への依存と、明示的時間因果グラフに対する影響近傍の未検証を挙げる。
+L010,remaining_issues,2,author_claim,https://arxiv.org/html/2602.11389v2,"§6, Remark 2",著者は影響近傍を予測上十分な集合と位置づけ、真の因果親を同定するものとはしていない。
+L010,remaining_issues,3,unverified,https://arxiv.org/html/2602.11389v2,"§5–6, 表2",調査者指摘: 実機、分布外・外乱とデータ被覆への頑健性は未確認。過剰マスクの性能低下もある。
+S007,social_background,1,author_claim,https://proceedings.neurips.cc/paper_files/paper/2022/file/9316769afaaeeaad42a9e3633b14e801-Paper-Conference.pdf,§1,本文の著者による記述：自動運転では他車など制御できない動きの予測が意思決定に必要。
+S007,technical_background,1,author_claim,https://proceedings.neurips.cc/paper_files/paper/2022/file/9316769afaaeeaad42a9e3633b14e801-Paper-Conference.pdf,§1–2,本文の著者による記述：従来の世界モデルは行動に無関係な動きにも容量を費やし得る。
+S007,problem,1,author_claim,https://proceedings.neurips.cc/paper_files/paper/2022/file/9316769afaaeeaad42a9e3633b14e801-Paper-Conference.pdf,§3.1–3.2,本文の著者による記述：制御可能・不可能・静的要因を分け、制御や動画予測へ利用する。
+S007,method,1,author_claim,https://proceedings.neurips.cc/paper_files/paper/2022/file/9316769afaaeeaad42a9e3633b14e801-Paper-Conference.pdf,"§3.1–3.4, 図2",本文の著者による記述：行動条件付き、行動なし、静的の3分枝と逆動力学を用い、必要時には外生状態の未来を注意で統合する。
+S007,results,1,demonstrated,https://proceedings.neurips.cc/paper_files/paper/2022/file/9316769afaaeeaad42a9e3633b14e801-Paper-Conference.pdf,"§4.2, 表1; §4.4, 表2",本文の条件付き評価結果：video_easy DMC 500k stepsのWalker Walkで911±50、DreamerV2 655±47（3 seeds、5 trajectories）。ボール追加BAIRの28フレーム予測PSNR 19.51、PhyDNet 18.91。
+S007,contributions,1,author_claim,https://proceedings.neurips.cc/paper_files/paper/2022/file/9316769afaaeeaad42a9e3633b14e801-Paper-Conference.pdf,§3,本文の著者による記述：制御可能・外生・背景の分枝と、将来外生状態を使う行動学習を提示。
+S007,summary,1,demonstrated,https://proceedings.neurips.cc/paper_files/paper/2022/file/9316769afaaeeaad42a9e3633b14e801-Paper-Conference.pdf,§3–4,本文の条件付き評価結果：外生運動を分離し予測するモデルを、視覚制御と行動条件付き動画予測で評価した。
+S007,remaining_issues,1,interpretation,https://proceedings.neurips.cc/paper_files/paper/2022/file/9316769afaaeeaad42a9e3633b14e801-Paper-Conference.pdf,"§3.1, §4",本文記述に基づく調査者の解釈：調査者指摘: 完全に独立した遷移の仮定は接触や相互作用で破れる可能性があり、DINO特徴上の実証ではない。
+S009,social_background,1,not_stated,https://openaccess.thecvf.com/content_ICCV_2019/papers/Gao_Disentangling_Propagation_and_Generation_for_Video_Prediction_ICCV_2019_paper.pdf,§1,指定範囲を確認した結果：記載なし: 確認範囲では具体的な社会需要を主張していない。
+S009,technical_background,1,author_claim,https://openaccess.thecvf.com/content_ICCV_2019/papers/Gao_Disentangling_Propagation_and_Generation_for_Video_Prediction_ICCV_2019_paper.pdf,§1,本文の著者による記述：動きに基づく転送は鮮明だが遮蔽解除領域を推定できない。
+S009,problem,1,author_claim,https://openaccess.thecvf.com/content_ICCV_2019/papers/Gao_Disentangling_Propagation_and_Generation_for_Video_Prediction_ICCV_2019_paper.pdf,"§1, §3",本文の著者による記述：過去動画から運動と新たに露出する画素を予測する。
+S009,method,1,author_claim,https://openaccess.thecvf.com/content_ICCV_2019/papers/Gao_Disentangling_Propagation_and_Generation_for_Video_Prediction_ICCV_2019_paper.pdf,"§3, 図2",本文の著者による記述：光学フロー予測とワープ後の信頼度・遮蔽マップを使い、低信頼領域を別の文脈ネットで補完する。
+S009,results,1,demonstrated,https://openaccess.thecvf.com/content_ICCV_2019/papers/Gao_Disentangling_Propagation_and_Generation_for_Video_Prediction_ICCV_2019_paper.pdf,"§4.2, 表2",本文の条件付き評価結果：KITTI Flowの2入力から次フレーム予測でPSNR 22.3、SSIM 0.696、LPIPS 0.114。DVFは22.1、0.683、0.163。
+S009,contributions,1,author_claim,https://openaccess.thecvf.com/content_ICCV_2019/papers/Gao_Disentangling_Propagation_and_Generation_for_Video_Prediction_ICCV_2019_paper.pdf,"§1, §3",本文の著者による記述：伝播と生成の分離、ワープ後信頼度を提案。
+S009,summary,1,demonstrated,https://openaccess.thecvf.com/content_ICCV_2019/papers/Gao_Disentangling_Propagation_and_Generation_for_Video_Prediction_ICCV_2019_paper.pdf,§3–4,本文の条件付き評価結果：動きの転送と遮蔽部分の補完を合成し、動画フレームの精度を評価。
+S009,remaining_issues,1,interpretation,https://openaccess.thecvf.com/content_ICCV_2019/papers/Gao_Disentangling_Propagation_and_Generation_for_Video_Prediction_ICCV_2019_paper.pdf,§3–4,本文記述に基づく調査者の解釈：調査者指摘: RGB画素予測であり、DINO patch特徴、行動条件付け、ロボット制御への有効性は未検証。
+S010,social_background,1,author_claim,https://ojs.aaai.org/index.php/AAAI/article/download/16342/16149,§1,本文の著者による記述：不規則な観測間隔や欠損を伴う気候データなどを対象に挙げる。
+S010,technical_background,1,author_claim,https://ojs.aaai.org/index.php/AAAI/article/download/16342/16149,§1–2,本文の著者による記述：固定フレーム間隔の動画モデルは未観測時刻や不規則入力への対応が難しい。
+S010,problem,1,author_claim,https://ojs.aaai.org/index.php/AAAI/article/download/16342/16149,§3,本文の著者による記述：不規則な観測から任意時刻に動画を補間・外挿する。
+S010,method,1,author_claim,https://ojs.aaai.org/index.php/AAAI/article/download/16342/16149,"§3, 図2",本文の著者による記述：ODE-ConvGRUで履歴を符号化し、ODEソルバで潜在状態を時刻へ進め、フロー・差分・マスクを合成して画素生成する。
+S010,results,1,demonstrated,https://ojs.aaai.org/index.php/AAAI/article/download/16342/16149,"§4.1–4.2, 表1",本文の条件付き評価結果：KTH外挿の表1でSSIM 0.878、LPIPS 0.080、PSNR 28.19。ODE-Convは0.768、0.429、24.31。
+S010,contributions,1,author_claim,https://ojs.aaai.org/index.php/AAAI/article/download/16342/16149,§3,本文の著者による記述：時間連続動画生成へのODE-ConvGRUと画素合成の組合せを提案。
+S010,summary,1,demonstrated,https://ojs.aaai.org/index.php/AAAI/article/download/16342/16149,§3–4,本文の条件付き評価結果：連続時間の潜在動力学を積分し、動画の補間と外挿を評価。
+S010,remaining_issues,1,interpretation,https://ojs.aaai.org/index.php/AAAI/article/download/16342/16149,§3–4,本文記述に基づく調査者の解釈：調査者指摘: 行動の順序付き合成・接触イベント・凍結DINO特徴は対象外。ODE潜在状態の整合だけで画像デコーダを含む半群性は保証されない。
+S016,social_background,1,author_claim,https://arxiv.org/html/2609.10464v1,§1,本文の著者による記述：異なる重力環境への適応を世界モデルの課題として挙げる。
+S016,technical_background,1,author_claim,https://arxiv.org/html/2609.10464v1,§1–2,本文の著者による記述：凍結視覚特徴モデルや一段教師強制学習では長期・物理条件分布外の予測が課題。
+S016,problem,1,author_claim,https://arxiv.org/html/2609.10464v1,§2–3,本文の著者による記述：訓練範囲外の重力下での長期状態予測とロボット制御表現を評価する。
+S016,method,1,author_claim,https://arxiv.org/html/2609.10464v1,"§2.1, 付録H.1, H.6",本文の著者による記述：重力・行動条件付き予測器を自己回帰的に共有反復し、割引多段誤差をencoderとpredictorの両方へ逆伝播しSIGRegを用いる。無制御・固定重力では反復が履歴上の離散半群を成す。
+S016,results,1,demonstrated,https://arxiv.org/html/2609.10464v1,"§3, 図3–4",本文の条件付き評価結果：44段の正方形rolloutでは位置・速度・回転誤差がDINO-WM比31–48%低下。Arm Catcher Ballでは個別に訓練したdiffusion policyの平均成功率が9.5%から23.3%。
+S016,contributions,1,author_claim,https://arxiv.org/html/2609.10464v1,"§4, 付録D.5, H",本文の著者による記述：著者は利益の大部分を予測器単独より共同学習表現に帰属し、線形特徴モデルで誤差伝播を解析。
+S016,summary,1,demonstrated,https://arxiv.org/html/2609.10464v1,§2–4,本文の条件付き評価結果：重力を与えて多段rolloutを共同学習し、分布外重力での物理予測と凍結encoder上の制御を比較。
+S016,remaining_issues,1,interpretation,https://arxiv.org/html/2609.10464v1,"§5 Limitations, §2.1, 付録H.1",本文記述に基づく調査者の解釈：著者限界: 変化させた物理量は単一スカラー重力、形状転移は不均一。調査者指摘: 凍結DINOへの改善を直接証明せず、任意時間の独立した直接予測と分割予測の整合損失でもない。
+S017,social_background,1,not_stated,https://arxiv.org/html/2605.24578v1,§1,指定範囲を確認した結果：記載なし: 本文の導入は世界モデルの行動忠実性を技術課題として扱う。
+S017,technical_background,1,author_claim,https://arxiv.org/html/2605.24578v1,§1–2,本文の著者による記述：視覚的に自然な動画でも同一、逆、行動合成に対する運動整合が破れ得る。
+S017,problem,1,author_claim,https://arxiv.org/html/2605.24578v1,§2–4,本文の著者による記述：平面ナビゲーション動画モデルの局所的な行動合成忠実性を学習・評価する。
+S017,method,1,author_claim,https://arxiv.org/html/2605.24578v1,"§3, 付録A.4, B, C",本文の著者による記述：既存軌跡からidentity・inverse・短区間compositionを合成し、自由rolloutの潜在端点間L2正則化を適用。GACとGARを復元状態で評価。
+S017,results,1,demonstrated,https://arxiv.org/html/2605.24578v1,"§4.1–4.2, 表1",本文の条件付き評価結果：RECONでNWMのGAC集約誤差は1.73、正則化後1.50。成分の局所合成誤差は0.79±0.52から0.60±0.40。
+S017,contributions,1,author_claim,https://arxiv.org/html/2605.24578v1,"§1, §3",本文の著者による記述：群作用の同一・逆・合成を潜在rollout損失と計測指標へ具体化したと著者が主張。
+S017,summary,1,demonstrated,https://arxiv.org/html/2605.24578v1,§2–4,本文の条件付き評価結果：局所ego-motionの代数条件を生成動画モデルの潜在状態へ適用し、行動忠実性を検査。
+S017,remaining_issues,1,author_claim,https://arxiv.org/html/2605.24578v1,"付録A.4, H",本文の著者による記述：著者限界: 同じ変位の再配分は小回転・短区間の局所近似で、一般の非可換SE(2)、接触や操りへの保証はない。
+S018,social_background,1,author_claim,https://arxiv.org/html/2602.10104v2,§1,本文の著者による記述：制御ラベルは大量映像に対して希少である。
+S018,technical_background,1,author_claim,https://arxiv.org/html/2602.10104v2,"§3.1, 付録A",本文の著者による記述：未来フレーム条件付き潜在行動は再構成できても場面情報漏洩や文脈間座標不整合が起こり得る。
+S018,problem,1,author_claim,https://arxiv.org/html/2602.10104v2,§3,本文の著者による記述：ラベルなし動画から文脈を超えて転用可能な潜在行動と条件付き動画モデルを学ぶ。
+S018,method,1,author_claim,https://arxiv.org/html/2602.10104v2,"§3.1–3.2, 式1–4",本文の著者による記述：各遷移のβ-VAEに加え、区間潜在行動平均の射影と凍結動画encoderの時間差分平均をcosine整列し、凍結LAMで動画生成器を事前学習する。
+S018,results,1,demonstrated,https://arxiv.org/html/2602.10104v2,"§4.1–4.2, 表1",本文の条件付き評価結果：MINDの一人称→三人称の行動線形probe Macro-F1は0.6250、同条件AdaWorld 0.4820。逆方向は0.5904対0.4999。
+S018,contributions,1,author_claim,https://arxiv.org/html/2602.10104v2,§3–4,本文の著者による記述：SeqΔ-REPAによる系列単位の行動効果整列と動画世界モデルへの転用を提示。
+S018,summary,1,demonstrated,https://arxiv.org/html/2602.10104v2,§3–4,本文の条件付き評価結果：凍結動画特徴の変化で潜在行動を整列し、クロスドメインの可読性・転用を評価。
+S018,remaining_issues,1,author_claim,https://arxiv.org/html/2602.10104v2,"付録D failure cases, E.1",本文の著者による記述：著者限界: 衝突時の障害物幻覚、イベント曖昧性、単一効果への複数要因混入。接触豊富な操作や階層潜在行動は今後の課題。
+S021,social_background,1,author_claim,https://arxiv.org/html/2610.16302v1,§1,本文の著者による記述：対話型世界モデルは実行性能が変化しても世界を意図した速度で進める必要がある。
+S021,technical_background,1,author_claim,https://arxiv.org/html/2610.16302v1,§1,本文の著者による記述：固定時間レートでは実行速度との不整合と解像度・物理時間長のトレードオフが起こる。
+S021,problem,1,author_claim,https://arxiv.org/html/2610.16302v1,§3–4,本文の著者による記述：動画世界モデルで物理時間の整合を保ちつつ生成レートを制御し途中変更する。
+S021,method,1,author_claim,https://arxiv.org/html/2610.16302v1,"§3.2–3.3, 式4–9",本文の著者による記述：動画と制御を複数strideで同期サンプリングし、累積物理時刻によるStride-RoPEを用いて履歴を維持したままレート切替。
+S021,results,1,demonstrated,https://arxiv.org/html/2610.16302v1,"§4.1–4.2, 表1",本文の条件付き評価結果：Doomで同一生成フレーム数において14 FPSは15.1秒、70 FPSは3.0秒をカバーし、LPIPSは0.4279対0.3852。未学習中間レートも評価。
+S021,contributions,1,author_claim,https://arxiv.org/html/2610.16302v1,§3–4,本文の著者による記述：物理時間に整合した位置表現とmulti-stride訓練、オンラインレート変更を提示。
+S021,summary,1,demonstrated,https://arxiv.org/html/2610.16302v1,§3–4,本文の条件付き評価結果：複数の時間間隔で動画と操作を学習し、一定予算下の時間長や途中切替を評価。
+S021,remaining_issues,1,interpretation,https://arxiv.org/html/2610.16302v1,"§4.2, 付録D–E",本文記述に基づく調査者の解釈：調査者指摘: 切替評価は与えたスケジュールであり、接触予測に基づく自律gateや潜在行動IDMは本文確認範囲で示されない。範囲外レートではSRが悪化し、切替評価はケース選別・全体較正を用いる。
+S022,social_background,1,author_claim,https://arxiv.org/html/2606.01955v2,§1,本文の著者による記述：多様な指示・場面で一般化する実ロボット操作を目指す。
+S022,technical_background,1,author_claim,https://arxiv.org/html/2606.01955v2,§1,本文の著者による記述：固定長action chunkは言語の意味的イベントと動画・制御の時間粒度を揃えにくい。
+S022,problem,1,author_claim,https://arxiv.org/html/2606.01955v2,"§3, §5",本文の著者による記述：意味イベントを単位に動画と操作を学習し、可変長イベント実行と固定長実行を支える。
+S022,method,1,author_claim,https://arxiv.org/html/2606.01955v2,"§3.3–3.4, §5.1–5.5",本文の著者による記述：イベントcaption付き動画でVideo DiTを事前学習し凍結、その上でaction DiTを学ぶ。観測から次イベント説明と残り時間を推定し、可変長の動画・行動区間を生成する。
+S022,results,1,demonstrated,https://arxiv.org/html/2606.01955v2,"§7.2.4–7.2.5, 表4",本文の条件付き評価結果：実機Generalization suiteの平均Task Progressはイベント方式53.75、事前学習済み固定長・VI-SAなし基準22.0。両者は実行方式と視点間注意の両方が異なる。
+S022,contributions,1,author_claim,https://arxiv.org/html/2606.01955v2,§3–5,本文の著者による記述：イベント単位の動画・行動事前学習、残り時間推定、イベント実行を一体化したと著者は主張。
+S022,summary,1,demonstrated,https://arxiv.org/html/2606.01955v2,"§5, §7",本文の条件付き評価結果：イベントに基づく可変時間の動画と行動の生成・実行を、多様な実ロボットタスクで評価。
+S022,remaining_issues,1,author_claim,https://arxiv.org/html/2606.01955v2,"§8 Future Work, Evaluation advantages",本文の著者による記述：著者限界: 詳細captionと時間境界の整備に依存し、自己教師ありイベント境界発見は将来課題。評価対象プラットフォームと事前学習の整合やチューニング量に優位がある。
+S011,social_background,1,not_stated,https://cnbc.cmu.edu/braingroup/papers/cavanaugh_etal_2016.pdf,Introduction,本文の該当節を確認。雑誌掲載版PDFを使用。
+S011,technical_background,1,author_claim,https://cnbc.cmu.edu/braingroup/papers/cavanaugh_etal_2016.pdf,"Introduction, Fig. 1",本文の該当節を確認。雑誌掲載版PDFを使用。
+S011,problem,1,author_claim,https://cnbc.cmu.edu/braingroup/papers/cavanaugh_etal_2016.pdf,Introduction,本文の該当節を確認。雑誌掲載版PDFを使用。
+S011,method,1,demonstrated,https://cnbc.cmu.edu/braingroup/papers/cavanaugh_etal_2016.pdf,Materials and Methods; Figs. 2–3,本文の該当節を確認。雑誌掲載版PDFを使用。
+S011,results,1,demonstrated,https://cnbc.cmu.edu/braingroup/papers/cavanaugh_etal_2016.pdf,Results; Figs. 4–6,本文の該当節を確認。雑誌掲載版PDFを使用。
+S011,contributions,1,author_claim,https://cnbc.cmu.edu/braingroup/papers/cavanaugh_etal_2016.pdf,Discussion,本文の該当節を確認。雑誌掲載版PDFを使用。
+S011,summary,1,interpretation,https://cnbc.cmu.edu/braingroup/papers/cavanaugh_etal_2016.pdf,Abstract; Discussion,本文の該当節を確認。雑誌掲載版PDFを使用。
+S011,remaining_issues,1,interpretation,https://cnbc.cmu.edu/braingroup/papers/cavanaugh_etal_2016.pdf,Materials and Methods; Discussion,本文の該当節を確認。雑誌掲載版PDFを使用。
+S012,social_background,1,not_stated,https://pmc.ncbi.nlm.nih.gov/articles/PMC8653780/,Introduction,本文の該当節を確認。著者最終稿（PMC）を使用。
+S012,technical_background,1,author_claim,https://pmc.ncbi.nlm.nih.gov/articles/PMC8653780/,Introduction,本文の該当節を確認。著者最終稿（PMC）を使用。
+S012,problem,1,author_claim,https://pmc.ncbi.nlm.nih.gov/articles/PMC8653780/,Introduction,本文の該当節を確認。著者最終稿（PMC）を使用。
+S012,method,1,demonstrated,https://pmc.ncbi.nlm.nih.gov/articles/PMC8653780/,Experimental Methods,本文の該当節を確認。著者最終稿（PMC）を使用。
+S012,results,1,demonstrated,https://pmc.ncbi.nlm.nih.gov/articles/PMC8653780/,Results; Figs. 2–3,本文の該当節を確認。著者最終稿（PMC）を使用。
+S012,contributions,1,author_claim,https://pmc.ncbi.nlm.nih.gov/articles/PMC8653780/,Discussion,本文の該当節を確認。著者最終稿（PMC）を使用。
+S012,summary,1,interpretation,https://pmc.ncbi.nlm.nih.gov/articles/PMC8653780/,Results; Discussion,本文の該当節を確認。著者最終稿（PMC）を使用。
+S012,remaining_issues,1,author_claim,https://pmc.ncbi.nlm.nih.gov/articles/PMC8653780/,Results; Discussion; Materials,本文の該当節を確認。著者最終稿（PMC）を使用。
+S013,social_background,1,not_stated,https://proceedings.mlr.press/v97/locatello19a/locatello19a.pdf,Introduction,論文本文に基づく要約。未検証の数学的詳細・全付録を含むためpartial。
+S013,technical_background,1,author_claim,https://proceedings.mlr.press/v97/locatello19a/locatello19a.pdf,§1–2,論文本文に基づく要約。未検証の数学的詳細・全付録を含むためpartial。
+S013,problem,1,author_claim,https://proceedings.mlr.press/v97/locatello19a/locatello19a.pdf,"§1, §3–5",論文本文に基づく要約。未検証の数学的詳細・全付録を含むためpartial。
+S013,method,1,demonstrated,https://proceedings.mlr.press/v97/locatello19a/locatello19a.pdf,§3 Theorem 1; §4,論文本文に基づく要約。未検証の数学的詳細・全付録を含むためpartial。
+S013,results,1,demonstrated,https://proceedings.mlr.press/v97/locatello19a/locatello19a.pdf,§3 Theorem 1,論文本文に基づく要約。未検証の数学的詳細・全付録を含むためpartial。
+S013,contributions,1,author_claim,https://proceedings.mlr.press/v97/locatello19a/locatello19a.pdf,§3–5,論文本文に基づく要約。未検証の数学的詳細・全付録を含むためpartial。
+S013,summary,1,interpretation,https://proceedings.mlr.press/v97/locatello19a/locatello19a.pdf,§3,論文本文に基づく要約。未検証の数学的詳細・全付録を含むためpartial。
+S013,remaining_issues,1,interpretation,https://proceedings.mlr.press/v97/locatello19a/locatello19a.pdf,"§3 Theorem 1, footnote 3",論文本文に基づく要約。未検証の数学的詳細・全付録を含むためpartial。
+S014,social_background,1,not_stated,https://proceedings.mlr.press/v115/gresele20a/gresele20a.pdf,§1; §4,論文本文に基づく要約。未検証の数学的詳細・全付録を含むためpartial。
+S014,technical_background,1,author_claim,https://proceedings.mlr.press/v115/gresele20a/gresele20a.pdf,§1–2,論文本文に基づく要約。未検証の数学的詳細・全付録を含むためpartial。
+S014,problem,1,author_claim,https://proceedings.mlr.press/v115/gresele20a/gresele20a.pdf,§3,論文本文に基づく要約。未検証の数学的詳細・全付録を含むためpartial。
+S014,method,1,demonstrated,https://proceedings.mlr.press/v115/gresele20a/gresele20a.pdf,§3.1 Theorem 1; §3.2–3.3,論文本文に基づく要約。未検証の数学的詳細・全付録を含むためpartial。
+S014,results,1,demonstrated,https://proceedings.mlr.press/v115/gresele20a/gresele20a.pdf,§3.1 Theorem 1; §3.2 Theorem 5,論文本文に基づく要約。未検証の数学的詳細・全付録を含むためpartial。
+S014,contributions,1,author_claim,https://proceedings.mlr.press/v115/gresele20a/gresele20a.pdf,§3–4,論文本文に基づく要約。未検証の数学的詳細・全付録を含むためpartial。
+S014,summary,1,interpretation,https://proceedings.mlr.press/v115/gresele20a/gresele20a.pdf,§3,論文本文に基づく要約。未検証の数学的詳細・全付録を含むためpartial。
+S014,remaining_issues,1,interpretation,https://proceedings.mlr.press/v115/gresele20a/gresele20a.pdf,§3–4,論文本文に基づく要約。未検証の数学的詳細・全付録を含むためpartial。
+S015,social_background,1,author_claim,https://arxiv.org/html/2207.08229v2,§1; §7,論文本文に基づく要約。未検証の数学的詳細・全付録を含むためpartial。
+S015,technical_background,1,author_claim,https://arxiv.org/html/2207.08229v2,§1–3,論文本文に基づく要約。未検証の数学的詳細・全付録を含むためpartial。
+S015,problem,1,author_claim,https://arxiv.org/html/2207.08229v2,§3–4,論文本文に基づく要約。未検証の数学的詳細・全付録を含むためpartial。
+S015,method,1,demonstrated,https://arxiv.org/html/2207.08229v2,§4–6,論文本文に基づく要約。未検証の数学的詳細・全付録を含むためpartial。
+S015,results,1,demonstrated,https://arxiv.org/html/2207.08229v2,§5–6,論文本文に基づく要約。未検証の数学的詳細・全付録を含むためpartial。
+S015,contributions,1,author_claim,https://arxiv.org/html/2207.08229v2,§4–5,論文本文に基づく要約。未検証の数学的詳細・全付録を含むためpartial。
+S015,summary,1,interpretation,https://arxiv.org/html/2207.08229v2,§3–7,論文本文に基づく要約。未検証の数学的詳細・全付録を含むためpartial。
+S015,remaining_issues,1,author_claim,https://arxiv.org/html/2207.08229v2,§7; §3–5,論文本文に基づく要約。未検証の数学的詳細・全付録を含むためpartial。
+S016,remaining_issues,2,interpretation,https://arxiv.org/html/2609.10464v1,Abstract; Introduction re-initialization paragraph; §4; Appendix D.5.2,ホストの原文比較。表現由来の優位という説明とpredictor帰属の説明が併存し、一般的な寄与分解を断定しない。

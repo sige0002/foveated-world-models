@@ -1,0 +1,36 @@
+{
+  "name": "Local IDM head / decoder adaptation factorial",
+  "design_spec": "research/idm/future-information-utilization-minimal-experiment-addendum.md",
+  "design_spec_sha256": "d9cb2aa0e6e2fcbcf8e3ddaf260a3f8dd1b3afa75a4ab6b147c55a7b33976b9a",
+  "arms": [
+    "H",
+    "D",
+    "HD",
+    "K"
+  ],
+  "baseline": "F: no updates",
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "seed_meaning": "minibatch-stream replicate, identical pretrained H0/D0 for every seed",
+  "updates": 400,
+  "batch": 8,
+  "learning_rate": 0.0003,
+  "optimizer": "AdamW; weight decay .01 for matrices, zero for bias/norm vectors",
+  "gradient_clip": 1,
+  "drift_beta": 0.001,
+  "objective": "mean feature MSE + drift_beta * mean(0.5 sum((mu-mu0)^2/exp(logvar0))) for H/HD; MSE only D/K",
+  "variance": "reference variance fixed, original N(0,I) KL diagnostic only",
+  "primary_scope_gate": "mean train drift <=1 nat and all gradients finite; otherwise no adoption even if MSE improves",
+  "precision": "float32 highest B8 CPU only",
+  "source_head": "research/idm/reference-comparison2000/reference-42.pt",
+  "source_decoder": "runs/reference-idm42-nested512-comparison400-20261113/prior_residual-seed42.pt",
+  "constant": "single train-only mean of starting mu",
+  "evaluation": "fixed400 all arms; reused dev64/observed96 and train; no checkpoint selection",
+  "secondary_evaluation": "fixed same-current future swaps and independent existing interaction effect probe; neither is action identity or conditional MI",
+  "resource_schedule": "maximum4 fits with4threads each plus2threads independent review; no GPU",
+  "training_status": "not started; implementation tests and source-binding preflight required first",
+  "decision": "Require visual improvement over F and isolate H/D/HD effect; D versus K tests transition-specific utility. Known optimization/trust-region controls, no novelty claim."
+}

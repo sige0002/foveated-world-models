@@ -1,0 +1,20 @@
+{
+  "all_checks_passed": true,
+  "head42_reproduction_max_error": 0.0,
+  "query_sha256": "916ac68406c367aeb83f2322b7be54f230ceac46a5e09809d726ee16ae8356ea",
+  "exports": {
+    "43": {
+      "cache_sha256": "a2a480e4a90d06614e45c066bef7b69a53529f21506d9cf539d1f19b3ce0fa54",
+      "count": 96,
+      "all_noncode_fields_preserved": true,
+      "finite_codes": true
+    },
+    "44": {
+      "cache_sha256": "1bab1f74a2ae485df81739442ce30af06d02f9a8a17fb8edf77f841d54fffe41",
+      "count": 96,
+      "all_noncode_fields_preserved": true,
+      "finite_codes": true
+    }
+  },
+  "verification_script_sha256": "045e4b9286276d5e230cf2bc80b00a054453260a0bf2c1f94e4e4b9a08b5582e"
+}

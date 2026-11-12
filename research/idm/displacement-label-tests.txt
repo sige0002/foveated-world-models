@@ -1,0 +1,10 @@
+/home/sadasue/foveated-world-models/.venv/lib/python3.12/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+test_camera_mask_does_not_silently_become_state_mask (research.idm.test_displacement_labels.LabelTests.test_camera_mask_does_not_silently_become_state_mask) ... ok
+test_exact_endpoint_difference_and_indices (research.idm.test_displacement_labels.LabelTests.test_exact_endpoint_difference_and_indices) ... ok
+test_missing_not_filled_and_masks_distinct (research.idm.test_displacement_labels.LabelTests.test_missing_not_filled_and_masks_distinct) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.002s
+
+OK

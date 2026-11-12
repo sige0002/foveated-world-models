@@ -1,0 +1,9 @@
+{
+  "reviewed_at": "2026-11-12T16:59:38.654430+00:00",
+  "checks": "F051/F054 primary architectures, Cityscapes/VSPW tables and mask/loss ablation/limitations checked. F052/F053/F055 reused exact same version from reviewed surveys/architecture/internal papers L003/L001/L021; all paper columns identical except ID and temporary pending flag; prior host primary review recorded in architecture/internal/review_log.json.",
+  "reused": {
+    "F052": "L003",
+    "F053": "L001",
+    "F055": "L021"
+  }
+}

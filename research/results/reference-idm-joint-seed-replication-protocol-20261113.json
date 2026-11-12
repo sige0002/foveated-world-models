@@ -1,0 +1,20 @@
+{
+  "created_at": "2026-11-12T18:51:32.666277+00:00",
+  "idm_seeds": [
+    42,
+    43,
+    44
+  ],
+  "decoder_seeds": [
+    42,
+    43,
+    44
+  ],
+  "pairing": "diagonal paired seeds, existing reference42+decoder42 plus new43/43 and44/44",
+  "head_steps": 2000,
+  "correction_steps": 400,
+  "prior": "Frozen6501 zero-code, reused bitwise verified same features/rows",
+  "variant": "prior_residual",
+  "decision": "Final400 only, development64, no early checkpoint selection. Existing three-decoder-seed results shared IDM42; this test changes both head and correction seed.",
+  "status": "Prepared before new correction training"
+}
