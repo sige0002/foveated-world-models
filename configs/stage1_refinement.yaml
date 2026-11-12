@@ -1,0 +1,4 @@
+# Repeated deterministic updates: isolates extra computation from flow learning.
+extends: stage1_flow.yaml
+model:
+  decoder_type: refinement

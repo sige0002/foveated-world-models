@@ -98,7 +98,14 @@ def test_real_decode_and_batch(tmp_path):
 def test_pinned_upstream_hashes():
     root=ROOT/'vendor/lawam'
     record=json.loads((root/'UPSTREAM.json').read_text())
+    patches=json.loads((root/'RESEARCH_PATCHES.json').read_text())
+    assert patches['upstream_commit']==record['commit']
+    assert set(patches['files']) <= set(record['files_sha256'])
     for path,expected in record['files_sha256'].items():
+        if path in patches['files']:
+            patch=patches['files'][path]
+            assert patch['upstream_sha256']==expected
+            expected=patch['patched_sha256']
         assert hashlib.sha256((root/path).read_bytes()).hexdigest()==expected
 
 

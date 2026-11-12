@@ -1,0 +1,7 @@
+# Research variant: same IDM/data as direct regression; conditional latent flow.
+extends: stage1_robomind.yaml
+model:
+  decoder_type: flow
+  flow_source: current
+  flow_noise_scale: 0.1
+  flow_steps: 8

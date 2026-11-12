@@ -1,0 +1,4 @@
+extends: stage1_flow.yaml
+model:
+  flow_source: noise
+  flow_noise_scale: 1.0

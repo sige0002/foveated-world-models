@@ -1,0 +1,18 @@
+{
+  "train": {
+    "pairs": 128,
+    "episodes": 128,
+    "code_total_variance": 7.8114544521668e-06,
+    "code_mean_squared_norm": 6.260771751403809,
+    "copy_mse": 0.17891663312911987
+  },
+  "validation": {
+    "pairs": 64,
+    "episodes": 64,
+    "code_total_variance": 9.110787686950061e-06,
+    "code_mean_squared_norm": 6.262152194976807,
+    "copy_mse": 0.20582745969295502,
+    "reference_mse": 0.14371385658159852,
+    "reference_zero_z_mse": 0.21243918244726956
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "description": "Research-only latent flow integration. UPSTREAM.json retains original pinned hashes.",
+  "upstream_commit": "c12168d9077edea67fe7c1b70d08b80b8e65a9c8",
+  "files": {
+    "latent_action_model/core/lam_model.py": {
+      "upstream_sha256": "93827eaeffc1c41c8666debedf014b957daf23b79509c0123babaecc2507c38b",
+      "patched_sha256": "4c6092399add79b835bf6d1cfea4e5747e745843de5be359758678952d7ee1cb"
+    },
+    "latent_action_model/core/lam_lightinng.py": {
+      "upstream_sha256": "c47ea36c98bd8424acb74adf44e93bf0ea7e7a2f369fccfdc0c423fea7fa788c",
+      "patched_sha256": "443ae283521196738af84bf1498e003ad9866f9b8ee3529e4ec86bfbf5e5fd7d"
+    }
+  }
+}

@@ -1,0 +1,7 @@
+# Wiring only, not a prediction-quality experiment.
+extends: stage1_smoke.yaml
+model:
+  decoder_type: flow
+  flow_source: current
+  flow_noise_scale: 0.1
+  flow_steps: 2

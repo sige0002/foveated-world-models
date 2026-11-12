@@ -1,0 +1,749 @@
+{
+  "status": "exploratory: tiny models, 100 steps, one seed, first 32 validation pairs",
+  "branch": "research/stage1-latent-flow-matching",
+  "results": {
+    "direct": {
+      "global_step": 100,
+      "fit_seconds_including_validation": 35.719227452995256,
+      "parameters": {
+        "IDM": {
+          "total": 126560,
+          "trainable": 126560
+        },
+        "LaWM": {
+          "total": 177472,
+          "trainable": 177472
+        },
+        "state_predictor": {
+          "total": 35328,
+          "trainable": 35328
+        },
+        "DINO": {
+          "total": 85660416,
+          "trainable": 0
+        }
+      },
+      "metrics": {
+        "train_loss": 0.5555132627487183,
+        "train/recon_loss": 0.505717933177948,
+        "train/vq_loss": 0.0006789946346543729,
+        "train/perplexity": 0.0,
+        "train/cos_sim_metric": 0.5669522285461426,
+        "train/l1_loss_metric": 0.5529155135154724,
+        "train/state_loss": 0.049116309732198715,
+        "train/lr": 0.0003000000142492354,
+        "val_loss": 0.538440465927124,
+        "val/recon_loss": 0.5088196396827698,
+        "val/vq_loss": 0.0,
+        "val/perplexity": 0.0,
+        "val/cos_sim_metric": 0.5582535862922668,
+        "val/l1_loss_metric": 0.5560191869735718,
+        "val/state_loss": 0.029620811343193054,
+        "val/feature_mse": 0.8647774457931519,
+        "val/copy_feature_mse": 0.2479124367237091
+      },
+      "cuda_peak_allocated_bytes": 0,
+      "cuda_peak_reserved_bytes": 0,
+      "torch_version": "2.11.0+cu130",
+      "cuda_version": "13.0",
+      "checkpoint": "/home/sadasue/foveated-world-models/runs/latent-flow-pilot-20261113/direct/checkpoints/final.ckpt",
+      "resolved_config": {
+        "data": {
+          "batch_size": 1,
+          "format": "robomind_video",
+          "horizon_seconds": 1.2,
+          "num_workers": 0,
+          "tolerance_seconds": null,
+          "train_manifest": "/media/sadasue/SSD1/foveated-world-models/datasets/RoboMIND-lerobot/preprocessed/train.jsonl",
+          "val_manifest": "/media/sadasue/SSD1/foveated-world-models/datasets/RoboMIND-lerobot/preprocessed/validation.jsonl"
+        },
+        "expected_vision": {
+          "hidden_size": 768,
+          "model_type": "dinov3_vit",
+          "num_hidden_layers": 12,
+          "num_register_tokens": 4,
+          "patch_size": 16
+        },
+        "model": {
+          "code_dim": 32,
+          "codebook_size": 32,
+          "dec_layers": 1,
+          "decoder_type": "direct",
+          "dim": 64,
+          "dropout": 0.0,
+          "dual_view_aug": false,
+          "enc_add_state": false,
+          "enc_layers": 1,
+          "enc_modal_mask": true,
+          "exclude_bias_norm_from_wd": true,
+          "ffn_expansion_factor": 4,
+          "flow_noise_scale": 0.1,
+          "flow_source": "current",
+          "flow_steps": 4,
+          "image_aug": false,
+          "image_hw": [
+            256,
+            256
+          ],
+          "lambda_aux": 1.0,
+          "lambda_diversity": 0.0,
+          "latent_layer_to_use": -2,
+          "loss_type": "smooth_l1",
+          "max_state_dim": 32,
+          "multi_input": false,
+          "norm_latents": true,
+          "norm_latents_type": "ln",
+          "num_embodiments": 2,
+          "num_frames": 2,
+          "num_heads": 4,
+          "num_queries": 1,
+          "patch_size": 16,
+          "state_loss_type": "l2",
+          "vision_model_id": "/media/sadasue/SSD1/foveated-world-models/models/dinov3-vitb16-pretrain-lvd1689m",
+          "vq_kwargs": {
+            "beta": 5e-05,
+            "layer_norm": true
+          },
+          "vq_type": "vae",
+          "wandb_offline": true,
+          "warmup_steps": 0
+        },
+        "optimizer": {
+          "lr": 0.0003,
+          "weight_decay": 0.01
+        },
+        "seed": 42,
+        "trainer": {
+          "accelerator": "cpu",
+          "accumulate_grad_batches": 1,
+          "devices": 1,
+          "enable_progress_bar": false,
+          "gradient_clip_val": 1.0,
+          "limit_val_batches": 32,
+          "log_every_n_steps": 1,
+          "max_epochs": -1,
+          "max_steps": 100,
+          "num_sanity_val_steps": 0,
+          "precision": "32-true",
+          "strategy": "auto",
+          "val_check_interval": 100
+        }
+      },
+      "split_verification": {
+        "train": {
+          "manifest": "/media/sadasue/SSD1/foveated-world-models/datasets/RoboMIND-lerobot/preprocessed/train.jsonl",
+          "sha256": "c99992713168e183e9882a7cd2679ed4508768681d1b79bc79138ee4998e5207",
+          "episodes": 1444,
+          "video_groups": 54,
+          "pairs": 9201,
+          "tail_pairs": 1407
+        },
+        "validation": {
+          "manifest": "/media/sadasue/SSD1/foveated-world-models/datasets/RoboMIND-lerobot/preprocessed/validation.jsonl",
+          "sha256": "a588554d2b7237f174e932cedc76e3d991cb6af7d45d928d142501acad653b26",
+          "episodes": 160,
+          "video_groups": 7,
+          "pairs": 950,
+          "tail_pairs": 155
+        },
+        "episode_and_video_groups_disjoint": true
+      }
+    },
+    "refinement": {
+      "global_step": 100,
+      "fit_seconds_including_validation": 37.61600800813176,
+      "parameters": {
+        "IDM": {
+          "total": 126560,
+          "trainable": 126560
+        },
+        "LaWM": {
+          "total": 229568,
+          "trainable": 229568
+        },
+        "state_predictor": {
+          "total": 35328,
+          "trainable": 35328
+        },
+        "DINO": {
+          "total": 85660416,
+          "trainable": 0
+        }
+      },
+      "metrics": {
+        "train_loss": 0.26519399881362915,
+        "train/recon_loss": 0.21634669601917267,
+        "train/vq_loss": 0.0006025704205967486,
+        "train/perplexity": 0.0,
+        "train/cos_sim_metric": 0.8915215730667114,
+        "train/l1_loss_metric": 0.25894227623939514,
+        "train/state_loss": 0.048244718462228775,
+        "train/lr": 0.0003000000142492354,
+        "val_loss": 0.2628759741783142,
+        "val/recon_loss": 0.23318828642368317,
+        "val/vq_loss": 0.0,
+        "val/perplexity": 0.0,
+        "val/cos_sim_metric": 0.8725509643554688,
+        "val/l1_loss_metric": 0.27603211998939514,
+        "val/state_loss": 0.02968771941959858,
+        "val/feature_mse": 0.25629082322120667,
+        "val/copy_feature_mse": 0.2479124367237091
+      },
+      "cuda_peak_allocated_bytes": 0,
+      "cuda_peak_reserved_bytes": 0,
+      "torch_version": "2.11.0+cu130",
+      "cuda_version": "13.0",
+      "checkpoint": "/home/sadasue/foveated-world-models/runs/latent-flow-pilot-20261113/refinement/checkpoints/final.ckpt",
+      "resolved_config": {
+        "data": {
+          "batch_size": 1,
+          "format": "robomind_video",
+          "horizon_seconds": 1.2,
+          "num_workers": 0,
+          "tolerance_seconds": null,
+          "train_manifest": "/media/sadasue/SSD1/foveated-world-models/datasets/RoboMIND-lerobot/preprocessed/train.jsonl",
+          "val_manifest": "/media/sadasue/SSD1/foveated-world-models/datasets/RoboMIND-lerobot/preprocessed/validation.jsonl"
+        },
+        "expected_vision": {
+          "hidden_size": 768,
+          "model_type": "dinov3_vit",
+          "num_hidden_layers": 12,
+          "num_register_tokens": 4,
+          "patch_size": 16
+        },
+        "model": {
+          "code_dim": 32,
+          "codebook_size": 32,
+          "dec_layers": 1,
+          "decoder_type": "refinement",
+          "dim": 64,
+          "dropout": 0.0,
+          "dual_view_aug": false,
+          "enc_add_state": false,
+          "enc_layers": 1,
+          "enc_modal_mask": true,
+          "exclude_bias_norm_from_wd": true,
+          "ffn_expansion_factor": 4,
+          "flow_noise_scale": 0.1,
+          "flow_source": "current",
+          "flow_steps": 4,
+          "image_aug": false,
+          "image_hw": [
+            256,
+            256
+          ],
+          "lambda_aux": 1.0,
+          "lambda_diversity": 0.0,
+          "latent_layer_to_use": -2,
+          "loss_type": "smooth_l1",
+          "max_state_dim": 32,
+          "multi_input": false,
+          "norm_latents": true,
+          "norm_latents_type": "ln",
+          "num_embodiments": 2,
+          "num_frames": 2,
+          "num_heads": 4,
+          "num_queries": 1,
+          "patch_size": 16,
+          "state_loss_type": "l2",
+          "vision_model_id": "/media/sadasue/SSD1/foveated-world-models/models/dinov3-vitb16-pretrain-lvd1689m",
+          "vq_kwargs": {
+            "beta": 5e-05,
+            "layer_norm": true
+          },
+          "vq_type": "vae",
+          "wandb_offline": true,
+          "warmup_steps": 0
+        },
+        "optimizer": {
+          "lr": 0.0003,
+          "weight_decay": 0.01
+        },
+        "seed": 42,
+        "trainer": {
+          "accelerator": "cpu",
+          "accumulate_grad_batches": 1,
+          "devices": 1,
+          "enable_progress_bar": false,
+          "gradient_clip_val": 1.0,
+          "limit_val_batches": 32,
+          "log_every_n_steps": 1,
+          "max_epochs": -1,
+          "max_steps": 100,
+          "num_sanity_val_steps": 0,
+          "precision": "32-true",
+          "strategy": "auto",
+          "val_check_interval": 100
+        }
+      },
+      "split_verification": {
+        "train": {
+          "manifest": "/media/sadasue/SSD1/foveated-world-models/datasets/RoboMIND-lerobot/preprocessed/train.jsonl",
+          "sha256": "c99992713168e183e9882a7cd2679ed4508768681d1b79bc79138ee4998e5207",
+          "episodes": 1444,
+          "video_groups": 54,
+          "pairs": 9201,
+          "tail_pairs": 1407
+        },
+        "validation": {
+          "manifest": "/media/sadasue/SSD1/foveated-world-models/datasets/RoboMIND-lerobot/preprocessed/validation.jsonl",
+          "sha256": "a588554d2b7237f174e932cedc76e3d991cb6af7d45d928d142501acad653b26",
+          "episodes": 160,
+          "video_groups": 7,
+          "pairs": 950,
+          "tail_pairs": 155
+        },
+        "episode_and_video_groups_disjoint": true
+      }
+    },
+    "flow_current": {
+      "global_step": 100,
+      "fit_seconds_including_validation": 36.407638119068,
+      "parameters": {
+        "IDM": {
+          "total": 126560,
+          "trainable": 126560
+        },
+        "LaWM": {
+          "total": 229568,
+          "trainable": 229568
+        },
+        "state_predictor": {
+          "total": 35328,
+          "trainable": 35328
+        },
+        "DINO": {
+          "total": 85660416,
+          "trainable": 0
+        }
+      },
+      "metrics": {
+        "train_loss": 0.2780400514602661,
+        "train/vq_loss": 0.0005603365716524422,
+        "train/perplexity": 0.0,
+        "train/state_loss": 0.047904398292303085,
+        "train/flow_velocity_loss": 0.22957532107830048,
+        "train/interpolation_recon_loss": 0.20838387310504913,
+        "train/interpolation_cos_sim_metric": 0.9057118892669678,
+        "train/interpolation_l1_loss_metric": 0.2520850896835327,
+        "train/lr": 0.0003000000142492354,
+        "val_loss": 0.2851879596710205,
+        "val/recon_loss": 0.25551775097846985,
+        "val/vq_loss": 0.0,
+        "val/perplexity": 0.0,
+        "val/cos_sim_metric": 0.8673830032348633,
+        "val/l1_loss_metric": 0.3001420199871063,
+        "val/state_loss": 0.029670219868421555,
+        "val/feature_mse": 0.2667582631111145,
+        "val/copy_feature_mse": 0.2479124367237091
+      },
+      "cuda_peak_allocated_bytes": 0,
+      "cuda_peak_reserved_bytes": 0,
+      "torch_version": "2.11.0+cu130",
+      "cuda_version": "13.0",
+      "checkpoint": "/home/sadasue/foveated-world-models/runs/latent-flow-pilot-20261113/flow_current/checkpoints/final.ckpt",
+      "resolved_config": {
+        "data": {
+          "batch_size": 1,
+          "format": "robomind_video",
+          "horizon_seconds": 1.2,
+          "num_workers": 0,
+          "tolerance_seconds": null,
+          "train_manifest": "/media/sadasue/SSD1/foveated-world-models/datasets/RoboMIND-lerobot/preprocessed/train.jsonl",
+          "val_manifest": "/media/sadasue/SSD1/foveated-world-models/datasets/RoboMIND-lerobot/preprocessed/validation.jsonl"
+        },
+        "expected_vision": {
+          "hidden_size": 768,
+          "model_type": "dinov3_vit",
+          "num_hidden_layers": 12,
+          "num_register_tokens": 4,
+          "patch_size": 16
+        },
+        "model": {
+          "code_dim": 32,
+          "codebook_size": 32,
+          "dec_layers": 1,
+          "decoder_type": "flow",
+          "dim": 64,
+          "dropout": 0.0,
+          "dual_view_aug": false,
+          "enc_add_state": false,
+          "enc_layers": 1,
+          "enc_modal_mask": true,
+          "exclude_bias_norm_from_wd": true,
+          "ffn_expansion_factor": 4,
+          "flow_noise_scale": 0.1,
+          "flow_source": "current",
+          "flow_steps": 4,
+          "image_aug": false,
+          "image_hw": [
+            256,
+            256
+          ],
+          "lambda_aux": 1.0,
+          "lambda_diversity": 0.0,
+          "latent_layer_to_use": -2,
+          "loss_type": "smooth_l1",
+          "max_state_dim": 32,
+          "multi_input": false,
+          "norm_latents": true,
+          "norm_latents_type": "ln",
+          "num_embodiments": 2,
+          "num_frames": 2,
+          "num_heads": 4,
+          "num_queries": 1,
+          "patch_size": 16,
+          "state_loss_type": "l2",
+          "vision_model_id": "/media/sadasue/SSD1/foveated-world-models/models/dinov3-vitb16-pretrain-lvd1689m",
+          "vq_kwargs": {
+            "beta": 5e-05,
+            "layer_norm": true
+          },
+          "vq_type": "vae",
+          "wandb_offline": true,
+          "warmup_steps": 0
+        },
+        "optimizer": {
+          "lr": 0.0003,
+          "weight_decay": 0.01
+        },
+        "seed": 42,
+        "trainer": {
+          "accelerator": "cpu",
+          "accumulate_grad_batches": 1,
+          "devices": 1,
+          "enable_progress_bar": false,
+          "gradient_clip_val": 1.0,
+          "limit_val_batches": 32,
+          "log_every_n_steps": 1,
+          "max_epochs": -1,
+          "max_steps": 100,
+          "num_sanity_val_steps": 0,
+          "precision": "32-true",
+          "strategy": "auto",
+          "val_check_interval": 100
+        }
+      },
+      "split_verification": {
+        "train": {
+          "manifest": "/media/sadasue/SSD1/foveated-world-models/datasets/RoboMIND-lerobot/preprocessed/train.jsonl",
+          "sha256": "c99992713168e183e9882a7cd2679ed4508768681d1b79bc79138ee4998e5207",
+          "episodes": 1444,
+          "video_groups": 54,
+          "pairs": 9201,
+          "tail_pairs": 1407
+        },
+        "validation": {
+          "manifest": "/media/sadasue/SSD1/foveated-world-models/datasets/RoboMIND-lerobot/preprocessed/validation.jsonl",
+          "sha256": "a588554d2b7237f174e932cedc76e3d991cb6af7d45d928d142501acad653b26",
+          "episodes": 160,
+          "video_groups": 7,
+          "pairs": 950,
+          "tail_pairs": 155
+        },
+        "episode_and_video_groups_disjoint": true
+      }
+    },
+    "flow_noise": {
+      "global_step": 100,
+      "fit_seconds_including_validation": 56.11842767917551,
+      "parameters": {
+        "IDM": {
+          "total": 126560,
+          "trainable": 126560
+        },
+        "LaWM": {
+          "total": 229568,
+          "trainable": 229568
+        },
+        "state_predictor": {
+          "total": 35328,
+          "trainable": 35328
+        },
+        "DINO": {
+          "total": 85660416,
+          "trainable": 0
+        }
+      },
+      "metrics": {
+        "train_loss": 1.5365575551986694,
+        "train/vq_loss": 0.0007684079464524984,
+        "train/perplexity": 0.0,
+        "train/state_loss": 0.04801445081830025,
+        "train/flow_velocity_loss": 1.4877747297286987,
+        "train/interpolation_recon_loss": 0.8040575385093689,
+        "train/interpolation_cos_sim_metric": 0.48407983779907227,
+        "train/interpolation_l1_loss_metric": 0.8527939915657043,
+        "train/lr": 0.0003000000142492354,
+        "val_loss": 0.9397163987159729,
+        "val/recon_loss": 0.9100688099861145,
+        "val/vq_loss": 0.0,
+        "val/perplexity": 0.0,
+        "val/cos_sim_metric": 0.4112456738948822,
+        "val/l1_loss_metric": 0.958933413028717,
+        "val/state_loss": 0.02964746579527855,
+        "val/feature_mse": 1.5091644525527954,
+        "val/copy_feature_mse": 0.2479124367237091
+      },
+      "cuda_peak_allocated_bytes": 0,
+      "cuda_peak_reserved_bytes": 0,
+      "torch_version": "2.11.0+cu130",
+      "cuda_version": "13.0",
+      "checkpoint": "/home/sadasue/foveated-world-models/runs/latent-flow-pilot-20261113/flow_noise/checkpoints/final.ckpt",
+      "resolved_config": {
+        "data": {
+          "batch_size": 1,
+          "format": "robomind_video",
+          "horizon_seconds": 1.2,
+          "num_workers": 0,
+          "tolerance_seconds": null,
+          "train_manifest": "/media/sadasue/SSD1/foveated-world-models/datasets/RoboMIND-lerobot/preprocessed/train.jsonl",
+          "val_manifest": "/media/sadasue/SSD1/foveated-world-models/datasets/RoboMIND-lerobot/preprocessed/validation.jsonl"
+        },
+        "expected_vision": {
+          "hidden_size": 768,
+          "model_type": "dinov3_vit",
+          "num_hidden_layers": 12,
+          "num_register_tokens": 4,
+          "patch_size": 16
+        },
+        "model": {
+          "code_dim": 32,
+          "codebook_size": 32,
+          "dec_layers": 1,
+          "decoder_type": "flow",
+          "dim": 64,
+          "dropout": 0.0,
+          "dual_view_aug": false,
+          "enc_add_state": false,
+          "enc_layers": 1,
+          "enc_modal_mask": true,
+          "exclude_bias_norm_from_wd": true,
+          "ffn_expansion_factor": 4,
+          "flow_noise_scale": 1.0,
+          "flow_source": "noise",
+          "flow_steps": 4,
+          "image_aug": false,
+          "image_hw": [
+            256,
+            256
+          ],
+          "lambda_aux": 1.0,
+          "lambda_diversity": 0.0,
+          "latent_layer_to_use": -2,
+          "loss_type": "smooth_l1",
+          "max_state_dim": 32,
+          "multi_input": false,
+          "norm_latents": true,
+          "norm_latents_type": "ln",
+          "num_embodiments": 2,
+          "num_frames": 2,
+          "num_heads": 4,
+          "num_queries": 1,
+          "patch_size": 16,
+          "state_loss_type": "l2",
+          "vision_model_id": "/media/sadasue/SSD1/foveated-world-models/models/dinov3-vitb16-pretrain-lvd1689m",
+          "vq_kwargs": {
+            "beta": 5e-05,
+            "layer_norm": true
+          },
+          "vq_type": "vae",
+          "wandb_offline": true,
+          "warmup_steps": 0
+        },
+        "optimizer": {
+          "lr": 0.0003,
+          "weight_decay": 0.01
+        },
+        "seed": 42,
+        "trainer": {
+          "accelerator": "cpu",
+          "accumulate_grad_batches": 1,
+          "devices": 1,
+          "enable_progress_bar": false,
+          "gradient_clip_val": 1.0,
+          "limit_val_batches": 32,
+          "log_every_n_steps": 1,
+          "max_epochs": -1,
+          "max_steps": 100,
+          "num_sanity_val_steps": 0,
+          "precision": "32-true",
+          "strategy": "auto",
+          "val_check_interval": 100
+        }
+      },
+      "split_verification": {
+        "train": {
+          "manifest": "/media/sadasue/SSD1/foveated-world-models/datasets/RoboMIND-lerobot/preprocessed/train.jsonl",
+          "sha256": "c99992713168e183e9882a7cd2679ed4508768681d1b79bc79138ee4998e5207",
+          "episodes": 1444,
+          "video_groups": 54,
+          "pairs": 9201,
+          "tail_pairs": 1407
+        },
+        "validation": {
+          "manifest": "/media/sadasue/SSD1/foveated-world-models/datasets/RoboMIND-lerobot/preprocessed/validation.jsonl",
+          "sha256": "a588554d2b7237f174e932cedc76e3d991cb6af7d45d928d142501acad653b26",
+          "episodes": 160,
+          "video_groups": 7,
+          "pairs": 950,
+          "tail_pairs": 155
+        },
+        "episode_and_video_groups_disjoint": true
+      }
+    },
+    "residual": {
+      "global_step": 100,
+      "fit_seconds_including_validation": 49.885523912962526,
+      "parameters": {
+        "IDM": {
+          "total": 126560,
+          "trainable": 126560
+        },
+        "LaWM": {
+          "total": 229568,
+          "trainable": 229568
+        },
+        "state_predictor": {
+          "total": 35328,
+          "trainable": 35328
+        },
+        "DINO": {
+          "total": 85660416,
+          "trainable": 0
+        }
+      },
+      "metrics": {
+        "train_loss": 0.26542362570762634,
+        "train/recon_loss": 0.2166418880224228,
+        "train/vq_loss": 0.0006023566820658743,
+        "train/perplexity": 0.0,
+        "train/cos_sim_metric": 0.8913851380348206,
+        "train/l1_loss_metric": 0.25922414660453796,
+        "train/state_loss": 0.04817937687039375,
+        "train/lr": 0.0003000000142492354,
+        "val_loss": 0.26332053542137146,
+        "val/recon_loss": 0.23366305232048035,
+        "val/vq_loss": 0.0,
+        "val/perplexity": 0.0,
+        "val/cos_sim_metric": 0.8723793625831604,
+        "val/l1_loss_metric": 0.2764543294906616,
+        "val/state_loss": 0.02965749241411686,
+        "val/feature_mse": 0.25713518261909485,
+        "val/copy_feature_mse": 0.2479124367237091
+      },
+      "cuda_peak_allocated_bytes": 0,
+      "cuda_peak_reserved_bytes": 0,
+      "torch_version": "2.11.0+cu130",
+      "cuda_version": "13.0",
+      "checkpoint": "/home/sadasue/foveated-world-models/runs/latent-flow-residual-pilot-20261113/residual/checkpoints/final.ckpt",
+      "resolved_config": {
+        "data": {
+          "batch_size": 1,
+          "format": "robomind_video",
+          "horizon_seconds": 1.2,
+          "num_workers": 0,
+          "tolerance_seconds": null,
+          "train_manifest": "/media/sadasue/SSD1/foveated-world-models/datasets/RoboMIND-lerobot/preprocessed/train.jsonl",
+          "val_manifest": "/media/sadasue/SSD1/foveated-world-models/datasets/RoboMIND-lerobot/preprocessed/validation.jsonl"
+        },
+        "expected_vision": {
+          "hidden_size": 768,
+          "model_type": "dinov3_vit",
+          "num_hidden_layers": 12,
+          "num_register_tokens": 4,
+          "patch_size": 16
+        },
+        "model": {
+          "code_dim": 32,
+          "codebook_size": 32,
+          "dec_layers": 1,
+          "decoder_type": "refinement",
+          "dim": 64,
+          "dropout": 0.0,
+          "dual_view_aug": false,
+          "enc_add_state": false,
+          "enc_layers": 1,
+          "enc_modal_mask": true,
+          "exclude_bias_norm_from_wd": true,
+          "ffn_expansion_factor": 4,
+          "flow_noise_scale": 0.1,
+          "flow_source": "current",
+          "flow_steps": 1,
+          "image_aug": false,
+          "image_hw": [
+            256,
+            256
+          ],
+          "lambda_aux": 1.0,
+          "lambda_diversity": 0.0,
+          "latent_layer_to_use": -2,
+          "loss_type": "smooth_l1",
+          "max_state_dim": 32,
+          "multi_input": false,
+          "norm_latents": true,
+          "norm_latents_type": "ln",
+          "num_embodiments": 2,
+          "num_frames": 2,
+          "num_heads": 4,
+          "num_queries": 1,
+          "patch_size": 16,
+          "state_loss_type": "l2",
+          "vision_model_id": "/media/sadasue/SSD1/foveated-world-models/models/dinov3-vitb16-pretrain-lvd1689m",
+          "vq_kwargs": {
+            "beta": 5e-05,
+            "layer_norm": true
+          },
+          "vq_type": "vae",
+          "wandb_offline": true,
+          "warmup_steps": 0
+        },
+        "optimizer": {
+          "lr": 0.0003,
+          "weight_decay": 0.01
+        },
+        "seed": 42,
+        "trainer": {
+          "accelerator": "cpu",
+          "accumulate_grad_batches": 1,
+          "devices": 1,
+          "enable_progress_bar": false,
+          "gradient_clip_val": 1.0,
+          "limit_val_batches": 32,
+          "log_every_n_steps": 1,
+          "max_epochs": -1,
+          "max_steps": 100,
+          "num_sanity_val_steps": 0,
+          "precision": "32-true",
+          "strategy": "auto",
+          "val_check_interval": 100
+        }
+      },
+      "split_verification": {
+        "train": {
+          "manifest": "/media/sadasue/SSD1/foveated-world-models/datasets/RoboMIND-lerobot/preprocessed/train.jsonl",
+          "sha256": "c99992713168e183e9882a7cd2679ed4508768681d1b79bc79138ee4998e5207",
+          "episodes": 1444,
+          "video_groups": 54,
+          "pairs": 9201,
+          "tail_pairs": 1407
+        },
+        "validation": {
+          "manifest": "/media/sadasue/SSD1/foveated-world-models/datasets/RoboMIND-lerobot/preprocessed/validation.jsonl",
+          "sha256": "a588554d2b7237f174e932cedc76e3d991cb6af7d45d928d142501acad653b26",
+          "episodes": 160,
+          "video_groups": 7,
+          "pairs": 950,
+          "tail_pairs": 155
+        },
+        "episode_and_video_groups_disjoint": true
+      }
+    }
+  },
+  "source_sha256_at_report_time": {
+    "research/run_latent_flow_pilot.py": "29b598ef275204fe306b3003744f93ff855a1839175d44cfe94b4ff2e924fca5",
+    "vendor/lawam/latent_action_model/core/utils/latent_flow.py": "e6af1c54695f44792550cb74f26248d07b35000685344e66d2673b5f2a49a330",
+    "vendor/lawam/latent_action_model/core/lam_model.py": "4c6092399add79b835bf6d1cfea4e5747e745843de5be359758678952d7ee1cb",
+    "vendor/lawam/latent_action_model/core/lam_lightinng.py": "443ae283521196738af84bf1498e003ad9866f9b8ee3529e4ec86bfbf5e5fd7d"
+  }
+}
