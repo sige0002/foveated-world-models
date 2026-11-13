@@ -1,0 +1,16 @@
+{
+  "global_step": 4500,
+  "validation_pairs": 950,
+  "zero_relative_mse_gain_percent": 0.4888868128438695,
+  "same_episode_permutations": 790,
+  "permutation_caveat": "Cyclic adjacent-row permutation includes same-episode nearby pairs; not sufficient evidence of cross-episode action-code invariance.",
+  "checkpoint_interval": 2000,
+  "next_scheduled_steps": [
+    6000,
+    8000,
+    10000
+  ],
+  "resume_from_step": 4500,
+  "unsaved_updates_not_carried_over": 500,
+  "temporary_snapshot_removed": true
+}
