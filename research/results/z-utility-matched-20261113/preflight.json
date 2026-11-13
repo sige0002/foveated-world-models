@@ -1,0 +1,293 @@
+{
+  "complete": true,
+  "tests_passed": 10,
+  "resume_final_weights_identical": true,
+  "smoke": {
+    "smoke-direct-constant": {
+      "complete": true,
+      "smoke_only": true,
+      "changed": {
+        "encoder": false,
+        "head": true,
+        "decoder": true
+      },
+      "final_hashes": {
+        "encoder": "6820d72e6548ebe623f32f00db7a5e71fcd878c780aa68d87d4e8a367f888cdc",
+        "head": "e4524a16c7b99f95afe3dbbbe2860590ca062398e3e8aa32e9d278665cfb2b2d",
+        "decoder": "bc8d733b47cbd71623a3390e93e4836e7de9b7ec2480e9ffb47cf6ae28d9cd55"
+      },
+      "gradient_checks": [
+        {
+          "encoder": 0.0,
+          "head": 0.0029748775996267796,
+          "decoder": 0.047051481902599335,
+          "step": 1
+        },
+        {
+          "encoder": 0.0,
+          "head": 0.0026721060276031494,
+          "decoder": 0.0490134172141552,
+          "step": 2
+        },
+        {
+          "encoder": 0.0,
+          "head": 0.003093336708843708,
+          "decoder": 0.05538821592926979,
+          "step": 3
+        },
+        {
+          "encoder": 0.0,
+          "head": 0.0025692901108413935,
+          "decoder": 0.06334216147661209,
+          "step": 4
+        }
+      ],
+      "replay_max_abs": 0.0,
+      "training_seconds": 0.5730044161900878,
+      "history": [
+        {
+          "step": 1,
+          "mse": 0.0851946622133255,
+          "gradient_norm": 0.047145433723926544,
+          "training_seconds": 0.23603858053684235,
+          "peak_allocated_bytes": 6644693504
+        },
+        {
+          "step": 2,
+          "mse": 0.10539229959249496,
+          "gradient_norm": 0.04908619821071625,
+          "training_seconds": 0.34197512082755566,
+          "peak_allocated_bytes": 7422947328
+        },
+        {
+          "step": 3,
+          "mse": 0.09113048017024994,
+          "gradient_norm": 0.055474523454904556,
+          "training_seconds": 0.4594276733696461,
+          "peak_allocated_bytes": 7422947328
+        },
+        {
+          "step": 4,
+          "mse": 0.12691497802734375,
+          "gradient_norm": 0.06339424848556519,
+          "training_seconds": 0.5730044161900878,
+          "peak_allocated_bytes": 7422947328
+        }
+      ],
+      "peak_allocated_bytes": 7422947328,
+      "checkpoint_sha256": "e4eadba3839afcc9e01e75c9e2c1f62cf5b265960eb0616518b32941644b5a33"
+    },
+    "smoke-external-real-v2": {
+      "complete": true,
+      "smoke_only": true,
+      "changed": {
+        "encoder": true,
+        "head": true,
+        "decoder": true
+      },
+      "final_hashes": {
+        "encoder": "48f95bec7051df2215dc62b15ae3dbadbdebca336b6dbb0795e0a0700bfa7b30",
+        "head": "cc5bf4e095df942ef533c16a467ba51b1c05fdbdd77da31640df753451365eb8",
+        "decoder": "7bc23fcfed9bca377d2958366ae29957e784fe8d00557fa5cf9b62e3aa4852c0"
+      },
+      "gradient_checks": [
+        {
+          "encoder": 0.0,
+          "head": 0.0,
+          "decoder": 0.06571420282125473,
+          "step": 1
+        },
+        {
+          "encoder": 0.0,
+          "head": 0.0,
+          "decoder": 0.04970899969339371,
+          "step": 2
+        },
+        {
+          "encoder": 8.478931334821027e-08,
+          "head": 3.361535760859624e-08,
+          "decoder": 0.047560159116983414,
+          "step": 3
+        },
+        {
+          "encoder": 4.646470230795785e-08,
+          "head": 7.693359549421075e-08,
+          "decoder": 0.05058000981807709,
+          "step": 4
+        }
+      ],
+      "replay_max_abs": 0.0,
+      "training_seconds": 2.7521384600549936,
+      "history": [
+        {
+          "step": 1,
+          "mse": 0.08521023392677307,
+          "gradient_norm": 0.06571421027183533,
+          "training_seconds": 0.6997150918468833,
+          "peak_allocated_bytes": 14484527104
+        },
+        {
+          "step": 2,
+          "mse": 0.1055658683180809,
+          "gradient_norm": 0.04970899596810341,
+          "training_seconds": 1.3060417510569096,
+          "peak_allocated_bytes": 17073462784
+        },
+        {
+          "step": 3,
+          "mse": 0.0919073149561882,
+          "gradient_norm": 0.047560159116983414,
+          "training_seconds": 2.025224351324141,
+          "peak_allocated_bytes": 17074413056
+        },
+        {
+          "step": 4,
+          "mse": 0.1277039349079132,
+          "gradient_norm": 0.05058000609278679,
+          "training_seconds": 2.7521384600549936,
+          "peak_allocated_bytes": 17075396096
+        }
+      ],
+      "peak_allocated_bytes": 17075396096,
+      "checkpoint_sha256": "9f729406658220662754835f26e7788f61530cda63c69010fc0b3fa60e8bcffa"
+    },
+    "smoke-external-constant": {
+      "complete": true,
+      "smoke_only": true,
+      "changed": {
+        "encoder": false,
+        "head": true,
+        "decoder": true
+      },
+      "final_hashes": {
+        "encoder": "6820d72e6548ebe623f32f00db7a5e71fcd878c780aa68d87d4e8a367f888cdc",
+        "head": "658d5b045c5f9db8360359e232e9ed430894a2c16d29b80fb5ca4e2c19acbd44",
+        "decoder": "2a4f795a3b1b961252533221e4494e89bfbe5a59689023d0194f1a37ab592b54"
+      },
+      "gradient_checks": [
+        {
+          "encoder": 0.0,
+          "head": 0.0,
+          "decoder": 0.06571420282125473,
+          "step": 1
+        },
+        {
+          "encoder": 0.0,
+          "head": 0.0,
+          "decoder": 0.04970899969339371,
+          "step": 2
+        },
+        {
+          "encoder": 0.0,
+          "head": 1.4246709589826878e-08,
+          "decoder": 0.047560058534145355,
+          "step": 3
+        },
+        {
+          "encoder": 0.0,
+          "head": 3.941809101348781e-09,
+          "decoder": 0.050578538328409195,
+          "step": 4
+        }
+      ],
+      "replay_max_abs": 0.0,
+      "training_seconds": 0.15943690948188305,
+      "history": [
+        {
+          "step": 1,
+          "mse": 0.08521023392677307,
+          "gradient_norm": 0.06571421027183533,
+          "training_seconds": 0.11616445053368807,
+          "peak_allocated_bytes": 3723579392
+        },
+        {
+          "step": 2,
+          "mse": 0.1055658683180809,
+          "gradient_norm": 0.04970899969339371,
+          "training_seconds": 0.13282344862818718,
+          "peak_allocated_bytes": 3834729984
+        },
+        {
+          "step": 3,
+          "mse": 0.0919073149561882,
+          "gradient_norm": 0.047560058534145355,
+          "training_seconds": 0.1456623189151287,
+          "peak_allocated_bytes": 3834729984
+        },
+        {
+          "step": 4,
+          "mse": 0.1277039349079132,
+          "gradient_norm": 0.050578538328409195,
+          "training_seconds": 0.15943690948188305,
+          "peak_allocated_bytes": 3834729984
+        }
+      ],
+      "peak_allocated_bytes": 3834729984,
+      "checkpoint_sha256": "2120f01c85549075ff9330fd2dc181ec6641c22e3f31cbdb2c8160b27d185ad4"
+    },
+    "smoke-resume": {
+      "complete": true,
+      "smoke_only": true,
+      "changed": {
+        "encoder": false,
+        "head": true,
+        "decoder": true
+      },
+      "final_hashes": {
+        "encoder": "6820d72e6548ebe623f32f00db7a5e71fcd878c780aa68d87d4e8a367f888cdc",
+        "head": "e4524a16c7b99f95afe3dbbbe2860590ca062398e3e8aa32e9d278665cfb2b2d",
+        "decoder": "bc8d733b47cbd71623a3390e93e4836e7de9b7ec2480e9ffb47cf6ae28d9cd55"
+      },
+      "gradient_checks": [
+        {
+          "encoder": 0.0,
+          "head": 0.003093336708843708,
+          "decoder": 0.05538821592926979,
+          "step": 3
+        },
+        {
+          "encoder": 0.0,
+          "head": 0.0025692901108413935,
+          "decoder": 0.06334216147661209,
+          "step": 4
+        }
+      ],
+      "replay_max_abs": 0.0,
+      "training_seconds": 0.7052796138450503,
+      "history": [
+        {
+          "step": 1,
+          "mse": 0.0851946622133255,
+          "gradient_norm": 0.047145433723926544,
+          "training_seconds": 0.2264415491372347,
+          "peak_allocated_bytes": 6644693504
+        },
+        {
+          "step": 2,
+          "mse": 0.10539229959249496,
+          "gradient_norm": 0.04908619821071625,
+          "training_seconds": 0.33316676784306765,
+          "peak_allocated_bytes": 7422947328
+        },
+        {
+          "step": 3,
+          "mse": 0.09113048017024994,
+          "gradient_norm": 0.055474523454904556,
+          "training_seconds": 0.5965248458087444,
+          "peak_allocated_bytes": 7422029312
+        },
+        {
+          "step": 4,
+          "mse": 0.12691497802734375,
+          "gradient_norm": 0.06339424848556519,
+          "training_seconds": 0.7052796138450503,
+          "peak_allocated_bytes": 7422029824
+        }
+      ],
+      "peak_allocated_bytes": 7422029824,
+      "checkpoint_sha256": "d3e92466322aa16a57ce5d5ef35a8bb7e9febbdefaa68f2872d8a8dd66bf640b"
+    }
+  },
+  "plan_sha256": "f594bc1284c004ab1a3a4f0afaadad7bd4d610f249c7c343aae5a195a14ebfcb",
+  "note": "External output and AdaLN zero initialization delay IDM gradients until step3. First smoke assertion requiring step2 was corrected before full training."
+}
