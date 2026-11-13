@@ -1,0 +1,89 @@
+{
+  "started_utc": "2026-11-13T08:59:30.825795+00:00",
+  "git_commit": "c7391adcd9b43c3708b6b9d0c1e70f5fcb55d8d4",
+  "source_sha256": {
+    "train_stage1.py": "88613d54afad2f6ef788383a3849e7d096e7ae3a1bc08d1d4b349c4f3c7af0be",
+    "research/evaluate_corrected_stage1.py": "e109de709e16d52a6a13bf1f587169abac2ae73cc7f174fd8f4502c5742dc16b",
+    "vendor/dataset/lerobot_robomind.py": "00ddfbb8d622e5b7b5317ce0eb55458f9d20cecc588d198e63531931dd4cc9b8",
+    "research/run_corrected_stage1.py": "9f94f4d3f67c862f794ff80f756a39f0e5d087f5e13a4478bbb3e5e82a95f8f5"
+  },
+  "resolved_config": {
+    "seed": 42,
+    "expected_vision": {
+      "model_type": "dinov3_vit",
+      "hidden_size": 768,
+      "num_hidden_layers": 12,
+      "patch_size": 16,
+      "num_register_tokens": 4
+    },
+    "model": {
+      "vision_model_id": "/media/sadasue/SSD1/foveated-world-models/models/dinov3-vitb16-pretrain-lvd1689m",
+      "dim": 1024,
+      "enc_layers": 24,
+      "ffn_expansion_factor": 4,
+      "num_heads": 16,
+      "max_state_dim": 32,
+      "num_embodiments": 32,
+      "codebook_size": 32,
+      "code_dim": 32,
+      "num_queries": 1,
+      "num_frames": 2,
+      "image_hw": [
+        256,
+        256
+      ],
+      "patch_size": 16,
+      "image_aug": true,
+      "dual_view_aug": true,
+      "dec_layers": 12,
+      "dropout": 0.0,
+      "warmup_steps": 5000,
+      "enc_add_state": false,
+      "enc_modal_mask": true,
+      "lambda_aux": 1.0,
+      "loss_type": "smooth_l1",
+      "state_loss_type": "l2",
+      "latent_layer_to_use": -2,
+      "multi_input": false,
+      "norm_latents": true,
+      "norm_latents_type": "ln",
+      "lambda_diversity": 0.0,
+      "vq_type": "vae",
+      "vq_kwargs": {
+        "layer_norm": true,
+        "beta": 5e-05
+      },
+      "wandb_offline": true,
+      "exclude_bias_norm_from_wd": true
+    },
+    "optimizer": {
+      "lr": 0.0003,
+      "weight_decay": 0.01
+    },
+    "data": {
+      "horizon_seconds": 1.2,
+      "tolerance_seconds": null,
+      "batch_size": 2,
+      "num_workers": 4,
+      "format": "lerobot_v3",
+      "root": "/media/sadasue/SSD1/foveated-world-models/datasets/RoboMIND-lerobot/franka_fr3_dual"
+    },
+    "trainer": {
+      "accelerator": "gpu",
+      "devices": 1,
+      "strategy": "auto",
+      "precision": "bf16-mixed",
+      "max_steps": 10000,
+      "max_epochs": -1,
+      "accumulate_grad_batches": 1,
+      "gradient_clip_val": 1.0,
+      "log_every_n_steps": 1,
+      "val_check_interval": 100,
+      "num_sanity_val_steps": 1,
+      "limit_val_batches": 1.0,
+      "enable_progress_bar": false
+    }
+  },
+  "fresh_training": true,
+  "evaluation": "Final10000 on all corrected validation/test pairs; native posterior mean, zero and cyclic permutation; MSE, SmoothL1, MAE, cosine, high/low feature-change regions. No old-cache comparison."
+}

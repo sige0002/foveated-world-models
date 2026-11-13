@@ -1,0 +1,46 @@
+{
+  "global_step": 3,
+  "fit_seconds_including_validation": 64.73149215686135,
+  "parameters": {
+    "IDM": {
+      "total": 309432352,
+      "trainable": 309432352
+    },
+    "LaWM": {
+      "total": 228286720,
+      "trainable": 228286720
+    },
+    "state_predictor": {
+      "total": 102893568,
+      "trainable": 102893568
+    },
+    "DINO": {
+      "total": 85660416,
+      "trainable": 0
+    }
+  },
+  "metrics": {
+    "train_loss": 1.056338906288147,
+    "train/recon_loss": 1.0117849111557007,
+    "train/vq_loss": 0.0004315490077715367,
+    "train/perplexity": 0.0,
+    "train/cos_sim_metric": -0.005011743865907192,
+    "train/l1_loss_metric": 1.0607529878616333,
+    "train/state_loss": 0.04412243142724037,
+    "train/lr": 1.8000000068241206e-07,
+    "val_loss": 1.6978614330291748,
+    "val/recon_loss": 1.0151770114898682,
+    "val/vq_loss": 0.0,
+    "val/perplexity": 0.0,
+    "val/cos_sim_metric": -0.008138254284858704,
+    "val/l1_loss_metric": 1.064136028289795,
+    "val/state_loss": 0.6826844215393066,
+    "val/feature_mse": 2.016249656677246,
+    "val/copy_feature_mse": 0.554119348526001
+  },
+  "cuda_peak_allocated_bytes": 13196616704,
+  "cuda_peak_reserved_bytes": 13830717440,
+  "torch_version": "2.11.0+cu130",
+  "cuda_version": "13.0",
+  "checkpoint": "/home/sadasue/foveated-world-models/runs/stage1-lerobot-full-preflight-20261113/checkpoints/final.ckpt"
+}

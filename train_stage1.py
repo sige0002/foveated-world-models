@@ -120,6 +120,21 @@ def main():
         def on_save_checkpoint(self, trainer, pl_module, checkpoint):
             checkpoint['data_contract'] = contract
 
+    class TrainingProgress(Callback):
+        def on_train_start(self, trainer, pl_module):
+            self.started = time.monotonic()
+
+        def on_train_batch_end(self, trainer, pl_module, outputs, batch, batch_idx):
+            step = trainer.global_step
+            if step == 1 or step % 20 == 0:
+                loss = outputs.get('loss') if isinstance(outputs, dict) else outputs
+                record = {'step': step, 'elapsed_seconds': time.monotonic() - self.started,
+                          'train_loss': float(loss.detach().cpu()) if isinstance(loss, torch.Tensor) else None}
+                temporary = output / 'progress.tmp'
+                temporary.write_text(json.dumps(record, allow_nan=False))
+                temporary.replace(output / 'progress.json')
+                print(json.dumps(record, allow_nan=False), flush=True)
+
     output = Path(args.output).resolve()
     if contract is not None and (output / 'resolved_config.yaml').exists():
         previous = output / 'data_contract.json'
@@ -166,7 +181,7 @@ def main():
                                  save_on_train_epoch_end=False)
     trainer = Trainer(**config['trainer'], default_root_dir=output,
                       logger=CSVLogger(str(output), name='metrics'),
-                      callbacks=[checkpoint, DataContractCheckpoint()])
+                      callbacks=[checkpoint, DataContractCheckpoint(), TrainingProgress()])
     if torch.cuda.is_available():
         torch.cuda.reset_peak_memory_stats()
     started = time.perf_counter()

@@ -1,0 +1,6 @@
+# Same full model, optimizer and input contract; disposable three-update test.
+extends: stage1_lerobot_gb10.yaml
+trainer:
+  max_steps: 3
+  val_check_interval: 3
+  limit_val_batches: 1

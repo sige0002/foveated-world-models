@@ -1,0 +1,13 @@
+{
+  "tests_passed": 164,
+  "warnings": 2,
+  "test_seconds": 4.19,
+  "command": "OMP_NUM_THREADS=2 MKL_NUM_THREADS=2 .venv/bin/python -m pytest -q tests research --ignore=research/source_snapshots",
+  "corrected_contract_matches_upstream_verification": true,
+  "status_at_record": "Training running; final evaluation pending",
+  "source_sha256": {
+    "train_stage1.py": "88613d54afad2f6ef788383a3849e7d096e7ae3a1bc08d1d4b349c4f3c7af0be",
+    "research/evaluate_corrected_stage1.py": "e109de709e16d52a6a13bf1f587169abac2ae73cc7f174fd8f4502c5742dc16b",
+    "research/run_corrected_stage1.py": "9f94f4d3f67c862f794ff80f756a39f0e5d087f5e13a4478bbb3e5e82a95f8f5"
+  }
+}

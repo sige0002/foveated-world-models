@@ -1,0 +1,19 @@
+{
+  "train": {
+    "metadata": "/media/sadasue/SSD1/foveated-world-models/datasets/RoboMIND-lerobot/franka_fr3_dual/meta/info.json",
+    "sha256": "6ed0e11ebd1bcd33b13fa90f7f47905e61419c179b85b3597e22a999bf5360a1",
+    "episodes": 1444,
+    "video_groups": 54,
+    "pairs": 9201,
+    "tail_pairs": 1407
+  },
+  "validation": {
+    "metadata": "/media/sadasue/SSD1/foveated-world-models/datasets/RoboMIND-lerobot/franka_fr3_dual/meta/info.json",
+    "sha256": "6ed0e11ebd1bcd33b13fa90f7f47905e61419c179b85b3597e22a999bf5360a1",
+    "episodes": 160,
+    "video_groups": 7,
+    "pairs": 950,
+    "tail_pairs": 155
+  },
+  "episode_and_video_groups_disjoint": true
+}
