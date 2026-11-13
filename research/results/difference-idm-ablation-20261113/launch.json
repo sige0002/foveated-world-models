@@ -1,0 +1,14 @@
+{
+  "started_at": "2026-11-13T13:40:39.504771+09:00",
+  "supervisor_pid": 3077460,
+  "command": [
+    "/home/yuki_sadasue/foveated-world-models/.venv/bin/python",
+    "/home/yuki_sadasue/foveated-world-models/research/run_idm_ablation.py",
+    "--runs",
+    "/data2/yuki_sadasue/runs/foveated-world-models/difference-idm-ablation-20261113"
+  ],
+  "implementation_commit": "027668afc475fe8e1722c9e146962164903598f2",
+  "status": "started; training results pending",
+  "artifact_root": "/data2/yuki_sadasue/runs/foveated-world-models/difference-idm-ablation-20261113",
+  "queue_status": "/data2/yuki_sadasue/runs/foveated-world-models/difference-idm-ablation-20261113/queue-status.json"
+}

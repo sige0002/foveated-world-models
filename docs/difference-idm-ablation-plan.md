@@ -47,6 +47,8 @@ GPU使用率・空きメモリを確認し、他ジョブを変更せずに使�
 
 方針はcommit `283bd50`で実装に先立ってpushした。主比較のtrainer、2 GPUの実行キュー、全6 run完了を条件にした最終test評価と学習曲線集計を実装した。
 
+**13:40 JSTに本学習を開始。結果は未確定。** 実装commitは`027668a`。[起動記録](../research/results/difference-idm-ablation-20261113/launch.json)、[固定protocol](../research/results/difference-idm-ablation-20261113/protocol.json)。ローカルの`runs/difference-idm-ablation-20261113/`は大容量ディスク上の成果物ディレクトリへのリンクで、学習・集計は会話プロセスから独立したキューで継続する。
+
 未使用評価候補として既存`test.jsonl`の全170エピソードから、各1個の中間・非末尾pairをモデル出力を見ずに固定した。元モデルのtrain1444／validation160エピソードとのepisode・動画group・動画パス・arrayパス・動画内容hashの重複はない。元runに保存されたtrain/validation manifest hashとも一致する。testは7動画shard・既知の6タスク群・同一カメラであり、未知タスク・未知カメラへの汎化評価ではない。リポジトリにtestスコアを用いた研究記録は見つからなかったが、外部環境を含む完全な使用履歴までは保証しない。[固定した選択と監査](../research/results/difference-idm-ablation-20261113/test-selection.json)。
 
 CPU/GPU回帰テスト155件通過。GPUの4更新smokeでは両方式の初期encoder/head/decoder hashとbatch順が一致し、全24層への非ゼロ勾配を確認した。差分ありの両分岐は逆符号の勾配を受け、差分なしはQを1回だけ計算する。2・4更新checkpointの再読込MSE差は最大2.09e-7だった。学習時最大allocatedは差分あり19.27GiB、差分なし14.25GiB。更新時間は約0.85秒対0.48秒（保存・評価を除く）。[smoke記録](../research/results/difference-idm-ablation-20261113/smoke.json)、[テスト記録](../research/results/difference-idm-ablation-20261113/tests.txt)。
