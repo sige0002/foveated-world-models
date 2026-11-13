@@ -2,7 +2,7 @@
 
 公式LaWAMのコミット `c12168d9077edea67fe7c1b70d08b80b8e65a9c8` から、モデル・学習処理・画像前処理・バッチ化・設定の12ファイル（約210 KB）を取得した。`vendor/lawam/UPSTREAM.json` に取得元と各ファイルのSHA-256を記録している。公式コード本体は変更していない。
 
-`train_stage1.py` と `vendor/dataset/` は本リポジトリ側の追加実装。RoboMIND `franka_fr3_dual` の俯瞰動画と状態を前処理し、timestampに基づくペアを公式学習モジュールへ渡す。旧画像ペアJSONLアダプターは削除した。
+`train_stage1.py` と `vendor/dataset/` は本リポジトリ側の追加実装。RoboMIND `franka_fr3_dual` のLeRobot原本を直接読み、timestampに基づくペアを公式学習モジュールへ渡す。2026-11-13にNPZ・rot6D・黒帯を使う既定経路を修正した。[変更と検証](lerobot-loader-fix.md)を参照。
 
 ## 重みと環境
 
@@ -48,17 +48,16 @@ uv run --locked python -c 'import torch; print(torch.__version__, torch.cuda.is_
 ## 前処理と学習・検証の分離
 
 ```sh
-uv run --locked python -m vendor.dataset.prepare_robomind
 uv run --locked python train_stage1.py --config configs/stage1_robomind.yaml --check-data
 ```
 
-取得・前処理は完了済み。再実行時は同じ動画のデコードインデックスを再利用する。`--check-data` は学習・validationの全ペアを実際にデコードするため時間がかかる。モデルはロードしない。
+取得は完了済み。既定経路ではNPZ前処理を実行する必要はない。`--check-data` は学習・validationの全ペアを実際にデコードするため時間がかかる。モデルはロードしない。
 
-trainは1,444エピソード・9,201ペア、validationは160エピソード・950ペア。testの170エピソード・1,081ペアは学習・validationに使わない。同じエピソードと俯瞰動画シャードはsplitをまたがない。起動時にtrain/validationの重複を拒否し、実行先の `split_verification.json` に件数・manifestのSHA-256を保存する。
+trainは1,444エピソード・9,201ペア、validationは160エピソード・950ペア。testの170エピソード・1,081ペアは学習・validationに使わない。同じエピソードと俯瞰動画シャードはsplitをまたがない。起動時にtrain/validationの重複を拒否し、実行先の `split_verification.json` に件数・metadataのSHA-256を保存する。原本Parquet・episode metaのhashとtrain限定の正規化統計は `data_contract.json` とcheckpointへ保存する。
 
 ## 本サイズモデルのテスト学習
 
-IDM 24層／LaWM 12層、batch 2、bf16、1 GPUで100 step。DINOは凍結し、IDM・LaWM・補助状態予測器を学習する。25 stepごとにvalidationの先頭10 batch（20ペア）を検査する。これは動作・メモリ確認であり、validation全体での性能評価ではない。公開モデル設定のwarmup 10,000 stepを保持するため、この実行はwarmup中に終了する。
+IDM 24層／LaWM 12層、batch 2、bf16、1 GPUで100 step。DINOは凍結し、IDM・LaWM・補助状態予測器を学習する。25 stepごとにvalidationの先頭10 batch（20ペア）を検査する。これは動作・メモリ確認であり、validation全体での性能評価ではない。現在はwarmup 5,000 stepを継承するため、この実行はwarmup中に終了する。
 
 ```sh
 CUDA_VISIBLE_DEVICES=0 uv run --locked python train_stage1.py \
@@ -73,18 +72,18 @@ CUDA_VISIBLE_DEVICES=0 uv run --locked python train_stage1.py \
 ```sh
 CUDA_VISIBLE_DEVICES=0 uv run --locked python train_stage1.py \
   --config configs/stage1_robomind.yaml \
-  --output /data2/yuki_sadasue/runs/foveated-world-models/stage1-robomind-main
+  --output /data2/yuki_sadasue/runs/foveated-world-models/stage1-lerobot-rpy14-minmax
 ```
 
-本学習は自動では開始しない。`stage1_robomind.yaml` で学習期間に合わせた `trainer.max_steps` と `model.warmup_steps` を設定してから実行する。現在の継承値はそれぞれ1,000／10,000で、短時間実行用のまま。1,000 stepでwarmupを終えたい場合や長期学習する場合は変更が必要。通常設定ではvalidation全950ペアを評価する。末尾の短いペアも含むため、正式な予測精度比較では時間幅別に集計する。
+修正後の本学習はまだ開始していない。`stage1_robomind.yaml` は旧final10000の実行設定に合わせ、10,000更新・warmup 5,000を明示している。通常設定ではvalidation全950ペアを評価する。末尾の短いペアも含むため、正式な予測精度比較では時間幅別に集計する。
 
 `--vision-model` でローカル重みパスを変更できる。再開は同じ設定・データに次を追加する。
 
 ```sh
---resume /data2/yuki_sadasue/runs/foveated-world-models/stage1-robomind-main/checkpoints/last.ckpt
+--resume /data2/yuki_sadasue/runs/foveated-world-models/stage1-lerobot-rpy14-minmax/checkpoints/last.ckpt
 ```
 
-再開時の `trainer.max_steps` は保存済みstepより大きくする。テスト学習の出力先と本学習の出力先を分ける。
+再開時の `trainer.max_steps` は保存済みstepより大きくする。テスト学習の出力先と本学習の出力先を分ける。旧NPZ・20次元のcheckpointから新経路へresumeするとデータ契約の不一致で拒否する。旧実験は `stage1_robomind_legacy.yaml` を明示して再現する。
 
 ## 検証
 

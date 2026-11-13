@@ -33,6 +33,12 @@ def load_config(path):
     return merge(load_config(path.parent / parent), config) if parent else config
 
 
+def check_resume_contract(checkpoint, contract):
+    if checkpoint.get('data_contract') != contract:
+        raise ValueError('Checkpoint data contract differs or is absent. Start a new run; '
+                         'legacy rot6D/padded-image checkpoints cannot resume corrected training.')
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--config', default=str(ROOT / 'configs/stage1_robomind.yaml'))
@@ -55,17 +61,29 @@ def main():
         model_config['vision_model_id'] = args.vision_model
     manifests = [args.train_manifest or data_config.get('train_manifest'),
                  args.val_manifest or data_config.get('val_manifest')]
-    if not all(manifests):
-        parser.error('Provide --train-manifest and --val-manifest (local JSONL files)')
     options = dict(image_hw=model_config['image_hw'], max_state_dim=model_config['max_state_dim'],
                    num_embodiments=model_config['num_embodiments'],
                    horizon_seconds=data_config['horizon_seconds'],
                    tolerance_seconds=data_config['tolerance_seconds'])
-    if data_config.get('format') != 'robomind_video':
-        parser.error('data.format must be robomind_video')
-    train = RoboMINDDataset(manifests[0], **options)
-    val = RoboMINDDataset(manifests[1], require_observed_endpoints=True, **options)
-    collate = functools.partial(robomind_collate, max_state_dim=model_config['max_state_dim'])
+    contract = None
+    if data_config.get('format') == 'lerobot_v3':
+        if any(manifests):
+            parser.error('LeRobot uses data.root and its episode metadata, not NPZ manifests')
+        from vendor.dataset.lerobot_robomind import LeRobotSource, LeRobotRoboMINDDataset, lerobot_collate
+        source = LeRobotSource(data_config['root'])
+        train = LeRobotRoboMINDDataset(source, 'train', **options)
+        val = LeRobotRoboMINDDataset(source, 'validation', **options)
+        contract = train.contract
+        collate_fn = lerobot_collate
+    elif data_config.get('format') == 'robomind_video':
+        if not all(manifests):
+            parser.error('Legacy format requires train/val manifests')
+        train = RoboMINDDataset(manifests[0], **options)
+        val = RoboMINDDataset(manifests[1], require_observed_endpoints=True, **options)
+        collate_fn = robomind_collate
+    else:
+        parser.error('data.format must be lerobot_v3 or legacy robomind_video')
+    collate = functools.partial(collate_fn, max_state_dim=model_config['max_state_dim'])
     check_disjoint(train, val)
     if args.check_data:
         for dataset in (train, val):
@@ -88,23 +106,41 @@ def main():
 
     import torch
     from lightning.pytorch import Trainer, seed_everything
-    from lightning.pytorch.callbacks import ModelCheckpoint
+    from lightning.pytorch.callbacks import Callback, ModelCheckpoint
     from lightning.pytorch.loggers import CSVLogger
     from latent_action_model.core.lam_lightinng import VJEPA_LAM
 
+    if args.resume:
+        saved = torch.load(args.resume, map_location='cpu', weights_only=True, mmap=True)
+        if contract is not None or saved.get('data_contract') is not None:
+            check_resume_contract(saved, contract)
+        del saved
+
+    class DataContractCheckpoint(Callback):
+        def on_save_checkpoint(self, trainer, pl_module, checkpoint):
+            checkpoint['data_contract'] = contract
+
     output = Path(args.output).resolve()
+    if contract is not None and (output / 'resolved_config.yaml').exists():
+        previous = output / 'data_contract.json'
+        if not previous.exists() or json.loads(previous.read_text()) != contract:
+            raise ValueError('Output contains a different data contract. Use a new output directory.')
     output.mkdir(parents=True, exist_ok=True)
     seed_everything(config['seed'], workers=True)
     split_report = {
-        name: {'manifest': str(dataset.path), 'sha256': hashlib.sha256(dataset.path.read_bytes()).hexdigest(),
+        name: {'metadata': str(dataset.path), 'sha256': hashlib.sha256(dataset.path.read_bytes()).hexdigest(),
                'episodes': len(dataset.episodes), 'video_groups': len(dataset.groups), 'pairs': len(dataset),
                'tail_pairs': sum(p[3] for p in dataset.pairs)}
         for name, dataset in (('train', train), ('validation', val))
     }
     split_report['episode_and_video_groups_disjoint'] = True
     (output / 'split_verification.json').write_text(json.dumps(split_report, indent=2))
-    for key, path in zip(('train_manifest', 'val_manifest'), manifests):
-        config['data'][key] = str(Path(path).resolve())
+    if contract is not None:
+        (output / 'data_contract.json').write_text(json.dumps(contract, indent=2))
+        config['data']['root'] = str(source.root)
+    else:
+        for key, path in zip(('train_manifest', 'val_manifest'), manifests):
+            config['data'][key] = str(Path(path).resolve())
     (output / 'resolved_config.yaml').write_text(yaml.safe_dump(config, sort_keys=False))
     opt = {key: float(value) for key, value in config['optimizer'].items()}
     model = VJEPA_LAM(**model_config, optimizer=functools.partial(torch.optim.AdamW, **opt),
@@ -129,7 +165,8 @@ def main():
                                  save_top_k=1, monitor='val_loss', mode='min',
                                  save_on_train_epoch_end=False)
     trainer = Trainer(**config['trainer'], default_root_dir=output,
-                      logger=CSVLogger(str(output), name='metrics'), callbacks=[checkpoint])
+                      logger=CSVLogger(str(output), name='metrics'),
+                      callbacks=[checkpoint, DataContractCheckpoint()])
     if torch.cuda.is_available():
         torch.cuda.reset_peak_memory_stats()
     started = time.perf_counter()

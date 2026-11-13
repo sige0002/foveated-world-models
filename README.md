@@ -82,9 +82,9 @@ python3 .agents/skills/paper-survey/scripts/survey_csv.py duplicates surveys/arc
 
 [Traly/RoboMIND-lerobot](https://huggingface.co/datasets/Traly/RoboMIND-lerobot) の `franka_fr3_dual` を採用する。俯瞰映像 `camera_top`、左右の手先位置・姿勢、関節状態、グリッパー状態を使う。LeRobot v3.0、30fps、1,774エピソード・6タスク。俯瞰映像・状態・メタデータは合計約10.66GB。
 
-配布された `timestamp` を時間の基準として信用する。フレーム番号の固定幅加算や `FPS × 1.2` によるペア抽出は禁止する。元の収録時刻であることは要求しない。採用した時刻から1.2秒先の最近傍を選び、末尾は1.2秒未満でも最終観測を使う。欠損が0.3秒以上なら区間を分割し、それ未満は直前値で補完する。区間の両端は全項目の実観測がそろう位置にそろえる。共通処理は `vendor/dataset/temporal_data.py` に保持している。
+配布された `timestamp` を時間の基準として信用する。フレーム番号の固定幅加算や `FPS × 1.2` によるペア抽出は禁止する。元の収録時刻であることは要求しない。採用した時刻から1.2秒先の最近傍を選び、末尾は1.2秒未満でも最終観測を使う。共通処理は `vendor/dataset/temporal_data.py` に保持している。修正後のローダーは不正状態・同期失敗をエラーとし、暗黙の補完はしない。現在の原本に欠損はなく、旧経路との全ペア一致を確認した。
 
-取得先は `/data2/yuki_sadasue/datasets/RoboMIND-lerobot/`。リビジョン `71d7062c0e60351606674a55f51066454be7296d` の対象75ファイル（10,664,394,285 bytes）の取得が完了した。俯瞰動画68本、1,774エピソード、375,807フレーム。全ファイルのサイズ、動画ヘッダーの30fps・解像度・総フレーム数、全状態の有限性、各エピソード内timestampの単調増加を検証済み。結果は取得先の `verification.json` に保存している。RoboMIND用前処理・学習ローダーを `vendor/dataset/` に実装した。前処理で全動画をデコードし、`configs/stage1_robomind.yaml` で学習に接続する。
+取得先は `/data2/yuki_sadasue/datasets/RoboMIND-lerobot/`。リビジョン `71d7062c0e60351606674a55f51066454be7296d` の対象75ファイル（10,664,394,285 bytes）の取得が完了した。俯瞰動画68本、1,774エピソード、375,807フレーム。全ファイルのサイズ、動画ヘッダーの30fps・解像度・総フレーム数、全状態の有限性、各エピソード内timestampの単調増加を検証済み。結果は取得先の `verification.json` に保存している。`configs/stage1_robomind.yaml` はLeRobot原本を直接読み、XYZ＋RPY＋gripperの14次元、train min-max、公式crop/resizeを使う。[2026-11-13の修正と検証](docs/lerobot-loader-fix.md)を参照。
 
 データセット関連の実装は [`vendor/dataset/`](vendor/dataset/README.md) にまとめる。取得は `download_robomind.py`、取得後の検査は `verify_robomind.py` で再実行できる。
 

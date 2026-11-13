@@ -48,7 +48,10 @@ def main():
                                decoder_type=decoder_type, flow_source=source,
                                flow_noise_scale=noise, flow_steps=1 if name == 'residual' else 4,
                                image_aug=False, dual_view_aug=False)
-        config['data'].update(train_manifest=str((args.prepared_root/'train.jsonl').resolve()),
+        # This historical pilot explicitly consumes prepared NPZs; never silently
+        # switch its matched comparisons when the default Stage-1 loader changes.
+        config['data'].update(format='robomind_video',
+                              train_manifest=str((args.prepared_root/'train.jsonl').resolve()),
                               val_manifest=str((args.prepared_root/'validation.jsonl').resolve()))
         config['trainer'].update(accelerator=args.accelerator, max_steps=args.steps,
                                  val_check_interval=args.steps, num_sanity_val_steps=0,

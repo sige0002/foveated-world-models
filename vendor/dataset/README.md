@@ -2,6 +2,25 @@
 
 本プロジェクトのRoboMIND FR3 dual用実装。公式LaWAMからの取り込みコードではない。旧画像ペアアダプターは削除済み。
 
+## 現在の既定経路（2026-11-13修正）
+
+`lerobot_robomind.py` がLeRobot v3原本のParquet・MP4・metaを直接読む。独自NPZへの変換は不要。左右それぞれのxyz[m]＋RPY[rad]＋gripperを14次元として結合し、train全観測のmin/maxで正規化する。姿勢の別表現への変換は行わない。原本ファイルは変更しない。
+
+画像は公式の最大横縦比4:3の中心crop＋bilinear antialias resizeを適用する。topの1280×720画像では中央960×720から256×256へ変換し、黒帯を追加しない。データ分割と配布timestampによる1.2秒ペア・短い末尾は維持した。不正状態や動画同期失敗はエラーにし、暗黙に補完・除外しない。今回の原本では欠損がなく、全11,232ペアは旧経路と完全一致。
+
+```sh
+uv run --locked python train_stage1.py --config configs/stage1_robomind.yaml --check-data
+CUDA_VISIBLE_DEVICES=1 uv run --locked python tests/smoke_robomind.py
+```
+
+`--check-data` はtrain/validationの全画像をデコードするため時間がかかる。smokeは各splitの8ペアと、実DINO＋小型IDM/LaWMによるGPU学習・保存・再開を確認する。
+
+モデルの状態容量32は維持し、14次元だけを有効maskに含める。統計・原本hash・split ID・画像処理を `data_contract.json` とcheckpointに保存する。旧20次元checkpointのresumeを拒否する。詳しくは[修正内容と検証](../../docs/lerobot-loader-fix.md)。LeRobotの保存形式を読むアダプターであり、公式Datasetクラスそのものの採用ではない。
+
+## 旧経路の記録（以下は修正前の実験用）
+
+以下のNPZ・rot6D・黒帯処理は過去結果の再現用。明示的に `configs/stage1_robomind_legacy.yaml` を指定した場合だけ使う。既定の学習では `prepare_robomind.py` を実行しない。
+
 | ファイル | 役割 |
 |---|---|
 | `download_robomind.py` | リビジョンを固定し俯瞰映像・状態・メタデータだけを取得 |
@@ -18,7 +37,7 @@
 uv run --locked python vendor/dataset/download_robomind.py
 uv run --locked python vendor/dataset/verify_robomind.py
 uv run --locked python -m vendor.dataset.prepare_robomind --workers 6
-uv run --locked python train_stage1.py --config configs/stage1_robomind.yaml
+uv run --locked python train_stage1.py --config configs/stage1_robomind_legacy.yaml
 ```
 
 既定の取得先は `/data2/yuki_sadasue/datasets/RoboMIND-lerobot/`。前処理はその `preprocessed/` に区間ごとのNPZとtrain/validation/testのJSONLを作る。監査結果は `summary.json`、`audit.json`。動画インデックスはパス・サイズ・更新時刻が一致すると再利用する。デコードエラーでは処理を失敗させる。
