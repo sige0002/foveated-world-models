@@ -9,8 +9,11 @@ from torch import nn
 
 
 class DifferenceIDM(nn.Module):
-    def __init__(self, encoder, head, scale):
+    def __init__(self, encoder, head, scale, representation='difference'):
         super().__init__()
+        if representation not in ('difference', 'raw'):
+            raise ValueError('Expected difference or raw representation')
+        self.representation = representation
         scale = torch.as_tensor(scale).detach().clone().float()
         if scale.numel() != 1 or not torch.isfinite(scale).all() or scale.item() <= 0:
             raise ValueError('Expected a positive finite train-only scalar scale')
@@ -24,8 +27,10 @@ class DifferenceIDM(nn.Module):
         if current.shape != future.shape or current.ndim != 4 or current.shape[1] != 1:
             raise ValueError('Expected matching current/future [B,1,tokens,features]')
         transition = self.encoder(torch.cat((current, future), dim=1))
-        reference = self.encoder(torch.cat((current, current), dim=1))
-        z = self.head((transition-reference)/self.scale)
+        reference = (self.encoder(torch.cat((current, current), dim=1))
+                     if self.representation == 'difference' else None)
+        features = transition-reference if reference is not None else transition
+        z = self.head(features/self.scale)
         if return_queries:
             return z, transition, reference
         return z

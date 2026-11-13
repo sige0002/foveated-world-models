@@ -1,0 +1,213 @@
+{
+  "difference": {
+    "result": {
+      "complete": true,
+      "smoke_only": true,
+      "changed": {
+        "encoder": true,
+        "head": true,
+        "decoder": true
+      },
+      "final_hashes": {
+        "encoder": "de1b722a9ae2932f7deef5bbe32a606b04c8907e4d300e6a6dc840c0b1597f5f",
+        "head": "c636812a28849d950ea183986dc4f26193b7d029467084e69641eed82a28e770",
+        "decoder": "974d8c7501064d590aa2afaed12593ede011963c4164f2169531cf1ff838a5b4"
+      },
+      "training_seconds": 3.4069055998697877,
+      "history": [
+        {
+          "step": 1,
+          "mse": 0.08581584692001343,
+          "gradient_norm": 0.05801825970411301,
+          "training_seconds": 0.8807107303291559,
+          "peak_allocated_bytes": 16385943040
+        },
+        {
+          "step": 2,
+          "mse": 0.10569031536579132,
+          "gradient_norm": 0.062015336006879807,
+          "training_seconds": 1.7071708673611283,
+          "peak_allocated_bytes": 20693892096
+        },
+        {
+          "step": 3,
+          "mse": 0.0905853658914566,
+          "gradient_norm": 0.07411082088947296,
+          "training_seconds": 2.564670005813241,
+          "peak_allocated_bytes": 20693892096
+        },
+        {
+          "step": 4,
+          "mse": 0.1284077763557434,
+          "gradient_norm": 0.12919248640537262,
+          "training_seconds": 3.4069055998697877,
+          "peak_allocated_bytes": 20693974016
+        }
+      ],
+      "peak_allocated_bytes": 20693974016,
+      "evaluations": {
+        "2": "89e1847e57f219ccc1ba34c62e6de5828616606b5b264c1fdba11fce81a5d638",
+        "4": "5f03a0a306228fd9aa522cb891827f3a57ecbff402c946cae1e37314bd0c731f"
+      }
+    },
+    "preflight": {
+      "cached_query_code_max_abs": 7.987022399902344e-06,
+      "initial_two_train_mse": 0.1748492419719696,
+      "initial_code_norm": 2.9925520420074463,
+      "same_image_code_norm": 0.2945525646209717
+    },
+    "gradients": {
+      "transition_grad_norm": 6.808131001889706e-05,
+      "reference_grad_norm": 6.808131001889706e-05,
+      "encoder_layer_grad_norms": [
+        0.011606724001467228,
+        0.0015395617811009288,
+        0.0011123110307380557,
+        0.0005503151915036142,
+        0.0005415574996732175,
+        0.0004345762718003243,
+        0.0003788689791690558,
+        0.0003518329467624426,
+        0.0003317050577607006,
+        0.00028706228476949036,
+        0.00025652232579886913,
+        0.00022021698532626033,
+        0.00020875631889794022,
+        0.0001833139540394768,
+        0.0001691699435468763,
+        0.00014433733304031193,
+        0.00012869012425653636,
+        0.00011885170533787459,
+        0.00010915337043115869,
+        0.00010409802780486643,
+        9.490265802014619e-05,
+        7.743044261587784e-05,
+        6.742076220689341e-05,
+        6.403500447049737e-05
+      ],
+      "component_grad_norms": {
+        "encoder": 0.018776562064886093,
+        "head": 0.0264779981225729,
+        "decoder": 0.0480881929397583
+      }
+    },
+    "replays": [
+      {
+        "step": 2,
+        "max_abs_mse": 2.086162567138672e-07
+      },
+      {
+        "step": 4,
+        "max_abs_mse": 2.9802322387695312e-08
+      }
+    ]
+  },
+  "raw": {
+    "result": {
+      "complete": true,
+      "smoke_only": true,
+      "changed": {
+        "encoder": true,
+        "head": true,
+        "decoder": true
+      },
+      "final_hashes": {
+        "encoder": "5e808aff1036b127594084375a37cef7e3c465c2fe72ce2a54f3fd738494c497",
+        "head": "cd08061e3436bc9895d10ce9e425b625e6ae047475e1d106a1015474012c0e8c",
+        "decoder": "5837f9ef67b15d9cfebf1d6c154af6545562e0f5a571922e8bd2c7ee8b773957"
+      },
+      "training_seconds": 1.9175777491182089,
+      "history": [
+        {
+          "step": 1,
+          "mse": 0.08506554365158081,
+          "gradient_norm": 0.054206814616918564,
+          "training_seconds": 0.5177874891087413,
+          "peak_allocated_bytes": 10989691392
+        },
+        {
+          "step": 2,
+          "mse": 0.10498392581939697,
+          "gradient_norm": 0.05457712709903717,
+          "training_seconds": 0.9843438435345888,
+          "peak_allocated_bytes": 15296559104
+        },
+        {
+          "step": 3,
+          "mse": 0.09069712460041046,
+          "gradient_norm": 0.06200985610485077,
+          "training_seconds": 1.4488685429096222,
+          "peak_allocated_bytes": 15296591872
+        },
+        {
+          "step": 4,
+          "mse": 0.1268337070941925,
+          "gradient_norm": 0.06973262131214142,
+          "training_seconds": 1.9175777491182089,
+          "peak_allocated_bytes": 15296591872
+        }
+      ],
+      "peak_allocated_bytes": 15296591872,
+      "evaluations": {
+        "2": "bd2a5c83dc7d74c51c875488e56784b4eabf105a3cb2dc5fabd2e3e8e0839275",
+        "4": "9cbce3540775275fc4b3e81fc6c39767389ea225cb670aecb441313d29d9c32d"
+      }
+    },
+    "preflight": {
+      "cached_query_code_max_abs": 1.1920928955078125e-07,
+      "initial_two_train_mse": 0.17237041890621185,
+      "initial_code_norm": 1.2391749620437622,
+      "same_image_code_norm": 1.231695294380188
+    },
+    "gradients": {
+      "transition_grad_norm": 1.1439238960520015e-06,
+      "reference_grad_norm": null,
+      "encoder_layer_grad_norms": [
+        0.00022387158242054284,
+        0.000134889007313177,
+        9.922991739585996e-05,
+        9.503695764578879e-05,
+        8.00216366769746e-05,
+        6.892232340760529e-05,
+        6.756393850082532e-05,
+        6.661383667960763e-05,
+        7.690155325690284e-05,
+        7.920978532638401e-05,
+        8.940943371271715e-05,
+        8.797863847576082e-05,
+        9.430866339243948e-05,
+        0.00010145572014153004,
+        0.00010588151781121269,
+        0.00011076362716266885,
+        0.00011503684072522447,
+        0.00013286207104101777,
+        0.00014383898815140128,
+        0.0001480628561694175,
+        0.0001598912785993889,
+        0.00016101571964100003,
+        0.000178013215190731,
+        0.0002063366409856826
+      ],
+      "component_grad_norms": {
+        "encoder": 0.0006397390970960259,
+        "head": 0.02713508903980255,
+        "decoder": 0.04692181199789047
+      }
+    },
+    "replays": [
+      {
+        "step": 2,
+        "max_abs_mse": 7.450580596923828e-09
+      },
+      {
+        "step": 4,
+        "max_abs_mse": 7.450580596923828e-09
+      }
+    ]
+  },
+  "matched_initial_weights_and_batches": true,
+  "scales": {
+    "difference": 6.03807258605957,
+    "raw": 350.5279541015625
+  }
+}

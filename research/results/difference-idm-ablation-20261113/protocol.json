@@ -1,0 +1,73 @@
+{
+  "plan_commit": "283bd50",
+  "arms": [
+    "difference",
+    "raw"
+  ],
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "steps": 1600,
+  "eval_steps": [
+    400,
+    800,
+    1600
+  ],
+  "batch_size": 8,
+  "microbatch": 8,
+  "train_examples": 512,
+  "development_examples": [
+    64,
+    96
+  ],
+  "test_examples": 170,
+  "test_evaluation": "Fixed terminal1600 only after all six runs complete",
+  "head_initialization": "New common random head per seed; no pretrained difference head reused",
+  "checkpoint_initialization": "Local final10000 Q encoder and direct decoder; pretrained weights common across seeds",
+  "precision": "float32 highest; cudnn TF32 disabled; no autocast",
+  "source_sha256": {
+    "research/train_idm_ablation.py": "6330b121f06068543b90c38debf4166080c4009561c5bba7108ff5811e9f6a16",
+    "research/prepare_idm_ablation_test.py": "918c6d3d7cc61f2721130864d8b09fd225906940c5c561e78cf18fa404ceab33",
+    "research/run_idm_ablation.py": "c0d8bf82644aa663edf6d610059169b856bea74e773bb04933738f2fef79e7dc",
+    "research/summarize_idm_ablation.py": "4aa88093fc35df48ca324c1e0556119633160295957692e1efc22ac5a88ff074",
+    "research/idm/difference_idm.py": "a25870277763612969a3d4b5a440f4838a32c1bbc74325353332f588d61a321e",
+    "research/idm/load_difference_idm.py": "3fed1f4e21db527c75657617b6c8afb9e7d4a2b1084c7dded9b40fe0e73c86a0"
+  },
+  "test_cache_metadata": {
+    "selection_sha256": "bdb9faf321a400247e7f1be2d45bfce09a0f2fee04588043ab6fac83630178ea",
+    "checkpoint_sha256": "7212d2db040ec4bed5e998287cbff01e59ac516ce14c489433b56f2945974200",
+    "cache_sha256": "10613a6779317ad3dc6573f4e54aa0d352401a0e50804b040384c13034380d97",
+    "train_extraction_max_abs": 0.0,
+    "script_sha256": "918c6d3d7cc61f2721130864d8b09fd225906940c5c561e78cf18fa404ceab33",
+    "precision": "float32 highest; cudnn.allow_tf32=False; no autocast",
+    "base_run_manifest_hashes_match": true,
+    "base_split_verification_sha256": "f0b2555e1e3080d958c2805e2026f3d519855404fac31fa0d19fd4854ecdbf3b",
+    "scope": "DINO features only; no test prediction metrics or checkpoint selection"
+  },
+  "selection_sha256": "bdb9faf321a400247e7f1be2d45bfce09a0f2fee04588043ab6fac83630178ea",
+  "smoke_sha256": "9cdebd30df9c00bf3dc43f9d03a08d94ceeaf73001559f943339c95813693a3d",
+  "tests": {
+    "passed": 155,
+    "log_sha256": "3508aecaa8a0a36e4ec732504f9978578d196bee36e2666cddaa40d2d44816ef"
+  },
+  "artifact_root": "/data2/yuki_sadasue/runs/foveated-world-models/difference-idm-ablation-20261113",
+  "status": "preflight_complete_before_full_training",
+  "environment": {
+    "python": "3.12.12 | packaged by conda-forge | (main, Oct 22 2025, 23:25:55) [GCC 14.3.0]",
+    "packages": {
+      "torch": "2.11.0",
+      "transformers": "5.5.4",
+      "numpy": "2.2.6",
+      "av": "15.1.0",
+      "matplotlib": "3.11.2",
+      "contourpy": "1.4.0",
+      "cycler": "0.12.1",
+      "fonttools": "4.68.0",
+      "kiwisolver": "1.5.1",
+      "pyparsing": "3.3.3",
+      "python-dateutil": "2.9.0.post0"
+    }
+  }
+}

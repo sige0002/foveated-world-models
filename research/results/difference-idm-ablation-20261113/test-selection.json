@@ -1,0 +1,1825 @@
+{
+  "selection_rule": "One middle non-tail eligible pair per test episode; no model-output selection",
+  "config_sha256": "82d906ddafa1aea9a8055678235e76d583ecc02d552e8bf92089641181604a06",
+  "options": {
+    "image_hw": [
+      256,
+      256
+    ],
+    "max_state_dim": 32,
+    "num_embodiments": 32,
+    "horizon_seconds": 1.2,
+    "tolerance_seconds": null,
+    "require_observed_endpoints": true
+  },
+  "manifest_sha256": {
+    "train": "6820a262ba4ff5fda38adb72ae21cc1bc5405c9a5b3a04e869a26db3d52f063f",
+    "val": "08b200e3a158850eb82b94bc2446a120f212092c9dcaaa5158d548c894533133",
+    "test": "cd0510c8a8011c9683618fcd8b44a2efab67977d46c5a7944e81e2572dc385a2"
+  },
+  "manifest_paths": {
+    "train": "/data2/yuki_sadasue/datasets/RoboMIND-lerobot/preprocessed/train.jsonl",
+    "val": "/data2/yuki_sadasue/datasets/RoboMIND-lerobot/preprocessed/validation.jsonl",
+    "test": "/data2/yuki_sadasue/datasets/RoboMIND-lerobot/preprocessed/test.jsonl"
+  },
+  "counts": {
+    "train": {
+      "episodes": 1444,
+      "groups": 54,
+      "pairs": 9201
+    },
+    "val": {
+      "episodes": 160,
+      "groups": 7,
+      "pairs": 950
+    },
+    "test": {
+      "episodes": 170,
+      "groups": 7,
+      "pairs": 1081
+    }
+  },
+  "video_sha256": {
+    "train": {
+      "/data2/yuki_sadasue/datasets/RoboMIND-lerobot/franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-000.mp4": "a5d472e984f12a15cfa611a620affe1998c14bcd01a6ec7e996f6573db3b72ae",
+      "/data2/yuki_sadasue/datasets/RoboMIND-lerobot/franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-001.mp4": "d26a6809b7b2c6c2092b9eede0877c0c0ed75aa16048117046b5ebc62343cf21",
+      "/data2/yuki_sadasue/datasets/RoboMIND-lerobot/franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-002.mp4": "4ed13b227eeca43104ced63fe595a1e37c3e3219d5cdb4ed22ffaeb4770cf031",
+      "/data2/yuki_sadasue/datasets/RoboMIND-lerobot/franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-005.mp4": "f1a53c6224335c8be84f63f3b4e2ac3438543fa2922042ce873d5167e2da9534",
+      "/data2/yuki_sadasue/datasets/RoboMIND-lerobot/franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-006.mp4": "1619148e69428da212d4b8e6379778eac5fee65d4b87b3a286c0c38d75f0bc7a",
+      "/data2/yuki_sadasue/datasets/RoboMIND-lerobot/franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-007.mp4": "f9ca128bc148efb9e751d316e742af11b5d3fa3653b6f23e59369af314887494",
+      "/data2/yuki_sadasue/datasets/RoboMIND-lerobot/franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-008.mp4": "7a984165d5195db6b0d2ea7e10b4a5f6620630f21e661575ff97941698303c0f",
+      "/data2/yuki_sadasue/datasets/RoboMIND-lerobot/franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-009.mp4": "10f68851296a600d24a2a6a5bf44b5998a66d646728d1fb669a676df3db522e9",
+      "/data2/yuki_sadasue/datasets/RoboMIND-lerobot/franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-010.mp4": "3533517566349ae2d5628b33048f5cd7f082c83725061e33c204c70e097e6d7c",
+      "/data2/yuki_sadasue/datasets/RoboMIND-lerobot/franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-011.mp4": "1d4238b3fd121ab2dc672e250a930ed669bce028fee74bfdfc8973906ee26edc",
+      "/data2/yuki_sadasue/datasets/RoboMIND-lerobot/franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-013.mp4": "4133783c7826b386f17867fe82d24f2af7e9970ab960cc3c13e2983ae9837787",
+      "/data2/yuki_sadasue/datasets/RoboMIND-lerobot/franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-015.mp4": "0d8f86daf250e36d537682f24206aa8b42361566c7541b5850c2ab45a5aa12d0",
+      "/data2/yuki_sadasue/datasets/RoboMIND-lerobot/franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-016.mp4": "e71dbae962bf7f2be6a64e16578a5bfb51f9a23274e51133a813be241adfa9b4",
+      "/data2/yuki_sadasue/datasets/RoboMIND-lerobot/franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-017.mp4": "27d7678fe22af7bf4e95de7af5181607872b5819cd47ddea5ce923ec70115692",
+      "/data2/yuki_sadasue/datasets/RoboMIND-lerobot/franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-018.mp4": "b79da43438bf0cce1d682f77fcdde054f865d55364d730a76cb4724f60adc473",
+      "/data2/yuki_sadasue/datasets/RoboMIND-lerobot/franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-019.mp4": "48364fddc874ecdbe6c032b426c5718075ca744d5a990aeb6a1aae08304b820e",
+      "/data2/yuki_sadasue/datasets/RoboMIND-lerobot/franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-020.mp4": "d6ceb384ecf2112e688b6a5350fbe1e991208f5a764455273ce6d2fe5a1e83eb",
+      "/data2/yuki_sadasue/datasets/RoboMIND-lerobot/franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-021.mp4": "b0591d8877caa6d79cc4911c2d42acd92a7dac010da4dc49c6af6df9049e3731",
+      "/data2/yuki_sadasue/datasets/RoboMIND-lerobot/franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-022.mp4": "390f1db934df5ce3090feff54507ca2f423e494a3cf6d6dd1caf06230549789a",
+      "/data2/yuki_sadasue/datasets/RoboMIND-lerobot/franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-023.mp4": "ca9d285fd9f53b63bb2f44f5afc4d7d29056e67505205c51f98e87f7d3e633ca",
+      "/data2/yuki_sadasue/datasets/RoboMIND-lerobot/franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-024.mp4": "1b3ccad5557c1f67f18fff82f96bf6e66cf2a8c50c83cc5653a684118a720f2c",
+      "/data2/yuki_sadasue/datasets/RoboMIND-lerobot/franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-026.mp4": "b460d9983c9ee1ca2182e68cb5a854d5fcd4fc352d5dfef7d2d6570b4d8b3b13",
+      "/data2/yuki_sadasue/datasets/RoboMIND-lerobot/franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-028.mp4": "240f12b355c469137deccf404e52964f7dbf034c4d816c4a673ad2c22c7adfbc",
+      "/data2/yuki_sadasue/datasets/RoboMIND-lerobot/franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-029.mp4": "8bd62cd291942d787c5d6204c51d387a518bc44808fad6378d62d8e0a8768aef",
+      "/data2/yuki_sadasue/datasets/RoboMIND-lerobot/franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-030.mp4": "b7234253e08d7b3fa3a9b1726f14b9629f36f930b486c03539b706ada0501f5c",
+      "/data2/yuki_sadasue/datasets/RoboMIND-lerobot/franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-031.mp4": "b641ac71ede4105ea92cd9fe399c19368c9cac3e8d584da29acab9a256eed563",
+      "/data2/yuki_sadasue/datasets/RoboMIND-lerobot/franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-032.mp4": "21f3c6854de6dd7b7985bf66228fb1eba1fb443960f926c416c952a616d3ee8e",
+      "/data2/yuki_sadasue/datasets/RoboMIND-lerobot/franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-033.mp4": "535d340f3eaa27c8fa20b5418119b030d90a631c85b90d9d4e8256460aea21a3",
+      "/data2/yuki_sadasue/datasets/RoboMIND-lerobot/franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-036.mp4": "5ab68cc0a657530a8a5463296b0d68dcf86c87240d144c9590f5e943a1479cef",
+      "/data2/yuki_sadasue/datasets/RoboMIND-lerobot/franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-037.mp4": "7e96ed60d724482cdb6b33c2b5d6ca6999eee988c749738517a4a532c726115b",
+      "/data2/yuki_sadasue/datasets/RoboMIND-lerobot/franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-038.mp4": "9dd6a3e60ea544ddb7c743085128175e6c936b347bd0bc1b174a82d1db666a60",
+      "/data2/yuki_sadasue/datasets/RoboMIND-lerobot/franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-040.mp4": "595fa328e8d50dcb0e5f5904f7c3cf27a866fa85ae25245c6254a69a68371921",
+      "/data2/yuki_sadasue/datasets/RoboMIND-lerobot/franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-041.mp4": "55a9758f828c82229e429f5203c99b408e185a08712c5f11c15130c307a201d8",
+      "/data2/yuki_sadasue/datasets/RoboMIND-lerobot/franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-042.mp4": "1949cd66653c8c1d443de5181b73a13813abb1377cd172a6964f2340f0ac8640",
+      "/data2/yuki_sadasue/datasets/RoboMIND-lerobot/franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-043.mp4": "c85e3742ed14e3e98ac3be193a705c1cd46eba0ca3de706d696448ac36cd8811",
+      "/data2/yuki_sadasue/datasets/RoboMIND-lerobot/franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-045.mp4": "47a2718e8430643ce4539ebf7749e3011cbc30c26f8df4c412b2b53ca4a206eb",
+      "/data2/yuki_sadasue/datasets/RoboMIND-lerobot/franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-046.mp4": "4c2e60d561fac4fcad8c848c00d02087cb97de9f5974cffd7531061a47ea4720",
+      "/data2/yuki_sadasue/datasets/RoboMIND-lerobot/franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-047.mp4": "2eeefb5ea6669166cfb214bdac63e4d7087a2a6f64305fddc4076977d8ea9d2d",
+      "/data2/yuki_sadasue/datasets/RoboMIND-lerobot/franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-048.mp4": "4e4f6cfbb1d650d643cdc4dd90584c2480f6d9e7e659360f811439f843d42e58",
+      "/data2/yuki_sadasue/datasets/RoboMIND-lerobot/franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-049.mp4": "b81eb88b42cf33017f13cf218bcb4905fdb3a276ee3e3ba8cfc0904cc2fe17bb",
+      "/data2/yuki_sadasue/datasets/RoboMIND-lerobot/franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-050.mp4": "27eec5d67a9ca896393085fa292dbb3acefb1248b1feb4a0386c8afca35ddb27",
+      "/data2/yuki_sadasue/datasets/RoboMIND-lerobot/franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-051.mp4": "7342061315d78cb46954a4602ad7221b0e184625aafaf129f2898363226be385",
+      "/data2/yuki_sadasue/datasets/RoboMIND-lerobot/franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-052.mp4": "dcfd28ec66d8dbe6b923e4a49f6dc435ff4858c06f0433764a93bf83b62a40c5",
+      "/data2/yuki_sadasue/datasets/RoboMIND-lerobot/franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-053.mp4": "3e650f8ea754e29e3baa61fd185877c975213584a0a188425dc6e7a39d3c1d30",
+      "/data2/yuki_sadasue/datasets/RoboMIND-lerobot/franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-055.mp4": "8c96fdb0d46c2e41af9f373852df92e52f64990e19661cb65c92e1f5f0c5b6a7",
+      "/data2/yuki_sadasue/datasets/RoboMIND-lerobot/franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-057.mp4": "d03a60d341cb0e3e4b8302d6f382c73d0f0a547fb82a1662137265f0350404dd",
+      "/data2/yuki_sadasue/datasets/RoboMIND-lerobot/franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-059.mp4": "5173026eea85bc5ea922cc6d0c9c0ddbd06dbdc2501309a7423518b7014e49ef",
+      "/data2/yuki_sadasue/datasets/RoboMIND-lerobot/franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-061.mp4": "4f52e9effa91aae9d860ee0779e838c84069ce7c16b6adcc2862282ba7cafe96",
+      "/data2/yuki_sadasue/datasets/RoboMIND-lerobot/franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-062.mp4": "10663e2be6e1e61bdc045860bafb2bf9dd497e00b995f5ae14a4627309a72027",
+      "/data2/yuki_sadasue/datasets/RoboMIND-lerobot/franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-063.mp4": "7e0aa0e17cdf79e52f14931456d5d55bb10d2a6c557df158ef1eca6ca545064c",
+      "/data2/yuki_sadasue/datasets/RoboMIND-lerobot/franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-064.mp4": "f05a0bf4c2588b3f4bffb738487126b3cbcfa91f1b161c1c01b4a5e15cb1f943",
+      "/data2/yuki_sadasue/datasets/RoboMIND-lerobot/franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-065.mp4": "f10b069f0703a39d837b4db8a6d969cb365593789c58b99d7acb5853b5394f24",
+      "/data2/yuki_sadasue/datasets/RoboMIND-lerobot/franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-066.mp4": "d4e13bf947e36d79dd5bed67c9e63d7bdb0d4c3f7af8eb54796d803830498d7f",
+      "/data2/yuki_sadasue/datasets/RoboMIND-lerobot/franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-067.mp4": "61eff1398f68262eeb444221010c79880eb9bd0d77c02712922811cf7d6da390"
+    },
+    "val": {
+      "/data2/yuki_sadasue/datasets/RoboMIND-lerobot/franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-003.mp4": "5c298ff5c07bb78f4d4ba73d71f08fc584872282d32c138fbbc0a6c443c5f72d",
+      "/data2/yuki_sadasue/datasets/RoboMIND-lerobot/franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-014.mp4": "18646969c70b4d901a15afa5033f8f84f9108ee8bce783101882113384cdeedf",
+      "/data2/yuki_sadasue/datasets/RoboMIND-lerobot/franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-027.mp4": "cbbeba461ab1ff50573a842f51e7857cd867049ccb7580de82f26486f564640e",
+      "/data2/yuki_sadasue/datasets/RoboMIND-lerobot/franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-034.mp4": "151ae556238dc6b3881a8b64709651242e0119c0297302baaa5e41782a1bad0b",
+      "/data2/yuki_sadasue/datasets/RoboMIND-lerobot/franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-039.mp4": "15da4e2bf02dab6d943fa7042f41c133b7638885a5c1e424fb0af1af30346040",
+      "/data2/yuki_sadasue/datasets/RoboMIND-lerobot/franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-056.mp4": "a91e6b76f98704400315a65b506b4bbe3532cd1b7941dc3f35047def1231039c",
+      "/data2/yuki_sadasue/datasets/RoboMIND-lerobot/franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-058.mp4": "8eed68711571050ce71b142ac7aa9df7ce52c282b7f6995624eb6af1cb8a9cf4"
+    },
+    "test": {
+      "/data2/yuki_sadasue/datasets/RoboMIND-lerobot/franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-004.mp4": "5dcf11127f04bad18124cc0adfbfbeb7181ae20e70e90839d1973f7c6e4fc4cb",
+      "/data2/yuki_sadasue/datasets/RoboMIND-lerobot/franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-012.mp4": "c600d3139f86ccda7a89b96eca2db8286c96abd0ac374152554eb147f4ecb84a",
+      "/data2/yuki_sadasue/datasets/RoboMIND-lerobot/franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-025.mp4": "b085cc213ee564800b7d4da9d227315182b4aafd5fca424fba35405e44064100",
+      "/data2/yuki_sadasue/datasets/RoboMIND-lerobot/franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-035.mp4": "4006b7483095dc7688631cdd0566a30c691ba6d44fd5feb50c7927d6b2adc480",
+      "/data2/yuki_sadasue/datasets/RoboMIND-lerobot/franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-044.mp4": "4f9f4e9c68085e30d96ca77cc0bfaa0cf7b627ef1361be36ca17c42299daaf66",
+      "/data2/yuki_sadasue/datasets/RoboMIND-lerobot/franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-054.mp4": "a19eb68f13b33af9f4df37e6d560d6750c66a1b3affd55caa5d345a924259f2e",
+      "/data2/yuki_sadasue/datasets/RoboMIND-lerobot/franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-060.mp4": "63e89a238a545b75ee4fdce665b7fc5d961d3f5550d03e1edb8ecf99a2a509c3"
+    }
+  },
+  "selected": [
+    {
+      "index": 5,
+      "episode": "40",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-004.mp4",
+      "tasks": [
+        "pour water with both arm"
+      ],
+      "array_sha256": "c6da0365cbe9b908b5626f8beccac9b40244a6532e92e8c523ce99aee7bdf75c"
+    },
+    {
+      "index": 17,
+      "episode": "41",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-004.mp4",
+      "tasks": [
+        "pour water with both arm"
+      ],
+      "array_sha256": "52513e0f842aeac62e5b6e4973fd1a428018111ce799a6e7a64933bac7f06118"
+    },
+    {
+      "index": 27,
+      "episode": "42",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-004.mp4",
+      "tasks": [
+        "pour water with both arm"
+      ],
+      "array_sha256": "2f525121bcfe16529cb63a5cc5a7f36703dfa71dbca1a368e7d60076ca94083b"
+    },
+    {
+      "index": 37,
+      "episode": "43",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-004.mp4",
+      "tasks": [
+        "pour water with both arm"
+      ],
+      "array_sha256": "28ed8e25a570c6a9b5f40eb36bad058e197bf59993d8c0088925df65855e4fbe"
+    },
+    {
+      "index": 48,
+      "episode": "44",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-004.mp4",
+      "tasks": [
+        "pour water with both arm"
+      ],
+      "array_sha256": "3abf1436f1e0acf28bbe1a56e1523d53f4989068a00da9a42666f13201057544"
+    },
+    {
+      "index": 60,
+      "episode": "45",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-004.mp4",
+      "tasks": [
+        "pour water with both arm"
+      ],
+      "array_sha256": "a1a33d94959c019f248a0bdb5b4383aebbc18938d2f416c63dce871819fb133d"
+    },
+    {
+      "index": 71,
+      "episode": "46",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-004.mp4",
+      "tasks": [
+        "pour water with both arm"
+      ],
+      "array_sha256": "deafcce7d01f6fea99544e69c59fdadbe3b72725ba7a2d95051bdb1436218b17"
+    },
+    {
+      "index": 82,
+      "episode": "47",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-004.mp4",
+      "tasks": [
+        "pour water with both arm"
+      ],
+      "array_sha256": "88296f9e4c112028c4055db75c5453697557f95bc24658d67626a040aeeea532"
+    },
+    {
+      "index": 93,
+      "episode": "48",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-004.mp4",
+      "tasks": [
+        "pour water with both arm"
+      ],
+      "array_sha256": "0b08edc65fb6dc35db3c091f73a2073d292cea2fe1e6a2a83426b0c8e7bd25c7"
+    },
+    {
+      "index": 104,
+      "episode": "49",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-004.mp4",
+      "tasks": [
+        "pour water with both arm"
+      ],
+      "array_sha256": "9d0e3edd81da99eee3bd0114c6ffe02a8d89d93be5d70d98942d82bf5182eabf"
+    },
+    {
+      "index": 115,
+      "episode": "120",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-012.mp4",
+      "tasks": [
+        "pour water with both arm"
+      ],
+      "array_sha256": "362aac9f63f779f010142033432b26e3b8f933f094192b5b9f2f607c3e4c2564"
+    },
+    {
+      "index": 127,
+      "episode": "121",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-012.mp4",
+      "tasks": [
+        "pour water with both arm"
+      ],
+      "array_sha256": "8f227b073de5fe36179cb0182f8c68ed77680141f4e2b1f4de13155e46dab3e5"
+    },
+    {
+      "index": 138,
+      "episode": "122",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-012.mp4",
+      "tasks": [
+        "pour water with both arm"
+      ],
+      "array_sha256": "a5990491bd8c65839e2e8bf5cc838225f5967e3c6a63610975a73ea495b4b407"
+    },
+    {
+      "index": 149,
+      "episode": "123",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-012.mp4",
+      "tasks": [
+        "pour water with both arm"
+      ],
+      "array_sha256": "8a93d8c3a7e0d0138bddc4b0de4a2076708556beaadbe040639e71a4a2085ed6"
+    },
+    {
+      "index": 159,
+      "episode": "124",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-012.mp4",
+      "tasks": [
+        "pour water with both arm"
+      ],
+      "array_sha256": "9c8c04d398566cb0d928293adddb3733247d9edf785509df5efb5a095db09bc7"
+    },
+    {
+      "index": 168,
+      "episode": "125",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-012.mp4",
+      "tasks": [
+        "pour water with both arm"
+      ],
+      "array_sha256": "8cf38b11e9b241cbd88ecfc75eea0ba654d47e085e1c0768acaf1cec9a355cf2"
+    },
+    {
+      "index": 181,
+      "episode": "126",
+      "dt": 1.2000007629394531,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-012.mp4",
+      "tasks": [
+        "pour water with both arm"
+      ],
+      "array_sha256": "96a4c1cf3ece359bb609e89a8a2dcdd70acd15061ba2f8a5c3720577a9a45715"
+    },
+    {
+      "index": 198,
+      "episode": "127",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-012.mp4",
+      "tasks": [
+        "pour water with both arm"
+      ],
+      "array_sha256": "909630e8498e98574c0d5f694649f47ae90b4aa8186d8ce8372bd8476c1c7a0c"
+    },
+    {
+      "index": 214,
+      "episode": "128",
+      "dt": 1.2000007629394531,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-012.mp4",
+      "tasks": [
+        "pour water with both arm"
+      ],
+      "array_sha256": "3685419213d515f4ae5ce63088cedd5f72f9c08ec7f93ceb7a6091af4230344a"
+    },
+    {
+      "index": 225,
+      "episode": "129",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-012.mp4",
+      "tasks": [
+        "pick gray plate from plate low rack and place it on table with left arm"
+      ],
+      "array_sha256": "72b2f9362f54131ab21fd4b40d868708f5a51b844bdf4f25413685a1604e0938"
+    },
+    {
+      "index": 232,
+      "episode": "130",
+      "dt": 1.200000286102295,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-012.mp4",
+      "tasks": [
+        "pick gray plate from plate low rack and place it on table with left arm"
+      ],
+      "array_sha256": "571c3844154509064b925b6ef14ed582112931e4b88d159d51d52de49f25b2c5"
+    },
+    {
+      "index": 239,
+      "episode": "131",
+      "dt": 1.200000286102295,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-012.mp4",
+      "tasks": [
+        "pick gray plate from plate low rack and place it on table with left arm"
+      ],
+      "array_sha256": "6a2e65555963e7f6d56b631c77a838fc9c2a12cb8a2701a7eaeee21f2581e3b1"
+    },
+    {
+      "index": 246,
+      "episode": "132",
+      "dt": 1.200000286102295,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-012.mp4",
+      "tasks": [
+        "pick gray plate from plate low rack and place it on table with left arm"
+      ],
+      "array_sha256": "e040e72ee02c53064e8eb95a5dad7d130642f776289300f4afb036d82dd5a115"
+    },
+    {
+      "index": 253,
+      "episode": "133",
+      "dt": 1.200000286102295,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-012.mp4",
+      "tasks": [
+        "pick gray plate from plate low rack and place it on table with left arm"
+      ],
+      "array_sha256": "cd920d7c1b407b1328bb88bf1938bb3da737dd57b7ad7d9ea2e2c1d344c26ba1"
+    },
+    {
+      "index": 259,
+      "episode": "134",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-012.mp4",
+      "tasks": [
+        "pick gray plate from plate low rack and place it on table with left arm"
+      ],
+      "array_sha256": "26892e9afdb21638cfa41dd42522e36f9b965ceb4790fc45d500e74a7ec54dcd"
+    },
+    {
+      "index": 266,
+      "episode": "135",
+      "dt": 1.200000286102295,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-012.mp4",
+      "tasks": [
+        "pick gray plate from plate low rack and place it on table with left arm"
+      ],
+      "array_sha256": "aaf78327c64cfcb6767812d298ae0ae75fa08dd6b1b5b784044e5ff64cfe3f68"
+    },
+    {
+      "index": 272,
+      "episode": "136",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-012.mp4",
+      "tasks": [
+        "pick gray plate from plate low rack and place it on table with left arm"
+      ],
+      "array_sha256": "1a094a8d1e44865f70ffba0b70888183c1cd935642297b393da683cadda355de"
+    },
+    {
+      "index": 277,
+      "episode": "137",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-012.mp4",
+      "tasks": [
+        "pick gray plate from plate low rack and place it on table with left arm"
+      ],
+      "array_sha256": "765c481a652afc38a7e28fc5bfa32d6df2bbedae0ff1548a9bc2906ef33fa5c8"
+    },
+    {
+      "index": 282,
+      "episode": "138",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-012.mp4",
+      "tasks": [
+        "pick gray plate from plate low rack and place it on table with left arm"
+      ],
+      "array_sha256": "21e007acee1a39e81c51668c9810758dcd474a2717faeee9544426fe2f297567"
+    },
+    {
+      "index": 288,
+      "episode": "139",
+      "dt": 1.200000286102295,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-012.mp4",
+      "tasks": [
+        "pick gray plate from plate low rack and place it on table with left arm"
+      ],
+      "array_sha256": "586f767abf9a0bba4e6577a7b023ae18f1986d000940a72143548cb1283ab258"
+    },
+    {
+      "index": 294,
+      "episode": "530",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-025.mp4",
+      "tasks": [
+        "pick gray plate from table and place it on plate lower rack with left arm"
+      ],
+      "array_sha256": "2b184925ad6dfea6a4bcec31b67583c677ffabb849b4511d74a18e8339b47e73"
+    },
+    {
+      "index": 300,
+      "episode": "531",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-025.mp4",
+      "tasks": [
+        "pick gray plate from table and place it on plate lower rack with left arm"
+      ],
+      "array_sha256": "b29afda2f77dc8347d6308ff907d2342881c27c4760e219e9e8b27ca51ff2141"
+    },
+    {
+      "index": 306,
+      "episode": "532",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-025.mp4",
+      "tasks": [
+        "pick gray plate from table and place it on plate lower rack with left arm"
+      ],
+      "array_sha256": "9cae1e6730c79ea0355817d61a69227ffdcb507232853fc2b9f15f2b4c06bed5"
+    },
+    {
+      "index": 312,
+      "episode": "533",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-025.mp4",
+      "tasks": [
+        "pick gray plate from table and place it on plate lower rack with left arm"
+      ],
+      "array_sha256": "98fa9a7aaf7fefd50fcd7f3694816fc619b720c72588a7326b0be29f6b1f29e5"
+    },
+    {
+      "index": 318,
+      "episode": "534",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-025.mp4",
+      "tasks": [
+        "pick gray plate from table and place it on plate lower rack with left arm"
+      ],
+      "array_sha256": "bb5c426f0e469e6ca269c1fd38903deaf20830b9575aa6a5fcb7fb187d076046"
+    },
+    {
+      "index": 323,
+      "episode": "535",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-025.mp4",
+      "tasks": [
+        "pick gray plate from table and place it on plate lower rack with left arm"
+      ],
+      "array_sha256": "eeccdcdef5d1bb48634f89473c59ac58b3950d9f1af3985c4fb72febaaacb43e"
+    },
+    {
+      "index": 329,
+      "episode": "536",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-025.mp4",
+      "tasks": [
+        "pick gray plate from table and place it on plate lower rack with left arm"
+      ],
+      "array_sha256": "e7c2ce7e741c458d66dbfa747911367767e44965da2407cf0f265c7b8edb0799"
+    },
+    {
+      "index": 335,
+      "episode": "537",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-025.mp4",
+      "tasks": [
+        "pick gray plate from table and place it on plate lower rack with left arm"
+      ],
+      "array_sha256": "18252de7afc671cf76fe33e38e8740f862813f57880bd1e275a958284ad4f344"
+    },
+    {
+      "index": 342,
+      "episode": "538",
+      "dt": 1.200000286102295,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-025.mp4",
+      "tasks": [
+        "pick gray plate from table and place it on plate lower rack with left arm"
+      ],
+      "array_sha256": "6635c14fc4f28d747b9f8e591e1595d61bd6a56e6f42daa2ba7a5fbd22383444"
+    },
+    {
+      "index": 348,
+      "episode": "539",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-025.mp4",
+      "tasks": [
+        "pick gray plate from table and place it on plate lower rack with left arm"
+      ],
+      "array_sha256": "6f8f5ad8c49dda6c2ad9bdc219afcabcbe1a773e7cd53969116a1b8700c373dc"
+    },
+    {
+      "index": 354,
+      "episode": "540",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-025.mp4",
+      "tasks": [
+        "pick gray plate from table and place it on plate lower rack with left arm"
+      ],
+      "array_sha256": "dfcb3fa6451c2dfad210a11cb4b658817e80ff8f884c0ca0642b28da7148a7e6"
+    },
+    {
+      "index": 360,
+      "episode": "541",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-025.mp4",
+      "tasks": [
+        "pick gray plate from table and place it on plate lower rack with left arm"
+      ],
+      "array_sha256": "0a681955aceb4c415ab11d98c70238fc4df2aa4ed6e6fc91dc87f09c0133032b"
+    },
+    {
+      "index": 366,
+      "episode": "542",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-025.mp4",
+      "tasks": [
+        "pick gray plate from table and place it on plate lower rack with left arm"
+      ],
+      "array_sha256": "624e4cdef42e19e9f2006e806005fc14f00a67d5342e8a457ac24cea1f68a391"
+    },
+    {
+      "index": 371,
+      "episode": "543",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-025.mp4",
+      "tasks": [
+        "pick gray plate from table and place it on plate lower rack with left arm"
+      ],
+      "array_sha256": "52793d2042027071de3fa416d768f5db1da9530f2b9b0b038538de12323c7229"
+    },
+    {
+      "index": 377,
+      "episode": "544",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-025.mp4",
+      "tasks": [
+        "pick gray plate from table and place it on plate lower rack with left arm"
+      ],
+      "array_sha256": "55e75d5f8de97dfb0bb12a5e73526eb1a0bfbd681e21c9b31aab70c30638ab08"
+    },
+    {
+      "index": 382,
+      "episode": "545",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-025.mp4",
+      "tasks": [
+        "pick gray plate from table and place it on plate lower rack with left arm"
+      ],
+      "array_sha256": "bb803730d2b02d3424eec9cc7f5612efbdb760a17401e419e8060a95bcd473fa"
+    },
+    {
+      "index": 387,
+      "episode": "546",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-025.mp4",
+      "tasks": [
+        "pick gray plate from table and place it on plate lower rack with left arm"
+      ],
+      "array_sha256": "0f57a9be40cfcc21d3d891b0a6121c1a694fc49bad7f60c14053b0897df0a478"
+    },
+    {
+      "index": 393,
+      "episode": "547",
+      "dt": 1.200000286102295,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-025.mp4",
+      "tasks": [
+        "pick gray plate from table and place it on plate lower rack with left arm"
+      ],
+      "array_sha256": "f1e2ad0c821723d6b3d9c784872d7f77221a08b37e831cd01f138f41a7c8a28a"
+    },
+    {
+      "index": 399,
+      "episode": "548",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-025.mp4",
+      "tasks": [
+        "pick gray plate from table and place it on plate lower rack with left arm"
+      ],
+      "array_sha256": "60df265c02b2f0affe57bad0b59878cb5a2a8d90f0c10d7340153e402f99e698"
+    },
+    {
+      "index": 406,
+      "episode": "549",
+      "dt": 1.200000286102295,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-025.mp4",
+      "tasks": [
+        "pick gray plate from table and place it on plate lower rack with left arm"
+      ],
+      "array_sha256": "aef81bb00dd8be5600d4aded0b0dd3ca1832b100aa046b7b7b74f0756a363036"
+    },
+    {
+      "index": 412,
+      "episode": "550",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-025.mp4",
+      "tasks": [
+        "pick gray plate from table and place it on plate lower rack with left arm"
+      ],
+      "array_sha256": "12b6f672ef2b878fa35c4a0c3aa2b776e1358dbf5b4a1b56975d9c68138fa16f"
+    },
+    {
+      "index": 417,
+      "episode": "551",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-025.mp4",
+      "tasks": [
+        "pick gray plate from table and place it on plate lower rack with left arm"
+      ],
+      "array_sha256": "1c0f9b94f1167fd92fc1e056e60dcf3af94a22d2031e6812adfc0fafc3301536"
+    },
+    {
+      "index": 423,
+      "episode": "552",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-025.mp4",
+      "tasks": [
+        "pick gray plate from table and place it on plate lower rack with left arm"
+      ],
+      "array_sha256": "4c86bcc7865d6f32d777ca6750e50b75d2dca0854d47e85aa41a9b2e07c09bb4"
+    },
+    {
+      "index": 428,
+      "episode": "553",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-025.mp4",
+      "tasks": [
+        "pick gray plate from table and place it on plate lower rack with left arm"
+      ],
+      "array_sha256": "e4e7600ee7cb2f09784bf4188bc2f34980d6ca0c8474a1dd6891545d29946f50"
+    },
+    {
+      "index": 433,
+      "episode": "554",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-025.mp4",
+      "tasks": [
+        "pick gray plate from table and place it on plate lower rack with left arm"
+      ],
+      "array_sha256": "edfa282492acbba97f1a901b3d596c095051265a8bd3189719d4e4e422a8722e"
+    },
+    {
+      "index": 438,
+      "episode": "555",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-025.mp4",
+      "tasks": [
+        "pick gray plate from table and place it on plate lower rack with left arm"
+      ],
+      "array_sha256": "f7288ba7cf50c002f28f0614e58481778ff452112b7062809487544d3ca95463"
+    },
+    {
+      "index": 443,
+      "episode": "556",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-025.mp4",
+      "tasks": [
+        "pick gray plate from table and place it on plate lower rack with left arm"
+      ],
+      "array_sha256": "ebfef1f7819e50becbb84ed6345e97be471f9c65240512990df1123448b3a2ff"
+    },
+    {
+      "index": 448,
+      "episode": "557",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-025.mp4",
+      "tasks": [
+        "pick gray plate from table and place it on plate lower rack with left arm"
+      ],
+      "array_sha256": "6e5ae41bbaa913d6acff266c3cc65a1b4f9bff0daaec109023ee8043cf16e3fe"
+    },
+    {
+      "index": 453,
+      "episode": "558",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-025.mp4",
+      "tasks": [
+        "pick gray plate from table and place it on plate lower rack with left arm"
+      ],
+      "array_sha256": "df7e2072fb66247021554bb674b761befc3db1bc5403061bf3461147b43a98bc"
+    },
+    {
+      "index": 458,
+      "episode": "559",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-025.mp4",
+      "tasks": [
+        "pick gray plate from table and place it on plate lower rack with left arm"
+      ],
+      "array_sha256": "bba8b935e29e9907f856a783a1ed5e7d2fc0f1a17aed2131666671604a4b66b0"
+    },
+    {
+      "index": 464,
+      "episode": "800",
+      "dt": 1.200000286102295,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-035.mp4",
+      "tasks": [
+        "push gray plate to right table with left arm"
+      ],
+      "array_sha256": "ba15d24825e180424b65f7fccd7e201824752ed6e166cc349fb755bcdbc76020"
+    },
+    {
+      "index": 470,
+      "episode": "801",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-035.mp4",
+      "tasks": [
+        "push gray plate to right table with left arm"
+      ],
+      "array_sha256": "d2e80bc629112d61f25f776b98b4df86098cee26061c99ae418b8ca4d32afd99"
+    },
+    {
+      "index": 475,
+      "episode": "802",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-035.mp4",
+      "tasks": [
+        "push gray plate to right table with left arm"
+      ],
+      "array_sha256": "2fe6a5770ac31b9c548acf54f9acc364b4d35f4b28a250e0899233b3a0f2e7d6"
+    },
+    {
+      "index": 481,
+      "episode": "803",
+      "dt": 1.200000286102295,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-035.mp4",
+      "tasks": [
+        "push gray plate to right table with left arm"
+      ],
+      "array_sha256": "a8ab1d4271dcc84b49138d30c5defc0c354fc3712aafe360ce5349622b09eb87"
+    },
+    {
+      "index": 488,
+      "episode": "804",
+      "dt": 1.200000286102295,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-035.mp4",
+      "tasks": [
+        "push gray plate to right table with left arm"
+      ],
+      "array_sha256": "a5d55f0b6e86a4cc87cb0da7e73987a900972ef2f287766474ac012c2fd7aad7"
+    },
+    {
+      "index": 494,
+      "episode": "805",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-035.mp4",
+      "tasks": [
+        "push gray plate to right table with left arm"
+      ],
+      "array_sha256": "0a4af0d44085f222c44900112e2edbceea6d870170b8b86e79714b777a90c7e8"
+    },
+    {
+      "index": 501,
+      "episode": "806",
+      "dt": 1.200000286102295,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-035.mp4",
+      "tasks": [
+        "push gray plate to right table with left arm"
+      ],
+      "array_sha256": "a5f053d9da3201dd588de0797fcd61ddfc108c6f83278eb581cc4cf282225e9b"
+    },
+    {
+      "index": 508,
+      "episode": "807",
+      "dt": 1.200000286102295,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-035.mp4",
+      "tasks": [
+        "push gray plate to right table with left arm"
+      ],
+      "array_sha256": "1be75e37119eb4d6f858bd2b30322ea3cb24344545188ee77337b8fecfc494b3"
+    },
+    {
+      "index": 515,
+      "episode": "808",
+      "dt": 1.200000286102295,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-035.mp4",
+      "tasks": [
+        "push gray plate to right table with left arm"
+      ],
+      "array_sha256": "6d04f5e779c2a9cdeb7f10370293abf46056e1dd0bb63e8ad6b9b11e356078c2"
+    },
+    {
+      "index": 522,
+      "episode": "809",
+      "dt": 1.200000286102295,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-035.mp4",
+      "tasks": [
+        "push gray plate to right table with left arm"
+      ],
+      "array_sha256": "8198f5005918f5076898aa2a46333b7a3e070df01856ff59da6c3a66d1b10455"
+    },
+    {
+      "index": 527,
+      "episode": "810",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-035.mp4",
+      "tasks": [
+        "push gray plate to right table with left arm"
+      ],
+      "array_sha256": "86f4219516aecc4de7c5bb991cbbe97aa1872cef815ea3f403e5ab8310b0d15e"
+    },
+    {
+      "index": 532,
+      "episode": "811",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-035.mp4",
+      "tasks": [
+        "push gray plate to right table with left arm"
+      ],
+      "array_sha256": "26987ce30a7d73562121f7e750f65b1e9e31a939d5906baea66f218fd0a9af5d"
+    },
+    {
+      "index": 538,
+      "episode": "812",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-035.mp4",
+      "tasks": [
+        "push gray plate to right table with left arm"
+      ],
+      "array_sha256": "6287c8da821aec80f2cab0a64ff3bf99890ddfadefe1d3cdbb8711b068a5f209"
+    },
+    {
+      "index": 544,
+      "episode": "813",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-035.mp4",
+      "tasks": [
+        "push gray plate to right table with left arm"
+      ],
+      "array_sha256": "2384dd9b9c48e8b191a98ebdd8d107f694e9b5312539abc31e332d2db52650f8"
+    },
+    {
+      "index": 550,
+      "episode": "814",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-035.mp4",
+      "tasks": [
+        "push gray plate to right table with left arm"
+      ],
+      "array_sha256": "9e2ee8d877d08b6caaa365247f84adc97e4060914915d7ced3abcb811e32ab20"
+    },
+    {
+      "index": 555,
+      "episode": "815",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-035.mp4",
+      "tasks": [
+        "push gray plate to right table with left arm"
+      ],
+      "array_sha256": "17a84dfd16ce1a5f0ed25885372fc7162237b8f6c027948b4a72d4c14fffe083"
+    },
+    {
+      "index": 561,
+      "episode": "816",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-035.mp4",
+      "tasks": [
+        "push gray plate to right table with left arm"
+      ],
+      "array_sha256": "61ff890f0080dbc410f0868d2c5b6120d3e0f59b4bc62a75b50e3c5ca12f933d"
+    },
+    {
+      "index": 567,
+      "episode": "817",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-035.mp4",
+      "tasks": [
+        "push gray plate to right table with left arm"
+      ],
+      "array_sha256": "5186bed7e713d3a882f61558525808fef56c84826aff837d5117d88ade9392b9"
+    },
+    {
+      "index": 573,
+      "episode": "818",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-035.mp4",
+      "tasks": [
+        "push gray plate to right table with left arm"
+      ],
+      "array_sha256": "29adfcac6259c9dd81292ac78d252000e23ffdf5523bbf8713b3e6d05f35ae7f"
+    },
+    {
+      "index": 578,
+      "episode": "819",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-035.mp4",
+      "tasks": [
+        "push gray plate to right table with left arm"
+      ],
+      "array_sha256": "2c8b7c1e220bd126e87f97827564cb97038a4cf1187a215c5416b7f88c0c4dd7"
+    },
+    {
+      "index": 584,
+      "episode": "820",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-035.mp4",
+      "tasks": [
+        "push gray plate to right table with left arm"
+      ],
+      "array_sha256": "4635d1b3d359c96c38be552dce54b861ae593dcbab74164c92189c1fc309b410"
+    },
+    {
+      "index": 590,
+      "episode": "821",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-035.mp4",
+      "tasks": [
+        "push gray plate to right table with left arm"
+      ],
+      "array_sha256": "08cfe9be96a024b653aa52bb6f4b589b99cf64629d29a4d4203402a95cd35b1d"
+    },
+    {
+      "index": 595,
+      "episode": "822",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-035.mp4",
+      "tasks": [
+        "push gray plate to right table with left arm"
+      ],
+      "array_sha256": "6627de32c186da6c1b652b82e61c207522d8001db4c44b12499d5355f32d7bc4"
+    },
+    {
+      "index": 601,
+      "episode": "823",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-035.mp4",
+      "tasks": [
+        "push gray plate to right table with left arm"
+      ],
+      "array_sha256": "758963f27ee4458174d7f1d79aa4bad02460dfb07c3dfb0dd8963abb2fd12508"
+    },
+    {
+      "index": 605,
+      "episode": "824",
+      "dt": 1.2000000476837158,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-035.mp4",
+      "tasks": [
+        "push gray plate to right table with left arm"
+      ],
+      "array_sha256": "5a5a9ba71a4d655639ae2eb905e0b98e0149a2406c9e4c9c1a1fb84f1eaf127c"
+    },
+    {
+      "index": 610,
+      "episode": "825",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-035.mp4",
+      "tasks": [
+        "push gray plate to right table with left arm"
+      ],
+      "array_sha256": "e2584f7060bd8ffa3b8316ec320b0601e66ac4dae7f3e55afa85446f4e429754"
+    },
+    {
+      "index": 615,
+      "episode": "826",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-035.mp4",
+      "tasks": [
+        "push gray plate to right table with left arm"
+      ],
+      "array_sha256": "dac70ec24bbce9eab56cbe82b787ce826a0520b2b4950d8b0f9266e5e0c6b6af"
+    },
+    {
+      "index": 620,
+      "episode": "827",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-035.mp4",
+      "tasks": [
+        "push gray plate to right table with left arm"
+      ],
+      "array_sha256": "e7eeb259ff2edd74006c7c898060090592ddd72477b448dea28ddf3e52ac29b1"
+    },
+    {
+      "index": 624,
+      "episode": "828",
+      "dt": 1.2000000476837158,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-035.mp4",
+      "tasks": [
+        "push gray plate to right table with left arm"
+      ],
+      "array_sha256": "3e274a4cbac501f36dbc1c66a1851f1be8a0af62c375654461316b6918fa8809"
+    },
+    {
+      "index": 629,
+      "episode": "829",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-035.mp4",
+      "tasks": [
+        "push gray plate to right table with left arm"
+      ],
+      "array_sha256": "76778ecb846ed033308f293e8b581c292086cef9573f889222604c1067afd4ba"
+    },
+    {
+      "index": 634,
+      "episode": "1100",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-044.mp4",
+      "tasks": [
+        "push gray plate to right table with left arm"
+      ],
+      "array_sha256": "89774f85e59e7893a33dca3afeeb3d9e998a5685696beecd031eac6e24e569aa"
+    },
+    {
+      "index": 640,
+      "episode": "1101",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-044.mp4",
+      "tasks": [
+        "push gray plate to right table with left arm"
+      ],
+      "array_sha256": "d8960ac29e4f5c2836fccd26365c036780ef67bf7f2ac9a986bc923bde51731e"
+    },
+    {
+      "index": 646,
+      "episode": "1102",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-044.mp4",
+      "tasks": [
+        "push gray plate to right table with left arm"
+      ],
+      "array_sha256": "38efb6ac776f0092ff78eb281a464948eb2a54a2115a6cd0ebca107d7ebe50fa"
+    },
+    {
+      "index": 652,
+      "episode": "1103",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-044.mp4",
+      "tasks": [
+        "push gray plate to right table with left arm"
+      ],
+      "array_sha256": "4a2fd56f10cc4b19f7679854277b68b3bc6b53631988fbbaa2e5b5f5d023c926"
+    },
+    {
+      "index": 657,
+      "episode": "1104",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-044.mp4",
+      "tasks": [
+        "push gray plate to right table with left arm"
+      ],
+      "array_sha256": "878d5b4aa6ba5736979738e0610595653b006295e6f363e82d71df3a8ded9237"
+    },
+    {
+      "index": 662,
+      "episode": "1105",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-044.mp4",
+      "tasks": [
+        "push gray plate to right table with left arm"
+      ],
+      "array_sha256": "8e8b5b0888bec90dbbc392c7e309963ad0317b9785747a89a20ef7631ce7752f"
+    },
+    {
+      "index": 667,
+      "episode": "1106",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-044.mp4",
+      "tasks": [
+        "push gray plate to right table with left arm"
+      ],
+      "array_sha256": "f38ab9c3fc158d2bd61c31a9ea7c6d7e2c2a4943b43508e11f3d101db14cd733"
+    },
+    {
+      "index": 672,
+      "episode": "1107",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-044.mp4",
+      "tasks": [
+        "push gray plate to right table with left arm"
+      ],
+      "array_sha256": "1fafad5891a6ebe584c8b2e6a409684ee990315d14d4233321f593126c435aae"
+    },
+    {
+      "index": 678,
+      "episode": "1108",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-044.mp4",
+      "tasks": [
+        "push gray plate to right table with left arm"
+      ],
+      "array_sha256": "7d8243edb27af157cf2e40cc9ccd35a792a7e9441198d09e80f970abec82e248"
+    },
+    {
+      "index": 683,
+      "episode": "1109",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-044.mp4",
+      "tasks": [
+        "push gray plate to right table with left arm"
+      ],
+      "array_sha256": "8473f7d3dcd5341dc86e67a852c8244d9609c51b03abb9bf736a70d60b37a975"
+    },
+    {
+      "index": 688,
+      "episode": "1110",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-044.mp4",
+      "tasks": [
+        "push gray plate to right table with left arm"
+      ],
+      "array_sha256": "dd089bf0ba32ab0c1d3efd2b2c33cc5b22f35e5e26738a8b9d8950d0a2bdf121"
+    },
+    {
+      "index": 694,
+      "episode": "1111",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-044.mp4",
+      "tasks": [
+        "push gray plate to right table with left arm"
+      ],
+      "array_sha256": "638a33c1a9ab109e743d4e6fc476626bb0d4891b6c0ee33741790b09e5a1343e"
+    },
+    {
+      "index": 698,
+      "episode": "1112",
+      "dt": 1.2000000476837158,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-044.mp4",
+      "tasks": [
+        "push gray plate to right table with left arm"
+      ],
+      "array_sha256": "587aff5f624bf6c86cad8b5ae14357c4037dc85f42c4fced47a900644d1f0dcb"
+    },
+    {
+      "index": 703,
+      "episode": "1113",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-044.mp4",
+      "tasks": [
+        "push gray plate to right table with left arm"
+      ],
+      "array_sha256": "a81d690d252dd4402ea90b32f72063281faa3b64c0cb2c6144d3c0dc4c13621e"
+    },
+    {
+      "index": 708,
+      "episode": "1114",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-044.mp4",
+      "tasks": [
+        "push gray plate to right table with left arm"
+      ],
+      "array_sha256": "a9cae685a8acfee2d38ca058c309905d1df76400307b094f29d8c06fc3f29659"
+    },
+    {
+      "index": 713,
+      "episode": "1115",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-044.mp4",
+      "tasks": [
+        "push gray plate to right table with left arm"
+      ],
+      "array_sha256": "9d995c9fc98708dca5e827ed963f56c92f66604cf4ba4b89bfbf49905de93225"
+    },
+    {
+      "index": 717,
+      "episode": "1116",
+      "dt": 1.2000000476837158,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-044.mp4",
+      "tasks": [
+        "push gray plate to right table with left arm"
+      ],
+      "array_sha256": "ea0d3f619788c9213da2c450654d461433ebedc429a23a59b86385aaac2d8a3c"
+    },
+    {
+      "index": 721,
+      "episode": "1117",
+      "dt": 1.2000000476837158,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-044.mp4",
+      "tasks": [
+        "push gray plate to right table with left arm"
+      ],
+      "array_sha256": "0070a37f496f83af1f00c34ef6f3cbfc9987a2598f7a3184d1ae394901ec2fd2"
+    },
+    {
+      "index": 726,
+      "episode": "1118",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-044.mp4",
+      "tasks": [
+        "push gray plate to right table with left arm"
+      ],
+      "array_sha256": "07311fcbc0a85695bcd9eeaafab607c72b9940f56e37b30ee6c7a3825ac0b8df"
+    },
+    {
+      "index": 731,
+      "episode": "1119",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-044.mp4",
+      "tasks": [
+        "push gray plate to right table with left arm"
+      ],
+      "array_sha256": "c675b26e03dfcce64229983a75e1d486d934cbdd6caca163e0ff10a3b96eed09"
+    },
+    {
+      "index": 735,
+      "episode": "1120",
+      "dt": 1.2000000476837158,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-044.mp4",
+      "tasks": [
+        "push gray plate to right table with left arm"
+      ],
+      "array_sha256": "b82254dc91a824d92c98f7bde1736ab672bb9dc1d3e746349a34b5ba2585de5c"
+    },
+    {
+      "index": 739,
+      "episode": "1121",
+      "dt": 1.2000000476837158,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-044.mp4",
+      "tasks": [
+        "push gray plate to right table with left arm"
+      ],
+      "array_sha256": "d5dc12744ebd729a0a38da4c12d81f11d203f2c28aaa432c29477c1616895347"
+    },
+    {
+      "index": 743,
+      "episode": "1122",
+      "dt": 1.2000000476837158,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-044.mp4",
+      "tasks": [
+        "push gray plate to right table with left arm"
+      ],
+      "array_sha256": "7ddce08f7ce10e0e8eb5d114f9bffa26b860da0fc89c6b383ea3953e1b2282aa"
+    },
+    {
+      "index": 748,
+      "episode": "1123",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-044.mp4",
+      "tasks": [
+        "push gray plate to right table with left arm"
+      ],
+      "array_sha256": "5768e4093a3076a822674818a6383b19cb4c4e167ae1173ef4b74784c28ebb9b"
+    },
+    {
+      "index": 752,
+      "episode": "1124",
+      "dt": 1.2000000476837158,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-044.mp4",
+      "tasks": [
+        "push gray plate to right table with left arm"
+      ],
+      "array_sha256": "618ba5359859bfe3744eddafc8b77561d7e312703c426fb1949739cf31ea8d6a"
+    },
+    {
+      "index": 757,
+      "episode": "1125",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-044.mp4",
+      "tasks": [
+        "push gray plate to right table with left arm"
+      ],
+      "array_sha256": "90803c24895d697a91fd61cc6ff0c5f812da4c3030ddf536f6b4ff94b584709b"
+    },
+    {
+      "index": 762,
+      "episode": "1126",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-044.mp4",
+      "tasks": [
+        "push gray plate to right table with left arm"
+      ],
+      "array_sha256": "1c9e56b1da6b7021142083b8182a00d9c22eb903710d9e1100860c51ed7b4ea5"
+    },
+    {
+      "index": 766,
+      "episode": "1127",
+      "dt": 1.2000000476837158,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-044.mp4",
+      "tasks": [
+        "push gray plate to right table with left arm"
+      ],
+      "array_sha256": "536f0a094f73e8b2413e90836f23f94fab3f469b64c9b819ca9327b2599a1420"
+    },
+    {
+      "index": 771,
+      "episode": "1128",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-044.mp4",
+      "tasks": [
+        "push gray plate to right table with left arm"
+      ],
+      "array_sha256": "b24443b09caf6444e42de08a4fd1628262a09345cc7b9f1a7d89dd48b1ed3dc1"
+    },
+    {
+      "index": 776,
+      "episode": "1129",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-044.mp4",
+      "tasks": [
+        "push gray plate to right table with left arm"
+      ],
+      "array_sha256": "bd51c44189ad41f994cbf7b34bd0c23f442b8648dff20c422b0319b570ef8022"
+    },
+    {
+      "index": 780,
+      "episode": "1130",
+      "dt": 1.2000000476837158,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-044.mp4",
+      "tasks": [
+        "push gray plate to right table with left arm"
+      ],
+      "array_sha256": "39b84ceb97e0d23239c6f57206d166d9002440d995609d89801064022300a307"
+    },
+    {
+      "index": 784,
+      "episode": "1131",
+      "dt": 1.2000000476837158,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-044.mp4",
+      "tasks": [
+        "push gray plate to right table with left arm"
+      ],
+      "array_sha256": "8dbcea021062aad546d53282eb4bcc1d581e0e68b5053e8f071ad4de366f6cae"
+    },
+    {
+      "index": 789,
+      "episode": "1132",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-044.mp4",
+      "tasks": [
+        "push gray plate to right table with left arm"
+      ],
+      "array_sha256": "44a9f596f9a3a7aac95e996f5feb374772da7879aac15ce26cd4aa19333f23de"
+    },
+    {
+      "index": 793,
+      "episode": "1133",
+      "dt": 1.2000000476837158,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-044.mp4",
+      "tasks": [
+        "push gray plate to right table with left arm"
+      ],
+      "array_sha256": "e6d0710799891cdbbcf3ccac89160b5eb8eaf463335268f138c49ff80985a751"
+    },
+    {
+      "index": 798,
+      "episode": "1134",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-044.mp4",
+      "tasks": [
+        "push gray plate to right table with left arm"
+      ],
+      "array_sha256": "780b96364786877e636121c45263c97a077f551421e99bc6ea87df2c3891bdd9"
+    },
+    {
+      "index": 803,
+      "episode": "1135",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-044.mp4",
+      "tasks": [
+        "push gray plate to right table with left arm"
+      ],
+      "array_sha256": "ab4aad94ebe720c588988bef6b797c46c881b9dc54cfa11dce29533677e29322"
+    },
+    {
+      "index": 807,
+      "episode": "1136",
+      "dt": 1.2000000476837158,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-044.mp4",
+      "tasks": [
+        "push gray plate to right table with left arm"
+      ],
+      "array_sha256": "9cfe3bb86732d729d21bff2a484bfc7333fd4bdf19a6471fab39c23975df7e76"
+    },
+    {
+      "index": 811,
+      "episode": "1137",
+      "dt": 1.2000000476837158,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-044.mp4",
+      "tasks": [
+        "push gray plate to right table with left arm"
+      ],
+      "array_sha256": "7e76abaf5a36c697198e50b288a9fc6eb26e3f1eb478e77837d37e03fd22789c"
+    },
+    {
+      "index": 815,
+      "episode": "1138",
+      "dt": 1.2000000476837158,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-044.mp4",
+      "tasks": [
+        "push gray plate to right table with left arm"
+      ],
+      "array_sha256": "a526dae04f18b1f9b0fdc39fad5377f5d475c2e6bfb19ef02b5565f4f3659383"
+    },
+    {
+      "index": 820,
+      "episode": "1139",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-044.mp4",
+      "tasks": [
+        "push gray plate to right table with left arm"
+      ],
+      "array_sha256": "3e3725332dbf0408ed3d21cb90fa9f0750f312c1f053be6637f18b9dee6eb4a0"
+    },
+    {
+      "index": 825,
+      "episode": "1400",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-054.mp4",
+      "tasks": [
+        "slide close drawer with right arm"
+      ],
+      "array_sha256": "1096e54976d48b7e4cff8a05ecb0fdb87c6bbd423ef1f45538f175333de7bfc9"
+    },
+    {
+      "index": 830,
+      "episode": "1401",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-054.mp4",
+      "tasks": [
+        "slide close drawer with right arm"
+      ],
+      "array_sha256": "d3d676f065ea4138344f2b70d7c58c25d20263af8599213367683fcd2d9f86d6"
+    },
+    {
+      "index": 834,
+      "episode": "1402",
+      "dt": 1.2000000476837158,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-054.mp4",
+      "tasks": [
+        "slide close drawer with right arm"
+      ],
+      "array_sha256": "faeaaa961db8cc3890eec2eadd3961ab620cc99c05fd62340c9004bce2475d61"
+    },
+    {
+      "index": 839,
+      "episode": "1403",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-054.mp4",
+      "tasks": [
+        "slide close drawer with right arm"
+      ],
+      "array_sha256": "2e8dbbb38fed9ef85a992e4ead006f460f138a8bd12fada7b778b502df8ceb39"
+    },
+    {
+      "index": 844,
+      "episode": "1404",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-054.mp4",
+      "tasks": [
+        "slide close drawer with right arm"
+      ],
+      "array_sha256": "8d21f2da48c494550fce98d85bfc9f2673d4e6adba7c30bc32d88688fd556f9f"
+    },
+    {
+      "index": 850,
+      "episode": "1405",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-054.mp4",
+      "tasks": [
+        "slide close drawer with right arm"
+      ],
+      "array_sha256": "75befce8045137405124d3a029b07ba98431a98629afdfd2986adf2d8ca106d6"
+    },
+    {
+      "index": 856,
+      "episode": "1406",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-054.mp4",
+      "tasks": [
+        "slide close drawer with right arm"
+      ],
+      "array_sha256": "d587c74e894e08a6e9ab05a9b7368506502d3f1d30175c5b349c70248a57c74d"
+    },
+    {
+      "index": 863,
+      "episode": "1407",
+      "dt": 1.200000286102295,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-054.mp4",
+      "tasks": [
+        "slide close drawer with right arm"
+      ],
+      "array_sha256": "1d8dbe4fb8d0da172bff9b24542b740c9df5c83700e0f251a5d4bc4b502582d3"
+    },
+    {
+      "index": 868,
+      "episode": "1408",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-054.mp4",
+      "tasks": [
+        "slide close drawer with right arm"
+      ],
+      "array_sha256": "d75800c95e7c3d978c57d695ca91424c644011185b504514bca20e621be29128"
+    },
+    {
+      "index": 874,
+      "episode": "1409",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-054.mp4",
+      "tasks": [
+        "slide close drawer with right arm"
+      ],
+      "array_sha256": "d9d866e28ac111aa1c722553066973503ac023f2a4abdd1ca9ce86f0080be500"
+    },
+    {
+      "index": 880,
+      "episode": "1410",
+      "dt": 1.200000286102295,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-054.mp4",
+      "tasks": [
+        "slide close drawer with right arm"
+      ],
+      "array_sha256": "320b84601751365df5fff331c7470840d2c8945092e3f52f4c43c4460b946c05"
+    },
+    {
+      "index": 886,
+      "episode": "1411",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-054.mp4",
+      "tasks": [
+        "slide close drawer with right arm"
+      ],
+      "array_sha256": "20722f67d7cb04911c6b2593b1034d8b01dcd82aa7d62a4c4a82d763a5e7c4bd"
+    },
+    {
+      "index": 892,
+      "episode": "1412",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-054.mp4",
+      "tasks": [
+        "slide close drawer with right arm"
+      ],
+      "array_sha256": "6b1cb11b3ecbe2bca10cfe3bd8033b9d6fa727093b3165be8a6a054ef6861747"
+    },
+    {
+      "index": 899,
+      "episode": "1413",
+      "dt": 1.200000286102295,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-054.mp4",
+      "tasks": [
+        "slide close drawer with right arm"
+      ],
+      "array_sha256": "b567e2af72a6bce6d72f191cc7ea04e0e66dbf9e4be052512b777d00942c83c8"
+    },
+    {
+      "index": 905,
+      "episode": "1414",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-054.mp4",
+      "tasks": [
+        "slide close drawer with right arm"
+      ],
+      "array_sha256": "0279614dd2b8e6b946a4c5164c5a26947666ad9b76eb23426a0c9eea86ee77ca"
+    },
+    {
+      "index": 911,
+      "episode": "1415",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-054.mp4",
+      "tasks": [
+        "slide close drawer with right arm"
+      ],
+      "array_sha256": "98236100ebabcb83e274efaba04ca0920d813893d19c9d53aef6b55a575b3f3d"
+    },
+    {
+      "index": 918,
+      "episode": "1416",
+      "dt": 1.200000286102295,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-054.mp4",
+      "tasks": [
+        "slide close drawer with right arm"
+      ],
+      "array_sha256": "9d87708cec15077367db5fb3d5781f708800aa481d11b04efca3745af0c8161f"
+    },
+    {
+      "index": 924,
+      "episode": "1417",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-054.mp4",
+      "tasks": [
+        "slide close drawer with right arm"
+      ],
+      "array_sha256": "cee6c86881b0eb0aa4a58b80ee8b3e8001b9f730dd4f227d3c45b5321c9c6dbb"
+    },
+    {
+      "index": 930,
+      "episode": "1418",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-054.mp4",
+      "tasks": [
+        "slide close drawer with right arm"
+      ],
+      "array_sha256": "b7268e920f8c7f8df85e05a1887786a247c8ad08774c93e6e62042f0a295d564"
+    },
+    {
+      "index": 936,
+      "episode": "1419",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-054.mp4",
+      "tasks": [
+        "slide close drawer with right arm"
+      ],
+      "array_sha256": "06d980b21049672b3bbd101e289a4c398703f6591015719287591091efd3e296"
+    },
+    {
+      "index": 943,
+      "episode": "1420",
+      "dt": 1.200000286102295,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-054.mp4",
+      "tasks": [
+        "slide close drawer with right arm"
+      ],
+      "array_sha256": "6eb6398d542b3293d9905dfabfb6294a47367a9db244e771a584935e3dfbe70b"
+    },
+    {
+      "index": 949,
+      "episode": "1421",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-054.mp4",
+      "tasks": [
+        "slide close drawer with right arm"
+      ],
+      "array_sha256": "d9bfaa5cf21eb546270f2cbcf35e697099791a6175a0af9f90d4fc2c02f4249b"
+    },
+    {
+      "index": 955,
+      "episode": "1422",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-054.mp4",
+      "tasks": [
+        "slide close drawer with right arm"
+      ],
+      "array_sha256": "e59d08f0b4bb7b32f8e9538f6ddd2eb8ee289d5f80205a45eb03e6e0fd550e15"
+    },
+    {
+      "index": 961,
+      "episode": "1423",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-054.mp4",
+      "tasks": [
+        "slide close drawer with right arm"
+      ],
+      "array_sha256": "42f2d2b4e897420485a30d0ffe3f3f78211d3c9051448aeeda00931958c1ede8"
+    },
+    {
+      "index": 967,
+      "episode": "1424",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-054.mp4",
+      "tasks": [
+        "slide close drawer with right arm"
+      ],
+      "array_sha256": "b9adf8d2488bdaeb4aaf2fbd4ed048c4867abbeef5967d6f074e991609379917"
+    },
+    {
+      "index": 973,
+      "episode": "1425",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-054.mp4",
+      "tasks": [
+        "slide close drawer with right arm"
+      ],
+      "array_sha256": "296680528753255bb66885165ba4873ca51f1dd40ff6ea79cc23033ad440581c"
+    },
+    {
+      "index": 979,
+      "episode": "1426",
+      "dt": 1.200000286102295,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-054.mp4",
+      "tasks": [
+        "slide close drawer with right arm"
+      ],
+      "array_sha256": "9861af6368de711e339be4fbc3ddaa9283c0b6a2ecf7ceaebfec2cc0518de59b"
+    },
+    {
+      "index": 985,
+      "episode": "1427",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-054.mp4",
+      "tasks": [
+        "slide close drawer with right arm"
+      ],
+      "array_sha256": "d5386590637100429e19099d400f1aaf5810438afb740bbcd993936f67835a62"
+    },
+    {
+      "index": 991,
+      "episode": "1428",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-054.mp4",
+      "tasks": [
+        "slide close drawer with right arm"
+      ],
+      "array_sha256": "f77c9846c2f1be3b0ccfa00d296de4ecc1598b4ce5dbcd2020a078ee2db2ebf2"
+    },
+    {
+      "index": 996,
+      "episode": "1429",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-054.mp4",
+      "tasks": [
+        "slide close drawer with right arm"
+      ],
+      "array_sha256": "3ee4985a17c382e53c4965c8a45f8661e2c0d7d4038d7aa2a2b6810df9c45de3"
+    },
+    {
+      "index": 1002,
+      "episode": "1590",
+      "dt": 1.200000286102295,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-060.mp4",
+      "tasks": [
+        "slide open drawer with right arm"
+      ],
+      "array_sha256": "8289a9ddfb00811fe458d02a9839fd31f7d2e1a744f0c454c5942fd8d09a0cc6"
+    },
+    {
+      "index": 1010,
+      "episode": "1591",
+      "dt": 1.200000286102295,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-060.mp4",
+      "tasks": [
+        "slide open drawer with right arm"
+      ],
+      "array_sha256": "83611cfea947776c65f4bd9ad04a060ee074c2d2fd95598ab16896282ceee4e8"
+    },
+    {
+      "index": 1019,
+      "episode": "1592",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-060.mp4",
+      "tasks": [
+        "slide open drawer with right arm"
+      ],
+      "array_sha256": "d6d84cb30feca100c3d591082fdaa19e8b870e0d7e4d12c493fc6a6d36f54618"
+    },
+    {
+      "index": 1028,
+      "episode": "1593",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-060.mp4",
+      "tasks": [
+        "slide open drawer with right arm"
+      ],
+      "array_sha256": "a8d2fd225762538c37ec1566f4db25eee1321cf68d98cde0e3480210c599b196"
+    },
+    {
+      "index": 1037,
+      "episode": "1594",
+      "dt": 1.1999998092651367,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-060.mp4",
+      "tasks": [
+        "slide open drawer with right arm"
+      ],
+      "array_sha256": "e27645e6688492da88db050367ecf9f21c519a10eaa89c70a87edd67fbdc7473"
+    },
+    {
+      "index": 1046,
+      "episode": "1595",
+      "dt": 1.200000286102295,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-060.mp4",
+      "tasks": [
+        "slide open drawer with right arm"
+      ],
+      "array_sha256": "584fe792330e2eb4d472c14c83d121befa3cce5a8d83ee7a36e9795e9de5424f"
+    },
+    {
+      "index": 1054,
+      "episode": "1596",
+      "dt": 1.200000286102295,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-060.mp4",
+      "tasks": [
+        "slide open drawer with right arm"
+      ],
+      "array_sha256": "fe1b4f6db08ff632073ef561cb586772a4ae8702c4d66a03be2cda16e56b6f5b"
+    },
+    {
+      "index": 1061,
+      "episode": "1597",
+      "dt": 1.200000286102295,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-060.mp4",
+      "tasks": [
+        "slide open drawer with right arm"
+      ],
+      "array_sha256": "e8f446b0c34733df78106db257285b90d1f03f893d7fea5f55fdad3634722294"
+    },
+    {
+      "index": 1069,
+      "episode": "1598",
+      "dt": 1.200000286102295,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-060.mp4",
+      "tasks": [
+        "slide open drawer with right arm"
+      ],
+      "array_sha256": "64fafdbaca125b11e6a35092f7ef445ab6459a53da8090cf2682fa9571e8b248"
+    },
+    {
+      "index": 1076,
+      "episode": "1599",
+      "dt": 1.200000286102295,
+      "split_group": "franka_fr3_dual/videos/observation.images.camera_top/chunk-000/file-060.mp4",
+      "tasks": [
+        "slide open drawer with right arm"
+      ],
+      "array_sha256": "ac257abdb918814adf1690bd9d9d904e6383724f5d699e7c53248f6151e0cd9a"
+    }
+  ],
+  "disjoint_episode_group_video_path_array_path_video_content": true,
+  "prior_usage_audit": "Base run config uses train and validation only. Repository search found no test-scoring experiment. Preprocessing split/loader verification exists; complete external usage history is not knowable.",
+  "limitations": "Same six task families and camera/domain. Grouped by video shard, original recording IDs unavailable; not a held-out-task or camera-generalization test.",
+  "evaluation_policy": "Only fixed terminal1600 checkpoints, after all six training runs finish. No test access in trainer.",
+  "script_sha256": "0b5bf8ae3256e08d7eea185a57a1bd7ecc0cdf2ebc39a7110fefb01a8383d09e"
+}

@@ -42,3 +42,25 @@ GPU使用率・空きメモリを確認し、他ジョブを変更せずに使�
 ## その後の研究段階
 
 主比較の結果を受けて、データ規模拡大、zからの相対変位・把持状態の予測、行動条件付き予測・制御成功率を検証する。今回の実行範囲はデータ監査と主比較6 runおよび評価まで。制御実験や新しいデータ収集は今回のMSE結果を踏まえて設計する。
+
+## 実装・データ監査の進捗（2026-11-13）
+
+方針はcommit `283bd50`で実装に先立ってpushした。主比較のtrainer、2 GPUの実行キュー、全6 run完了を条件にした最終test評価と学習曲線集計を実装した。
+
+未使用評価候補として既存`test.jsonl`の全170エピソードから、各1個の中間・非末尾pairをモデル出力を見ずに固定した。元モデルのtrain1444／validation160エピソードとのepisode・動画group・動画パス・arrayパス・動画内容hashの重複はない。元runに保存されたtrain/validation manifest hashとも一致する。testは7動画shard・既知の6タスク群・同一カメラであり、未知タスク・未知カメラへの汎化評価ではない。リポジトリにtestスコアを用いた研究記録は見つからなかったが、外部環境を含む完全な使用履歴までは保証しない。[固定した選択と監査](../research/results/difference-idm-ablation-20261113/test-selection.json)。
+
+CPU/GPU回帰テスト155件通過。GPUの4更新smokeでは両方式の初期encoder/head/decoder hashとbatch順が一致し、全24層への非ゼロ勾配を確認した。差分ありの両分岐は逆符号の勾配を受け、差分なしはQを1回だけ計算する。2・4更新checkpointの再読込MSE差は最大2.09e-7だった。学習時最大allocatedは差分あり19.27GiB、差分なし14.25GiB。更新時間は約0.85秒対0.48秒（保存・評価を除く）。[smoke記録](../research/results/difference-idm-ablation-20261113/smoke.json)、[テスト記録](../research/results/difference-idm-ablation-20261113/tests.txt)。
+
+testの特徴抽出では、元`VJEPA_LAM`コンストラクタがmatmul precisionを`medium`へ変更するため、構築後に`highest`へ戻す必要があった。既存trainキャッシュとの照合で発見し修正した。抽出はDINOだけを使い、testの予測スコアを計算しない。
+
+```sh
+# 図の生成に使う追加依存（既存環境ではpython -m pip install matplotlib==3.11.2でも可）。
+uv sync --group research
+# 出力先は大容量ディスク上の新規ディレクトリを指定する。
+.venv/bin/python research/prepare_idm_ablation_test.py audit
+.venv/bin/python research/prepare_idm_ablation_test.py extract --device cuda:0
+.venv/bin/python research/run_idm_ablation.py \
+  --runs /data2/yuki_sadasue/runs/foveated-world-models/difference-idm-ablation-20261113
+```
+
+初回だけaudit/extractを実行する。既存成果物は上書きしない。学習キューは`queue-status.json`、各runの`progress.json`とログに進捗を保存する。途中終了時は同じキューを再実行すると、完了runをスキップして保存済みの同一protocolから再開する。全run完了後に最終評価・18 checkpointの再読込検証・`learning-curves.png`作成まで自動実行する。完了したtest結果は自動で再評価しない。

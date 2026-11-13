@@ -29,6 +29,7 @@ def load_trained_model(path,device='cpu'):
         add_state=False,max_state_dim=cfg['max_state_dim'],num_embodiments=cfg['num_embodiments'])
     head=nn.Sequential(nn.Linear(cfg['dim'],256),nn.GELU(),nn.Linear(256,32))
     decoder=LAMDecoder_v2(**protocol['options']['decoder'])
-    model=DifferenceWorldModel(DifferenceIDM(encoder,head,protocol['scale']),decoder)
+    model=DifferenceWorldModel(DifferenceIDM(encoder,head,protocol['scale'],
+        representation=protocol.get('representation','difference')),decoder)
     model.load_state_dict(saved['model'],strict=True)
     return model.to(device).eval().requires_grad_(False),protocol
