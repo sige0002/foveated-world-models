@@ -1,0 +1,27 @@
+{
+  "plan_sha256": "f594bc1284c004ab1a3a4f0afaadad7bd4d610f249c7c343aae5a195a14ebfcb",
+  "seeds": {
+    "42": {
+      "initial_backbone_head_identical": true,
+      "paired_external_predictor_identical": true,
+      "batch_prefix_identical": true,
+      "lr_scale_identical": true,
+      "prior_matches_original_decoder": true
+    },
+    "43": {
+      "initial_backbone_head_identical": true,
+      "paired_external_predictor_identical": true,
+      "batch_prefix_identical": true,
+      "lr_scale_identical": true,
+      "prior_matches_original_decoder": true
+    },
+    "44": {
+      "initial_backbone_head_identical": true,
+      "paired_external_predictor_identical": true,
+      "batch_prefix_identical": true,
+      "lr_scale_identical": true,
+      "prior_matches_original_decoder": true
+    }
+  },
+  "scope": "Metadata and initial-weight checks; training completion and final weight checks are in each run result."
+}

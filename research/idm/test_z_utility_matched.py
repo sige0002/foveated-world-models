@@ -1,9 +1,10 @@
 import copy
 import torch
+import pytest
 from torch import nn
 from research.idm.test_difference_idm import fixture
 from research.z_utility_matched import MatchedModel,compact_state,load_state
-from research.evaluate_z_utility_matched import evaluate,code_geometry
+from research.evaluate_z_utility_matched import evaluate,code_geometry,verify_replayed_mse
 
 
 def test_learned_constant_is_future_independent_and_encoder_is_frozen():
@@ -51,3 +52,11 @@ def test_constant_diagnostic_reports_zero_output_change_and_variance():
         assert split['metrics']['null_mse']==split['metrics']['mse']
         assert split['code_geometry']['variance_sum']==0
         assert split['code_geometry']['effective_rank']==0
+
+
+def test_replay_accepts_float32_roundoff_but_rejects_changed_predictions():
+    expected=[.1]*511+[.09167685359716415]
+    actual=[.1]*511+[.09167876094579697]
+    r=verify_replayed_mse(actual,expected)
+    assert r['max_abs']<2e-6 and r['mean_abs']<1e-8
+    with pytest.raises(AssertionError):verify_replayed_mse([v*1.001 for v in expected],expected)

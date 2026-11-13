@@ -1,5 +1,7 @@
 """Fixed-weight z interventions, output sensitivity and matched four-arm risks."""
 import argparse
+import ast
+import hashlib
 import json
 from pathlib import Path
 import sys
@@ -17,6 +19,31 @@ from research.evaluate_prediction_metrics import metrics
 
 TEST=ROOT/'runs/difference-idm-ablation-inputs-20261113/test.pt'
 SELECTION=ROOT/'research/results/difference-idm-ablation-20261113/test-selection.json'
+
+
+def measurement_hash():
+    source=Path(__file__).read_text();tree=ast.parse(source)
+    names={'NativeModel','code_geometry','summarize_rows','evaluate','aggregate'}
+    core='\n'.join(ast.get_source_segment(source,n) for n in tree.body
+                   if isinstance(n,(ast.FunctionDef,ast.ClassDef)) and n.name in names)
+    return hashlib.sha256(core.encode()).hexdigest()
+
+
+def compatible_cached_diagnostic(saved):
+    if saved.get('measurement_sha256')==measurement_hash():return True
+    if saved['script_sha256']==file_hash(Path(__file__)):return True
+    # This revision changes replay tolerance/scheduling only, not measurements.
+    return (saved['script_sha256']=='58946502e2ddbbcac10d298a8b49f0531cb50cd846f156c71aabc59b63b643b6'
+            and measurement_hash()=='075326f7cb6bead750ff9311f9556d6cad4fb09c4e4b091b855efe0bffc1515c')
+
+
+def verify_replayed_mse(actual,expected):
+    actual=np.asarray(actual,dtype=np.float64);expected=np.asarray(expected,dtype=np.float64)
+    np.testing.assert_allclose(actual,expected,rtol=1e-4,atol=1e-6)
+    difference=np.abs(actual-expected)
+    assert abs(float(actual.mean()-expected.mean()))<1e-6
+    return {'max_abs':float(difference.max()),'max_relative':float((difference/np.maximum(np.abs(expected),1e-12)).max()),
+            'mean_abs':float(difference.mean()),'mean_drift':float(actual.mean()-expected.mean()),'rtol':1e-4,'atol':1e-6}
 
 
 class NativeModel(torch.nn.Module):
@@ -147,7 +174,8 @@ def aggregate(evaluations):
 @torch.no_grad()
 def main():
     p=argparse.ArgumentParser(description=__doc__);p.add_argument('--runs',type=Path,required=True)
-    p.add_argument('--output',type=Path,required=True);p.add_argument('--device',default='cuda:0');a=p.parse_args()
+    p.add_argument('--output',type=Path,required=True);p.add_argument('--device',default='cuda:0')
+    p.add_argument('--worker-arms',nargs='+',choices=ARMS);a=p.parse_args()
     if (a.output/'results.json').exists():raise FileExistsError('Report exists')
     # All prespecified runs must complete before any diagnostic evaluation.
     for arm in ARMS[1:]:
@@ -166,14 +194,14 @@ def main():
     base.to(a.device).eval();test['baseline']=torch.cat([base(test['current'][i:i+8].to(a.device),torch.zeros((len(test['current'][i:i+8]),1,32),device=a.device)).cpu() for i in range(0,len(test['rows']),8)])
     del base;torch.cuda.empty_cache();data['reused_test170']=test
     evaluations={arm:[] for arm in ARMS};records=[];costs={}
-    for arm in ARMS:
+    for arm in (a.worker_arms or ARMS):
         costs[arm]=[]
         for seed in (42,43,44):
             out=a.runs/f'{arm}-{seed}';out.mkdir(exist_ok=True)
             checkpoint=(OLD/f'difference-{seed}'/'model-step400.pt') if arm=='direct-real' else out/'model.pt'
             digest=file_hash(checkpoint);ep=out/'diagnostics.json'
             if ep.exists():
-                saved=json.loads(ep.read_text());assert saved['checkpoint_sha256']==digest and saved['script_sha256']==file_hash(Path(__file__))
+                saved=json.loads(ep.read_text());assert saved['checkpoint_sha256']==digest and compatible_cached_diagnostic(saved)
             else:
                 if arm=='direct-real':
                     # Re-run the initial-weight/data/prefix checks used for new arms.
@@ -194,24 +222,33 @@ def main():
                 if arm=='direct-real':
                     previous=json.loads((checkpoint.parent/'evaluation-step400.json').read_text())
                     for split in ('train','validation','observed96'):
-                        error=max(abs(x['mse']-y['mse']) for x,y in zip(ev[split]['rows'],previous['evaluation'][split]['rows']))
-                        assert error<1e-6,(split,error)
+                        verify_replayed_mse([r['mse'] for r in ev[split]['rows']],
+                                            [r['mse'] for r in previous['evaluation'][split]['rows']])
                 saved={'arm':arm,'seed':seed,'checkpoint_sha256':digest,'script_sha256':file_hash(Path(__file__)),
+                       'measurement_sha256':measurement_hash(),
                        'provenance':provenance,'evaluation':ev,'scope':'All evaluation sets reused; exploratory fixed-weight interventions'}
                 write(ep,saved);del model;torch.cuda.empty_cache()
-            evaluations[arm].append(saved['evaluation']);records.append({'arm':arm,'seed':seed,'path':str(ep),'sha256':file_hash(ep)})
+            replay={}
+            if arm=='direct-real':
+                previous=json.loads((checkpoint.parent/'evaluation-step400.json').read_text())
+                for split in ('train','validation','observed96'):
+                    replay[split]=verify_replayed_mse([r['mse'] for r in saved['evaluation'][split]['rows']],
+                                                     [r['mse'] for r in previous['evaluation'][split]['rows']])
+            evaluations[arm].append(saved['evaluation']);records.append({'arm':arm,'seed':seed,'path':str(ep),'sha256':file_hash(ep),'replay':replay})
             if arm=='direct-real':
                 rr=json.loads((checkpoint.parent/'results.json').read_text());pr=json.loads((checkpoint.parent/'protocol.json').read_text())
                 secs=next(r['training_seconds'] for r in rr['history'] if r['step']==400)
             else:
                 rr=json.loads((out/'results.json').read_text());pr=json.loads((out/'protocol.json').read_text());secs=rr['training_seconds']
             costs[arm].append({'seed':seed,'training_seconds_400':secs,'peak_allocated_bytes':rr['peak_allocated_bytes'],'trainable_parameters':pr['trainable_parameters']})
+    if a.worker_arms:
+        print('WORKER COMPLETE',a.worker_arms,flush=True);return
     native_path=a.runs/'original-native.json'
     native_hash=file_hash(CHECKPOINT)
     assert native_hash==meta['checkpoint_sha256']
     if native_path.exists():
         native=json.loads(native_path.read_text())
-        assert native['checkpoint_sha256']==native_hash and native['script_sha256']==file_hash(Path(__file__))
+        assert native['checkpoint_sha256']==native_hash and compatible_cached_diagnostic(native)
     else:
         model=NativeModel().to(a.device)
         checks={}

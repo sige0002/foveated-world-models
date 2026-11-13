@@ -43,6 +43,18 @@ def main():
         for f in [executor.submit(worker,d) for d in ('cuda:0','cuda:1')]:f.result()
     if failed.is_set():status['state']='failed';record('summary',{'state':'not_started'});return 1
     status['state']='evaluating';record('summary',{'state':'running'})
+    # Disjoint output ownership; no two workers evaluate the same arm.
+    def evaluate_worker(device,arms):
+        with (a.runs/f'evaluation-{device.replace(":","-")}.log').open('a') as log:
+            return subprocess.run([sys.executable,str(ROOT/'research/evaluate_z_utility_matched.py'),
+                '--runs',str(a.runs),'--output',str(a.output),'--device',device,'--worker-arms',*arms],
+                cwd=ROOT,stdout=log,stderr=subprocess.STDOUT).returncode
+    with ThreadPoolExecutor(max_workers=2) as executor:
+        futures=[executor.submit(evaluate_worker,'cuda:0',['direct-real','external-constant']),
+                 executor.submit(evaluate_worker,'cuda:1',['external-real','direct-constant'])]
+        codes=[f.result() for f in futures]
+    if any(codes):
+        status['state']='failed';record('summary',{'state':'failed','worker_returncodes':codes});return 1
     with (a.runs/'summary.log').open('a') as log:
         code=subprocess.run([sys.executable,str(ROOT/'research/evaluate_z_utility_matched.py'),'--runs',str(a.runs),'--output',str(a.output)],cwd=ROOT,stdout=log,stderr=subprocess.STDOUT).returncode
     status['state']='complete' if code==0 else 'failed';record('summary',{'state':status['state'],'returncode':code,'finished_unix':time.time()})

@@ -1,0 +1,134 @@
+{
+  "checkpoint_sha256": "7212d2db040ec4bed5e998287cbff01e59ac516ce14c489433b56f2945974200",
+  "script_sha256": "2fb29960e96c4a403c0f9fbda8ad799f1fbb80fefd8304a6194dae81b723d2c4",
+  "vq_kwargs": {
+    "beta": 5e-05,
+    "layer_norm": true
+  },
+  "splits": {
+    "train": {
+      "source_sha256": "5af88bae84806b6d91532cb44b532ffa4f54bef6afe86b79e4a1bbb05281cb6b",
+      "cached_native_code_max_abs": 4.76837158203125e-07,
+      "stages": {
+        "query": {
+          "common_mean_energy": 125778466.5532,
+          "between_example_variance": 40254.98164777373,
+          "variance_fraction": 0.00031994429093467133,
+          "same_current_future_vs_reference_energy": 37333.31915779287,
+          "reference_difference_over_common": 0.0002968180498686724
+        },
+        "projection": {
+          "common_mean_energy": 1015920020.939643,
+          "between_example_variance": 100506.77283897036,
+          "variance_fraction": 9.892199035117547e-05,
+          "same_current_future_vs_reference_energy": 92125.51829942795,
+          "reference_difference_over_common": 9.06818611707439e-05
+        },
+        "pre_norm": {
+          "common_mean_energy": 37.66434157805415,
+          "between_example_variance": 0.00018634638244773027,
+          "variance_fraction": 4.947530016082571e-06,
+          "same_current_future_vs_reference_energy": 0.0001742395568857865,
+          "reference_difference_over_common": 4.626114504741814e-06
+        },
+        "mu": {
+          "common_mean_energy": 0.5598012551097981,
+          "between_example_variance": 5.358867536018574e-05,
+          "variance_fraction": 9.571887419580878e-05,
+          "same_current_future_vs_reference_energy": 5.030370939413617e-05,
+          "reference_difference_over_common": 8.985994392647391e-05
+        },
+        "logvar": {
+          "common_mean_energy": 324.89163554615243,
+          "between_example_variance": 2.9036039627736596e-05,
+          "variance_fraction": 8.937145145006013e-08,
+          "same_current_future_vs_reference_energy": 2.718888852593082e-05,
+          "reference_difference_over_common": 8.368602189534827e-08
+        }
+      }
+    },
+    "validation": {
+      "source_sha256": "23059085f626ffaa12cdab27c1fa25fc93081cdaacb206409b5aa316edfde36e",
+      "cached_native_code_max_abs": 3.8743019104003906e-07,
+      "stages": {
+        "query": {
+          "common_mean_energy": 126075201.53147665,
+          "between_example_variance": 35852.05680124488,
+          "variance_fraction": 0.00028428956686297444,
+          "same_current_future_vs_reference_energy": 46389.682475542904,
+          "reference_difference_over_common": 0.0003679524752848481
+        },
+        "projection": {
+          "common_mean_energy": 1018774650.393142,
+          "between_example_variance": 73624.02550247023,
+          "variance_fraction": 7.226201128375092e-05,
+          "same_current_future_vs_reference_energy": 100383.98708340952,
+          "reference_difference_over_common": 9.853404483972156e-05
+        },
+        "pre_norm": {
+          "common_mean_energy": 37.66446991221076,
+          "between_example_variance": 0.00017686782096037389,
+          "variance_fraction": 4.6958576830233825e-06,
+          "same_current_future_vs_reference_energy": 0.00022752880010334003,
+          "reference_difference_over_common": 6.040939926505525e-06
+        },
+        "mu": {
+          "common_mean_energy": 0.5599728331309153,
+          "between_example_variance": 5.047965231568268e-05,
+          "variance_fraction": 9.013848381562272e-05,
+          "same_current_future_vs_reference_energy": 6.5636038590618e-05,
+          "reference_difference_over_common": 0.00011721289803227479
+        },
+        "logvar": {
+          "common_mean_energy": 324.89047988977586,
+          "between_example_variance": 2.7556086892102012e-05,
+          "variance_fraction": 8.481653437256473e-08,
+          "same_current_future_vs_reference_energy": 3.5675348190267187e-05,
+          "reference_difference_over_common": 1.0980730553376203e-07
+        }
+      }
+    },
+    "observed96": {
+      "source_sha256": "5e538db05cb827f6f5accf131494aaf04ac3fb9fab14a1e364e4dfeab03925a0",
+      "cached_native_code_max_abs": 3.129243850708008e-07,
+      "stages": {
+        "query": {
+          "common_mean_energy": 125894970.5952292,
+          "between_example_variance": 30978.47616893363,
+          "variance_fraction": 0.00024600550083104237,
+          "same_current_future_vs_reference_energy": 14690.423905169147,
+          "reference_difference_over_common": 0.00011668793308988502
+        },
+        "projection": {
+          "common_mean_energy": 1017049571.6122983,
+          "between_example_variance": 67981.38248101831,
+          "variance_fraction": 6.683729160002734e-05,
+          "same_current_future_vs_reference_energy": 39245.15436105623,
+          "reference_difference_over_common": 3.858725814007479e-05
+        },
+        "pre_norm": {
+          "common_mean_energy": 37.664456480136685,
+          "between_example_variance": 0.00014843195361361508,
+          "variance_fraction": 3.940887046606683e-06,
+          "same_current_future_vs_reference_energy": 6.457786813572287e-05,
+          "reference_difference_over_common": 1.7145572821362672e-06
+        },
+        "mu": {
+          "common_mean_energy": 0.5599201290636913,
+          "between_example_variance": 4.22323717672685e-05,
+          "variance_fraction": 7.542001869376754e-05,
+          "same_current_future_vs_reference_energy": 1.8569504183304408e-05,
+          "reference_difference_over_common": 3.3164559049442776e-05
+        },
+        "logvar": {
+          "common_mean_energy": 324.8916390162011,
+          "between_example_variance": 2.3255297130732057e-05,
+          "variance_fraction": 7.157862091055628e-08,
+          "same_current_future_vs_reference_energy": 1.0360270863429832e-05,
+          "reference_difference_over_common": 3.1888388678765616e-08
+        }
+      }
+    }
+  },
+  "scope": "Post-hoc CPU trace of cached Q(C,F) and Q(C,C) through unchanged original projection/norm/VAE. Ratios are diagnostics, not mutual information or causal attribution."
+}

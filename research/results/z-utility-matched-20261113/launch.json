@@ -1,0 +1,13 @@
+{
+  "pid": 3332037,
+  "started_unix": 1794551335.1951537,
+  "command": [
+    "/home/yuki_sadasue/foveated-world-models/.venv/bin/python",
+    "-u",
+    "/home/yuki_sadasue/foveated-world-models/research/run_z_utility_matched.py",
+    "--runs",
+    "/data2/yuki_sadasue/runs/foveated-world-models/z-utility-matched-20261113"
+  ],
+  "commit": "cacad90ca5d34412bd28bc1533f2727d9eb85b95",
+  "scope": "9 new runs plus 3 verified reused direct-real400 checkpoints; native baseline scored unchanged"
+}
