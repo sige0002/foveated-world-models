@@ -1,0 +1,23 @@
+{
+  "reason": "User requested CPU training stopped and its trained models discarded",
+  "processes": [
+    {
+      "pid": 2143551,
+      "status": "SIGTERM_sent",
+      "command": "/home/sadasue/foveated-world-models/.venv/bin/python -u research/train_early_condition.py --source /home/sadasue/foveated-world-models --output /home/sadasue/foveated-world-models/runs/early-condition-real-512-400-20261113 --arm real --threads 4 --train "
+    },
+    {
+      "pid": 2143574,
+      "status": "SIGTERM_sent",
+      "command": "/home/sadasue/foveated-world-models/.venv/bin/python -u research/train_early_condition.py --source /home/sadasue/foveated-world-models --output /home/sadasue/foveated-world-models/runs/early-condition-constant-512-400-20261113 --arm constant --threads 4 --train "
+    },
+    {
+      "pid": 2143602,
+      "status": "SIGTERM_sent",
+      "command": "/home/sadasue/foveated-world-models/.venv/bin/python -u research/train_early_condition.py --source /home/sadasue/foveated-world-models --output /home/sadasue/foveated-world-models/runs/early-condition-rms_constant-512-400-20261113 --arm rms_constant --threads 4 --train "
+    }
+  ],
+  "all_stopped": true,
+  "deleted_model_files": [],
+  "scope": "Only three early-condition CPU runs; baseline model, GPU layerwise run and audit logs retained."
+}
