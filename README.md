@@ -23,7 +23,7 @@
 | LaWM | 現在特徴と z から未来特徴を予測する |
 | 補助状態予測器 | 現在の手先状態と z から未来の手先状態を予測する |
 
-IDMとLaWMは同時に学習します。基準の学習信号は、未来DINO特徴のMSE、補助手先状態のMSE、潜在行動のKL正則化です。視覚予測の対象はRGB画素ではなくDINO特徴です。
+IDMとLaWMは同時に学習します。今回の基準設定の学習信号は、未来DINO特徴のsmooth-L1、補助手先状態のMSE、潜在行動のKL正則化です。研究用の追加学習・評価では特徴MSEも使います。視覚予測の対象はRGB画素ではなくDINO特徴です。
 
 Stage 1ではIDMが正解未来を見るため、主評価は**未来由来のzを条件とした予測能力**です。現在観測だけから未来を選ぶ能力とは区別します。Stage 2のPolicy Prior・Action Expertの改良や閉ループ制御は、今回の研究範囲に含めません。
 
@@ -40,6 +40,8 @@ Stage 1ではIDMが正解未来を見るため、主評価は**未来由来のz�
 | 資料 | 内容 |
 |---|---|
 | [研究計画](docs/research-plan.md) | 仮説、候補構造、情報の利用条件、目指す貢献 |
+| [公式実装との比較](docs/official-implementation-comparison.md) | 同じ重みでz・予測・勾配が一致。状態前処理と学習条件の相違 |
+| [z利用の同条件比較](docs/z-utility-matched-results.md) | 共同学習・外付け・定数学習対照と、ローカル元モデルのz診断 |
 | [実験計画](docs/experiments.md) | 基準、比較実験、評価指標、進む・見直す判断 |
 | [重点関連研究](docs/related-work.md) | LaWAM Stage 1の詳細と、情報分離・中心視野に関する先行研究 |
 | [統合論文サーベイ](surveys/architecture/survey.csv) | 既存の広範な文献調査111件 |

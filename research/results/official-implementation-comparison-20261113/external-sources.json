@@ -1,0 +1,13 @@
+{
+  "release_commit": "bd993da2a0861afaac5a95ac86d2555b1313ab8c",
+  "release_config_url": "https://huggingface.co/jialei02/lawam_lam/raw/bd993da2a0861afaac5a95ac86d2555b1313ab8c/dino_large_vae.yaml",
+  "release_config_sha256": "e5f98738d1c6dc8d8643d5a73d44ebd46385fbb2fc4031d46a02ad384a353449",
+  "official_data_files_sha256": {
+    "starVLA/dataloader/gr00t_lerobot/data_config.py": "949ad078f1cd11a481ef6feb5c2d21487168ba42d8648323459aecf62f194cfa",
+    "starVLA/dataloader/gr00t_lerobot/data_config_lam.py": "9b2f62785ad62a17d3acf7f06fd030e69ad83ca7adad9088bdbfe33a7cd5d09f",
+    "starVLA/dataloader/gr00t_lerobot/transform/state_action.py": "c714f8999c01052d23779f98f4ec8d20a662ac71844fd235d2bf93a0a2a8d636",
+    "starVLA/dataloader/gr00t_lerobot/transform/video.py": "0aefc2a51c004b9c57eedb86e781e68865a5be32108a92307e81ea5120a23e8a",
+    "starVLA/dataloader/gr00t_lerobot/mixtures.py": "237383951ffbfd36c9501a3dc5dbfa4362281b9f12e3f0a1379144fed4894b42",
+    "latent_action_model/data_loader/lerobot_dataset.py": "0a11ed9c81f3d921056652cd38c665669504c87c861caff13c6c31f3427dd62b"
+  }
+}

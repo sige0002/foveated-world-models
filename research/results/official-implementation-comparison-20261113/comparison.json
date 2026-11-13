@@ -1,0 +1,153 @@
+{
+  "eval_fp32": {
+    "tensors": {
+      "videos": {
+        "equal": true,
+        "shape": [
+          2,
+          2,
+          3,
+          256,
+          256
+        ],
+        "max_abs_difference": 0.0
+      },
+      "dec_videos": {
+        "equal": true,
+        "shape": [
+          2,
+          2,
+          3,
+          256,
+          256
+        ],
+        "max_abs_difference": 0.0
+      },
+      "encoder_nodes": {
+        "equal": true,
+        "shape": [
+          2,
+          1,
+          32
+        ],
+        "max_abs_difference": 0.0
+      },
+      "z": {
+        "equal": true,
+        "shape": [
+          2,
+          1,
+          32
+        ],
+        "max_abs_difference": 0.0
+      },
+      "current_features": {
+        "equal": true,
+        "shape": [
+          2,
+          1,
+          256,
+          768
+        ],
+        "max_abs_difference": 0.0
+      },
+      "prediction": {
+        "equal": true,
+        "shape": [
+          2,
+          1,
+          256,
+          768
+        ],
+        "max_abs_difference": 0.0
+      },
+      "loss": {
+        "equal": true,
+        "shape": [],
+        "max_abs_difference": 0.0
+      }
+    },
+    "gradients_checked": 0,
+    "gradients_absent": 0,
+    "gradient_differences": [],
+    "common_logs_equal": true,
+    "extra_local_logs": [
+      "copy_feature_mse",
+      "feature_mse"
+    ]
+  },
+  "train_bf16": {
+    "tensors": {
+      "videos": {
+        "equal": true,
+        "shape": [
+          2,
+          2,
+          3,
+          256,
+          256
+        ],
+        "max_abs_difference": 0.0
+      },
+      "dec_videos": {
+        "equal": true,
+        "shape": [
+          2,
+          2,
+          3,
+          256,
+          256
+        ],
+        "max_abs_difference": 0.0
+      },
+      "encoder_nodes": {
+        "equal": true,
+        "shape": [
+          2,
+          1,
+          32
+        ],
+        "max_abs_difference": 0.0
+      },
+      "z": {
+        "equal": true,
+        "shape": [
+          2,
+          1,
+          32
+        ],
+        "max_abs_difference": 0.0
+      },
+      "current_features": {
+        "equal": true,
+        "shape": [
+          2,
+          1,
+          256,
+          768
+        ],
+        "max_abs_difference": 0.0
+      },
+      "prediction": {
+        "equal": true,
+        "shape": [
+          2,
+          1,
+          256,
+          768
+        ],
+        "max_abs_difference": 0.0
+      },
+      "loss": {
+        "equal": true,
+        "shape": [],
+        "max_abs_difference": 0.0
+      }
+    },
+    "gradients_checked": 449,
+    "gradients_absent": 0,
+    "gradient_differences": [],
+    "common_logs_equal": true,
+    "extra_local_logs": []
+  }
+}
