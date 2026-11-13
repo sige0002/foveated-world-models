@@ -142,6 +142,19 @@ def main():
         def load_state_dict(self, state_dict):
             super().load_state_dict(relocated_checkpoint_state(state_dict, self.dirpath))
 
+        def on_validation_end(self, trainer, pl_module):
+            interval = config.get('checkpoint_every_n_steps')
+            if interval is None:
+                return super().on_validation_end(trainer, pl_module)
+            if trainer.sanity_checking or trainer.global_step % int(interval):
+                return
+            if self._should_skip_saving_checkpoint(trainer):
+                return
+            candidates = self._monitor_candidates(trainer)
+            self._save_topk_checkpoint(trainer, candidates)
+            # Lightning 2.6 otherwise refreshes last only when top-k improved.
+            self._save_last_checkpoint(trainer, candidates)
+
     class TrainingProgress(Callback):
         def on_train_start(self, trainer, pl_module):
             self.started = time.monotonic()

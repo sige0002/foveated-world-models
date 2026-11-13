@@ -4,11 +4,11 @@
 
 ## 実行条件
 
-[GB10設定](../configs/stage1_lerobot_gb10.yaml)は修正後RoboMIND設定を継承し、原本データとDINOのローカルパスだけを指定する。seed42、batch2、warmup5000、10000更新、BF16 mixed、IDM24層・LaWM12層・幅1024・z32。学習対象は約6.4億パラメータ、DINOは固定。validationは100更新ごとに全950ペアを評価する。
+[GB10設定](../configs/stage1_lerobot_gb10.yaml)は修正後RoboMIND設定を継承し、原本データとDINOのローカルパスだけを指定する。seed42、batch2、warmup5000、10000更新、BF16 mixed、IDM24層・LaWM12層・幅1024・z32。学習対象は約6.4億パラメータ、DINOは固定。当初validationは100更新ごとだったが、ユーザーの指示で検証・保存とも2000更新ごとへ変更した。epoch境界によらずglobal stepで実行する。
 
 GPU使用率0%を確認して開始した。他用途の常駐プロセスには変更を加えていない。出力は `runs/stage1-lerobot-rpy14-minmax-gb10-20261113`。20更新ごとの `progress.json`、`training.log`、Lightning checkpointを保存する。生のcheckpointはGitへ含めない。
 
-保存先を訂正し、現在の実体は `/media/sadasue/SSD1/foveated-world-models/runs/stage1-lerobot-rpy14-minmax-gb10-20261113` に置く。上記リポジトリ内パスはSSD1へのシンボリックリンクである。移動前後のcheckpoint SHA256一致を確認し、800更新から再開した。通常の保持対象は最良1件と最新1件、終了時にfinalを追加する。旧パスが同じ実体へ解決される場合は、再開時にcheckpoint管理のパスだけを正規化し、最良モデルの記録を維持する。
+保存先を訂正し、現在の実体は `/media/sadasue/SSD1/foveated-world-models/runs/stage1-lerobot-rpy14-minmax-gb10-20261113` に置く。上記リポジトリ内パスはSSD1へのシンボリックリンクである。移動前後のcheckpoint SHA256一致を確認し、800更新から再開した。通常の保持対象は最良1件と最新1件、終了時にfinalを追加する。Lightning 2.6の既定実装では改善時だけlastが更新されるため、2000更新ごとの検証では改善の有無によらず最新も保存する処理を追加した。旧パスが同じ実体へ解決される場合は、再開時にcheckpoint管理のパスだけを正規化し、最良モデルの記録を維持する。
 
 ユーザーの指示により、旧データ処理で学習したモデル164ファイル（47,393,223,957 bytes）を削除した。旧基準モデル、その複製、外付け補正器、内部adapter、IDM headやprobeの学習済み重みを含む。原本データ、DINOの事前学習重み、特徴cache、過去の評価記録は維持した。旧研究のcheckpointパス・hashは履歴であり、今後その重みを読み直すことはできない。[削除記録](../research/results/legacy-model-deletion-20261113.json)、[本学習checkpoint移動記録](../research/results/ssd1-checkpoint-migration-20261113.json)。
 
@@ -36,3 +36,7 @@ OMP_NUM_THREADS=4 MKL_NUM_THREADS=4 .venv/bin/python -u research/run_corrected_s
 ```
 
 出力先は新規ディレクトリを指定する。`pipeline_status.json` が `complete` になり、`run_summary.json` と `revalidation.json` が揃って初めて本学習・再検証完了と扱う。
+
+## 2000更新間隔への変更時点
+
+学習ログは5000更新まで進んでいたが、旧保存処理で最後に保存されていたのは4500更新だった。設定変更のため停止し、4500更新のcheckpointでvalidationだけの途中z診断を実行してから、4500更新のoptimizer状態を復元して再開する。未保存の4501–5000更新は引き継げない。次の定期保存は6000、8000、10000更新。診断用snapshotは既存checkpointへの一時hard linkで、診断成功後に削除する。通常の保存数を増やさない。

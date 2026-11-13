@@ -6,3 +6,6 @@ data:
   root: /media/sadasue/SSD1/foveated-world-models/datasets/RoboMIND-lerobot/franka_fr3_dual
 trainer:
   enable_progress_bar: false
+  val_check_interval: 2000
+  check_val_every_n_epoch: null
+checkpoint_every_n_steps: 2000

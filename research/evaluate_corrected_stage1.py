@@ -25,6 +25,8 @@ def main():
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument('--run',type=Path,required=True)
     p.add_argument('--output',type=Path,required=True)
+    p.add_argument('--checkpoint',type=Path,help='Optional immutable intermediate checkpoint snapshot')
+    p.add_argument('--split',choices=['validation','test','both'],default='both')
     p.add_argument('--limit',type=int,default=0,help='Smoke only: first N pairs per split; 0 evaluates all')
     a=p.parse_args()
     if a.output.exists():p.error('Output must be new')
@@ -35,7 +37,7 @@ def main():
     opts={k:mc[k] for k in ('image_hw','max_state_dim','num_embodiments')}
     opts.update({k:dc[k] for k in ('horizon_seconds','tolerance_seconds')})
     train=LeRobotRoboMINDDataset(source,'train',**opts)
-    ck=a.run/'checkpoints/final.ckpt'
+    ck=a.checkpoint or a.run/'checkpoints/final.ckpt'
     saved=torch.load(ck,map_location='cpu',weights_only=True,mmap=True)
     check_resume_contract(saved,train.contract)
     model=VJEPA_LAM(**mc).eval().requires_grad_(False)
@@ -47,7 +49,7 @@ def main():
             'precision':'float32 highest, no augmentation','limit':a.limit,
             'scope':'Corrected raw-data reconstruction with true-future posterior mean; zero and cyclic code permutation are diagnostic interventions. No legacy-cache numerical comparison or deployment claim. Test split has prior research exposure.',
             'splits':{}}
-    for split in ('validation','test'):
+    for split in (('validation','test') if a.split=='both' else (a.split,)):
         ds=LeRobotRoboMINDDataset(source,split,**opts)
         indices=list(range(min(a.limit,len(ds)) if a.limit else len(ds)))
         loader=DataLoader(Subset(ds,indices),batch_size=2,num_workers=2,
