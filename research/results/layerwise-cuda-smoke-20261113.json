@@ -1,0 +1,40 @@
+{
+  "complete": true,
+  "scope": "One disposable training-row step; no validation improvement or deployment claim.",
+  "device": "cuda",
+  "threads": 2,
+  "source_hashes": {
+    "/home/sadasue/foveated-world-models/runs/reference-idm42-nested512-prior10000/train.pt": "7c2d6fe143bd83cfad43d0d919344b3070bb8a0b9a3bc598a84d410fecc798de",
+    "/home/sadasue/foveated-world-models/runs/reference-idm42-nested512-prior10000/cache_manifest.json": "998ed490c2ab76209c21b76c2fcd3fa83c95d8ad100def6aad536ce069fa8471",
+    "/home/sadasue/foveated-world-models/runs/reference-idm42-nested512-prior10000/validation.pt": "bbb4d0d49e9f4a4a3500e9c78260e3feaf9da33963f5977d98c8983d122c1c09",
+    "/home/sadasue/foveated-world-models/runs/reference-idm42-observed96-prior10000/validation.pt": "7b419bea1eda0f0e871ab40273bf1b59a1d67d5bf2bab23885ba9fee43ab40f4",
+    "/home/sadasue/foveated-world-models/runs/reference-idm42-observed96-prior10000/cache_manifest.json": "296da56241940e7dd2eb1250ee357a258d4551192c55dcd5c6529c37cbfeba29",
+    "/home/sadasue/foveated-world-models/runs/frozen-model-step10000/reference_weights.pt": "1e68b8eb97c529646a7bbc9c6e02b7cf759c97b82a485241b85669bf7613a1d6",
+    "/home/sadasue/foveated-world-models/runs/frozen-model-step10000/resolved_config.yaml": "d5c751aaee764935499415b064c1a3991655aefcaabfbbfde8265dcea312208f",
+    "/home/sadasue/foveated-world-models/research/check_layerwise_condition.py": "3e7f4f26274750a68a894f244b432bd4536cad041367b699135d45a00a9baa33",
+    "/home/sadasue/foveated-world-models/research/layerwise_condition.py": "8fcff406e21192b922cfd5802590d10dfa0c586bc3fda4c01f4b20ca2ab5b014",
+    "/home/sadasue/foveated-world-models/research/train_early_condition.py": "2afdf2c0a073c9cf074727d6241a8a41aec1ccee19093a7704e3d7109fb9db17"
+  },
+  "trainable_parameters": 393216,
+  "initial_prior_exact": true,
+  "zero_prior_after_update_exact": true,
+  "frozen_weights_unchanged": true,
+  "layer_gradient_norms": [
+    0.005413418170064688,
+    0.017374975606799126,
+    0.006875884253531694,
+    0.01627309061586857,
+    0.019648071378469467,
+    0.03224119916558266,
+    0.03008885681629181,
+    0.016920972615480423,
+    0.009700962342321873,
+    0.005141703877598047,
+    0.010389579460024834,
+    0.0032014260068535805
+  ],
+  "gradient_sum_over_norm_sum": 0.7769801020622253,
+  "initial_train_mse": 0.19782641530036926,
+  "updated_train_mse": 0.19276182353496552,
+  "step_and_checks_seconds": 0.9789555522147566
+}

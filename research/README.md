@@ -41,7 +41,7 @@ CUDA_VISIBLE_DEVICES='' OMP_NUM_THREADS=2 .venv/bin/python research/check_layerw
   --output research/results/reproduce-layerwise-smoke.json
 ```
 
-同じcacheを使う400更新実験は次のコマンドで選択できる。`--train` を外すと初期状態の確認だけを行う。`--architecture shared` は以前の全層共通写像、`--arm rms_constant` はコードを固定した対照である。以下の層別400更新はまだ実施していない。
+同じcacheを使う400更新実験は次のコマンドで選択できる。`--train` を外すと初期状態の確認だけを行う。`--architecture shared` は以前の全層共通写像、`--arm rms_constant` はコードを固定した対照である。層別400更新はCPUの初期検証後、CUDA実行を開始した。完了結果が出るまでは精度未確認として扱う。
 
 ```sh
 CUDA_VISIBLE_DEVICES='' OMP_NUM_THREADS=2 .venv/bin/python research/train_early_condition.py \
@@ -61,6 +61,8 @@ CUDA_VISIBLE_DEVICES='' OMP_NUM_THREADS=2 .venv/bin/python research/train_early_
 | 特徴変化上位10%領域のMSE | .469058 | .376009 | .358206 |
 
 [実チェックポイントの1更新検査](results/layerwise-condition-smoke-20261113.json)は成功し、[回帰テスト](results/layerwise-validation-20261113.json)は142件通過。これらは内部統合版の実装検査であり、汎化精度・速度の改善を示すものではない。
+
+CUDAが利用できる環境では学習コマンドに `--device cuda` を追加する（`CUDA_VISIBLE_DEVICES=''` は外す）。float32・highest設定を維持し、20更新ごとに経過時間を記録、100更新ごとにadapterとoptimizerを `latest.pt` へ保存する。旧CPU実行には途中保存がなく、CUDA実行は初期状態から開始した。CUDAの[実モデル検査](results/layerwise-cuda-smoke-20261113.json)でも初期・更新後zero-code予測の一致と各層への勾配を確認した。他用途のGPU常駐プロセスは停止していない。
 
 ## 再実行と成果物
 

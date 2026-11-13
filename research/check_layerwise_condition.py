@@ -15,6 +15,7 @@ from research.layerwise_condition import install_layerwise_adapter
 
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--device',choices=['cpu','cuda'],default='cpu')
     parser.add_argument('--output',type=Path,required=True)
     args=parser.parse_args()
     if args.output.exists(): parser.error('Output must be new')
@@ -22,7 +23,8 @@ def main():
     torch.set_float32_matmul_precision('highest')
     torch.manual_seed(42)
     data,model,hashes,_=load_inputs(ROOT)
-    x,y,z=[data['train'][k][:1] for k in ('current','future','codes')]
+    model=model.to(args.device)
+    x,y,z=[data['train'][k][:1].to(args.device) for k in ('current','future','codes')]
     with torch.no_grad(): prior=model(x,torch.zeros_like(z))
     model=install_layerwise_adapter(model)
     frozen=frozen_hash(model)
@@ -50,7 +52,7 @@ def main():
     for path in (Path(__file__),ROOT/'research/layerwise_condition.py',ROOT/'research/train_early_condition.py'):
         hashes[str(path)]=file_hash(path)
     result={'complete':True,'scope':'One disposable training-row step; no validation improvement or deployment claim.',
-        'threads':2,'source_hashes':hashes,'trainable_parameters':sum(p.numel() for p in model.parameters() if p.requires_grad),
+        'device':args.device,'threads':2,'source_hashes':hashes,'trainable_parameters':sum(p.numel() for p in model.parameters() if p.requires_grad),
         'initial_prior_exact':True,'zero_prior_after_update_exact':True,'frozen_weights_unchanged':True,
         'layer_gradient_norms':norms.tolist(),'gradient_sum_over_norm_sum':cancellation,
         'initial_train_mse':float(loss.detach()),'updated_train_mse':float((after-y).square().mean()),
