@@ -1,0 +1,9 @@
+{
+  "vendor/lawam/UPSTREAM.json": "10806142e5d1df9ba1e6860bee526c50deea91fd51be314c0e63c1171f557f5a",
+  "vendor/lawam/RESEARCH_PATCHES.json": "abf4fac422b2a8af9f6e9e6eb49caeb0405d5668c98b1d69b7918caa467a71c4",
+  "vendor/lawam/PROVENANCE.md": "35ba31debb8733acd76480269bb53ffae8b473451a34271c2df4779ae8e432ad",
+  "runs/frozen-model-step10000/resolved_config.yaml": "d5c751aaee764935499415b064c1a3991655aefcaabfbbfde8265dcea312208f",
+  "train_stage1.py": "6a8b79106cb254277993bc2fde14b64638ac9310a33902a7e86888314cbc1ab6",
+  "vendor/dataset/robomind.py": "cf4d312e9f9679033414a0b2445cb39760f3699600fa4d5df357231981e4ab79",
+  "research/cache_stage1_features.py": "47a110b5506dd4101e6584dc0b1b6060dc8e121462f12974694ac139979f1abe"
+}

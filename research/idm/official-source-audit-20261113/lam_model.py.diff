@@ -1,0 +1,60 @@
+--- pinned/latent_action_model/core/lam_model.py
++++ local/latent_action_model/core/lam_model.py
+@@ -10,6 +10,7 @@
+ from .utils.lam_encoder import LAMEncoder
+ from .utils.lam_decoder import LAMDecoder_v2, StatePredictor
+ from .utils.modules import PatchEmbed
++from .utils.latent_flow import LatentFlowDecoder, DeterministicRefinementDecoder
+ 
+ 
+ 
+@@ -45,6 +46,10 @@
+         image_hw: Tuple[int, int] = LAM_IMAGE_HW,
+         patch_size: int = LAM_PATCH_SIZE,
+         decoder_last_ln: bool = True,
++        decoder_type: str = "direct",
++        flow_source: str = "current",
++        flow_noise_scale: float = 0.1,
++        flow_steps: int = 8,
+         **kwargs
+     ):
+         super().__init__()
+@@ -106,7 +111,11 @@
+         self.feature_decoder = None
+         self.state_decoder = None
+         self.frame_to_pre = 1
+-        self.decoder = LAMDecoder_v2(
++        if decoder_type not in ("direct", "flow", "refinement"):
++            raise ValueError(f"Unknown decoder_type: {decoder_type}")
++        # Construct the original decoder first so other module initialization is
++        # identical across variants at a shared seed. Research decoder RNG is isolated.
++        decoder_args = dict(
+             context_dim=dim,
+             input_dim=self.input_dim,
+             num_queries=num_queries,
+@@ -120,6 +129,13 @@
+             grid_hw=(self.grid_height, self.grid_width),
+             last_ln=decoder_last_ln,
+         )
++        self.decoder = LAMDecoder_v2(**decoder_args)
++        if decoder_type != "direct":
++            decoder_class = {"flow": LatentFlowDecoder,
++                             "refinement": DeterministicRefinementDecoder}[decoder_type]
++            with torch.random.fork_rng(devices=[]):
++                self.decoder = decoder_class(**decoder_args, source=flow_source,
++                                             noise_scale=flow_noise_scale, steps=flow_steps)
+         self.state_decoder = StatePredictor(
+             latent_dim=dim,
+             dropout=dropout,
+@@ -450,7 +466,10 @@
+         s_pred = None
+         # delta_s_pred = self.state_delta_predictor(quantized, state_0=states[:,0])
+         if predict_future_frame:
+-            recon = self.decoder(features=dec_in, actions=quantized)
++            if isinstance(self.decoder, LatentFlowDecoder) and vq_training:
++                recon = self.decoder.training_output(dec_in, quantized, tgt)
++            else:
++                recon = self.decoder(features=dec_in, actions=quantized)
+             if self.state_decoder is not None:
+                 s_pred = self.state_decoder(z_t=quantized, state_0=dec_states, embodiment_id=emb_tensor)
+                 if state_mask_for_model is not None:

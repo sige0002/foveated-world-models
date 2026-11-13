@@ -3,6 +3,10 @@
 研究ブランチ: `research/stage1-latent-flow-matching`。
 目的は未来のDINO特徴の予測精度を改善すること。中間画像の生成や行動チャンクの導入は、この実験の前提にしない。再構成MSEの改善は以下の限定された実験で確認したが、新手法としての独自性、大規模学習・実行時の改善は未証明。
 
+**基準モデルの位置づけ（2026-11-13再確認）：** 本文の「元モデル」「final10000」は、公式配布の重みではなく、公式由来のdirect構造を独自RoboMIND条件で学習したlocal checkpointを指す。公式のhuman混合データ、robot1.6秒/human0.4秒、batch64、10epochsの設定に対して、本実験はRoboMINDのみ、1.2秒（短い末尾あり）、batch2、10000更新である。公式学習済みモデルの再現や、それを超えた結果とは呼ばない。[公式ソース・設定監査](../research/idm/official-source-audit-20261113/report.md)。
+
+元データの動きも再確認した。train512の左右いずれかの手先の端点間移動量の中央値は17.45cm、observed96では16.88cm。後者で1cm以上は90/96、5cm以上は81/96。5cm以上の81例でもnative zによるMSE改善はzero z比0.606%と小さかった。静止区間の多さだけでは小さなz利得を説明できないが、画像内の静的背景の割合や学習条件の影響は未分離。全672 cached pairsで現在/未来特徴は同一ではなく、選択した低・中・高移動量の3例は元動画の開始・中間・終了フレームを目視し、dataset出力と一致を確認した。[全状態・pair監査](../research/results/pair-motion-audit-20261113/results.json)、[確認画像](../research/results/pair-motion-audit-20261113/examples.png)。main学習全9201 pairの端点について、欠測・補完状態はいずれも0件だったため、コード上のvalidity-mask非反映を今回の実害とは認定しない。[端点validity](../research/results/pair-motion-audit-20261113/main-training-validity.json)。
+
 ## 元モデル単独との直接速度比較（2026-11-13）
 
 ユーザー依頼により、既存の差し引き概算を元モデル単独の直接測定で置き換えた。CPU2スレッド・float32 highest・inference mode、各条件3回warmup後に12回、順序を交互に変更して測定。同じ現在特徴を入力し、元decoderにはfinal10000のnative posterior mean、改善版には参照42コードを与えた。元decoder、zero-code prior、prior＋固定400補正器を比較した。実行中だった既知の研究CPU学習4件は測定中のみSIGSTOPし、finallyで全件SIGCONTした。既に終了した2件には信号を送っていない。

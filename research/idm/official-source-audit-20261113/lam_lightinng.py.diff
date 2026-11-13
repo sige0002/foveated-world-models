@@ -1,0 +1,63 @@
+--- pinned/latent_action_model/core/lam_lightinng.py
++++ local/latent_action_model/core/lam_lightinng.py
+@@ -1,3 +1,4 @@
++from .utils.latent_flow import FlowTrainingOutput
+ from typing import Dict, Tuple, Optional, Callable, Iterable, Any, List
+ from pathlib import Path
+ from collections import Counter
+@@ -67,6 +68,10 @@
+         image_aug: bool = True,
+         dual_view_aug: bool = False,
+         decoder_last_ln: bool = True,
++        decoder_type: str = "direct",
++        flow_source: str = "current",
++        flow_noise_scale: float = 0.1,
++        flow_steps: int = 8,
+         **kwargs
+     ):
+         super().__init__()
+@@ -110,6 +115,10 @@
+             image_hw=self.image_hw,
+             patch_size=self.patch_size,
+             decoder_last_ln=decoder_last_ln,
++            decoder_type=decoder_type,
++            flow_source=flow_source,
++            flow_noise_scale=flow_noise_scale,
++            flow_steps=flow_steps,
+         )
+ 
+ 
+@@ -618,6 +627,9 @@
+                 embodiment_ids=embodiment_ids,
+             )
+ 
++        flow_loss = None
++        if isinstance(recon, FlowTrainingOutput):
++            flow_loss, recon = recon.velocity_loss, recon.prediction
+         if recon is None:
+             raise RuntimeError("Decoder output is None; check latent_mode / decoder setup.")
+         if recon.shape != tgt.shape:
+@@ -659,6 +671,8 @@
+         else:
+             recon_loss = F.mse_loss(recon, target)
+             loss = recon_loss
++        if flow_loss is not None:
++            loss = flow_loss
+         entropy_loss = self.lambda_diversity * entropy_loss
+         total_loss = loss + entropy_loss + vq_loss
+         # total_loss = loss
+@@ -724,6 +738,14 @@
+                 # "recon_std": recon.std(),
+                 **aux_loss_logs,
+             }
++            if flow_loss is not None:
++                logs["flow_velocity_loss"] = flow_loss
++                # Do not present target-conditioned interpolation as sampled accuracy.
++                for key in ("recon_loss", "cos_sim_metric", "l1_loss_metric"):
++                    logs["interpolation_" + key] = logs.pop(key)
++            if not vq_training:
++                logs["feature_mse"] = F.mse_loss(recon.float(), target.float())
++                logs["copy_feature_mse"] = F.mse_loss(dec_in.float(), target.float())
+             if getattr(self.lam, "vq", None) is not None:
+                 vq_module = self.lam.vq
+                 if hasattr(vq_module, "last_sample_entropy"):

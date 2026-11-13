@@ -1,0 +1,110 @@
+{
+  "latent_action_model/config/dino_large_vae.yaml": {
+    "url": "https://raw.githubusercontent.com/RLinf/LaWAM/c12168d9077edea67fe7c1b70d08b80b8e65a9c8/latent_action_model/config/dino_large_vae.yaml",
+    "remote_sha256": "8098a296ab0fb8ed56e4c0e2b2a7e53251be29edc11089568372a70dba2e888b",
+    "manifest_sha256": "8098a296ab0fb8ed56e4c0e2b2a7e53251be29edc11089568372a70dba2e888b",
+    "remote_matches_manifest": true,
+    "local_sha256": "8098a296ab0fb8ed56e4c0e2b2a7e53251be29edc11089568372a70dba2e888b",
+    "local_matches_upstream": true,
+    "patch_manifest_matches": null
+  },
+  "latent_action_model/core/lam_lightinng.py": {
+    "url": "https://raw.githubusercontent.com/RLinf/LaWAM/c12168d9077edea67fe7c1b70d08b80b8e65a9c8/latent_action_model/core/lam_lightinng.py",
+    "remote_sha256": "c47ea36c98bd8424acb74adf44e93bf0ea7e7a2f369fccfdc0c423fea7fa788c",
+    "manifest_sha256": "c47ea36c98bd8424acb74adf44e93bf0ea7e7a2f369fccfdc0c423fea7fa788c",
+    "remote_matches_manifest": true,
+    "local_sha256": "443ae283521196738af84bf1498e003ad9866f9b8ee3529e4ec86bfbf5e5fd7d",
+    "local_matches_upstream": false,
+    "patch_manifest_matches": true
+  },
+  "latent_action_model/core/lam_model.py": {
+    "url": "https://raw.githubusercontent.com/RLinf/LaWAM/c12168d9077edea67fe7c1b70d08b80b8e65a9c8/latent_action_model/core/lam_model.py",
+    "remote_sha256": "93827eaeffc1c41c8666debedf014b957daf23b79509c0123babaecc2507c38b",
+    "manifest_sha256": "93827eaeffc1c41c8666debedf014b957daf23b79509c0123babaecc2507c38b",
+    "remote_matches_manifest": true,
+    "local_sha256": "4c6092399add79b835bf6d1cfea4e5747e745843de5be359758678952d7ee1cb",
+    "local_matches_upstream": false,
+    "patch_manifest_matches": true
+  },
+  "latent_action_model/core/utils/lam_decoder.py": {
+    "url": "https://raw.githubusercontent.com/RLinf/LaWAM/c12168d9077edea67fe7c1b70d08b80b8e65a9c8/latent_action_model/core/utils/lam_decoder.py",
+    "remote_sha256": "8bf31b43c4530d5a835cba4f001ada5d404ff5002673a68956c010a829079137",
+    "manifest_sha256": "8bf31b43c4530d5a835cba4f001ada5d404ff5002673a68956c010a829079137",
+    "remote_matches_manifest": true,
+    "local_sha256": "8bf31b43c4530d5a835cba4f001ada5d404ff5002673a68956c010a829079137",
+    "local_matches_upstream": true,
+    "patch_manifest_matches": null
+  },
+  "latent_action_model/core/utils/lam_encoder.py": {
+    "url": "https://raw.githubusercontent.com/RLinf/LaWAM/c12168d9077edea67fe7c1b70d08b80b8e65a9c8/latent_action_model/core/utils/lam_encoder.py",
+    "remote_sha256": "db55c9946db8acc1474b01380e182f151a562abdcea8daa1a8bc575daffd115d",
+    "manifest_sha256": "db55c9946db8acc1474b01380e182f151a562abdcea8daa1a8bc575daffd115d",
+    "remote_matches_manifest": true,
+    "local_sha256": "db55c9946db8acc1474b01380e182f151a562abdcea8daa1a8bc575daffd115d",
+    "local_matches_upstream": true,
+    "patch_manifest_matches": null
+  },
+  "latent_action_model/core/utils/modules.py": {
+    "url": "https://raw.githubusercontent.com/RLinf/LaWAM/c12168d9077edea67fe7c1b70d08b80b8e65a9c8/latent_action_model/core/utils/modules.py",
+    "remote_sha256": "f100161a90f66cad89af39f615c58ece34316e643c6f21d561122a29ee877c44",
+    "manifest_sha256": "f100161a90f66cad89af39f615c58ece34316e643c6f21d561122a29ee877c44",
+    "remote_matches_manifest": true,
+    "local_sha256": "f100161a90f66cad89af39f615c58ece34316e643c6f21d561122a29ee877c44",
+    "local_matches_upstream": true,
+    "patch_manifest_matches": null
+  },
+  "latent_action_model/core/utils/pos_embs.py": {
+    "url": "https://raw.githubusercontent.com/RLinf/LaWAM/c12168d9077edea67fe7c1b70d08b80b8e65a9c8/latent_action_model/core/utils/pos_embs.py",
+    "remote_sha256": "756b578d7c691d85f1b1ebcc99a7375df60fe227ae88330084a506b5e9c83875",
+    "manifest_sha256": "756b578d7c691d85f1b1ebcc99a7375df60fe227ae88330084a506b5e9c83875",
+    "remote_matches_manifest": true,
+    "local_sha256": "756b578d7c691d85f1b1ebcc99a7375df60fe227ae88330084a506b5e9c83875",
+    "local_matches_upstream": true,
+    "patch_manifest_matches": null
+  },
+  "latent_action_model/core/utils/utils.py": {
+    "url": "https://raw.githubusercontent.com/RLinf/LaWAM/c12168d9077edea67fe7c1b70d08b80b8e65a9c8/latent_action_model/core/utils/utils.py",
+    "remote_sha256": "69ebc8746b99010692ddc4622d154fe2c48a476f8e64c8784805149dcd4d7bfd",
+    "manifest_sha256": "69ebc8746b99010692ddc4622d154fe2c48a476f8e64c8784805149dcd4d7bfd",
+    "remote_matches_manifest": true,
+    "local_sha256": "69ebc8746b99010692ddc4622d154fe2c48a476f8e64c8784805149dcd4d7bfd",
+    "local_matches_upstream": true,
+    "patch_manifest_matches": null
+  },
+  "latent_action_model/core/vjepa_encoder.py": {
+    "url": "https://raw.githubusercontent.com/RLinf/LaWAM/c12168d9077edea67fe7c1b70d08b80b8e65a9c8/latent_action_model/core/vjepa_encoder.py",
+    "remote_sha256": "da3ebc54fe9b28a1ab0b1c4abf82bf0877a7fd12c41579115776c1fa2fe1dc93",
+    "manifest_sha256": "da3ebc54fe9b28a1ab0b1c4abf82bf0877a7fd12c41579115776c1fa2fe1dc93",
+    "remote_matches_manifest": true,
+    "local_sha256": "da3ebc54fe9b28a1ab0b1c4abf82bf0877a7fd12c41579115776c1fa2fe1dc93",
+    "local_matches_upstream": true,
+    "patch_manifest_matches": null
+  },
+  "latent_action_model/core/vq.py": {
+    "url": "https://raw.githubusercontent.com/RLinf/LaWAM/c12168d9077edea67fe7c1b70d08b80b8e65a9c8/latent_action_model/core/vq.py",
+    "remote_sha256": "827f96892efd9b10f6942ea78ab294ff39b0a91a32a61cbdd93cac46e6f9a5ff",
+    "manifest_sha256": "827f96892efd9b10f6942ea78ab294ff39b0a91a32a61cbdd93cac46e6f9a5ff",
+    "remote_matches_manifest": true,
+    "local_sha256": "827f96892efd9b10f6942ea78ab294ff39b0a91a32a61cbdd93cac46e6f9a5ff",
+    "local_matches_upstream": true,
+    "patch_manifest_matches": null
+  },
+  "latent_action_model/data_loader/collate.py": {
+    "url": "https://raw.githubusercontent.com/RLinf/LaWAM/c12168d9077edea67fe7c1b70d08b80b8e65a9c8/latent_action_model/data_loader/collate.py",
+    "remote_sha256": "5953e9b334dce0eb1cb461c92c118f2d6ad4743f19f75fd74311aa86b6b20645",
+    "manifest_sha256": "5953e9b334dce0eb1cb461c92c118f2d6ad4743f19f75fd74311aa86b6b20645",
+    "remote_matches_manifest": true,
+    "local_sha256": "5953e9b334dce0eb1cb461c92c118f2d6ad4743f19f75fd74311aa86b6b20645",
+    "local_matches_upstream": true,
+    "patch_manifest_matches": null
+  },
+  "latent_action_model/data_loader/video_aug.py": {
+    "url": "https://raw.githubusercontent.com/RLinf/LaWAM/c12168d9077edea67fe7c1b70d08b80b8e65a9c8/latent_action_model/data_loader/video_aug.py",
+    "remote_sha256": "e425cf9ea33ae6abe583c13afe86e1337eec309ed293e32cccb2f69daf9fb69b",
+    "manifest_sha256": "e425cf9ea33ae6abe583c13afe86e1337eec309ed293e32cccb2f69daf9fb69b",
+    "remote_matches_manifest": true,
+    "local_sha256": "e425cf9ea33ae6abe583c13afe86e1337eec309ed293e32cccb2f69daf9fb69b",
+    "local_matches_upstream": true,
+    "patch_manifest_matches": null
+  }
+}

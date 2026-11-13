@@ -11,6 +11,7 @@ import torch
 import yaml
 from latent_action_model.core.utils.lam_decoder import LAMDecoder_v2
 from research.early_condition_adapter import install_adapter, frozen_hash, state_hash
+from research.layerwise_condition import install_layerwise_adapter
 
 
 def file_hash(path):
@@ -89,17 +90,18 @@ def main():
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument('--source',type=Path,required=True);p.add_argument('--output',type=Path,required=True)
     p.add_argument('--arm',choices=['real','constant','rms_constant'],required=True)
+    p.add_argument('--architecture', choices=['shared','layerwise'], default='shared')
     p.add_argument('--threads',type=int,default=4);p.add_argument('--train',action='store_true')
     a=p.parse_args()
     if a.output.exists(): p.error('Output must be new')
     if a.threads<1: p.error('threads must be positive')
     torch.set_num_threads(a.threads);torch.set_float32_matmul_precision('highest');torch.manual_seed(42)
     data,model,hashes,options=load_inputs(a.source.resolve())
-    for path in [Path(__file__),ROOT/'research/early_condition_adapter.py',ROOT/'vendor/lawam/latent_action_model/core/utils/lam_decoder.py']:
+    for path in [Path(__file__),ROOT/'research/early_condition_adapter.py',ROOT/'research/layerwise_condition.py',ROOT/'vendor/lawam/latent_action_model/core/utils/lam_decoder.py']:
         hashes[str(path)]=file_hash(path)
     d=data['train']; x=d['current'][:8]; z=d['codes'][:8]
     with torch.no_grad(): original=model(x,torch.zeros_like(z)).clone()
-    model=install_adapter(model); frozen=frozen_hash(model)
+    model=(install_layerwise_adapter(model) if a.architecture=='layerwise' else install_adapter(model)); frozen=frozen_hash(model)
     with torch.no_grad():
         initial=model(x,z);initialzero=model(x,torch.zeros_like(z))
     assert torch.equal(initial,original) and torch.equal(initialzero,original),'Initial prior mismatch'
@@ -111,7 +113,7 @@ def main():
     g=torch.Generator().manual_seed(1042)
     batches=torch.stack([torch.randint(len(d['rows']),(8,),generator=g) for _ in range(400)])
     a.output.mkdir(parents=True)
-    protocol={'arm':a.arm,'seed':42,'minibatch_seed':1042,'execute_training':a.train,'steps':400,'batch_size':8,'lr':3e-4,'weight_decay':.01,
+    protocol={'architecture':a.architecture,'arm':a.arm,'seed':42,'minibatch_seed':1042,'execute_training':a.train,'steps':400,'batch_size':8,'lr':3e-4,'weight_decay':.01,
               'gradient_clip':1.,'initial_backend_tolerance':1e-4,'precision':'highest','threads':a.threads,'source_hashes':hashes,
               'initial_state_hash':state_hash(model.state_dict()),'frozen_hash':frozen,
               'train_mean_norm':original_mean_norm,'train_code_rms_norm':train_code_rms,'used_constant_norm':float(constant.norm()),

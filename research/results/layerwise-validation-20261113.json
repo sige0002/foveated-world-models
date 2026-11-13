@@ -1,0 +1,14 @@
+{
+  "command": "CUDA_VISIBLE_DEVICES='' OMP_NUM_THREADS=2 MKL_NUM_THREADS=2 .venv/bin/python -m pytest -q tests research --ignore=research/source_snapshots",
+  "passed": 142,
+  "warnings": 2,
+  "elapsed_seconds": 5.07,
+  "source_sha256": {
+    "research/layerwise_condition.py": "8fcff406e21192b922cfd5802590d10dfa0c586bc3fda4c01f4b20ca2ab5b014",
+    "research/train_early_condition.py": "b7fdc5005076992e008072626d188d1b172a6ef90bd942bde182743187b0d13f",
+    "research/check_layerwise_condition.py": "d0db18d26e4a28379e429dadccf6268a6a150d89e67cb14ed8e66f90dd9f897d",
+    "research/test_layerwise_condition.py": "5fe184a75eaea3742ad0c09bf5d6a29b9f52f4fdfe96b4d6533c33871daefde4",
+    "research/evaluate_prediction_metrics.py": "92300ba8a6850fafccb7370940957bf46e04b2035246e196163de8aad224ce3e"
+  },
+  "scope": "Implementation regression tests and separate real-checkpoint single-step smoke test. No trained layerwise accuracy claim."
+}

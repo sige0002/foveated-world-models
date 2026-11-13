@@ -1,0 +1,40 @@
+{
+  "models": [
+    "original_native",
+    "zero_prior",
+    "correction400",
+    "correction1600",
+    "constant400"
+  ],
+  "source_sha256": {
+    "/home/sadasue/foveated-world-models/runs/reference-idm42-nested512-prior10000/train.pt": "7c2d6fe143bd83cfad43d0d919344b3070bb8a0b9a3bc598a84d410fecc798de",
+    "/home/sadasue/foveated-world-models/runs/reference-idm42-nested512-prior10000/cache_manifest.json": "998ed490c2ab76209c21b76c2fcd3fa83c95d8ad100def6aad536ce069fa8471",
+    "/home/sadasue/foveated-world-models/runs/reference-idm42-nested512-prior10000/validation.pt": "bbb4d0d49e9f4a4a3500e9c78260e3feaf9da33963f5977d98c8983d122c1c09",
+    "/home/sadasue/foveated-world-models/runs/reference-idm42-observed96-prior10000/validation.pt": "7b419bea1eda0f0e871ab40273bf1b59a1d67d5bf2bab23885ba9fee43ab40f4",
+    "/home/sadasue/foveated-world-models/runs/reference-idm42-observed96-prior10000/cache_manifest.json": "296da56241940e7dd2eb1250ee357a258d4551192c55dcd5c6529c37cbfeba29",
+    "/home/sadasue/foveated-world-models/runs/frozen-model-step10000/reference_weights.pt": "1e68b8eb97c529646a7bbc9c6e02b7cf759c97b82a485241b85669bf7613a1d6",
+    "/home/sadasue/foveated-world-models/runs/frozen-model-step10000/resolved_config.yaml": "d5c751aaee764935499415b064c1a3991655aefcaabfbbfde8265dcea312208f",
+    "/home/sadasue/foveated-world-models/runs/reference-idm42-nested512-comparison400-20261113/prior_residual-seed42.pt": "a8a84319d8078b3b221ba77d903d2332a4e6f809421803f246575fb967be3233",
+    "/home/sadasue/foveated-world-models/runs/reference-idm42-nested512-residual1600-20261113/prior_residual-seed42.pt": "f72cda54a8bd68e843481573dcbbef09e68d91e4e5cc133829c0909ea8bd5dec",
+    "/home/sadasue/foveated-world-models/runs/constant-nested512-residual400-20261113/prior_residual-seed42.pt": "d20f406bf7feacc3b45100bc7600f16da3276940f4d7d8a18a1e8a308be97c05",
+    "/home/sadasue/foveated-world-models/runs/constant-nested512-prior10000/train.pt": "8920a22886c30c2f15a289084adfb6d6eb673e3b9d7bf550f9a008d524860435",
+    "/home/sadasue/foveated-world-models/runs/frozen-model-step10000/validation.pt": "c1ef40f215990f876971e3ebd1c95337a46210b35795cd581d4d83d9715f59fa",
+    "/home/sadasue/foveated-world-models/runs/frozen-model-step10000/observed96.pt": "9e1e3f17002ebe6fcb8ff371e6c9e435fd9a26a90c3b50fa4179a87b7ab985fc"
+  },
+  "script_sha256": "92300ba8a6850fafccb7370940957bf46e04b2035246e196163de8aad224ce3e",
+  "threads": 2,
+  "precision": "float32 highest",
+  "fixed_weights": true,
+  "no_training": true,
+  "metrics": [
+    "mse",
+    "smooth_l1_beta_0_1",
+    "mae",
+    "cosine_similarity",
+    "high_feature_change_decile_mse",
+    "low_feature_change_half_mse"
+  ],
+  "primary_added_metric": "smooth_l1_beta_0_1 matches the original visual reconstruction loss, not its auxiliary state+KL total",
+  "region_definition": "Per-example ranking of true current-future feature change; top ceil10% and bottom50%. Not a robot segmentation mask.",
+  "scope": "Fixed seed42 checkpoints, reused64/96, posterior true-future codes. Original model has original code; correction has reference code. Extra training and parameter costs differ. No official released baseline, physical behavior, or deployment claim."
+}

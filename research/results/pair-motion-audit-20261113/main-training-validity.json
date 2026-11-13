@@ -1,0 +1,6 @@
+{
+  "main_training_pairs": 9201,
+  "unobserved_endpoint_pairs": 0,
+  "filled_endpoint_pairs": 0,
+  "scope": "Fresh NPZ audit with require_observed_endpoints=False, matching main training adapter."
+}
