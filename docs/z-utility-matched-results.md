@@ -1,5 +1,7 @@
 # Stage 1のz利用：同条件比較と元モデル診断
 
+追記：その後の[公式配布重み・VAEの追加診断](native-posterior-investigation.md)では、公式配布モデルはzを有効に使っていた。以下の「元モデル」は引き続きローカルfinal10000を指す。
+
 2026-11-13。**今回の条件では共同学習版が外付け版より良い。しかし、共同学習版でもzの追加効果は再利用testで小さく、元モデルのzはほぼ共通ベクトルになっている。**
 
 [固定計画](z-utility-matched-plan.md)に従い、4条件×3 seed、train512、400更新、同じ初期encoder/head・データ順・学習率・MSEで比較した。direct-realの3本は前回の400更新checkpointを整合性確認して再利用し、残り9本を学習。元モデルは元のencoder・VAE・decoderを無更新で評価した。全モデルのDINO特徴・評価例・float32 highestを共通にした。

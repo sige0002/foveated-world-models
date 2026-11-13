@@ -1,0 +1,172 @@
+{
+  "dataset_root": "/data2/yuki_sadasue/datasets/RoboMIND-lerobot/franka_fr3_dual",
+  "codebase_version": "v3.0",
+  "total_episodes": 1774,
+  "info_sha256": "6ed0e11ebd1bcd33b13fa90f7f47905e61419c179b85b3597e22a999bf5360a1",
+  "features": {
+    "observation.images.camera_front": {
+      "dtype": "video",
+      "shape": [
+        720,
+        1280,
+        3
+      ],
+      "names": [
+        "height",
+        "width",
+        "rgb"
+      ],
+      "info": {
+        "video.height": 720,
+        "video.width": 1280,
+        "video.codec": "av1",
+        "video.pix_fmt": "yuv420p",
+        "video.is_depth_map": false,
+        "video.fps": 30,
+        "video.channels": 3,
+        "has_audio": false
+      }
+    },
+    "observation.images.camera_top": {
+      "dtype": "video",
+      "shape": [
+        720,
+        1280,
+        3
+      ],
+      "names": [
+        "height",
+        "width",
+        "rgb"
+      ],
+      "info": {
+        "video.height": 720,
+        "video.width": 1280,
+        "video.codec": "av1",
+        "video.pix_fmt": "yuv420p",
+        "video.is_depth_map": false,
+        "video.fps": 30,
+        "video.channels": 3,
+        "has_audio": false
+      }
+    },
+    "observation.images.camera_left": {
+      "dtype": "video",
+      "shape": [
+        480,
+        640,
+        3
+      ],
+      "names": [
+        "height",
+        "width",
+        "rgb"
+      ],
+      "info": {
+        "video.height": 480,
+        "video.width": 640,
+        "video.codec": "av1",
+        "video.pix_fmt": "yuv420p",
+        "video.is_depth_map": false,
+        "video.fps": 30,
+        "video.channels": 3,
+        "has_audio": false
+      }
+    },
+    "observation.images.camera_right": {
+      "dtype": "video",
+      "shape": [
+        480,
+        640,
+        3
+      ],
+      "names": [
+        "height",
+        "width",
+        "rgb"
+      ],
+      "info": {
+        "video.height": 480,
+        "video.width": 640,
+        "video.codec": "av1",
+        "video.pix_fmt": "yuv420p",
+        "video.is_depth_map": false,
+        "video.fps": 30,
+        "video.channels": 3,
+        "has_audio": false
+      }
+    },
+    "observation.states.end_effector": {
+      "dtype": "float32",
+      "shape": [
+        12
+      ],
+      "source": "puppet/end_effector",
+      "space": "cartesian_position(m) + euler_angles(rad), left(6d) + right(6d)",
+      "names": {
+        "motors": [
+          "left_x",
+          "left_y",
+          "left_z",
+          "left_roll",
+          "left_pitch",
+          "left_yaw",
+          "right_x",
+          "right_y",
+          "right_z",
+          "right_roll",
+          "right_pitch",
+          "right_yaw"
+        ]
+      }
+    },
+    "observation.states.gripper": {
+      "dtype": "float32",
+      "shape": [
+        2
+      ],
+      "source": "puppet/joint_position",
+      "gripper_indices": [
+        7,
+        15
+      ],
+      "space": "gripper_position, [left, right]",
+      "names": {
+        "motors": [
+          "left_gripper",
+          "right_gripper"
+        ]
+      }
+    }
+  },
+  "manifest_headers": {
+    "train": {
+      "sha256": "6820a262ba4ff5fda38adb72ae21cc1bc5405c9a5b3a04e869a26db3d52f063f"
+    },
+    "validation": {
+      "sha256": "08b200e3a158850eb82b94bc2446a120f212092c9dcaaa5158d548c894533133"
+    },
+    "test": {
+      "sha256": "cd0510c8a8011c9683618fcd8b44a2efab67977d46c5a7944e81e2572dc385a2"
+    }
+  },
+  "referenced_unique_videos": 68,
+  "referenced_video_dimensions": {
+    "1280x720": 68
+  },
+  "referenced_dimensions_per_split": {
+    "train": {
+      "1280x720": 54
+    },
+    "validation": {
+      "1280x720": 7
+    },
+    "test": {
+      "1280x720": 7
+    }
+  },
+  "downloaded_camera_directories": [
+    "observation.images.camera_top"
+  ],
+  "scope": "Read-only container-header check for every video referenced by current local train/validation/test manifests; raw info.json metadata retained. No data or loader modifications."
+}

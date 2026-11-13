@@ -40,6 +40,8 @@ Stage 1ではIDMが正解未来を見るため、主評価は**未来由来のz�
 | 資料 | 内容 |
 |---|---|
 | [研究計画](docs/research-plan.md) | 仮説、候補構造、情報の利用条件、目指す貢献 |
+| [公式との差分と説明の訂正](docs/local-official-data-contract-gaps.md) | カメラ解像度、黒padding、rot6D・min–max、LeRobot原本と項目追加、Lanceの位置付け |
+| [公式配布重みとVAEの追加診断](docs/native-posterior-investigation.md) | 公式はz定数化でMSE +43%。ローカルのノイズ・層別変動・前処理差を検証 |
 | [公式実装との比較](docs/official-implementation-comparison.md) | 同じ重みでz・予測・勾配が一致。状態前処理と学習条件の相違 |
 | [z利用の同条件比較](docs/z-utility-matched-results.md) | 共同学習・外付け・定数学習対照と、ローカル元モデルのz診断 |
 | [実験計画](docs/experiments.md) | 基準、比較実験、評価指標、進む・見直す判断 |

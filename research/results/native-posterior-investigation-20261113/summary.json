@@ -1,0 +1,272 @@
+{
+  "main": {
+    "local": {
+      "normal_mse": 0.11478950554395423,
+      "mean_constant_mse": 0.11478866763851221,
+      "mean_constant_relative_increase": -7.299495176416038e-06,
+      "mean_constant_output_rms_over_actual_feature_change": 0.0002215354911643643,
+      "train_posterior": {
+        "mu": {
+          "variance_sum": 5.358873601614751e-05,
+          "common_mean_energy": 0.5598012560030203,
+          "variance_fraction": 9.571898237502378e-05,
+          "effective_rank": 1.0164564451905815
+        },
+        "logvar": {
+          "variance_sum": 2.903621502828844e-05,
+          "common_mean_energy": 324.8916413723905,
+          "variance_fraction": 8.937198972128326e-08,
+          "effective_rank": 1.0535792162720754
+        },
+        "mean_sigma_squared": 0.0452282530989144,
+        "noise_variance_sum": 1.447304099165261,
+        "signal_to_noise_trace_ratio": 3.702659036691394e-05,
+        "noise_fraction_of_sampled_z_variance": 0.9999629747805506,
+        "kl_to_unit_gaussian_mean": 35.595846465782124,
+        "beta_weighted_kl": 0.0017797923232891063,
+        "empirical_sample_identity_information_upper_bound_nats": 0.0006533292243489086,
+        "information_bound_scope": "One draw Z from empirical diagonal-Gaussian posterior mixture over these rows; does not bound deterministic mu or unseen population."
+      },
+      "test_posterior": {
+        "mu": {
+          "variance_sum": 3.0243511777442543e-05,
+          "common_mean_energy": 0.5605851539002253,
+          "variance_fraction": 5.3946987394668776e-05,
+          "effective_rank": 1.0181726027658509
+        },
+        "logvar": {
+          "variance_sum": 1.6280294171176744e-05,
+          "common_mean_energy": 324.89075216705754,
+          "variance_fraction": 5.011005467769994e-08,
+          "effective_rank": 1.057406260191783
+        },
+        "mean_sigma_squared": 0.045229024920402774,
+        "noise_variance_sum": 1.4473287974528886,
+        "signal_to_noise_trace_ratio": 2.0896089285770595e-05,
+        "noise_fraction_of_sampled_z_variance": 0.9999791043473517,
+        "kl_to_unit_gaussian_mean": 35.59613873300185,
+        "beta_weighted_kl": 0.0017798069366500927,
+        "empirical_sample_identity_information_upper_bound_nats": 0.00036761250973427195,
+        "information_bound_scope": "One draw Z from empirical diagonal-Gaussian posterior mixture over these rows; does not bound deterministic mu or unseen population."
+      },
+      "intervention_comparisons": {
+        "train_mean_mse_minus_real": {
+          "mse_difference": -8.379054420134601e-07,
+          "relative_reduction": 7.299495176416038e-06,
+          "seed_differences": [
+            -8.379054420134601e-07
+          ],
+          "episode_paired_ci95": [
+            -1.8485613605555365e-06,
+            1.963836086146957e-07
+          ],
+          "video_cluster_paired_ci95": [
+            -1.8138777125965466e-06,
+            -1.955777406692505e-08
+          ],
+          "video_cluster_count": 7
+        },
+        "swapped_mse_minus_real": {
+          "mse_difference": -5.064641728120691e-07,
+          "relative_reduction": 4.412112156182424e-06,
+          "seed_differences": [
+            -5.064641728120691e-07
+          ],
+          "episode_paired_ci95": [
+            -1.8466121571905472e-06,
+            7.890712688950922e-07
+          ],
+          "video_cluster_paired_ci95": [
+            -1.6933209017703407e-06,
+            7.203780114650726e-07
+          ],
+          "video_cluster_count": 7
+        },
+        "same_current_other_future_mse_minus_real": {
+          "mse_difference": -2.390978967442232e-07,
+          "relative_reduction": 2.0829247030507148e-06,
+          "seed_differences": [
+            -2.390978967442232e-07
+          ],
+          "episode_paired_ci95": [
+            -1.2480664779158199e-06,
+            8.011954453061594e-07
+          ],
+          "video_cluster_paired_ci95": [
+            -1.1987750665010776e-06,
+            9.178618590037028e-07
+          ],
+          "video_cluster_count": 7
+        }
+      },
+      "mean_kl_over_reconstruction_nodes_gradient_norm": 0.041626418252656366,
+      "gradient_probe_scope": "First 8 validation pairs, frozen checkpoint, no augmentation, sampled posterior, gradients wrt 32D nodes. Excludes physical auxiliary loss; not a causal training ablation."
+    },
+    "official": {
+      "normal_mse": 0.1595420561511727,
+      "mean_constant_mse": 0.2285781873499646,
+      "mean_constant_relative_increase": 0.43271431285414375,
+      "mean_constant_output_rms_over_actual_feature_change": 0.6188376319866318,
+      "train_posterior": {
+        "mu": {
+          "variance_sum": 6.686833113974022,
+          "common_mean_energy": 2.3647397402035244,
+          "variance_fraction": 0.7387481956672168,
+          "effective_rank": 5.916640973175013
+        },
+        "logvar": {
+          "variance_sum": 6.689943705915046,
+          "common_mean_energy": 314.3545073078384,
+          "variance_fraction": 0.02083806053893905,
+          "effective_rank": 1.2795270025427217
+        },
+        "mean_sigma_squared": 0.5440551466873117,
+        "noise_variance_sum": 17.409764693993974,
+        "signal_to_noise_trace_ratio": 0.384085209163157,
+        "noise_fraction_of_sampled_z_variance": 0.7224988702860412,
+        "kl_to_unit_gaussian_mean": 27.95861544865341,
+        "beta_weighted_kl": 0.0013979307724326707,
+        "empirical_sample_identity_information_upper_bound_nats": 23.383594663206487,
+        "information_bound_scope": "One draw Z from empirical diagonal-Gaussian posterior mixture over these rows; does not bound deterministic mu or unseen population."
+      },
+      "test_posterior": {
+        "mu": {
+          "variance_sum": 5.892061349583987,
+          "common_mean_energy": 2.009098078801936,
+          "variance_fraction": 0.7457211062487874,
+          "effective_rank": 4.217218585726218
+        },
+        "logvar": {
+          "variance_sum": 3.3755121363102996,
+          "common_mean_energy": 373.23864167445004,
+          "variance_fraction": 0.008962786188875986,
+          "effective_rank": 1.4596952064733149
+        },
+        "mean_sigma_squared": 0.5364131680340317,
+        "noise_variance_sum": 17.16522137708901,
+        "signal_to_noise_trace_ratio": 0.34325577399475404,
+        "noise_fraction_of_sampled_z_variance": 0.744459855940962,
+        "kl_to_unit_gaussian_mean": 29.987044610826437,
+        "beta_weighted_kl": 0.001499352230541322,
+        "empirical_sample_identity_information_upper_bound_nats": 23.23212926387555,
+        "information_bound_scope": "One draw Z from empirical diagonal-Gaussian posterior mixture over these rows; does not bound deterministic mu or unseen population."
+      },
+      "intervention_comparisons": {
+        "train_mean_mse_minus_real": {
+          "mse_difference": 0.0690361311987919,
+          "relative_reduction": -0.43271431285414375,
+          "seed_differences": [
+            0.0690361311987919
+          ],
+          "episode_paired_ci95": [
+            0.06381111338898979,
+            0.07454928893705501
+          ],
+          "video_cluster_paired_ci95": [
+            0.050684565403743796,
+            0.09616784539539366
+          ],
+          "video_cluster_count": 7
+        },
+        "swapped_mse_minus_real": {
+          "mse_difference": 0.03873401286409182,
+          "relative_reduction": -0.24278245998904335,
+          "seed_differences": [
+            0.03873401286409182
+          ],
+          "episode_paired_ci95": [
+            0.031883737603750295,
+            0.04587673148578579
+          ],
+          "video_cluster_paired_ci95": [
+            0.0276140215642312,
+            0.05138983029339995
+          ],
+          "video_cluster_count": 7
+        },
+        "same_current_other_future_mse_minus_real": {
+          "mse_difference": 0.04279207528075751,
+          "relative_reduction": -0.26821815083171696,
+          "seed_differences": [
+            0.04279207528075751
+          ],
+          "episode_paired_ci95": [
+            0.03448860949234051,
+            0.05150197833666906
+          ],
+          "video_cluster_paired_ci95": [
+            0.028349535559353076,
+            0.055926385521888736
+          ],
+          "video_cluster_count": 7
+        }
+      },
+      "mean_kl_over_reconstruction_nodes_gradient_norm": 0.015035113879024176,
+      "gradient_probe_scope": "First 8 validation pairs, frozen checkpoint, no augmentation, sampled posterior, gradients wrt 32D nodes. Excludes physical auxiliary loss; not a causal training ablation."
+    }
+  },
+  "preprocessing_subset32": {
+    "local": {
+      "local_padding": {
+        "normal_mse": 0.11839424772188067,
+        "mean_constant_mse": 0.11839159252122045,
+        "mean_constant_relative_increase": -2.2426770821426523e-05,
+        "mean_constant_output_delta_mse": 1.2965451012944204e-08
+      },
+      "official_crop_resize": {
+        "normal_mse": 0.2507737767882645,
+        "mean_constant_mse": 0.25077507784590125,
+        "mean_constant_relative_increase": 5.188172596870544e-06,
+        "mean_constant_output_delta_mse": 2.8703512610153692e-08
+      }
+    },
+    "official": {
+      "local_padding": {
+        "normal_mse": 0.17229076847434044,
+        "mean_constant_mse": 0.23493362963199615,
+        "mean_constant_relative_increase": 0.3635880303533803,
+        "mean_constant_output_delta_mse": 0.10311412462033331
+      },
+      "official_crop_resize": {
+        "normal_mse": 0.15435803425498307,
+        "mean_constant_mse": 0.3157636416144669,
+        "mean_constant_relative_increase": 1.045657313132525,
+        "mean_constant_output_delta_mse": 0.17813003878109157
+      }
+    }
+  },
+  "verification": {
+    "gaussian_kl_vs_torch_distribution_max_error": 1.4210854715202004e-14,
+    "identical_posteriors_information_bound_zero": true,
+    "preprocessing_bitwise_equal_to_extracted_official_methods_sizes": [
+      [
+        720,
+        1280
+      ],
+      [
+        480,
+        640
+      ],
+      [
+        256,
+        256
+      ],
+      [
+        640,
+        480
+      ],
+      [
+        241,
+        427
+      ]
+    ],
+    "official_video_source_sha256": "0aefc2a51c004b9c57eedb86e781e68865a5be32108a92307e81ea5120a23e8a",
+    "note": "Full StarVLA transform module could not import without accelerate; tested exact AST-extracted crop/resize class methods, not the complete LeRobot loader."
+  },
+  "source_sha256": {
+    "local.json": "422e30fe66da269ea303367b805eca2a60cb10e02a771af10b620e0ee1389f30",
+    "official.json": "42c3390731b60aeb7fe174be75bb8d14362240e9e4b36c5852a36f7a3d41d3e0",
+    "preprocessing.json": "5498c549b8af2cc63498ee103b268623c8f13dcb146e712954d541b506d6325a"
+  },
+  "scope": "Paired bootstrap conditions on fixed checkpoints and reused test170; 7 video groups, no unseen-task claim. Preprocessing subset uses a separate train64 mean."
+}
