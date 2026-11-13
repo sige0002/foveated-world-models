@@ -1,0 +1,11 @@
+{
+  "tests_passed": 166,
+  "warnings": 2,
+  "test_seconds": 4.18,
+  "test_command": "OMP_NUM_THREADS=2 MKL_NUM_THREADS=2 .venv/bin/python -m pytest -q tests research --ignore=research/source_snapshots",
+  "checkpoint_interval_updates": 100,
+  "retention": "best1 plus last; final added on successful completion",
+  "legacy_models_deleted": 164,
+  "legacy_model_bytes_deleted": 47393223957,
+  "active_run_storage": "/media/sadasue/SSD1/foveated-world-models/runs/stage1-lerobot-rpy14-minmax-gb10-20261113"
+}

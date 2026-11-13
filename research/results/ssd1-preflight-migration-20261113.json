@@ -1,0 +1,8 @@
+{
+  "destination": "/media/sadasue/SSD1/foveated-world-models/runs/stage1-lerobot-full-preflight-20261113",
+  "verified_sha256": {
+    "checkpoints/last.ckpt": "e54da1db35996878a8d51971abd30bb2d3a77b521787c637b3fa48a383d5b762",
+    "checkpoints/epoch=0-step=3.ckpt": "172d2522cd75a7d9ad9e8fe74c19308570edccebb92580be4013746ec9a3446d",
+    "checkpoints/final.ckpt": "087443fc6d52ce90fbad92038234076a8c4961fbb5ffb1d7900e16e044942856"
+  }
+}

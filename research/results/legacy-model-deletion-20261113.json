@@ -1,0 +1,665 @@
+{
+  "reason": "User requested deletion of all models trained with the incorrect legacy data processing",
+  "files": [
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/reference-idm-wide-decoders-seeds43-44-20261113/wide_residual-seed44.pt",
+      "bytes": 53658789
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/reference-idm-wide-decoders-seeds43-44-20261113/wide_flow-seed44.pt",
+      "bytes": 53658565
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/reference-idm-wide-decoders-seeds43-44-20261113/wide_flow-seed43.pt",
+      "bytes": 53658565
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/reference-idm-wide-decoders-seeds43-44-20261113/wide_residual-seed43.pt",
+      "bytes": 53658789
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/horizon-prior512-direct400-20261113/prior_horizon_residual-seed42.pt",
+      "bytes": 53660720
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/prior-residual-compute1600-seed42-20261113/prior_residual-seed42.pt",
+      "bytes": 53658845
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/reference-idm43-final-prior-residual43-20261113/prior_residual-seed43.pt",
+      "bytes": 53658845
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/prior-refinement-seed42-20261113/prior_refinement-seed42.pt",
+      "bytes": 53659021
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/constant-nested512-residual1600-20261113/prior_residual-seed42.pt",
+      "bytes": 53658845
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/frozen-idm-longer-training-20261113/flow-seed42.pt",
+      "bytes": 3655259
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/frozen-idm-longer-training-20261113/residual-seed42.pt",
+      "bytes": 3655411
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/prior-centered-seed42-20261113/prior_centered_residual-seed42.pt",
+      "bytes": 53659413
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/prior-centered-seed42-20261113/prior_centered_flow-seed42.pt",
+      "bytes": 53659189
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/reference-idm42-nested512-flow1600-20261113/prior_flow-seed42.pt",
+      "bytes": 53658621
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/spatial-rotated512-400-20261113/prior_rotated_residual-seed42.pt",
+      "bytes": 53679081
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/reference-idm42-final-prior-residual42-20261113/prior_residual-seed42.pt",
+      "bytes": 53658845
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/reference-idm42-final-prior-residual42-1600-20261113/prior_residual-seed42.pt",
+      "bytes": 53658845
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/frozen-idm-endpoint-flow-20261113/endpoint_flow-seed43.pt",
+      "bytes": 3655601
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/frozen-idm-endpoint-flow-20261113/endpoint_flow-seed44.pt",
+      "bytes": 3655601
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/frozen-idm-endpoint-flow-20261113/endpoint_flow-seed42.pt",
+      "bytes": 3655601
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/frozen-idm-decoder-comparison-20261113/flow-seed42.pt",
+      "bytes": 3655259
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/frozen-idm-decoder-comparison-20261113/direct-seed42.pt",
+      "bytes": 3198491
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/frozen-idm-decoder-comparison-20261113/refinement-seed42.pt",
+      "bytes": 3655487
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/frozen-idm-decoder-comparison-20261113/residual-seed42.pt",
+      "bytes": 3655411
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/frozen-idm-decoder-comparison-20261113/direct_unorm-seed42.pt",
+      "bytes": 3191957
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/constant-nested512-residual44-400-20261113/prior_residual-seed44.pt",
+      "bytes": 53658845
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/reference-idm42-nested512-residual1600-20261113/prior_residual-seed42.pt",
+      "bytes": 53658845
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/reference-idm44-nested512-residual400-20261113/prior_residual-seed44.pt",
+      "bytes": 53658845
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/reference-idm-prior-correction-seed42-20261113/prior_flow-seed42.pt",
+      "bytes": 53658621
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/reference-idm-prior-correction-seed42-20261113/prior_residual-seed42.pt",
+      "bytes": 53658845
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/reference-idm42-nested512-comparison400-20261113/prior_flow-seed42.pt",
+      "bytes": 53658621
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/reference-idm42-nested512-comparison400-20261113/prior_residual-seed42.pt",
+      "bytes": 53658845
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/reference-idm44-final-prior-residual44-20261113/prior_residual-seed44.pt",
+      "bytes": 53658845
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/prior-terminal-seed42-20261113/prior_terminal-seed42.pt",
+      "bytes": 53658845
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/reference-idm-terminal-objective-seed42-20261113/wide_terminal-seed42.pt",
+      "bytes": 53658789
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/projected-prior512-flow400-20261113/prior_projected_flow-seed42.pt",
+      "bytes": 54052798
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/reference-idm42-final-prior-flow42-20261113/prior_flow-seed42.pt",
+      "bytes": 53658621
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/constant-final-prior-residual43-20261113/prior_residual-seed43.pt",
+      "bytes": 53658845
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/frozen-idm-wide-head-20261113/wide_flow-seed42.pt",
+      "bytes": 53658565
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/frozen-idm-wide-head-20261113/wide_residual-seed42.pt",
+      "bytes": 53658789
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/projected-prior512-direct400-20261113/prior_projected_residual-seed42.pt",
+      "bytes": 54053026
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/constant-final-prior-residual44-20261113/prior_residual-seed44.pt",
+      "bytes": 53658845
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/reference-idm-decoder-comparison-20261113/wide_flow-seed42.pt",
+      "bytes": 53658565
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/reference-idm-decoder-comparison-20261113/flow-seed42.pt",
+      "bytes": 3655259
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/reference-idm-decoder-comparison-20261113/wide_residual-seed42.pt",
+      "bytes": 53658789
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/reference-idm-decoder-comparison-20261113/residual-seed42.pt",
+      "bytes": 3655411
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/constant-code-prior-residual-seed42-20261113/prior_residual-seed42.pt",
+      "bytes": 53658845
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/reference-idm-prior-residual-seeds43-44-20261113/prior_residual-seed44.pt",
+      "bytes": 53658845
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/reference-idm-prior-residual-seeds43-44-20261113/prior_residual-seed43.pt",
+      "bytes": 53658845
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/reference-idm43-prior-residual43-20261113/prior_residual-seed43.pt",
+      "bytes": 53658845
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/horizon-prior512-flow400-20261113/prior_horizon_flow-seed42.pt",
+      "bytes": 53660492
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/spatial-tangent512-400-20261113/prior_tangent_residual-seed42.pt",
+      "bytes": 53679081
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/frozen-idm-source-anchoring-replication-20261113/noisy_residual-seed44.pt",
+      "bytes": 3655639
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/frozen-idm-source-anchoring-replication-20261113/endpoint_anchored-seed44.pt",
+      "bytes": 3655881
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/frozen-idm-source-anchoring-replication-20261113/noisy_residual-seed43.pt",
+      "bytes": 3655639
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/frozen-idm-source-anchoring-replication-20261113/endpoint_anchored-seed43.pt",
+      "bytes": 3655881
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/frozen-idm-replication-20261113/flow-seed44.pt",
+      "bytes": 3655259
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/frozen-idm-replication-20261113/flow-seed43.pt",
+      "bytes": 3655259
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/frozen-idm-replication-20261113/refinement-seed44.pt",
+      "bytes": 3655487
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/frozen-idm-replication-20261113/refinement-seed43.pt",
+      "bytes": 3655487
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/frozen-idm-replication-20261113/residual-seed43.pt",
+      "bytes": 3655411
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/frozen-idm-replication-20261113/residual-seed44.pt",
+      "bytes": 3655411
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/reference-idm43-nested512-residual400-20261113/prior_residual-seed43.pt",
+      "bytes": 53658845
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/reference-idm44-prior-residual44-20261113/prior_residual-seed44.pt",
+      "bytes": 53658845
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/constant-nested512-residual43-400-20261113/prior_residual-seed43.pt",
+      "bytes": 53658845
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/constant-nested512-residual400-20261113/prior_residual-seed42.pt",
+      "bytes": 53658845
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/frozen-idm-source-anchoring-20261113/noisy_residual-seed42.pt",
+      "bytes": 3655639
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/frozen-idm-source-anchoring-20261113/endpoint_anchored-seed42.pt",
+      "bytes": 3655881
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/constant-final-prior-residual42-20261113/prior_residual-seed42.pt",
+      "bytes": 53658845
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/ffn4-seed42-512-400-20261113/decoder.pt",
+      "bytes": 53657421
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/ffn4-seed44-512-400-20261113/decoder.pt",
+      "bytes": 53657421
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/ffn2-seed43-512-400-20261113/decoder.pt",
+      "bytes": 44214093
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/ffn2-seed44-512-400-20261113/decoder.pt",
+      "bytes": 44214093
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/ffn4-seed43-512-400-20261113/decoder.pt",
+      "bytes": 53657421
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/ffn2-seed42-512-400-20261113/decoder.pt",
+      "bytes": 44214093
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/codec-context-large-flow-512-400-20261113/predictor.pt",
+      "bytes": 48483629
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/codec-context-large-direct-512-400-20261113/predictor.pt",
+      "bytes": 48483629
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/codec-context-large-feature-512-400-20261113/predictor.pt",
+      "bytes": 48483629
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/codec-context-small-flow-512-400-20261113/predictor.pt",
+      "bytes": 6087873
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/codec-context-small-direct-512-400-20261113/predictor.pt",
+      "bytes": 6087873
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/bounded-innovation-recoding-seed42-512-400-20261113/model.pt",
+      "bytes": 54745924
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/bounded-innovation-noise-seed42-512-400-20261113/model.pt",
+      "bytes": 54745924
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/bounded-innovation-future-seed42-512-400-20261113/model.pt",
+      "bytes": 54745924
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/idm-local-repair-D-seed44-20261113/repair.pt",
+      "bytes": 54744065
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/idm-local-repair-HD-seed43-20261113/repair.pt",
+      "bytes": 54744065
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/idm-local-repair-HD-seed42-20261113/repair.pt",
+      "bytes": 54744065
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/idm-local-repair-H-seed42-20261113/repair.pt",
+      "bytes": 54744065
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/idm-local-repair-H-seed43-20261113/repair.pt",
+      "bytes": 54744065
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/idm-local-repair-K-seed42-20261113/repair.pt",
+      "bytes": 54744065
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/idm-local-repair-D-seed43-20261113/repair.pt",
+      "bytes": 54744065
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/idm-local-repair-H-seed44-20261113/repair.pt",
+      "bytes": 54744065
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/idm-local-repair-D-seed42-20261113/repair.pt",
+      "bytes": 54744065
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/idm-local-repair-K-seed44-20261113/repair.pt",
+      "bytes": 54744065
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/idm-local-repair-K-seed43-20261113/repair.pt",
+      "bytes": 54744065
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/idm-local-repair-HD-seed44-20261113/repair.pt",
+      "bytes": 54744065
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/codec32-direct_feature-512-400-20261113-v2/predictor.pt",
+      "bytes": 5694274
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/codec32-direct_latent-512-400-20261113-v2/predictor.pt",
+      "bytes": 5694274
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/codec32-flow_low_noise-512-400-20261113-v2/predictor.pt",
+      "bytes": 5694274
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/codec32-flow-512-400-20261113-v2/predictor.pt",
+      "bytes": 5694274
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/prior-compression-downstream_teacher-512-400-20261113/prior.pt",
+      "bytes": 53655261
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/prior-compression-future-512-400-20261113/prior.pt",
+      "bytes": 53655261
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/prior-compression-prior_teacher-512-400-20261113/prior.pt",
+      "bytes": 53655261
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/nonlinear-codec128-512-1000-20261113/codec.pt",
+      "bytes": 3287008
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/nonlinear-codec32-512-1000-20261113/codec.pt",
+      "bytes": 2795104
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/frozen-model-step9802/reference_weights.pt",
+      "bytes": 2905362203
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/frozen-model-step10000/reference_weights.pt",
+      "bytes": 2905362203
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/frozen-idm-step6501/reference_weights.pt",
+      "bytes": 2905362203
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/frozen-idm-step2900/reference_weights.pt",
+      "bytes": 2905362203
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/linear-prior512-20261113/prior.pt",
+      "bytes": 2367375
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/layerwise-real-cuda-512-400-20261113/latest.pt",
+      "bytes": 4724115
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/layerwise-real-cuda-512-400-20261113/adapter.pt",
+      "bytes": 1577893
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/latent-flow-residual-pilot-20261113/residual/checkpoints/last.ckpt",
+      "bytes": 347532287
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/latent-flow-residual-pilot-20261113/residual/checkpoints/epoch=0-step=100.ckpt",
+      "bytes": 347532159
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/latent-flow-residual-pilot-20261113/residual/checkpoints/final.ckpt",
+      "bytes": 347532287
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/research-latent-flow-cpu-smoke-20261113/checkpoints/last.ckpt",
+      "bytes": 347532287
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/research-latent-flow-cpu-smoke-20261113/checkpoints/epoch=0-step=2.ckpt",
+      "bytes": 347532287
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/research-latent-flow-cpu-smoke-20261113/checkpoints/final.ckpt",
+      "bytes": 347532287
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/latent-flow-pilot-20261113/flow_current/checkpoints/last.ckpt",
+      "bytes": 347532287
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/latent-flow-pilot-20261113/flow_current/checkpoints/epoch=0-step=100.ckpt",
+      "bytes": 347532159
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/latent-flow-pilot-20261113/flow_current/checkpoints/final.ckpt",
+      "bytes": 347532287
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/latent-flow-pilot-20261113/refinement/checkpoints/last.ckpt",
+      "bytes": 347532287
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/latent-flow-pilot-20261113/refinement/checkpoints/epoch=0-step=100.ckpt",
+      "bytes": 347532159
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/latent-flow-pilot-20261113/refinement/checkpoints/final.ckpt",
+      "bytes": 347532287
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/latent-flow-pilot-20261113/flow_noise/checkpoints/last.ckpt",
+      "bytes": 347532287
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/latent-flow-pilot-20261113/flow_noise/checkpoints/epoch=0-step=100.ckpt",
+      "bytes": 347532159
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/latent-flow-pilot-20261113/flow_noise/checkpoints/final.ckpt",
+      "bytes": 347532287
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/latent-flow-pilot-20261113/direct/checkpoints/last.ckpt",
+      "bytes": 346902623
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/latent-flow-pilot-20261113/direct/checkpoints/epoch=0-step=100.ckpt",
+      "bytes": 346902495
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/latent-flow-pilot-20261113/direct/checkpoints/final.ckpt",
+      "bytes": 346902623
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/research-latent-flow-resume-20261113/checkpoints/last.ckpt",
+      "bytes": 347532287
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/research-latent-flow-resume-20261113/checkpoints/epoch=1-step=3.ckpt",
+      "bytes": 347532159
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/runs/research-latent-flow-resume-20261113/checkpoints/final.ckpt",
+      "bytes": 347532287
+    },
+    {
+      "path": "/media/sadasue/SSD1/foveated-world-models/runs/stage1-gb10-main-20261112/checkpoints/last.ckpt",
+      "bytes": 8030681831
+    },
+    {
+      "path": "/media/sadasue/SSD1/foveated-world-models/runs/stage1-gb10-main-20261112/checkpoints/final.ckpt",
+      "bytes": 8030658663
+    },
+    {
+      "path": "/media/sadasue/SSD1/foveated-world-models/runs/stage1-gb10-main-20261112/checkpoints/epoch=2-step=9802.ckpt",
+      "bytes": 8030681831
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/research/results/current-prior-calibration512-20261113/coefficients.pt",
+      "bytes": 23955
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/research/idm/postprojection-comparison400/direction-42.pt",
+      "bytes": 53763053
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/research/idm/postprojection-comparison400/direction_statistics-42.pt",
+      "bytes": 53763841
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/research/idm/postprojection-comparison400/calibrated_raw-42.pt",
+      "bytes": 53763353
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/research/idm/postprojection-comparison400/constant-42.pt",
+      "bytes": 53762993
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/research/idm/interaction-probe512/fit_artifacts.pt",
+      "bytes": 26944463
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/research/idm/nested512-displacement-probe/fit_artifacts.pt",
+      "bytes": 18475956
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/research/idm/local-repair-probes-20261113/fit_artifacts.pt",
+      "bytes": 18508254
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/research/idm/query-accessibility512/fit_artifacts.pt",
+      "bytes": 48064439
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/research/idm/spatial-current-boundary-audit/kernel_fit_artifacts.pt",
+      "bytes": 3222707
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/research/idm/spatial-current-displacement-probe/kernel_fit_artifacts.pt",
+      "bytes": 3222707
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/research/idm/displacement-ridge-probe/fitted_models.pt",
+      "bytes": 202938
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/research/idm/displacement-ridge-boundary-audit/fitted_models.pt",
+      "bytes": 202938
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/research/idm/reference-smoke400/centered-42.pt",
+      "bytes": 4772511
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/research/idm/reference-smoke400/raw-42.pt",
+      "bytes": 4769997
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/research/idm/reference-smoke400/reference-42.pt",
+      "bytes": 4772553
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/research/idm/reference-smoke400/constant-42.pt",
+      "bytes": 4772511
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/research/idm/reference-comparison2000/centered-42.pt",
+      "bytes": 4772511
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/research/idm/reference-comparison2000/raw-42.pt",
+      "bytes": 4769997
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/research/idm/reference-comparison2000/reference-44.pt",
+      "bytes": 4772553
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/research/idm/reference-comparison2000/reference-42.pt",
+      "bytes": 4772553
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/research/idm/reference-comparison2000/raw-44.pt",
+      "bytes": 4769997
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/research/idm/reference-comparison2000/constant-44.pt",
+      "bytes": 4772511
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/research/idm/reference-comparison2000/centered-43.pt",
+      "bytes": 4772511
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/research/idm/reference-comparison2000/constant-43.pt",
+      "bytes": 4772511
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/research/idm/reference-comparison2000/centered-44.pt",
+      "bytes": 4772511
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/research/idm/reference-comparison2000/raw-43.pt",
+      "bytes": 4769997
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/research/idm/reference-comparison2000/reference-43.pt",
+      "bytes": 4772553
+    },
+    {
+      "path": "/home/sadasue/foveated-world-models/research/idm/reference-comparison2000/constant-42.pt",
+      "bytes": 4772511
+    }
+  ],
+  "count": 164,
+  "bytes": 47393223957,
+  "preserved": "Corrected LeRobot runs, upstream pretrained DINO assets, source datasets, feature caches and historical metrics/logs. Source/checkpoint hashes in old reports are historical; old weights no longer available.",
+  "complete": true
+}

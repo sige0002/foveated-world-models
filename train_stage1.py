@@ -39,6 +39,20 @@ def check_resume_contract(checkpoint, contract):
                          'legacy rot6D/padded-image checkpoints cannot resume corrected training.')
 
 
+def relocated_checkpoint_state(state, directory):
+    """Preserve top-k bookkeeping when an old path aliases the moved directory."""
+    if not state.get('dirpath') or Path(state['dirpath']).resolve() != Path(directory).resolve():
+        return state
+    state = dict(state)
+    state['dirpath'] = str(directory)
+    for key in ('best_model_path', 'kth_best_model_path', 'last_model_path'):
+        if state.get(key):
+            state[key] = str(Path(state[key]).resolve())
+    if 'best_k_models' in state:
+        state['best_k_models'] = {str(Path(p).resolve()): score for p, score in state['best_k_models'].items()}
+    return state
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--config', default=str(ROOT / 'configs/stage1_robomind.yaml'))
@@ -120,6 +134,14 @@ def main():
         def on_save_checkpoint(self, trainer, pl_module, checkpoint):
             checkpoint['data_contract'] = contract
 
+    class RelocatableModelCheckpoint(ModelCheckpoint):
+        def _generate_state_key(self, **kwargs):
+            # Keep compatibility with checkpoints saved by the original callback.
+            return f"ModelCheckpoint{repr(kwargs)}"
+
+        def load_state_dict(self, state_dict):
+            super().load_state_dict(relocated_checkpoint_state(state_dict, self.dirpath))
+
     class TrainingProgress(Callback):
         def on_train_start(self, trainer, pl_module):
             self.started = time.monotonic()
@@ -176,7 +198,7 @@ def main():
                           num_workers=data_config['num_workers'], collate_fn=collate,
                           pin_memory=torch.cuda.is_available())
                for dataset, shuffle in ((train, True), (val, False))]
-    checkpoint = ModelCheckpoint(dirpath=output / 'checkpoints', save_last=True,
+    checkpoint = RelocatableModelCheckpoint(dirpath=output / 'checkpoints', save_last=True,
                                  save_top_k=1, monitor='val_loss', mode='min',
                                  save_on_train_epoch_end=False)
     trainer = Trainer(**config['trainer'], default_root_dir=output,

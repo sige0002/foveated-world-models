@@ -1,0 +1,11 @@
+{
+  "source": "/home/sadasue/foveated-world-models/runs/stage1-lerobot-rpy14-minmax-gb10-20261113",
+  "destination": "/media/sadasue/SSD1/foveated-world-models/runs/stage1-lerobot-rpy14-minmax-gb10-20261113",
+  "resume_step": 800,
+  "checkpoint_sha256": {
+    "checkpoints/last.ckpt": "e13b2f0d793866379d2d0e8328f9601a60cf11e8a6482e727b412b72e93c12e4",
+    "checkpoints/epoch=0-step=800.ckpt": "e13b2f0d793866379d2d0e8328f9601a60cf11e8a6482e727b412b72e93c12e4"
+  },
+  "verified_copy": true,
+  "old_path_is_symlink": true
+}
