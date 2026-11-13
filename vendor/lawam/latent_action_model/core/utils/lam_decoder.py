@@ -1,3 +1,4 @@
+import math
 import torch.nn as nn
 import torch
 from typing import Optional, Tuple
@@ -160,8 +161,12 @@ class StatePredictor(nn.Module):
         num_queries: int = 1,
         max_state_dim: int = 32,
         code_dim: Optional[int] = None,
+        output_scale: float = 1.0,
     ):
         super().__init__()
+        self.output_scale = float(output_scale)
+        if not math.isfinite(self.output_scale) or self.output_scale <= 0:
+            raise ValueError("output_scale must be finite and positive")
         self.num_embodiments = int(num_embodiments)
         self.max_state_dim = int(max_state_dim)
         z_input_dim = int(code_dim) if code_dim is not None else int(latent_dim)
@@ -211,7 +216,7 @@ class StatePredictor(nn.Module):
         if state_embed.dim() == 3 and z_embed.dim() == 2:
             z_embed = z_embed.unsqueeze(1).expand(-1, state_embed.size(1), -1)
         fused = torch.cat([z_embed, state_embed], dim=-1)
-        s_pred = torch.tanh(self.state_decoder(fused, emb))
+        s_pred = self.output_scale * torch.tanh(self.state_decoder(fused, emb))
         if single_timestep and s_pred.dim() == 3 and s_pred.size(1) == 1:
             s_pred = s_pred.squeeze(1)
         return s_pred

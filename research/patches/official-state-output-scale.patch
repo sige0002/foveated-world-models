@@ -1,0 +1,71 @@
+diff --git a/latent_action_model/core/lam_lightinng.py b/latent_action_model/core/lam_lightinng.py
+index cf1b883..ff43803 100644
+--- a/latent_action_model/core/lam_lightinng.py
++++ b/latent_action_model/core/lam_lightinng.py
+@@ -42,6 +42,7 @@ class VJEPA_LAM(LightningModule):
+         lambda_aux: float = 0.2,
+         loss_type: str = "l1",
+         state_loss_type: str = "l1",
++        state_output_scale: float = 1.0,
+         project: str = 'UniVLA-latent_action_model',
+         task_name: str = 'vjepa_lam',
+         wandb_offline: bool = False,
+@@ -110,6 +111,7 @@ class VJEPA_LAM(LightningModule):
+             image_hw=self.image_hw,
+             patch_size=self.patch_size,
+             decoder_last_ln=decoder_last_ln,
++            state_output_scale=state_output_scale,
+         )
+ 
+ 
+diff --git a/latent_action_model/core/lam_model.py b/latent_action_model/core/lam_model.py
+index c06dbd9..6ba85b8 100644
+--- a/latent_action_model/core/lam_model.py
++++ b/latent_action_model/core/lam_model.py
+@@ -45,6 +45,7 @@ class LatentLAMModel(nn.Module):
+         image_hw: Tuple[int, int] = LAM_IMAGE_HW,
+         patch_size: int = LAM_PATCH_SIZE,
+         decoder_last_ln: bool = True,
++        state_output_scale: float = 1.0,
+         **kwargs
+     ):
+         super().__init__()
+@@ -127,6 +128,7 @@ class LatentLAMModel(nn.Module):
+             num_queries=num_queries,
+             max_state_dim=max_state_dim,
+             code_dim=code_dim,
++            output_scale=state_output_scale,
+         )
+         self.norm_latents = norm_latents
+         # print("norm_latents:", self.norm_latents)
+diff --git a/latent_action_model/core/utils/lam_decoder.py b/latent_action_model/core/utils/lam_decoder.py
+index 728d8dd..d9b2642 100644
+--- a/latent_action_model/core/utils/lam_decoder.py
++++ b/latent_action_model/core/utils/lam_decoder.py
+@@ -1,3 +1,4 @@
++import math
+ import torch.nn as nn
+ import torch
+ from typing import Optional, Tuple
+@@ -160,8 +161,12 @@ class StatePredictor(nn.Module):
+         num_queries: int = 1,
+         max_state_dim: int = 32,
+         code_dim: Optional[int] = None,
++        output_scale: float = 1.0,
+     ):
+         super().__init__()
++        self.output_scale = float(output_scale)
++        if not math.isfinite(self.output_scale) or self.output_scale <= 0:
++            raise ValueError("output_scale must be finite and positive")
+         self.num_embodiments = int(num_embodiments)
+         self.max_state_dim = int(max_state_dim)
+         z_input_dim = int(code_dim) if code_dim is not None else int(latent_dim)
+@@ -211,7 +216,7 @@ class StatePredictor(nn.Module):
+         if state_embed.dim() == 3 and z_embed.dim() == 2:
+             z_embed = z_embed.unsqueeze(1).expand(-1, state_embed.size(1), -1)
+         fused = torch.cat([z_embed, state_embed], dim=-1)
+-        s_pred = torch.tanh(self.state_decoder(fused, emb))
++        s_pred = self.output_scale * torch.tanh(self.state_decoder(fused, emb))
+         if single_timestep and s_pred.dim() == 3 and s_pred.size(1) == 1:
+             s_pred = s_pred.squeeze(1)
+         return s_pred

@@ -46,6 +46,7 @@ class LatentLAMModel(nn.Module):
         image_hw: Tuple[int, int] = LAM_IMAGE_HW,
         patch_size: int = LAM_PATCH_SIZE,
         decoder_last_ln: bool = True,
+        state_output_scale: float = 1.0,
         decoder_type: str = "direct",
         flow_source: str = "current",
         flow_noise_scale: float = 0.1,
@@ -143,6 +144,7 @@ class LatentLAMModel(nn.Module):
             num_queries=num_queries,
             max_state_dim=max_state_dim,
             code_dim=code_dim,
+            output_scale=state_output_scale,
         )
         self.norm_latents = norm_latents
         # print("norm_latents:", self.norm_latents)

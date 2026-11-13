@@ -1,0 +1,5 @@
+# Model overlay; requires the local vendor implementation.
+# All state targets retain upstream future-minus-current semantics.
+model:
+  state_output_scale: 2.0
+  warmup_steps: 1000
