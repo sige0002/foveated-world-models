@@ -1,0 +1,13 @@
+{
+  "scope": "seed42, reused observed96, true-future posterior code; local original checkpoint, not official released weights",
+  "observed96_mse": 0.09915373078547418,
+  "native_original_mse": 0.1036306248861365,
+  "external400_mse": 0.0855736662245666,
+  "relative_reduction_vs_native_percent": 4.320049315133712,
+  "relative_increase_vs_external400_percent": 15.869443439842957,
+  "training_seconds": 125.55820678710006,
+  "training_and_evaluation_seconds": 140.33112776000053,
+  "constant_control_completed": false,
+  "shared_control_completed": false,
+  "adoption": "Does not recover external correction accuracy; no adoption as its replacement. Inference latency and complementary metrics not yet measured for this model."
+}

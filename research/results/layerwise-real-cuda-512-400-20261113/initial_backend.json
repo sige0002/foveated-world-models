@@ -1,0 +1,6 @@
+{
+  "train_vs_inference_max_abs": 5.7220458984375e-06,
+  "train_vs_cached_baseline_max_abs": 7.62939453125e-06,
+  "train_vs_inference_tolerance": 0.0001,
+  "cache_note": "Cached baseline used B2; diagnostic only, not bitwise equivalence."
+}

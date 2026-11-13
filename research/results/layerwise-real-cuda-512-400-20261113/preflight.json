@@ -1,0 +1,27 @@
+{
+  "initial_exact": true,
+  "initial_zero_exact": true,
+  "trainable_parameters": 393216,
+  "source_split_counts": {
+    "train": 512,
+    "validation": 64,
+    "observed96": 96
+  },
+  "initial_diagnostics": {
+    "displacement_rms_by_layer": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "stacked_map_rank": 0
+  }
+}
