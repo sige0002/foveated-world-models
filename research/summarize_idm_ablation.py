@@ -14,6 +14,13 @@ from research.train_idm_ablation import evaluate,write
 from research.idm.load_difference_idm import load_trained_model
 
 
+def verify_checkpoint_protocol(checkpoint_protocol, recorded_protocol):
+    # torch.save preserves tuples; the JSON record serializes them as lists.
+    # Compare the same serialized representation without dropping any fields.
+    if json.loads(json.dumps(checkpoint_protocol)) != recorded_protocol:
+        raise ValueError('Checkpoint protocol differs from recorded protocol')
+
+
 def paired_comparison(left,right,groups):
     """Paired risk difference; seed and finite-cluster uncertainty remain distinct."""
     difference=left-right;delta=difference.mean(0)
@@ -107,7 +114,7 @@ def main():
             root=a.runs/f'{arm}-{seed}'
             for step in (400,800,1600):
                 model,protocol=load_trained_model(root/f'model-step{step}.pt',a.device)
-                assert protocol==protocols[arm][i]
+                verify_checkpoint_protocol(protocol,protocols[arm][i])
                 x,y=[data['observed96'][k][:8].to(a.device) for k in ('current','future')]
                 actual=(model(x,y)[0]-y).square().flatten(1).mean(1).cpu().numpy()
                 expected=np.array([r['mse'] for r in evaluations[step][arm][i]['observed96']['rows'][:8]])

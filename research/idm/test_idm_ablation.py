@@ -5,8 +5,23 @@ import pytest
 from research.idm.test_difference_idm import fixture,DEVICES
 from research.train_idm_ablation import (initialize_ablation,make_batches,optimizer_for,
     save_training,restore_training,evaluate)
-from research.summarize_idm_ablation import paired_comparison,verify_runs
+from research.summarize_idm_ablation import paired_comparison,verify_runs,verify_checkpoint_protocol
 import numpy as np
+
+
+def test_checkpoint_protocol_json_roundtrip_preserves_validation():
+    import json
+    saved={'options':{'decoder':{'grid_hw':(16,16)}},'seed':42,'scale':.25}
+    recorded=json.loads(json.dumps(saved))
+    verify_checkpoint_protocol(saved,recorded)
+    for changed in (
+        {**recorded,'seed':43},
+        {**recorded,'scale':.5},
+        {**recorded,'options':{'decoder':{'grid_hw':[16,32]}}},
+        {k:v for k,v in recorded.items() if k!='scale'},
+    ):
+        with pytest.raises(ValueError,match='protocol'):
+            verify_checkpoint_protocol(saved,changed)
 
 
 @pytest.mark.parametrize('device',DEVICES)
