@@ -9,7 +9,7 @@ from research.layerwise_condition import install_layerwise_adapter
 from research.evaluate_prediction_metrics import metrics
 
 
-def fixture():
+def fixture(device='cpu'):
     torch.set_num_threads(2)
     torch.manual_seed(42)
     m = LAMDecoder_v2(context_dim=8, input_dim=4, code_dim=3,
@@ -17,11 +17,15 @@ def fixture():
     for b in m.dec_layers:
         torch.nn.init.normal_(b.adaLN_modulation[-1].weight, std=.1)
         torch.nn.init.normal_(b.adaLN_modulation[-1].bias, std=.1)
-    return m, torch.randn(2,1,4,4), torch.randn(2,1,3)
+    return m.to(device), torch.randn(2,1,4,4,device=device), torch.randn(2,1,3,device=device)
 
 
-def test_equivalence_shared_and_gradient_sum():
-    base,x,z=fixture()
+DEVICES = ['cpu'] + (['cuda'] if torch.cuda.is_available() else [])
+
+
+@pytest.mark.parametrize('device', DEVICES)
+def test_equivalence_shared_and_gradient_sum(device):
+    base,x,z=fixture(device)
     shared=install_adapter(copy.deepcopy(base))
     rng=torch.get_rng_state().clone()
     layerwise=install_layerwise_adapter(copy.deepcopy(base))
@@ -31,15 +35,17 @@ def test_equivalence_shared_and_gradient_sum():
         assert torch.equal(base(x,torch.zeros_like(z)),layerwise(x,z))
         shared.action_in_proj.U.weight.normal_(std=.1)
         layerwise.action_in_proj.U.weight.copy_(shared.action_in_proj.U.weight.repeat(2,1))
-    torch.testing.assert_close(shared(x,z),layerwise(x,z),rtol=0,atol=0)
+    # Different projection matrix sizes may choose different GEMM kernels.
+    torch.testing.assert_close(shared(x,z),layerwise(x,z),rtol=1e-5,atol=1e-6)
     shared(x,z).square().mean().backward()
     layerwise(x,z).square().mean().backward()
     torch.testing.assert_close(shared.action_in_proj.U.weight.grad,
         layerwise.action_in_proj.U.weight.grad.reshape(2,8,3).sum(0),rtol=1e-4,atol=1e-7)
 
 
-def test_update_zero_anchor_and_roundtrip():
-    base,x,z=fixture();model=install_layerwise_adapter(copy.deepcopy(base))
+@pytest.mark.parametrize('device', DEVICES)
+def test_update_zero_anchor_and_roundtrip(device):
+    base,x,z=fixture(device);model=install_layerwise_adapter(copy.deepcopy(base))
     frozen=frozen_hash(model)
     prior=model(x,torch.zeros_like(z)).detach()
     opt=torch.optim.AdamW([model.action_in_proj.U.weight],lr=.01)

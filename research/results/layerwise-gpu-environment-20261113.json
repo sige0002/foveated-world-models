@@ -1,0 +1,27 @@
+{
+  "python": "3.12.12",
+  "packages": {
+    "torch": "2.11.0",
+    "torchvision": "0.26.0",
+    "transformers": "5.5.4",
+    "lightning": "2.6.6",
+    "timm": "1.0.31",
+    "wandb": "0.31.0",
+    "PyYAML": "6.0.3",
+    "Pillow": "12.3.0",
+    "numpy": "2.2.6",
+    "av": "15.1.0",
+    "pyarrow": "24.0.0",
+    "pytest": "9.0.3"
+  },
+  "cuda": "13.0",
+  "gpus": [
+    "NVIDIA RTX 6000 Ada Generation",
+    "NVIDIA RTX 6000 Ada Generation"
+  ],
+  "tests": {
+    "command": ".venv/bin/python -m pytest -q tests research --ignore=research/source_snapshots",
+    "passed": 144
+  },
+  "scope": "Local GPU validation uses final10000 encoder; unavailable historical research caches/head were rebuilt."
+}

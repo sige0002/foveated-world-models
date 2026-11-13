@@ -1,6 +1,6 @@
 # Integrate z through the pretrained visual backbone, not an extra visual tower
 
-2026-11-13. Initially a read-only design. The research implementation and single-step smoke test were subsequently added in [layerwise_condition.py](../layerwise_condition.py) and [check_layerwise_condition.py](../check_layerwise_condition.py). Full layerwise fitting and production integration remain unperformed; running experiments were not changed. The user prefers an actually integrated predictor if its advantage is clear. Merely wrapping an external correction network in one class does not meet that requirement.
+2026-11-13. Initially a read-only design. The research implementation and single-step smoke test were subsequently added in [layerwise_condition.py](../layerwise_condition.py) and [check_layerwise_condition.py](../check_layerwise_condition.py). User-authorized GPU fitting subsequently compared five arms across three decoder seeds using rebuilt final10000-encoder inputs; see the GPU validation section of [the research README](../README.md). Historical encoder2900 caches were unavailable, so this is not their exact replication. Layerwise fitting did not reliably beat the constant-code control or match external-correction MSE; production integration remains unperformed. The user prefers an actually integrated predictor if its advantage is clear. Merely wrapping an external correction network in one class does not meet that requirement.
 
 ## Concrete architecture
 

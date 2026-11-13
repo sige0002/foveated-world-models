@@ -1,0 +1,231 @@
+{
+  "purpose": "Train both shared encoder branches, mean head, and original direct decoder; no zero-code prior or external correction.",
+  "design": {
+    "arms": [
+      "joint",
+      "frozen_encoder"
+    ],
+    "seeds": [
+      42,
+      43,
+      44
+    ],
+    "steps": 400,
+    "primary_metric": "MSE on reused observed96; validation64 and complementary metrics also reported",
+    "primary_comparison": "joint versus frozen_encoder from identical encoder/head/decoder states and minibatches",
+    "training_loss": "deterministic mean MSE, no sampled VAE/KL/state auxiliary",
+    "initialization": "encoder10000 + decoder10000 and pretrained reference-head42; fine-tuning, not random initialization",
+    "vision_encoder": "DINO remains frozen; cache current/future features only. Query features recomputed online.",
+    "same_image_reference": "Q(C,C) is differentiable; neither Q branch detached. Head(0) need not equal zero.",
+    "checkpoint_interval": 100,
+    "selection": "fixed terminal400; no best-validation selection"
+  },
+  "example_protocol": {
+    "arm": "joint",
+    "seed": 42,
+    "steps": 400,
+    "batch_size": 8,
+    "microbatch": 8,
+    "lr": {
+      "encoder": 1e-05,
+      "head": 0.0001,
+      "decoder": 3e-05
+    },
+    "weight_decay_matrix": 0.01,
+    "weight_decay_bias_norm": 0.0,
+    "gradient_clip": 1.0,
+    "objective": "MSE of deterministic mean prediction; no posterior sampling, KL or state loss",
+    "precision": "float32 highest; no autocast",
+    "device": "NVIDIA RTX 6000 Ada Generation",
+    "torch": "2.11.0+cu130",
+    "initial_hashes": {
+      "encoder": "6820d72e6548ebe623f32f00db7a5e71fcd878c780aa68d87d4e8a367f888cdc",
+      "head": "48f4b8c06fa5d741eb97bfe1dcea81156a9453bdeeac2e949a065143bf5d3055",
+      "decoder": "9b5c9f18a2d6b58ca7e10b930c9e0f882d9f63f6d2fc37fdeef3701b009c6cba"
+    },
+    "batch_hash": "fc3b3bdb1b3591b0f45542702d75de8ebe7b8ae6940e129db22ac47769f316b6",
+    "trainable_parameters": {
+      "encoder": 309399552,
+      "head": 270624,
+      "decoder": 228286720
+    },
+    "source_sha256": {
+      "/home/yuki_sadasue/foveated-world-models/runs/layerwise-gpu-inputs-20261113/runs/reference-idm42-nested512-prior10000/train.pt": "5af88bae84806b6d91532cb44b532ffa4f54bef6afe86b79e4a1bbb05281cb6b",
+      "/home/yuki_sadasue/foveated-world-models/runs/layerwise-gpu-inputs-20261113/runs/reference-idm42-nested512-prior10000/cache_manifest.json": "bb17330481b164c1bc339f2f6fd444635aa350ff1518f1cd52900abb181ce503",
+      "/home/yuki_sadasue/foveated-world-models/runs/layerwise-gpu-inputs-20261113/runs/reference-idm42-nested512-prior10000/validation.pt": "23059085f626ffaa12cdab27c1fa25fc93081cdaacb206409b5aa316edfde36e",
+      "/home/yuki_sadasue/foveated-world-models/runs/layerwise-gpu-inputs-20261113/runs/reference-idm42-observed96-prior10000/validation.pt": "5e538db05cb827f6f5accf131494aaf04ac3fb9fab14a1e364e4dfeab03925a0",
+      "/home/yuki_sadasue/foveated-world-models/runs/layerwise-gpu-inputs-20261113/runs/reference-idm42-observed96-prior10000/cache_manifest.json": "dc6ac68957d10d502ca5db799b981b08647dcef04c5761e520b2f86bcbfbfce9",
+      "/home/yuki_sadasue/foveated-world-models/runs/layerwise-gpu-inputs-20261113/runs/frozen-model-step10000/reference_weights.pt": "aeeefb55c889e89a9becdfc4bce4c1741b913d90ce026e859597fd13eebee2f1",
+      "/home/yuki_sadasue/foveated-world-models/runs/layerwise-gpu-inputs-20261113/runs/frozen-model-step10000/resolved_config.yaml": "eb75fec86a6586153ae56ff50078b3d26b0aef7e49f11e6309832565668d514e",
+      "/data2/yuki_sadasue/runs/foveated-world-models/stage1-robomind-main/checkpoints/final.ckpt": "7212d2db040ec4bed5e998287cbff01e59ac516ce14c489433b56f2945974200",
+      "/home/yuki_sadasue/foveated-world-models/runs/layerwise-gpu-inputs-20261113/reference-head.pt": "574e9b7c920ad21425656b90499202c1233bb768415775f54612c11dc6fd91b8",
+      "/home/yuki_sadasue/foveated-world-models/research/train_difference_idm.py": "2a8662f3131cc5a7e5672e5c12d50762536845b68ed0fff561d39f24fe8cb86d",
+      "/home/yuki_sadasue/foveated-world-models/research/idm/difference_idm.py": "964c4fc3d87f14f4500f7a0b4984670d7503b262336263361f11dfe5387e22c2",
+      "/home/yuki_sadasue/foveated-world-models/vendor/lawam/latent_action_model/core/utils/lam_encoder.py": "db55c9946db8acc1474b01380e182f151a562abdcea8daa1a8bc575daffd115d",
+      "/home/yuki_sadasue/foveated-world-models/vendor/lawam/latent_action_model/core/utils/lam_decoder.py": "8bf31b43c4530d5a835cba4f001ada5d404ff5002673a68956c010a829079137",
+      "/home/yuki_sadasue/foveated-world-models/vendor/lawam/latent_action_model/core/utils/modules.py": "f100161a90f66cad89af39f615c58ece34316e643c6f21d561122a29ee877c44"
+    },
+    "options": {
+      "encoder": {
+        "code_dim": 32,
+        "codebook_size": 32,
+        "dec_layers": 12,
+        "dim": 1024,
+        "dropout": 0.0,
+        "dual_view_aug": true,
+        "enc_add_state": false,
+        "enc_layers": 24,
+        "enc_modal_mask": true,
+        "exclude_bias_norm_from_wd": true,
+        "ffn_expansion_factor": 4,
+        "image_aug": true,
+        "image_hw": [
+          256,
+          256
+        ],
+        "lambda_aux": 1.0,
+        "lambda_diversity": 0.0,
+        "latent_layer_to_use": -2,
+        "loss_type": "smooth_l1",
+        "max_state_dim": 32,
+        "multi_input": false,
+        "norm_latents": true,
+        "norm_latents_type": "ln",
+        "num_embodiments": 32,
+        "num_frames": 2,
+        "num_heads": 16,
+        "num_queries": 1,
+        "patch_size": 16,
+        "state_loss_type": "l2",
+        "vision_model_id": "/data2/yuki_sadasue/models/dinov3-vitb16-pretrain-lvd1689m",
+        "vq_kwargs": {
+          "beta": 5e-05,
+          "layer_norm": true
+        },
+        "vq_type": "vae",
+        "wandb_offline": true,
+        "warmup_steps": 5000
+      },
+      "decoder": {
+        "context_dim": 1024,
+        "input_dim": 768,
+        "code_dim": 32,
+        "num_queries": 1,
+        "num_layers": 12,
+        "num_heads": 16,
+        "dropout": 0.0,
+        "grid_hw": [
+          16,
+          16
+        ],
+        "ffn_expansion_factor": 4,
+        "last_ln": true
+      }
+    },
+    "scale": 5.464807033538818,
+    "scope": "New difference IDM, no external correction or zero-code prior. Shared Q encoder10000, pretrained mean-head42, original decoder10000. DINO fixed. True-future posterior reconstruction on reused512/64/96. Seeds change minibatches, not pretrained weights. Frozen control also updates head and full decoder."
+  },
+  "tests": {
+    "command": ".venv/bin/python -m pytest -q tests research --ignore=research/source_snapshots",
+    "passed": 149
+  },
+  "smoke": {
+    "difference-idm-smoke-20261113": {
+      "complete": true,
+      "smoke_only": true,
+      "changed": {
+        "encoder": true,
+        "head": true,
+        "decoder": true
+      },
+      "history": [
+        {
+          "step": 1,
+          "mse": 0.08790506049990654,
+          "gradient_norm": 0.12388525158166885,
+          "elapsed_seconds": 1.0125769414007664,
+          "peak_allocated_bytes": 10371201536
+        },
+        {
+          "step": 2,
+          "mse": 0.10631646029651165,
+          "gradient_norm": 0.09926170855760574,
+          "elapsed_seconds": 1.9492475455626845,
+          "peak_allocated_bytes": 12886354944
+        },
+        {
+          "step": 3,
+          "mse": 0.09151815995573997,
+          "gradient_norm": 0.06819774210453033,
+          "elapsed_seconds": 2.988907224498689,
+          "peak_allocated_bytes": 12886387712
+        },
+        {
+          "step": 4,
+          "mse": 0.13621011935174465,
+          "gradient_norm": 0.37814995646476746,
+          "elapsed_seconds": 3.941271555610001,
+          "peak_allocated_bytes": 12886461440
+        },
+        {
+          "step": 5,
+          "mse": 0.11940126679837704,
+          "gradient_norm": 0.07473347336053848,
+          "elapsed_seconds": 4.898752789013088,
+          "peak_allocated_bytes": 12886461440
+        }
+      ],
+      "training_seconds": 4.899437514133751,
+      "peak_allocated_bytes": 12886461440
+    },
+    "difference-idm-smoke-b8-20261113": {
+      "complete": true,
+      "smoke_only": true,
+      "changed": {
+        "encoder": true,
+        "head": true,
+        "decoder": true
+      },
+      "history": [
+        {
+          "step": 1,
+          "mse": 0.08790507167577744,
+          "gradient_norm": 0.12388457357883453,
+          "elapsed_seconds": 0.8227064609527588,
+          "peak_allocated_bytes": 16392266752
+        },
+        {
+          "step": 2,
+          "mse": 0.1063164696097374,
+          "gradient_norm": 0.09930478781461716,
+          "elapsed_seconds": 1.609601671807468,
+          "peak_allocated_bytes": 20700183040
+        },
+        {
+          "step": 3,
+          "mse": 0.09151816368103027,
+          "gradient_norm": 0.0681690201163292,
+          "elapsed_seconds": 2.4061571583151817,
+          "peak_allocated_bytes": 20700183040
+        },
+        {
+          "step": 4,
+          "mse": 0.13620901107788086,
+          "gradient_norm": 0.37551453709602356,
+          "elapsed_seconds": 3.2043559458106756,
+          "peak_allocated_bytes": 20700232192
+        },
+        {
+          "step": 5,
+          "mse": 0.11940132081508636,
+          "gradient_norm": 0.07495301961898804,
+          "elapsed_seconds": 4.001811008900404,
+          "peak_allocated_bytes": 20700232192
+        }
+      ],
+      "training_seconds": 4.002713111229241,
+      "peak_allocated_bytes": 20700232192
+    }
+  },
+  "base_git_commit": "e2c22aeaf318578a4138c104ac0bc1bf2b79330a"
+}
