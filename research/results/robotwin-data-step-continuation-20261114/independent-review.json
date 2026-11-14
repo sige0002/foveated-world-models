@@ -1,0 +1,38 @@
+{
+  "script_sha256": "17f4279f2761dcdfc9ce3e620d15e63bfad5e4f343b42a5225790a3f0d50f801",
+  "manifest_sha256": "66a764c37a03a84db19689652ea99ed019f8533000cefa763756c6286dd6f261",
+  "manifest_pins_checked": 44,
+  "checks": {
+    "all_four_3000_batch_hashes_recomputed": true,
+    "same_pool_multiset_across_two_seeds": true,
+    "replay_new_pair_intersection_zero": true,
+    "absolute_update_bounds_3001_to_6000": true,
+    "preflight_3001_to_3006": true,
+    "syntax": true
+  },
+  "source_review": {
+    "strict_model_and_adam_state_hash_equal_at_resume": true,
+    "upstream_173_276_optimizer_groups_preserved": true,
+    "scheduler_3000_and_lr_3e4_restored_before_first_update": true,
+    "BF16_autocast_no_gradscaler_and_grad_norm_clip1_match_original": true,
+    "upstream_shared_step_and_transfer_aug_used": true,
+    "gradients_zeroed_after_step_and_graph_references_cleared": true,
+    "FP32_eval_rng_precision_mode_restored": true,
+    "validation_B2_same_cached512_and_donors": true,
+    "serialization_lock_atomic_last_replace_final_hardlink": true,
+    "source_config_metadata_pins_rechecked": true
+  },
+  "limitations": [
+    "Read-only source and CPU manifest checks; GPU preflight, loaded optimizer moments and runtime memory/update checks must still pass.",
+    "Both seeds continue one initial trained checkpoint; new means new episode/base pairs, not new episodes or independent training replications.",
+    "Output is explicit model/optimizer/scheduler state, not an automatic Lightning loop resume."
+  ],
+  "correction": "The initial alleged missing-output-directory issue was incorrect: evaluate_model already creates its output directory. Root also made creation explicit; no unresolved directory blocker.",
+  "prior_script_sha256": "eb042a92ddc788bf152204c35497b3d6b7f874821c8a52ddf9fe6dd88fc66126",
+  "final_parity_change_review": {
+    "autocast_cache_disabled_matches_installed_Lightning_amp_py_line116": true,
+    "clip_parameter_order_matches_optimizer_groups": true,
+    "first_six_updates_require_all_trainable_VAE_grads_present_finite": true,
+    "syntax_rechecked": true
+  }
+}

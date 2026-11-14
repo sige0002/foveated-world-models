@@ -1,0 +1,278 @@
+{
+  "python_executable": "/home/sadasue/foveated-world-models/.venv/bin/python",
+  "python_version": "3.12.12 (main, Feb  3 2026, 22:55:44) [Clang 21.1.4 ]",
+  "torch_version": "2.11.0+cu130",
+  "torch_compiled_cuda_version": "13.0",
+  "torch_path": "/home/sadasue/foveated-world-models/.venv/lib/python3.12/site-packages/torch/__init__.py",
+  "torch_python_init_sha256": "0387d8b811b289287479c8bfdf4e1dac3a71b246f938d82da1331cf2dc8bf001",
+  "original_training_runner": "/home/sadasue/foveated-world-models/research/train_robotwin_data_step_continuation.py",
+  "original_training_runner_sha256": "17f4279f2761dcdfc9ce3e620d15e63bfad5e4f343b42a5225790a3f0d50f801",
+  "script_sha256": "0ffe972ac55c66192d2d11799d1f5faaa94bd71324fdfb8715490597d74a0c9d",
+  "calls_per_case": 3,
+  "cases": {
+    "old": {
+      "initial": {
+        "global_matmul_precision": "medium",
+        "generic_precision": "none",
+        "cuda_matmul_precision": "tf32",
+        "mkldnn_matmul_precision": "bf16",
+        "cudnn_precision": "none",
+        "cudnn_conv_precision": "tf32",
+        "cuda_allow_tf32": true,
+        "cudnn_allow_tf32": true
+      },
+      "records": [
+        {
+          "evaluate_call": 1,
+          "before": {
+            "global_matmul_precision": "medium",
+            "generic_precision": "none",
+            "cuda_matmul_precision": "tf32",
+            "mkldnn_matmul_precision": "bf16",
+            "cudnn_precision": "none",
+            "cudnn_conv_precision": "tf32",
+            "cuda_allow_tf32": true,
+            "cudnn_allow_tf32": true
+          },
+          "inside": {
+            "global_matmul_precision": "highest",
+            "generic_precision": "none",
+            "cuda_matmul_precision": "ieee",
+            "mkldnn_matmul_precision": "ieee",
+            "cudnn_precision": "none",
+            "cudnn_conv_precision": "none",
+            "cuda_allow_tf32": false,
+            "cudnn_allow_tf32": false
+          },
+          "CPU_matmul_executed": true,
+          "CPU_result_sha256": "3b04a8903a1d6a4f12ab486323a8a8cddbc6d27dcc74fc24c30c71b6fa6e3340",
+          "context_completed": true,
+          "after": {
+            "global_matmul_precision": {
+              "error_type": "RuntimeError",
+              "message": "PyTorch is checking the matmul precision without a specific backend name,Current status indicate that you have used mix of the legacy and new APIs to set the matmul precision. We suggest only using the new API for matmul precision. See also: https://pytorch.org/docs/main/notes/cuda.html#tensorfloat-32-tf32-on-ampere-and-later-devices"
+            },
+            "generic_precision": "none",
+            "cuda_matmul_precision": "tf32",
+            "mkldnn_matmul_precision": "bf16",
+            "cudnn_precision": "none",
+            "cudnn_conv_precision": "tf32",
+            "cuda_allow_tf32": true,
+            "cudnn_allow_tf32": true
+          },
+          "cpu_rng_unchanged": true,
+          "cuda_initialized": false
+        },
+        {
+          "evaluate_call": 2,
+          "before": {
+            "global_matmul_precision": {
+              "error_type": "RuntimeError",
+              "message": "PyTorch is checking the matmul precision without a specific backend name,Current status indicate that you have used mix of the legacy and new APIs to set the matmul precision. We suggest only using the new API for matmul precision. See also: https://pytorch.org/docs/main/notes/cuda.html#tensorfloat-32-tf32-on-ampere-and-later-devices"
+            },
+            "generic_precision": "none",
+            "cuda_matmul_precision": "tf32",
+            "mkldnn_matmul_precision": "bf16",
+            "cudnn_precision": "none",
+            "cudnn_conv_precision": "tf32",
+            "cuda_allow_tf32": true,
+            "cudnn_allow_tf32": true
+          },
+          "context_completed": false,
+          "error_type": "RuntimeError",
+          "error": "PyTorch is checking the matmul precision without a specific backend name,Current status indicate that you have used mix of the legacy and new APIs to set the matmul precision. We suggest only using the new API for matmul precision. See also: https://pytorch.org/docs/main/notes/cuda.html#tensorfloat-32-tf32-on-ampere-and-later-devices",
+          "after": {
+            "global_matmul_precision": {
+              "error_type": "RuntimeError",
+              "message": "PyTorch is checking the matmul precision without a specific backend name,Current status indicate that you have used mix of the legacy and new APIs to set the matmul precision. We suggest only using the new API for matmul precision. See also: https://pytorch.org/docs/main/notes/cuda.html#tensorfloat-32-tf32-on-ampere-and-later-devices"
+            },
+            "generic_precision": "none",
+            "cuda_matmul_precision": "tf32",
+            "mkldnn_matmul_precision": "bf16",
+            "cudnn_precision": "none",
+            "cudnn_conv_precision": "tf32",
+            "cuda_allow_tf32": true,
+            "cudnn_allow_tf32": true
+          },
+          "cpu_rng_unchanged": true,
+          "cuda_initialized": false
+        },
+        {
+          "evaluate_call": 3,
+          "before": {
+            "global_matmul_precision": {
+              "error_type": "RuntimeError",
+              "message": "PyTorch is checking the matmul precision without a specific backend name,Current status indicate that you have used mix of the legacy and new APIs to set the matmul precision. We suggest only using the new API for matmul precision. See also: https://pytorch.org/docs/main/notes/cuda.html#tensorfloat-32-tf32-on-ampere-and-later-devices"
+            },
+            "generic_precision": "none",
+            "cuda_matmul_precision": "tf32",
+            "mkldnn_matmul_precision": "bf16",
+            "cudnn_precision": "none",
+            "cudnn_conv_precision": "tf32",
+            "cuda_allow_tf32": true,
+            "cudnn_allow_tf32": true
+          },
+          "context_completed": false,
+          "error_type": "RuntimeError",
+          "error": "PyTorch is checking the matmul precision without a specific backend name,Current status indicate that you have used mix of the legacy and new APIs to set the matmul precision. We suggest only using the new API for matmul precision. See also: https://pytorch.org/docs/main/notes/cuda.html#tensorfloat-32-tf32-on-ampere-and-later-devices",
+          "after": {
+            "global_matmul_precision": {
+              "error_type": "RuntimeError",
+              "message": "PyTorch is checking the matmul precision without a specific backend name,Current status indicate that you have used mix of the legacy and new APIs to set the matmul precision. We suggest only using the new API for matmul precision. See also: https://pytorch.org/docs/main/notes/cuda.html#tensorfloat-32-tf32-on-ampere-and-later-devices"
+            },
+            "generic_precision": "none",
+            "cuda_matmul_precision": "tf32",
+            "mkldnn_matmul_precision": "bf16",
+            "cudnn_precision": "none",
+            "cudnn_conv_precision": "tf32",
+            "cuda_allow_tf32": true,
+            "cudnn_allow_tf32": true
+          },
+          "cpu_rng_unchanged": true,
+          "cuda_initialized": false
+        }
+      ],
+      "public_backend_settings_match_initial_after_every_call": true
+    },
+    "corrected": {
+      "initial": {
+        "global_matmul_precision": "medium",
+        "generic_precision": "none",
+        "cuda_matmul_precision": "tf32",
+        "mkldnn_matmul_precision": "bf16",
+        "cudnn_precision": "none",
+        "cudnn_conv_precision": "tf32",
+        "cuda_allow_tf32": true,
+        "cudnn_allow_tf32": true
+      },
+      "records": [
+        {
+          "evaluate_call": 1,
+          "before": {
+            "global_matmul_precision": "medium",
+            "generic_precision": "none",
+            "cuda_matmul_precision": "tf32",
+            "mkldnn_matmul_precision": "bf16",
+            "cudnn_precision": "none",
+            "cudnn_conv_precision": "tf32",
+            "cuda_allow_tf32": true,
+            "cudnn_allow_tf32": true
+          },
+          "inside": {
+            "global_matmul_precision": "highest",
+            "generic_precision": "none",
+            "cuda_matmul_precision": "ieee",
+            "mkldnn_matmul_precision": "ieee",
+            "cudnn_precision": "none",
+            "cudnn_conv_precision": "none",
+            "cuda_allow_tf32": false,
+            "cudnn_allow_tf32": false
+          },
+          "CPU_matmul_executed": true,
+          "CPU_result_sha256": "3b04a8903a1d6a4f12ab486323a8a8cddbc6d27dcc74fc24c30c71b6fa6e3340",
+          "context_completed": true,
+          "after": {
+            "global_matmul_precision": "medium",
+            "generic_precision": "none",
+            "cuda_matmul_precision": "tf32",
+            "mkldnn_matmul_precision": "bf16",
+            "cudnn_precision": "none",
+            "cudnn_conv_precision": "tf32",
+            "cuda_allow_tf32": true,
+            "cudnn_allow_tf32": true
+          },
+          "cpu_rng_unchanged": true,
+          "cuda_initialized": false
+        },
+        {
+          "evaluate_call": 2,
+          "before": {
+            "global_matmul_precision": "medium",
+            "generic_precision": "none",
+            "cuda_matmul_precision": "tf32",
+            "mkldnn_matmul_precision": "bf16",
+            "cudnn_precision": "none",
+            "cudnn_conv_precision": "tf32",
+            "cuda_allow_tf32": true,
+            "cudnn_allow_tf32": true
+          },
+          "inside": {
+            "global_matmul_precision": "highest",
+            "generic_precision": "none",
+            "cuda_matmul_precision": "ieee",
+            "mkldnn_matmul_precision": "ieee",
+            "cudnn_precision": "none",
+            "cudnn_conv_precision": "none",
+            "cuda_allow_tf32": false,
+            "cudnn_allow_tf32": false
+          },
+          "CPU_matmul_executed": true,
+          "CPU_result_sha256": "3b04a8903a1d6a4f12ab486323a8a8cddbc6d27dcc74fc24c30c71b6fa6e3340",
+          "context_completed": true,
+          "after": {
+            "global_matmul_precision": "medium",
+            "generic_precision": "none",
+            "cuda_matmul_precision": "tf32",
+            "mkldnn_matmul_precision": "bf16",
+            "cudnn_precision": "none",
+            "cudnn_conv_precision": "tf32",
+            "cuda_allow_tf32": true,
+            "cudnn_allow_tf32": true
+          },
+          "cpu_rng_unchanged": true,
+          "cuda_initialized": false
+        },
+        {
+          "evaluate_call": 3,
+          "before": {
+            "global_matmul_precision": "medium",
+            "generic_precision": "none",
+            "cuda_matmul_precision": "tf32",
+            "mkldnn_matmul_precision": "bf16",
+            "cudnn_precision": "none",
+            "cudnn_conv_precision": "tf32",
+            "cuda_allow_tf32": true,
+            "cudnn_allow_tf32": true
+          },
+          "inside": {
+            "global_matmul_precision": "highest",
+            "generic_precision": "none",
+            "cuda_matmul_precision": "ieee",
+            "mkldnn_matmul_precision": "ieee",
+            "cudnn_precision": "none",
+            "cudnn_conv_precision": "none",
+            "cuda_allow_tf32": false,
+            "cudnn_allow_tf32": false
+          },
+          "CPU_matmul_executed": true,
+          "CPU_result_sha256": "3b04a8903a1d6a4f12ab486323a8a8cddbc6d27dcc74fc24c30c71b6fa6e3340",
+          "context_completed": true,
+          "after": {
+            "global_matmul_precision": "medium",
+            "generic_precision": "none",
+            "cuda_matmul_precision": "tf32",
+            "mkldnn_matmul_precision": "bf16",
+            "cudnn_precision": "none",
+            "cudnn_conv_precision": "tf32",
+            "cuda_allow_tf32": true,
+            "cudnn_allow_tf32": true
+          },
+          "cpu_rng_unchanged": true,
+          "cuda_initialized": false
+        }
+      ],
+      "public_backend_settings_match_initial_after_every_call": true
+    }
+  },
+  "cuda_initialized": false,
+  "scope": [
+    "Exact continuation precision API enter/restore sequence, with CPU matmul replacing GPU model inference.",
+    "Old order completes the first evaluation and leaves global getter inconsistent; second and third evaluate calls fail before matrix multiplication.",
+    "Corrected order completes all three calls and restores every queried precision flag exactly.",
+    "Public per-backend settings after old restore still match the initial medium configuration in this installed build.",
+    "Therefore the observed getter failure alone is not evidence that GPU math or learned weights changed after update500.",
+    "CPU-only reproduction cannot establish actual GPU kernel choices, arithmetic equality, gradients, optimizer trajectories, or bitwise equivalence for updates501..1000.",
+    "Mixed-API global precision state is invalid for reliable introspection and must be fixed before subsequent evaluation.",
+    "No model training, CUDA initialization, active-run edits, or optimizer updates."
+  ]
+}

@@ -1,0 +1,184 @@
+--- /home/sadasue/foveated-world-models/research/train_robotwin_stage1_causal_v2.py
++++ /home/sadasue/foveated-world-models/research/train_robotwin_g_onset.py
+@@ -1,8 +1,8 @@
+-"""Isolated causal diagnostics: KL off, posterior sampling off, or g loss off.
++"""Isolated500-update MSE/beta1e-5 g-on/off onset diagnostic.
+ 
+ Versioned copy of the running loss-ablation runner. Upstream source is unchanged;
+-the mu-only arm replaces the already sampled VAE result while consuming the same
+-epsilon. This runner is not the batch64 main-training recipe.
++Fixed FP32 probes preserve training RNG and save posterior codes for PCA.
++This runner stops at500 updates and never starts batch64 main training.
+ """
+ from __future__ import annotations
+ 
+@@ -20,6 +20,7 @@
+ import time
+ 
+ ROOT = Path(__file__).resolve().parents[1]
++sys.path.insert(0, str(ROOT))
+ SSD_RUNS = Path('/media/sadasue/SSD1/foveated-world-models/runs')
+ PARENT_RUNNER_SHA256 = '9ecbea0151c1f902647dc9e41a5a17a431ab5c4319da658b9d0cdeb5104cba27'
+ 
+@@ -150,7 +151,7 @@
+ 
+ def main():
+     parser = argparse.ArgumentParser(description=__doc__)
+-    parser.add_argument('--config', default=str(ROOT / 'configs/robotwin_causal_ablation_20261114/baseline_replay.yaml'))
++    parser.add_argument('--config', default=str(ROOT / 'configs/robotwin_g_onset_20261114/g_on.yaml'))
+     parser.add_argument('--output', required=True)
+     parser.add_argument('--preflight', action='store_true')
+     parser.add_argument('--prepare-only', action='store_true')
+@@ -158,7 +159,7 @@
+     import yaml
+     cfg = yaml.safe_load(Path(args.config).read_text())
+     diagnostic = cfg.get('diagnostic', {})
+-    if diagnostic.get('protocol') != 'robotwin_causal_ablation_v2_20261114':
++    if diagnostic.get('protocol') != 'robotwin_g_onset_20261114':
+         raise ValueError('Unknown diagnostic protocol')
+     sampling_mode = diagnostic['factors']['posterior_sampling']
+     output = Path(args.output).resolve()
+@@ -167,6 +168,9 @@
+     if output.exists() and any(output.iterdir()):
+         raise ValueError('Use a new empty output directory; this runner starts from scratch')
+     output.mkdir(parents=True, exist_ok=True)
++    mount = json.loads(subprocess.check_output(
++        ['findmnt', '-J', '-T', str(output), '-o', 'TARGET,SOURCE,FSTYPE'], text=True))
++    assert mount['filesystems'][0]['target'] == '/media/sadasue/SSD1'
+     env = {'HF_HOME': cfg['hf_home'], 'HF_HUB_OFFLINE': '1', 'TRANSFORMERS_OFFLINE': '1',
+            'LAM_ENABLE_MANUAL_WANDB': '0', 'WANDB_MODE': 'disabled',
+            'NO_ALBUMENTATIONS_UPDATE': '1', 'LAM_WORKER_OMP_THREADS': '1',
+@@ -200,20 +204,18 @@
+         if float(optimizer_cfg['init_args']['lr']) != upstream_lr:
+             raise ValueError('The batch64 experiment must preserve the upstream Stage-1 learning rate')
+     if diagnostic:
+-        if batch_warmup != (4, 1000) or trainer_cfg['max_steps'] != 3000:
+-            raise ValueError('The controlled loss experiment requires batch4/warmup1000/3000 updates')
++        if batch_warmup != (4, 1000) or trainer_cfg['max_steps'] != 500:
++            raise ValueError('The onset experiment requires batch4/warmup1000/500 updates')
++        assert cfg['seed'] == 42 and float(optimizer_cfg['init_args']['lr']) == 3e-4
+         if not data_cfg['in_order'] or trainer_cfg['val_check_interval'] != 500:
+             raise ValueError('Controlled runs require ordered data and validation every500 updates')
+-        expected = {'baseline_replay': (5e-5, 1., 'sampled', 'fresh'),
+-                    'beta_zero': (0., 1., 'sampled', 'fresh'),
+-                    'mu_only': (5e-5, 1., 'mu_only', 'fresh'),
+-                    'g_zero': (5e-5, 0., 'sampled', 'fresh'),
+-                    'official_init': (5e-5, 1., 'sampled', 'released_encoder_vae_visual_decoder')}
++        expected = {'g_on': (1e-5, 1., 'sampled', 'fresh'),
++                    'g_off': (1e-5, 0., 'sampled', 'fresh')}
+         actual = (float(model_cfg['vq_kwargs']['beta']), float(model_cfg['lambda_aux']), sampling_mode,
+                   diagnostic['factors']['initialization'])
+-        if expected.get(diagnostic['arm']) != actual or model_cfg['loss_type'] != 'smooth_l1':
++        if expected.get(diagnostic['arm']) != actual or model_cfg['loss_type'] != 'l2':
+             raise ValueError(f'Unexpected causal factors: {actual}')
+-        if diagnostic['factors'] != {'image_loss': 'smooth_l1', 'kl_beta': actual[0],
++        if diagnostic['factors'] != {'image_loss': 'l2', 'kl_beta': actual[0],
+                                     'lambda_aux': actual[1], 'posterior_sampling': actual[2],
+                                     'initialization': actual[3]}:
+             raise ValueError('Declared factors disagree with effective model settings')
+@@ -247,7 +249,7 @@
+                 'frame_dt_sec': data_cfg['frame_dt_sec'],
+                 'initialization': diagnostic['factors']['initialization'],
+                 'state_decoder_initialization': 'fresh local16-valid/32-padded state-delta head; never load official14 head',
+-                'runner_version': 'causal_v2', 'runner_sha256': sha256(__file__),
++                'runner_version': 'g_onset', 'runner_sha256': sha256(__file__),
+                 'parent_runner_sha256': PARENT_RUNNER_SHA256}
+     write_json(output / 'data_contract.json', contract)
+     (output / 'upstream.patch').write_bytes(patch)
+@@ -323,7 +325,24 @@
+                        'sample_video_shape': list(sample['frames'].shape),
+                        'candidate_unique_episodes': len(set(int(ep) for _, ep, _ in candidates))}
+     write_json(output / 'loader_audit.json', audit)
++    from research.robotwin_g_onset_probe import OnsetProbe, prepare_probe
++    probe_inputs = prepare_probe(cfg['onset_probe'], contract, split)
++    onset = OnsetProbe(probe_inputs, output, preflight=args.preflight)
++    write_json(output / 'onset_protocol.json', {
++        'arm': diagnostic['arm'], 'steps': sorted(onset.steps), 'early_samples': 64, 'final_samples': 512,
++        'full_run_updates': 500, 'main_training': False, 'preflight': args.preflight,
++        'input_sha256': probe_inputs['input_sha256'],
++        'parent_causal_v2_sha256': 'e1d7db1efca25cdff88a7299e7f5cd31c016b0c11a661fd212c73df67647aa22',
++        'probe_helper_sha256': sha256(ROOT / 'research/robotwin_g_onset_probe.py'),
++        'expected_initial_sha256': onset.expected_initial_sha256, 'mount': mount,
++        'motivations_and_limits': diagnostic['motivations_and_limits'],
++        'training_precision': 'Original bf16-mixed / medium matmul; probes restore RNG, modes and precision',
++        'probe_precision': 'Shared DINO cache + highest FP32 encoder/VAE/decoder, TF32 off',
++        'prefix_rule': 'Every training data/augmentation/epsilon hash must match original candidate seed42 prefix',
++        'prefix64_final_geometry': 'First64 rows of final512 posterior codes, for matched trajectory comparison'})
++    shutil.copy2(ROOT / 'research/robotwin_g_onset_probe.py', output / 'robotwin_g_onset_probe.py')
+     if args.prepare_only:
++        assert not torch.cuda.is_initialized()
+         print(json.dumps({'phase': 'prepared', 'audit': audit}), flush=True)
+         return
+     if not torch.cuda.is_available():
+@@ -402,6 +421,7 @@
+                 init_hash.update(name.encode() + b'\0')
+                 init_hash.update(str(tuple(parameter.shape)).encode() + b'\0')
+                 init_hash.update(tensor_bytes(parameter))
++        assert init_hash.hexdigest() == onset.expected_initial_sha256, 'Initial weights differ from original seed42 candidate'
+         write_json(output / 'initial_state_fingerprint.json', {
+             'sha256': init_hash.hexdigest(), 'seed': cfg['seed'],
+             'scope': 'All named trainable parameters before optimizer creation; frozen DINO excluded',
+@@ -473,11 +493,13 @@
+                     'vq.mu.weight': pl_module.lam.vq.mu.weight,
+                     'vq.logvar.weight': pl_module.lam.vq.logvar.weight,
+                 }
++            onset.run(pl_module, 0)
++            self.started = self.last_time = time.monotonic()
+ 
+         def on_train_batch_start(self, trainer, pl_module, batch, batch_idx):
+             if not diagnostic:
+                 return
+-            self.audit_this_step = trainer.global_step in {0, 1, 9, 49, 99, 249, 499, 999, 1499, 1999, 2499, 2999}
++            self.audit_this_step = trainer.global_step in {0, 1, 9, 49, 99, 249, 499}
+             if self.audit_this_step:
+                 self.step_batch = batch
+                 self.step_geometry = {}
+@@ -629,6 +651,7 @@
+                 hashes = {'data': self.data_sha256, 'aug': self.aug_sha256, 'epsilon': self.epsilon_sha256}
+                 stream = {'step': step, 'posterior_sampling': sampling_mode,
+                           **{key + '_sha256': digest for key, digest in hashes.items()}}
++                onset.verify_stream(stream)
+                 for key, digest in hashes.items():
+                     self.stream_hashes[key].update(bytes.fromhex(digest))
+                     stream['cumulative_' + key + '_sha256'] = self.stream_hashes[key].hexdigest()
+@@ -647,6 +670,8 @@
+                 with (output / 'progress.jsonl').open('a') as f:
+                     f.write(json.dumps(record, allow_nan=False) + '\n')
+                 print(json.dumps(record, allow_nan=False), flush=True)
++            onset.run(pl_module, step)
++            self.last_time = time.monotonic()
+ 
+         def on_validation_end(self, trainer, pl_module):
+             metrics = {k: float(v) for k, v in trainer.callback_metrics.items() if k.startswith('val')}
+@@ -765,24 +790,23 @@
+ 
+     monitor = Monitor()
+     callbacks = [monitor]
++    # No ordinary val iterator: fixed shared-FP32 probes run from the callback.
++    trainer_cfg.update(limit_val_batches=0, num_sanity_val_steps=0, enable_checkpointing=False)
+     if args.preflight:
+-        trainer_cfg.update(max_steps=6, val_check_interval=6, limit_val_batches=2,
+-                           enable_checkpointing=False, log_every_n_steps=1)
+-    elif diagnostic:
+-        trainer_cfg['enable_checkpointing'] = False
+-    else:
+-        callbacks.append(KeepBestAndLast(dirpath=output / 'checkpoints', filename='best-{step:06d}',
+-                         monitor='val_loss', mode='min', save_top_k=1, save_last=True,
+-                         save_on_train_epoch_end=False))
++        trainer_cfg.update(max_steps=6, val_check_interval=6, log_every_n_steps=1)
+     (output / 'effective_trainer.yaml').write_text(yaml.safe_dump(trainer_cfg, sort_keys=False))
+     trainer = Trainer(**trainer_cfg, default_root_dir=str(output), callbacks=callbacks,
+                       logger=CSVLogger(str(output), name='metrics'))
+     torch.cuda.reset_peak_memory_stats()
+     trainer.fit(model, datamodule=dm)
++    assert trainer.global_step == (6 if args.preflight else 500)
++    assert [entry['step'] for entry in onset.records] == sorted(onset.steps)
+     if not args.preflight:
++        (output / 'checkpoints').mkdir(exist_ok=True)
+         trainer.save_checkpoint(output / 'checkpoints/final.ckpt')
+     report = {'phase': 'preflight_passed' if args.preflight else 'complete',
+               'step': trainer.global_step, 'gradient_checks': monitor.gradient_checks,
++              'main_training': False, 'onset_probe_steps': [r['step'] for r in onset.records],
+               'seconds_per_update_excluding_first': float(np.median(monitor.times[1:])),
+               'cuda_peak_allocated_bytes': torch.cuda.max_memory_allocated(),
+               'cuda_peak_reserved_bytes': torch.cuda.max_memory_reserved(),

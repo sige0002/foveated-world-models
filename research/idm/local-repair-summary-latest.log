@@ -1,0 +1,270 @@
+{
+  "complete": true,
+  "pending": [],
+  "runs": {
+    "H-42": {
+      "metrics": {
+        "train": {
+          "mse": 0.07952419023786206,
+          "mean_drift_kl": 5.6131053587314454,
+          "max_drift_kl": 380.8436279296875
+        },
+        "validation": {
+          "mse": 0.09807025000918657,
+          "mean_drift_kl": 3.6936645438254345,
+          "max_drift_kl": 27.62561798095703
+        },
+        "observed96": {
+          "mse": 0.08521345409099013,
+          "mean_drift_kl": 2.5775849322089925,
+          "max_drift_kl": 63.77880096435547
+        }
+      },
+      "drift_scope_failed": true,
+      "trainable_parameters": 270624,
+      "batch_sha256": "743c8d3a64fd6139d7a3ef848dd62eda6da0957b54dc8ca0ac0e67428adf5e63"
+    },
+    "D-42": {
+      "metrics": {
+        "train": {
+          "mse": 0.06963597853246029,
+          "mean_drift_kl": 0.0,
+          "max_drift_kl": 0.0
+        },
+        "validation": {
+          "mse": 0.0950327055179514,
+          "mean_drift_kl": 0.0,
+          "max_drift_kl": 0.0
+        },
+        "observed96": {
+          "mse": 0.08219050305585067,
+          "mean_drift_kl": 0.0,
+          "max_drift_kl": 0.0
+        }
+      },
+      "drift_scope_failed": false,
+      "trainable_parameters": 13410048,
+      "batch_sha256": "743c8d3a64fd6139d7a3ef848dd62eda6da0957b54dc8ca0ac0e67428adf5e63"
+    },
+    "HD-42": {
+      "metrics": {
+        "train": {
+          "mse": 0.06989260884802206,
+          "mean_drift_kl": 6.712424473521878,
+          "max_drift_kl": 665.8165283203125
+        },
+        "validation": {
+          "mse": 0.09426519472617656,
+          "mean_drift_kl": 5.366411421564408,
+          "max_drift_kl": 63.83744812011719
+        },
+        "observed96": {
+          "mse": 0.08177983328156795,
+          "mean_drift_kl": 2.5152362464286853,
+          "max_drift_kl": 38.71295928955078
+        }
+      },
+      "drift_scope_failed": true,
+      "trainable_parameters": 13680672,
+      "batch_sha256": "743c8d3a64fd6139d7a3ef848dd62eda6da0957b54dc8ca0ac0e67428adf5e63"
+    },
+    "K-42": {
+      "metrics": {
+        "train": {
+          "mse": 0.08492472551733954,
+          "mean_drift_kl": 213.12169760785764,
+          "max_drift_kl": 12680.5341796875
+        },
+        "validation": {
+          "mse": 0.10911596519872546,
+          "mean_drift_kl": 246.7638302464038,
+          "max_drift_kl": 3297.44921875
+        },
+        "observed96": {
+          "mse": 0.09410271508386359,
+          "mean_drift_kl": 129.1308854712794,
+          "max_drift_kl": 1573.3515625
+        }
+      },
+      "drift_scope_failed": false,
+      "trainable_parameters": 13410048,
+      "batch_sha256": "743c8d3a64fd6139d7a3ef848dd62eda6da0957b54dc8ca0ac0e67428adf5e63"
+    },
+    "H-43": {
+      "metrics": {
+        "train": {
+          "mse": 0.07944531996690785,
+          "mean_drift_kl": 7.080704333370704,
+          "max_drift_kl": 916.09326171875
+        },
+        "validation": {
+          "mse": 0.09825739939697087,
+          "mean_drift_kl": 8.60950416146079,
+          "max_drift_kl": 142.40530395507812
+        },
+        "observed96": {
+          "mse": 0.08519586262991652,
+          "mean_drift_kl": 4.666400017769774,
+          "max_drift_kl": 100.15982055664062
+        }
+      },
+      "drift_scope_failed": true,
+      "trainable_parameters": 270624,
+      "batch_sha256": "b4c7991a159cf9739e87716f46e27aae1decb3f9bde886b5750338dfa469834b"
+    },
+    "D-43": {
+      "metrics": {
+        "train": {
+          "mse": 0.07013351103159948,
+          "mean_drift_kl": 0.0,
+          "max_drift_kl": 0.0
+        },
+        "validation": {
+          "mse": 0.0962950981920585,
+          "mean_drift_kl": 0.0,
+          "max_drift_kl": 0.0
+        },
+        "observed96": {
+          "mse": 0.0842926173354499,
+          "mean_drift_kl": 0.0,
+          "max_drift_kl": 0.0
+        }
+      },
+      "drift_scope_failed": false,
+      "trainable_parameters": 13410048,
+      "batch_sha256": "b4c7991a159cf9739e87716f46e27aae1decb3f9bde886b5750338dfa469834b"
+    },
+    "HD-43": {
+      "metrics": {
+        "train": {
+          "mse": 0.07044027599840774,
+          "mean_drift_kl": 7.950505908156629,
+          "max_drift_kl": 661.2777709960938
+        },
+        "validation": {
+          "mse": 0.09650251094717532,
+          "mean_drift_kl": 8.303022161417175,
+          "max_drift_kl": 94.2618408203125
+        },
+        "observed96": {
+          "mse": 0.08455701851441215,
+          "mean_drift_kl": 3.5485363472059057,
+          "max_drift_kl": 45.4962272644043
+        }
+      },
+      "drift_scope_failed": true,
+      "trainable_parameters": 13680672,
+      "batch_sha256": "b4c7991a159cf9739e87716f46e27aae1decb3f9bde886b5750338dfa469834b"
+    },
+    "K-43": {
+      "metrics": {
+        "train": {
+          "mse": 0.08396456674745423,
+          "mean_drift_kl": 213.12169760785764,
+          "max_drift_kl": 12680.5341796875
+        },
+        "validation": {
+          "mse": 0.10967599606374279,
+          "mean_drift_kl": 246.7638302464038,
+          "max_drift_kl": 3297.44921875
+        },
+        "observed96": {
+          "mse": 0.09557404433144256,
+          "mean_drift_kl": 129.1308854712794,
+          "max_drift_kl": 1573.3515625
+        }
+      },
+      "drift_scope_failed": false,
+      "trainable_parameters": 13410048,
+      "batch_sha256": "b4c7991a159cf9739e87716f46e27aae1decb3f9bde886b5750338dfa469834b"
+    },
+    "H-44": {
+      "metrics": {
+        "train": {
+          "mse": 0.07957156257180031,
+          "mean_drift_kl": 6.817528540602325,
+          "max_drift_kl": 453.65899658203125
+        },
+        "validation": {
+          "mse": 0.09802951931487769,
+          "mean_drift_kl": 6.453068778006127,
+          "max_drift_kl": 103.31680297851562
+        },
+        "observed96": {
+          "mse": 0.08515730125751968,
+          "mean_drift_kl": 4.646352632077954,
+          "max_drift_kl": 131.89910888671875
+        }
+      },
+      "drift_scope_failed": true,
+      "trainable_parameters": 270624,
+      "batch_sha256": "885700404af3383550b6502088341507532ce222352a819151dcac52c91a0485"
+    },
+    "D-44": {
+      "metrics": {
+        "train": {
+          "mse": 0.07019899262741092,
+          "mean_drift_kl": 0.0,
+          "max_drift_kl": 0.0
+        },
+        "validation": {
+          "mse": 0.09532218251843005,
+          "mean_drift_kl": 0.0,
+          "max_drift_kl": 0.0
+        },
+        "observed96": {
+          "mse": 0.08302620136722301,
+          "mean_drift_kl": 0.0,
+          "max_drift_kl": 0.0
+        }
+      },
+      "drift_scope_failed": false,
+      "trainable_parameters": 13410048,
+      "batch_sha256": "885700404af3383550b6502088341507532ce222352a819151dcac52c91a0485"
+    },
+    "HD-44": {
+      "metrics": {
+        "train": {
+          "mse": 0.06999854719470022,
+          "mean_drift_kl": 6.296171554249668,
+          "max_drift_kl": 557.01025390625
+        },
+        "validation": {
+          "mse": 0.09410289477091283,
+          "mean_drift_kl": 5.954804409877397,
+          "max_drift_kl": 92.37288665771484
+        },
+        "observed96": {
+          "mse": 0.08257426583440974,
+          "mean_drift_kl": 4.072789326572092,
+          "max_drift_kl": 78.85372924804688
+        }
+      },
+      "drift_scope_failed": true,
+      "trainable_parameters": 13680672,
+      "batch_sha256": "885700404af3383550b6502088341507532ce222352a819151dcac52c91a0485"
+    },
+    "K-44": {
+      "metrics": {
+        "train": {
+          "mse": 0.0838359763911285,
+          "mean_drift_kl": 213.12169760785764,
+          "max_drift_kl": 12680.5341796875
+        },
+        "validation": {
+          "mse": 0.10898867028299719,
+          "mean_drift_kl": 246.7638302464038,
+          "max_drift_kl": 3297.44921875
+        },
+        "observed96": {
+          "mse": 0.09505090814006205,
+          "mean_drift_kl": 129.1308854712794,
+          "max_drift_kl": 1573.3515625
+        }
+      },
+      "drift_scope_failed": false,
+      "trainable_parameters": 13410048,
+      "batch_sha256": "885700404af3383550b6502088341507532ce222352a819151dcac52c91a0485"
+    }
+  }
+}

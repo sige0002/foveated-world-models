@@ -1,0 +1,8 @@
+extends: stage1_robomind.yaml
+model:
+  vision_model_id: /media/sadasue/SSD1/foveated-world-models/models/dinov3-vitb16-pretrain-lvd1689m
+data:
+  train_manifest: /media/sadasue/SSD1/foveated-world-models/datasets/RoboMIND-lerobot/preprocessed/train.jsonl
+  val_manifest: /media/sadasue/SSD1/foveated-world-models/datasets/RoboMIND-lerobot/preprocessed/validation.jsonl
+trainer:
+  enable_progress_bar: false

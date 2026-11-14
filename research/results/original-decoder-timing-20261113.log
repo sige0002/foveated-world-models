@@ -1,0 +1,56 @@
+/home/sadasue/foveated-world-models/.venv/lib/python3.12/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+1 trial 3 done
+1 trial 6 done
+1 trial 9 done
+1 trial 12 done
+8 trial 3 done
+8 trial 6 done
+8 trial 9 done
+8 trial 12 done
+{
+  "1": {
+    "original_native_code": {
+      "median": 0.3387692663818598,
+      "min": 0.33643028885126114,
+      "max": 0.34084852994419634,
+      "repetitions": 12
+    },
+    "original_zero_code": {
+      "median": 0.33817095239646733,
+      "min": 0.3354917091783136,
+      "max": 0.340355632128194,
+      "repetitions": 12
+    },
+    "prior_plus_correction": {
+      "median": 0.36164699611254036,
+      "min": 0.35954794799908996,
+      "max": 0.36357231508009136,
+      "repetitions": 12
+    },
+    "corrected_over_original": 1.0675318926507722,
+    "corrected_over_zero_prior": 1.0694206393237171
+  },
+  "8": {
+    "original_native_code": {
+      "median": 2.553708379622549,
+      "min": 2.5176316080614924,
+      "max": 2.6901273210532963,
+      "repetitions": 12
+    },
+    "original_zero_code": {
+      "median": 2.5522389905527234,
+      "min": 2.5141834020614624,
+      "max": 2.5945137788075954,
+      "repetitions": 12
+    },
+    "prior_plus_correction": {
+      "median": 2.7044685289729387,
+      "min": 2.6811309510376304,
+      "max": 2.7725097062066197,
+      "repetitions": 12
+    },
+    "corrected_over_original": 1.0590357734475042,
+    "corrected_over_zero_prior": 1.0596454873480512
+  }
+}

@@ -1,0 +1,662 @@
+{
+  "complete": true,
+  "scope": "Read-only CPU metadata and projected numeric-parquet audit; no video decode, GPU, fitting or training changes.",
+  "task_definition": "task_index identifies an exact natural-language instruction. No canonical physical-task taxonomy is exported here; distinct instructions must not be reported as distinct manipulation task families.",
+  "metadata_note": {
+    "episode_stats_task_index_differs_from_global_task_table_count": 27000,
+    "first_examples": [
+      500,
+      501,
+      502,
+      503,
+      504
+    ],
+    "handling": "Merged per-episode task-index statistics retain source-local IDs. Use episode instruction text mapped to the global tasks table; verify against actual parquet task_index at every selected endpoint. Stage1 does not input language/task IDs."
+  },
+  "full_dataset": {
+    "episodes": 27500,
+    "frames": 6077247,
+    "instruction_task_ids": 23607
+  },
+  "split": {
+    "train": {
+      "episodes": 26125,
+      "frames": 5776302,
+      "instruction_task_ids": 22488
+    },
+    "val": {
+      "episodes": 1375,
+      "frames": 300945,
+      "instruction_task_ids": 1353
+    }
+  },
+  "pools": {
+    "original12000": {
+      "draws": 12000,
+      "unique_pairs": 11988,
+      "unique_episodes": 9096,
+      "unique_instruction_task_ids": 7856,
+      "instruction_entropy_effective_count": 6166.187354001695,
+      "largest_instruction_fraction": 0.0018333333333333333,
+      "top10_instruction_fraction": 0.015,
+      "top10_instructions": [
+        {
+          "task_index": 824,
+          "draws": 22,
+          "instruction": "First, place red block on the far left, then green block in the middle, and finish with blue block on the right."
+        },
+        {
+          "task_index": 19603,
+          "draws": 20,
+          "instruction": "Move red block, green block, and blue block to the center. Stack blue block on green block and green block on red block."
+        },
+        {
+          "task_index": 19588,
+          "draws": 19,
+          "instruction": "Place red block, green block, and blue block at the center and stack blue block on green block, then green block on red block."
+        },
+        {
+          "task_index": 808,
+          "draws": 18,
+          "instruction": "Place red block first, set green block beside it, and complete the row by positioning blue block."
+        },
+        {
+          "task_index": 19591,
+          "draws": 18,
+          "instruction": "Move red block, green block, and blue block to the middle and position blue block on green block, green block on top of red block."
+        },
+        {
+          "task_index": 17563,
+          "draws": 18,
+          "instruction": "Arrange blocks large block, medium block, and small block in decreasing size order."
+        },
+        {
+          "task_index": 19594,
+          "draws": 17,
+          "instruction": "Move red block, green block, and blue block to the table's center and stack green block over red block, blue block over green block."
+        },
+        {
+          "task_index": 858,
+          "draws": 16,
+          "instruction": "red block, then green block, and finally blue block should be placed in a row from left to right."
+        },
+        {
+          "task_index": 19582,
+          "draws": 16,
+          "instruction": "Gather red block, green block, and blue block at the table's center and stack blue block on green block, then green block on red block."
+        },
+        {
+          "task_index": 17602,
+          "draws": 16,
+          "instruction": "Shift large block, medium block, and small block to the center and align by size."
+        }
+      ],
+      "expected_unique_instruction_ids_under_uniform_frame_sampling": 7853.540046465432,
+      "raw_XYZ_delta_spectrum": {
+        "eigenvalues_descending": [
+          0.01598750207820873,
+          0.010266702609122755,
+          0.007631172855297341,
+          0.006308215047165986,
+          0.00374112394101696,
+          0.002279501665966156
+        ],
+        "variance_fraction_descending": [
+          0.3459433633635154,
+          0.2221546314038599,
+          0.16512608355299171,
+          0.1364994431000847,
+          0.08095179550776849,
+          0.04932468307177993
+        ],
+        "participation_ratio": 4.465993759484007,
+        "dimensions_for_95pct_variance": 5,
+        "coordinate_std": [
+          0.09879782821374976,
+          0.1023965917190235,
+          0.06078334322580808,
+          0.0936532237592289,
+          0.09694931294182824,
+          0.06405805903441665
+        ],
+        "mean": [
+          0.011060274054533996,
+          0.005781821773826475,
+          -0.0010223811715841294,
+          -0.016692036677287737,
+          0.01169715518474853,
+          -0.0036299376835425695
+        ]
+      },
+      "normalized_XYZ_delta_spectrum": {
+        "eigenvalues_descending": [
+          0.06086164027868424,
+          0.042500937645010416,
+          0.033104346595492905,
+          0.02423936744539774,
+          0.018745054501810385,
+          0.01060146132578088
+        ],
+        "variance_fraction_descending": [
+          0.320235417648955,
+          0.2236269915648147,
+          0.1741849908983856,
+          0.1275401701610406,
+          0.09863076857200748,
+          0.055781661154796595
+        ],
+        "participation_ratio": 4.716841354213309,
+        "dimensions_for_95pct_variance": 6,
+        "coordinate_std": [
+          0.19815322284353518,
+          0.18035041875127414,
+          0.12491419787314965,
+          0.197158934476817,
+          0.18551530338470332,
+          0.1713788331763645
+        ],
+        "mean": [
+          0.0221829674243927,
+          0.010183485224843025,
+          -0.00210106768210729,
+          -0.035140103648106255,
+          0.02238284743328889,
+          -0.009711416323979696
+        ]
+      },
+      "maximum_arm_displacement_cm_percentiles": [
+        0.0,
+        4.709752678871155,
+        12.76929759979248,
+        24.92299175262451,
+        36.628714370727536,
+        73.42884826660156
+      ],
+      "moving_over_5cm_fraction": 0.7339166666666667,
+      "zero_horizon_count": 72,
+      "short_horizon_count": 2634
+    },
+    "replay12000": {
+      "draws": 12000,
+      "unique_pairs": 11988,
+      "unique_episodes": 9096,
+      "unique_instruction_task_ids": 7856,
+      "instruction_entropy_effective_count": 6166.187354001695,
+      "largest_instruction_fraction": 0.0018333333333333333,
+      "top10_instruction_fraction": 0.015,
+      "top10_instructions": [
+        {
+          "task_index": 824,
+          "draws": 22,
+          "instruction": "First, place red block on the far left, then green block in the middle, and finish with blue block on the right."
+        },
+        {
+          "task_index": 19603,
+          "draws": 20,
+          "instruction": "Move red block, green block, and blue block to the center. Stack blue block on green block and green block on red block."
+        },
+        {
+          "task_index": 19588,
+          "draws": 19,
+          "instruction": "Place red block, green block, and blue block at the center and stack blue block on green block, then green block on red block."
+        },
+        {
+          "task_index": 17563,
+          "draws": 18,
+          "instruction": "Arrange blocks large block, medium block, and small block in decreasing size order."
+        },
+        {
+          "task_index": 808,
+          "draws": 18,
+          "instruction": "Place red block first, set green block beside it, and complete the row by positioning blue block."
+        },
+        {
+          "task_index": 19591,
+          "draws": 18,
+          "instruction": "Move red block, green block, and blue block to the middle and position blue block on green block, green block on top of red block."
+        },
+        {
+          "task_index": 19594,
+          "draws": 17,
+          "instruction": "Move red block, green block, and blue block to the table's center and stack green block over red block, blue block over green block."
+        },
+        {
+          "task_index": 19582,
+          "draws": 16,
+          "instruction": "Gather red block, green block, and blue block at the table's center and stack blue block on green block, then green block on red block."
+        },
+        {
+          "task_index": 17566,
+          "draws": 16,
+          "instruction": "Bring large block, medium block, small block to the table's center and position them left to right."
+        },
+        {
+          "task_index": 19587,
+          "draws": 16,
+          "instruction": "Relocate red block, green block, and blue block to the table's center, stacking blue block over green block and green block over red block."
+        }
+      ],
+      "expected_unique_instruction_ids_under_uniform_frame_sampling": 7853.540046465432,
+      "raw_XYZ_delta_spectrum": {
+        "eigenvalues_descending": [
+          0.01598750207820873,
+          0.010266702609122758,
+          0.00763117285529734,
+          0.0063082150471659906,
+          0.003741123941016959,
+          0.002279501665966156
+        ],
+        "variance_fraction_descending": [
+          0.34594336336351533,
+          0.22215463140385996,
+          0.16512608355299166,
+          0.13649944310008477,
+          0.08095179550776846,
+          0.04932468307177992
+        ],
+        "participation_ratio": 4.465993759484007,
+        "dimensions_for_95pct_variance": 5,
+        "coordinate_std": [
+          0.09879782821374976,
+          0.10239659171902352,
+          0.06078334322580808,
+          0.0936532237592289,
+          0.09694931294182824,
+          0.06405805903441665
+        ],
+        "mean": [
+          0.011060274054533996,
+          0.005781821773826475,
+          -0.0010223811715841294,
+          -0.016692036677287737,
+          0.01169715518474853,
+          -0.0036299376835425695
+        ]
+      },
+      "normalized_XYZ_delta_spectrum": {
+        "eigenvalues_descending": [
+          0.060861640278684216,
+          0.042500937645010395,
+          0.03310434659549291,
+          0.02423936744539773,
+          0.018745054501810382,
+          0.010601461325780876
+        ],
+        "variance_fraction_descending": [
+          0.320235417648955,
+          0.22362699156481464,
+          0.1741849908983857,
+          0.12754017016104058,
+          0.09863076857200749,
+          0.055781661154796595
+        ],
+        "participation_ratio": 4.71684135421331,
+        "dimensions_for_95pct_variance": 6,
+        "coordinate_std": [
+          0.19815322284353518,
+          0.18035041875127414,
+          0.12491419787314967,
+          0.19715893447681704,
+          0.18551530338470332,
+          0.1713788331763645
+        ],
+        "mean": [
+          0.0221829674243927,
+          0.010183485224843025,
+          -0.00210106768210729,
+          -0.035140103648106255,
+          0.02238284743328889,
+          -0.009711416323979696
+        ]
+      },
+      "maximum_arm_displacement_cm_percentiles": [
+        0.0,
+        4.709752678871155,
+        12.76929759979248,
+        24.92299175262451,
+        36.628714370727536,
+        73.42884826660156
+      ],
+      "moving_over_5cm_fraction": 0.7339166666666667,
+      "zero_horizon_count": 72,
+      "short_horizon_count": 2634
+    },
+    "new12000": {
+      "draws": 12000,
+      "unique_pairs": 12000,
+      "unique_episodes": 9171,
+      "unique_instruction_task_ids": 7937,
+      "instruction_entropy_effective_count": 6300.767228084616,
+      "largest_instruction_fraction": 0.0018333333333333333,
+      "top10_instruction_fraction": 0.015166666666666667,
+      "top10_instructions": [
+        {
+          "task_index": 19582,
+          "draws": 22,
+          "instruction": "Gather red block, green block, and blue block at the table's center and stack blue block on green block, then green block on red block."
+        },
+        {
+          "task_index": 17558,
+          "draws": 19,
+          "instruction": "Relocate large block, medium block, and small block to the center and arrange them by size."
+        },
+        {
+          "task_index": 17574,
+          "draws": 19,
+          "instruction": "Grab large block, medium block, small block, and arrange them in size order at the center."
+        },
+        {
+          "task_index": 827,
+          "draws": 18,
+          "instruction": "Grab red block, set it on the leftmost side, add green block to its right, and complete with blue block on the far right."
+        },
+        {
+          "task_index": 19713,
+          "draws": 18,
+          "instruction": "Relocate red block and green block to the table's midpoint, and stack green block on top of red block."
+        },
+        {
+          "task_index": 19594,
+          "draws": 18,
+          "instruction": "Move red block, green block, and blue block to the table's center and stack green block over red block, blue block over green block."
+        },
+        {
+          "task_index": 17582,
+          "draws": 17,
+          "instruction": "Set large block, medium block, and small block in the center area, arranging from largest to smallest."
+        },
+        {
+          "task_index": 836,
+          "draws": 17,
+          "instruction": "Grab red block, place it on the leftmost spot, add green block to the middle, and set blue block last."
+        },
+        {
+          "task_index": 17563,
+          "draws": 17,
+          "instruction": "Arrange blocks large block, medium block, and small block in decreasing size order."
+        },
+        {
+          "task_index": 17564,
+          "draws": 17,
+          "instruction": "Align large block, medium block, and small block by size from left to right at the center."
+        }
+      ],
+      "expected_unique_instruction_ids_under_uniform_frame_sampling": 7853.540046465432,
+      "raw_XYZ_delta_spectrum": {
+        "eigenvalues_descending": [
+          0.015635480070975386,
+          0.010403645766934179,
+          0.007608550190212937,
+          0.006078123172576406,
+          0.003707288248519842,
+          0.002228659124709319
+        ],
+        "variance_fraction_descending": [
+          0.3424196673173892,
+          0.22784160807537857,
+          0.1666285405420139,
+          0.133111929100997,
+          0.08119024186947392,
+          0.04880801309474741
+        ],
+        "participation_ratio": 4.471852715031982,
+        "dimensions_for_95pct_variance": 5,
+        "coordinate_std": [
+          0.09738038807525422,
+          0.10063575531455597,
+          0.06021042297615866,
+          0.09414987159685684,
+          0.0972381692451409,
+          0.06408195088861261
+        ],
+        "mean": [
+          0.009187017818932266,
+          0.006674263755813323,
+          -0.0013162935525178909,
+          -0.017495203281325908,
+          0.01145921761761565,
+          -0.0022869022289911905
+        ]
+      },
+      "normalized_XYZ_delta_spectrum": {
+        "eigenvalues_descending": [
+          0.060012291957871645,
+          0.04297867566612662,
+          0.03294443656167352,
+          0.023336668850733017,
+          0.01856743682248216,
+          0.01033359803867904
+        ],
+        "variance_fraction_descending": [
+          0.31892066102527233,
+          0.2283996695719269,
+          0.17507515781483063,
+          0.12401702406614114,
+          0.09867210586004424,
+          0.05491538166178476
+        ],
+        "participation_ratio": 4.70233703756281,
+        "dimensions_for_95pct_variance": 6,
+        "coordinate_std": [
+          0.19531034396168226,
+          0.17724906954003555,
+          0.1237368047102636,
+          0.1982044785483968,
+          0.18606803900089847,
+          0.1714427528131163
+        ],
+        "mean": [
+          0.018425883288184803,
+          0.01175533730785052,
+          -0.0027050785919030505,
+          -0.03683093167841434,
+          0.021927547077337902,
+          -0.006118303179740906
+        ]
+      },
+      "maximum_arm_displacement_cm_percentiles": [
+        0.0,
+        4.592822432518005,
+        12.483196258544922,
+        24.6057710647583,
+        36.47442626953125,
+        79.076904296875
+      ],
+      "moving_over_5cm_fraction": 0.7308333333333333,
+      "zero_horizon_count": 53,
+      "short_horizon_count": 2635
+    },
+    "val512": {
+      "draws": 512,
+      "unique_pairs": 512,
+      "unique_episodes": 415,
+      "unique_instruction_task_ids": 410,
+      "instruction_entropy_effective_count": 377.47499636078044,
+      "largest_instruction_fraction": 0.009765625,
+      "top10_instruction_fraction": 0.072265625,
+      "top10_instructions": [
+        {
+          "task_index": 17573,
+          "draws": 5,
+          "instruction": "Arrange large block, medium block, small block in size order, largest on the left."
+        },
+        {
+          "task_index": 19910,
+          "draws": 4,
+          "instruction": "Organize bowls the ceramic bowl by stacking them in size order."
+        },
+        {
+          "task_index": 904,
+          "draws": 4,
+          "instruction": "Use the left arm to grab red block, set it on the left, follow with the left arm for green block, and end with the right arm for blue block."
+        },
+        {
+          "task_index": 19590,
+          "draws": 4,
+          "instruction": "Place red block, green block, and blue block at the center, then stack blue block onto green block and green block onto red block."
+        },
+        {
+          "task_index": 829,
+          "draws": 4,
+          "instruction": "Arrange red block, green block, and blue block in sequence from leftmost to rightmost positions."
+        },
+        {
+          "task_index": 839,
+          "draws": 4,
+          "instruction": "Pick up red block, position it on the left, add green block next to it, and finally set blue block on the far right."
+        },
+        {
+          "task_index": 19586,
+          "draws": 3,
+          "instruction": "Place red block, green block, and blue block in the center, then arrange green block on red block and blue block on green block."
+        },
+        {
+          "task_index": 11071,
+          "draws": 3,
+          "instruction": "Grab the metal can with printed white graphics using the left arm, drop the metal can with printed white graphics into the basket with arched black grip and lift the basket with arched black grip."
+        },
+        {
+          "task_index": 9407,
+          "draws": 3,
+          "instruction": "Pick the golden bread loaf and the slice-shaped bread, place them in the basket with light brown weaving."
+        },
+        {
+          "task_index": 17269,
+          "draws": 3,
+          "instruction": "Using arms, grab the yellow liquid container with green top and place it in the plastic dustbin, do the same for the cylindrical bottle and the bottle with curved body shape."
+        }
+      ],
+      "expected_unique_instruction_ids_under_uniform_frame_sampling": 402.1705159604457,
+      "raw_XYZ_delta_spectrum": {
+        "eigenvalues_descending": [
+          0.014504548363395372,
+          0.010841961819346334,
+          0.007870858895576897,
+          0.006813004179009893,
+          0.0040605275207719746,
+          0.002404956822274824
+        ],
+        "variance_fraction_descending": [
+          0.31195356128409807,
+          0.23318124191903972,
+          0.16928086289375952,
+          0.14652927229704224,
+          0.0873309522682984,
+          0.05172410933776199
+        ],
+        "participation_ratio": 4.714369707632917,
+        "dimensions_for_95pct_variance": 6,
+        "coordinate_std": [
+          0.0960779739283927,
+          0.0987919132193742,
+          0.06588743266722824,
+          0.09392641314590545,
+          0.10085040065327702,
+          0.06458258454711807
+        ],
+        "mean": [
+          0.013328185750197008,
+          0.006613233078496705,
+          -0.0010627605952322483,
+          -0.015557766913502746,
+          0.0069409373581947875,
+          -0.004288272932171822
+        ]
+      },
+      "normalized_XYZ_delta_spectrum": {
+        "eigenvalues_descending": [
+          0.05581864448536676,
+          0.04512853457455612,
+          0.03336827886159572,
+          0.027101295894537452,
+          0.018663484002618875,
+          0.011856732394366553
+        ],
+        "variance_fraction_descending": [
+          0.29081757632940936,
+          0.23512163667304667,
+          0.1738501906358031,
+          0.14119893559045046,
+          0.09723756700912409,
+          0.061774093762166346
+        ],
+        "participation_ratio": 4.9190990694785075,
+        "dimensions_for_95pct_variance": 6,
+        "coordinate_std": [
+          0.1926981594048213,
+          0.174001527879877,
+          0.13540347541289272,
+          0.19773405133088767,
+          0.19298014622436085,
+          0.17278213109031934
+        ],
+        "mean": [
+          0.026731587597168982,
+          0.01164784305728972,
+          -0.0021840500412508845,
+          -0.03275223704986274,
+          0.013281691819429398,
+          -0.011472705053165555
+        ]
+      },
+      "maximum_arm_displacement_cm_percentiles": [
+        0.0,
+        5.441836714744568,
+        13.06863784790039,
+        24.87438678741455,
+        37.399164009094235,
+        45.000301361083984
+      ],
+      "moving_over_5cm_fraction": 0.75390625,
+      "zero_horizon_count": 2,
+      "short_horizon_count": 116,
+      "cached_label_max_absolute_difference": 0.0
+    }
+  },
+  "official_mixture_evidence": {
+    "official_source_commit": "c12168d9077edea67fe7c1b70d08b80b8e65a9c8",
+    "mixture_file_sha256": "237383951ffbfd36c9501a3dc5dbfa4362281b9f12e3f0a1379144fed4894b42",
+    "released_yaml_sha256": "e5f98738d1c6dc8d8643d5a73d44ebd46385fbb2fc4031d46a02ad384a353449",
+    "released_mix_name": "lam_plus_human",
+    "released_mix_registered_in_pinned_source": false,
+    "local_single_dataset_entry": [
+      [
+        "robotwin_merged",
+        1.0,
+        "robotwin_eef"
+      ]
+    ],
+    "author_dataset_id": "jialei02/robotwin_merged",
+    "author_dataset_revision_in_saved_API": "560f9e9fecc7dbf826afd6042b418d632e319df1",
+    "conclusion": "Official-author dataset and upstream single-dataset registration are verified. Membership/weights in the released lam_plus_human training mixture cannot be verified because its definition is absent from the pinned source."
+  },
+  "sampling": "Upstream sample_step is uniform over active-split frames, not uniform over instruction/task names. Expected unique count is with-replacement; new pool additionally excludes prior and duplicate pairs.",
+  "endpoints_retained": 48274,
+  "data_columns_scanned": [
+    "index",
+    "episode_index",
+    "frame_index",
+    "task_index",
+    "observation.state"
+  ],
+  "input_sha256": {
+    "manifest": "66a764c37a03a84db19689652ea99ed019f8533000cefa763756c6286dd6f261",
+    "tasks": "a1cb6856b3ebb357519a29a930fcf57e5eec3c770e645ac470c7e211b9c7e9d6",
+    "stats": "ff816472e82e46df41b1a588a07dfd5426aba434ece167fb8a373136cd134db5",
+    "validation": "774706c1b6563705c22350a1b8db9ba15a1dedcc753b2953cbcd6d9a8c684113",
+    "qfix_audit": "213c27b784043042172915c21b5c6522658d9ecf623c514597f62d805ee22a4e"
+  },
+  "data_shards_verified": [
+    "data/chunk-000/file-000.parquet",
+    "data/chunk-000/file-001.parquet",
+    "data/chunk-000/file-002.parquet",
+    "data/chunk-000/file-003.parquet",
+    "data/chunk-000/file-004.parquet",
+    "data/chunk-000/file-005.parquet",
+    "data/chunk-000/file-006.parquet",
+    "data/chunk-000/file-007.parquet",
+    "data/chunk-000/file-008.parquet",
+    "data/chunk-000/file-009.parquet"
+  ],
+  "script_sha256": "aac43fe7de94717a8f86f1a48a849cbe2fda28fe5fa480fa58a4441f731fc0bc"
+}

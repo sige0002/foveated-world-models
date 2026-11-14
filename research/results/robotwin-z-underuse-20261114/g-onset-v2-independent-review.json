@@ -1,0 +1,51 @@
+{
+  "scope": "Independent static and CPU metadata review; runtime preflight not yet reviewed. No GPU launch.",
+  "source_sha256": {
+    "research/train_robotwin_g_onset_v2.py": "a94951602480709826641dd146441f8921d2dd6f24a7ae09ebf2e40e3165cee6",
+    "research/robotwin_g_onset_probe_v2.py": "4956173057f277dc290d455895bf2a0f5ac78b57d39673f8bac7a8b9c0878172"
+  },
+  "config_sha256": {
+    "g_on": "b820a4005d69adf5384b1ccfe1f3e8af6c64bd792698a262b8f7ee97fe094ade",
+    "g_off": "bc2dcc0f0a876809589b5ab7f47360c29bf242ab6d09da6f7ab8a71a413c1877"
+  },
+  "config_differences": {
+    "diagnostic.arm": [
+      "g_on",
+      "g_off"
+    ],
+    "diagnostic.factors.lambda_aux": [
+      1.0,
+      0.0
+    ],
+    "model.task_name": [
+      "robotwin_g_onset_g_on",
+      "robotwin_g_onset_g_off"
+    ],
+    "model.lambda_aux": [
+      1.0,
+      0.0
+    ]
+  },
+  "findings": [
+    "The only model/loss configuration difference is lambda_aux1 vs0; arm/task naming differences are descriptive.",
+    "All trainable initial parameters are required to match original seed42 fingerprint; frozen DINO independently matches shared feature cache.",
+    "Every training step must match original candidate data identities, actual augmented tensors and epsilon hashes; CPU andCUDA augmentation RNG is additionally recorded.",
+    "Fixed final512 source/labels/donors are asserted against original validation; early64 share prefix with final first64 geometry, but mean/donor controls differ between sample counts.",
+    "Probe restores CPU/CUDA/Python/numpy RNG, train/eval flags, precision and parameter versions; suspended observer hook dictionary identities are restored.",
+    "Global norm includes all optimizer parameters andVAE before clipping; selected parameter updates are measured after optimizer before evaluation.",
+    "CPU inspection confirms cached parity_videos shape(2,2,3,256,256), sameB2 cachedroute intended by helper. Runtime native/cache parity remains required."
+  ],
+  "interpretation_limits": [
+    "Compare common imageMSE/geometry, not different total losses or untrained g_off state-head errors.",
+    "Removing g-loss also changes global clipping scale and Adam moment evolution; this is part of the intervention, not isolated removal of one raw vector with other updates held constant.",
+    "Zero g-loss leaves g forward active and allows AdamW decay on zero-gradient parameters; it does not remove the architecture.",
+    "Initial raw gradient dominance does not by itself imply large upstream Adam parameter updates or explain official/local divergence.",
+    "No claim that early64 intervention metrics form a matched trajectory with final512 controls."
+  ],
+  "static_blockers": [],
+  "runtime_checks_pending": [
+    "six-update paired prefix/fingerprint verification",
+    "fixed native/cache parity and full RNG restoration",
+    "500 update final512 comparison"
+  ]
+}

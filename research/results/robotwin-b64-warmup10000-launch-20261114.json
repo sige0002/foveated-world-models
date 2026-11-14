@@ -1,0 +1,25 @@
+{
+  "launched_at": "2026-11-13T19:33:28.392603+00:00",
+  "pid": 63071,
+  "command": [
+    "/home/sadasue/foveated-world-models/.venv/bin/python",
+    "-u",
+    "/home/sadasue/foveated-world-models/research/train_robotwin_stage1.py",
+    "--config",
+    "/home/sadasue/foveated-world-models/configs/stage1_robotwin_qfix_b64_warmup10000.yaml",
+    "--output",
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-qfix-delta2-b64-warmup10000-20261114"
+  ],
+  "output": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-qfix-delta2-b64-warmup10000-20261114",
+  "log": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-qfix-delta2-b64-warmup10000-20261114.log",
+  "preflight": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-qfix-delta2-b64-warmup10000-preflight-20261114",
+  "seconds_per_update_preflight": 4.1991338600000745,
+  "estimated_training_hours_excluding_validation_and_io": 34.99278216666729,
+  "mount": {
+    "target": "/media/sadasue/SSD1",
+    "source": "/dev/sda1",
+    "fstype": "ext4",
+    "options": "rw,relatime"
+  },
+  "script_sha256": "66118468d8a19ea21a561102a440512c84723c6f0d551c84cf67d4094548a416"
+}

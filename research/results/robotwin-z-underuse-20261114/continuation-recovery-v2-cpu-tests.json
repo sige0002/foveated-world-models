@@ -1,0 +1,7 @@
+{
+  "source_sha256": "740f09a77ad3b9147a0c328d86f343259c2f808a96f4c6a24352eef4499437f9",
+  "syntax": true,
+  "rng_weights_only_roundtrip": true,
+  "JSON_pair_identity_normalization": true,
+  "cuda_initialized": false
+}

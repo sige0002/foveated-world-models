@@ -1,0 +1,14 @@
+{
+  "at": "2026-11-14T02:13:42.017904+00:00",
+  "pid": 347052,
+  "command": [
+    "/home/sadasue/foveated-world-models/.venv/bin/python",
+    "-u",
+    "/home/sadasue/foveated-world-models/research/watch_robotwin_data_step_continuation.py",
+    "--group",
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-data-step-continuation-b4-20261114",
+    "--watch"
+  ],
+  "script_sha256": "19251fae9a3076365213e3a24b32683b48a3d2e48c81664f4ddae3eebcbec2df",
+  "scope": "CPU read-only job monitoring and paired statistics; no process control"
+}

@@ -1,0 +1,855 @@
+{
+  "generated_at_utc": "2026-11-14T01:49:52.860308+00:00",
+  "status": "complete_matched_FP32_candidate_not_semantic_repair",
+  "reference": {
+    "directory": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/evaluations/final3000-highest-fp32-v2",
+    "results_sha256": "7eb11dcc480704cfd7173e0957ab134b2b1c93488410b56ee63f46a7eb47b18f",
+    "script_sha256": "ff02f76a61305c80bb036d0aca471d675387975cd7ea59454da7479018855758",
+    "cache": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/evaluations/final3000-highest-fp32/features512-highest-fp32.pt",
+    "feature_cache_manifest_sha256": "a8c4ba9007f89f8760c6a52b7a676610959c5fe8e94c68806c9c0685fae05c4d"
+  },
+  "samples": 512,
+  "episodes": 415,
+  "bootstrap_draws": 4000,
+  "all_models_same_rows_donors_and_unchanged_weights": true,
+  "precision": "highest FP32 DINO, encoder, VAE, decoder and state head; no autocast; TF32 disabled",
+  "models": {
+    "baseline": {
+      "real_visual_mse": {
+        "estimate": 0.36882970287115313,
+        "ci95": [
+          0.35583173897896714,
+          0.38251440247753055
+        ]
+      },
+      "controls": {
+        "zero": {
+          "visual_mse": 0.3694510710192844,
+          "control_over_real_ratio": 1.0016847020272344,
+          "increase_percent_of_real": 0.1684702027234408,
+          "control_minus_real": {
+            "estimate": 0.000621368148131296,
+            "ci95": [
+              0.00019801647963070995,
+              0.0010305822717623797
+            ]
+          }
+        },
+        "mean": {
+          "visual_mse": 0.3688298928027507,
+          "control_over_real_ratio": 1.0000005149574345,
+          "increase_percent_of_real": 5.149574345073689e-05,
+          "control_minus_real": {
+            "estimate": 1.8993159756064415e-07,
+            "ci95": [
+              -2.566381658495941e-06,
+              2.8985356710748758e-06
+            ]
+          }
+        },
+        "swapped": {
+          "visual_mse": 0.36883015744388103,
+          "control_over_real_ratio": 1.0000012324732102,
+          "increase_percent_of_real": 0.000123247321017018,
+          "control_minus_real": {
+            "estimate": 4.545727279037237e-07,
+            "ci95": [
+              -3.7440502210862564e-06,
+              5.0002102374013655e-06
+            ]
+          }
+        },
+        "current_only": {
+          "visual_mse": 0.3688296512555098,
+          "control_over_real_ratio": 0.9999998600556221,
+          "increase_percent_of_real": -1.3994437788826519e-05,
+          "control_minus_real": {
+            "estimate": -5.1615643315017223e-08,
+            "ci95": [
+              -8.705642277869231e-07,
+              7.60611237983747e-07
+            ]
+          }
+        }
+      },
+      "persistence_visual_mse": {
+        "estimate": 0.507585116502014,
+        "ci95": [
+          0.48557125039278476,
+          0.5311898267800668
+        ]
+      },
+      "native_api_parity": {
+        "samples": 2,
+        "all_close_atol_1e-6_rtol_0": true,
+        "decoder_input_stride": [
+          786432,
+          196608,
+          768,
+          1
+        ],
+        "native_decoder_input_stride": [
+          786432,
+          196608,
+          768,
+          1
+        ],
+        "maximum_absolute_differences": {
+          "current_features": 0.0,
+          "future_features": 0.0,
+          "posterior_mu": 0.0,
+          "visual_prediction": 0.0,
+          "state_prediction_valid16": 0.0
+        }
+      },
+      "checkpoint_sha256": "b547b19b8f620df3c3680e074e3047178f0a539d90da02ef4cfb80a607401b9b",
+      "state_metrics": {
+        "real_state_mse": {
+          "estimate": 0.0614106295467991,
+          "ci95": [
+            0.056127445117490786,
+            0.06683800536656682
+          ]
+        },
+        "zero_state_mse": {
+          "estimate": 0.060079774602911584,
+          "ci95": [
+            0.05487038123745085,
+            0.06547387875180145
+          ]
+        },
+        "mean_state_mse": {
+          "estimate": 0.06141150059249867,
+          "ci95": [
+            0.05613151231849869,
+            0.06683823788749595
+          ]
+        },
+        "swapped_state_mse": {
+          "estimate": 0.06141437700637198,
+          "ci95": [
+            0.056136750201933226,
+            0.06684075515723736
+          ]
+        },
+        "current_only_state_mse": {
+          "estimate": 0.06141377725634811,
+          "ci95": [
+            0.056128992171352095,
+            0.06684063520233702
+          ]
+        },
+        "persistence_state_mse": {
+          "estimate": 0.1596994197543075,
+          "ci95": [
+            0.1488398895027756,
+            0.17038740313591194
+          ]
+        },
+        "mean_minus_real_state_mse": {
+          "estimate": 8.7104569956864e-07,
+          "ci95": [
+            -5.59012890921604e-06,
+            7.363698918602077e-06
+          ]
+        },
+        "swapped_minus_real_state_mse": {
+          "estimate": 3.7474595728781424e-06,
+          "ci95": [
+            -5.346719004913975e-06,
+            1.2690372588042476e-05
+          ]
+        },
+        "zero_minus_real_state_mse": {
+          "estimate": -0.0013308549438875161,
+          "ci95": [
+            -0.0017849456704195253,
+            -0.0008622918168122516
+          ]
+        },
+        "current_only_minus_real_state_mse": {
+          "estimate": 3.147709549011779e-06,
+          "ci95": [
+            1.0898600469885474e-06,
+            5.417160903834108e-06
+          ]
+        },
+        "persistence_minus_real_state_mse": {
+          "estimate": 0.09828879020750839,
+          "ci95": [
+            0.08671994088376349,
+            0.10942284554537975
+          ]
+        }
+      }
+    },
+    "kl_only": {
+      "real_visual_mse": {
+        "estimate": 0.36814640670490917,
+        "ci95": [
+          0.3552044525901343,
+          0.3817525864579185
+        ]
+      },
+      "controls": {
+        "zero": {
+          "visual_mse": 0.36842084271484055,
+          "control_over_real_ratio": 1.0007454534525753,
+          "increase_percent_of_real": 0.07454534525753352,
+          "control_minus_real": {
+            "estimate": 0.00027443600993137807,
+            "ci95": [
+              -0.00019813624492159347,
+              0.0007231397186132345
+            ]
+          }
+        },
+        "mean": {
+          "visual_mse": 0.368144484484219,
+          "control_over_real_ratio": 0.9999947786514952,
+          "increase_percent_of_real": -0.0005221348504744916,
+          "control_minus_real": {
+            "estimate": -1.922220690175891e-06,
+            "ci95": [
+              -5.100765504964071e-06,
+              1.2397705459714542e-06
+            ]
+          }
+        },
+        "swapped": {
+          "visual_mse": 0.36814203759422526,
+          "control_over_real_ratio": 0.999988132138181,
+          "increase_percent_of_real": -0.0011867861818932938,
+          "control_minus_real": {
+            "estimate": -4.369110683910549e-06,
+            "ci95": [
+              -9.511944011190747e-06,
+              5.874069715330407e-07
+            ]
+          }
+        },
+        "current_only": {
+          "visual_mse": 0.36814683611737564,
+          "control_over_real_ratio": 1.0000011664176498,
+          "increase_percent_of_real": 0.00011664176497533401,
+          "control_minus_real": {
+            "estimate": 4.2941246647387743e-07,
+            "ci95": [
+              -9.005153524313212e-07,
+              1.7001051718380485e-06
+            ]
+          }
+        }
+      },
+      "persistence_visual_mse": {
+        "estimate": 0.507585116502014,
+        "ci95": [
+          0.48557125039278476,
+          0.5311898267800668
+        ]
+      },
+      "native_api_parity": {
+        "samples": 2,
+        "all_close_atol_1e-6_rtol_0": true,
+        "decoder_input_stride": [
+          786432,
+          196608,
+          768,
+          1
+        ],
+        "native_decoder_input_stride": [
+          786432,
+          196608,
+          768,
+          1
+        ],
+        "maximum_absolute_differences": {
+          "current_features": 0.0,
+          "future_features": 0.0,
+          "posterior_mu": 0.0,
+          "visual_prediction": 0.0,
+          "state_prediction_valid16": 0.0
+        }
+      },
+      "checkpoint_sha256": "88f3418f06ded628ff51186e7aae6530616e4ed293f30914b20c5f624fe883d1",
+      "state_metrics": {
+        "real_state_mse": {
+          "estimate": 0.0611055500099269,
+          "ci95": [
+            0.05591099593493952,
+            0.0664056558000247
+          ]
+        },
+        "zero_state_mse": {
+          "estimate": 0.060156274279250965,
+          "ci95": [
+            0.055018957535684455,
+            0.06544787524253065
+          ]
+        },
+        "mean_state_mse": {
+          "estimate": 0.06110753683708481,
+          "ci95": [
+            0.05592007285374039,
+            0.06641001021685838
+          ]
+        },
+        "swapped_state_mse": {
+          "estimate": 0.06110456682392851,
+          "ci95": [
+            0.05591421870573942,
+            0.06640659844469923
+          ]
+        },
+        "current_only_state_mse": {
+          "estimate": 0.06110407182950439,
+          "ci95": [
+            0.0559113000928118,
+            0.06640318658199526
+          ]
+        },
+        "persistence_state_mse": {
+          "estimate": 0.1596994197543075,
+          "ci95": [
+            0.1488398895027756,
+            0.17038740313591194
+          ]
+        },
+        "mean_minus_real_state_mse": {
+          "estimate": 1.9868271579071006e-06,
+          "ci95": [
+            -6.507351368105787e-06,
+            9.97103987987179e-06
+          ]
+        },
+        "swapped_minus_real_state_mse": {
+          "estimate": -9.8318599839331e-07,
+          "ci95": [
+            -1.3468030852128222e-05,
+            1.133309099620037e-05
+          ]
+        },
+        "zero_minus_real_state_mse": {
+          "estimate": -0.0009492757306759358,
+          "ci95": [
+            -0.001382478248488969,
+            -0.0005134960440931575
+          ]
+        },
+        "current_only_minus_real_state_mse": {
+          "estimate": -1.4781804225094675e-06,
+          "ci95": [
+            -5.199327472280857e-06,
+            2.1587664144133016e-06
+          ]
+        },
+        "persistence_minus_real_state_mse": {
+          "estimate": 0.09859386974438059,
+          "ci95": [
+            0.08717167817719897,
+            0.10966616162416214
+          ]
+        }
+      }
+    },
+    "mse_only": {
+      "real_visual_mse": {
+        "estimate": 0.3633335898630321,
+        "ci95": [
+          0.35252089467637815,
+          0.3746491608542199
+        ]
+      },
+      "controls": {
+        "zero": {
+          "visual_mse": 0.3641612262581475,
+          "control_over_real_ratio": 1.0022778967268824,
+          "increase_percent_of_real": 0.22778967268823233,
+          "control_minus_real": {
+            "estimate": 0.0008276363951154053,
+            "ci95": [
+              0.0004904658807323893,
+              0.0011534230549808458
+            ]
+          }
+        },
+        "mean": {
+          "visual_mse": 0.36333695173379965,
+          "control_over_real_ratio": 1.0000092528487905,
+          "increase_percent_of_real": 0.0009252848790600461,
+          "control_minus_real": {
+            "estimate": 3.3618707675486803e-06,
+            "ci95": [
+              2.1983507669989143e-06,
+              4.625251456443376e-06
+            ]
+          }
+        },
+        "swapped": {
+          "visual_mse": 0.3633380881801713,
+          "control_over_real_ratio": 1.0000123806806327,
+          "increase_percent_of_real": 0.0012380680632690674,
+          "control_minus_real": {
+            "estimate": 4.498317139223218e-06,
+            "ci95": [
+              2.6697132850743765e-06,
+              6.404659866133264e-06
+            ]
+          }
+        },
+        "current_only": {
+          "visual_mse": 0.3633372256299481,
+          "control_over_real_ratio": 1.0000100066908688,
+          "increase_percent_of_real": 0.0010006690868707175,
+          "control_minus_real": {
+            "estimate": 3.635766915977001e-06,
+            "ci95": [
+              2.3131326502854996e-06,
+              5.068174799098502e-06
+            ]
+          }
+        }
+      },
+      "persistence_visual_mse": {
+        "estimate": 0.507585116502014,
+        "ci95": [
+          0.48557125039278476,
+          0.5311898267800668
+        ]
+      },
+      "native_api_parity": {
+        "samples": 2,
+        "all_close_atol_1e-6_rtol_0": true,
+        "decoder_input_stride": [
+          786432,
+          196608,
+          768,
+          1
+        ],
+        "native_decoder_input_stride": [
+          786432,
+          196608,
+          768,
+          1
+        ],
+        "maximum_absolute_differences": {
+          "current_features": 0.0,
+          "future_features": 0.0,
+          "posterior_mu": 0.0,
+          "visual_prediction": 0.0,
+          "state_prediction_valid16": 0.0
+        }
+      },
+      "checkpoint_sha256": "700b61ad0dd845c9511b90b005716c8b704844f394695579c2081eb02dd14f0a",
+      "state_metrics": {
+        "real_state_mse": {
+          "estimate": 0.06276850428150738,
+          "ci95": [
+            0.05744887184160235,
+            0.06825098618871497
+          ]
+        },
+        "zero_state_mse": {
+          "estimate": 0.06182268764183618,
+          "ci95": [
+            0.056525238863867656,
+            0.06733742409609464
+          ]
+        },
+        "mean_state_mse": {
+          "estimate": 0.06276842416423278,
+          "ci95": [
+            0.05744842370351362,
+            0.0682514027327866
+          ]
+        },
+        "swapped_state_mse": {
+          "estimate": 0.06276846462685626,
+          "ci95": [
+            0.05744892500299444,
+            0.06825187665290436
+          ]
+        },
+        "current_only_state_mse": {
+          "estimate": 0.06277045315380292,
+          "ci95": [
+            0.05745104823213005,
+            0.06825343013705158
+          ]
+        },
+        "persistence_state_mse": {
+          "estimate": 0.1596994197543075,
+          "ci95": [
+            0.1488398895027756,
+            0.17038740313591194
+          ]
+        },
+        "mean_minus_real_state_mse": {
+          "estimate": -8.011727459233953e-08,
+          "ci95": [
+            -1.342178469490458e-06,
+            1.2622772873338496e-06
+          ]
+        },
+        "swapped_minus_real_state_mse": {
+          "estimate": -3.9654651118326e-08,
+          "ci95": [
+            -1.8424217361549285e-06,
+            1.880290374963738e-06
+          ]
+        },
+        "zero_minus_real_state_mse": {
+          "estimate": -0.0009458166396711931,
+          "ci95": [
+            -0.0013654866730528964,
+            -0.0005224068686340504
+          ]
+        },
+        "current_only_minus_real_state_mse": {
+          "estimate": 1.9488722955429694e-06,
+          "ci95": [
+            9.979189757374084e-07,
+            2.9821357548711015e-06
+          ]
+        },
+        "persistence_minus_real_state_mse": {
+          "estimate": 0.09693091547280011,
+          "ci95": [
+            0.08544914919116156,
+            0.10817475666340827
+          ]
+        }
+      }
+    },
+    "kl_mse": {
+      "real_visual_mse": {
+        "estimate": 0.35814697755267844,
+        "ci95": [
+          0.34747893396931756,
+          0.3692115302522835
+        ]
+      },
+      "controls": {
+        "zero": {
+          "visual_mse": 0.36338798963697627,
+          "control_over_real_ratio": 1.014633690671107,
+          "increase_percent_of_real": 1.4633690671107105,
+          "control_minus_real": {
+            "estimate": 0.005241012084297836,
+            "ci95": [
+              0.004422244352752753,
+              0.006059166847030112
+            ]
+          }
+        },
+        "mean": {
+          "visual_mse": 0.3625402245670557,
+          "control_over_real_ratio": 1.0122666036284813,
+          "increase_percent_of_real": 1.2266603628481216,
+          "control_minus_real": {
+            "estimate": 0.004393247014377266,
+            "ci95": [
+              0.0036391870081534067,
+              0.005154595655045407
+            ]
+          }
+        },
+        "swapped": {
+          "visual_mse": 0.3647535668569617,
+          "control_over_real_ratio": 1.0184465867879942,
+          "increase_percent_of_real": 1.844658678799411,
+          "control_minus_real": {
+            "estimate": 0.006606589304283261,
+            "ci95": [
+              0.005290253903206063,
+              0.007944140647477215
+            ]
+          }
+        },
+        "current_only": {
+          "visual_mse": 0.36603852434200235,
+          "control_over_real_ratio": 1.0220343805307226,
+          "increase_percent_of_real": 2.203438053072268,
+          "control_minus_real": {
+            "estimate": 0.007891546789323911,
+            "ci95": [
+              0.006221080454228608,
+              0.00968030247867183
+            ]
+          }
+        }
+      },
+      "persistence_visual_mse": {
+        "estimate": 0.507585116502014,
+        "ci95": [
+          0.48557125039278476,
+          0.5311898267800668
+        ]
+      },
+      "native_api_parity": {
+        "samples": 2,
+        "all_close_atol_1e-6_rtol_0": true,
+        "decoder_input_stride": [
+          786432,
+          196608,
+          768,
+          1
+        ],
+        "native_decoder_input_stride": [
+          786432,
+          196608,
+          768,
+          1
+        ],
+        "maximum_absolute_differences": {
+          "current_features": 0.0,
+          "future_features": 0.0,
+          "posterior_mu": 0.0,
+          "visual_prediction": 0.0,
+          "state_prediction_valid16": 0.0
+        }
+      },
+      "checkpoint_sha256": "157e4cf9b2906c9260096e19b406b80b1014811a77202b1091442053e431d10e",
+      "state_metrics": {
+        "real_state_mse": {
+          "estimate": 0.06191949932753005,
+          "ci95": [
+            0.0566126466894694,
+            0.06735678523050749
+          ]
+        },
+        "zero_state_mse": {
+          "estimate": 0.06158442553032728,
+          "ci95": [
+            0.056347899519293275,
+            0.06701499615908424
+          ]
+        },
+        "mean_state_mse": {
+          "estimate": 0.06233871018901027,
+          "ci95": [
+            0.05705505258760788,
+            0.06783548120540549
+          ]
+        },
+        "swapped_state_mse": {
+          "estimate": 0.062484962595647175,
+          "ci95": [
+            0.05721792207473184,
+            0.0678497065609594
+          ]
+        },
+        "current_only_state_mse": {
+          "estimate": 0.06314339602005248,
+          "ci95": [
+            0.05782034564524598,
+            0.06853063391426659
+          ]
+        },
+        "persistence_state_mse": {
+          "estimate": 0.1596994197543075,
+          "ci95": [
+            0.1488398895027756,
+            0.17038740313591194
+          ]
+        },
+        "mean_minus_real_state_mse": {
+          "estimate": 0.0004192108614802237,
+          "ci95": [
+            0.00010247600906179484,
+            0.0007360232584875068
+          ]
+        },
+        "swapped_minus_real_state_mse": {
+          "estimate": 0.0005654632681171279,
+          "ci95": [
+            0.00013641818603719817,
+            0.0010109770097106166
+          ]
+        },
+        "zero_minus_real_state_mse": {
+          "estimate": -0.0003350737972027673,
+          "ci95": [
+            -0.0008146760286758855,
+            0.00016082851961008693
+          ]
+        },
+        "current_only_minus_real_state_mse": {
+          "estimate": 0.0012238966925224304,
+          "ci95": [
+            0.0008959612350862222,
+            0.001563295148225734
+          ]
+        },
+        "persistence_minus_real_state_mse": {
+          "estimate": 0.09777992042677744,
+          "ci95": [
+            0.08643439003268057,
+            0.108711560190467
+          ]
+        }
+      }
+    },
+    "official": {
+      "real_visual_mse": {
+        "estimate": 0.31342677423737086,
+        "ci95": [
+          0.30131645090672926,
+          0.32614039300830555
+        ]
+      },
+      "controls": {
+        "zero": {
+          "visual_mse": 0.407761861133622,
+          "control_over_real_ratio": 1.3009796694165232,
+          "increase_percent_of_real": 30.097966941652324,
+          "control_minus_real": {
+            "estimate": 0.09433508689625114,
+            "ci95": [
+              0.0887502925611895,
+              0.1003854706013481
+            ]
+          }
+        },
+        "mean": {
+          "visual_mse": 0.40890110266627744,
+          "control_over_real_ratio": 1.3046144626961576,
+          "increase_percent_of_real": 30.461446269615745,
+          "control_minus_real": {
+            "estimate": 0.09547432842890657,
+            "ci95": [
+              0.09099672772519866,
+              0.09993013138367422
+            ]
+          }
+        },
+        "swapped": {
+          "visual_mse": 0.4594822965009371,
+          "control_over_real_ratio": 1.4659956783173618,
+          "increase_percent_of_real": 46.59956783173617,
+          "control_minus_real": {
+            "estimate": 0.14605552226356622,
+            "ci95": [
+              0.13808341873119037,
+              0.1539822319183002
+            ]
+          }
+        },
+        "current_only": {
+          "visual_mse": 0.5064294268325398,
+          "control_over_real_ratio": 1.615782276625162,
+          "increase_percent_of_real": 61.578227662516205,
+          "control_minus_real": {
+            "estimate": 0.1930026525951689,
+            "ci95": [
+              0.18194688734980302,
+              0.20485433640773115
+            ]
+          }
+        }
+      },
+      "persistence_visual_mse": {
+        "estimate": 0.507585116502014,
+        "ci95": [
+          0.48557125039278476,
+          0.5311898267800668
+        ]
+      },
+      "native_api_parity": {
+        "samples": 2,
+        "all_close_atol_1e-6_rtol_0": true,
+        "decoder_input_stride": [
+          786432,
+          196608,
+          768,
+          1
+        ],
+        "native_decoder_input_stride": [
+          786432,
+          196608,
+          768,
+          1
+        ],
+        "maximum_absolute_differences": {
+          "current_features": 0.0,
+          "future_features": 0.0,
+          "posterior_mu": 0.0,
+          "visual_prediction": 0.0
+        }
+      },
+      "checkpoint_sha256": "57c31dcba13c2998c4e866cdcfc427f14ae3c1b762a586778276e2100b48af88"
+    }
+  },
+  "paired_combined_minus_official": {
+    "real_visual_mse": {
+      "estimate": 0.04472020331530757,
+      "ci95": [
+        0.04065225247309778,
+        0.048831228687574516
+      ]
+    },
+    "zero_minus_real_visual_mse": {
+      "estimate": -0.0890940748119533,
+      "ci95": [
+        -0.09525153938753013,
+        -0.08357497940246002
+      ]
+    },
+    "mean_minus_real_visual_mse": {
+      "estimate": -0.09108108141452931,
+      "ci95": [
+        -0.09558921841735982,
+        -0.0867201526279508
+      ]
+    },
+    "swapped_minus_real_visual_mse": {
+      "estimate": -0.13944893295928296,
+      "ci95": [
+        -0.14737382796410473,
+        -0.13153049929596158
+      ]
+    },
+    "current_only_minus_real_visual_mse": {
+      "estimate": -0.185111105805845,
+      "ci95": [
+        -0.19665182691666716,
+        -0.17439458022264395
+      ]
+    }
+  },
+  "limits": [
+    "One seed and3000local updates; official training membership is unknown.",
+    "Conditional episode bootstrap excludes seed, donor-permutation and multiple-comparison uncertainty.",
+    "Current-only is an off-distribution diagnostic, not a physical zero-action label. Whole-z swap also changes code content related to current input.",
+    "Functional control sensitivity is not evidence of repaired action semantics; episode-held-out external linear probes are pending.",
+    "Official state head has a14-D contract and is not scored on local16-D state labels."
+  ],
+  "combined_candidate_vs_official": {
+    "real_MSE_excess": 0.04472020331530757,
+    "real_MSE_excess_percent": 14.268150327654887,
+    "absolute_control_effect_fraction_of_official": {
+      "zero": 0.055557399232184446,
+      "mean": 0.04601495592240407,
+      "swapped": 0.045233409883409015,
+      "current_only": 0.04088828149878727
+    }
+  },
+  "group_sizes": {
+    "all": {
+      "samples": 512,
+      "episodes": 415
+    },
+    "high_visual_change_top_quartile": {
+      "samples": 128,
+      "episodes": 114
+    },
+    "moving_5cm": {
+      "samples": 386,
+      "episodes": 325
+    },
+    "full_horizon_moving_5cm": {
+      "samples": 333,
+      "episodes": 280
+    }
+  }
+}

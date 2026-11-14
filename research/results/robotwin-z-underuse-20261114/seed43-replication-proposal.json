@@ -1,0 +1,102 @@
+{
+  "status": "proposal_only_not_launched",
+  "launch_gate": "Root review after completed FP32 results; current user priority is official/zero-z representation probes. No training launch.",
+  "runner": "/home/sadasue/foveated-world-models/research/train_robotwin_stage1.py",
+  "runner_sha256": "9ecbea0151c1f902647dc9e41a5a17a431ab5c4319da658b9d0cdeb5104cba27",
+  "output_group": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-replication-seed43-b4-20261114",
+  "output_group_exists": false,
+  "arms": [
+    {
+      "arm": "baseline",
+      "config": "/home/sadasue/foveated-world-models/configs/robotwin_loss_replication_seed43_20261114/baseline.yaml",
+      "config_sha256": "a89fcf2727d14c8b650eeee817aa5351afc3ab09387ab304a61d88bc037e375f",
+      "output": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-replication-seed43-b4-20261114/baseline",
+      "log": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-replication-seed43-b4-20261114/baseline.log",
+      "command": [
+        "/home/sadasue/foveated-world-models/.venv/bin/python",
+        "-u",
+        "/home/sadasue/foveated-world-models/research/train_robotwin_stage1.py",
+        "--config",
+        "/home/sadasue/foveated-world-models/configs/robotwin_loss_replication_seed43_20261114/baseline.yaml",
+        "--output",
+        "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-replication-seed43-b4-20261114/baseline"
+      ],
+      "preflight_command": [
+        "/home/sadasue/foveated-world-models/.venv/bin/python",
+        "-u",
+        "/home/sadasue/foveated-world-models/research/train_robotwin_stage1.py",
+        "--config",
+        "/home/sadasue/foveated-world-models/configs/robotwin_loss_replication_seed43_20261114/baseline.yaml",
+        "--output",
+        "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-replication-seed43-b4-20261114/baseline-preflight",
+        "--preflight"
+      ]
+    },
+    {
+      "arm": "kl_mse",
+      "config": "/home/sadasue/foveated-world-models/configs/robotwin_loss_replication_seed43_20261114/kl_mse.yaml",
+      "config_sha256": "746cf4acdc54c6c7032c49940ef79fc0d9cb41e8aa0afc0b66c168ab41269b9a",
+      "output": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-replication-seed43-b4-20261114/kl_mse",
+      "log": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-replication-seed43-b4-20261114/kl_mse.log",
+      "command": [
+        "/home/sadasue/foveated-world-models/.venv/bin/python",
+        "-u",
+        "/home/sadasue/foveated-world-models/research/train_robotwin_stage1.py",
+        "--config",
+        "/home/sadasue/foveated-world-models/configs/robotwin_loss_replication_seed43_20261114/kl_mse.yaml",
+        "--output",
+        "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-replication-seed43-b4-20261114/kl_mse"
+      ],
+      "preflight_command": [
+        "/home/sadasue/foveated-world-models/.venv/bin/python",
+        "-u",
+        "/home/sadasue/foveated-world-models/research/train_robotwin_stage1.py",
+        "--config",
+        "/home/sadasue/foveated-world-models/configs/robotwin_loss_replication_seed43_20261114/kl_mse.yaml",
+        "--output",
+        "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-replication-seed43-b4-20261114/kl_mse-preflight",
+        "--preflight"
+      ]
+    }
+  ],
+  "seed": 43,
+  "batch_size": 4,
+  "steps": 3000,
+  "warmup_steps": 1000,
+  "peak_lr": 0.0003,
+  "precision": "bf16-mixed",
+  "split_seed": 42,
+  "split_sha256": "c75f6d4ea34a34e8e2d67682da3fc3ebc00d733957486fea6f954931b0a9ed35",
+  "validation_samples": 512,
+  "validation_unique_episodes": 415,
+  "validation_pair_donor_sha256": "1c04ef52284a2e86b4e60b80de8b54dae93cbe00f11792fe67de9149a9eacd75",
+  "donor_seed": 1942,
+  "source_commit": "c12168d9077edea67fe7c1b70d08b80b8e65a9c8",
+  "source_patch_sha256": "7fa893260a313e977a4e4476a794a51badb17493ca16a97601d21f87db0df808",
+  "checkpoint_policy": "One full final.ckpt per arm at3000, validation every500. No extra main training.",
+  "pairing_requirements": [
+    "Both seed43 initial trainable hashes equal, different from seed42 expected.",
+    "All within-seed43 cumulative data/augmentation/epsilon hashes match at common steps.",
+    "Initial/generator seeds43; train-loader generator12044, validation-loader22044.",
+    "Upstream mixture seed is hardcoded42: normal episode/base sequence should stay equal across seeds. Read/augmentation retries can change provenance and must be detected by hashes.",
+    "Same episode split and deterministic index-based512validation identities/donors must match the pinned reference."
+  ],
+  "resource_proposal": {
+    "concurrent_jobs": 2,
+    "measured_original_peak_reserved_gib_per_job": 13.978515625,
+    "estimated_pair_gpu_reserved_gib": 27.95703125,
+    "minimum_host_memavailable_gib_before_pair": 60,
+    "minimum_ssd_free_gib": 35,
+    "expected_checkpoints_bytes": 16061317840,
+    "timing": "Previous four-way run median2.55s/update (~2.1h for3000updates excluding validation/save); new two-job throughput is unmeasured. Recheck GPU load, RAM, and short preflight before any approved launch."
+  },
+  "limitations": [
+    "Preparation only; no GPU preflight or training executed.",
+    "This replicates initialization/augmentation/sampling randomness with fixed dataset order, not a new split.",
+    "One additional seed cannot establish convergence or universal causality.",
+    "Immutable v1 top-level progress.train_loss is shadowed by a hash; use metrics.train_loss.",
+    "Current four-arm FP32 evaluator hardcodes seed42/fourarms; seed43 needs a separately reviewed paired2arm evaluation with the same reference cache.",
+    "A1% reconstruction intervention gap is not proof that z is a useful action representation."
+  ],
+  "new_training_jobs_launched": 0
+}

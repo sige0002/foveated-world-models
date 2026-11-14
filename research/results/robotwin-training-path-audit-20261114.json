@@ -1,0 +1,566 @@
+{
+  "audit_date": "2026-11-14",
+  "scope": "Independent CPU/read-only source and dataset audit; no GPU/model update. Dataset sampling prefixes are actual live data identities, not an estimated distribution.",
+  "source_commit": "c12168d9077edea67fe7c1b70d08b80b8e65a9c8",
+  "training_run": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/baseline",
+  "sources": {
+    "local_runner": {
+      "path": "/home/sadasue/foveated-world-models/research/train_robotwin_stage1.py",
+      "sha256": "9ecbea0151c1f902647dc9e41a5a17a431ab5c4319da658b9d0cdeb5104cba27",
+      "line_ranges": [
+        [
+          185,
+          207
+        ],
+        [
+          246,
+          258
+        ],
+        [
+          326,
+          343
+        ],
+        [
+          419,
+          431
+        ]
+      ]
+    },
+    "official_forward": {
+      "path": "/media/sadasue/SSD1/foveated-world-models/research/official-data-contract-audit-20261113/LaWAM/latent_action_model/core/lam_model.py",
+      "sha256": "93827eaeffc1c41c8666debedf014b957daf23b79509c0123babaecc2507c38b",
+      "line_ranges": [
+        [
+          326,
+          460
+        ]
+      ]
+    },
+    "official_optimizer_loss": {
+      "path": "/media/sadasue/SSD1/foveated-world-models/research/official-data-contract-audit-20261113/LaWAM/latent_action_model/core/lam_lightinng.py",
+      "sha256": "c47ea36c98bd8424acb74adf44e93bf0ea7e7a2f369fccfdc0c423fea7fa788c",
+      "line_ranges": [
+        [
+          380,
+          440
+        ],
+        [
+          643,
+          706
+        ],
+        [
+          901,
+          923
+        ]
+      ]
+    },
+    "official_collate": {
+      "path": "/media/sadasue/SSD1/foveated-world-models/research/official-data-contract-audit-20261113/LaWAM/latent_action_model/data_loader/collate.py",
+      "sha256": "5953e9b334dce0eb1cb461c92c118f2d6ad4743f19f75fd74311aa86b6b20645",
+      "line_ranges": [
+        [
+          39,
+          55
+        ]
+      ]
+    },
+    "official_augmentation": {
+      "path": "/media/sadasue/SSD1/foveated-world-models/research/official-data-contract-audit-20261113/LaWAM/latent_action_model/data_loader/video_aug.py",
+      "sha256": "e425cf9ea33ae6abe583c13afe86e1337eec309ed293e32cccb2f69daf9fb69b",
+      "line_ranges": [
+        [
+          60,
+          115
+        ]
+      ]
+    },
+    "official_sampling": {
+      "path": "/media/sadasue/SSD1/foveated-world-models/research/official-data-contract-audit-20261113/LaWAM/starVLA/dataloader/gr00t_lerobot/datasets.py",
+      "sha256": "94c63dd38dd443095dee71cb51e736a00932fcb1da1fcc3eb7333d473b1151fd",
+      "line_ranges": [
+        [
+          811,
+          875
+        ],
+        [
+          1541,
+          1559
+        ],
+        [
+          1616,
+          1635
+        ],
+        [
+          2243,
+          2252
+        ],
+        [
+          2563,
+          2590
+        ]
+      ]
+    },
+    "official_state_config": {
+      "path": "/media/sadasue/SSD1/foveated-world-models/research/official-data-contract-audit-20261113/LaWAM/starVLA/dataloader/gr00t_lerobot/data_config.py",
+      "sha256": "949ad078f1cd11a481ef6feb5c2d21487168ba42d8648323459aecf62f194cfa",
+      "line_ranges": [
+        [
+          1042,
+          1110
+        ]
+      ]
+    },
+    "official_video": {
+      "path": "/media/sadasue/SSD1/foveated-world-models/research/official-data-contract-audit-20261113/LaWAM/starVLA/dataloader/gr00t_lerobot/video.py",
+      "sha256": "812f21683d732f39fa573e186980fa534432910b03791d7607a8f2c048bbdb54",
+      "line_ranges": [
+        [
+          138,
+          203
+        ]
+      ]
+    }
+  },
+  "metadata_sha256": "1cdef62eb5eb7b7a39e0fad51f250150351359090dc03ea4203a8e62dfcef072",
+  "identity_validation": {
+    "matched_batches": 500,
+    "checked_batches": 500,
+    "batch_size": 4,
+    "training_steps": 500,
+    "pairs": 2000,
+    "unique_pairs": 2000,
+    "unique_episodes": 1904,
+    "method": "Reproduce safe_hash((epoch0,index,seed42)), NumPy default_rng, dataset choice, local frame choice, metadata subset mapping. Compare every4 identities with actual training_stream.jsonl data_sha256."
+  },
+  "temporal": {
+    "short_horizon_fraction": 0.2315,
+    "identical_frame_index_count": 17,
+    "gap_frames_quantiles": [
+      0.0,
+      10.0,
+      21.0,
+      48.0,
+      48.0
+    ],
+    "full_train_short_horizon_fraction": 0.21709391233353104,
+    "full_train_identical_frame_index_fraction": 0.004522789840281896
+  },
+  "augmentation_synthetic_cpu": {
+    "identical_inputs_shape": [
+      2,
+      2,
+      3,
+      256,
+      256
+    ],
+    "seed": 42,
+    "same_transform_across_time_view1": true,
+    "same_transform_across_time_view2": true,
+    "same_transform_across_batch": true,
+    "encoder_decoder_views_differ": true,
+    "eval_views_equal": true
+  },
+  "quaternion_first2000": {
+    "left": {
+      "pairs": 2000,
+      "negative_dot_count": 4,
+      "negative_dot_fraction": 0.002,
+      "negative_dot_and_geodesic_angle_below10deg_count": 0,
+      "dot_min": -0.20225561938920822,
+      "geodesic_angle_deg_quantiles": [
+        0.0,
+        1.2392523421586916,
+        92.80661122644612,
+        176.2272075171196
+      ],
+      "quaternion_euclidean_delta_max": 1.5506486509775244,
+      "negative_dot_examples": [
+        {
+          "episode": 18112,
+          "base": 79,
+          "future": 127,
+          "current_index": 3527825,
+          "future_index": 3527873,
+          "dot": -0.10831570010355793,
+          "geodesic_angle_deg": 167.5635356940694,
+          "quaternion_euclidean_delta": 1.4888355853508863
+        },
+        {
+          "episode": 26591,
+          "base": 83,
+          "future": 131,
+          "current_index": 5850764,
+          "future_index": 5850812,
+          "dot": -0.03291787761414586,
+          "geodesic_angle_deg": 176.2272075171196,
+          "quaternion_euclidean_delta": 1.4373015533381612
+        },
+        {
+          "episode": 26553,
+          "base": 78,
+          "future": 126,
+          "current_index": 5844899,
+          "future_index": 5844947,
+          "dot": -0.14361789989373747,
+          "geodesic_angle_deg": 163.4854939606579,
+          "quaternion_euclidean_delta": 1.512361001807265
+        },
+        {
+          "episode": 20069,
+          "base": 78,
+          "future": 126,
+          "current_index": 4207100,
+          "future_index": 4207148,
+          "dot": -0.20225561938920822,
+          "geodesic_angle_deg": 156.6622148048845,
+          "quaternion_euclidean_delta": 1.5506486509775244
+        }
+      ]
+    },
+    "right": {
+      "pairs": 2000,
+      "negative_dot_count": 4,
+      "negative_dot_fraction": 0.002,
+      "negative_dot_and_geodesic_angle_below10deg_count": 0,
+      "dot_min": -0.38288730835362195,
+      "geodesic_angle_deg_quantiles": [
+        0.0,
+        0.5420025438133262,
+        90.97597134173883,
+        171.80792234351736
+      ],
+      "quaternion_euclidean_delta_max": 1.6630618198693772,
+      "negative_dot_examples": [
+        {
+          "episode": 20158,
+          "base": 64,
+          "future": 112,
+          "current_index": 4220666,
+          "future_index": 4220714,
+          "dot": -0.08339783225432516,
+          "geodesic_angle_deg": 170.4321994558661,
+          "quaternion_euclidean_delta": 1.4720039621239647
+        },
+        {
+          "episode": 14362,
+          "base": 130,
+          "future": 178,
+          "current_index": 2911849,
+          "future_index": 2911897,
+          "dot": -0.38288730835362195,
+          "geodesic_angle_deg": 134.9747114915152,
+          "quaternion_euclidean_delta": 1.6630618198693772
+        },
+        {
+          "episode": 12963,
+          "base": 59,
+          "future": 107,
+          "current_index": 2597141,
+          "future_index": 2597189,
+          "dot": -0.2178309676184691,
+          "geodesic_angle_deg": 154.83666568857612,
+          "quaternion_euclidean_delta": 1.5606607367512448
+        },
+        {
+          "episode": 27041,
+          "base": 74,
+          "future": 122,
+          "current_index": 5950650,
+          "future_index": 5950698,
+          "dot": -0.15074636675412906,
+          "geodesic_angle_deg": 162.65963586019126,
+          "quaternion_euclidean_delta": 1.5170671486484235
+        }
+      ]
+    }
+  },
+  "qfix_existing_full_data_audit": {
+    "path": "/media/sadasue/SSD1/foveated-world-models/research/official-data-contract-audit-20261113/robotwin-qfix-data/robotwin_merged/qfix/audit.json",
+    "frames": 6077247,
+    "episodes": 27500,
+    "arms": {
+      "left": {
+        "flipped_frames": 67390,
+        "adjacent_negative_dot_before": 1733,
+        "adjacent_negative_dot_after": 0,
+        "norm_max_error": 5.140821501825599e-08,
+        "rotation_preserved_all_frames": true,
+        "first_frame_preserved_all_episodes": true,
+        "adjacent_quat_l2_before": [
+          6.981737723546953e-05,
+          0.03803944927836062,
+          0.053121272522472986,
+          2.000000057920189
+        ],
+        "adjacent_quat_l2_after": [
+          6.98170273946605e-05,
+          0.037990984872286644,
+          0.05293510533298433,
+          0.42194691673788925
+        ]
+      },
+      "right": {
+        "flipped_frames": 194137,
+        "adjacent_negative_dot_before": 6029,
+        "adjacent_negative_dot_after": 0,
+        "norm_max_error": 5.163455174539422e-08,
+        "rotation_preserved_all_frames": true,
+        "first_frame_preserved_all_episodes": true,
+        "adjacent_quat_l2_before": [
+          3.343572401953972e-05,
+          0.03708301317750993,
+          0.052900315405997544,
+          2.000000057727878
+        ],
+        "adjacent_quat_l2_after": [
+          3.343476454572909e-05,
+          0.036860047337376356,
+          0.05223816723517426,
+          0.32752853205492105
+        ]
+      }
+    }
+  },
+  "decoded_first8_pairs": [
+    {
+      "episode": 3410,
+      "base": 161,
+      "future": 209,
+      "current_index": 671265,
+      "future_index": 671313,
+      "row_timestamp_gap": 1.5999999046325684,
+      "requested_video_timestamps": [
+        591.4000001271568,
+        593.0000000317893
+      ],
+      "video_path": "/media/sadasue/SSD1/foveated-world-models/research/official-data-contract-audit-20261113/robotwin-qfix-data/robotwin_merged/videos/observation.images.cam_high/chunk-000/file-024.mp4",
+      "video_fps": 30.00031114463683,
+      "video_pixel_difference_mae": 23.529705047607422,
+      "raw_state_delta_norm": 1.1844387157291674,
+      "state_finite": true,
+      "quat_norms": [
+        [
+          1.000000000153808,
+          1.0000000249383592
+        ],
+        [
+          1.0000000046178643,
+          1.0000000005029022
+        ]
+      ]
+    },
+    {
+      "episode": 17677,
+      "base": 121,
+      "future": 129,
+      "current_index": 3467113,
+      "future_index": 3467121,
+      "row_timestamp_gap": 0.26666688919067383,
+      "requested_video_timestamps": [
+        754.4666666348778,
+        754.7333335240685
+      ],
+      "video_path": "/media/sadasue/SSD1/foveated-world-models/research/official-data-contract-audit-20261113/robotwin-qfix-data/robotwin_merged/videos/observation.images.cam_high/chunk-000/file-125.mp4",
+      "video_fps": 30.000363623759558,
+      "video_pixel_difference_mae": 1.972425103187561,
+      "raw_state_delta_norm": 0.17085530548918643,
+      "state_finite": true,
+      "quat_norms": [
+        [
+          1.0000000132011988,
+          1.000000007366975
+        ],
+        [
+          0.9999999914098018,
+          0.9999999650099426
+        ]
+      ]
+    },
+    {
+      "episode": 5492,
+      "base": 88,
+      "future": 136,
+      "current_index": 1159557,
+      "future_index": 1159605,
+      "row_timestamp_gap": 1.5999999046325684,
+      "requested_video_timestamps": [
+        204.6333333969116,
+        206.23333330154418
+      ],
+      "video_path": "/media/sadasue/SSD1/foveated-world-models/research/official-data-contract-audit-20261113/robotwin-qfix-data/robotwin_merged/videos/observation.images.cam_high/chunk-000/file-041.mp4",
+      "video_fps": 30.001364656046825,
+      "video_pixel_difference_mae": 36.46910095214844,
+      "raw_state_delta_norm": 0.7983330811657693,
+      "state_finite": true,
+      "quat_norms": [
+        [
+          0.9999999694438841,
+          0.9999999658534169
+        ],
+        [
+          1.0000000261818758,
+          0.9999999650099377
+        ]
+      ]
+    },
+    {
+      "episode": 16726,
+      "base": 89,
+      "future": 137,
+      "current_index": 3335065,
+      "future_index": 3335113,
+      "row_timestamp_gap": 1.5999999046325684,
+      "requested_video_timestamps": [
+        128.76666669845577,
+        130.36666660308833
+      ],
+      "video_path": "/media/sadasue/SSD1/foveated-world-models/research/official-data-contract-audit-20261113/robotwin-qfix-data/robotwin_merged/videos/observation.images.cam_high/chunk-000/file-120.mp4",
+      "video_fps": 30.000402668517165,
+      "video_pixel_difference_mae": 16.01902198791504,
+      "raw_state_delta_norm": 0.3692943445418934,
+      "state_finite": true,
+      "quat_norms": [
+        [
+          1.0000000332770647,
+          0.9999999658534169
+        ],
+        [
+          1.0000000094026094,
+          0.9999999650099377
+        ]
+      ]
+    },
+    {
+      "episode": 23897,
+      "base": 70,
+      "future": 118,
+      "current_index": 5372910,
+      "future_index": 5372958,
+      "row_timestamp_gap": 1.6000001430511475,
+      "requested_video_timestamps": [
+        834.1333332538608,
+        835.7333333969119
+      ],
+      "video_path": "/media/sadasue/SSD1/foveated-world-models/research/official-data-contract-audit-20261113/robotwin-qfix-data/robotwin_merged/videos/observation.images.cam_high/chunk-000/file-189.mp4",
+      "video_fps": 30.0003502039427,
+      "video_pixel_difference_mae": 15.856550216674805,
+      "raw_state_delta_norm": 0.20593041100704162,
+      "state_finite": true,
+      "quat_norms": [
+        [
+          1.000000008530197,
+          0.9999999671164221
+        ],
+        [
+          0.9999999702368036,
+          0.9999999654311118
+        ]
+      ]
+    },
+    {
+      "episode": 21716,
+      "base": 185,
+      "future": 233,
+      "current_index": 4542254,
+      "future_index": 4542302,
+      "row_timestamp_gap": 1.6000003814697266,
+      "requested_video_timestamps": [
+        878.6666665077212,
+        880.2666668891909
+      ],
+      "video_path": "/media/sadasue/SSD1/foveated-world-models/research/official-data-contract-audit-20261113/robotwin-qfix-data/robotwin_merged/videos/observation.images.cam_high/chunk-000/file-160.mp4",
+      "video_fps": 30.00038946823341,
+      "video_pixel_difference_mae": 3.5938801765441895,
+      "raw_state_delta_norm": 0.1081417438841405,
+      "state_finite": true,
+      "quat_norms": [
+        [
+          1.0000000381985175,
+          1.0000000262697442
+        ],
+        [
+          1.0000000381985175,
+          0.9999999987240678
+        ]
+      ]
+    },
+    {
+      "episode": 19584,
+      "base": 38,
+      "future": 86,
+      "current_index": 4005440,
+      "future_index": 4005488,
+      "row_timestamp_gap": 1.5999999046325684,
+      "requested_video_timestamps": [
+        309.7999999841054,
+        311.39999988873797
+      ],
+      "video_path": "/media/sadasue/SSD1/foveated-world-models/research/official-data-contract-audit-20261113/robotwin-qfix-data/robotwin_merged/videos/observation.images.cam_high/chunk-000/file-142.mp4",
+      "video_fps": 30.000402406390215,
+      "video_pixel_difference_mae": 4.786098003387451,
+      "raw_state_delta_norm": 1.0001158977963178,
+      "state_finite": true,
+      "quat_norms": [
+        [
+          1.0000000140183976,
+          0.9999999730145632
+        ],
+        [
+          1.0000000031764338,
+          0.9999999662749037
+        ]
+      ]
+    },
+    {
+      "episode": 18318,
+      "base": 139,
+      "future": 179,
+      "current_index": 3564046,
+      "future_index": 3564086,
+      "row_timestamp_gap": 1.3333334922790527,
+      "requested_video_timestamps": [
+        837.9333332061764,
+        839.2666666984554
+      ],
+      "video_path": "/media/sadasue/SSD1/foveated-world-models/research/official-data-contract-audit-20261113/robotwin-qfix-data/robotwin_merged/videos/observation.images.cam_high/chunk-000/file-128.mp4",
+      "video_fps": 30.000397920224273,
+      "video_pixel_difference_mae": 3.5748090744018555,
+      "raw_state_delta_norm": 0.924625196348645,
+      "state_finite": true,
+      "quat_norms": [
+        [
+          1.000000015891833,
+          0.9999999650099373
+        ],
+        [
+          0.9999999994314982,
+          0.9999999650099364
+        ]
+      ]
+    }
+  ],
+  "caveats": [
+    "Eight decoded pairs do not certify every video row or all semantic robot-camera synchronization.",
+    "Negative quaternion endpoint dot may reflect a continuous rotation exceeding180 degrees; it does not alone establish a sign discontinuity.",
+    "Time-clipping and independent two-view augmentation are inherited upstream; neither has been isolated as the cause.",
+    "No silent detach/freeze/optimizer exclusion was found by code inspection; actual full parameter updates were not replayed.",
+    "Feature loss averages196608 values per example and state loss averages16 valid values; their dimension ratio is not an encoder-gradient ratio."
+  ],
+  "causal_v2_helper_review": {
+    "scope": "CPU synthetic B4/Q1/D32 official VAE, no optimizer/model updates; verifies helper logic, not full CUDA trainer numerics.",
+    "runner_sha256": "e1d7db1efca25cdff88a7299e7f5cd31c016b0c11a661fd212c73df67647aa22",
+    "sampled_hooks_exact_output_parity": true,
+    "sampled_hooks_and_probes_exact_total_gradient_parity": true,
+    "all_modes_same_post_forward_cpu_rng": true,
+    "mu_only_connected_mean_exact": true,
+    "mu_only_image_logvar_grad_is_none": true,
+    "mu_only_image_mu_grad_nonzero": true,
+    "beta_zero_node_kl_grad_exact_zero": true,
+    "g_zero_node_state_grad_exact_zero": true
+  },
+  "row_alignment_validation": {
+    "checked_pairs": 2000,
+    "metadata_vs_raw_episode_and_frame_matches": 2000,
+    "timestamp_gap_vs_frame_gap_over30_max_abs_error_seconds": 1.5258789063388178e-06
+  }
+}

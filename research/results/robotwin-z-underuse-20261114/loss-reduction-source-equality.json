@@ -1,0 +1,38 @@
+{
+  "official_commit": "c12168d9077edea67fe7c1b70d08b80b8e65a9c8",
+  "equal_files": {
+    "latent_action_model/core/vq.py": {
+      "official": "827f96892efd9b10f6942ea78ab294ff39b0a91a32a61cbdd93cac46e6f9a5ff",
+      "local": "827f96892efd9b10f6942ea78ab294ff39b0a91a32a61cbdd93cac46e6f9a5ff",
+      "identical": true
+    },
+    "latent_action_model/core/utils/utils.py": {
+      "official": "69ebc8746b99010692ddc4622d154fe2c48a476f8e64c8784805149dcd4d7bfd",
+      "local": "69ebc8746b99010692ddc4622d154fe2c48a476f8e64c8784805149dcd4d7bfd",
+      "identical": true
+    },
+    "latent_action_model/data_loader/collate.py": {
+      "official": "5953e9b334dce0eb1cb461c92c118f2d6ad4743f19f75fd74311aa86b6b20645",
+      "local": "5953e9b334dce0eb1cb461c92c118f2d6ad4743f19f75fd74311aa86b6b20645",
+      "identical": true
+    },
+    "starVLA/dataloader/gr00t_lerobot/data_config.py": {
+      "official": "949ad078f1cd11a481ef6feb5c2d21487168ba42d8648323459aecf62f194cfa",
+      "local": "949ad078f1cd11a481ef6feb5c2d21487168ba42d8648323459aecf62f194cfa",
+      "identical": true
+    },
+    "starVLA/dataloader/gr00t_lerobot/data_config_lam.py": {
+      "official": "9b2f62785ad62a17d3acf7f06fd030e69ad83ca7adad9088bdbfe33a7cd5d09f",
+      "local": "9b2f62785ad62a17d3acf7f06fd030e69ad83ca7adad9088bdbfe33a7cd5d09f",
+      "identical": true
+    },
+    "starVLA/dataloader/gr00t_lerobot/transform/state_action.py": {
+      "official": "c714f8999c01052d23779f98f4ec8d20a662ac71844fd235d2bf93a0a2a8d636",
+      "local": "c714f8999c01052d23779f98f4ec8d20a662ac71844fd235d2bf93a0a2a8d636",
+      "identical": true
+    }
+  },
+  "shared_step_ast_identical": true,
+  "shared_step_ast_sha256": "919e3f656cb233558a07458f1a24e6ed75527212bca3e67681006b5d6675a2cd",
+  "local_patch_sha256": "7fa893260a313e977a4e4476a794a51badb17493ca16a97601d21f87db0df808"
+}

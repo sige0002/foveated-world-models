@@ -1,0 +1,16 @@
+{
+  "scope": "CPU synthetic schema and actual existing3500 comparison only; no training or GPU",
+  "watcher_sha256": "5b5e436bf96889d79737090ad1ab95e100dd7811076a40d288c3f51ab50bf200",
+  "checks": {
+    "old_prefix_plus_new_segment_excludes_old501_to1000": true,
+    "partial_last_json_line_ignored": true,
+    "wrong_own_resume_model_rejected": true,
+    "reset_or_corrupt_cumulative_hash_rejected": true,
+    "new_stream_without_resume_proof_rejected": true,
+    "incomplete_prefix_waits_without_certifying_resume": true,
+    "cpu_parameter_rng_mismatch_rejected": true,
+    "real3500_bootstrap4000_unchanged_exactly": true
+  },
+  "passed": true,
+  "CUDA_imported": false
+}

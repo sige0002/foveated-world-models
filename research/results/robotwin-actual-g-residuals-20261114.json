@@ -1,0 +1,913 @@
+{
+  "complete": true,
+  "arm": "kl_mse",
+  "device": "cpu",
+  "cuda_initialized": false,
+  "samples": 512,
+  "episodes": 415,
+  "precision": "FP32, highest",
+  "state_decoder_sha256_before": "05bf2ee75db4fcde619275dfda1a79e92e98f9c789b04a7011ee30e5f7872f26",
+  "state_decoder_sha256_after": "05bf2ee75db4fcde619275dfda1a79e92e98f9c789b04a7011ee30e5f7872f26",
+  "source_sha256": "6b7577eaa4d5ac86f928c8c70123be98cfd26302a3b94f7e409924486c170e23",
+  "decoder_source_sha256": "a7f2ab08e925d6b2a38bdbff2433cdcac5880d173a463ce61797f7a617132a21",
+  "preceding_report_sha256": "774706c1b6563705c22350a1b8db9ba15a1dedcc753b2953cbcd6d9a8c684113",
+  "posterior_codes_sha256": "696c60dae07d78855651cf6d957af7b776f3cffae5827fd913e56c2ef2f0ebb9",
+  "feature_cache_sha256": "eafacc5cea01814ec8c12f3e0420348a9da7bc12deeaf7cd9f0bb3d952733c15",
+  "row_identity_sha256": "1c04ef52284a2e86b4e60b80de8b54dae93cbe00f11792fe67de9149a9eacd75",
+  "strictly_loaded_tensors": 10,
+  "prior_native_verified_full_model_parity": {
+    "real": {
+      "samples": 512,
+      "max_abs_row_mse_difference": 6.705522537231445e-08,
+      "atol": 1e-06,
+      "rtol": 0,
+      "passed": true
+    },
+    "zero": {
+      "samples": 512,
+      "max_abs_row_mse_difference": 8.940696716308594e-08,
+      "atol": 1e-06,
+      "rtol": 0,
+      "passed": true
+    },
+    "mean": {
+      "samples": 512,
+      "max_abs_row_mse_difference": 8.940696716308594e-08,
+      "atol": 1e-06,
+      "rtol": 0,
+      "passed": true
+    },
+    "swapped": {
+      "samples": 512,
+      "max_abs_row_mse_difference": 1.1920928955078125e-07,
+      "atol": 1e-06,
+      "rtol": 0,
+      "passed": true
+    },
+    "current_only": {
+      "samples": 512,
+      "max_abs_row_mse_difference": 8.940696716308594e-08,
+      "atol": 1e-06,
+      "rtol": 0,
+      "passed": true
+    }
+  },
+  "summaries": {
+    "real": {
+      "all16_mse": {
+        "estimate": 0.0619194989520179,
+        "ci95": [
+          0.056368216154748546,
+          0.06752753205946616
+        ]
+      },
+      "groups": {
+        "xyz": {
+          "dimensions": [
+            0,
+            1,
+            2,
+            8,
+            9,
+            10
+          ],
+          "per_coordinate_mse": {
+            "estimate": 0.020825235090114143,
+            "ci95": [
+              0.01889737958287726,
+              0.022947016892662694
+            ]
+          },
+          "contribution_to_all16_mse": {
+            "estimate": 0.0078094631587928036,
+            "ci95": [
+              0.007086517343578971,
+              0.008605131334748509
+            ]
+          },
+          "fraction_of_total_error": 0.12612284160833476
+        },
+        "quaternion": {
+          "dimensions": [
+            3,
+            4,
+            5,
+            6,
+            11,
+            12,
+            13,
+            14
+          ],
+          "per_coordinate_mse": {
+            "estimate": 0.017956207634371738,
+            "ci95": [
+              0.015227040061622295,
+              0.02086274251483498
+            ]
+          },
+          "contribution_to_all16_mse": {
+            "estimate": 0.008978103817185869,
+            "ci95": [
+              0.007613520030811147,
+              0.01043137125741749
+            ]
+          },
+          "fraction_of_total_error": 0.14499638997633202
+        },
+        "gripper": {
+          "dimensions": [
+            7,
+            15
+          ],
+          "per_coordinate_mse": {
+            "estimate": 0.3610554558083138,
+            "ci95": [
+              0.31967324703881933,
+              0.4022326515630976
+            ]
+          },
+          "contribution_to_all16_mse": {
+            "estimate": 0.04513193197603922,
+            "ci95": [
+              0.039959155879852416,
+              0.0502790814453872
+            ]
+          },
+          "fraction_of_total_error": 0.7288807684153331
+        }
+      }
+    },
+    "zero": {
+      "all16_mse": {
+        "estimate": 0.06158442531109762,
+        "ci95": [
+          0.05605473483161149,
+          0.06709038454741828
+        ]
+      },
+      "groups": {
+        "xyz": {
+          "dimensions": [
+            0,
+            1,
+            2,
+            8,
+            9,
+            10
+          ],
+          "per_coordinate_mse": {
+            "estimate": 0.02185840019055814,
+            "ci95": [
+              0.019845797356492993,
+              0.024067937182182
+            ]
+          },
+          "contribution_to_all16_mse": {
+            "estimate": 0.0081969000714593,
+            "ci95": [
+              0.0074421740086848725,
+              0.009025476443318251
+            ]
+          },
+          "fraction_of_total_error": 0.13310021210804748
+        },
+        "quaternion": {
+          "dimensions": [
+            3,
+            4,
+            5,
+            6,
+            11,
+            12,
+            13,
+            14
+          ],
+          "per_coordinate_mse": {
+            "estimate": 0.01806471950726224,
+            "ci95": [
+              0.01535952080480681,
+              0.020991844372432036
+            ]
+          },
+          "contribution_to_all16_mse": {
+            "estimate": 0.00903235975363112,
+            "ci95": [
+              0.007679760402403405,
+              0.010495922186216018
+            ]
+          },
+          "fraction_of_total_error": 0.14666629927946204
+        },
+        "gripper": {
+          "dimensions": [
+            7,
+            15
+          ],
+          "per_coordinate_mse": {
+            "estimate": 0.35484132388805756,
+            "ci95": [
+              0.313526399227876,
+              0.3959912512779027
+            ]
+          },
+          "contribution_to_all16_mse": {
+            "estimate": 0.044355165486007195,
+            "ci95": [
+              0.0391907999034845,
+              0.049498906409737836
+            ]
+          },
+          "fraction_of_total_error": 0.7202334886124905
+        }
+      }
+    },
+    "mean": {
+      "all16_mse": {
+        "estimate": 0.062338708717669555,
+        "ci95": [
+          0.056776093729986606,
+          0.06795710838860618
+        ]
+      },
+      "groups": {
+        "xyz": {
+          "dimensions": [
+            0,
+            1,
+            2,
+            8,
+            9,
+            10
+          ],
+          "per_coordinate_mse": {
+            "estimate": 0.02112624221024077,
+            "ci95": [
+              0.019192088227108245,
+              0.023279159610073593
+            ]
+          },
+          "contribution_to_all16_mse": {
+            "estimate": 0.007922340828840288,
+            "ci95": [
+              0.007197033085165593,
+              0.008729684853777597
+            ]
+          },
+          "fraction_of_total_error": 0.12708541758091862
+        },
+        "quaternion": {
+          "dimensions": [
+            3,
+            4,
+            5,
+            6,
+            11,
+            12,
+            13,
+            14
+          ],
+          "per_coordinate_mse": {
+            "estimate": 0.017961631189592535,
+            "ci95": [
+              0.015241891341477656,
+              0.020885505139850997
+            ]
+          },
+          "contribution_to_all16_mse": {
+            "estimate": 0.008980815594796267,
+            "ci95": [
+              0.007620945670738828,
+              0.010442752569925499
+            ]
+          },
+          "fraction_of_total_error": 0.14406483194045863
+        },
+        "gripper": {
+          "dimensions": [
+            7,
+            15
+          ],
+          "per_coordinate_mse": {
+            "estimate": 0.363484418352264,
+            "ci95": [
+              0.3220579628666444,
+              0.4051060693207469
+            ]
+          },
+          "contribution_to_all16_mse": {
+            "estimate": 0.045435552294033,
+            "ci95": [
+              0.04025724535833055,
+              0.05063825866509336
+            ]
+          },
+          "fraction_of_total_error": 0.7288497504786228
+        }
+      }
+    },
+    "swapped": {
+      "all16_mse": {
+        "estimate": 0.062484962809778014,
+        "ci95": [
+          0.05688101080374645,
+          0.06806338074383
+        ]
+      },
+      "groups": {
+        "xyz": {
+          "dimensions": [
+            0,
+            1,
+            2,
+            8,
+            9,
+            10
+          ],
+          "per_coordinate_mse": {
+            "estimate": 0.021484087456304733,
+            "ci95": [
+              0.019560823999664034,
+              0.02360257781622269
+            ]
+          },
+          "contribution_to_all16_mse": {
+            "estimate": 0.008056532796114273,
+            "ci95": [
+              0.007335308999874014,
+              0.008850966681083507
+            ]
+          },
+          "fraction_of_total_error": 0.1289355459911315
+        },
+        "quaternion": {
+          "dimensions": [
+            3,
+            4,
+            5,
+            6,
+            11,
+            12,
+            13,
+            14
+          ],
+          "per_coordinate_mse": {
+            "estimate": 0.018007683456473113,
+            "ci95": [
+              0.015290656851365884,
+              0.020945128367408267
+            ]
+          },
+          "contribution_to_all16_mse": {
+            "estimate": 0.009003841728236556,
+            "ci95": [
+              0.007645328425682942,
+              0.010472564183704134
+            ]
+          },
+          "fraction_of_total_error": 0.14409613646801406
+        },
+        "gripper": {
+          "dimensions": [
+            7,
+            15
+          ],
+          "per_coordinate_mse": {
+            "estimate": 0.36339670628341747,
+            "ci95": [
+              0.32172372413145256,
+              0.40464425436743506
+            ]
+          },
+          "contribution_to_all16_mse": {
+            "estimate": 0.045424588285427184,
+            "ci95": [
+              0.04021546551643157,
+              0.05058053179592938
+            ]
+          },
+          "fraction_of_total_error": 0.7269683175408544
+        }
+      }
+    },
+    "current_only": {
+      "all16_mse": {
+        "estimate": 0.06314339519027756,
+        "ci95": [
+          0.057560670636293006,
+          0.06876723077404093
+        ]
+      },
+      "groups": {
+        "xyz": {
+          "dimensions": [
+            0,
+            1,
+            2,
+            8,
+            9,
+            10
+          ],
+          "per_coordinate_mse": {
+            "estimate": 0.022793620110769738,
+            "ci95": [
+              0.020789825974019113,
+              0.025018088791644764
+            ]
+          },
+          "contribution_to_all16_mse": {
+            "estimate": 0.008547607541538653,
+            "ci95": [
+              0.0077961847402571675,
+              0.009381783296866784
+            ]
+          },
+          "fraction_of_total_error": 0.13536819671766337
+        },
+        "quaternion": {
+          "dimensions": [
+            3,
+            4,
+            5,
+            6,
+            11,
+            12,
+            13,
+            14
+          ],
+          "per_coordinate_mse": {
+            "estimate": 0.018020270505227802,
+            "ci95": [
+              0.015294067440195664,
+              0.020920889027066326
+            ]
+          },
+          "contribution_to_all16_mse": {
+            "estimate": 0.009010135252613901,
+            "ci95": [
+              0.007647033720097832,
+              0.010460444513533163
+            ]
+          },
+          "fraction_of_total_error": 0.14269323379686158
+        },
+        "gripper": {
+          "dimensions": [
+            7,
+            15
+          ],
+          "per_coordinate_mse": {
+            "estimate": 0.3646852191690001,
+            "ci95": [
+              0.3223721367579509,
+              0.4062549890727333
+            ]
+          },
+          "contribution_to_all16_mse": {
+            "estimate": 0.04558565239612501,
+            "ci95": [
+              0.04029651709474386,
+              0.05078187363409166
+            ]
+          },
+          "fraction_of_total_error": 0.7219385694854751
+        }
+      }
+    },
+    "no_change": {
+      "all16_mse": {
+        "estimate": 0.1596994194901934,
+        "ci95": [
+          0.14914353884671272,
+          0.17014811163747692
+        ]
+      },
+      "groups": {
+        "xyz": {
+          "dimensions": [
+            0,
+            1,
+            2,
+            8,
+            9,
+            10
+          ],
+          "per_coordinate_mse": {
+            "estimate": 0.032362120940261696,
+            "ci95": [
+              0.02875292799121132,
+              0.036162776429787435
+            ]
+          },
+          "contribution_to_all16_mse": {
+            "estimate": 0.012135795352598136,
+            "ci95": [
+              0.010782347996704248,
+              0.013561041161170287
+            ]
+          },
+          "fraction_of_total_error": 0.075991480691283
+        },
+        "quaternion": {
+          "dimensions": [
+            3,
+            4,
+            5,
+            6,
+            11,
+            12,
+            13,
+            14
+          ],
+          "per_coordinate_mse": {
+            "estimate": 0.022958247485853633,
+            "ci95": [
+              0.019345842068375134,
+              0.02691559572876293
+            ]
+          },
+          "contribution_to_all16_mse": {
+            "estimate": 0.011479123742926816,
+            "ci95": [
+              0.009672921034187567,
+              0.013457797864381464
+            ]
+          },
+          "fraction_of_total_error": 0.07187955835764144
+        },
+        "gripper": {
+          "dimensions": [
+            7,
+            15
+          ],
+          "per_coordinate_mse": {
+            "estimate": 1.0886760031573475,
+            "ci95": [
+              0.9993505362842635,
+              1.1761477048633933
+            ]
+          },
+          "contribution_to_all16_mse": {
+            "estimate": 0.13608450039466843,
+            "ci95": [
+              0.12491881703553294,
+              0.14701846310792416
+            ]
+          },
+          "fraction_of_total_error": 0.8521289609510755
+        }
+      }
+    }
+  },
+  "control_minus_real": {
+    "zero_minus_real": {
+      "all16_mse": {
+        "estimate": -0.00033507364092027954,
+        "ci95": [
+          -0.0008321679314360709,
+          0.00014149350317109794
+        ]
+      },
+      "groups": {
+        "xyz": {
+          "per_coordinate_mse": {
+            "estimate": 0.0010331651004439973,
+            "ci95": [
+              0.0006850554180228049,
+              0.0013750650998399833
+            ]
+          },
+          "contribution_to_all16_mse": {
+            "estimate": 0.000387436912666499,
+            "ci95": [
+              0.0002568957817585518,
+              0.0005156494124399937
+            ]
+          }
+        },
+        "quaternion": {
+          "per_coordinate_mse": {
+            "estimate": 0.00010851187289049897,
+            "ci95": [
+              -4.1746871142310926e-05,
+              0.0002638348325462184
+            ]
+          },
+          "contribution_to_all16_mse": {
+            "estimate": 5.4255936445249484e-05,
+            "ci95": [
+              -2.0873435571155463e-05,
+              0.0001319174162731092
+            ]
+          }
+        },
+        "gripper": {
+          "per_coordinate_mse": {
+            "estimate": -0.006214131920256223,
+            "ci95": [
+              -0.009875340176376582,
+              -0.002600086957420669
+            ]
+          },
+          "contribution_to_all16_mse": {
+            "estimate": -0.0007767664900320279,
+            "ci95": [
+              -0.0012344175220470727,
+              -0.0003250108696775836
+            ]
+          }
+        }
+      }
+    },
+    "mean_minus_real": {
+      "all16_mse": {
+        "estimate": 0.0004192097656516655,
+        "ci95": [
+          0.00010294431067861482,
+          0.0007319054331709227
+        ]
+      },
+      "groups": {
+        "xyz": {
+          "per_coordinate_mse": {
+            "estimate": 0.000301007120126629,
+            "ci95": [
+              4.325480161972186e-05,
+              0.0005487411293495199
+            ]
+          },
+          "contribution_to_all16_mse": {
+            "estimate": 0.00011287767004748588,
+            "ci95": [
+              1.6220550607395676e-05,
+              0.00020577792350606988
+            ]
+          }
+        },
+        "quaternion": {
+          "per_coordinate_mse": {
+            "estimate": 5.423555220792128e-06,
+            "ci95": [
+              -7.276351081251704e-05,
+              8.077164841633156e-05
+            ]
+          },
+          "contribution_to_all16_mse": {
+            "estimate": 2.711777610396064e-06,
+            "ci95": [
+              -3.638175540625852e-05,
+              4.038582420816578e-05
+            ]
+          }
+        },
+        "gripper": {
+          "per_coordinate_mse": {
+            "estimate": 0.0024289625439502683,
+            "ci95": [
+              8.035132433180205e-05,
+              0.0046981970955607185
+            ]
+          },
+          "contribution_to_all16_mse": {
+            "estimate": 0.00030362031799378354,
+            "ci95": [
+              1.0043915541475256e-05,
+              0.0005872746369450898
+            ]
+          }
+        }
+      }
+    },
+    "swapped_minus_real": {
+      "all16_mse": {
+        "estimate": 0.0005654638577601246,
+        "ci95": [
+          0.000114252352746027,
+          0.0010225404805031659
+        ]
+      },
+      "groups": {
+        "xyz": {
+          "per_coordinate_mse": {
+            "estimate": 0.0006588523661905893,
+            "ci95": [
+              0.00029199850912928237,
+              0.001019838841923857
+            ]
+          },
+          "contribution_to_all16_mse": {
+            "estimate": 0.000247069637321471,
+            "ci95": [
+              0.00010949944092348089,
+              0.0003824395657214464
+            ]
+          }
+        },
+        "quaternion": {
+          "per_coordinate_mse": {
+            "estimate": 5.147582210136975e-05,
+            "ci95": [
+              -6.716969909020038e-05,
+              0.00017510156125264973
+            ]
+          },
+          "contribution_to_all16_mse": {
+            "estimate": 2.5737911050684876e-05,
+            "ci95": [
+              -3.358484954510019e-05,
+              8.755078062632487e-05
+            ]
+          }
+        },
+        "gripper": {
+          "per_coordinate_mse": {
+            "estimate": 0.0023412504751037506,
+            "ci95": [
+              -0.0009013741420511654,
+              0.005494608998152603
+            ]
+          },
+          "contribution_to_all16_mse": {
+            "estimate": 0.00029265630938796883,
+            "ci95": [
+              -0.00011267176775639567,
+              0.0006868261247690754
+            ]
+          }
+        }
+      }
+    },
+    "current_only_minus_real": {
+      "all16_mse": {
+        "estimate": 0.0012238962382596663,
+        "ci95": [
+          0.0008951368611746675,
+          0.0015768524529917673
+        ]
+      },
+      "groups": {
+        "xyz": {
+          "per_coordinate_mse": {
+            "estimate": 0.0019683850206555966,
+            "ci95": [
+              0.0015940487506453172,
+              0.0023345762591347546
+            ]
+          },
+          "contribution_to_all16_mse": {
+            "estimate": 0.0007381443827458487,
+            "ci95": [
+              0.0005977682814919938,
+              0.0008754660971755329
+            ]
+          }
+        },
+        "quaternion": {
+          "per_coordinate_mse": {
+            "estimate": 6.406287085606043e-05,
+            "ci95": [
+              -8.297492910730726e-06,
+              0.00013696315064115196
+            ]
+          },
+          "contribution_to_all16_mse": {
+            "estimate": 3.203143542803021e-05,
+            "ci95": [
+              -4.148746455365363e-06,
+              6.848157532057598e-05
+            ]
+          }
+        },
+        "gripper": {
+          "per_coordinate_mse": {
+            "estimate": 0.003629763360686299,
+            "ci95": [
+              0.001459829289016505,
+              0.006005940910328107
+            ]
+          },
+          "contribution_to_all16_mse": {
+            "estimate": 0.00045372042008578735,
+            "ci95": [
+              0.0001824786611270631,
+              0.0007507426137910133
+            ]
+          }
+        }
+      }
+    },
+    "no_change_minus_real": {
+      "all16_mse": {
+        "estimate": 0.0977799205381755,
+        "ci95": [
+          0.08672179711748546,
+          0.10911995005541582
+        ]
+      },
+      "groups": {
+        "xyz": {
+          "per_coordinate_mse": {
+            "estimate": 0.011536885850147555,
+            "ci95": [
+              0.009070944696595324,
+              0.014135044358569085
+            ]
+          },
+          "contribution_to_all16_mse": {
+            "estimate": 0.004326332193805333,
+            "ci95": [
+              0.003401604261223246,
+              0.005300641634463407
+            ]
+          }
+        },
+        "quaternion": {
+          "per_coordinate_mse": {
+            "estimate": 0.0050020398514818935,
+            "ci95": [
+              0.003544265674534629,
+              0.006533115685352239
+            ]
+          },
+          "contribution_to_all16_mse": {
+            "estimate": 0.0025010199257409467,
+            "ci95": [
+              0.0017721328372673146,
+              0.0032665578426761196
+            ]
+          }
+        },
+        "gripper": {
+          "per_coordinate_mse": {
+            "estimate": 0.7276205473490338,
+            "ci95": [
+              0.6352550296444687,
+              0.8224307654431365
+            ]
+          },
+          "contribution_to_all16_mse": {
+            "estimate": 0.09095256841862923,
+            "ci95": [
+              0.07940687870555858,
+              0.10280384568039207
+            ]
+          }
+        }
+      }
+    }
+  },
+  "real_mu_group_gradients": {
+    "definition": "Per-example derivative of sum of group squared residuals / 16, all groups equally normalized; frozen g, real posterior mean, no parameter backward or update.",
+    "groups": {
+      "xyz": {
+        "per_example_norm": {
+          "estimate": 0.00505290931003686,
+          "ci95": [
+            0.004769066765217188,
+            0.0053522776280665344
+          ]
+        },
+        "aggregate_gradient_norm": 0.0014403088866918859
+      },
+      "quaternion": {
+        "per_example_norm": {
+          "estimate": 0.003569581470809327,
+          "ci95": [
+            0.0032884206204383906,
+            0.003850833138036474
+          ]
+        },
+        "aggregate_gradient_norm": 0.0006027904432901773
+      },
+      "gripper": {
+        "per_example_norm": {
+          "estimate": 0.019145911631302397,
+          "ci95": [
+            0.01763376170625364,
+            0.020651793611067965
+          ]
+        },
+        "aggregate_gradient_norm": 0.004849209787404667
+      }
+    },
+    "pairwise_cosines_mean": {
+      "xyz__quaternion": 0.18969802820603365,
+      "xyz__gripper": 0.0457208227436254,
+      "quaternion__gripper": 0.06926525440676848
+    },
+    "total_per_example_norm": {
+      "estimate": 0.02194562959553603,
+      "ci95": [
+        0.02049416084528535,
+        0.02341026074167816
+      ]
+    }
+  },
+  "limitations": [
+    "Posterior mean mu at saved step3000 on validation inputs, not sampled training z or training gradients.",
+    "Local g only. Official released g has a different state contract and is not evaluated.",
+    "Error share does not establish which loss component caused encoder concentration.",
+    "Quaternion values use the existing normalized component-MSE target, not an SO(3) distance.",
+    "Full checkpoint file is mmap-read; exact ten loaded tensor hash is bound to completed evaluation."
+  ],
+  "elapsed_seconds": 41.083870203001425
+}

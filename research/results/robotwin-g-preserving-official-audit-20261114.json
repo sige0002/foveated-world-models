@@ -1,0 +1,607 @@
+{
+  "scope": "Read-only CPU audit; no new training or GPU job. g_on/g_off prepared sources retained and never launched. Existing four continuation jobs unchanged.",
+  "date": "2026-11-14",
+  "source_commit": "c12168d9077edea67fe7c1b70d08b80b8e65a9c8",
+  "source_paths": {
+    "official_git_yaml": {
+      "path": "/media/sadasue/SSD1/foveated-world-models/research/official-data-contract-audit-20261113/LaWAM/latent_action_model/config/dino_large_vae.yaml",
+      "sha256": "8098a296ab0fb8ed56e4c0e2b2a7e53251be29edc11089568372a70dba2e888b"
+    },
+    "release_yaml": {
+      "path": "/media/sadasue/SSD1/foveated-world-models/models/lawam-lam-bd993da/dino_large_vae.yaml",
+      "sha256": "e5f98738d1c6dc8d8643d5a73d44ebd46385fbb2fc4031d46a02ad384a353449"
+    },
+    "local_baseline_resolved": {
+      "path": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/baseline/resolved_config.yaml",
+      "sha256": "7c3d11251a5f309ea87ecf69e248060a5e8c7d15fefabeb16eda54c5f0e6526a"
+    },
+    "local_candidate_resolved": {
+      "path": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/kl_mse/resolved_config.yaml",
+      "sha256": "dcd5f203c0400128b68384ece57926dd6fef005e931242397a07609d1fa5594f"
+    },
+    "official_loss": {
+      "path": "/media/sadasue/SSD1/foveated-world-models/research/official-data-contract-audit-20261113/LaWAM/latent_action_model/core/lam_lightinng.py",
+      "sha256": "c47ea36c98bd8424acb74adf44e93bf0ea7e7a2f369fccfdc0c423fea7fa788c"
+    },
+    "official_state_loss": {
+      "path": "/media/sadasue/SSD1/foveated-world-models/research/official-data-contract-audit-20261113/LaWAM/latent_action_model/core/utils/utils.py",
+      "sha256": "69ebc8746b99010692ddc4622d154fe2c48a476f8e64c8784805149dcd4d7bfd"
+    },
+    "official_collate": {
+      "path": "/media/sadasue/SSD1/foveated-world-models/research/official-data-contract-audit-20261113/LaWAM/latent_action_model/data_loader/collate.py",
+      "sha256": "5953e9b334dce0eb1cb461c92c118f2d6ad4743f19f75fd74311aa86b6b20645"
+    },
+    "official_vae": {
+      "path": "/media/sadasue/SSD1/foveated-world-models/research/official-data-contract-audit-20261113/LaWAM/latent_action_model/core/vq.py",
+      "sha256": "827f96892efd9b10f6942ea78ab294ff39b0a91a32a61cbdd93cac46e6f9a5ff"
+    },
+    "official_dino": {
+      "path": "/media/sadasue/SSD1/foveated-world-models/research/official-data-contract-audit-20261113/LaWAM/latent_action_model/core/vjepa_encoder.py",
+      "sha256": "da3ebc54fe9b28a1ab0b1c4abf82bf0877a7fd12c41579115776c1fa2fe1dc93"
+    },
+    "local_decoder": {
+      "path": "/media/sadasue/SSD1/foveated-world-models/research/official-data-contract-audit-20261113/LaWAM-robotwin-delta2/latent_action_model/core/utils/lam_decoder.py",
+      "sha256": "a7f2ab08e925d6b2a38bdbff2433cdcac5880d173a463ce61797f7a617132a21"
+    },
+    "original_trainer": {
+      "path": "/home/sadasue/foveated-world-models/research/train_robotwin_stage1.py",
+      "sha256": "9ecbea0151c1f902647dc9e41a5a17a431ab5c4319da658b9d0cdeb5104cba27"
+    },
+    "active_recovery_trainer": {
+      "path": "/home/sadasue/foveated-world-models/research/train_robotwin_data_step_continuation_recovery_v2.py",
+      "sha256": "740f09a77ad3b9147a0c328d86f343259c2f808a96f4c6a24352eef4499437f9"
+    }
+  },
+  "official_local_method_ast_equality": {
+    "_build_optimizer_param_groups": true,
+    "configure_optimizers": true,
+    "shared_step": true,
+    "_compute_step": true,
+    "transfer_batch_to_device": true,
+    "training_step": true
+  },
+  "recipes": {
+    "official_git_yaml": {
+      "peak_lr": 0.0003,
+      "warmup_steps": 10000,
+      "first_update_lr": 3e-08,
+      "configured_batch_per_device": 64,
+      "max_state_dim": 32,
+      "state_output_scale": 1,
+      "image_loss": "smooth_l1",
+      "state_loss": "l2",
+      "lambda_aux": 1.0,
+      "kl_beta_explicit": null,
+      "kl_beta_if_interpreted_by_pinned_source": 5e-05,
+      "gradient_clip_val": 1.0,
+      "weight_decay": 0.01,
+      "exclude_bias_norm_from_wd": true
+    },
+    "release_yaml": {
+      "peak_lr": 0.0001,
+      "warmup_steps": 10000,
+      "first_update_lr": 1e-08,
+      "configured_batch_per_device": 64,
+      "max_state_dim": 14,
+      "state_output_scale": 1,
+      "image_loss": "smooth_l1",
+      "state_loss": "l2",
+      "lambda_aux": 1.0,
+      "kl_beta_explicit": null,
+      "kl_beta_if_interpreted_by_pinned_source": 5e-05,
+      "gradient_clip_val": 1.0,
+      "weight_decay": 0.01,
+      "exclude_bias_norm_from_wd": true
+    },
+    "local_baseline_resolved": {
+      "peak_lr": 0.0003,
+      "warmup_steps": 1000,
+      "first_update_lr": 3e-07,
+      "configured_batch_per_device": 4,
+      "max_state_dim": 32,
+      "state_output_scale": 2.0,
+      "image_loss": "smooth_l1",
+      "state_loss": "l2",
+      "lambda_aux": 1.0,
+      "kl_beta_explicit": 5e-05,
+      "kl_beta_if_interpreted_by_pinned_source": 5e-05,
+      "gradient_clip_val": 1.0,
+      "weight_decay": 0.01,
+      "exclude_bias_norm_from_wd": true
+    },
+    "local_candidate_resolved": {
+      "peak_lr": 0.0003,
+      "warmup_steps": 1000,
+      "first_update_lr": 3e-07,
+      "configured_batch_per_device": 4,
+      "max_state_dim": 32,
+      "state_output_scale": 2.0,
+      "image_loss": "l2",
+      "state_loss": "l2",
+      "lambda_aux": 1.0,
+      "kl_beta_explicit": 1e-05,
+      "kl_beta_if_interpreted_by_pinned_source": 1e-05,
+      "gradient_clip_val": 1.0,
+      "weight_decay": 0.01,
+      "exclude_bias_norm_from_wd": true
+    }
+  },
+  "adamw_actual_torch_defaults": {
+    "lr": 0.0003,
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "eps": 1e-08,
+    "weight_decay": 0.01,
+    "amsgrad": false,
+    "maximize": false,
+    "foreach": null,
+    "capturable": false,
+    "differentiable": false,
+    "fused": null,
+    "decoupled_weight_decay": true
+  },
+  "torch_version": "2.11.0+cu130",
+  "normalization": {
+    "image": "Mean over B*1*256*768 DINO feature coordinates. SmoothL1 beta0.1 for original baseline; MSE for candidate. Image target is frozen future DINO feature from decoder view.",
+    "state": "Sum squared errors over valid robot coordinates / total valid-coordinate count; local all-robot B4 gives denominator4*16=64, not4*32. No per-group variance weighting.",
+    "kl": "beta * mean over examples of 0.5*sum over32 latent coordinates(mu^2+exp(logvar)-1-logvar). Same sum/mean convention in clean official source.",
+    "robot_subset": "g loss is averaged over robot subset, image over all samples. All-human batch uses zero dummy state loss. Mixed human/robot official data recipe therefore changes exposure of g but not direct robot fraction scaling in mixed batches."
+  },
+  "routes": {
+    "vision_backbone": "DINO frozen eval, encode @no_grad and returns detach; identical clean/local.",
+    "encoder_vae": "No detach from encoder nodes through FP32 VAE sample into visual decoder or g. The two heads receive same quantized sample.",
+    "state_inputs": "g concatenates projected sampled z with projected current state; predicts normalized-state future-minus-current delta, not absolute future state. Both clean official collate and local use this target.",
+    "kl_sibling": "KL reaches mu/logvar/encoder directly. dKL/dsampled_z is None because sampled z is a sibling output, not an ancestor of KL.",
+    "state_scale_patch": "Only computation-changing source patch is g output 2*tanh instead of tanh, routed through two constructor fields; visual encoder/VAE/visualdecoder source unchanged. This changes g derivative and accessible delta range."
+  },
+  "optimizer_and_clip": {
+    "grouping": "Exactly same clean/local method; trainable norm/bias no decay, other trainable params weight_decay0.01. No component-specific LR; DINO frozen.",
+    "current_continuation": "Same shared_step and transfer routine, BF16 autocast cache_enabled=False, loss.backward, global clip norm1 over optimizer params, AdamW.step then scheduler.step. Own saved model/Adam/scheduler restored; all state steps asserted.",
+    "raw_gradient_limit": "Raw node/parameter norms cannot alone assign responsibility under AdamW: moments, variance normalization, clipping and decay alter actual updates. Removing g also changes global clipping.",
+    "actual_update_measurement_status": "Read-only selected-parameter before/after AdamW delta logging is prepared in unlaunched g_onset_v2; no actual update measurements from that experiment exist.",
+    "retained_g_next_measurement": "Keep g present; capture per-loss parameter gradients plus Adam exp_avg/exp_avg_sq, exact clip coefficient and actual parameter delta on audit steps. Frozen optimizer-state counterfactual calculations may estimate directional contributions but are nonlinear and do not decompose additively."
+  },
+  "actual_g_residual_result": {
+    "path": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/evaluations/actual-g-residuals-cpu-20261114/kl_mse/results.json",
+    "sha256": "545612b18e6fd15407126379e54d431db79ac78f06f86198a75c87a52df39ce7",
+    "native_verified_row_mse_max_abs_difference": 1.1920928955078125e-07,
+    "real_mse": {
+      "all16_mse": {
+        "estimate": 0.0619194989520179,
+        "ci95": [
+          0.056368216154748546,
+          0.06752753205946616
+        ]
+      },
+      "groups": {
+        "xyz": {
+          "dimensions": [
+            0,
+            1,
+            2,
+            8,
+            9,
+            10
+          ],
+          "per_coordinate_mse": {
+            "estimate": 0.020825235090114143,
+            "ci95": [
+              0.01889737958287726,
+              0.022947016892662694
+            ]
+          },
+          "contribution_to_all16_mse": {
+            "estimate": 0.0078094631587928036,
+            "ci95": [
+              0.007086517343578971,
+              0.008605131334748509
+            ]
+          },
+          "fraction_of_total_error": 0.12612284160833476
+        },
+        "quaternion": {
+          "dimensions": [
+            3,
+            4,
+            5,
+            6,
+            11,
+            12,
+            13,
+            14
+          ],
+          "per_coordinate_mse": {
+            "estimate": 0.017956207634371738,
+            "ci95": [
+              0.015227040061622295,
+              0.02086274251483498
+            ]
+          },
+          "contribution_to_all16_mse": {
+            "estimate": 0.008978103817185869,
+            "ci95": [
+              0.007613520030811147,
+              0.01043137125741749
+            ]
+          },
+          "fraction_of_total_error": 0.14499638997633202
+        },
+        "gripper": {
+          "dimensions": [
+            7,
+            15
+          ],
+          "per_coordinate_mse": {
+            "estimate": 0.3610554558083138,
+            "ci95": [
+              0.31967324703881933,
+              0.4022326515630976
+            ]
+          },
+          "contribution_to_all16_mse": {
+            "estimate": 0.04513193197603922,
+            "ci95": [
+              0.039959155879852416,
+              0.0502790814453872
+            ]
+          },
+          "fraction_of_total_error": 0.7288807684153331
+        }
+      }
+    },
+    "mu_gradient": {
+      "definition": "Per-example derivative of sum of group squared residuals / 16, all groups equally normalized; frozen g, real posterior mean, no parameter backward or update.",
+      "groups": {
+        "xyz": {
+          "per_example_norm": {
+            "estimate": 0.00505290931003686,
+            "ci95": [
+              0.004769066765217188,
+              0.0053522776280665344
+            ]
+          },
+          "aggregate_gradient_norm": 0.0014403088866918859
+        },
+        "quaternion": {
+          "per_example_norm": {
+            "estimate": 0.003569581470809327,
+            "ci95": [
+              0.0032884206204383906,
+              0.003850833138036474
+            ]
+          },
+          "aggregate_gradient_norm": 0.0006027904432901773
+        },
+        "gripper": {
+          "per_example_norm": {
+            "estimate": 0.019145911631302397,
+            "ci95": [
+              0.01763376170625364,
+              0.020651793611067965
+            ]
+          },
+          "aggregate_gradient_norm": 0.004849209787404667
+        }
+      },
+      "pairwise_cosines_mean": {
+        "xyz__quaternion": 0.18969802820603365,
+        "xyz__gripper": 0.0457208227436254,
+        "quaternion__gripper": 0.06926525440676848
+      },
+      "total_per_example_norm": {
+        "estimate": 0.02194562959553603,
+        "ci95": [
+          0.02049416084528535,
+          0.02341026074167816
+        ]
+      }
+    },
+    "contrasts": {
+      "zero_minus_real": {
+        "all16_mse": {
+          "estimate": -0.00033507364092027954,
+          "ci95": [
+            -0.0008321679314360709,
+            0.00014149350317109794
+          ]
+        },
+        "groups": {
+          "xyz": {
+            "per_coordinate_mse": {
+              "estimate": 0.0010331651004439973,
+              "ci95": [
+                0.0006850554180228049,
+                0.0013750650998399833
+              ]
+            },
+            "contribution_to_all16_mse": {
+              "estimate": 0.000387436912666499,
+              "ci95": [
+                0.0002568957817585518,
+                0.0005156494124399937
+              ]
+            }
+          },
+          "quaternion": {
+            "per_coordinate_mse": {
+              "estimate": 0.00010851187289049897,
+              "ci95": [
+                -4.1746871142310926e-05,
+                0.0002638348325462184
+              ]
+            },
+            "contribution_to_all16_mse": {
+              "estimate": 5.4255936445249484e-05,
+              "ci95": [
+                -2.0873435571155463e-05,
+                0.0001319174162731092
+              ]
+            }
+          },
+          "gripper": {
+            "per_coordinate_mse": {
+              "estimate": -0.006214131920256223,
+              "ci95": [
+                -0.009875340176376582,
+                -0.002600086957420669
+              ]
+            },
+            "contribution_to_all16_mse": {
+              "estimate": -0.0007767664900320279,
+              "ci95": [
+                -0.0012344175220470727,
+                -0.0003250108696775836
+              ]
+            }
+          }
+        }
+      },
+      "mean_minus_real": {
+        "all16_mse": {
+          "estimate": 0.0004192097656516655,
+          "ci95": [
+            0.00010294431067861482,
+            0.0007319054331709227
+          ]
+        },
+        "groups": {
+          "xyz": {
+            "per_coordinate_mse": {
+              "estimate": 0.000301007120126629,
+              "ci95": [
+                4.325480161972186e-05,
+                0.0005487411293495199
+              ]
+            },
+            "contribution_to_all16_mse": {
+              "estimate": 0.00011287767004748588,
+              "ci95": [
+                1.6220550607395676e-05,
+                0.00020577792350606988
+              ]
+            }
+          },
+          "quaternion": {
+            "per_coordinate_mse": {
+              "estimate": 5.423555220792128e-06,
+              "ci95": [
+                -7.276351081251704e-05,
+                8.077164841633156e-05
+              ]
+            },
+            "contribution_to_all16_mse": {
+              "estimate": 2.711777610396064e-06,
+              "ci95": [
+                -3.638175540625852e-05,
+                4.038582420816578e-05
+              ]
+            }
+          },
+          "gripper": {
+            "per_coordinate_mse": {
+              "estimate": 0.0024289625439502683,
+              "ci95": [
+                8.035132433180205e-05,
+                0.0046981970955607185
+              ]
+            },
+            "contribution_to_all16_mse": {
+              "estimate": 0.00030362031799378354,
+              "ci95": [
+                1.0043915541475256e-05,
+                0.0005872746369450898
+              ]
+            }
+          }
+        }
+      },
+      "swapped_minus_real": {
+        "all16_mse": {
+          "estimate": 0.0005654638577601246,
+          "ci95": [
+            0.000114252352746027,
+            0.0010225404805031659
+          ]
+        },
+        "groups": {
+          "xyz": {
+            "per_coordinate_mse": {
+              "estimate": 0.0006588523661905893,
+              "ci95": [
+                0.00029199850912928237,
+                0.001019838841923857
+              ]
+            },
+            "contribution_to_all16_mse": {
+              "estimate": 0.000247069637321471,
+              "ci95": [
+                0.00010949944092348089,
+                0.0003824395657214464
+              ]
+            }
+          },
+          "quaternion": {
+            "per_coordinate_mse": {
+              "estimate": 5.147582210136975e-05,
+              "ci95": [
+                -6.716969909020038e-05,
+                0.00017510156125264973
+              ]
+            },
+            "contribution_to_all16_mse": {
+              "estimate": 2.5737911050684876e-05,
+              "ci95": [
+                -3.358484954510019e-05,
+                8.755078062632487e-05
+              ]
+            }
+          },
+          "gripper": {
+            "per_coordinate_mse": {
+              "estimate": 0.0023412504751037506,
+              "ci95": [
+                -0.0009013741420511654,
+                0.005494608998152603
+              ]
+            },
+            "contribution_to_all16_mse": {
+              "estimate": 0.00029265630938796883,
+              "ci95": [
+                -0.00011267176775639567,
+                0.0006868261247690754
+              ]
+            }
+          }
+        }
+      },
+      "current_only_minus_real": {
+        "all16_mse": {
+          "estimate": 0.0012238962382596663,
+          "ci95": [
+            0.0008951368611746675,
+            0.0015768524529917673
+          ]
+        },
+        "groups": {
+          "xyz": {
+            "per_coordinate_mse": {
+              "estimate": 0.0019683850206555966,
+              "ci95": [
+                0.0015940487506453172,
+                0.0023345762591347546
+              ]
+            },
+            "contribution_to_all16_mse": {
+              "estimate": 0.0007381443827458487,
+              "ci95": [
+                0.0005977682814919938,
+                0.0008754660971755329
+              ]
+            }
+          },
+          "quaternion": {
+            "per_coordinate_mse": {
+              "estimate": 6.406287085606043e-05,
+              "ci95": [
+                -8.297492910730726e-06,
+                0.00013696315064115196
+              ]
+            },
+            "contribution_to_all16_mse": {
+              "estimate": 3.203143542803021e-05,
+              "ci95": [
+                -4.148746455365363e-06,
+                6.848157532057598e-05
+              ]
+            }
+          },
+          "gripper": {
+            "per_coordinate_mse": {
+              "estimate": 0.003629763360686299,
+              "ci95": [
+                0.001459829289016505,
+                0.006005940910328107
+              ]
+            },
+            "contribution_to_all16_mse": {
+              "estimate": 0.00045372042008578735,
+              "ci95": [
+                0.0001824786611270631,
+                0.0007507426137910133
+              ]
+            }
+          }
+        }
+      },
+      "no_change_minus_real": {
+        "all16_mse": {
+          "estimate": 0.0977799205381755,
+          "ci95": [
+            0.08672179711748546,
+            0.10911995005541582
+          ]
+        },
+        "groups": {
+          "xyz": {
+            "per_coordinate_mse": {
+              "estimate": 0.011536885850147555,
+              "ci95": [
+                0.009070944696595324,
+                0.014135044358569085
+              ]
+            },
+            "contribution_to_all16_mse": {
+              "estimate": 0.004326332193805333,
+              "ci95": [
+                0.003401604261223246,
+                0.005300641634463407
+              ]
+            }
+          },
+          "quaternion": {
+            "per_coordinate_mse": {
+              "estimate": 0.0050020398514818935,
+              "ci95": [
+                0.003544265674534629,
+                0.006533115685352239
+              ]
+            },
+            "contribution_to_all16_mse": {
+              "estimate": 0.0025010199257409467,
+              "ci95": [
+                0.0017721328372673146,
+                0.0032665578426761196
+              ]
+            }
+          },
+          "gripper": {
+            "per_coordinate_mse": {
+              "estimate": 0.7276205473490338,
+              "ci95": [
+                0.6352550296444687,
+                0.8224307654431365
+              ]
+            },
+            "contribution_to_all16_mse": {
+              "estimate": 0.09095256841862923,
+              "ci95": [
+                0.07940687870555858,
+                0.10280384568039207
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "limitations": [
+    "Release YAML is accompanying configuration, not complete proof of historical released-weight training execution. Unspecified release beta is interpreted using the pinned source default only.",
+    "Global effective official batch is unknown because devices:auto can distribute B64 across multiple devices.",
+    "Source equivalence excludes state output-scale patch and data/state contract. Released g14 differs from local valid16/padded32; no invented mapping is used.",
+    "Current residual and gradient concentration in gripper does not demonstrate it caused the historical encoder concentration. XYZ intervention gaps disprove the stronger claim that g uses z only for gripper.",
+    "No new implementation-specific detach, omitted loss, padding dilution or wrong optimizer group was found in the audited paths. This is not proof that the full training recipe reproduces the released model."
+  ],
+  "cuda_initialized": false
+}

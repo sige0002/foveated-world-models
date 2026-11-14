@@ -1,0 +1,46 @@
+{
+  "all_four_passed": true,
+  "all_initial_model_and_optimizer_hashes_equal": true,
+  "same_seed_epsilon_and_augmentation_RNG_equal_each_update": true,
+  "different_seeds_differ": true,
+  "source_directory": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-data-step-continuation-b4-20261114/preflight",
+  "arms": {
+    "seed43_replay": {
+      "initial_model_sha256": "3f9b974a34e3e5e2c40d1ec8f3256c4c9e34adb3dbf932acc9d6a59c6886a725",
+      "initial_optimizer_sha256": "777e67d08ab5614f721d69dc7ef15dbfeab933affde233bc2c0a5da8b3f303b1",
+      "scheduler_last_epoch": 3006,
+      "lr": 0.0003,
+      "seconds_per_update": 2.7665171769986046,
+      "peak_reserved": 13813940224,
+      "script_sha256": "17f4279f2761dcdfc9ce3e620d15e63bfad5e4f343b42a5225790a3f0d50f801"
+    },
+    "seed43_new": {
+      "initial_model_sha256": "3f9b974a34e3e5e2c40d1ec8f3256c4c9e34adb3dbf932acc9d6a59c6886a725",
+      "initial_optimizer_sha256": "777e67d08ab5614f721d69dc7ef15dbfeab933affde233bc2c0a5da8b3f303b1",
+      "scheduler_last_epoch": 3006,
+      "lr": 0.0003,
+      "seconds_per_update": 2.771209878999798,
+      "peak_reserved": 13813940224,
+      "script_sha256": "17f4279f2761dcdfc9ce3e620d15e63bfad5e4f343b42a5225790a3f0d50f801"
+    },
+    "seed44_replay": {
+      "initial_model_sha256": "3f9b974a34e3e5e2c40d1ec8f3256c4c9e34adb3dbf932acc9d6a59c6886a725",
+      "initial_optimizer_sha256": "777e67d08ab5614f721d69dc7ef15dbfeab933affde233bc2c0a5da8b3f303b1",
+      "scheduler_last_epoch": 3006,
+      "lr": 0.0003,
+      "seconds_per_update": 2.773648995997064,
+      "peak_reserved": 13813940224,
+      "script_sha256": "17f4279f2761dcdfc9ce3e620d15e63bfad5e4f343b42a5225790a3f0d50f801"
+    },
+    "seed44_new": {
+      "initial_model_sha256": "3f9b974a34e3e5e2c40d1ec8f3256c4c9e34adb3dbf932acc9d6a59c6886a725",
+      "initial_optimizer_sha256": "777e67d08ab5614f721d69dc7ef15dbfeab933affde233bc2c0a5da8b3f303b1",
+      "scheduler_last_epoch": 3006,
+      "lr": 0.0003,
+      "seconds_per_update": 2.790601107000839,
+      "peak_reserved": 13813940224,
+      "script_sha256": "17f4279f2761dcdfc9ce3e620d15e63bfad5e4f343b42a5225790a3f0d50f801"
+    }
+  },
+  "scope": "Read-only completed output verification; no GPU launch. Does not numerically compare a full update against Lightning."
+}

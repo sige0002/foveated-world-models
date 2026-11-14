@@ -1,0 +1,533 @@
+{
+  "source_result": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/evaluations/layer-covariance64-highest-fp32-20261114/results.json",
+  "source_result_sha256": "c0cf34cbdfe32476ab4c1efdf3f407c852717bc42b51a84d65129c19bdf0a8e5",
+  "samples": 64,
+  "precision": "highest FP32 DINO cache/encoder/VAE; TF32 off; no autocast; centered spectra computed CPUfloat64",
+  "models": {
+    "official": {
+      "checkpoint_sha256": "57c31dcba13c2998c4e866cdcfc427f14ae3c1b762a586778276e2100b48af88",
+      "unchanged": true,
+      "observer_parity_exact": true,
+      "native_cached_mu_max_abs_difference": 0.0,
+      "layers": [
+        {
+          "layer": "cross_attention_query",
+          "pc1_fraction": 0.3694351434808614,
+          "participation_ratio": 5.324033542721442,
+          "covariance_trace": 415.75944762707263,
+          "common_mean_norm": 49.048022304701085,
+          "between_example_rms_norm": 20.230254725482318,
+          "future_replacement_rms_l2": 18.87447432519453
+        },
+        {
+          "layer": "layer_01_query",
+          "pc1_fraction": 0.2701179501123784,
+          "participation_ratio": 8.85236191740045,
+          "covariance_trace": 1204.6783236057786,
+          "common_mean_norm": 145.8018061017777,
+          "between_example_rms_norm": 34.436248703937515,
+          "future_replacement_rms_l2": 31.10583096640864
+        },
+        {
+          "layer": "layer_02_query",
+          "pc1_fraction": 0.3676261433775202,
+          "participation_ratio": 5.3460074486205515,
+          "covariance_trace": 43491.39534099576,
+          "common_mean_norm": 574.0522755395848,
+          "between_example_rms_norm": 206.91022760799595,
+          "future_replacement_rms_l2": 213.56842819881587
+        },
+        {
+          "layer": "layer_03_query",
+          "pc1_fraction": 0.35135850149396214,
+          "participation_ratio": 5.647786868551587,
+          "covariance_trace": 53065.27857316959,
+          "common_mean_norm": 775.1423537892647,
+          "between_example_rms_norm": 228.5522557216704,
+          "future_replacement_rms_l2": 270.5043780069332
+        },
+        {
+          "layer": "layer_04_query",
+          "pc1_fraction": 0.36470121243953213,
+          "participation_ratio": 5.370592436983843,
+          "covariance_trace": 61904.227652714115,
+          "common_mean_norm": 846.8461592101016,
+          "between_example_rms_norm": 246.85415551624905,
+          "future_replacement_rms_l2": 347.6225366563637
+        },
+        {
+          "layer": "layer_05_query",
+          "pc1_fraction": 0.364020210387445,
+          "participation_ratio": 5.388012851567352,
+          "covariance_trace": 67339.20421415746,
+          "common_mean_norm": 871.4377993424196,
+          "between_example_rms_norm": 257.462675252766,
+          "future_replacement_rms_l2": 390.23012537430793
+        },
+        {
+          "layer": "layer_06_query",
+          "pc1_fraction": 0.35948222667427526,
+          "participation_ratio": 5.485345712841485,
+          "covariance_trace": 72832.20312200871,
+          "common_mean_norm": 884.5475357890688,
+          "between_example_rms_norm": 267.75772621574777,
+          "future_replacement_rms_l2": 419.0745323559375
+        },
+        {
+          "layer": "layer_07_query",
+          "pc1_fraction": 0.3508299411911462,
+          "participation_ratio": 5.628606292504658,
+          "covariance_trace": 79286.38211717254,
+          "common_mean_norm": 902.2385019635884,
+          "between_example_rms_norm": 279.3698845555686,
+          "future_replacement_rms_l2": 458.9362207235105
+        },
+        {
+          "layer": "layer_08_query",
+          "pc1_fraction": 0.345938537882717,
+          "participation_ratio": 5.705328209012868,
+          "covariance_trace": 85065.20627998521,
+          "common_mean_norm": 910.6609129253786,
+          "between_example_rms_norm": 289.37184111772257,
+          "future_replacement_rms_l2": 500.8130580209557
+        },
+        {
+          "layer": "layer_09_query",
+          "pc1_fraction": 0.33822593165902526,
+          "participation_ratio": 5.8621983058183424,
+          "covariance_trace": 91068.95040018637,
+          "common_mean_norm": 918.7117796535626,
+          "between_example_rms_norm": 299.40941543342194,
+          "future_replacement_rms_l2": 557.5088424614008
+        },
+        {
+          "layer": "layer_10_query",
+          "pc1_fraction": 0.3295817589640521,
+          "participation_ratio": 6.117695748036697,
+          "covariance_trace": 97417.26758485798,
+          "common_mean_norm": 920.7488125189378,
+          "between_example_rms_norm": 309.66937655965364,
+          "future_replacement_rms_l2": 633.6986722328371
+        },
+        {
+          "layer": "layer_11_query",
+          "pc1_fraction": 0.31995490195650667,
+          "participation_ratio": 6.385169584712109,
+          "covariance_trace": 103815.64702028179,
+          "common_mean_norm": 925.1945934856428,
+          "between_example_rms_norm": 319.6772239863045,
+          "future_replacement_rms_l2": 734.2101130317554
+        },
+        {
+          "layer": "layer_12_query",
+          "pc1_fraction": 0.3092816286129472,
+          "participation_ratio": 6.648568653261906,
+          "covariance_trace": 109893.64157605133,
+          "common_mean_norm": 930.6309284673517,
+          "between_example_rms_norm": 328.9020422959176,
+          "future_replacement_rms_l2": 858.0756437652043
+        },
+        {
+          "layer": "layer_13_query",
+          "pc1_fraction": 0.3050205952147114,
+          "participation_ratio": 6.799879063415403,
+          "covariance_trace": 116405.97040099118,
+          "common_mean_norm": 934.6234371257549,
+          "between_example_rms_norm": 338.5072039314315,
+          "future_replacement_rms_l2": 975.3199754345313
+        },
+        {
+          "layer": "layer_14_query",
+          "pc1_fraction": 0.29903083346269566,
+          "participation_ratio": 7.000195105465323,
+          "covariance_trace": 119718.0401719138,
+          "common_mean_norm": 938.445022786047,
+          "between_example_rms_norm": 343.28915769978477,
+          "future_replacement_rms_l2": 1071.7272600365156
+        },
+        {
+          "layer": "layer_15_query",
+          "pc1_fraction": 0.28987897764650944,
+          "participation_ratio": 7.329894333038702,
+          "covariance_trace": 127335.68421774119,
+          "common_mean_norm": 942.2450565951492,
+          "between_example_rms_norm": 354.0424609447841,
+          "future_replacement_rms_l2": 1162.1197171099964
+        },
+        {
+          "layer": "layer_16_query",
+          "pc1_fraction": 0.2842895766650784,
+          "participation_ratio": 7.510165530961776,
+          "covariance_trace": 134323.5788892297,
+          "common_mean_norm": 946.6012407435104,
+          "between_example_rms_norm": 363.6272445363323,
+          "future_replacement_rms_l2": 1241.7508280665024
+        },
+        {
+          "layer": "layer_17_query",
+          "pc1_fraction": 0.28463887662398124,
+          "participation_ratio": 7.548031023766622,
+          "covariance_trace": 137935.1335458014,
+          "common_mean_norm": 951.8780639292082,
+          "between_example_rms_norm": 368.483238538944,
+          "future_replacement_rms_l2": 1324.7223951940337
+        },
+        {
+          "layer": "layer_18_query",
+          "pc1_fraction": 0.27858477126854075,
+          "participation_ratio": 7.684404773114463,
+          "covariance_trace": 143299.48648866836,
+          "common_mean_norm": 956.1126071148526,
+          "between_example_rms_norm": 375.580127286153,
+          "future_replacement_rms_l2": 1406.500919797185
+        },
+        {
+          "layer": "layer_19_query",
+          "pc1_fraction": 0.2782606835135894,
+          "participation_ratio": 7.639620207823246,
+          "covariance_trace": 148547.49707386215,
+          "common_mean_norm": 960.8443192458508,
+          "between_example_rms_norm": 382.39566215123693,
+          "future_replacement_rms_l2": 1490.9274516812843
+        },
+        {
+          "layer": "layer_20_query",
+          "pc1_fraction": 0.27664500708322676,
+          "participation_ratio": 7.726705381768782,
+          "covariance_trace": 153258.76463419295,
+          "common_mean_norm": 964.5360804496763,
+          "between_example_rms_norm": 388.41227637239234,
+          "future_replacement_rms_l2": 1556.9666115285747
+        },
+        {
+          "layer": "layer_21_query",
+          "pc1_fraction": 0.2774208016322617,
+          "participation_ratio": 7.695505066991273,
+          "covariance_trace": 160581.08753683427,
+          "common_mean_norm": 969.7528908750513,
+          "between_example_rms_norm": 397.58270591673283,
+          "future_replacement_rms_l2": 1647.1376940540572
+        },
+        {
+          "layer": "layer_22_query",
+          "pc1_fraction": 0.2718690947797508,
+          "participation_ratio": 7.814423674382839,
+          "covariance_trace": 167951.1083966917,
+          "common_mean_norm": 972.7779055091673,
+          "between_example_rms_norm": 406.6040731817543,
+          "future_replacement_rms_l2": 1729.4277336494856
+        },
+        {
+          "layer": "layer_23_query",
+          "pc1_fraction": 0.2685793260021914,
+          "participation_ratio": 7.831355053100028,
+          "covariance_trace": 177219.58742924003,
+          "common_mean_norm": 976.6795586911072,
+          "between_example_rms_norm": 417.67275632444375,
+          "future_replacement_rms_l2": 1800.7157781050882
+        },
+        {
+          "layer": "layer_24_query",
+          "pc1_fraction": 0.26932852858251854,
+          "participation_ratio": 7.738121115195952,
+          "covariance_trace": 189934.22698783188,
+          "common_mean_norm": 978.5211965200625,
+          "between_example_rms_norm": 432.3962357504364,
+          "future_replacement_rms_l2": 1898.878447434554
+        },
+        {
+          "layer": "encoder_out_proj",
+          "pc1_fraction": 0.27896271099468106,
+          "participation_ratio": 6.238203218941478,
+          "covariance_trace": 187320.80759478293,
+          "common_mean_norm": 529.6440750435388,
+          "between_example_rms_norm": 429.411131639731,
+          "future_replacement_rms_l2": 2159.9489835909035
+        },
+        {
+          "layer": "vae_pre_norm",
+          "pc1_fraction": 0.25681244241054674,
+          "participation_ratio": 6.608682017596957,
+          "covariance_trace": 15.493062681463293,
+          "common_mean_norm": 5.149170762073834,
+          "between_example_rms_norm": 3.905250770061435,
+          "future_replacement_rms_l2": 6.466599357856627
+        },
+        {
+          "layer": "posterior_mu",
+          "pc1_fraction": 0.20297571118681826,
+          "participation_ratio": 7.223752532978893,
+          "covariance_trace": 7.030196929816607,
+          "common_mean_norm": 1.7129384271856345,
+          "between_example_rms_norm": 2.6306558313067523,
+          "future_replacement_rms_l2": 3.9699392847937354
+        }
+      ]
+    },
+    "combined3000": {
+      "checkpoint_sha256": "157e4cf9b2906c9260096e19b406b80b1014811a77202b1091442053e431d10e",
+      "unchanged": true,
+      "observer_parity_exact": true,
+      "native_cached_mu_max_abs_difference": 0.0,
+      "layers": [
+        {
+          "layer": "cross_attention_query",
+          "pc1_fraction": 0.9386541030094727,
+          "participation_ratio": 1.1302330855254363,
+          "covariance_trace": 635151.3537991599,
+          "common_mean_norm": 280.2691408418444,
+          "between_example_rms_norm": 790.7130414354172,
+          "future_replacement_rms_l2": 801.7932193255756
+        },
+        {
+          "layer": "layer_01_query",
+          "pc1_fraction": 0.9563826425514931,
+          "participation_ratio": 1.0911004038536039,
+          "covariance_trace": 1170731.2335712223,
+          "common_mean_norm": 384.2869648944717,
+          "between_example_rms_norm": 1073.5169109271976,
+          "future_replacement_rms_l2": 1086.13069806147
+        },
+        {
+          "layer": "layer_02_query",
+          "pc1_fraction": 0.9602636490393551,
+          "participation_ratio": 1.0827033949463,
+          "covariance_trace": 1663162.787529573,
+          "common_mean_norm": 532.6955779402489,
+          "between_example_rms_norm": 1279.5217344673838,
+          "future_replacement_rms_l2": 1303.2905078163876
+        },
+        {
+          "layer": "layer_03_query",
+          "pc1_fraction": 0.9655645844090606,
+          "participation_ratio": 1.0713084703624438,
+          "covariance_trace": 2239139.2656917195,
+          "common_mean_norm": 740.0256918914276,
+          "between_example_rms_norm": 1484.638917267524,
+          "future_replacement_rms_l2": 1513.6564849839954
+        },
+        {
+          "layer": "layer_04_query",
+          "pc1_fraction": 0.9658205083730004,
+          "participation_ratio": 1.0707681608833906,
+          "covariance_trace": 2603358.56424726,
+          "common_mean_norm": 895.7236819999292,
+          "between_example_rms_norm": 1600.8376203353346,
+          "future_replacement_rms_l2": 1628.5413489585574
+        },
+        {
+          "layer": "layer_05_query",
+          "pc1_fraction": 0.9643782107815144,
+          "participation_ratio": 1.0738653316933224,
+          "covariance_trace": 2839160.208055387,
+          "common_mean_norm": 1035.253612437048,
+          "between_example_rms_norm": 1671.7650342690267,
+          "future_replacement_rms_l2": 1698.7641514686618
+        },
+        {
+          "layer": "layer_06_query",
+          "pc1_fraction": 0.9624294157754956,
+          "participation_ratio": 1.0780585348038318,
+          "covariance_trace": 3055046.1712630647,
+          "common_mean_norm": 1171.1475486373326,
+          "between_example_rms_norm": 1734.1600487951162,
+          "future_replacement_rms_l2": 1760.6357227457681
+        },
+        {
+          "layer": "layer_07_query",
+          "pc1_fraction": 0.9609598489055688,
+          "participation_ratio": 1.0812298605643156,
+          "covariance_trace": 3269276.141765252,
+          "common_mean_norm": 1318.7194606151404,
+          "between_example_rms_norm": 1793.9324686426103,
+          "future_replacement_rms_l2": 1820.9908936151655
+        },
+        {
+          "layer": "layer_08_query",
+          "pc1_fraction": 0.9595776503025111,
+          "participation_ratio": 1.0842190974682524,
+          "covariance_trace": 3455795.3630494103,
+          "common_mean_norm": 1468.884540605027,
+          "between_example_rms_norm": 1844.396530169628,
+          "future_replacement_rms_l2": 1871.4261501454343
+        },
+        {
+          "layer": "layer_09_query",
+          "pc1_fraction": 0.958139603047555,
+          "participation_ratio": 1.0873354065681133,
+          "covariance_trace": 3604936.1418415434,
+          "common_mean_norm": 1629.2320007653761,
+          "between_example_rms_norm": 1883.7752027843635,
+          "future_replacement_rms_l2": 1910.5718014864947
+        },
+        {
+          "layer": "layer_10_query",
+          "pc1_fraction": 0.956826192922958,
+          "participation_ratio": 1.0901890896032365,
+          "covariance_trace": 3748870.643634019,
+          "common_mean_norm": 1797.3612476105093,
+          "between_example_rms_norm": 1921.0139353547738,
+          "future_replacement_rms_l2": 1947.7758672919051
+        },
+        {
+          "layer": "layer_11_query",
+          "pc1_fraction": 0.9563713179367329,
+          "participation_ratio": 1.091177925687073,
+          "covariance_trace": 3847784.5156701333,
+          "common_mean_norm": 1972.1948883765433,
+          "between_example_rms_norm": 1946.1918925462587,
+          "future_replacement_rms_l2": 1972.9683694963744
+        },
+        {
+          "layer": "layer_12_query",
+          "pc1_fraction": 0.9562647777407479,
+          "participation_ratio": 1.0914084241525526,
+          "covariance_trace": 3920598.949039761,
+          "common_mean_norm": 2147.956472560736,
+          "between_example_rms_norm": 1964.5201934469935,
+          "future_replacement_rms_l2": 1991.242719793836
+        },
+        {
+          "layer": "layer_13_query",
+          "pc1_fraction": 0.9561301706914523,
+          "participation_ratio": 1.0917002588284914,
+          "covariance_trace": 3983008.3154781917,
+          "common_mean_norm": 2336.4474900972627,
+          "between_example_rms_norm": 1980.0943943531702,
+          "future_replacement_rms_l2": 2006.6255384439673
+        },
+        {
+          "layer": "layer_14_query",
+          "pc1_fraction": 0.9561500566479162,
+          "participation_ratio": 1.0916561371242488,
+          "covariance_trace": 4036608.1897257906,
+          "common_mean_norm": 2556.9519650624725,
+          "between_example_rms_norm": 1993.373067632179,
+          "future_replacement_rms_l2": 2019.5765006414622
+        },
+        {
+          "layer": "layer_15_query",
+          "pc1_fraction": 0.9563601652092165,
+          "participation_ratio": 1.0911983716639981,
+          "covariance_trace": 4081803.239472227,
+          "common_mean_norm": 2795.4833925955627,
+          "between_example_rms_norm": 2004.501200761794,
+          "future_replacement_rms_l2": 2030.1837122961276
+        },
+        {
+          "layer": "layer_16_query",
+          "pc1_fraction": 0.9568299926650938,
+          "participation_ratio": 1.0901766249887777,
+          "covariance_trace": 4108697.9915734963,
+          "common_mean_norm": 3049.77508250808,
+          "between_example_rms_norm": 2011.094126453348,
+          "future_replacement_rms_l2": 2035.8767642942087
+        },
+        {
+          "layer": "layer_17_query",
+          "pc1_fraction": 0.9575070504807006,
+          "participation_ratio": 1.0887055875624065,
+          "covariance_trace": 4123780.656284296,
+          "common_mean_norm": 3329.935066783022,
+          "between_example_rms_norm": 2014.782018862054,
+          "future_replacement_rms_l2": 2038.6538478486318
+        },
+        {
+          "layer": "layer_18_query",
+          "pc1_fraction": 0.958432237091121,
+          "participation_ratio": 1.086698584048174,
+          "covariance_trace": 4131487.5021759556,
+          "common_mean_norm": 3629.3276104390798,
+          "between_example_rms_norm": 2016.663831667157,
+          "future_replacement_rms_l2": 2039.3992040878748
+        },
+        {
+          "layer": "layer_19_query",
+          "pc1_fraction": 0.9592499692944945,
+          "participation_ratio": 1.0849279922925874,
+          "covariance_trace": 4139405.977693841,
+          "common_mean_norm": 3969.983499035211,
+          "between_example_rms_norm": 2018.595491744785,
+          "future_replacement_rms_l2": 2040.2952311356812
+        },
+        {
+          "layer": "layer_20_query",
+          "pc1_fraction": 0.9602539871840687,
+          "participation_ratio": 1.0827577159567974,
+          "covariance_trace": 4142509.3391579147,
+          "common_mean_norm": 4338.450389813501,
+          "between_example_rms_norm": 2019.352032393949,
+          "future_replacement_rms_l2": 2039.9325624348369
+        },
+        {
+          "layer": "layer_21_query",
+          "pc1_fraction": 0.9613518308634587,
+          "participation_ratio": 1.0803889591306497,
+          "covariance_trace": 4142685.4395043976,
+          "common_mean_norm": 4730.823029790705,
+          "between_example_rms_norm": 2019.3949538196189,
+          "future_replacement_rms_l2": 2038.9702328242527
+        },
+        {
+          "layer": "layer_22_query",
+          "pc1_fraction": 0.9623537961251581,
+          "participation_ratio": 1.0782315286315016,
+          "covariance_trace": 4143322.647964336,
+          "common_mean_norm": 5154.8806123931345,
+          "between_example_rms_norm": 2019.5502547819624,
+          "future_replacement_rms_l2": 2038.2364309748407
+        },
+        {
+          "layer": "layer_23_query",
+          "pc1_fraction": 0.9634682163811759,
+          "participation_ratio": 1.0758365588021204,
+          "covariance_trace": 4145887.2584580258,
+          "common_mean_norm": 5666.240313011845,
+          "between_example_rms_norm": 2020.1751830087958,
+          "future_replacement_rms_l2": 2037.8225963114219
+        },
+        {
+          "layer": "layer_24_query",
+          "pc1_fraction": 0.9645060142395142,
+          "participation_ratio": 1.0736107148921206,
+          "covariance_trace": 4149172.51955737,
+          "common_mean_norm": 6212.075177541879,
+          "between_example_rms_norm": 2020.975432542239,
+          "future_replacement_rms_l2": 2037.749358771745
+        },
+        {
+          "layer": "encoder_out_proj",
+          "pc1_fraction": 0.8521044299390645,
+          "participation_ratio": 1.3370659023487925,
+          "covariance_trace": 2304473.5001596585,
+          "common_mean_norm": 12066.795784266742,
+          "between_example_rms_norm": 1506.1427892864813,
+          "future_replacement_rms_l2": 1532.8685043007697
+        },
+        {
+          "layer": "vae_pre_norm",
+          "pc1_fraction": 0.9983343195372357,
+          "participation_ratio": 1.0033376322914553,
+          "covariance_trace": 0.4200968744000282,
+          "common_mean_norm": 6.370520270777494,
+          "between_example_rms_norm": 0.643065207220487,
+          "future_replacement_rms_l2": 0.6443804956194142
+        },
+        {
+          "layer": "posterior_mu",
+          "pc1_fraction": 0.9989613335440154,
+          "participation_ratio": 1.0020798011199816,
+          "covariance_trace": 0.19807002799831222,
+          "common_mean_norm": 0.8630620600985066,
+          "between_example_rms_norm": 0.4415599436212918,
+          "future_replacement_rms_l2": 0.44255365980617073
+        }
+      ]
+    }
+  },
+  "limitations": [
+    "Geometry localizes concentration in trained snapshots; training onset/causality was not measured.",
+    "Cross-attention block includes attention, query addition, normalization and FFN addition.",
+    "Centered rank is sample-limited to63; VAE LayerNorm output has affine dimension at most31."
+  ]
+}

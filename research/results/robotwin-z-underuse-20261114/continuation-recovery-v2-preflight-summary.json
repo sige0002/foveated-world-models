@@ -1,0 +1,213 @@
+{
+  "at": "2026-11-14T04:15:11.322355+00:00",
+  "runner_sha256": "740f09a77ad3b9147a0c328d86f343259c2f808a96f4c6a24352eef4499437f9",
+  "arms": {
+    "seed43_replay": {
+      "summary": {
+        "phase": "preflight_passed",
+        "local_updates": 506,
+        "absolute_step": 3506,
+        "initial_model_sha256": "4b2fd315325c3739691c9bb7f3628e5f042215d9993ca9d5e245dea0901a33fc",
+        "initial_optimizer_sha256": "6385bd31e20a3ac8f335baecd285d5e08fce8efde5a0293fd5eb5641412c8474",
+        "resumed_local_step": 500,
+        "new_updates_executed": 6,
+        "scheduler_last_epoch": 3506,
+        "lr": 0.0003,
+        "seconds_per_update_excluding_first": 0.9748775719999685,
+        "elapsed_seconds": 39.876706588998786,
+        "cuda_peak_allocated_bytes": 13217651712,
+        "cuda_peak_reserved_bytes": 13813940224,
+        "preflight_losses": [
+          0.38627731800079346,
+          0.4390720725059509,
+          0.4118298888206482,
+          0.5221995115280151,
+          0.4159824550151825,
+          0.37064629793167114
+        ]
+      },
+      "replay_verification": {
+        "verified_prefix_batches": 500,
+        "boundary_next_local_step": 501,
+        "boundary_cuda_rng_sha256": "10b7cd2eb9b388386774de50341785e7042fc1ef2b5498d6d306591512a7779f",
+        "boundary_matches_old501": true,
+        "restored_model_sha256": "4b2fd315325c3739691c9bb7f3628e5f042215d9993ca9d5e245dea0901a33fc",
+        "restored_optimizer_sha256": "6385bd31e20a3ac8f335baecd285d5e08fce8efde5a0293fd5eb5641412c8474",
+        "model_unchanged_by_replay": true,
+        "optimizer_unchanged_by_replay": true,
+        "cpu_rng_sha256": "8c53b97fd4b8842286430d173e3e80e76a206ef1008ab0322e63d980d0bef65d",
+        "python_numpy_rng_sha256": "3121174f37f806d7b942487ab5f19fdd8b6c6b164c08df201700be773f155090",
+        "cpu_and_pixel_historical_hashes_available": false
+      },
+      "evaluation_restoration": {
+        "completed_evaluations": 3,
+        "precision_restored": "medium",
+        "all_rng_unchanged": true
+      },
+      "resume_checkpoint": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-data-step-continuation-b4-20261114/seed43_replay/checkpoints/last.ckpt",
+      "resume_checkpoint_sha256": "666ace5494f4e3034f7cf5a1b46d6443f78457fb7de60d6b75f500e24d40e1bf",
+      "preflight_output": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-data-step-continuation-b4-20261114/recovery-v2/preflight/seed43_replay"
+    },
+    "seed43_new": {
+      "summary": {
+        "phase": "preflight_passed",
+        "local_updates": 506,
+        "absolute_step": 3506,
+        "initial_model_sha256": "1a73e8989262f4ce0b9c923e01ddd42f3e1d3e172b40bb6478599e58c5213ec2",
+        "initial_optimizer_sha256": "58b41b0c14b4f2328702e2cecb53c49c2a3f9a3d30528b47b0baa96ee4d37685",
+        "resumed_local_step": 500,
+        "new_updates_executed": 6,
+        "scheduler_last_epoch": 3506,
+        "lr": 0.0003,
+        "seconds_per_update_excluding_first": 0.9479157809983008,
+        "elapsed_seconds": 39.57327839299978,
+        "cuda_peak_allocated_bytes": 13217651712,
+        "cuda_peak_reserved_bytes": 13813940224,
+        "preflight_losses": [
+          0.5123724341392517,
+          0.3574020564556122,
+          0.4088374972343445,
+          0.385028213262558,
+          0.2639458477497101,
+          0.3922361731529236
+        ]
+      },
+      "replay_verification": {
+        "verified_prefix_batches": 500,
+        "boundary_next_local_step": 501,
+        "boundary_cuda_rng_sha256": "10b7cd2eb9b388386774de50341785e7042fc1ef2b5498d6d306591512a7779f",
+        "boundary_matches_old501": true,
+        "restored_model_sha256": "1a73e8989262f4ce0b9c923e01ddd42f3e1d3e172b40bb6478599e58c5213ec2",
+        "restored_optimizer_sha256": "58b41b0c14b4f2328702e2cecb53c49c2a3f9a3d30528b47b0baa96ee4d37685",
+        "model_unchanged_by_replay": true,
+        "optimizer_unchanged_by_replay": true,
+        "cpu_rng_sha256": "8c53b97fd4b8842286430d173e3e80e76a206ef1008ab0322e63d980d0bef65d",
+        "python_numpy_rng_sha256": "3121174f37f806d7b942487ab5f19fdd8b6c6b164c08df201700be773f155090",
+        "cpu_and_pixel_historical_hashes_available": false
+      },
+      "evaluation_restoration": {
+        "completed_evaluations": 3,
+        "precision_restored": "medium",
+        "all_rng_unchanged": true
+      },
+      "resume_checkpoint": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-data-step-continuation-b4-20261114/seed43_new/checkpoints/last.ckpt",
+      "resume_checkpoint_sha256": "4ef94204314778be1901136820fee6d7630632a958d66101d84f9bddebdf5bf3",
+      "preflight_output": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-data-step-continuation-b4-20261114/recovery-v2/preflight/seed43_new"
+    },
+    "seed44_replay": {
+      "summary": {
+        "phase": "preflight_passed",
+        "local_updates": 506,
+        "absolute_step": 3506,
+        "initial_model_sha256": "9e68cad9558d0b17afef8a5e1997503d7ac4892b4059a59e36e7db209a598099",
+        "initial_optimizer_sha256": "87f7ae91b8133772bcff48eb40aed10264449e56770cf54dcf8c2af228ec562c",
+        "resumed_local_step": 500,
+        "new_updates_executed": 6,
+        "scheduler_last_epoch": 3506,
+        "lr": 0.0003,
+        "seconds_per_update_excluding_first": 0.7780958799994551,
+        "elapsed_seconds": 36.042395059994305,
+        "cuda_peak_allocated_bytes": 13217651712,
+        "cuda_peak_reserved_bytes": 13813940224,
+        "preflight_losses": [
+          0.5054506063461304,
+          0.3501759171485901,
+          0.31170201301574707,
+          0.47521713376045227,
+          0.5466969609260559,
+          0.42374104261398315
+        ]
+      },
+      "replay_verification": {
+        "verified_prefix_batches": 500,
+        "boundary_next_local_step": 501,
+        "boundary_cuda_rng_sha256": "c09560e24844adb44ae73026fd110377338e5548291a16ca67fb68c1637135f8",
+        "boundary_matches_old501": true,
+        "restored_model_sha256": "9e68cad9558d0b17afef8a5e1997503d7ac4892b4059a59e36e7db209a598099",
+        "restored_optimizer_sha256": "87f7ae91b8133772bcff48eb40aed10264449e56770cf54dcf8c2af228ec562c",
+        "model_unchanged_by_replay": true,
+        "optimizer_unchanged_by_replay": true,
+        "cpu_rng_sha256": "71bcb86f209356d8b5df04fb0c7d9f8f5dab75c9438fbe5dff65d73d9d29616f",
+        "python_numpy_rng_sha256": "d426b467de729229da01a88a849278769a19d11a0f6651081aa8e99a97ff834c",
+        "cpu_and_pixel_historical_hashes_available": false
+      },
+      "evaluation_restoration": {
+        "completed_evaluations": 3,
+        "precision_restored": "medium",
+        "all_rng_unchanged": true
+      },
+      "resume_checkpoint": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-data-step-continuation-b4-20261114/seed44_replay/checkpoints/last.ckpt",
+      "resume_checkpoint_sha256": "68a9730e6289b7378d4c3a5267352975b3943d7b9c7979cb61e1ee9653098b2b",
+      "preflight_output": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-data-step-continuation-b4-20261114/recovery-v2/preflight/seed44_replay"
+    },
+    "seed44_new": {
+      "summary": {
+        "phase": "preflight_passed",
+        "local_updates": 506,
+        "absolute_step": 3506,
+        "initial_model_sha256": "1bdd45913bb949620df2f6a60eff7525175c364e4933ff165ef5d186643d0b2d",
+        "initial_optimizer_sha256": "eeecf9f47a4eb85489d0e0169a4dc5cf896bfce9ba3bb88dbbfdf416ba3da43e",
+        "resumed_local_step": 500,
+        "new_updates_executed": 6,
+        "scheduler_last_epoch": 3506,
+        "lr": 0.0003,
+        "seconds_per_update_excluding_first": 0.780331677000504,
+        "elapsed_seconds": 36.20235980099824,
+        "cuda_peak_allocated_bytes": 13217651712,
+        "cuda_peak_reserved_bytes": 13813940224,
+        "preflight_losses": [
+          0.4067074656486511,
+          0.3770041763782501,
+          0.5082522630691528,
+          0.49275073409080505,
+          0.33524611592292786,
+          0.42155641317367554
+        ]
+      },
+      "replay_verification": {
+        "verified_prefix_batches": 500,
+        "boundary_next_local_step": 501,
+        "boundary_cuda_rng_sha256": "c09560e24844adb44ae73026fd110377338e5548291a16ca67fb68c1637135f8",
+        "boundary_matches_old501": true,
+        "restored_model_sha256": "1bdd45913bb949620df2f6a60eff7525175c364e4933ff165ef5d186643d0b2d",
+        "restored_optimizer_sha256": "eeecf9f47a4eb85489d0e0169a4dc5cf896bfce9ba3bb88dbbfdf416ba3da43e",
+        "model_unchanged_by_replay": true,
+        "optimizer_unchanged_by_replay": true,
+        "cpu_rng_sha256": "71bcb86f209356d8b5df04fb0c7d9f8f5dab75c9438fbe5dff65d73d9d29616f",
+        "python_numpy_rng_sha256": "d426b467de729229da01a88a849278769a19d11a0f6651081aa8e99a97ff834c",
+        "cpu_and_pixel_historical_hashes_available": false
+      },
+      "evaluation_restoration": {
+        "completed_evaluations": 3,
+        "precision_restored": "medium",
+        "all_rng_unchanged": true
+      },
+      "resume_checkpoint": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-data-step-continuation-b4-20261114/seed44_new/checkpoints/last.ckpt",
+      "resume_checkpoint_sha256": "f94a396ccb63ee67d648d8ee07d96dff88a45e38da90d565c935b4e3cc96fd2e",
+      "preflight_output": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-data-step-continuation-b4-20261114/recovery-v2/preflight/seed44_new"
+    }
+  },
+  "paired_seeds": {
+    "43": {
+      "rows": 506,
+      "all_match": {
+        "epsilon_sha256": true,
+        "augmentation_rng_before_sha256": true,
+        "augmentation_rng_after_sha256": true,
+        "cpu_rng_before_augmentation_sha256": true,
+        "cpu_rng_after_augmentation_sha256": true
+      }
+    },
+    "44": {
+      "rows": 506,
+      "all_match": {
+        "epsilon_sha256": true,
+        "augmentation_rng_before_sha256": true,
+        "augmentation_rng_after_sha256": true,
+        "cpu_rng_before_augmentation_sha256": true,
+        "cpu_rng_after_augmentation_sha256": true
+      }
+    }
+  },
+  "scope": "Legacy500 checkpoint recovery validation. Historical CPU RNG/augmented pixels were not saved; source-audited replay reconstructs them, not direct historical hash verification."
+}

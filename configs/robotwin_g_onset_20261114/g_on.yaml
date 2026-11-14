@@ -1,0 +1,74 @@
+# Prepared only; no GPU launch.
+cpu_threads: 2
+data:
+  batch_size: 4
+  data_mix: robotwin_merged
+  data_root_dir: /media/sadasue/SSD1/foveated-world-models/research/official-data-contract-audit-20261113/robotwin-qfix-data
+  in_order: true
+  num_workers: 2
+  prefetch_factor: 2
+dependency_roots:
+- /media/sadasue/SSD1/foveated-world-models/research/official-data-contract-audit-20261113/python-deps
+- /media/sadasue/SSD1/foveated-world-models/research/official-data-contract-audit-20261113/pytorch3d
+diagnostic:
+  protocol: robotwin_g_onset_20261114
+  arm: g_on
+  factors:
+    image_loss: l2
+    kl_beta: 1.0e-05
+    lambda_aux: 1.0
+    posterior_sampling: sampled
+    initialization: fresh
+  validation_samples: 512
+  scope: Prepared500-update diagnostic; no main training or automatic follow-on launch.
+  motivations_and_limits:
+  - Initial measured g-to-encoder gradients dominate the early image gradients; local
+    g output is2*tanh following the earlier delta-range patch.
+  - Official architecture also uses AdaLN zero initialization; initial g dominance
+    alone does not explain the difference from official performance.
+  - The dataset contains many tasks and non-unidirectional state changes; data monotony
+    is not established.
+  - Only lambda_aux differs between the paired runs. No official-init arm added.
+  - This is a causal diagnostic of early g-loss contribution, not a claim that g or
+    grippers caused the observed concentration.
+  - Stop at500 updates. Fixed onset probes at0,10,50,100,250 use64 pairs; final500
+    uses512 and also records first64 geometry.
+hf_home: /media/sadasue/SSD1/foveated-world-models/research/official-data-contract-audit-20261113/hf-cache
+model:
+  loss_type: l2
+  state_output_scale: 2.0
+  task_name: robotwin_g_onset_g_on
+  vision_model_id: /media/sadasue/SSD1/foveated-world-models/models/dinov3-vitb16-pretrain-lvd1689m
+  vq_kwargs:
+    beta: 1.0e-05
+    layer_norm: true
+  warmup_steps: 1000
+  lambda_aux: 1.0
+official_commit: c12168d9077edea67fe7c1b70d08b80b8e65a9c8
+official_config: latent_action_model/config/dino_large_vae.yaml
+official_source: /media/sadasue/SSD1/foveated-world-models/research/official-data-contract-audit-20261113/LaWAM-robotwin-delta2
+seed: 42
+split:
+  validation_fraction: 0.05
+  seed: 42
+trainer:
+  accelerator: gpu
+  accumulate_grad_batches: 1
+  check_val_every_n_epoch: null
+  devices: 1
+  enable_model_summary: false
+  enable_progress_bar: false
+  gradient_clip_val: 1.0
+  limit_val_batches: 128
+  log_every_n_steps: 20
+  max_epochs: -1
+  max_steps: 500
+  num_sanity_val_steps: 0
+  precision: bf16-mixed
+  strategy: auto
+  val_check_interval: 500
+onset_probe:
+  original_run: /media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/kl_mse
+  cache: /media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/evaluations/final3000-highest-fp32/features512-highest-fp32.pt
+  cache_sha256: eafacc5cea01814ec8c12f3e0420348a9da7bc12deeaf7cd9f0bb3d952733c15
+  evaluator_sha256: ff02f76a61305c80bb036d0aca471d675387975cd7ea59454da7479018855758

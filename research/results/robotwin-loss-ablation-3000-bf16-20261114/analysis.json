@@ -1,0 +1,1263 @@
+{
+  "generated_at_utc": "2026-11-14T01:34:59.863067+00:00",
+  "status": "completed3000_BF16_snapshot_FP32_confirmation_pending",
+  "source_group": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114",
+  "source_summary": {
+    "path": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/final_comparison.json",
+    "sha256": "5e3e2149222d96947c525922c34859876cd4d8f4b06d35f659ccc15c160b5615",
+    "generated_at": "2026-11-13T22:43:24.674363+00:00"
+  },
+  "samples": 512,
+  "episodes": 415,
+  "bootstrap": {
+    "draws": 4000,
+    "seed": 1942,
+    "unit": "episode",
+    "paired_across_arms": true
+  },
+  "training_and_validation_pairing_verified": true,
+  "precision": "Encoder/decoder BF16 autocast; VAE and MSE arithmetic FP32. Not the final highest-FP32 evaluation.",
+  "arms": {
+    "baseline": {
+      "factors": {
+        "image_loss": "smooth_l1",
+        "kl_beta": 5e-05
+      },
+      "metrics": {
+        "real_visual_mse": {
+          "estimate": 0.3687157539097825,
+          "samples": 512,
+          "episodes": 415,
+          "ci95": [
+            0.3560971224583115,
+            0.3820597256993558
+          ]
+        },
+        "real_state_mse": {
+          "estimate": 0.06142774582065158,
+          "samples": 512,
+          "episodes": 415,
+          "ci95": [
+            0.05622588897264176,
+            0.06678633961109919
+          ]
+        },
+        "mean_minus_real_visual_mse": {
+          "estimate": 7.819035090506077e-07,
+          "samples": 512,
+          "episodes": 415,
+          "ci95": [
+            -3.129065606198112e-06,
+            4.719187400695063e-06
+          ]
+        },
+        "swapped_minus_real_visual_mse": {
+          "estimate": -5.638576112687588e-07,
+          "samples": 512,
+          "episodes": 415,
+          "ci95": [
+            -5.889779108001572e-06,
+            5.015216687830321e-06
+          ]
+        },
+        "zero_minus_real_visual_mse": {
+          "estimate": 0.0006126872758613899,
+          "samples": 512,
+          "episodes": 415,
+          "ci95": [
+            0.00020778292176502027,
+            0.0010184916626047162
+          ]
+        },
+        "mean_minus_real_state_mse": {
+          "estimate": 3.4847228107537376e-06,
+          "samples": 512,
+          "episodes": 415,
+          "ci95": [
+            -1.052846171731134e-05,
+            1.817943502968918e-05
+          ]
+        },
+        "swapped_minus_real_state_mse": {
+          "estimate": 1.0222948390037345e-05,
+          "samples": 512,
+          "episodes": 415,
+          "ci95": [
+            -6.9103461670805935e-06,
+            2.7724451852391553e-05
+          ]
+        }
+      },
+      "visual_control_gap_percent_of_real": {
+        "mean": 0.00021206132386790397,
+        "swapped": -0.00015292474088501347,
+        "zero": 0.16616791372882386
+      },
+      "state_control_gap_percent_of_real": {
+        "mean": 0.005672880819895231,
+        "swapped": 0.016642232680790413
+      },
+      "geometry": {
+        "mu_variance_sum": 0.00035530901675481764,
+        "noise_variance_sum": 1.4807576804111142,
+        "noise_fraction": 0.9997601067445286,
+        "pre_norm_node_coordinate_std_mean": 1172.3165497764749,
+        "pre_norm_node_variance_fraction": 4.417322336478325e-05
+      },
+      "output_difference_MSE": {
+        "mean": 2.915655386459548e-06,
+        "swapped": 3.3538701700308593e-06
+      },
+      "persistence_visual_mse": 0.5075035095214844,
+      "BF16_continuation_gate_candidate": false,
+      "FP32_confirmed": false,
+      "checkpoint": {
+        "path": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/baseline/checkpoints/final.ckpt",
+        "size_bytes": 8030658920
+      },
+      "gradient_before_update3000": {
+        "step_before_update": 2999,
+        "lr_used": 0.0003,
+        "losses": {
+          "image": 0.4068516194820404,
+          "state": 0.08063970506191254,
+          "weighted_kl": 0.0017265708884224296
+        },
+        "node_gradient_norms": {
+          "image": 1.7487242303104722e-06,
+          "state": 4.144256308791228e-06,
+          "weighted_kl": 3.246768187636917e-08
+        },
+        "pairwise_cosines": {
+          "image__state": 0.1413470059633255,
+          "image__weighted_kl": -0.06094597280025482,
+          "state__weighted_kl": 0.11056641489267349
+        },
+        "scope": "Actual training batch and sampled epsilon, gradients of each loss at the float32 VAE input activation; normal backward follows."
+      },
+      "future_MSE_reduction_vs_baseline_percent": 0.0
+    },
+    "kl_only": {
+      "factors": {
+        "image_loss": "smooth_l1",
+        "kl_beta": 1e-05
+      },
+      "metrics": {
+        "real_visual_mse": {
+          "estimate": 0.368037146050483,
+          "samples": 512,
+          "episodes": 415,
+          "ci95": [
+            0.3554721972952279,
+            0.38140268384165354
+          ]
+        },
+        "real_state_mse": {
+          "estimate": 0.061122478104664424,
+          "samples": 512,
+          "episodes": 415,
+          "ci95": [
+            0.05602407565389653,
+            0.06637092779098643
+          ]
+        },
+        "mean_minus_real_visual_mse": {
+          "estimate": -4.368048394098878e-07,
+          "samples": 512,
+          "episodes": 415,
+          "ci95": [
+            -4.4683616323731875e-06,
+            3.528189227912889e-06
+          ]
+        },
+        "swapped_minus_real_visual_mse": {
+          "estimate": -6.590387783944607e-06,
+          "samples": 512,
+          "episodes": 415,
+          "ci95": [
+            -1.2336818588791044e-05,
+            -6.672072242380455e-07
+          ]
+        },
+        "zero_minus_real_visual_mse": {
+          "estimate": 0.00025989448477048427,
+          "samples": 512,
+          "episodes": 415,
+          "ci95": [
+            -0.0001940424634428638,
+            0.0007256259598077626
+          ]
+        },
+        "mean_minus_real_state_mse": {
+          "estimate": -3.3217770578630734e-06,
+          "samples": 512,
+          "episodes": 415,
+          "ci95": [
+            -1.666500042934136e-05,
+            1.004497077495613e-05
+          ]
+        },
+        "swapped_minus_real_state_mse": {
+          "estimate": -3.8338970398399397e-07,
+          "samples": 512,
+          "episodes": 415,
+          "ci95": [
+            -1.681097303931073e-05,
+            1.659940749108426e-05
+          ]
+        }
+      },
+      "visual_control_gap_percent_of_real": {
+        "mean": -0.00011868498712626471,
+        "swapped": -0.0017906854932085076,
+        "zero": 0.07061637325457225
+      },
+      "state_control_gap_percent_of_real": {
+        "mean": -0.005434624316401169,
+        "swapped": -0.0006272482986168986
+      },
+      "geometry": {
+        "mu_variance_sum": 0.0003617789471244214,
+        "noise_variance_sum": 0.953489503527134,
+        "noise_fraction": 0.9996207176592707,
+        "pre_norm_node_coordinate_std_mean": 1035.7965484897436,
+        "pre_norm_node_variance_fraction": 0.00027419697584849515
+      },
+      "output_difference_MSE": {
+        "mean": 3.0573705771530513e-06,
+        "swapped": 3.5203561310481746e-06
+      },
+      "persistence_visual_mse": 0.5075035095214844,
+      "BF16_continuation_gate_candidate": false,
+      "FP32_confirmed": false,
+      "checkpoint": {
+        "path": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/kl_only/checkpoints/final.ckpt",
+        "size_bytes": 8030658920
+      },
+      "gradient_before_update3000": {
+        "step_before_update": 2999,
+        "lr_used": 0.0003,
+        "losses": {
+          "image": 0.4082516133785248,
+          "state": 0.08382551372051239,
+          "weighted_kl": 0.0004163135017734021
+        },
+        "node_gradient_norms": {
+          "image": 1.980631395781529e-06,
+          "state": 5.405016509030247e-06,
+          "weighted_kl": 7.139650204379677e-09
+        },
+        "pairwise_cosines": {
+          "image__state": 0.21427464485168457,
+          "image__weighted_kl": -0.10162286460399628,
+          "state__weighted_kl": -0.027731014415621758
+        },
+        "scope": "Actual training batch and sampled epsilon, gradients of each loss at the float32 VAE input activation; normal backward follows."
+      },
+      "future_MSE_reduction_vs_baseline_percent": 0.18404634250196975
+    },
+    "mse_only": {
+      "factors": {
+        "image_loss": "l2",
+        "kl_beta": 5e-05
+      },
+      "metrics": {
+        "real_visual_mse": {
+          "estimate": 0.36321949516423047,
+          "samples": 512,
+          "episodes": 415,
+          "ci95": [
+            0.35255231429659656,
+            0.3744775530294305
+          ]
+        },
+        "real_state_mse": {
+          "estimate": 0.06276702994546213,
+          "samples": 512,
+          "episodes": 415,
+          "ci95": [
+            0.057424538814948606,
+            0.06820669809530341
+          ]
+        },
+        "mean_minus_real_visual_mse": {
+          "estimate": 3.9432779885828495e-06,
+          "samples": 512,
+          "episodes": 415,
+          "ci95": [
+            1.0306120103944688e-06,
+            6.655345977451769e-06
+          ]
+        },
+        "swapped_minus_real_visual_mse": {
+          "estimate": 5.2582763601094484e-06,
+          "samples": 512,
+          "episodes": 415,
+          "ci95": [
+            1.3308491555534265e-06,
+            9.268171050813835e-06
+          ]
+        },
+        "zero_minus_real_visual_mse": {
+          "estimate": 0.0008053840138018131,
+          "samples": 512,
+          "episodes": 415,
+          "ci95": [
+            0.00047847598921181854,
+            0.001124683892478076
+          ]
+        },
+        "mean_minus_real_state_mse": {
+          "estimate": -2.0775418079210795e-06,
+          "samples": 512,
+          "episodes": 415,
+          "ci95": [
+            -1.2416378708645994e-05,
+            7.02793802054668e-06
+          ]
+        },
+        "swapped_minus_real_state_mse": {
+          "estimate": 4.03011995331326e-06,
+          "samples": 512,
+          "episodes": 415,
+          "ci95": [
+            -3.4806397652341507e-06,
+            1.2163165470514603e-05
+          ]
+        }
+      },
+      "visual_control_gap_percent_of_real": {
+        "mean": 0.001085646018752349,
+        "swapped": 0.001447685608871822,
+        "zero": 0.22173479797323573
+      },
+      "state_control_gap_percent_of_real": {
+        "mean": -0.003309925305891074,
+        "swapped": 0.006420759364932522
+      },
+      "geometry": {
+        "mu_variance_sum": 3.4805621336360085e-05,
+        "noise_variance_sum": 0.8630014393864869,
+        "noise_fraction": 0.9999596707304731,
+        "pre_norm_node_coordinate_std_mean": 1563.7946551667892,
+        "pre_norm_node_variance_fraction": 3.913610493561787e-06
+      },
+      "output_difference_MSE": {
+        "mean": 2.7096916710434016e-06,
+        "swapped": 2.955548552563414e-06
+      },
+      "persistence_visual_mse": 0.5075035095214844,
+      "BF16_continuation_gate_candidate": false,
+      "FP32_confirmed": false,
+      "checkpoint": {
+        "path": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/mse_only/checkpoints/final.ckpt",
+        "size_bytes": 8030658920
+      },
+      "gradient_before_update3000": {
+        "step_before_update": 2999,
+        "lr_used": 0.0003,
+        "losses": {
+          "image": 0.46363934874534607,
+          "state": 0.07854722440242767,
+          "weighted_kl": 0.0021429427433758974
+        },
+        "node_gradient_norms": {
+          "image": 4.996726602257695e-06,
+          "state": 3.239870693505509e-06,
+          "weighted_kl": 2.5669177006193422e-08
+        },
+        "pairwise_cosines": {
+          "image__state": 0.3598807156085968,
+          "image__weighted_kl": -0.03622659668326378,
+          "state__weighted_kl": 0.06144299730658531
+        },
+        "scope": "Actual training batch and sampled epsilon, gradients of each loss at the float32 VAE input activation; normal backward follows."
+      },
+      "future_MSE_reduction_vs_baseline_percent": 1.4906492839730594
+    },
+    "kl_mse": {
+      "factors": {
+        "image_loss": "l2",
+        "kl_beta": 1e-05
+      },
+      "metrics": {
+        "real_visual_mse": {
+          "estimate": 0.35803312028292567,
+          "samples": 512,
+          "episodes": 415,
+          "ci95": [
+            0.3476614831230009,
+            0.3687980385605439
+          ]
+        },
+        "real_state_mse": {
+          "estimate": 0.0619541748485517,
+          "samples": 512,
+          "episodes": 415,
+          "ci95": [
+            0.05676741149783258,
+            0.06729665352782557
+          ]
+        },
+        "mean_minus_real_visual_mse": {
+          "estimate": 0.004410983034176752,
+          "samples": 512,
+          "episodes": 415,
+          "ci95": [
+            0.003647105715568494,
+            0.005183095206662375
+          ]
+        },
+        "swapped_minus_real_visual_mse": {
+          "estimate": 0.006640510750003159,
+          "samples": 512,
+          "episodes": 415,
+          "ci95": [
+            0.005365796728552605,
+            0.0080121378292369
+          ]
+        },
+        "zero_minus_real_visual_mse": {
+          "estimate": 0.005241972830845043,
+          "samples": 512,
+          "episodes": 415,
+          "ci95": [
+            0.004395914018899538,
+            0.0060707739653374435
+          ]
+        },
+        "mean_minus_real_state_mse": {
+          "estimate": 0.0004155872394449034,
+          "samples": 512,
+          "episodes": 415,
+          "ci95": [
+            0.00010546013747243025,
+            0.0007372394730706282
+          ]
+        },
+        "swapped_minus_real_state_mse": {
+          "estimate": 0.0005666901134873115,
+          "samples": 512,
+          "episodes": 415,
+          "ci95": [
+            0.00013670836630593137,
+            0.0010063035077046646
+          ]
+        }
+      },
+      "visual_control_gap_percent_of_real": {
+        "mean": 1.2320041874034156,
+        "swapped": 1.8547196820103349,
+        "zero": 1.4641027697947946
+      },
+      "state_control_gap_percent_of_real": {
+        "mean": 0.6707977960497662,
+        "swapped": 0.9146923752476689
+      },
+      "geometry": {
+        "mu_variance_sum": 0.20233455559062724,
+        "noise_variance_sum": 0.5418053768420608,
+        "noise_fraction": 0.7280960921836704,
+        "pre_norm_node_coordinate_std_mean": 2152.844045557522,
+        "pre_norm_node_variance_fraction": 0.016158035569505964
+      },
+      "output_difference_MSE": {
+        "mean": 0.0023938657250255346,
+        "swapped": 0.004532244056463242
+      },
+      "persistence_visual_mse": 0.5075035095214844,
+      "BF16_continuation_gate_candidate": true,
+      "FP32_confirmed": false,
+      "checkpoint": {
+        "path": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/kl_mse/checkpoints/final.ckpt",
+        "size_bytes": 8030658920
+      },
+      "gradient_before_update3000": {
+        "step_before_update": 2999,
+        "lr_used": 0.0003,
+        "losses": {
+          "image": 0.44840431213378906,
+          "state": 0.0782894641160965,
+          "weighted_kl": 0.0005099285626783967
+        },
+        "node_gradient_norms": {
+          "image": 4.462599008547841e-06,
+          "state": 2.0494844648055732e-06,
+          "weighted_kl": 3.4089409073345678e-09
+        },
+        "pairwise_cosines": {
+          "image__state": -0.21614162623882294,
+          "image__weighted_kl": -0.021693365648388863,
+          "state__weighted_kl": -0.07181646674871445
+        },
+        "scope": "Actual training batch and sampled epsilon, gradients of each loss at the float32 VAE input activation; normal backward follows."
+      },
+      "future_MSE_reduction_vs_baseline_percent": 2.8972544605378245
+    }
+  },
+  "factorial": {
+    "kl_only_minus_baseline": {
+      "coefficients": {
+        "kl_only": 1,
+        "baseline": -1
+      },
+      "metrics": {
+        "real_visual_mse": {
+          "estimate_from_aggregate": -0.0006785988807678223,
+          "ci95": [
+            -0.0010799419957790311,
+            -0.0002759746054800879
+          ],
+          "preferred_sign": "negative",
+          "paired_training_verified": true,
+          "estimate": -0.0006786078592995182,
+          "samples": 512,
+          "episodes": 415
+        },
+        "real_state_mse": {
+          "estimate_from_aggregate": -0.0003052614629268646,
+          "ci95": [
+            -0.0007792696467649055,
+            0.00016183427711577187
+          ],
+          "preferred_sign": "negative",
+          "paired_training_verified": true,
+          "estimate": -0.0003052677159871564,
+          "samples": 512,
+          "episodes": 415
+        },
+        "mean_minus_real_visual_mse": {
+          "estimate_from_aggregate": -1.2187083484604955e-06,
+          "ci95": [
+            -6.874532654212366e-06,
+            4.431798122928392e-06
+          ],
+          "preferred_sign": "positive",
+          "paired_training_verified": true,
+          "estimate": -1.2187083484604955e-06,
+          "samples": 512,
+          "episodes": 415
+        },
+        "swapped_minus_real_visual_mse": {
+          "estimate_from_aggregate": -6.026530172675848e-06,
+          "ci95": [
+            -1.4294410515647482e-05,
+            2.331019398412706e-06
+          ],
+          "preferred_sign": "positive",
+          "paired_training_verified": true,
+          "estimate": -6.026530172675848e-06,
+          "samples": 512,
+          "episodes": 415
+        }
+      }
+    },
+    "mse_only_minus_baseline": {
+      "coefficients": {
+        "mse_only": 1,
+        "baseline": -1
+      },
+      "metrics": {
+        "real_visual_mse": {
+          "estimate_from_aggregate": -0.005496233701705933,
+          "ci95": [
+            -0.008044085509410893,
+            -0.0029893390033170993
+          ],
+          "preferred_sign": "negative",
+          "paired_training_verified": true,
+          "estimate": -0.005496258745552041,
+          "samples": 512,
+          "episodes": 415
+        },
+        "real_state_mse": {
+          "estimate_from_aggregate": 0.0013392865657806396,
+          "ci95": [
+            0.00073084880540397,
+            0.0019360006457543482
+          ],
+          "preferred_sign": "negative",
+          "paired_training_verified": true,
+          "estimate": 0.001339284124810547,
+          "samples": 512,
+          "episodes": 415
+        },
+        "mean_minus_real_visual_mse": {
+          "estimate_from_aggregate": 3.161374479532242e-06,
+          "ci95": [
+            -1.493761885150777e-06,
+            7.76219970426325e-06
+          ],
+          "preferred_sign": "positive",
+          "paired_training_verified": true,
+          "estimate": 3.161374479532242e-06,
+          "samples": 512,
+          "episodes": 415
+        },
+        "swapped_minus_real_visual_mse": {
+          "estimate_from_aggregate": 5.822133971378207e-06,
+          "ci95": [
+            -8.769594913893273e-07,
+            1.2582376295240114e-05
+          ],
+          "preferred_sign": "positive",
+          "paired_training_verified": true,
+          "estimate": 5.822133971378207e-06,
+          "samples": 512,
+          "episodes": 415
+        }
+      }
+    },
+    "both_minus_baseline": {
+      "coefficients": {
+        "kl_mse": 1,
+        "baseline": -1
+      },
+      "metrics": {
+        "real_visual_mse": {
+          "estimate_from_aggregate": -0.010682612657546997,
+          "ci95": [
+            -0.013778717476819588,
+            -0.007695981159727923
+          ],
+          "preferred_sign": "negative",
+          "paired_training_verified": true,
+          "estimate": -0.010682633626856841,
+          "samples": 512,
+          "episodes": 415
+        },
+        "real_state_mse": {
+          "estimate_from_aggregate": 0.0005264356732368469,
+          "ci95": [
+            -7.837768882302952e-05,
+            0.0011097988149596572
+          ],
+          "preferred_sign": "negative",
+          "paired_training_verified": true,
+          "estimate": 0.0005264290279001216,
+          "samples": 512,
+          "episodes": 415
+        },
+        "mean_minus_real_visual_mse": {
+          "estimate_from_aggregate": 0.004410201159771532,
+          "ci95": [
+            0.0036439811709793823,
+            0.005186791105942387
+          ],
+          "preferred_sign": "positive",
+          "paired_training_verified": true,
+          "estimate": 0.004410201130667701,
+          "samples": 512,
+          "episodes": 415
+        },
+        "swapped_minus_real_visual_mse": {
+          "estimate_from_aggregate": 0.006641074491199106,
+          "ci95": [
+            0.005367829391113915,
+            0.008011011012791839
+          ],
+          "preferred_sign": "positive",
+          "paired_training_verified": true,
+          "estimate": 0.006641074607614428,
+          "samples": 512,
+          "episodes": 415
+        }
+      }
+    },
+    "kl_marginal_effect": {
+      "coefficients": {
+        "kl_only": 0.5,
+        "baseline": -0.5,
+        "kl_mse": 0.5,
+        "mse_only": -0.5
+      },
+      "metrics": {
+        "real_visual_mse": {
+          "estimate_from_aggregate": -0.0029324889183044434,
+          "ci95": [
+            -0.0035499821232713702,
+            -0.0023417929289797114
+          ],
+          "preferred_sign": "negative",
+          "paired_training_verified": true,
+          "estimate": -0.0029324913703021593,
+          "samples": 512,
+          "episodes": 415
+        },
+        "real_state_mse": {
+          "estimate_from_aggregate": -0.0005590561777353287,
+          "ci95": [
+            -0.0010035824215930533,
+            -0.00015334668956475431
+          ],
+          "preferred_sign": "negative",
+          "paired_training_verified": true,
+          "estimate": -0.0005590614064487909,
+          "samples": 512,
+          "episodes": 415
+        },
+        "mean_minus_real_visual_mse": {
+          "estimate_from_aggregate": 0.0022029105384717695,
+          "ci95": [
+            0.001821417810471712,
+            0.002589696949045803
+          ],
+          "preferred_sign": "positive",
+          "paired_training_verified": true,
+          "estimate": 0.0022029105239198543,
+          "samples": 512,
+          "episodes": 415
+        },
+        "swapped_minus_real_visual_mse": {
+          "estimate_from_aggregate": 0.003314612913527526,
+          "ci95": [
+            0.002678452423172975,
+            0.003999763182277533
+          ],
+          "preferred_sign": "positive",
+          "paired_training_verified": true,
+          "estimate": 0.003314612971735187,
+          "samples": 512,
+          "episodes": 415
+        }
+      }
+    },
+    "mse_marginal_effect": {
+      "coefficients": {
+        "mse_only": 0.5,
+        "baseline": -0.5,
+        "kl_mse": 0.5,
+        "kl_only": -0.5
+      },
+      "metrics": {
+        "real_visual_mse": {
+          "estimate_from_aggregate": -0.007750123739242554,
+          "ci95": [
+            -0.01046850436444251,
+            -0.005080409087510239
+          ],
+          "preferred_sign": "negative",
+          "paired_training_verified": true,
+          "estimate": -0.007750142256554682,
+          "samples": 512,
+          "episodes": 415
+        },
+        "real_state_mse": {
+          "estimate_from_aggregate": 0.0010854918509721756,
+          "ci95": [
+            0.0006463880834829272,
+            0.0015249064736245531
+          ],
+          "preferred_sign": "negative",
+          "paired_training_verified": true,
+          "estimate": 0.0010854904343489125,
+          "samples": 512,
+          "episodes": 415
+        },
+        "mean_minus_real_visual_mse": {
+          "estimate_from_aggregate": 0.0022072906212997623,
+          "ci95": [
+            0.0018230626714322916,
+            0.002595887349276256
+          ],
+          "preferred_sign": "positive",
+          "paired_training_verified": true,
+          "estimate": 0.002207290606747847,
+          "samples": 512,
+          "episodes": 415
+        },
+        "swapped_minus_real_visual_mse": {
+          "estimate_from_aggregate": 0.00332646157767158,
+          "ci95": [
+            0.0026892177570012107,
+            0.004011572793418649
+          ],
+          "preferred_sign": "positive",
+          "paired_training_verified": true,
+          "estimate": 0.003326461635879241,
+          "samples": 512,
+          "episodes": 415
+        }
+      }
+    },
+    "interaction": {
+      "coefficients": {
+        "kl_mse": 1,
+        "kl_only": -1,
+        "mse_only": -1,
+        "baseline": 1
+      },
+      "metrics": {
+        "real_visual_mse": {
+          "estimate_from_aggregate": -0.004507780075073242,
+          "ci95": [
+            -0.005603615941611462,
+            -0.0034220899055049103
+          ],
+          "preferred_sign": "negative",
+          "paired_training_verified": true,
+          "estimate": -0.004507767022005282,
+          "samples": 512,
+          "episodes": 415
+        },
+        "real_state_mse": {
+          "estimate_from_aggregate": -0.0005075894296169281,
+          "ci95": [
+            -0.0012595812859231505,
+            0.0002625060952938044
+          ],
+          "preferred_sign": "negative",
+          "paired_training_verified": true,
+          "estimate": -0.0005075873809232689,
+          "samples": 512,
+          "episodes": 415
+        },
+        "mean_minus_real_visual_mse": {
+          "estimate_from_aggregate": 0.00440825849364046,
+          "ci95": [
+            0.0036426895754249062,
+            0.005178386559597917
+          ],
+          "preferred_sign": "positive",
+          "paired_training_verified": true,
+          "estimate": 0.00440825846453663,
+          "samples": 512,
+          "episodes": 415
+        },
+        "swapped_minus_real_visual_mse": {
+          "estimate_from_aggregate": 0.006641278887400404,
+          "ci95": [
+            0.005367191092570003,
+            0.008012843115995896
+          ],
+          "preferred_sign": "positive",
+          "paired_training_verified": true,
+          "estimate": 0.0066412790038157254,
+          "samples": 512,
+          "episodes": 415
+        }
+      }
+    }
+  },
+  "trajectory": [
+    {
+      "arm": "baseline",
+      "step": 500,
+      "real_visual_mse": 0.534176230430603,
+      "real_state_mse": 0.09247615188360214,
+      "mean_minus_real_visual_mse": -3.5381526686251163e-06,
+      "swapped_minus_real_visual_mse": 6.829504854977131e-07,
+      "mu_variance_sum": 2.2076812991272133e-05,
+      "pre_norm_coordinate_std": 120.32904963610925,
+      "trajectory_CIs": "not recomputed; final3000 intervals are in metrics"
+    },
+    {
+      "arm": "baseline",
+      "step": 1000,
+      "real_visual_mse": 0.4237704873085022,
+      "real_state_mse": 0.07886303961277008,
+      "mean_minus_real_visual_mse": 2.1982123143970966e-06,
+      "swapped_minus_real_visual_mse": 6.212503649294376e-07,
+      "mu_variance_sum": 1.7977381693785266e-05,
+      "pre_norm_coordinate_std": 375.1545006960282,
+      "trajectory_CIs": "not recomputed; final3000 intervals are in metrics"
+    },
+    {
+      "arm": "baseline",
+      "step": 1500,
+      "real_visual_mse": 0.3909369707107544,
+      "real_state_mse": 0.07218371331691742,
+      "mean_minus_real_visual_mse": -2.5091576389968395e-06,
+      "swapped_minus_real_visual_mse": 8.016650099307299e-07,
+      "mu_variance_sum": 6.643920213305125e-06,
+      "pre_norm_coordinate_std": 561.5328461333812,
+      "trajectory_CIs": "not recomputed; final3000 intervals are in metrics"
+    },
+    {
+      "arm": "baseline",
+      "step": 2000,
+      "real_visual_mse": 0.3817838430404663,
+      "real_state_mse": 0.060128092765808105,
+      "mean_minus_real_visual_mse": 2.3753964342176914e-06,
+      "swapped_minus_real_visual_mse": 4.1746534407138824e-07,
+      "mu_variance_sum": 2.1613132524549865e-05,
+      "pre_norm_coordinate_std": 732.0518091935278,
+      "trajectory_CIs": "not recomputed; final3000 intervals are in metrics"
+    },
+    {
+      "arm": "baseline",
+      "step": 2500,
+      "real_visual_mse": 0.3712690472602844,
+      "real_state_mse": 0.06110556796193123,
+      "mean_minus_real_visual_mse": 8.852803148329258e-07,
+      "swapped_minus_real_visual_mse": -1.534441253170371e-06,
+      "mu_variance_sum": 4.550296760582582e-05,
+      "pre_norm_coordinate_std": 875.6275717295338,
+      "trajectory_CIs": "not recomputed; final3000 intervals are in metrics"
+    },
+    {
+      "arm": "baseline",
+      "step": 3000,
+      "real_visual_mse": 0.36871573328971863,
+      "real_state_mse": 0.06142774224281311,
+      "mean_minus_real_visual_mse": 7.819035090506077e-07,
+      "swapped_minus_real_visual_mse": -5.638576112687588e-07,
+      "mu_variance_sum": 0.00035530901675481764,
+      "pre_norm_coordinate_std": 1172.3165497764749,
+      "trajectory_CIs": "not recomputed; final3000 intervals are in metrics"
+    },
+    {
+      "arm": "kl_only",
+      "step": 500,
+      "real_visual_mse": 0.5340532660484314,
+      "real_state_mse": 0.09206921607255936,
+      "mean_minus_real_visual_mse": 2.0960578694939613e-06,
+      "swapped_minus_real_visual_mse": 7.67875462770462e-07,
+      "mu_variance_sum": 2.6303360665131e-05,
+      "pre_norm_coordinate_std": 118.81905280152553,
+      "trajectory_CIs": "not recomputed; final3000 intervals are in metrics"
+    },
+    {
+      "arm": "kl_only",
+      "step": 1000,
+      "real_visual_mse": 0.42402422428131104,
+      "real_state_mse": 0.07895812392234802,
+      "mean_minus_real_visual_mse": 1.8594437278807163e-07,
+      "swapped_minus_real_visual_mse": 1.1350493878126144e-09,
+      "mu_variance_sum": 3.7345646014349764e-06,
+      "pre_norm_coordinate_std": 370.2362215150828,
+      "trajectory_CIs": "not recomputed; final3000 intervals are in metrics"
+    },
+    {
+      "arm": "kl_only",
+      "step": 1500,
+      "real_visual_mse": 0.39067816734313965,
+      "real_state_mse": 0.07179820537567139,
+      "mean_minus_real_visual_mse": -2.4393084459006786e-06,
+      "swapped_minus_real_visual_mse": -1.3865064829587936e-07,
+      "mu_variance_sum": 1.0594807437083112e-05,
+      "pre_norm_coordinate_std": 562.6016154926363,
+      "trajectory_CIs": "not recomputed; final3000 intervals are in metrics"
+    },
+    {
+      "arm": "kl_only",
+      "step": 2000,
+      "real_visual_mse": 0.38147592544555664,
+      "real_state_mse": 0.05975266918540001,
+      "mean_minus_real_visual_mse": -2.6718334993347526e-06,
+      "swapped_minus_real_visual_mse": -1.2995005818083882e-06,
+      "mu_variance_sum": 1.008103748714183e-05,
+      "pre_norm_coordinate_std": 722.48613679285,
+      "trajectory_CIs": "not recomputed; final3000 intervals are in metrics"
+    },
+    {
+      "arm": "kl_only",
+      "step": 2500,
+      "real_visual_mse": 0.36965200304985046,
+      "real_state_mse": 0.0601612851023674,
+      "mean_minus_real_visual_mse": 1.6070844139903784e-06,
+      "swapped_minus_real_visual_mse": -1.6678532119840384e-06,
+      "mu_variance_sum": 3.399319749108207e-05,
+      "pre_norm_coordinate_std": 879.2624056901968,
+      "trajectory_CIs": "not recomputed; final3000 intervals are in metrics"
+    },
+    {
+      "arm": "kl_only",
+      "step": 3000,
+      "real_visual_mse": 0.3680371344089508,
+      "real_state_mse": 0.061122480779886246,
+      "mean_minus_real_visual_mse": -4.368048394098878e-07,
+      "swapped_minus_real_visual_mse": -6.590387783944607e-06,
+      "mu_variance_sum": 0.0003617789471244214,
+      "pre_norm_coordinate_std": 1035.7965484897436,
+      "trajectory_CIs": "not recomputed; final3000 intervals are in metrics"
+    },
+    {
+      "arm": "mse_only",
+      "step": 500,
+      "real_visual_mse": 0.48309215903282166,
+      "real_state_mse": 0.09605242311954498,
+      "mean_minus_real_visual_mse": 1.0896474123001099e-06,
+      "swapped_minus_real_visual_mse": 7.726484909653664e-07,
+      "mu_variance_sum": 1.809128179989442e-05,
+      "pre_norm_coordinate_std": 128.32024340477818,
+      "trajectory_CIs": "not recomputed; final3000 intervals are in metrics"
+    },
+    {
+      "arm": "mse_only",
+      "step": 1000,
+      "real_visual_mse": 0.41158124804496765,
+      "real_state_mse": 0.07595684379339218,
+      "mean_minus_real_visual_mse": 2.525834133848548e-06,
+      "swapped_minus_real_visual_mse": 1.2024829629808664e-06,
+      "mu_variance_sum": 1.2451696101674142e-05,
+      "pre_norm_coordinate_std": 415.21936604333644,
+      "trajectory_CIs": "not recomputed; final3000 intervals are in metrics"
+    },
+    {
+      "arm": "mse_only",
+      "step": 1500,
+      "real_visual_mse": 0.39331045746803284,
+      "real_state_mse": 0.07070543617010117,
+      "mean_minus_real_visual_mse": -6.080837920308113e-06,
+      "swapped_minus_real_visual_mse": 1.0287330951541662e-06,
+      "mu_variance_sum": 1.3830335136977651e-05,
+      "pre_norm_coordinate_std": 686.4892700914406,
+      "trajectory_CIs": "not recomputed; final3000 intervals are in metrics"
+    },
+    {
+      "arm": "mse_only",
+      "step": 2000,
+      "real_visual_mse": 0.3735525608062744,
+      "real_state_mse": 0.0601327046751976,
+      "mean_minus_real_visual_mse": 9.578187018632889e-06,
+      "swapped_minus_real_visual_mse": 6.889604264870286e-06,
+      "mu_variance_sum": 3.4225011931022026e-05,
+      "pre_norm_coordinate_std": 881.2177905177771,
+      "trajectory_CIs": "not recomputed; final3000 intervals are in metrics"
+    },
+    {
+      "arm": "mse_only",
+      "step": 2500,
+      "real_visual_mse": 0.3693349063396454,
+      "real_state_mse": 0.06001941114664078,
+      "mean_minus_real_visual_mse": 0.00024347315775230527,
+      "swapped_minus_real_visual_mse": 0.0003033565590158105,
+      "mu_variance_sum": 0.0019416003717732794,
+      "pre_norm_coordinate_std": 1147.8486292000234,
+      "trajectory_CIs": "not recomputed; final3000 intervals are in metrics"
+    },
+    {
+      "arm": "mse_only",
+      "step": 3000,
+      "real_visual_mse": 0.3632194995880127,
+      "real_state_mse": 0.06276702880859375,
+      "mean_minus_real_visual_mse": 3.9432779885828495e-06,
+      "swapped_minus_real_visual_mse": 5.2582763601094484e-06,
+      "mu_variance_sum": 3.4805621336360085e-05,
+      "pre_norm_coordinate_std": 1563.7946551667892,
+      "trajectory_CIs": "not recomputed; final3000 intervals are in metrics"
+    },
+    {
+      "arm": "kl_mse",
+      "step": 500,
+      "real_visual_mse": 0.4827090799808502,
+      "real_state_mse": 0.09362301230430603,
+      "mean_minus_real_visual_mse": -5.337555194273591e-06,
+      "swapped_minus_real_visual_mse": -1.270294887945056e-06,
+      "mu_variance_sum": 2.8035110931899495e-05,
+      "pre_norm_coordinate_std": 125.8255256505817,
+      "trajectory_CIs": "not recomputed; final3000 intervals are in metrics"
+    },
+    {
+      "arm": "kl_mse",
+      "step": 1000,
+      "real_visual_mse": 0.4117532968521118,
+      "real_state_mse": 0.07649985700845718,
+      "mean_minus_real_visual_mse": 3.54123767465353e-06,
+      "swapped_minus_real_visual_mse": -7.07223080098629e-09,
+      "mu_variance_sum": 1.5032146305815239e-05,
+      "pre_norm_coordinate_std": 410.89696634682974,
+      "trajectory_CIs": "not recomputed; final3000 intervals are in metrics"
+    },
+    {
+      "arm": "kl_mse",
+      "step": 1500,
+      "real_visual_mse": 0.3943939208984375,
+      "real_state_mse": 0.07125705480575562,
+      "mean_minus_real_visual_mse": 8.352217264473438e-07,
+      "swapped_minus_real_visual_mse": 4.1394378058612347e-07,
+      "mu_variance_sum": 3.0595518420380596e-06,
+      "pre_norm_coordinate_std": 662.6816757551737,
+      "trajectory_CIs": "not recomputed; final3000 intervals are in metrics"
+    },
+    {
+      "arm": "kl_mse",
+      "step": 2000,
+      "real_visual_mse": 0.3739694058895111,
+      "real_state_mse": 0.060134775936603546,
+      "mean_minus_real_visual_mse": 8.558592526242137e-06,
+      "swapped_minus_real_visual_mse": 1.2657546903938055e-05,
+      "mu_variance_sum": 4.795218093366983e-05,
+      "pre_norm_coordinate_std": 861.1733990279608,
+      "trajectory_CIs": "not recomputed; final3000 intervals are in metrics"
+    },
+    {
+      "arm": "kl_mse",
+      "step": 2500,
+      "real_visual_mse": 0.3675870895385742,
+      "real_state_mse": 0.061048466712236404,
+      "mean_minus_real_visual_mse": 0.0012047997443005443,
+      "swapped_minus_real_visual_mse": 0.0017900911625474691,
+      "mu_variance_sum": 0.04502767430609917,
+      "pre_norm_coordinate_std": 1356.7678759357511,
+      "trajectory_CIs": "not recomputed; final3000 intervals are in metrics"
+    },
+    {
+      "arm": "kl_mse",
+      "step": 3000,
+      "real_visual_mse": 0.35803312063217163,
+      "real_state_mse": 0.06195417791604996,
+      "mean_minus_real_visual_mse": 0.004410983063280582,
+      "swapped_minus_real_visual_mse": 0.006640510633587837,
+      "mu_variance_sum": 0.20233455559062724,
+      "pre_norm_coordinate_std": 2152.844045557522,
+      "trajectory_CIs": "not recomputed; final3000 intervals are in metrics"
+    }
+  ],
+  "source_files": {
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/baseline/run_summary.json": {
+      "sha256": "7360ad08960968115a70cba74c9cc22feb7f627e046817edfc6d9e8f6884bd9a",
+      "size_bytes": 2061
+    },
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/baseline/loss_gradient_components.jsonl": {
+      "sha256": "a7625ab5bd7181f95aa11eccab10073ded06e5b52e326ffd8986051aabe95865",
+      "size_bytes": 3965
+    },
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/baseline/z_validation.jsonl": {
+      "sha256": "0ed8e27184837f548a48e4d5e9ac3a2413e523f8e819b0eb2dc33d6888a0694d",
+      "size_bytes": 8831
+    },
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/baseline/z_validation_step000500.json": {
+      "sha256": "9908d11b3a38735fd10bd4becdbb811b57b3ce361039deae82b6d5e76bba8b6b",
+      "size_bytes": 424241
+    },
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/baseline/z_validation_step001000.json": {
+      "sha256": "6d4372265520ee6bceb34929d7d7f2ba489023ee5867bdaf3b339592643dec74",
+      "size_bytes": 425476
+    },
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/baseline/z_validation_step001500.json": {
+      "sha256": "eb923203692d003936619cc7631a150a6e0c38b4a5edcecc5ef5848d6fa255b8",
+      "size_bytes": 426270
+    },
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/baseline/z_validation_step002000.json": {
+      "sha256": "56aaf668ab14f9193f9f9907fd2ce0b704eb02857f3a95a5c3a7b954cd0572ce",
+      "size_bytes": 426222
+    },
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/baseline/z_validation_step002500.json": {
+      "sha256": "b2f06d21a2771db8acf0b152268521d37a9d98813dce3727aad1268ab5ca4967",
+      "size_bytes": 426687
+    },
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/baseline/z_validation_step003000.json": {
+      "sha256": "8fd7aa942e8f14e9643b9984b50cd46c49ba90e656aa96f93e2d1473b14a0217",
+      "size_bytes": 426496
+    },
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/kl_only/run_summary.json": {
+      "sha256": "608bc73c8dcf10bf706df9f13181d2fdbaa2c88dbd061f8f55cd9e6f2b18432d",
+      "size_bytes": 2068
+    },
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/kl_only/loss_gradient_components.jsonl": {
+      "sha256": "13842da5abd55805672bc473d365a6788df0673437de671a6d43090b02e513ee",
+      "size_bytes": 3974
+    },
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/kl_only/z_validation.jsonl": {
+      "sha256": "16839e448cfc48eb8c2d1cd79fed36bd9b096e3107101232e91d85d99249d4ae",
+      "size_bytes": 8835
+    },
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/kl_only/z_validation_step000500.json": {
+      "sha256": "e636a8362b41c4a5dbb4d8d0db94e9969c618348cb2b82ace0efba07101674d4",
+      "size_bytes": 424182
+    },
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/kl_only/z_validation_step001000.json": {
+      "sha256": "f4922c5e7d0cdf60734e5fbfb425bcc5c99cfadad1e509239fff684bf9406e76",
+      "size_bytes": 425559
+    },
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/kl_only/z_validation_step001500.json": {
+      "sha256": "095425eaca5c9a67c6963b5a1df4dcefca496133555f5e5589120f190d1ca9eb",
+      "size_bytes": 426166
+    },
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/kl_only/z_validation_step002000.json": {
+      "sha256": "8bd2955c410dba3aaa7dbab65a2bb96a79e7601f274669b1542d7404f2c539bf",
+      "size_bytes": 426075
+    },
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/kl_only/z_validation_step002500.json": {
+      "sha256": "ee8f9b16e1c09be5ac32c96dd7f9f3d3f7138629f9364d40ba3f0f1f7bc4f378",
+      "size_bytes": 426748
+    },
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/kl_only/z_validation_step003000.json": {
+      "sha256": "92bf87d7595ca7a217870a2ed605d1f7ce4b4a0e88524bf99bf18ca71015300c",
+      "size_bytes": 426491
+    },
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/mse_only/run_summary.json": {
+      "sha256": "45dc2d985af2a11e3785201415b5fe16d7c3c41f4603f47fbffbe52737cbb2d9",
+      "size_bytes": 2062
+    },
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/mse_only/loss_gradient_components.jsonl": {
+      "sha256": "d0e1590e1c379c7db0d21887e85f8c8780b69a4280baf9eab7b84800d54009e1",
+      "size_bytes": 3962
+    },
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/mse_only/z_validation.jsonl": {
+      "sha256": "9d544a72624ddeb3cbe2c4d6260605db13061e5b109e12d03d6c66396efe4321",
+      "size_bytes": 8845
+    },
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/mse_only/z_validation_step000500.json": {
+      "sha256": "75e67c4b6ad0c48980076217e8ef9d3e00cf8ca3e608a0e068b3c3f12a97d2c4",
+      "size_bytes": 423904
+    },
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/mse_only/z_validation_step001000.json": {
+      "sha256": "cdc4aac60a2052bcff4e95df2a1d53eefadbd63d11c59e56d81db70f9203242e",
+      "size_bytes": 425401
+    },
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/mse_only/z_validation_step001500.json": {
+      "sha256": "6c4864ca2edf4ba62689a709f93f2eddd7fc19ec48c9d0cb19a2aa0f7ff0ea6d",
+      "size_bytes": 425709
+    },
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/mse_only/z_validation_step002000.json": {
+      "sha256": "6dcb44a725e4fd6b4d8cb18d66fabfbf2137a1c2efbe0c7fdb345930c2dc002e",
+      "size_bytes": 426382
+    },
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/mse_only/z_validation_step002500.json": {
+      "sha256": "385e14ed3f8b17f9ddfd20fe065b43f5ce3a9d3f972f87d1b33eac113f7bcfe7",
+      "size_bytes": 426354
+    },
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/mse_only/z_validation_step003000.json": {
+      "sha256": "8836394e7749d21fc8d20a0704c4a168889ac0fb3b5898a002f0632fa3ffb312",
+      "size_bytes": 426585
+    },
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/kl_mse/run_summary.json": {
+      "sha256": "cca70f60108529d127951514f27b33b103a69210833273d0b7666f3682c9f021",
+      "size_bytes": 2066
+    },
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/kl_mse/loss_gradient_components.jsonl": {
+      "sha256": "c5a2cb627810a17e2bda34201b54c847877206ecd52cc6811e40a0700ef26afb",
+      "size_bytes": 3979
+    },
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/kl_mse/z_validation.jsonl": {
+      "sha256": "607427ab4949d8128d58d578ec67a58ad740bc28603ecdce4ece425317348b41",
+      "size_bytes": 8809
+    },
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/kl_mse/z_validation_step000500.json": {
+      "sha256": "a247a31365b3ce984ca5836631d3af719d84e9c572d92657673169a95b7e8fb1",
+      "size_bytes": 423956
+    },
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/kl_mse/z_validation_step001000.json": {
+      "sha256": "423dabd32174b0653da3b33c6089a49e7bd35febbe32cfaf8e72f3e9d4356ca3",
+      "size_bytes": 425459
+    },
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/kl_mse/z_validation_step001500.json": {
+      "sha256": "a751e71db4b45b8794ba2af5ebedddc96fc13702a6ea444fbbba5c4a4149583a",
+      "size_bytes": 425687
+    },
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/kl_mse/z_validation_step002000.json": {
+      "sha256": "9f11749729d8103859b7cd8cc9588312cca43e53fe8bfb19a3f6d071935eb288",
+      "size_bytes": 426282
+    },
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/kl_mse/z_validation_step002500.json": {
+      "sha256": "9e932a6a5fd16557d07684fb06579113c6281a979532b6980736097a8c66d91e",
+      "size_bytes": 426098
+    },
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/kl_mse/z_validation_step003000.json": {
+      "sha256": "412a16f2c2506014a950a44b1a698f79fd03e075ea0192b6416ddada3715bcd5",
+      "size_bytes": 425571
+    }
+  },
+  "limitations": [
+    "Fixed trained weights and one seed; conditional episode bootstrap does not cover training-seed variability, donor permutation variability, mixed-precision bias or multiple comparisons.",
+    "Global validation-mean code and fixed different-episode swap are diagnostic interventions, not separately trained predictors.",
+    "Positive mean/swap gaps demonstrate per-example-code utility under this BF16 evaluation; they do not by themselves prove action semantics or uniquely future-derived information. Current-only and high-motion FP32 controls remain needed.",
+    "The1% rule is only the continuation budget gate and not a definition of the z problem being solved.",
+    "Final FP32 evaluator has not produced a completed full comparison; parent is investigating its native/cache numerical parity failure.",
+    "Cross-arm comparisons use common visual/state MSE. Native SmoothL1 and MSE objective values in the preserved gradient records are not directly comparable."
+  ],
+  "all24_periodic_validation_row_and_donor_identities_match": true
+}

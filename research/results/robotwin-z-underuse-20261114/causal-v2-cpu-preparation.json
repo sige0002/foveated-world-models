@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "device": "cpu",
+  "upstream_vae_sha256": "827f96892efd9b10f6942ea78ab294ff39b0a91a32a61cbdd93cac46e6f9a5ff",
+  "sampled_hook_matches_upstream_outputs_and_all_parameter_input_gradients_exact": true,
+  "mu_only_matches_manual_mu_plus_kl_parameter_input_gradients_exact": true,
+  "sampled_and_mu_only_rng_after_equal": true,
+  "sampled_and_mu_only_consumed_epsilon_sha256_equal": true,
+  "epsilon_sha256": "c1d042d6384ebfff28db9ad38c981f997134d3f0692535433f3a1ab7bea1819d",
+  "radial_geometry_known_case": {
+    "samples": 2,
+    "dimensions": 2,
+    "mean_vector_norm": 3.3541019662496847,
+    "mean_sample_norm": 3.3541019662496847,
+    "coordinate_std_mean": 0.75,
+    "between_example_variance_sum": 1.25,
+    "between_example_variance_fraction": 0.1,
+    "radial_fraction_of_between_example_variation": 1.0000000000000002,
+    "coordinate_centered_direction_variance_sum": 0.0
+  },
+  "cuda_initialized": false
+}

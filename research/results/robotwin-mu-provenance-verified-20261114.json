@@ -1,0 +1,60 @@
+{
+  "verified": true,
+  "data_contract": {
+    "source_commit": "c12168d9077edea67fe7c1b70d08b80b8e65a9c8",
+    "source_patch_sha256": "7fa893260a313e977a4e4476a794a51badb17493ca16a97601d21f87db0df808",
+    "data_root": "/media/sadasue/SSD1/foveated-world-models/research/official-data-contract-audit-20261113/robotwin-qfix-data/robotwin_merged",
+    "video_target": "/media/sadasue/SSD1/foveated-world-models/research/official-data-contract-audit-20261113/sft-subsets/robotwin_merged/videos",
+    "qfix_audit_sha256": "213c27b784043042172915c21b5c6522658d9ecf623c514597f62d805ee22a4e",
+    "episode_metadata_sha256": {
+      "meta/episodes/chunk-000/file-000.parquet": "1cdef62eb5eb7b7a39e0fad51f250150351359090dc03ea4203a8e62dfcef072"
+    },
+    "split_sha256": "c75f6d4ea34a34e8e2d67682da3fc3ebc00d733957486fea6f954931b0a9ed35",
+    "embodiment_id": 1,
+    "state_valid_dim": 16,
+    "state_padded_dim": 32,
+    "target": "future-minus-current including grippers",
+    "state_output_scale": 2.0,
+    "normalization": "upstream dataset statistics; XYZ/gripper minmax, quaternion passthrough",
+    "frame_dt_sec": 1.6,
+    "initialization": "fresh; frozen local DINOv3 only"
+  },
+  "cache_sha256": "eafacc5cea01814ec8c12f3e0420348a9da7bc12deeaf7cd9f0bb3d952733c15",
+  "identity_sha256": "1c04ef52284a2e86b4e60b80de8b54dae93cbe00f11792fe67de9149a9eacd75",
+  "samples": 512,
+  "episodes": 415,
+  "models": {
+    "official": {
+      "checkpoint": "/media/sadasue/SSD1/foveated-world-models/models/lawam-lam-bd993da/checkpoints/pytorch_model.pt",
+      "step": null,
+      "checkpoint_sha256": "57c31dcba13c2998c4e866cdcfc427f14ae3c1b762a586778276e2100b48af88",
+      "posterior_codes_sha256": "7e0efcbcc3066483fcda5414f0df5427cbf3de2a7ee4666d03df76e9320c9f21",
+      "cached_mu_shape": [
+        512,
+        1,
+        32
+      ]
+    },
+    "kl_mse": {
+      "checkpoint": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/kl_mse/checkpoints/final.ckpt",
+      "step": 3000,
+      "checkpoint_sha256": "157e4cf9b2906c9260096e19b406b80b1014811a77202b1091442053e431d10e",
+      "posterior_codes_sha256": "696c60dae07d78855651cf6d957af7b776f3cffae5827fd913e56c2ef2f0ebb9",
+      "cached_mu_shape": [
+        512,
+        1,
+        32
+      ]
+    }
+  },
+  "checks": [
+    "data and resolved videos match RoboTwin contract",
+    "metadata info SHA matches protocol",
+    "cache file SHA matches manifest",
+    "all 512 row identities match across features, candidate codes, official codes and outputs",
+    "all 415 episodes belong to held-out RoboTwin split; no train overlap",
+    "all future frame indices match clipped48frame horizon",
+    "512 pixel hashes present from cache construction"
+  ],
+  "scope": "Read-only provenance recheck; no new video decoding or model inference in this CPU script."
+}

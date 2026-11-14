@@ -44,8 +44,13 @@ Stage 1ではIDMが正解未来を見るため、主評価は**未来由来のz�
 | [公式配布重みとVAEの追加診断](docs/native-posterior-investigation.md) | 公式はz定数化でMSE +43%。ローカルのノイズ・層別変動・前処理差を検証 |
 | [公式実装との比較](docs/official-implementation-comparison.md) | 同じ重みでz・予測・勾配が一致。状態前処理と学習条件の相違 |
 | [z利用の同条件比較](docs/z-utility-matched-results.md) | 共同学習・外付け・定数学習対照と、ローカル元モデルのz診断 |
+| [RoboTwinのz集中の原因調査](research/results/robotwin-collapse-cause-assessment-20261114.md) | 公式重みとの比較、IDMのhead集中、確認済み機構と未確定の学習原因 |
+| [RoboTwin追加学習の比較](docs/robotwin-data-step-continuation-20261114.md) | 既存・未投入ペアと2つのseed、復旧履歴、checkpointと評価の対応 |
 | [実験計画](docs/experiments.md) | 基準、比較実験、評価指標、進む・見直す判断 |
 | [重点関連研究](docs/related-work.md) | LaWAM Stage 1の詳細と、情報分離・中心視野に関する先行研究 |
+| [潜在flow予測の実験](docs/stage1-latent-flow.md) | 直接予測・反復回帰・flowの実装、予備実験、先行研究との差と検証条件 |
+| [Stage 1の研究案比較](docs/stage1-research-ideas.md) | IDMの時間容量配分、カメラ分離、LaWMの予測構造と先行研究・反証実験 |
+| [Stage 1重点サーベイ](surveys/stage1-research/survey.csv) | 54件の根拠付き整理。既存調査の再利用と今回の本文確認範囲を明記 |
 | [統合論文サーベイ](surveys/architecture/survey.csv) | 既存の広範な文献調査111件 |
 
 統合サーベイは2026年11月11日以前のWAM・VLAなどを対象とする選定調査で、現在のStage 1研究の採用文献だけを集めたものではありません。追加の重点文献は関連研究ノートを参照してください。CSVのレビュー済み表示は文献抽出の確認を意味し、論文の実験結果を独立再現したものではありません。

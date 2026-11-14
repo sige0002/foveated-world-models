@@ -1,0 +1,27 @@
+{
+  "before": {
+    "MemFree": 767758336,
+    "MemAvailable": 39375138816,
+    "Cached": 38093230080,
+    "Dirty": 2171723776
+  },
+  "cuda_free_before": 1184370688,
+  "allocation_bytes": 2147483648,
+  "scope": "bounded allocation-only resource probe; no model or optimizer",
+  "allocation_and_touch_passed": true,
+  "during": {
+    "MemFree": 1289711616,
+    "MemAvailable": 36591820800,
+    "Cached": 35305144320,
+    "Dirty": 2121711616
+  },
+  "peak_allocated": 2147483648,
+  "cuda_free_during": 1289711616,
+  "after": {
+    "MemFree": 3454906368,
+    "MemAvailable": 38757015552,
+    "Cached": 35305144320,
+    "Dirty": 2121711616
+  },
+  "cuda_free_after": 3454906368
+}

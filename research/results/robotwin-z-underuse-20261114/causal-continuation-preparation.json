@@ -1,0 +1,356 @@
+{
+  "prepared_at_utc": "2026-11-13 21:14:20 UTC",
+  "coordinator_sha256": "70550b2396a71d8627f757b81d43b05e2dfd9bcfc9a32740c0ccb61924e3a2f8",
+  "contract": "research/results/robotwin-z-underuse-20261114/causal-continuation-contract-v3.json",
+  "contract_sha256": "aee462707613d4883c945ba06f615d9644ddeb0931d8b1eda8d3b45b6495d7f7",
+  "synthetic_gate_cases_passed": 21,
+  "passed_cases": [
+    "all four OR gates and strict threshold/CI boundaries",
+    "malformed/nonfinite/missing evidence fails closed",
+    "preflight effective configuration equality",
+    "mock exactly four launches",
+    "resource drop after one mock launch prevents remaining launches",
+    "partial JSON record waits for completion",
+    "missing initialization or observed factor evidence fails closed",
+    "durable intent blocks duplicate launch"
+  ],
+  "mock_launch_report": "research/results/robotwin-z-underuse-20261114/causal-continuation-dry-tests.json",
+  "check_only": {
+    "contract_valid": true,
+    "readiness": {
+      "arms": {
+        "baseline": {
+          "complete": false,
+          "original_process_active": true
+        },
+        "kl_only": {
+          "complete": false,
+          "original_process_active": true
+        },
+        "mse_only": {
+          "complete": false,
+          "original_process_active": true
+        },
+        "kl_mse": {
+          "complete": false,
+          "original_process_active": true
+        }
+      },
+      "evaluation_results_exist": false,
+      "active_original_or_evaluator_processes": [
+        {
+          "pid": 84620,
+          "state": "S",
+          "start_ticks": "650831",
+          "command": [
+            "/home/sadasue/foveated-world-models/.venv/bin/python",
+            "-u",
+            "/home/sadasue/foveated-world-models/research/train_robotwin_stage1.py",
+            "--config",
+            "/home/sadasue/foveated-world-models/configs/robotwin_loss_ablation_20261114/baseline.yaml",
+            "--output",
+            "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/baseline"
+          ]
+        },
+        {
+          "pid": 84621,
+          "state": "S",
+          "start_ticks": "650831",
+          "command": [
+            "/home/sadasue/foveated-world-models/.venv/bin/python",
+            "-u",
+            "/home/sadasue/foveated-world-models/research/train_robotwin_stage1.py",
+            "--config",
+            "/home/sadasue/foveated-world-models/configs/robotwin_loss_ablation_20261114/kl_only.yaml",
+            "--output",
+            "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/kl_only"
+          ]
+        },
+        {
+          "pid": 84622,
+          "state": "R",
+          "start_ticks": "650831",
+          "command": [
+            "/home/sadasue/foveated-world-models/.venv/bin/python",
+            "-u",
+            "/home/sadasue/foveated-world-models/research/train_robotwin_stage1.py",
+            "--config",
+            "/home/sadasue/foveated-world-models/configs/robotwin_loss_ablation_20261114/mse_only.yaml",
+            "--output",
+            "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/mse_only"
+          ]
+        },
+        {
+          "pid": 84623,
+          "state": "S",
+          "start_ticks": "650831",
+          "command": [
+            "/home/sadasue/foveated-world-models/.venv/bin/python",
+            "-u",
+            "/home/sadasue/foveated-world-models/research/train_robotwin_stage1.py",
+            "--config",
+            "/home/sadasue/foveated-world-models/configs/robotwin_loss_ablation_20261114/kl_mse.yaml",
+            "--output",
+            "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/kl_mse"
+          ]
+        },
+        {
+          "pid": 126286,
+          "state": "S",
+          "start_ticks": "991497",
+          "command": [
+            "/home/sadasue/foveated-world-models/.venv/bin/python",
+            "-u",
+            "/home/sadasue/foveated-world-models/research/evaluate_robotwin_loss_ablation_fp32.py",
+            "--runs-root",
+            "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114",
+            "--output",
+            "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/evaluations/final3000-highest-fp32",
+            "--batch-size",
+            "2",
+            "--bootstrap",
+            "4000",
+            "--wait-for-checkpoints"
+          ]
+        },
+        {
+          "pid": 84956,
+          "state": "S",
+          "start_ticks": "652268",
+          "command": [
+            "/home/sadasue/foveated-world-models/.venv/bin/python",
+            "-u",
+            "/home/sadasue/foveated-world-models/research/train_robotwin_stage1.py",
+            "--config",
+            "/home/sadasue/foveated-world-models/configs/robotwin_loss_ablation_20261114/kl_mse.yaml",
+            "--output",
+            "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/kl_mse"
+          ]
+        },
+        {
+          "pid": 84958,
+          "state": "S",
+          "start_ticks": "652269",
+          "command": [
+            "/home/sadasue/foveated-world-models/.venv/bin/python",
+            "-u",
+            "/home/sadasue/foveated-world-models/research/train_robotwin_stage1.py",
+            "--config",
+            "/home/sadasue/foveated-world-models/configs/robotwin_loss_ablation_20261114/kl_mse.yaml",
+            "--output",
+            "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/kl_mse"
+          ]
+        },
+        {
+          "pid": 84963,
+          "state": "S",
+          "start_ticks": "652273",
+          "command": [
+            "/home/sadasue/foveated-world-models/.venv/bin/python",
+            "-u",
+            "/home/sadasue/foveated-world-models/research/train_robotwin_stage1.py",
+            "--config",
+            "/home/sadasue/foveated-world-models/configs/robotwin_loss_ablation_20261114/mse_only.yaml",
+            "--output",
+            "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/mse_only"
+          ]
+        },
+        {
+          "pid": 84965,
+          "state": "S",
+          "start_ticks": "652274",
+          "command": [
+            "/home/sadasue/foveated-world-models/.venv/bin/python",
+            "-u",
+            "/home/sadasue/foveated-world-models/research/train_robotwin_stage1.py",
+            "--config",
+            "/home/sadasue/foveated-world-models/configs/robotwin_loss_ablation_20261114/kl_only.yaml",
+            "--output",
+            "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/kl_only"
+          ]
+        },
+        {
+          "pid": 84967,
+          "state": "S",
+          "start_ticks": "652274",
+          "command": [
+            "/home/sadasue/foveated-world-models/.venv/bin/python",
+            "-u",
+            "/home/sadasue/foveated-world-models/research/train_robotwin_stage1.py",
+            "--config",
+            "/home/sadasue/foveated-world-models/configs/robotwin_loss_ablation_20261114/mse_only.yaml",
+            "--output",
+            "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/mse_only"
+          ]
+        },
+        {
+          "pid": 84972,
+          "state": "S",
+          "start_ticks": "652275",
+          "command": [
+            "/home/sadasue/foveated-world-models/.venv/bin/python",
+            "-u",
+            "/home/sadasue/foveated-world-models/research/train_robotwin_stage1.py",
+            "--config",
+            "/home/sadasue/foveated-world-models/configs/robotwin_loss_ablation_20261114/kl_only.yaml",
+            "--output",
+            "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/kl_only"
+          ]
+        },
+        {
+          "pid": 84981,
+          "state": "S",
+          "start_ticks": "652280",
+          "command": [
+            "/home/sadasue/foveated-world-models/.venv/bin/python",
+            "-u",
+            "/home/sadasue/foveated-world-models/research/train_robotwin_stage1.py",
+            "--config",
+            "/home/sadasue/foveated-world-models/configs/robotwin_loss_ablation_20261114/baseline.yaml",
+            "--output",
+            "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/baseline"
+          ]
+        },
+        {
+          "pid": 84983,
+          "state": "S",
+          "start_ticks": "652281",
+          "command": [
+            "/home/sadasue/foveated-world-models/.venv/bin/python",
+            "-u",
+            "/home/sadasue/foveated-world-models/research/train_robotwin_stage1.py",
+            "--config",
+            "/home/sadasue/foveated-world-models/configs/robotwin_loss_ablation_20261114/baseline.yaml",
+            "--output",
+            "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/baseline"
+          ]
+        },
+        {
+          "pid": 121599,
+          "state": "S",
+          "start_ticks": "952460",
+          "command": [
+            "/home/sadasue/foveated-world-models/.venv/bin/python",
+            "-u",
+            "/home/sadasue/foveated-world-models/research/train_robotwin_stage1.py",
+            "--config",
+            "/home/sadasue/foveated-world-models/configs/robotwin_loss_ablation_20261114/kl_only.yaml",
+            "--output",
+            "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/kl_only"
+          ]
+        },
+        {
+          "pid": 121600,
+          "state": "S",
+          "start_ticks": "952461",
+          "command": [
+            "/home/sadasue/foveated-world-models/.venv/bin/python",
+            "-u",
+            "/home/sadasue/foveated-world-models/research/train_robotwin_stage1.py",
+            "--config",
+            "/home/sadasue/foveated-world-models/configs/robotwin_loss_ablation_20261114/mse_only.yaml",
+            "--output",
+            "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/mse_only"
+          ]
+        },
+        {
+          "pid": 121603,
+          "state": "S",
+          "start_ticks": "952462",
+          "command": [
+            "/home/sadasue/foveated-world-models/.venv/bin/python",
+            "-u",
+            "/home/sadasue/foveated-world-models/research/train_robotwin_stage1.py",
+            "--config",
+            "/home/sadasue/foveated-world-models/configs/robotwin_loss_ablation_20261114/baseline.yaml",
+            "--output",
+            "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/baseline"
+          ]
+        },
+        {
+          "pid": 121605,
+          "state": "S",
+          "start_ticks": "952464",
+          "command": [
+            "/home/sadasue/foveated-world-models/.venv/bin/python",
+            "-u",
+            "/home/sadasue/foveated-world-models/research/train_robotwin_stage1.py",
+            "--config",
+            "/home/sadasue/foveated-world-models/configs/robotwin_loss_ablation_20261114/kl_only.yaml",
+            "--output",
+            "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/kl_only"
+          ]
+        },
+        {
+          "pid": 121606,
+          "state": "S",
+          "start_ticks": "952464",
+          "command": [
+            "/home/sadasue/foveated-world-models/.venv/bin/python",
+            "-u",
+            "/home/sadasue/foveated-world-models/research/train_robotwin_stage1.py",
+            "--config",
+            "/home/sadasue/foveated-world-models/configs/robotwin_loss_ablation_20261114/mse_only.yaml",
+            "--output",
+            "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/mse_only"
+          ]
+        },
+        {
+          "pid": 121611,
+          "state": "S",
+          "start_ticks": "952465",
+          "command": [
+            "/home/sadasue/foveated-world-models/.venv/bin/python",
+            "-u",
+            "/home/sadasue/foveated-world-models/research/train_robotwin_stage1.py",
+            "--config",
+            "/home/sadasue/foveated-world-models/configs/robotwin_loss_ablation_20261114/baseline.yaml",
+            "--output",
+            "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/baseline"
+          ]
+        },
+        {
+          "pid": 121693,
+          "state": "S",
+          "start_ticks": "952717",
+          "command": [
+            "/home/sadasue/foveated-world-models/.venv/bin/python",
+            "-u",
+            "/home/sadasue/foveated-world-models/research/train_robotwin_stage1.py",
+            "--config",
+            "/home/sadasue/foveated-world-models/configs/robotwin_loss_ablation_20261114/kl_mse.yaml",
+            "--output",
+            "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/kl_mse"
+          ]
+        },
+        {
+          "pid": 121695,
+          "state": "S",
+          "start_ticks": "952720",
+          "command": [
+            "/home/sadasue/foveated-world-models/.venv/bin/python",
+            "-u",
+            "/home/sadasue/foveated-world-models/research/train_robotwin_stage1.py",
+            "--config",
+            "/home/sadasue/foveated-world-models/configs/robotwin_loss_ablation_20261114/kl_mse.yaml",
+            "--output",
+            "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/kl_mse"
+          ]
+        }
+      ],
+      "ready": false
+    },
+    "resources": {
+      "mount": {
+        "target": "/media/sadasue/SSD1",
+        "source": "/dev/sda1",
+        "fstype": "ext4"
+      },
+      "ram_available_bytes": 25247621120,
+      "ssd_free_bytes": 271350108160
+    },
+    "training_jobs_launched": 0
+  },
+  "actual_training_jobs_launched": 0,
+  "coordinator_run_invoked": false
+}

@@ -1,0 +1,32 @@
+{
+  "train": {
+    "pairs": 9201,
+    "pairs_with_rpy_branch_crossing": 2672,
+    "pairs_with_branch_crossing_and_wrapped_change_under_0_2_rad": 1729,
+    "per_angle_branch_crossings": [
+      1918,
+      0,
+      0,
+      831,
+      0,
+      0
+    ],
+    "normalized_state_target_energy_fraction_at_branch_crossings": 0.3915539085865021,
+    "note": "Component-wise wrapped Euler delta is a discontinuity diagnostic, not SO(3) rotation distance or a proposed replacement label."
+  },
+  "validation": {
+    "pairs": 950,
+    "pairs_with_rpy_branch_crossing": 276,
+    "pairs_with_branch_crossing_and_wrapped_change_under_0_2_rad": 211,
+    "per_angle_branch_crossings": [
+      137,
+      0,
+      0,
+      147,
+      0,
+      0
+    ],
+    "normalized_state_target_energy_fraction_at_branch_crossings": 0.3774012625217438,
+    "note": "Component-wise wrapped Euler delta is a discontinuity diagnostic, not SO(3) rotation distance or a proposed replacement label."
+  }
+}

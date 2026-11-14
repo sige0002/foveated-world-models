@@ -1,0 +1,12 @@
+/home/sadasue/foveated-world-models/.venv/lib/python3.12/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+Traceback (most recent call last):
+  File "/home/sadasue/foveated-world-models/research/train_codec_predictor.py", line 161, in <module>
+    main()
+  File "/home/sadasue/foveated-world-models/research/train_codec_predictor.py", line 114, in main
+    assert identity(targets['rows'])==identity(data['train']['rows'])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sadasue/foveated-world-models/research/train_codec_predictor.py", line 113, in <lambda>
+    identity=lambda rows:[(r['episode'],r['index'],r['endpoint_indices']) for r in rows]
+                                                   ~^^^^^^^^^^^^^^^^^^^^
+KeyError: 'endpoint_indices'

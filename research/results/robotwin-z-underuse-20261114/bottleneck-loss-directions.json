@@ -1,0 +1,431 @@
+{
+  "complete": true,
+  "reports": {
+    "local": {
+      "samples": 128,
+      "query_mean_norm": 28438.498061415383,
+      "query_future_replacement_energy": 254304.74416802803,
+      "projected_mean_norm": 109019.88719618911,
+      "projected_coordinate_std_mean": 19270.43394359292,
+      "projected_future_replacement_energy": 1613832.7812013996,
+      "projection_transmission_vs_equal_norm_isotropic_expectation": 285.88806254300175,
+      "projected_displacement_coordinate_mean_energy": 307.81376178438416,
+      "projected_displacement_radial_energy": 1548633.4803167155,
+      "projected_displacement_tangent_energy": 64891.48712289924,
+      "radial_fraction_of_coordinate_centered_displacement": 0.9597827809098791,
+      "layer_norm_affine_gamma_abs_mean": 1.0004831124097109,
+      "layer_norm_affine_gamma_abs_min": 0.882310152053833,
+      "layer_norm_displacement_energy": 0.00017319847568580818,
+      "layer_norm_jacobian_relative_squared_error": 0.0029409999656564113,
+      "mu_displacement_energy": 4.2986610239886426e-05,
+      "mu_displacement_mahalanobis_squared_mean": 0.0019705399769847096,
+      "posterior_symmetric_kl_mean": 0.001018301360102778,
+      "unclamped_logvar_min": -5.0809894596441945,
+      "unclamped_logvar_max": -3.285669918063487,
+      "logvar_clamped_fraction": 0.0,
+      "mu_weight_frobenius_norm": 2.928201160379463,
+      "out_proj_weight_frobenius_norm": 4.767646017244808,
+      "normalization_component_interventions": {
+        "coordinate_mean_only": {
+          "input_displacement_energy": 307.81376178438416,
+          "mu_displacement_energy": 1.1894009191902555e-31
+        },
+        "radial_only": {
+          "input_displacement_energy": 1548633.4803167155,
+          "mu_displacement_energy": 3.4741331168496024e-31
+        },
+        "tangent_only": {
+          "input_displacement_energy": 64891.48712289924,
+          "mu_displacement_energy": 4.350961319118341e-05
+        },
+        "full_displacement": {
+          "input_displacement_energy": 1613832.7812013996,
+          "mu_displacement_energy": 4.2986610239886426e-05
+        }
+      },
+      "loss_gradient_directions": [
+        {
+          "start": 0,
+          "draw": 0,
+          "losses": {
+            "image": 0.31920719146728516,
+            "state": 0.09498588740825653,
+            "kl": 0.002371695591136813
+          },
+          "node_gradient_norms": {
+            "image": 8.177388513707767e-08,
+            "state": 4.658401519184218e-07,
+            "kl": 3.322267825529109e-09
+          },
+          "pairwise_cosines": {
+            "image__state": 0.206407467050263,
+            "image__kl": 0.1610217353712031,
+            "state__kl": 0.1532988586474756
+          },
+          "kl_norm_over_image_plus_state": 0.006789765651069151,
+          "kl_cosine_with_image_plus_state": 0.1728576188582187
+        },
+        {
+          "start": 0,
+          "draw": 1,
+          "losses": {
+            "image": 0.31917041540145874,
+            "state": 0.08959253132343292,
+            "kl": 0.002371695591136813
+          },
+          "node_gradient_norms": {
+            "image": 8.94936702989443e-08,
+            "state": 3.985586136210073e-07,
+            "kl": 3.322267825529109e-09
+          },
+          "pairwise_cosines": {
+            "image__state": 0.06961811524702413,
+            "image__kl": 0.14815705381794428,
+            "state__kl": 0.12614615747630856
+          },
+          "kl_norm_over_image_plus_state": 0.008014790694565064,
+          "kl_cosine_with_image_plus_state": 0.15327656107798965
+        },
+        {
+          "start": 0,
+          "draw": 2,
+          "losses": {
+            "image": 0.31980907917022705,
+            "state": 0.09721511602401733,
+            "kl": 0.002371695591136813
+          },
+          "node_gradient_norms": {
+            "image": 8.829306148464638e-08,
+            "state": 3.5331567415413836e-07,
+            "kl": 3.322267825529109e-09
+          },
+          "pairwise_cosines": {
+            "image__state": 0.041594331542441826,
+            "image__kl": 0.054898960918830675,
+            "state__kl": 0.07017467795760665
+          },
+          "kl_norm_over_image_plus_state": 0.00903461799984255,
+          "kl_cosine_with_image_plus_state": 0.0806061477953875
+        },
+        {
+          "start": 0,
+          "draw": 3,
+          "losses": {
+            "image": 0.31880947947502136,
+            "state": 0.0954054445028305,
+            "kl": 0.002371695591136813
+          },
+          "node_gradient_norms": {
+            "image": 8.242007443913522e-08,
+            "state": 3.898232828017629e-07,
+            "kl": 3.322267825529109e-09
+          },
+          "pairwise_cosines": {
+            "image__state": 0.06612296173027377,
+            "image__kl": 0.22789463980801175,
+            "state__kl": 0.07799529301026147
+          },
+          "kl_norm_over_image_plus_state": 0.008228775427342032,
+          "kl_cosine_with_image_plus_state": 0.12183023809368161
+        },
+        {
+          "start": 4,
+          "draw": 0,
+          "losses": {
+            "image": 0.2884599268436432,
+            "state": 0.07693589478731155,
+            "kl": 0.002372362185269594
+          },
+          "node_gradient_norms": {
+            "image": 1.8643374087146484e-07,
+            "state": 5.979573650584961e-07,
+            "kl": 3.3342560708490927e-09
+          },
+          "pairwise_cosines": {
+            "image__state": -0.020535623563575578,
+            "image__kl": -0.1829571793225375,
+            "state__kl": -0.06853404268890545
+          },
+          "kl_norm_over_image_plus_state": 0.005354675477472399,
+          "kl_cosine_with_image_plus_state": -0.12059111429896248
+        },
+        {
+          "start": 4,
+          "draw": 1,
+          "losses": {
+            "image": 0.287603497505188,
+            "state": 0.0788620114326477,
+            "kl": 0.002372362185269594
+          },
+          "node_gradient_norms": {
+            "image": 1.7600813287648672e-07,
+            "state": 6.408792764197209e-07,
+            "kl": 3.3342560708490927e-09
+          },
+          "pairwise_cosines": {
+            "image__state": -0.04615730540391524,
+            "image__kl": -0.23596887764641625,
+            "state__kl": -0.09473309419295768
+          },
+          "kl_norm_over_image_plus_state": 0.0050770709995178066,
+          "kl_cosine_with_image_plus_state": -0.1556883152292921
+        },
+        {
+          "start": 4,
+          "draw": 2,
+          "losses": {
+            "image": 0.2868182063102722,
+            "state": 0.07778383046388626,
+            "kl": 0.002372362185269594
+          },
+          "node_gradient_norms": {
+            "image": 2.0373250606314651e-07,
+            "state": 6.255257273341524e-07,
+            "kl": 3.3342560708490927e-09
+          },
+          "pairwise_cosines": {
+            "image__state": -0.019432838378691385,
+            "image__kl": -0.20650323174820628,
+            "state__kl": -0.09890655381616581
+          },
+          "kl_norm_over_image_plus_state": 0.005097533870649964,
+          "kl_cosine_with_image_plus_state": -0.15890733505579094
+        },
+        {
+          "start": 4,
+          "draw": 3,
+          "losses": {
+            "image": 0.2884758412837982,
+            "state": 0.07461759448051453,
+            "kl": 0.002372362185269594
+          },
+          "node_gradient_norms": {
+            "image": 1.9478070706641707e-07,
+            "state": 6.072298837500856e-07,
+            "kl": 3.3342560708490927e-09
+          },
+          "pairwise_cosines": {
+            "image__state": -0.006330627752802686,
+            "image__kl": -0.1515376292169456,
+            "state__kl": -0.06827838678900705
+          },
+          "kl_norm_over_image_plus_state": 0.005238177890790725,
+          "kl_cosine_with_image_plus_state": -0.1115066236534326
+        },
+        {
+          "start": 8,
+          "draw": 0,
+          "losses": {
+            "image": 0.34850096702575684,
+            "state": 0.062174659222364426,
+            "kl": 0.0023727240040898323
+          },
+          "node_gradient_norms": {
+            "image": 9.27824734288627e-08,
+            "state": 4.340044225171361e-07,
+            "kl": 3.3236540976873294e-09
+          },
+          "pairwise_cosines": {
+            "image__state": -0.2733882039944373,
+            "image__kl": 0.06914328858326375,
+            "state__kl": -0.179722746215196
+          },
+          "kl_norm_over_image_plus_state": 0.007946169294056537,
+          "kl_cosine_with_image_plus_state": -0.1711453578569417
+        },
+        {
+          "start": 8,
+          "draw": 1,
+          "losses": {
+            "image": 0.3492666184902191,
+            "state": 0.06242380663752556,
+            "kl": 0.0023727240040898323
+          },
+          "node_gradient_norms": {
+            "image": 8.84449002240106e-08,
+            "state": 3.1291515407110267e-07,
+            "kl": 3.3236540976873294e-09
+          },
+          "pairwise_cosines": {
+            "image__state": -0.10888212490930918,
+            "image__kl": 0.18657932784265138,
+            "state__kl": -0.21560358387926695
+          },
+          "kl_norm_over_image_plus_state": 0.010525505568391312,
+          "kl_cosine_with_image_plus_state": -0.16139407003572281
+        },
+        {
+          "start": 8,
+          "draw": 2,
+          "losses": {
+            "image": 0.3488752841949463,
+            "state": 0.06144384294748306,
+            "kl": 0.0023727240040898323
+          },
+          "node_gradient_norms": {
+            "image": 8.871866489140834e-08,
+            "state": 3.921143677627863e-07,
+            "kl": 3.3236540976873294e-09
+          },
+          "pairwise_cosines": {
+            "image__state": -0.2643786681868943,
+            "image__kl": 0.08005227364731297,
+            "state__kl": -0.1788820181213397
+          },
+          "kl_norm_over_image_plus_state": 0.008782098547618165,
+          "kl_cosine_with_image_plus_state": -0.16657093862516623
+        },
+        {
+          "start": 8,
+          "draw": 3,
+          "losses": {
+            "image": 0.3488764762878418,
+            "state": 0.06074385717511177,
+            "kl": 0.0023727240040898323
+          },
+          "node_gradient_norms": {
+            "image": 9.465842147370286e-08,
+            "state": 3.8584321853004764e-07,
+            "kl": 3.3236540976873294e-09
+          },
+          "pairwise_cosines": {
+            "image__state": -0.29243251311295554,
+            "image__kl": 0.03516090330822841,
+            "state__kl": -0.11926399738503664
+          },
+          "kl_norm_over_image_plus_state": 0.008996857872776522,
+          "kl_cosine_with_image_plus_state": -0.11555541451524223
+        },
+        {
+          "start": 12,
+          "draw": 0,
+          "losses": {
+            "image": 0.35244256258010864,
+            "state": 0.063128262758255,
+            "kl": 0.002372046932578087
+          },
+          "node_gradient_norms": {
+            "image": 7.542216268055053e-08,
+            "state": 4.0797526645799094e-07,
+            "kl": 3.3245324664159463e-09
+          },
+          "pairwise_cosines": {
+            "image__state": -0.08707501420804993,
+            "image__kl": 0.19907981092172958,
+            "state__kl": 0.04059640966717202
+          },
+          "kl_norm_over_image_plus_state": 0.008140795595643497,
+          "kl_cosine_with_image_plus_state": 0.07732360668287702
+        },
+        {
+          "start": 12,
+          "draw": 1,
+          "losses": {
+            "image": 0.3515697419643402,
+            "state": 0.06244280934333801,
+            "kl": 0.002372046932578087
+          },
+          "node_gradient_norms": {
+            "image": 7.632661736671977e-08,
+            "state": 4.003357080009372e-07,
+            "kl": 3.3245324664159463e-09
+          },
+          "pairwise_cosines": {
+            "image__state": 0.11697155471276799,
+            "image__kl": 0.16340173105335556,
+            "state__kl": 0.04139059345162733
+          },
+          "kl_norm_over_image_plus_state": 0.00798735349721922,
+          "kl_cosine_with_image_plus_state": 0.06977492133947276
+        },
+        {
+          "start": 12,
+          "draw": 2,
+          "losses": {
+            "image": 0.35269734263420105,
+            "state": 0.05834539234638214,
+            "kl": 0.002372046932578087
+          },
+          "node_gradient_norms": {
+            "image": 8.849394122319758e-08,
+            "state": 4.2121012873086215e-07,
+            "kl": 3.3245324664159463e-09
+          },
+          "pairwise_cosines": {
+            "image__state": 0.05615665562308486,
+            "image__kl": 0.2035063664515451,
+            "state__kl": 0.041585989522454805
+          },
+          "kl_norm_over_image_plus_state": 0.007638354408919621,
+          "kl_cosine_with_image_plus_state": 0.08162245920532965
+        },
+        {
+          "start": 12,
+          "draw": 3,
+          "losses": {
+            "image": 0.3516753613948822,
+            "state": 0.06204817816615105,
+            "kl": 0.002372046932578087
+          },
+          "node_gradient_norms": {
+            "image": 6.692041690409639e-08,
+            "state": 3.8372359049235807e-07,
+            "kl": 3.3245324664159463e-09
+          },
+          "pairwise_cosines": {
+            "image__state": 0.09841825339334673,
+            "image__kl": 0.20319243373684118,
+            "state__kl": 0.06427054361057104
+          },
+          "kl_norm_over_image_plus_state": 0.008396336466107586,
+          "kl_cosine_with_image_plus_state": 0.09662788513348063
+        }
+      ]
+    },
+    "official": {
+      "samples": 128,
+      "query_mean_norm": 1062.8904678851572,
+      "query_future_replacement_energy": 3686270.0873265625,
+      "projected_mean_norm": 692.1176523455795,
+      "projected_coordinate_std_mean": 122.3064544221046,
+      "projected_future_replacement_energy": 4818602.813427693,
+      "projection_transmission_vs_equal_norm_isotropic_expectation": 43.751885099618505,
+      "projected_displacement_coordinate_mean_energy": 121.24653605924719,
+      "projected_displacement_radial_energy": 516534.7188598753,
+      "projected_displacement_tangent_energy": 4301946.848031758,
+      "radial_fraction_of_coordinate_centered_displacement": 0.10719864996663006,
+      "layer_norm_affine_gamma_abs_mean": 1.1192584075033665,
+      "layer_norm_affine_gamma_abs_min": 1.041218876838684,
+      "layer_norm_displacement_energy": 39.85305036799171,
+      "layer_norm_jacobian_relative_squared_error": 5.2513233685340035,
+      "mu_displacement_energy": 14.948043655442838,
+      "mu_displacement_mahalanobis_squared_mean": 20665.5706120781,
+      "posterior_symmetric_kl_mean": 5709.278636396917,
+      "unclamped_logvar_min": -9.26948890803744,
+      "unclamped_logvar_max": 0.17218038206857028,
+      "logvar_clamped_fraction": 0.0,
+      "mu_weight_frobenius_norm": 3.1667405909789346,
+      "out_proj_weight_frobenius_norm": 5.531190066749538,
+      "normalization_component_interventions": {
+        "coordinate_mean_only": {
+          "input_displacement_energy": 121.24653605924719,
+          "mu_displacement_energy": 8.015791642375171e-31
+        },
+        "radial_only": {
+          "input_displacement_energy": 516534.7188598753,
+          "mu_displacement_energy": 1.7392467201079191
+        },
+        "tangent_only": {
+          "input_displacement_energy": 4301946.848031758,
+          "mu_displacement_energy": 19.283101298201245
+        },
+        "full_displacement": {
+          "input_displacement_energy": 4818602.813427693,
+          "mu_displacement_energy": 14.948043655442838
+        }
+      }
+    }
+  },
+  "script_sha256": "08308f455d0b3e0b2e721e7db41df12be2c1e34c532e1a87cf6b9bf4d0b7aec1",
+  "scope": "Frozen checkpoint, no optimizer or parameter updates. Same-current future-to-current feature replacement; not action-labelled or physical counterfactual. Geometry and loss-gradient directions at current weights do not identify historical training causes."
+}

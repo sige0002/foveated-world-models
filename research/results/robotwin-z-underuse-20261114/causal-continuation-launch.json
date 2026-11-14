@@ -1,0 +1,21 @@
+{
+  "created_at": "2026-11-13T21:16:12.401828+00:00",
+  "phase": "CPU_waiter_started",
+  "command": [
+    "/home/sadasue/foveated-world-models/.venv/bin/python",
+    "-u",
+    "/home/sadasue/foveated-world-models/research/continue_robotwin_causal_diagnostics.py",
+    "--contract",
+    "/home/sadasue/foveated-world-models/research/results/robotwin-z-underuse-20261114/causal-continuation-contract-v3.json",
+    "--run"
+  ],
+  "script_sha256": "70550b2396a71d8627f757b81d43b05e2dfd9bcfc9a32740c0ccb61924e3a2f8",
+  "contract_sha256": "aee462707613d4883c945ba06f615d9644ddeb0931d8b1eda8d3b45b6495d7f7",
+  "mount": {
+    "target": "/media/sadasue/SSD1",
+    "source": "/dev/sda1",
+    "fstype": "ext4"
+  },
+  "main_training_started": false,
+  "pid": 138348
+}

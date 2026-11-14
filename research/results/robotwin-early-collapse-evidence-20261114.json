@@ -1,0 +1,3162 @@
+{
+  "original_4arms": {
+    "baseline": {
+      "val6_separate_preflight_8rows": {
+        "step": 6,
+        "samples": 8,
+        "mu_variance_sum": 0.05246015371001761,
+        "noise_variance_sum": 35.16090964127968,
+        "noise_fraction": 0.9985102205777113,
+        "pre_norm_node_coordinate_std_mean": 1.7399286572057764,
+        "mean_gap": 2.592802047729492e-06,
+        "swap_gap": -4.291534423828125e-06,
+        "real_visual_mse": 1.9932219982147217
+      },
+      "fixed512_bf16_trajectory": [
+        {
+          "step": 500,
+          "samples": 512,
+          "mu_variance_sum": 2.2076812991272133e-05,
+          "noise_variance_sum": 14.240773856764818,
+          "noise_fraction": 0.9999984497486591,
+          "pre_norm_node_coordinate_std_mean": 120.32904963610925,
+          "mean_gap": -3.5381526686251163e-06,
+          "swap_gap": 6.829504854977131e-07,
+          "real_visual_mse": 0.534176230430603
+        },
+        {
+          "step": 1000,
+          "samples": 512,
+          "mu_variance_sum": 1.7977381693785266e-05,
+          "noise_variance_sum": 6.648053153739111,
+          "noise_fraction": 0.9999972958499783,
+          "pre_norm_node_coordinate_std_mean": 375.1545006960282,
+          "mean_gap": 2.1982123143970966e-06,
+          "swap_gap": 6.212503649294376e-07,
+          "real_visual_mse": 0.4237704873085022
+        },
+        {
+          "step": 1500,
+          "samples": 512,
+          "mu_variance_sum": 6.643920213305125e-06,
+          "noise_variance_sum": 3.726380687664924,
+          "noise_fraction": 0.9999982170612923,
+          "pre_norm_node_coordinate_std_mean": 561.5328461333812,
+          "mean_gap": -2.5091576389968395e-06,
+          "swap_gap": 8.016650099307299e-07,
+          "real_visual_mse": 0.3909369707107544
+        },
+        {
+          "step": 2000,
+          "samples": 512,
+          "mu_variance_sum": 2.1613132524549865e-05,
+          "noise_variance_sum": 2.55133375276006,
+          "noise_fraction": 0.9999915287643527,
+          "pre_norm_node_coordinate_std_mean": 732.0518091935278,
+          "mean_gap": 2.3753964342176914e-06,
+          "swap_gap": 4.1746534407138824e-07,
+          "real_visual_mse": 0.3817838430404663
+        },
+        {
+          "step": 2500,
+          "samples": 512,
+          "mu_variance_sum": 4.550296760582582e-05,
+          "noise_variance_sum": 1.9216103333621897,
+          "noise_fraction": 0.9999763209588598,
+          "pre_norm_node_coordinate_std_mean": 875.6275717295338,
+          "mean_gap": 8.852803148329258e-07,
+          "swap_gap": -1.534441253170371e-06,
+          "real_visual_mse": 0.3712690472602844
+        },
+        {
+          "step": 3000,
+          "samples": 512,
+          "mu_variance_sum": 0.00035530901675481764,
+          "noise_variance_sum": 1.4807576804111142,
+          "noise_fraction": 0.9997601067445286,
+          "pre_norm_node_coordinate_std_mean": 1172.3165497764749,
+          "mean_gap": 7.819035090506077e-07,
+          "swap_gap": -5.638576112687588e-07,
+          "real_visual_mse": 0.36871573328971863
+        }
+      ],
+      "actual_gradient_snapshots": [
+        {
+          "step_before_update": 0,
+          "lr_used": 3e-07,
+          "losses": {
+            "image": 1.003886103630066,
+            "state": 0.2287617176771164,
+            "weighted_kl": 0.00043045624624937773
+          },
+          "node_gradient_norms": {
+            "image": 0.0,
+            "state": 0.01962883397936821,
+            "weighted_kl": 3.0112601962173358e-05
+          },
+          "pairwise_cosines": {
+            "image__state": null,
+            "image__weighted_kl": null,
+            "state__weighted_kl": 0.4026709794998169
+          },
+          "scope": "Actual training batch and sampled epsilon, gradients of each loss at the float32 VAE input activation; normal backward follows."
+        },
+        {
+          "step_before_update": 9,
+          "lr_used": 2.9999999999999997e-06,
+          "losses": {
+            "image": 1.0014944076538086,
+            "state": 0.2756626009941101,
+            "weighted_kl": 0.0003163450746797025
+          },
+          "node_gradient_norms": {
+            "image": 5.741114364354871e-05,
+            "state": 0.012944028712809086,
+            "weighted_kl": 1.9620973034761846e-05
+          },
+          "pairwise_cosines": {
+            "image__state": -0.010387564077973366,
+            "image__weighted_kl": -0.30409854650497437,
+            "state__weighted_kl": -0.00020805750682484359
+          },
+          "scope": "Actual training batch and sampled epsilon, gradients of each loss at the float32 VAE input activation; normal backward follows."
+        },
+        {
+          "step_before_update": 99,
+          "lr_used": 2.9999999999999997e-05,
+          "losses": {
+            "image": 0.5332407355308533,
+            "state": 0.193678617477417,
+            "weighted_kl": 0.0006049909861758351
+          },
+          "node_gradient_norms": {
+            "image": 3.11321928165853e-05,
+            "state": 0.0010825364151969552,
+            "weighted_kl": 2.873980520234909e-06
+          },
+          "pairwise_cosines": {
+            "image__state": 0.058626092970371246,
+            "image__weighted_kl": -0.38434797525405884,
+            "state__weighted_kl": -0.10757225751876831
+          },
+          "scope": "Actual training batch and sampled epsilon, gradients of each loss at the float32 VAE input activation; normal backward follows."
+        },
+        {
+          "step_before_update": 499,
+          "lr_used": 0.00015,
+          "losses": {
+            "image": 0.4249701499938965,
+            "state": 0.12746024131774902,
+            "weighted_kl": 0.0005341779324226081
+          },
+          "node_gradient_norms": {
+            "image": 6.00736075284658e-06,
+            "state": 0.00011858103243866935,
+            "weighted_kl": 3.500577179238462e-07
+          },
+          "pairwise_cosines": {
+            "image__state": 0.021901199594140053,
+            "image__weighted_kl": 0.17900002002716064,
+            "state__weighted_kl": 0.2049826830625534
+          },
+          "scope": "Actual training batch and sampled epsilon, gradients of each loss at the float32 VAE input activation; normal backward follows."
+        },
+        {
+          "step_before_update": 999,
+          "lr_used": 0.0003,
+          "losses": {
+            "image": 0.3745211362838745,
+            "state": 0.08347728848457336,
+            "weighted_kl": 0.0007559044752269983
+          },
+          "node_gradient_norms": {
+            "image": 3.95550796383759e-06,
+            "state": 2.126940671587363e-05,
+            "weighted_kl": 1.0220204416100387e-07
+          },
+          "pairwise_cosines": {
+            "image__state": -0.13111433386802673,
+            "image__weighted_kl": -0.30166104435920715,
+            "state__weighted_kl": 0.019234269857406616
+          },
+          "scope": "Actual training batch and sampled epsilon, gradients of each loss at the float32 VAE input activation; normal backward follows."
+        },
+        {
+          "step_before_update": 1999,
+          "lr_used": 0.0003,
+          "losses": {
+            "image": 0.3439635932445526,
+            "state": 0.07233664393424988,
+            "weighted_kl": 0.00135112926363945
+          },
+          "node_gradient_norms": {
+            "image": 1.7199362218889291e-06,
+            "state": 1.0886132258747239e-05,
+            "weighted_kl": 4.941542286474032e-08
+          },
+          "pairwise_cosines": {
+            "image__state": 0.10088267922401428,
+            "image__weighted_kl": -0.08359751105308533,
+            "state__weighted_kl": 0.11032675951719284
+          },
+          "scope": "Actual training batch and sampled epsilon, gradients of each loss at the float32 VAE input activation; normal backward follows."
+        },
+        {
+          "step_before_update": 2999,
+          "lr_used": 0.0003,
+          "losses": {
+            "image": 0.4068516194820404,
+            "state": 0.08063970506191254,
+            "weighted_kl": 0.0017265708884224296
+          },
+          "node_gradient_norms": {
+            "image": 1.7487242303104722e-06,
+            "state": 4.144256308791228e-06,
+            "weighted_kl": 3.246768187636917e-08
+          },
+          "pairwise_cosines": {
+            "image__state": 0.1413470059633255,
+            "image__weighted_kl": -0.06094597280025482,
+            "state__weighted_kl": 0.11056641489267349
+          },
+          "scope": "Actual training batch and sampled epsilon, gradients of each loss at the float32 VAE input activation; normal backward follows."
+        }
+      ]
+    },
+    "kl_only": {
+      "val6_separate_preflight_8rows": {
+        "step": 6,
+        "samples": 8,
+        "mu_variance_sum": 0.05250178954488571,
+        "noise_variance_sum": 35.16600020546477,
+        "noise_fraction": 0.9985092554603168,
+        "pre_norm_node_coordinate_std_mean": 1.7393726016695539,
+        "mean_gap": 1.8924474716186523e-06,
+        "swap_gap": -3.5762786865234375e-06,
+        "real_visual_mse": 1.993220329284668
+      },
+      "fixed512_bf16_trajectory": [
+        {
+          "step": 500,
+          "samples": 512,
+          "mu_variance_sum": 2.6303360665131e-05,
+          "noise_variance_sum": 14.151678596090765,
+          "noise_fraction": 0.9999981413292002,
+          "pre_norm_node_coordinate_std_mean": 118.81905280152553,
+          "mean_gap": 2.0960578694939613e-06,
+          "swap_gap": 7.67875462770462e-07,
+          "real_visual_mse": 0.5340532660484314
+        },
+        {
+          "step": 1000,
+          "samples": 512,
+          "mu_variance_sum": 3.7345646014349764e-06,
+          "noise_variance_sum": 6.427192592447354,
+          "noise_fraction": 0.9999994189434379,
+          "pre_norm_node_coordinate_std_mean": 370.2362215150828,
+          "mean_gap": 1.8594437278807163e-07,
+          "swap_gap": 1.1350493878126144e-09,
+          "real_visual_mse": 0.42402422428131104
+        },
+        {
+          "step": 1500,
+          "samples": 512,
+          "mu_variance_sum": 1.0594807437083112e-05,
+          "noise_variance_sum": 3.3256764432967136,
+          "noise_fraction": 0.9999968142500134,
+          "pre_norm_node_coordinate_std_mean": 562.6016154926363,
+          "mean_gap": -2.4393084459006786e-06,
+          "swap_gap": -1.3865064829587936e-07,
+          "real_visual_mse": 0.39067816734313965
+        },
+        {
+          "step": 2000,
+          "samples": 512,
+          "mu_variance_sum": 1.008103748714183e-05,
+          "noise_variance_sum": 2.055618188061592,
+          "noise_fraction": 0.9999950958849717,
+          "pre_norm_node_coordinate_std_mean": 722.48613679285,
+          "mean_gap": -2.6718334993347526e-06,
+          "swap_gap": -1.2995005818083882e-06,
+          "real_visual_mse": 0.38147592544555664
+        },
+        {
+          "step": 2500,
+          "samples": 512,
+          "mu_variance_sum": 3.399319749108207e-05,
+          "noise_variance_sum": 1.4145373872754,
+          "noise_fraction": 0.9999759692596921,
+          "pre_norm_node_coordinate_std_mean": 879.2624056901968,
+          "mean_gap": 1.6070844139903784e-06,
+          "swap_gap": -1.6678532119840384e-06,
+          "real_visual_mse": 0.36965200304985046
+        },
+        {
+          "step": 3000,
+          "samples": 512,
+          "mu_variance_sum": 0.0003617789471244214,
+          "noise_variance_sum": 0.953489503527134,
+          "noise_fraction": 0.9996207176592707,
+          "pre_norm_node_coordinate_std_mean": 1035.7965484897436,
+          "mean_gap": -4.368048394098878e-07,
+          "swap_gap": -6.590387783944607e-06,
+          "real_visual_mse": 0.3680371344089508
+        }
+      ],
+      "actual_gradient_snapshots": [
+        {
+          "step_before_update": 0,
+          "lr_used": 3e-07,
+          "losses": {
+            "image": 1.003886103630066,
+            "state": 0.2287617176771164,
+            "weighted_kl": 8.609124779468402e-05
+          },
+          "node_gradient_norms": {
+            "image": 0.0,
+            "state": 0.01962883397936821,
+            "weighted_kl": 6.022126854077214e-06
+          },
+          "pairwise_cosines": {
+            "image__state": null,
+            "image__weighted_kl": null,
+            "state__weighted_kl": 0.4026326537132263
+          },
+          "scope": "Actual training batch and sampled epsilon, gradients of each loss at the float32 VAE input activation; normal backward follows."
+        },
+        {
+          "step_before_update": 9,
+          "lr_used": 2.9999999999999997e-06,
+          "losses": {
+            "image": 1.0014922618865967,
+            "state": 0.2767125368118286,
+            "weighted_kl": 6.368818139890209e-05
+          },
+          "node_gradient_norms": {
+            "image": 5.7407010899623856e-05,
+            "state": 0.012670019641518593,
+            "weighted_kl": 3.931024366465863e-06
+          },
+          "pairwise_cosines": {
+            "image__state": -0.02390703745186329,
+            "image__weighted_kl": -0.3010181188583374,
+            "state__weighted_kl": 0.013388530351221561
+          },
+          "scope": "Actual training batch and sampled epsilon, gradients of each loss at the float32 VAE input activation; normal backward follows."
+        },
+        {
+          "step_before_update": 99,
+          "lr_used": 2.9999999999999997e-05,
+          "losses": {
+            "image": 0.5331870317459106,
+            "state": 0.1932472288608551,
+            "weighted_kl": 0.00012212310684844851
+          },
+          "node_gradient_norms": {
+            "image": 2.9557735615526326e-05,
+            "state": 0.0010855598375201225,
+            "weighted_kl": 5.590707132796524e-07
+          },
+          "pairwise_cosines": {
+            "image__state": 0.044743917882442474,
+            "image__weighted_kl": -0.3530494272708893,
+            "state__weighted_kl": -0.09339892864227295
+          },
+          "scope": "Actual training batch and sampled epsilon, gradients of each loss at the float32 VAE input activation; normal backward follows."
+        },
+        {
+          "step_before_update": 499,
+          "lr_used": 0.00015,
+          "losses": {
+            "image": 0.42453426122665405,
+            "state": 0.13086824119091034,
+            "weighted_kl": 0.00010617816587910056
+          },
+          "node_gradient_norms": {
+            "image": 5.8721952882478945e-06,
+            "state": 0.00012243737000972033,
+            "weighted_kl": 6.9784420020369e-08
+          },
+          "pairwise_cosines": {
+            "image__state": -0.08622334152460098,
+            "image__weighted_kl": 0.14799825847148895,
+            "state__weighted_kl": 0.1481257677078247
+          },
+          "scope": "Actual training batch and sampled epsilon, gradients of each loss at the float32 VAE input activation; normal backward follows."
+        },
+        {
+          "step_before_update": 999,
+          "lr_used": 0.0003,
+          "losses": {
+            "image": 0.3748514652252197,
+            "state": 0.08664543181657791,
+            "weighted_kl": 0.00015616540622431785
+          },
+          "node_gradient_norms": {
+            "image": 4.190987965557724e-06,
+            "state": 1.9641249309643172e-05,
+            "weighted_kl": 2.077460514726681e-08
+          },
+          "pairwise_cosines": {
+            "image__state": -0.004960612393915653,
+            "image__weighted_kl": -0.3696208894252777,
+            "state__weighted_kl": -0.007513450924307108
+          },
+          "scope": "Actual training batch and sampled epsilon, gradients of each loss at the float32 VAE input activation; normal backward follows."
+        },
+        {
+          "step_before_update": 1999,
+          "lr_used": 0.0003,
+          "losses": {
+            "image": 0.34246277809143066,
+            "state": 0.0714687928557396,
+            "weighted_kl": 0.00030463942675851285
+          },
+          "node_gradient_norms": {
+            "image": 1.8504916852180031e-06,
+            "state": 1.0223338904324919e-05,
+            "weighted_kl": 9.832202607640284e-09
+          },
+          "pairwise_cosines": {
+            "image__state": 0.060927458107471466,
+            "image__weighted_kl": -0.011686035431921482,
+            "state__weighted_kl": 0.025591254234313965
+          },
+          "scope": "Actual training batch and sampled epsilon, gradients of each loss at the float32 VAE input activation; normal backward follows."
+        },
+        {
+          "step_before_update": 2999,
+          "lr_used": 0.0003,
+          "losses": {
+            "image": 0.4082516133785248,
+            "state": 0.08382551372051239,
+            "weighted_kl": 0.0004163135017734021
+          },
+          "node_gradient_norms": {
+            "image": 1.980631395781529e-06,
+            "state": 5.405016509030247e-06,
+            "weighted_kl": 7.139650204379677e-09
+          },
+          "pairwise_cosines": {
+            "image__state": 0.21427464485168457,
+            "image__weighted_kl": -0.10162286460399628,
+            "state__weighted_kl": -0.027731014415621758
+          },
+          "scope": "Actual training batch and sampled epsilon, gradients of each loss at the float32 VAE input activation; normal backward follows."
+        }
+      ]
+    },
+    "mse_only": {
+      "val6_separate_preflight_8rows": {
+        "step": 6,
+        "samples": 8,
+        "mu_variance_sum": 0.05246143787148676,
+        "noise_variance_sum": 35.13582713540916,
+        "noise_fraction": 0.9985091222108676,
+        "pre_norm_node_coordinate_std_mean": 1.7404466286744609,
+        "mean_gap": 1.2516975402832031e-06,
+        "swap_gap": -8.642673492431641e-07,
+        "real_visual_mse": 1.9911260604858398
+      },
+      "fixed512_bf16_trajectory": [
+        {
+          "step": 500,
+          "samples": 512,
+          "mu_variance_sum": 1.809128179989442e-05,
+          "noise_variance_sum": 14.063409085454428,
+          "noise_fraction": 0.9999987135936658,
+          "pre_norm_node_coordinate_std_mean": 128.32024340477818,
+          "mean_gap": 1.0896474123001099e-06,
+          "swap_gap": 7.726484909653664e-07,
+          "real_visual_mse": 0.48309215903282166
+        },
+        {
+          "step": 1000,
+          "samples": 512,
+          "mu_variance_sum": 1.2451696101674142e-05,
+          "noise_variance_sum": 5.7947886876815575,
+          "noise_fraction": 0.999997851229783,
+          "pre_norm_node_coordinate_std_mean": 415.21936604333644,
+          "mean_gap": 2.525834133848548e-06,
+          "swap_gap": 1.2024829629808664e-06,
+          "real_visual_mse": 0.41158124804496765
+        },
+        {
+          "step": 1500,
+          "samples": 512,
+          "mu_variance_sum": 1.3830335136977651e-05,
+          "noise_variance_sum": 2.851741372414022,
+          "noise_fraction": 0.9999951502376068,
+          "pre_norm_node_coordinate_std_mean": 686.4892700914406,
+          "mean_gap": -6.080837920308113e-06,
+          "swap_gap": 1.0287330951541662e-06,
+          "real_visual_mse": 0.39331045746803284
+        },
+        {
+          "step": 2000,
+          "samples": 512,
+          "mu_variance_sum": 3.4225011931022026e-05,
+          "noise_variance_sum": 1.7954670313479464,
+          "noise_fraction": 0.9999809384639472,
+          "pre_norm_node_coordinate_std_mean": 881.2177905177771,
+          "mean_gap": 9.578187018632889e-06,
+          "swap_gap": 6.889604264870286e-06,
+          "real_visual_mse": 0.3735525608062744
+        },
+        {
+          "step": 2500,
+          "samples": 512,
+          "mu_variance_sum": 0.0019416003717732794,
+          "noise_variance_sum": 1.2432512833734741,
+          "noise_fraction": 0.9984407232027109,
+          "pre_norm_node_coordinate_std_mean": 1147.8486292000234,
+          "mean_gap": 0.00024347315775230527,
+          "swap_gap": 0.0003033565590158105,
+          "real_visual_mse": 0.3693349063396454
+        },
+        {
+          "step": 3000,
+          "samples": 512,
+          "mu_variance_sum": 3.4805621336360085e-05,
+          "noise_variance_sum": 0.8630014393864869,
+          "noise_fraction": 0.9999596707304731,
+          "pre_norm_node_coordinate_std_mean": 1563.7946551667892,
+          "mean_gap": 3.9432779885828495e-06,
+          "swap_gap": 5.2582763601094484e-06,
+          "real_visual_mse": 0.3632194995880127
+        }
+      ],
+      "actual_gradient_snapshots": [
+        {
+          "step_before_update": 0,
+          "lr_used": 3e-07,
+          "losses": {
+            "image": 2.003207206726074,
+            "state": 0.2287617176771164,
+            "weighted_kl": 0.00043045624624937773
+          },
+          "node_gradient_norms": {
+            "image": 0.0,
+            "state": 0.01962883397936821,
+            "weighted_kl": 3.0112601962173358e-05
+          },
+          "pairwise_cosines": {
+            "image__state": null,
+            "image__weighted_kl": null,
+            "state__weighted_kl": 0.4026709794998169
+          },
+          "scope": "Actual training batch and sampled epsilon, gradients of each loss at the float32 VAE input activation; normal backward follows."
+        },
+        {
+          "step_before_update": 9,
+          "lr_used": 2.9999999999999997e-06,
+          "losses": {
+            "image": 1.9951685667037964,
+            "state": 0.2763735055923462,
+            "weighted_kl": 0.00031929468968883157
+          },
+          "node_gradient_norms": {
+            "image": 0.00026944023557007313,
+            "state": 0.013124966062605381,
+            "weighted_kl": 1.9900830011465587e-05
+          },
+          "pairwise_cosines": {
+            "image__state": -0.027999358251690865,
+            "image__weighted_kl": -0.30660343170166016,
+            "state__weighted_kl": -0.009419601410627365
+          },
+          "scope": "Actual training batch and sampled epsilon, gradients of each loss at the float32 VAE input activation; normal backward follows."
+        },
+        {
+          "step_before_update": 99,
+          "lr_used": 2.9999999999999997e-05,
+          "losses": {
+            "image": 0.7249463796615601,
+            "state": 0.19663497805595398,
+            "weighted_kl": 0.0006371646886691451
+          },
+          "node_gradient_norms": {
+            "image": 8.198115392588079e-05,
+            "state": 0.001113399281166494,
+            "weighted_kl": 2.766165380307939e-06
+          },
+          "pairwise_cosines": {
+            "image__state": -0.04057702794671059,
+            "image__weighted_kl": -0.2193215936422348,
+            "state__weighted_kl": -0.1362442970275879
+          },
+          "scope": "Actual training batch and sampled epsilon, gradients of each loss at the float32 VAE input activation; normal backward follows."
+        },
+        {
+          "step_before_update": 499,
+          "lr_used": 0.00015,
+          "losses": {
+            "image": 0.5005330443382263,
+            "state": 0.13057836890220642,
+            "weighted_kl": 0.0006022218731231987
+          },
+          "node_gradient_norms": {
+            "image": 1.3149648111721035e-05,
+            "state": 0.00010729868517955765,
+            "weighted_kl": 3.5301414413879684e-07
+          },
+          "pairwise_cosines": {
+            "image__state": 0.09010933339595795,
+            "image__weighted_kl": 0.08236060291528702,
+            "state__weighted_kl": 0.14118514955043793
+          },
+          "scope": "Actual training batch and sampled epsilon, gradients of each loss at the float32 VAE input activation; normal backward follows."
+        },
+        {
+          "step_before_update": 999,
+          "lr_used": 0.0003,
+          "losses": {
+            "image": 0.3914582431316376,
+            "state": 0.0918264165520668,
+            "weighted_kl": 0.0008353529847227037
+          },
+          "node_gradient_norms": {
+            "image": 8.61223725223681e-06,
+            "state": 1.8709450159803964e-05,
+            "weighted_kl": 9.698778313804723e-08
+          },
+          "pairwise_cosines": {
+            "image__state": 0.1407894641160965,
+            "image__weighted_kl": -0.2889740765094757,
+            "state__weighted_kl": -0.20582526922225952
+          },
+          "scope": "Actual training batch and sampled epsilon, gradients of each loss at the float32 VAE input activation; normal backward follows."
+        },
+        {
+          "step_before_update": 1999,
+          "lr_used": 0.0003,
+          "losses": {
+            "image": 0.3533245027065277,
+            "state": 0.07167831063270569,
+            "weighted_kl": 0.00161094986833632
+          },
+          "node_gradient_norms": {
+            "image": 3.82410553356749e-06,
+            "state": 9.256478733732365e-06,
+            "weighted_kl": 4.275690201893667e-08
+          },
+          "pairwise_cosines": {
+            "image__state": 0.017850248143076897,
+            "image__weighted_kl": 0.022450637072324753,
+            "state__weighted_kl": 0.1321125626564026
+          },
+          "scope": "Actual training batch and sampled epsilon, gradients of each loss at the float32 VAE input activation; normal backward follows."
+        },
+        {
+          "step_before_update": 2999,
+          "lr_used": 0.0003,
+          "losses": {
+            "image": 0.46363934874534607,
+            "state": 0.07854722440242767,
+            "weighted_kl": 0.0021429427433758974
+          },
+          "node_gradient_norms": {
+            "image": 4.996726602257695e-06,
+            "state": 3.239870693505509e-06,
+            "weighted_kl": 2.5669177006193422e-08
+          },
+          "pairwise_cosines": {
+            "image__state": 0.3598807156085968,
+            "image__weighted_kl": -0.03622659668326378,
+            "state__weighted_kl": 0.06144299730658531
+          },
+          "scope": "Actual training batch and sampled epsilon, gradients of each loss at the float32 VAE input activation; normal backward follows."
+        }
+      ]
+    },
+    "kl_mse": {
+      "val6_separate_preflight_8rows": {
+        "step": 6,
+        "samples": 8,
+        "mu_variance_sum": 0.052244922083715895,
+        "noise_variance_sum": 35.1907416987878,
+        "noise_fraction": 0.9985175796068096,
+        "pre_norm_node_coordinate_std_mean": 1.73965242202351,
+        "mean_gap": 7.450580596923828e-08,
+        "swap_gap": 1.817941665649414e-06,
+        "real_visual_mse": 1.991119146347046
+      },
+      "fixed512_bf16_trajectory": [
+        {
+          "step": 500,
+          "samples": 512,
+          "mu_variance_sum": 2.8035110931899495e-05,
+          "noise_variance_sum": 13.989136606608648,
+          "noise_fraction": 0.9999979959410266,
+          "pre_norm_node_coordinate_std_mean": 125.8255256505817,
+          "mean_gap": -5.337555194273591e-06,
+          "swap_gap": -1.270294887945056e-06,
+          "real_visual_mse": 0.4827090799808502
+        },
+        {
+          "step": 1000,
+          "samples": 512,
+          "mu_variance_sum": 1.5032146305815239e-05,
+          "noise_variance_sum": 5.56574035747428,
+          "noise_fraction": 0.999997299172304,
+          "pre_norm_node_coordinate_std_mean": 410.89696634682974,
+          "mean_gap": 3.54123767465353e-06,
+          "swap_gap": -7.07223080098629e-09,
+          "real_visual_mse": 0.4117532968521118
+        },
+        {
+          "step": 1500,
+          "samples": 512,
+          "mu_variance_sum": 3.0595518420380596e-06,
+          "noise_variance_sum": 2.618048672720378,
+          "noise_fraction": 0.999998831363107,
+          "pre_norm_node_coordinate_std_mean": 662.6816757551737,
+          "mean_gap": 8.352217264473438e-07,
+          "swap_gap": 4.1394378058612347e-07,
+          "real_visual_mse": 0.3943939208984375
+        },
+        {
+          "step": 2000,
+          "samples": 512,
+          "mu_variance_sum": 4.795218093366983e-05,
+          "noise_variance_sum": 1.4714256027180055,
+          "noise_fraction": 0.9999674121354244,
+          "pre_norm_node_coordinate_std_mean": 861.1733990279608,
+          "mean_gap": 8.558592526242137e-06,
+          "swap_gap": 1.2657546903938055e-05,
+          "real_visual_mse": 0.3739694058895111
+        },
+        {
+          "step": 2500,
+          "samples": 512,
+          "mu_variance_sum": 0.04502767430609917,
+          "noise_variance_sum": 0.9088703507149971,
+          "noise_fraction": 0.9527961342564858,
+          "pre_norm_node_coordinate_std_mean": 1356.7678759357511,
+          "mean_gap": 0.0012047997443005443,
+          "swap_gap": 0.0017900911625474691,
+          "real_visual_mse": 0.3675870895385742
+        },
+        {
+          "step": 3000,
+          "samples": 512,
+          "mu_variance_sum": 0.20233455559062724,
+          "noise_variance_sum": 0.5418053768420608,
+          "noise_fraction": 0.7280960921836704,
+          "pre_norm_node_coordinate_std_mean": 2152.844045557522,
+          "mean_gap": 0.004410983063280582,
+          "swap_gap": 0.006640510633587837,
+          "real_visual_mse": 0.35803312063217163
+        }
+      ],
+      "actual_gradient_snapshots": [
+        {
+          "step_before_update": 0,
+          "lr_used": 3e-07,
+          "losses": {
+            "image": 2.003207206726074,
+            "state": 0.2287617176771164,
+            "weighted_kl": 8.609124779468402e-05
+          },
+          "node_gradient_norms": {
+            "image": 0.0,
+            "state": 0.01962883397936821,
+            "weighted_kl": 6.022126854077214e-06
+          },
+          "pairwise_cosines": {
+            "image__state": null,
+            "image__weighted_kl": null,
+            "state__weighted_kl": 0.4026326537132263
+          },
+          "scope": "Actual training batch and sampled epsilon, gradients of each loss at the float32 VAE input activation; normal backward follows."
+        },
+        {
+          "step_before_update": 9,
+          "lr_used": 2.9999999999999997e-06,
+          "losses": {
+            "image": 1.9951341152191162,
+            "state": 0.27683430910110474,
+            "weighted_kl": 6.368039612425491e-05
+          },
+          "node_gradient_norms": {
+            "image": 0.0002689101092983037,
+            "state": 0.013009984977543354,
+            "weighted_kl": 3.9148485484474804e-06
+          },
+          "pairwise_cosines": {
+            "image__state": -0.011184582486748695,
+            "image__weighted_kl": -0.31509560346603394,
+            "state__weighted_kl": 0.004042699933052063
+          },
+          "scope": "Actual training batch and sampled epsilon, gradients of each loss at the float32 VAE input activation; normal backward follows."
+        },
+        {
+          "step_before_update": 99,
+          "lr_used": 2.9999999999999997e-05,
+          "losses": {
+            "image": 0.7246255278587341,
+            "state": 0.19628563523292542,
+            "weighted_kl": 0.00012903695460408926
+          },
+          "node_gradient_norms": {
+            "image": 8.074091601883993e-05,
+            "state": 0.0010811006650328636,
+            "weighted_kl": 5.460973966364691e-07
+          },
+          "pairwise_cosines": {
+            "image__state": -0.06859049946069717,
+            "image__weighted_kl": -0.18336798250675201,
+            "state__weighted_kl": -0.14430242776870728
+          },
+          "scope": "Actual training batch and sampled epsilon, gradients of each loss at the float32 VAE input activation; normal backward follows."
+        },
+        {
+          "step_before_update": 499,
+          "lr_used": 0.00015,
+          "losses": {
+            "image": 0.500240683555603,
+            "state": 0.12331371009349823,
+            "weighted_kl": 0.00012336377403698862
+          },
+          "node_gradient_norms": {
+            "image": 1.2542112926894333e-05,
+            "state": 0.00010701407154556364,
+            "weighted_kl": 7.23555899639905e-08
+          },
+          "pairwise_cosines": {
+            "image__state": -0.00044385818182490766,
+            "image__weighted_kl": 0.1409022957086563,
+            "state__weighted_kl": 0.2039077877998352
+          },
+          "scope": "Actual training batch and sampled epsilon, gradients of each loss at the float32 VAE input activation; normal backward follows."
+        },
+        {
+          "step_before_update": 999,
+          "lr_used": 0.0003,
+          "losses": {
+            "image": 0.3921900689601898,
+            "state": 0.08900868892669678,
+            "weighted_kl": 0.00017667045176494867
+          },
+          "node_gradient_norms": {
+            "image": 8.472190529573709e-06,
+            "state": 1.9239174434915185e-05,
+            "weighted_kl": 1.933471693860156e-08
+          },
+          "pairwise_cosines": {
+            "image__state": 0.04342716187238693,
+            "image__weighted_kl": -0.18780876696109772,
+            "state__weighted_kl": -0.06505928188562393
+          },
+          "scope": "Actual training batch and sampled epsilon, gradients of each loss at the float32 VAE input activation; normal backward follows."
+        },
+        {
+          "step_before_update": 1999,
+          "lr_used": 0.0003,
+          "losses": {
+            "image": 0.3508129119873047,
+            "state": 0.07183044403791428,
+            "weighted_kl": 0.0003547309897840023
+          },
+          "node_gradient_norms": {
+            "image": 3.8256057450780645e-06,
+            "state": 1.0203352758253459e-05,
+            "weighted_kl": 8.347178059864291e-09
+          },
+          "pairwise_cosines": {
+            "image__state": -0.02454017661511898,
+            "image__weighted_kl": -0.13275383412837982,
+            "state__weighted_kl": -0.006218326278030872
+          },
+          "scope": "Actual training batch and sampled epsilon, gradients of each loss at the float32 VAE input activation; normal backward follows."
+        },
+        {
+          "step_before_update": 2999,
+          "lr_used": 0.0003,
+          "losses": {
+            "image": 0.44840431213378906,
+            "state": 0.0782894641160965,
+            "weighted_kl": 0.0005099285626783967
+          },
+          "node_gradient_norms": {
+            "image": 4.462599008547841e-06,
+            "state": 2.0494844648055732e-06,
+            "weighted_kl": 3.4089409073345678e-09
+          },
+          "pairwise_cosines": {
+            "image__state": -0.21614162623882294,
+            "image__weighted_kl": -0.021693365648388863,
+            "state__weighted_kl": -0.07181646674871445
+          },
+          "scope": "Actual training batch and sampled epsilon, gradients of each loss at the float32 VAE input activation; normal backward follows."
+        }
+      ]
+    }
+  },
+  "causal_v2_sixstep": {
+    "baseline_replay": {
+      "observed_factors": {
+        "arm": "baseline_replay",
+        "image_loss": "smooth_l1",
+        "kl_beta": 5e-05,
+        "lambda_aux": 1.0,
+        "posterior_sampling": "sampled",
+        "initialization": "fresh",
+        "state_decoder_initialization": "fresh local g; official14 state head is never loaded",
+        "epsilon_policy": "Always consume and verify the original upstream Gaussian draw, including mu_only",
+        "main_training": false,
+        "parent_runner_sha256": "9ecbea0151c1f902647dc9e41a5a17a431ab5c4319da658b9d0cdeb5104cba27",
+        "runner_sha256": "e1d7db1efca25cdff88a7299e7f5cd31c016b0c11a661fd212c73df67647aa22"
+      },
+      "component_initialization": {
+        "scope": "fresh",
+        "fresh_seeded_components": {
+          "encoder": {
+            "sha256": "3a9a2c8a94beae21a06366dbe8c66997a8e3bab6ce898ce950c062d694a94034",
+            "state_tensors": 305
+          },
+          "vq": {
+            "sha256": "3868cdf0d2ea6db42b0b107362dbb3341aac2012d4083b97ae79c811eb8fbde5",
+            "state_tensors": 6
+          },
+          "decoder": {
+            "sha256": "cd7bf293c1a37107ad612fd43ec6bcbeafb64946a6ae3347e4cf94b5f0bff8ac",
+            "state_tensors": 128
+          },
+          "local_g": {
+            "sha256": "22fb959b28612f62f970e1dee409849f83ca39a2f400b273156295f4a25523e5",
+            "state_tensors": 10
+          }
+        },
+        "effective_components": {
+          "encoder": {
+            "sha256": "3a9a2c8a94beae21a06366dbe8c66997a8e3bab6ce898ce950c062d694a94034",
+            "state_tensors": 305
+          },
+          "vq": {
+            "sha256": "3868cdf0d2ea6db42b0b107362dbb3341aac2012d4083b97ae79c811eb8fbde5",
+            "state_tensors": 6
+          },
+          "decoder": {
+            "sha256": "cd7bf293c1a37107ad612fd43ec6bcbeafb64946a6ae3347e4cf94b5f0bff8ac",
+            "state_tensors": 128
+          },
+          "local_g": {
+            "sha256": "22fb959b28612f62f970e1dee409849f83ca39a2f400b273156295f4a25523e5",
+            "state_tensors": 10
+          }
+        }
+      },
+      "gradient_snapshots": [
+        {
+          "step_before_update": 0,
+          "lr_used": 3e-07,
+          "losses": {
+            "image": 1.003886103630066,
+            "state": 0.2287617176771164,
+            "weighted_kl": 0.00043045624624937773
+          },
+          "node_gradient_norms": {
+            "image": 0.0,
+            "state": 0.01962883397936821,
+            "weighted_kl": 3.0112601962173358e-05
+          },
+          "selected_z_gradient_norms": {
+            "image": 0.0,
+            "state": 0.04641728475689888,
+            "weighted_kl": null
+          },
+          "parameter_gradient_norms": {
+            "image": {
+              "encoder.out_proj.weight": 0.0,
+              "encoder.out_proj.bias": 0.0,
+              "vq.pre_norm.weight": 0.0,
+              "vq.mu.weight": 0.0,
+              "vq.logvar.weight": 0.0
+            },
+            "state": {
+              "encoder.out_proj.weight": 2.032872200012207,
+              "encoder.out_proj.bias": 0.026011938229203224,
+              "vq.pre_norm.weight": 0.0511040985584259,
+              "vq.mu.weight": 0.34304550290107727,
+              "vq.logvar.weight": 0.2378017157316208
+            },
+            "weighted_kl": {
+              "encoder.out_proj.weight": 0.004653416574001312,
+              "encoder.out_proj.bias": 5.978272020001896e-05,
+              "vq.pre_norm.weight": 0.0002573586243670434,
+              "vq.mu.weight": 0.0009222939261235297,
+              "vq.logvar.weight": 0.000664093007799238
+            }
+          },
+          "parameter_gradient_connected": {
+            "image": {
+              "encoder.out_proj.weight": true,
+              "encoder.out_proj.bias": true,
+              "vq.pre_norm.weight": true,
+              "vq.mu.weight": true,
+              "vq.logvar.weight": true
+            },
+            "state": {
+              "encoder.out_proj.weight": true,
+              "encoder.out_proj.bias": true,
+              "vq.pre_norm.weight": true,
+              "vq.mu.weight": true,
+              "vq.logvar.weight": true
+            },
+            "weighted_kl": {
+              "encoder.out_proj.weight": true,
+              "encoder.out_proj.bias": true,
+              "vq.pre_norm.weight": true,
+              "vq.mu.weight": true,
+              "vq.logvar.weight": true
+            }
+          },
+          "posterior_sampling": "sampled",
+          "pairwise_cosines": {
+            "image__state": null,
+            "image__weighted_kl": null,
+            "state__weighted_kl": 0.4026709794998169
+          },
+          "scope": "Actual training batch and consumed epsilon. Gradients of batch-mean losses before clipping; selected decoder z is distinct from pre-LN nodes. KL has no downstream path through sampled z, but does through mu in mu_only. Parameter probes cover out_proj and VAE only. Normal backward follows."
+        },
+        {
+          "step_before_update": 1,
+          "lr_used": 6e-07,
+          "losses": {
+            "image": 1.005894422531128,
+            "state": 0.2898726165294647,
+            "weighted_kl": 0.0004230354097671807
+          },
+          "node_gradient_norms": {
+            "image": 2.1925959572399734e-06,
+            "state": 0.022302139550447464,
+            "weighted_kl": 2.8887981898151338e-05
+          },
+          "selected_z_gradient_norms": {
+            "image": 5.706244792236248e-06,
+            "state": 0.048238400369882584,
+            "weighted_kl": null
+          },
+          "parameter_gradient_norms": {
+            "image": {
+              "encoder.out_proj.weight": 0.0003114792052656412,
+              "encoder.out_proj.bias": 3.99828604713548e-06,
+              "vq.pre_norm.weight": 8.404005711781792e-06,
+              "vq.mu.weight": 6.273393228184432e-05,
+              "vq.logvar.weight": 1.5219236047414597e-05
+            },
+            "state": {
+              "encoder.out_proj.weight": 2.309521198272705,
+              "encoder.out_proj.bias": 0.02967187762260437,
+              "vq.pre_norm.weight": 0.06027166172862053,
+              "vq.mu.weight": 0.32616832852363586,
+              "vq.logvar.weight": 0.18916764855384827
+            },
+            "weighted_kl": {
+              "encoder.out_proj.weight": 0.004442800767719746,
+              "encoder.out_proj.bias": 5.723857248085551e-05,
+              "vq.pre_norm.weight": 0.00025069995899684727,
+              "vq.mu.weight": 0.000917940167710185,
+              "vq.logvar.weight": 0.0006440304568968713
+            }
+          },
+          "parameter_gradient_connected": {
+            "image": {
+              "encoder.out_proj.weight": true,
+              "encoder.out_proj.bias": true,
+              "vq.pre_norm.weight": true,
+              "vq.mu.weight": true,
+              "vq.logvar.weight": true
+            },
+            "state": {
+              "encoder.out_proj.weight": true,
+              "encoder.out_proj.bias": true,
+              "vq.pre_norm.weight": true,
+              "vq.mu.weight": true,
+              "vq.logvar.weight": true
+            },
+            "weighted_kl": {
+              "encoder.out_proj.weight": true,
+              "encoder.out_proj.bias": true,
+              "vq.pre_norm.weight": true,
+              "vq.mu.weight": true,
+              "vq.logvar.weight": true
+            }
+          },
+          "posterior_sampling": "sampled",
+          "pairwise_cosines": {
+            "image__state": -0.3802724778652191,
+            "image__weighted_kl": -0.5677105784416199,
+            "state__weighted_kl": 0.4690574109554291
+          },
+          "scope": "Actual training batch and consumed epsilon. Gradients of batch-mean losses before clipping; selected decoder z is distinct from pre-LN nodes. KL has no downstream path through sampled z, but does through mu in mu_only. Parameter probes cover out_proj and VAE only. Normal backward follows."
+        }
+      ],
+      "training_geometry_B4_different_batches": [
+        {
+          "step_before_update": 0,
+          "layers": {
+            "cross_attention_queries": {
+              "samples": 4,
+              "dimensions": 1024,
+              "mean_vector_norm": 32.30791717610462,
+              "mean_sample_norm": 32.34029777942203,
+              "coordinate_std_mean": 1.0106288870509124,
+              "between_example_variance_sum": 2.0934569315910814,
+              "between_example_variance_fraction": 0.002001593843799745,
+              "radial_fraction_of_between_example_variation": 0.00020253154061435037,
+              "coordinate_centered_direction_variance_sum": 0.0020015714138020553
+            },
+            "encoder_layer_23_queries": {
+              "samples": 4,
+              "dimensions": 1024,
+              "mean_vector_norm": 77.91181337159384,
+              "mean_sample_norm": 78.4380772026613,
+              "coordinate_std_mean": 2.4495768610710624,
+              "between_example_variance_sum": 82.31536035659579,
+              "between_example_variance_fraction": 0.013379029180038563,
+              "radial_fraction_of_between_example_variation": 0.0005259132766372351,
+              "coordinate_centered_direction_variance_sum": 0.013368562866221415
+            },
+            "pre_norm_nodes": {
+              "samples": 4,
+              "dimensions": 32,
+              "mean_vector_norm": 8.525528433921451,
+              "mean_sample_norm": 8.568396336628066,
+              "coordinate_std_mean": 1.5051553990991715,
+              "between_example_variance_sum": 0.8356866678223014,
+              "between_example_variance_fraction": 0.011366743887710189,
+              "radial_fraction_of_between_example_variation": 0.13648902913808228,
+              "coordinate_centered_direction_variance_sum": 0.010210013815019396
+            },
+            "vae_layernorm_output": {
+              "samples": 4,
+              "dimensions": 32,
+              "mean_vector_norm": 5.627889571715651,
+              "mean_sample_norm": 5.656841875860395,
+              "coordinate_std_mean": 0.9999978126302289,
+              "between_example_variance_sum": 0.32671897706364916,
+              "between_example_variance_fraction": 0.010210012699335934,
+              "radial_fraction_of_between_example_variation": 0.0004954942596495397,
+              "coordinate_centered_direction_variance_sum": 0.010210013597525817
+            },
+            "posterior_mu": {
+              "samples": 4,
+              "dimensions": 32,
+              "mean_vector_norm": 3.277459551006616,
+              "mean_sample_norm": 3.293254328497568,
+              "coordinate_std_mean": 0.5788461966931768,
+              "between_example_variance_sum": 0.10534872473439424,
+              "between_example_variance_fraction": 0.00971216486211509,
+              "radial_fraction_of_between_example_variation": 0.019097678390940197,
+              "coordinate_centered_direction_variance_sum": 0.009500551311636001
+            }
+          }
+        },
+        {
+          "step_before_update": 1,
+          "layers": {
+            "cross_attention_queries": {
+              "samples": 4,
+              "dimensions": 1024,
+              "mean_vector_norm": 32.30361100191525,
+              "mean_sample_norm": 32.33532526870425,
+              "coordinate_std_mean": 1.0104731800052895,
+              "between_example_variance_sum": 2.0500120317878343,
+              "between_example_variance_fraction": 0.001960658368029005,
+              "radial_fraction_of_between_example_variation": 0.00010293826012802815,
+              "coordinate_centered_direction_variance_sum": 0.0019606086556945533
+            },
+            "encoder_layer_23_queries": {
+              "samples": 4,
+              "dimensions": 1024,
+              "mean_vector_norm": 77.73158632073847,
+              "mean_sample_norm": 78.25136386133046,
+              "coordinate_std_mean": 2.4437383714710705,
+              "between_example_variance_sum": 81.1308548679549,
+              "between_example_variance_fraction": 0.013249465569872356,
+              "radial_fraction_of_between_example_variation": 0.00127206928658886,
+              "coordinate_centered_direction_variance_sum": 0.01325044838566872
+            },
+            "pre_norm_nodes": {
+              "samples": 4,
+              "dimensions": 32,
+              "mean_vector_norm": 8.633176603668684,
+              "mean_sample_norm": 8.688554043212495,
+              "coordinate_std_mean": 1.52722728566147,
+              "between_example_variance_sum": 0.9725240880507044,
+              "between_example_variance_fraction": 0.012880386585821716,
+              "radial_fraction_of_between_example_variation": 0.016584096424435733,
+              "coordinate_centered_direction_variance_sum": 0.012501596390682077
+            },
+            "vae_layernorm_output": {
+              "samples": 4,
+              "dimensions": 32,
+              "mean_vector_norm": 5.621368872484942,
+              "mean_sample_norm": 5.656839868348521,
+              "coordinate_std_mean": 0.9999974577489139,
+              "between_example_variance_sum": 0.40004929559481783,
+              "between_example_variance_fraction": 0.01250160405169016,
+              "radial_fraction_of_between_example_variation": 0.0004246721775591622,
+              "coordinate_centered_direction_variance_sum": 0.012501604314121551
+            },
+            "posterior_mu": {
+              "samples": 4,
+              "dimensions": 32,
+              "mean_vector_norm": 3.2656688554483537,
+              "mean_sample_norm": 3.2842803310682664,
+              "coordinate_std_mean": 0.5783021442458972,
+              "between_example_variance_sum": 0.12276759427049375,
+              "between_example_variance_fraction": 0.01138068875715907,
+              "radial_fraction_of_between_example_variation": 0.004355130999729251,
+              "coordinate_centered_direction_variance_sum": 0.011102844182988769
+            }
+          }
+        }
+      ],
+      "all_six_metrics": [
+        {
+          "step": 1,
+          "train_loss": 1.2330782413482666,
+          "metrics": {
+            "train_loss": 1.2330782413482666,
+            "train/recon_loss": 1.003886103630066,
+            "train/vq_loss": 0.00043045624624937773,
+            "train/perplexity": 0.0,
+            "train/cos_sim_metric": -0.0016165951965376735,
+            "train/l1_loss_metric": 1.052819013595581,
+            "train/state_loss": 0.2287617176771164,
+            "train/lr": 3.000000106112566e-07
+          }
+        },
+        {
+          "step": 2,
+          "train_loss": 1.2961901426315308,
+          "metrics": {
+            "train_loss": 1.2961901426315308,
+            "train/recon_loss": 1.005894422531128,
+            "train/vq_loss": 0.0004230354097671807,
+            "train/perplexity": 0.0,
+            "train/cos_sim_metric": 0.002565254457294941,
+            "train/l1_loss_metric": 1.0548369884490967,
+            "train/state_loss": 0.2898726165294647,
+            "train/lr": 6.000000212225132e-07
+          }
+        },
+        {
+          "step": 3,
+          "train_loss": 1.3796064853668213,
+          "metrics": {
+            "train_loss": 1.3796064853668213,
+            "train/recon_loss": 1.0029678344726562,
+            "train/vq_loss": 0.0003939894959330559,
+            "train/perplexity": 0.0,
+            "train/cos_sim_metric": 0.0023824938107281923,
+            "train/l1_loss_metric": 1.0519084930419922,
+            "train/state_loss": 0.3762447237968445,
+            "train/lr": 8.999999749903509e-07
+          }
+        },
+        {
+          "step": 4,
+          "train_loss": 1.2701226472854614,
+          "metrics": {
+            "train_loss": 1.2701226472854614,
+            "train/recon_loss": 1.003099799156189,
+            "train/vq_loss": 0.0003617391921579838,
+            "train/perplexity": 0.0,
+            "train/cos_sim_metric": -0.005592021159827709,
+            "train/l1_loss_metric": 1.0520379543304443,
+            "train/state_loss": 0.2666611969470978,
+            "train/lr": 1.2000000424450263e-06
+          }
+        },
+        {
+          "step": 5,
+          "train_loss": 1.2935070991516113,
+          "metrics": {
+            "train_loss": 1.2935070991516113,
+            "train/recon_loss": 1.0028867721557617,
+            "train/vq_loss": 0.0003418562118895352,
+            "train/perplexity": 0.0,
+            "train/cos_sim_metric": -0.0010193914640694857,
+            "train/l1_loss_metric": 1.0518274307250977,
+            "train/state_loss": 0.2902784049510956,
+            "train/lr": 1.500000053056283e-06
+          }
+        },
+        {
+          "step": 6,
+          "train_loss": 1.211888313293457,
+          "metrics": {
+            "train_loss": 1.211888313293457,
+            "train/recon_loss": 1.0078167915344238,
+            "train/vq_loss": 0.00032726320205256343,
+            "train/perplexity": 0.0,
+            "train/cos_sim_metric": -0.008220606483519077,
+            "train/l1_loss_metric": 1.0567607879638672,
+            "train/state_loss": 0.2037443071603775,
+            "train/lr": 1.7999999499807018e-06
+          }
+        }
+      ],
+      "val6_8rows": {
+        "step": 6,
+        "samples": 8,
+        "mu_variance_sum": 0.052618499791398946,
+        "noise_variance_sum": 35.156130239128004,
+        "noise_fraction": 0.9985055276976306,
+        "pre_norm_node_coordinate_std_mean": 1.7390381633755483,
+        "mean_gap": 3.725290298461914e-07,
+        "swap_gap": -3.2335519790649414e-06,
+        "real_visual_mse": 1.9932276010513306
+      },
+      "data_augmentation_epsilon_match": true,
+      "same_val8_ids": true
+    },
+    "beta_zero": {
+      "observed_factors": {
+        "arm": "beta_zero",
+        "image_loss": "smooth_l1",
+        "kl_beta": 0.0,
+        "lambda_aux": 1.0,
+        "posterior_sampling": "sampled",
+        "initialization": "fresh",
+        "state_decoder_initialization": "fresh local g; official14 state head is never loaded",
+        "epsilon_policy": "Always consume and verify the original upstream Gaussian draw, including mu_only",
+        "main_training": false,
+        "parent_runner_sha256": "9ecbea0151c1f902647dc9e41a5a17a431ab5c4319da658b9d0cdeb5104cba27",
+        "runner_sha256": "e1d7db1efca25cdff88a7299e7f5cd31c016b0c11a661fd212c73df67647aa22"
+      },
+      "component_initialization": {
+        "scope": "fresh",
+        "fresh_seeded_components": {
+          "encoder": {
+            "sha256": "3a9a2c8a94beae21a06366dbe8c66997a8e3bab6ce898ce950c062d694a94034",
+            "state_tensors": 305
+          },
+          "vq": {
+            "sha256": "3868cdf0d2ea6db42b0b107362dbb3341aac2012d4083b97ae79c811eb8fbde5",
+            "state_tensors": 6
+          },
+          "decoder": {
+            "sha256": "cd7bf293c1a37107ad612fd43ec6bcbeafb64946a6ae3347e4cf94b5f0bff8ac",
+            "state_tensors": 128
+          },
+          "local_g": {
+            "sha256": "22fb959b28612f62f970e1dee409849f83ca39a2f400b273156295f4a25523e5",
+            "state_tensors": 10
+          }
+        },
+        "effective_components": {
+          "encoder": {
+            "sha256": "3a9a2c8a94beae21a06366dbe8c66997a8e3bab6ce898ce950c062d694a94034",
+            "state_tensors": 305
+          },
+          "vq": {
+            "sha256": "3868cdf0d2ea6db42b0b107362dbb3341aac2012d4083b97ae79c811eb8fbde5",
+            "state_tensors": 6
+          },
+          "decoder": {
+            "sha256": "cd7bf293c1a37107ad612fd43ec6bcbeafb64946a6ae3347e4cf94b5f0bff8ac",
+            "state_tensors": 128
+          },
+          "local_g": {
+            "sha256": "22fb959b28612f62f970e1dee409849f83ca39a2f400b273156295f4a25523e5",
+            "state_tensors": 10
+          }
+        }
+      },
+      "gradient_snapshots": [
+        {
+          "step_before_update": 0,
+          "lr_used": 3e-07,
+          "losses": {
+            "image": 1.003886103630066,
+            "state": 0.2287617176771164,
+            "weighted_kl": 0.0
+          },
+          "node_gradient_norms": {
+            "image": 0.0,
+            "state": 0.01962883397936821,
+            "weighted_kl": 0.0
+          },
+          "selected_z_gradient_norms": {
+            "image": 0.0,
+            "state": 0.04641728475689888,
+            "weighted_kl": null
+          },
+          "parameter_gradient_norms": {
+            "image": {
+              "encoder.out_proj.weight": 0.0,
+              "encoder.out_proj.bias": 0.0,
+              "vq.pre_norm.weight": 0.0,
+              "vq.mu.weight": 0.0,
+              "vq.logvar.weight": 0.0
+            },
+            "state": {
+              "encoder.out_proj.weight": 2.032872200012207,
+              "encoder.out_proj.bias": 0.026011938229203224,
+              "vq.pre_norm.weight": 0.0511040985584259,
+              "vq.mu.weight": 0.34304550290107727,
+              "vq.logvar.weight": 0.2378017157316208
+            },
+            "weighted_kl": {
+              "encoder.out_proj.weight": 0.0,
+              "encoder.out_proj.bias": 0.0,
+              "vq.pre_norm.weight": 0.0,
+              "vq.mu.weight": 0.0,
+              "vq.logvar.weight": 0.0
+            }
+          },
+          "parameter_gradient_connected": {
+            "image": {
+              "encoder.out_proj.weight": true,
+              "encoder.out_proj.bias": true,
+              "vq.pre_norm.weight": true,
+              "vq.mu.weight": true,
+              "vq.logvar.weight": true
+            },
+            "state": {
+              "encoder.out_proj.weight": true,
+              "encoder.out_proj.bias": true,
+              "vq.pre_norm.weight": true,
+              "vq.mu.weight": true,
+              "vq.logvar.weight": true
+            },
+            "weighted_kl": {
+              "encoder.out_proj.weight": true,
+              "encoder.out_proj.bias": true,
+              "vq.pre_norm.weight": true,
+              "vq.mu.weight": true,
+              "vq.logvar.weight": true
+            }
+          },
+          "posterior_sampling": "sampled",
+          "pairwise_cosines": {
+            "image__state": null,
+            "image__weighted_kl": null,
+            "state__weighted_kl": null
+          },
+          "scope": "Actual training batch and consumed epsilon. Gradients of batch-mean losses before clipping; selected decoder z is distinct from pre-LN nodes. KL has no downstream path through sampled z, but does through mu in mu_only. Parameter probes cover out_proj and VAE only. Normal backward follows."
+        },
+        {
+          "step_before_update": 1,
+          "lr_used": 6e-07,
+          "losses": {
+            "image": 1.005894422531128,
+            "state": 0.28985723853111267,
+            "weighted_kl": 0.0
+          },
+          "node_gradient_norms": {
+            "image": 2.192467491113348e-06,
+            "state": 0.022347984835505486,
+            "weighted_kl": 0.0
+          },
+          "selected_z_gradient_norms": {
+            "image": 5.707768195861718e-06,
+            "state": 0.048613809049129486,
+            "weighted_kl": null
+          },
+          "parameter_gradient_norms": {
+            "image": {
+              "encoder.out_proj.weight": 0.0003114411956630647,
+              "encoder.out_proj.bias": 4.000605713372352e-06,
+              "vq.pre_norm.weight": 8.404821528529283e-06,
+              "vq.mu.weight": 6.274597399169579e-05,
+              "vq.logvar.weight": 1.5219656233966816e-05
+            },
+            "state": {
+              "encoder.out_proj.weight": 2.3123104572296143,
+              "encoder.out_proj.bias": 0.0296471044421196,
+              "vq.pre_norm.weight": 0.06005365774035454,
+              "vq.mu.weight": 0.32711684703826904,
+              "vq.logvar.weight": 0.1900327056646347
+            },
+            "weighted_kl": {
+              "encoder.out_proj.weight": 0.0,
+              "encoder.out_proj.bias": 0.0,
+              "vq.pre_norm.weight": 0.0,
+              "vq.mu.weight": 0.0,
+              "vq.logvar.weight": 0.0
+            }
+          },
+          "parameter_gradient_connected": {
+            "image": {
+              "encoder.out_proj.weight": true,
+              "encoder.out_proj.bias": true,
+              "vq.pre_norm.weight": true,
+              "vq.mu.weight": true,
+              "vq.logvar.weight": true
+            },
+            "state": {
+              "encoder.out_proj.weight": true,
+              "encoder.out_proj.bias": true,
+              "vq.pre_norm.weight": true,
+              "vq.mu.weight": true,
+              "vq.logvar.weight": true
+            },
+            "weighted_kl": {
+              "encoder.out_proj.weight": true,
+              "encoder.out_proj.bias": true,
+              "vq.pre_norm.weight": true,
+              "vq.mu.weight": true,
+              "vq.logvar.weight": true
+            }
+          },
+          "posterior_sampling": "sampled",
+          "pairwise_cosines": {
+            "image__state": -0.3756448030471802,
+            "image__weighted_kl": null,
+            "state__weighted_kl": null
+          },
+          "scope": "Actual training batch and consumed epsilon. Gradients of batch-mean losses before clipping; selected decoder z is distinct from pre-LN nodes. KL has no downstream path through sampled z, but does through mu in mu_only. Parameter probes cover out_proj and VAE only. Normal backward follows."
+        }
+      ],
+      "training_geometry_B4_different_batches": [
+        {
+          "step_before_update": 0,
+          "layers": {
+            "cross_attention_queries": {
+              "samples": 4,
+              "dimensions": 1024,
+              "mean_vector_norm": 32.30791717610462,
+              "mean_sample_norm": 32.34029777942203,
+              "coordinate_std_mean": 1.0106288870509124,
+              "between_example_variance_sum": 2.0934569315910814,
+              "between_example_variance_fraction": 0.002001593843799745,
+              "radial_fraction_of_between_example_variation": 0.00020253154061435037,
+              "coordinate_centered_direction_variance_sum": 0.0020015714138020553
+            },
+            "encoder_layer_23_queries": {
+              "samples": 4,
+              "dimensions": 1024,
+              "mean_vector_norm": 77.91181337159384,
+              "mean_sample_norm": 78.4380772026613,
+              "coordinate_std_mean": 2.4495768610710624,
+              "between_example_variance_sum": 82.31536035659579,
+              "between_example_variance_fraction": 0.013379029180038563,
+              "radial_fraction_of_between_example_variation": 0.0005259132766372351,
+              "coordinate_centered_direction_variance_sum": 0.013368562866221415
+            },
+            "pre_norm_nodes": {
+              "samples": 4,
+              "dimensions": 32,
+              "mean_vector_norm": 8.525528433921451,
+              "mean_sample_norm": 8.568396336628066,
+              "coordinate_std_mean": 1.5051553990991715,
+              "between_example_variance_sum": 0.8356866678223014,
+              "between_example_variance_fraction": 0.011366743887710189,
+              "radial_fraction_of_between_example_variation": 0.13648902913808228,
+              "coordinate_centered_direction_variance_sum": 0.010210013815019396
+            },
+            "vae_layernorm_output": {
+              "samples": 4,
+              "dimensions": 32,
+              "mean_vector_norm": 5.627889571715651,
+              "mean_sample_norm": 5.656841875860395,
+              "coordinate_std_mean": 0.9999978126302289,
+              "between_example_variance_sum": 0.32671897706364916,
+              "between_example_variance_fraction": 0.010210012699335934,
+              "radial_fraction_of_between_example_variation": 0.0004954942596495397,
+              "coordinate_centered_direction_variance_sum": 0.010210013597525817
+            },
+            "posterior_mu": {
+              "samples": 4,
+              "dimensions": 32,
+              "mean_vector_norm": 3.277459551006616,
+              "mean_sample_norm": 3.293254328497568,
+              "coordinate_std_mean": 0.5788461966931768,
+              "between_example_variance_sum": 0.10534872473439424,
+              "between_example_variance_fraction": 0.00971216486211509,
+              "radial_fraction_of_between_example_variation": 0.019097678390940197,
+              "coordinate_centered_direction_variance_sum": 0.009500551311636001
+            }
+          }
+        },
+        {
+          "step_before_update": 1,
+          "layers": {
+            "cross_attention_queries": {
+              "samples": 4,
+              "dimensions": 1024,
+              "mean_vector_norm": 32.30353839154823,
+              "mean_sample_norm": 32.33524232476725,
+              "coordinate_std_mean": 1.0104705816096777,
+              "between_example_variance_sum": 2.0493381158702815,
+              "between_example_variance_fraction": 0.0019600238833255594,
+              "radial_fraction_of_between_example_variation": 0.00010081361146266276,
+              "coordinate_centered_direction_variance_sum": 0.0019599732540225424
+            },
+            "encoder_layer_23_queries": {
+              "samples": 4,
+              "dimensions": 1024,
+              "mean_vector_norm": 77.73384225132163,
+              "mean_sample_norm": 78.25302392096194,
+              "coordinate_std_mean": 2.4437932441866717,
+              "between_example_variance_sum": 81.03847400811767,
+              "between_example_variance_fraction": 0.01323382054379512,
+              "radial_fraction_of_between_example_variation": 0.001266735221741478,
+              "coordinate_centered_direction_variance_sum": 0.013234776581353407
+            },
+            "pre_norm_nodes": {
+              "samples": 4,
+              "dimensions": 32,
+              "mean_vector_norm": 8.63374341838153,
+              "mean_sample_norm": 8.6899415199595,
+              "coordinate_std_mean": 1.5274823521794967,
+              "between_example_variance_sum": 0.9867815102916211,
+              "between_example_variance_fraction": 0.013065055347724442,
+              "radial_fraction_of_between_example_variation": 0.016398749971851496,
+              "coordinate_centered_direction_variance_sum": 0.012687371733050961
+            },
+            "vae_layernorm_output": {
+              "samples": 4,
+              "dimensions": 32,
+              "mean_vector_norm": 5.620840184449068,
+              "mean_sample_norm": 5.656839972840713,
+              "coordinate_std_mean": 0.9999974762206982,
+              "between_example_variance_sum": 0.40599409921133295,
+              "between_example_variance_fraction": 0.012687379640565504,
+              "radial_fraction_of_between_example_variation": 0.0004224264800805417,
+              "coordinate_centered_direction_variance_sum": 0.01268737978547561
+            },
+            "posterior_mu": {
+              "samples": 4,
+              "dimensions": 32,
+              "mean_vector_norm": 3.2676308032229713,
+              "mean_sample_norm": 3.286443420006142,
+              "coordinate_std_mean": 0.5786936856070277,
+              "between_example_variance_sum": 0.12415127779693773,
+              "between_example_variance_fraction": 0.011493825971042263,
+              "radial_fraction_of_between_example_variation": 0.0042689310445161496,
+              "coordinate_centered_direction_variance_sum": 0.011214757529986593
+            }
+          }
+        }
+      ],
+      "all_six_metrics": [
+        {
+          "step": 1,
+          "train_loss": 1.2326477766036987,
+          "metrics": {
+            "train_loss": 1.2326477766036987,
+            "train/recon_loss": 1.003886103630066,
+            "train/vq_loss": 0.0,
+            "train/perplexity": 0.0,
+            "train/cos_sim_metric": -0.0016165951965376735,
+            "train/l1_loss_metric": 1.052819013595581,
+            "train/state_loss": 0.2287617176771164,
+            "train/lr": 3.000000106112566e-07
+          }
+        },
+        {
+          "step": 2,
+          "train_loss": 1.295751690864563,
+          "metrics": {
+            "train_loss": 1.295751690864563,
+            "train/recon_loss": 1.005894422531128,
+            "train/vq_loss": 0.0,
+            "train/perplexity": 0.0,
+            "train/cos_sim_metric": 0.0025651741307228804,
+            "train/l1_loss_metric": 1.0548369884490967,
+            "train/state_loss": 0.28985723853111267,
+            "train/lr": 6.000000212225132e-07
+          }
+        },
+        {
+          "step": 3,
+          "train_loss": 1.3787872791290283,
+          "metrics": {
+            "train_loss": 1.3787872791290283,
+            "train/recon_loss": 1.0029678344726562,
+            "train/vq_loss": 0.0,
+            "train/perplexity": 0.0,
+            "train/cos_sim_metric": 0.0023822642397135496,
+            "train/l1_loss_metric": 1.0519084930419922,
+            "train/state_loss": 0.3758193850517273,
+            "train/lr": 8.999999749903509e-07
+          }
+        },
+        {
+          "step": 4,
+          "train_loss": 1.2699944972991943,
+          "metrics": {
+            "train_loss": 1.2699944972991943,
+            "train/recon_loss": 1.0030994415283203,
+            "train/vq_loss": 0.0,
+            "train/perplexity": 0.0,
+            "train/cos_sim_metric": -0.005591145716607571,
+            "train/l1_loss_metric": 1.0520377159118652,
+            "train/state_loss": 0.26689499616622925,
+            "train/lr": 1.2000000424450263e-06
+          }
+        },
+        {
+          "step": 5,
+          "train_loss": 1.2937308549880981,
+          "metrics": {
+            "train_loss": 1.2937308549880981,
+            "train/recon_loss": 1.0028862953186035,
+            "train/vq_loss": 0.0,
+            "train/perplexity": 0.0,
+            "train/cos_sim_metric": -0.0010189968161284924,
+            "train/l1_loss_metric": 1.051827073097229,
+            "train/state_loss": 0.29084452986717224,
+            "train/lr": 1.500000053056283e-06
+          }
+        },
+        {
+          "step": 6,
+          "train_loss": 1.2117480039596558,
+          "metrics": {
+            "train_loss": 1.2117480039596558,
+            "train/recon_loss": 1.0078153610229492,
+            "train/vq_loss": 0.0,
+            "train/perplexity": 0.0,
+            "train/cos_sim_metric": -0.00821769330650568,
+            "train/l1_loss_metric": 1.0567593574523926,
+            "train/state_loss": 0.20393261313438416,
+            "train/lr": 1.7999999499807018e-06
+          }
+        }
+      ],
+      "val6_8rows": {
+        "step": 6,
+        "samples": 8,
+        "mu_variance_sum": 0.05258980974986917,
+        "noise_variance_sum": 35.162148566015205,
+        "noise_fraction": 0.9985065966076846,
+        "pre_norm_node_coordinate_std_mean": 1.7385754266459856,
+        "mean_gap": -1.1622905731201172e-06,
+        "swap_gap": -4.678964614868164e-06,
+        "real_visual_mse": 1.9932245016098022
+      },
+      "data_augmentation_epsilon_match": true,
+      "same_val8_ids": true
+    },
+    "mu_only": {
+      "observed_factors": {
+        "arm": "mu_only",
+        "image_loss": "smooth_l1",
+        "kl_beta": 5e-05,
+        "lambda_aux": 1.0,
+        "posterior_sampling": "mu_only",
+        "initialization": "fresh",
+        "state_decoder_initialization": "fresh local g; official14 state head is never loaded",
+        "epsilon_policy": "Always consume and verify the original upstream Gaussian draw, including mu_only",
+        "main_training": false,
+        "parent_runner_sha256": "9ecbea0151c1f902647dc9e41a5a17a431ab5c4319da658b9d0cdeb5104cba27",
+        "runner_sha256": "e1d7db1efca25cdff88a7299e7f5cd31c016b0c11a661fd212c73df67647aa22"
+      },
+      "component_initialization": {
+        "scope": "fresh",
+        "fresh_seeded_components": {
+          "encoder": {
+            "sha256": "3a9a2c8a94beae21a06366dbe8c66997a8e3bab6ce898ce950c062d694a94034",
+            "state_tensors": 305
+          },
+          "vq": {
+            "sha256": "3868cdf0d2ea6db42b0b107362dbb3341aac2012d4083b97ae79c811eb8fbde5",
+            "state_tensors": 6
+          },
+          "decoder": {
+            "sha256": "cd7bf293c1a37107ad612fd43ec6bcbeafb64946a6ae3347e4cf94b5f0bff8ac",
+            "state_tensors": 128
+          },
+          "local_g": {
+            "sha256": "22fb959b28612f62f970e1dee409849f83ca39a2f400b273156295f4a25523e5",
+            "state_tensors": 10
+          }
+        },
+        "effective_components": {
+          "encoder": {
+            "sha256": "3a9a2c8a94beae21a06366dbe8c66997a8e3bab6ce898ce950c062d694a94034",
+            "state_tensors": 305
+          },
+          "vq": {
+            "sha256": "3868cdf0d2ea6db42b0b107362dbb3341aac2012d4083b97ae79c811eb8fbde5",
+            "state_tensors": 6
+          },
+          "decoder": {
+            "sha256": "cd7bf293c1a37107ad612fd43ec6bcbeafb64946a6ae3347e4cf94b5f0bff8ac",
+            "state_tensors": 128
+          },
+          "local_g": {
+            "sha256": "22fb959b28612f62f970e1dee409849f83ca39a2f400b273156295f4a25523e5",
+            "state_tensors": 10
+          }
+        }
+      },
+      "gradient_snapshots": [
+        {
+          "step_before_update": 0,
+          "lr_used": 3e-07,
+          "losses": {
+            "image": 1.003886103630066,
+            "state": 0.1064852774143219,
+            "weighted_kl": 0.00043045624624937773
+          },
+          "node_gradient_norms": {
+            "image": 0.0,
+            "state": 0.011288370005786419,
+            "weighted_kl": 3.0112601962173358e-05
+          },
+          "selected_z_gradient_norms": {
+            "image": 0.0,
+            "state": 0.0320391021668911,
+            "weighted_kl": 8.233729749917984e-05
+          },
+          "parameter_gradient_norms": {
+            "image": {
+              "encoder.out_proj.weight": 0.0,
+              "encoder.out_proj.bias": 0.0,
+              "vq.pre_norm.weight": 0.0,
+              "vq.mu.weight": 0.0,
+              "vq.logvar.weight": 0.0
+            },
+            "state": {
+              "encoder.out_proj.weight": 1.4964457750320435,
+              "encoder.out_proj.bias": 0.019202820956707,
+              "vq.pre_norm.weight": 0.03194732218980789,
+              "vq.mu.weight": 0.29645830392837524,
+              "vq.logvar.weight": 0.0
+            },
+            "weighted_kl": {
+              "encoder.out_proj.weight": 0.004653416574001312,
+              "encoder.out_proj.bias": 5.978272020001896e-05,
+              "vq.pre_norm.weight": 0.0002573586243670434,
+              "vq.mu.weight": 0.0009222939261235297,
+              "vq.logvar.weight": 0.000664093007799238
+            }
+          },
+          "parameter_gradient_connected": {
+            "image": {
+              "encoder.out_proj.weight": true,
+              "encoder.out_proj.bias": true,
+              "vq.pre_norm.weight": true,
+              "vq.mu.weight": true,
+              "vq.logvar.weight": false
+            },
+            "state": {
+              "encoder.out_proj.weight": true,
+              "encoder.out_proj.bias": true,
+              "vq.pre_norm.weight": true,
+              "vq.mu.weight": true,
+              "vq.logvar.weight": false
+            },
+            "weighted_kl": {
+              "encoder.out_proj.weight": true,
+              "encoder.out_proj.bias": true,
+              "vq.pre_norm.weight": true,
+              "vq.mu.weight": true,
+              "vq.logvar.weight": true
+            }
+          },
+          "posterior_sampling": "mu_only",
+          "pairwise_cosines": {
+            "image__state": null,
+            "image__weighted_kl": null,
+            "state__weighted_kl": 0.5183570384979248
+          },
+          "scope": "Actual training batch and consumed epsilon. Gradients of batch-mean losses before clipping; selected decoder z is distinct from pre-LN nodes. KL has no downstream path through sampled z, but does through mu in mu_only. Parameter probes cover out_proj and VAE only. Normal backward follows."
+        },
+        {
+          "step_before_update": 1,
+          "lr_used": 6e-07,
+          "losses": {
+            "image": 1.0058927536010742,
+            "state": 0.15589860081672668,
+            "weighted_kl": 0.00042300348286516964
+          },
+          "node_gradient_norms": {
+            "image": 1.8724637129707844e-06,
+            "state": 0.012465531006455421,
+            "weighted_kl": 2.8753325750585645e-05
+          },
+          "selected_z_gradient_norms": {
+            "image": 5.976839020149782e-06,
+            "state": 0.03815646842122078,
+            "weighted_kl": 8.13422811916098e-05
+          },
+          "parameter_gradient_norms": {
+            "image": {
+              "encoder.out_proj.weight": 0.00028831977397203445,
+              "encoder.out_proj.bias": 3.706053576024715e-06,
+              "vq.pre_norm.weight": 1.0654150173650123e-05,
+              "vq.mu.weight": 6.702461541863158e-05,
+              "vq.logvar.weight": 0.0
+            },
+            "state": {
+              "encoder.out_proj.weight": 1.1466221809387207,
+              "encoder.out_proj.bias": 0.01467469334602356,
+              "vq.pre_norm.weight": 0.032116636633872986,
+              "vq.mu.weight": 0.25820767879486084,
+              "vq.logvar.weight": 0.0
+            },
+            "weighted_kl": {
+              "encoder.out_proj.weight": 0.004419419448822737,
+              "encoder.out_proj.bias": 5.6923643569462e-05,
+              "vq.pre_norm.weight": 0.000249550212174654,
+              "vq.mu.weight": 0.0009090669336728752,
+              "vq.logvar.weight": 0.0006588142132386565
+            }
+          },
+          "parameter_gradient_connected": {
+            "image": {
+              "encoder.out_proj.weight": true,
+              "encoder.out_proj.bias": true,
+              "vq.pre_norm.weight": true,
+              "vq.mu.weight": true,
+              "vq.logvar.weight": false
+            },
+            "state": {
+              "encoder.out_proj.weight": true,
+              "encoder.out_proj.bias": true,
+              "vq.pre_norm.weight": true,
+              "vq.mu.weight": true,
+              "vq.logvar.weight": false
+            },
+            "weighted_kl": {
+              "encoder.out_proj.weight": true,
+              "encoder.out_proj.bias": true,
+              "vq.pre_norm.weight": true,
+              "vq.mu.weight": true,
+              "vq.logvar.weight": true
+            }
+          },
+          "posterior_sampling": "mu_only",
+          "pairwise_cosines": {
+            "image__state": -0.40314459800720215,
+            "image__weighted_kl": -0.7562928199768066,
+            "state__weighted_kl": 0.3604964017868042
+          },
+          "scope": "Actual training batch and consumed epsilon. Gradients of batch-mean losses before clipping; selected decoder z is distinct from pre-LN nodes. KL has no downstream path through sampled z, but does through mu in mu_only. Parameter probes cover out_proj and VAE only. Normal backward follows."
+        }
+      ],
+      "training_geometry_B4_different_batches": [
+        {
+          "step_before_update": 0,
+          "layers": {
+            "cross_attention_queries": {
+              "samples": 4,
+              "dimensions": 1024,
+              "mean_vector_norm": 32.30791717610462,
+              "mean_sample_norm": 32.34029777942203,
+              "coordinate_std_mean": 1.0106288870509124,
+              "between_example_variance_sum": 2.0934569315910814,
+              "between_example_variance_fraction": 0.002001593843799745,
+              "radial_fraction_of_between_example_variation": 0.00020253154061435037,
+              "coordinate_centered_direction_variance_sum": 0.0020015714138020553
+            },
+            "encoder_layer_23_queries": {
+              "samples": 4,
+              "dimensions": 1024,
+              "mean_vector_norm": 77.91181337159384,
+              "mean_sample_norm": 78.4380772026613,
+              "coordinate_std_mean": 2.4495768610710624,
+              "between_example_variance_sum": 82.31536035659579,
+              "between_example_variance_fraction": 0.013379029180038563,
+              "radial_fraction_of_between_example_variation": 0.0005259132766372351,
+              "coordinate_centered_direction_variance_sum": 0.013368562866221415
+            },
+            "pre_norm_nodes": {
+              "samples": 4,
+              "dimensions": 32,
+              "mean_vector_norm": 8.525528433921451,
+              "mean_sample_norm": 8.568396336628066,
+              "coordinate_std_mean": 1.5051553990991715,
+              "between_example_variance_sum": 0.8356866678223014,
+              "between_example_variance_fraction": 0.011366743887710189,
+              "radial_fraction_of_between_example_variation": 0.13648902913808228,
+              "coordinate_centered_direction_variance_sum": 0.010210013815019396
+            },
+            "vae_layernorm_output": {
+              "samples": 4,
+              "dimensions": 32,
+              "mean_vector_norm": 5.627889571715651,
+              "mean_sample_norm": 5.656841875860395,
+              "coordinate_std_mean": 0.9999978126302289,
+              "between_example_variance_sum": 0.32671897706364916,
+              "between_example_variance_fraction": 0.010210012699335934,
+              "radial_fraction_of_between_example_variation": 0.0004954942596495397,
+              "coordinate_centered_direction_variance_sum": 0.010210013597525817
+            },
+            "posterior_mu": {
+              "samples": 4,
+              "dimensions": 32,
+              "mean_vector_norm": 3.277459551006616,
+              "mean_sample_norm": 3.293254328497568,
+              "coordinate_std_mean": 0.5788461966931768,
+              "between_example_variance_sum": 0.10534872473439424,
+              "between_example_variance_fraction": 0.00971216486211509,
+              "radial_fraction_of_between_example_variation": 0.019097678390940197,
+              "coordinate_centered_direction_variance_sum": 0.009500551311636001
+            }
+          }
+        },
+        {
+          "step_before_update": 1,
+          "layers": {
+            "cross_attention_queries": {
+              "samples": 4,
+              "dimensions": 1024,
+              "mean_vector_norm": 32.30356010211907,
+              "mean_sample_norm": 32.33526404887725,
+              "coordinate_std_mean": 1.0104712492513541,
+              "between_example_variance_sum": 2.0493409932225046,
+              "between_example_variance_fraction": 0.0019600240004592033,
+              "radial_fraction_of_between_example_variation": 0.00010335748914308219,
+              "coordinate_centered_direction_variance_sum": 0.0019599769743650886
+            },
+            "encoder_layer_23_queries": {
+              "samples": 4,
+              "dimensions": 1024,
+              "mean_vector_norm": 77.71833674621578,
+              "mean_sample_norm": 78.23802933318436,
+              "coordinate_std_mean": 2.443346236663898,
+              "between_example_variance_sum": 81.10250216997343,
+              "between_example_variance_fraction": 0.0132493532005488,
+              "radial_fraction_of_between_example_variation": 0.0013030832970911724,
+              "coordinate_centered_direction_variance_sum": 0.01325051700234186
+            },
+            "pre_norm_nodes": {
+              "samples": 4,
+              "dimensions": 32,
+              "mean_vector_norm": 8.626087556012823,
+              "mean_sample_norm": 8.682353889441762,
+              "coordinate_std_mean": 1.5261909984379622,
+              "between_example_variance_sum": 0.9865958942100406,
+              "between_example_variance_fraction": 0.013085523426666858,
+              "radial_fraction_of_between_example_variation": 0.01607981381432749,
+              "coordinate_centered_direction_variance_sum": 0.01271063951478759
+            },
+            "vae_layernorm_output": {
+              "samples": 4,
+              "dimensions": 32,
+              "mean_vector_norm": 5.620775651678123,
+              "mean_sample_norm": 5.656841665525612,
+              "coordinate_std_mean": 0.9999977754479352,
+              "between_example_variance_sum": 0.4067387023291222,
+              "between_example_variance_fraction": 0.01271064099868731,
+              "radial_fraction_of_between_example_variation": 0.0004483085069023995,
+              "coordinate_centered_direction_variance_sum": 0.012710641159780718
+            },
+            "posterior_mu": {
+              "samples": 4,
+              "dimensions": 32,
+              "mean_vector_norm": 3.23461974166002,
+              "mean_sample_norm": 3.2535708178242473,
+              "coordinate_std_mean": 0.5727319591496633,
+              "between_example_variance_sum": 0.1237425292049598,
+              "between_example_variance_fraction": 0.011688701901591119,
+              "radial_fraction_of_between_example_variation": 0.003911578473367187,
+              "coordinate_centered_direction_variance_sum": 0.01143134181204968
+            }
+          }
+        }
+      ],
+      "all_six_metrics": [
+        {
+          "step": 1,
+          "train_loss": 1.1108018159866333,
+          "metrics": {
+            "train_loss": 1.1108018159866333,
+            "train/recon_loss": 1.003886103630066,
+            "train/vq_loss": 0.00043045624624937773,
+            "train/perplexity": 0.0,
+            "train/cos_sim_metric": -0.0016165951965376735,
+            "train/l1_loss_metric": 1.052819013595581,
+            "train/state_loss": 0.1064852774143219,
+            "train/lr": 3.000000106112566e-07
+          }
+        },
+        {
+          "step": 2,
+          "train_loss": 1.1622142791748047,
+          "metrics": {
+            "train_loss": 1.1622142791748047,
+            "train/recon_loss": 1.0058927536010742,
+            "train/vq_loss": 0.00042300348286516964,
+            "train/perplexity": 0.0,
+            "train/cos_sim_metric": 0.0025666463188827038,
+            "train/l1_loss_metric": 1.0548350811004639,
+            "train/state_loss": 0.15589860081672668,
+            "train/lr": 6.000000212225132e-07
+          }
+        },
+        {
+          "step": 3,
+          "train_loss": 1.1706538200378418,
+          "metrics": {
+            "train_loss": 1.1706538200378418,
+            "train/recon_loss": 1.0029566287994385,
+            "train/vq_loss": 0.000395413109799847,
+            "train/perplexity": 0.0,
+            "train/cos_sim_metric": 0.0023999230470508337,
+            "train/l1_loss_metric": 1.0518968105316162,
+            "train/state_loss": 0.16730183362960815,
+            "train/lr": 8.999999749903509e-07
+          }
+        },
+        {
+          "step": 4,
+          "train_loss": 1.1748971939086914,
+          "metrics": {
+            "train_loss": 1.1748971939086914,
+            "train/recon_loss": 1.0030145645141602,
+            "train/vq_loss": 0.0003618517948780209,
+            "train/perplexity": 0.0,
+            "train/cos_sim_metric": -0.005474005360156298,
+            "train/l1_loss_metric": 1.051952838897705,
+            "train/state_loss": 0.1715208888053894,
+            "train/lr": 1.2000000424450263e-06
+          }
+        },
+        {
+          "step": 5,
+          "train_loss": 1.1716866493225098,
+          "metrics": {
+            "train_loss": 1.1716866493225098,
+            "train/recon_loss": 1.0028375387191772,
+            "train/vq_loss": 0.0003401162684895098,
+            "train/perplexity": 0.0,
+            "train/cos_sim_metric": -0.0009440705180168152,
+            "train/l1_loss_metric": 1.0517781972885132,
+            "train/state_loss": 0.16850897669792175,
+            "train/lr": 1.500000053056283e-06
+          }
+        },
+        {
+          "step": 6,
+          "train_loss": 1.1333487033843994,
+          "metrics": {
+            "train_loss": 1.1333487033843994,
+            "train/recon_loss": 1.0077885389328003,
+            "train/vq_loss": 0.0003133586433250457,
+            "train/perplexity": 0.0,
+            "train/cos_sim_metric": -0.00818476639688015,
+            "train/l1_loss_metric": 1.056732416152954,
+            "train/state_loss": 0.1252468228340149,
+            "train/lr": 1.7999999499807018e-06
+          }
+        }
+      ],
+      "val6_8rows": {
+        "step": 6,
+        "samples": 8,
+        "mu_variance_sum": 0.052541647198612075,
+        "noise_variance_sum": 40.0771614359151,
+        "noise_fraction": 0.9986907043122201,
+        "pre_norm_node_coordinate_std_mean": 1.779380711290227,
+        "mean_gap": 4.0978193283081055e-06,
+        "swap_gap": -1.6987323760986328e-06,
+        "real_visual_mse": 1.9928021430969238
+      },
+      "data_augmentation_epsilon_match": true,
+      "same_val8_ids": true
+    },
+    "g_zero": {
+      "observed_factors": {
+        "arm": "g_zero",
+        "image_loss": "smooth_l1",
+        "kl_beta": 5e-05,
+        "lambda_aux": 0.0,
+        "posterior_sampling": "sampled",
+        "initialization": "fresh",
+        "state_decoder_initialization": "fresh local g; official14 state head is never loaded",
+        "epsilon_policy": "Always consume and verify the original upstream Gaussian draw, including mu_only",
+        "main_training": false,
+        "parent_runner_sha256": "9ecbea0151c1f902647dc9e41a5a17a431ab5c4319da658b9d0cdeb5104cba27",
+        "runner_sha256": "e1d7db1efca25cdff88a7299e7f5cd31c016b0c11a661fd212c73df67647aa22"
+      },
+      "component_initialization": {
+        "scope": "fresh",
+        "fresh_seeded_components": {
+          "encoder": {
+            "sha256": "3a9a2c8a94beae21a06366dbe8c66997a8e3bab6ce898ce950c062d694a94034",
+            "state_tensors": 305
+          },
+          "vq": {
+            "sha256": "3868cdf0d2ea6db42b0b107362dbb3341aac2012d4083b97ae79c811eb8fbde5",
+            "state_tensors": 6
+          },
+          "decoder": {
+            "sha256": "cd7bf293c1a37107ad612fd43ec6bcbeafb64946a6ae3347e4cf94b5f0bff8ac",
+            "state_tensors": 128
+          },
+          "local_g": {
+            "sha256": "22fb959b28612f62f970e1dee409849f83ca39a2f400b273156295f4a25523e5",
+            "state_tensors": 10
+          }
+        },
+        "effective_components": {
+          "encoder": {
+            "sha256": "3a9a2c8a94beae21a06366dbe8c66997a8e3bab6ce898ce950c062d694a94034",
+            "state_tensors": 305
+          },
+          "vq": {
+            "sha256": "3868cdf0d2ea6db42b0b107362dbb3341aac2012d4083b97ae79c811eb8fbde5",
+            "state_tensors": 6
+          },
+          "decoder": {
+            "sha256": "cd7bf293c1a37107ad612fd43ec6bcbeafb64946a6ae3347e4cf94b5f0bff8ac",
+            "state_tensors": 128
+          },
+          "local_g": {
+            "sha256": "22fb959b28612f62f970e1dee409849f83ca39a2f400b273156295f4a25523e5",
+            "state_tensors": 10
+          }
+        }
+      },
+      "gradient_snapshots": [
+        {
+          "step_before_update": 0,
+          "lr_used": 3e-07,
+          "losses": {
+            "image": 1.003886103630066,
+            "state": 0.0,
+            "weighted_kl": 0.00043045624624937773
+          },
+          "node_gradient_norms": {
+            "image": 0.0,
+            "state": 0.0,
+            "weighted_kl": 3.0112601962173358e-05
+          },
+          "selected_z_gradient_norms": {
+            "image": 0.0,
+            "state": 0.0,
+            "weighted_kl": null
+          },
+          "parameter_gradient_norms": {
+            "image": {
+              "encoder.out_proj.weight": 0.0,
+              "encoder.out_proj.bias": 0.0,
+              "vq.pre_norm.weight": 0.0,
+              "vq.mu.weight": 0.0,
+              "vq.logvar.weight": 0.0
+            },
+            "state": {
+              "encoder.out_proj.weight": 0.0,
+              "encoder.out_proj.bias": 0.0,
+              "vq.pre_norm.weight": 0.0,
+              "vq.mu.weight": 0.0,
+              "vq.logvar.weight": 0.0
+            },
+            "weighted_kl": {
+              "encoder.out_proj.weight": 0.004653416574001312,
+              "encoder.out_proj.bias": 5.978272020001896e-05,
+              "vq.pre_norm.weight": 0.0002573586243670434,
+              "vq.mu.weight": 0.0009222939261235297,
+              "vq.logvar.weight": 0.000664093007799238
+            }
+          },
+          "parameter_gradient_connected": {
+            "image": {
+              "encoder.out_proj.weight": true,
+              "encoder.out_proj.bias": true,
+              "vq.pre_norm.weight": true,
+              "vq.mu.weight": true,
+              "vq.logvar.weight": true
+            },
+            "state": {
+              "encoder.out_proj.weight": true,
+              "encoder.out_proj.bias": true,
+              "vq.pre_norm.weight": true,
+              "vq.mu.weight": true,
+              "vq.logvar.weight": true
+            },
+            "weighted_kl": {
+              "encoder.out_proj.weight": true,
+              "encoder.out_proj.bias": true,
+              "vq.pre_norm.weight": true,
+              "vq.mu.weight": true,
+              "vq.logvar.weight": true
+            }
+          },
+          "posterior_sampling": "sampled",
+          "pairwise_cosines": {
+            "image__state": null,
+            "image__weighted_kl": null,
+            "state__weighted_kl": null
+          },
+          "scope": "Actual training batch and consumed epsilon. Gradients of batch-mean losses before clipping; selected decoder z is distinct from pre-LN nodes. KL has no downstream path through sampled z, but does through mu in mu_only. Parameter probes cover out_proj and VAE only. Normal backward follows."
+        },
+        {
+          "step_before_update": 1,
+          "lr_used": 6e-07,
+          "losses": {
+            "image": 1.0058948993682861,
+            "state": 0.0,
+            "weighted_kl": 0.00041482504457235336
+          },
+          "node_gradient_norms": {
+            "image": 2.212837898696307e-06,
+            "state": 0.0,
+            "weighted_kl": 2.871919423341751e-05
+          },
+          "selected_z_gradient_norms": {
+            "image": 5.7216393543058075e-06,
+            "state": 0.0,
+            "weighted_kl": null
+          },
+          "parameter_gradient_norms": {
+            "image": {
+              "encoder.out_proj.weight": 0.000314496923238039,
+              "encoder.out_proj.bias": 4.0441159399051685e-06,
+              "vq.pre_norm.weight": 8.437551514361985e-06,
+              "vq.mu.weight": 6.290109740803018e-05,
+              "vq.logvar.weight": 1.5282208551070653e-05
+            },
+            "state": {
+              "encoder.out_proj.weight": 0.0,
+              "encoder.out_proj.bias": 0.0,
+              "vq.pre_norm.weight": 0.0,
+              "vq.mu.weight": 0.0,
+              "vq.logvar.weight": 0.0
+            },
+            "weighted_kl": {
+              "encoder.out_proj.weight": 0.004413202870637178,
+              "encoder.out_proj.bias": 5.677019726135768e-05,
+              "vq.pre_norm.weight": 0.00024677111650817096,
+              "vq.mu.weight": 0.0009032320813275874,
+              "vq.logvar.weight": 0.0006464039324782789
+            }
+          },
+          "parameter_gradient_connected": {
+            "image": {
+              "encoder.out_proj.weight": true,
+              "encoder.out_proj.bias": true,
+              "vq.pre_norm.weight": true,
+              "vq.mu.weight": true,
+              "vq.logvar.weight": true
+            },
+            "state": {
+              "encoder.out_proj.weight": true,
+              "encoder.out_proj.bias": true,
+              "vq.pre_norm.weight": true,
+              "vq.mu.weight": true,
+              "vq.logvar.weight": true
+            },
+            "weighted_kl": {
+              "encoder.out_proj.weight": true,
+              "encoder.out_proj.bias": true,
+              "vq.pre_norm.weight": true,
+              "vq.mu.weight": true,
+              "vq.logvar.weight": true
+            }
+          },
+          "posterior_sampling": "sampled",
+          "pairwise_cosines": {
+            "image__state": null,
+            "image__weighted_kl": -0.5666109323501587,
+            "state__weighted_kl": null
+          },
+          "scope": "Actual training batch and consumed epsilon. Gradients of batch-mean losses before clipping; selected decoder z is distinct from pre-LN nodes. KL has no downstream path through sampled z, but does through mu in mu_only. Parameter probes cover out_proj and VAE only. Normal backward follows."
+        }
+      ],
+      "training_geometry_B4_different_batches": [
+        {
+          "step_before_update": 0,
+          "layers": {
+            "cross_attention_queries": {
+              "samples": 4,
+              "dimensions": 1024,
+              "mean_vector_norm": 32.30791717610462,
+              "mean_sample_norm": 32.34029777942203,
+              "coordinate_std_mean": 1.0106288870509124,
+              "between_example_variance_sum": 2.0934569315910814,
+              "between_example_variance_fraction": 0.002001593843799745,
+              "radial_fraction_of_between_example_variation": 0.00020253154061435037,
+              "coordinate_centered_direction_variance_sum": 0.0020015714138020553
+            },
+            "encoder_layer_23_queries": {
+              "samples": 4,
+              "dimensions": 1024,
+              "mean_vector_norm": 77.91181337159384,
+              "mean_sample_norm": 78.4380772026613,
+              "coordinate_std_mean": 2.4495768610710624,
+              "between_example_variance_sum": 82.31536035659579,
+              "between_example_variance_fraction": 0.013379029180038563,
+              "radial_fraction_of_between_example_variation": 0.0005259132766372351,
+              "coordinate_centered_direction_variance_sum": 0.013368562866221415
+            },
+            "pre_norm_nodes": {
+              "samples": 4,
+              "dimensions": 32,
+              "mean_vector_norm": 8.525528433921451,
+              "mean_sample_norm": 8.568396336628066,
+              "coordinate_std_mean": 1.5051553990991715,
+              "between_example_variance_sum": 0.8356866678223014,
+              "between_example_variance_fraction": 0.011366743887710189,
+              "radial_fraction_of_between_example_variation": 0.13648902913808228,
+              "coordinate_centered_direction_variance_sum": 0.010210013815019396
+            },
+            "vae_layernorm_output": {
+              "samples": 4,
+              "dimensions": 32,
+              "mean_vector_norm": 5.627889571715651,
+              "mean_sample_norm": 5.656841875860395,
+              "coordinate_std_mean": 0.9999978126302289,
+              "between_example_variance_sum": 0.32671897706364916,
+              "between_example_variance_fraction": 0.010210012699335934,
+              "radial_fraction_of_between_example_variation": 0.0004954942596495397,
+              "coordinate_centered_direction_variance_sum": 0.010210013597525817
+            },
+            "posterior_mu": {
+              "samples": 4,
+              "dimensions": 32,
+              "mean_vector_norm": 3.277459551006616,
+              "mean_sample_norm": 3.293254328497568,
+              "coordinate_std_mean": 0.5788461966931768,
+              "between_example_variance_sum": 0.10534872473439424,
+              "between_example_variance_fraction": 0.00971216486211509,
+              "radial_fraction_of_between_example_variation": 0.019097678390940197,
+              "coordinate_centered_direction_variance_sum": 0.009500551311636001
+            }
+          }
+        },
+        {
+          "step_before_update": 1,
+          "layers": {
+            "cross_attention_queries": {
+              "samples": 4,
+              "dimensions": 1024,
+              "mean_vector_norm": 32.30397358353129,
+              "mean_sample_norm": 32.33572256001642,
+              "coordinate_std_mean": 1.0104856228419612,
+              "between_example_variance_sum": 2.0522812651242495,
+              "between_example_variance_fraction": 0.0019627804575858662,
+              "radial_fraction_of_between_example_variation": 0.00010485174199156284,
+              "coordinate_centered_direction_variance_sum": 0.001962720967646074
+            },
+            "encoder_layer_23_queries": {
+              "samples": 4,
+              "dimensions": 1024,
+              "mean_vector_norm": 77.70982873062798,
+              "mean_sample_norm": 78.22955311209643,
+              "coordinate_std_mean": 2.4430186493035233,
+              "between_example_variance_sum": 81.09979040413494,
+              "between_example_variance_fraction": 0.013251778872653816,
+              "radial_fraction_of_between_example_variation": 0.0012865966579357728,
+              "coordinate_centered_direction_variance_sum": 0.013253311757706939
+            },
+            "pre_norm_nodes": {
+              "samples": 4,
+              "dimensions": 32,
+              "mean_vector_norm": 8.640848503977884,
+              "mean_sample_norm": 8.696686038803701,
+              "coordinate_std_mean": 1.5284757005817877,
+              "between_example_variance_sum": 0.982083149952814,
+              "between_example_variance_fraction": 0.012982558995125739,
+              "radial_fraction_of_between_example_variation": 0.01726782403844345,
+              "coordinate_centered_direction_variance_sum": 0.012600546067303823
+            },
+            "vae_layernorm_output": {
+              "samples": 4,
+              "dimensions": 32,
+              "mean_vector_norm": 5.621086747728147,
+              "mean_sample_norm": 5.656839385602108,
+              "coordinate_std_mean": 0.9999973724105983,
+              "between_example_variance_sum": 0.4032156090144749,
+              "between_example_variance_fraction": 0.012600553999779539,
+              "radial_fraction_of_between_example_variation": 0.00043414328439434505,
+              "coordinate_centered_direction_variance_sum": 0.01260055411505329
+            },
+            "posterior_mu": {
+              "samples": 4,
+              "dimensions": 32,
+              "mean_vector_norm": 3.2137948049085474,
+              "mean_sample_norm": 3.2326647970524647,
+              "coordinate_std_mean": 0.5691335590425252,
+              "between_example_variance_sum": 0.12257237622231154,
+              "between_example_variance_fraction": 0.011728236203491303,
+              "radial_fraction_of_between_example_variation": 0.0047578417383777665,
+              "coordinate_centered_direction_variance_sum": 0.011419617304814934
+            }
+          }
+        }
+      ],
+      "all_six_metrics": [
+        {
+          "step": 1,
+          "train_loss": 1.0043165683746338,
+          "metrics": {
+            "train_loss": 1.0043165683746338,
+            "train/recon_loss": 1.003886103630066,
+            "train/vq_loss": 0.00043045624624937773,
+            "train/perplexity": 0.0,
+            "train/cos_sim_metric": -0.0016165951965376735,
+            "train/l1_loss_metric": 1.052819013595581,
+            "train/state_loss": 0.0,
+            "train/lr": 3.000000106112566e-07
+          }
+        },
+        {
+          "step": 2,
+          "train_loss": 1.0063097476959229,
+          "metrics": {
+            "train_loss": 1.0063097476959229,
+            "train/recon_loss": 1.0058948993682861,
+            "train/vq_loss": 0.00041482504457235336,
+            "train/perplexity": 0.0,
+            "train/cos_sim_metric": 0.0025649818126112223,
+            "train/l1_loss_metric": 1.0548374652862549,
+            "train/state_loss": 0.0,
+            "train/lr": 6.000000212225132e-07
+          }
+        },
+        {
+          "step": 3,
+          "train_loss": 1.0033410787582397,
+          "metrics": {
+            "train_loss": 1.0033410787582397,
+            "train/recon_loss": 1.0029700994491577,
+            "train/vq_loss": 0.0003709344600792974,
+            "train/perplexity": 0.0,
+            "train/cos_sim_metric": 0.002378274453803897,
+            "train/l1_loss_metric": 1.051910638809204,
+            "train/state_loss": 0.0,
+            "train/lr": 8.999999749903509e-07
+          }
+        },
+        {
+          "step": 4,
+          "train_loss": 1.003427267074585,
+          "metrics": {
+            "train_loss": 1.003427267074585,
+            "train/recon_loss": 1.0031119585037231,
+            "train/vq_loss": 0.0003153646248392761,
+            "train/perplexity": 0.0,
+            "train/cos_sim_metric": -0.005605186801403761,
+            "train/l1_loss_metric": 1.0520501136779785,
+            "train/state_loss": 0.0,
+            "train/lr": 1.2000000424450263e-06
+          }
+        },
+        {
+          "step": 5,
+          "train_loss": 1.003177523612976,
+          "metrics": {
+            "train_loss": 1.003177523612976,
+            "train/recon_loss": 1.0029075145721436,
+            "train/vq_loss": 0.0002699807519093156,
+            "train/perplexity": 0.0,
+            "train/cos_sim_metric": -0.0010468983091413975,
+            "train/l1_loss_metric": 1.0518481731414795,
+            "train/state_loss": 0.0,
+            "train/lr": 1.500000053056283e-06
+          }
+        },
+        {
+          "step": 6,
+          "train_loss": 1.0081074237823486,
+          "metrics": {
+            "train_loss": 1.0081074237823486,
+            "train/recon_loss": 1.0078792572021484,
+            "train/vq_loss": 0.00022819815785624087,
+            "train/perplexity": 0.0,
+            "train/cos_sim_metric": -0.008304969407618046,
+            "train/l1_loss_metric": 1.0568230152130127,
+            "train/state_loss": 0.0,
+            "train/lr": 1.7999999499807018e-06
+          }
+        }
+      ],
+      "val6_8rows": {
+        "step": 6,
+        "samples": 8,
+        "mu_variance_sum": 0.04840311336204978,
+        "noise_variance_sum": 37.05644541648705,
+        "noise_fraction": 0.9986955043537474,
+        "pre_norm_node_coordinate_std_mean": 1.8434643831339228,
+        "mean_gap": -3.427267074584961e-07,
+        "swap_gap": -1.2069940567016602e-06,
+        "real_visual_mse": 1.9935221672058105
+      },
+      "data_augmentation_epsilon_match": true,
+      "same_val8_ids": true
+    },
+    "official_init": {
+      "observed_factors": {
+        "arm": "official_init",
+        "image_loss": "smooth_l1",
+        "kl_beta": 5e-05,
+        "lambda_aux": 1.0,
+        "posterior_sampling": "sampled",
+        "initialization": "released_encoder_vae_visual_decoder",
+        "state_decoder_initialization": "fresh local g; official14 state head is never loaded",
+        "epsilon_policy": "Always consume and verify the original upstream Gaussian draw, including mu_only",
+        "main_training": false,
+        "parent_runner_sha256": "9ecbea0151c1f902647dc9e41a5a17a431ab5c4319da658b9d0cdeb5104cba27",
+        "runner_sha256": "e1d7db1efca25cdff88a7299e7f5cd31c016b0c11a661fd212c73df67647aa22"
+      },
+      "component_initialization": {
+        "scope": "released_encoder_vae_visual_decoder",
+        "fresh_seeded_components": {
+          "encoder": {
+            "sha256": "3a9a2c8a94beae21a06366dbe8c66997a8e3bab6ce898ce950c062d694a94034",
+            "state_tensors": 305
+          },
+          "vq": {
+            "sha256": "3868cdf0d2ea6db42b0b107362dbb3341aac2012d4083b97ae79c811eb8fbde5",
+            "state_tensors": 6
+          },
+          "decoder": {
+            "sha256": "cd7bf293c1a37107ad612fd43ec6bcbeafb64946a6ae3347e4cf94b5f0bff8ac",
+            "state_tensors": 128
+          },
+          "local_g": {
+            "sha256": "22fb959b28612f62f970e1dee409849f83ca39a2f400b273156295f4a25523e5",
+            "state_tensors": 10
+          }
+        },
+        "released_checkpoint": "/media/sadasue/SSD1/foveated-world-models/models/lawam-lam-bd993da/checkpoints/pytorch_model.pt",
+        "released_checkpoint_sha256": "57c31dcba13c2998c4e866cdcfc427f14ae3c1b762a586778276e2100b48af88",
+        "strictly_loaded_state_tensors": 439,
+        "cpu_rng_unchanged_by_load": true,
+        "local_g_unchanged_by_load": true,
+        "effective_components": {
+          "encoder": {
+            "sha256": "5d4164b960af34289eabfe17022ab180854b65b36ded10c7c3f10fb229ffd818",
+            "state_tensors": 305
+          },
+          "vq": {
+            "sha256": "42c11bf624004c39b5bf83a73080930a02b37fcb04f695d949b8c12efcd5009b",
+            "state_tensors": 6
+          },
+          "decoder": {
+            "sha256": "ff1769ea8f57b83e1d7f9060b99d40252cb3da11a408e2ff2e0e8ef0af7956bf",
+            "state_tensors": 128
+          },
+          "local_g": {
+            "sha256": "22fb959b28612f62f970e1dee409849f83ca39a2f400b273156295f4a25523e5",
+            "state_tensors": 10
+          }
+        }
+      },
+      "gradient_snapshots": [
+        {
+          "step_before_update": 0,
+          "lr_used": 3e-07,
+          "losses": {
+            "image": 0.35106831789016724,
+            "state": 0.16363516449928284,
+            "weighted_kl": 0.001593732158653438
+          },
+          "node_gradient_norms": {
+            "image": 0.00012735018390230834,
+            "state": 0.0002367213019169867,
+            "weighted_kl": 2.1785986064060125e-06
+          },
+          "selected_z_gradient_norms": {
+            "image": 0.020367465913295746,
+            "state": 0.03891047090291977,
+            "weighted_kl": null
+          },
+          "parameter_gradient_norms": {
+            "image": {
+              "encoder.out_proj.weight": 0.1370714008808136,
+              "encoder.out_proj.bias": 0.00012440096179489046,
+              "vq.pre_norm.weight": 0.0134005481377244,
+              "vq.mu.weight": 0.13249897956848145,
+              "vq.logvar.weight": 0.002315755467861891
+            },
+            "state": {
+              "encoder.out_proj.weight": 0.38714170455932617,
+              "encoder.out_proj.bias": 0.0003432708326727152,
+              "vq.pre_norm.weight": 0.030703993514180183,
+              "vq.mu.weight": 0.3037579357624054,
+              "vq.logvar.weight": 0.10726761817932129
+            },
+            "weighted_kl": {
+              "encoder.out_proj.weight": 0.00430279690772295,
+              "encoder.out_proj.bias": 4.224143594910856e-06,
+              "vq.pre_norm.weight": 0.0005241341423243284,
+              "vq.mu.weight": 0.0008575704996474087,
+              "vq.logvar.weight": 0.0004674950032494962
+            }
+          },
+          "parameter_gradient_connected": {
+            "image": {
+              "encoder.out_proj.weight": true,
+              "encoder.out_proj.bias": true,
+              "vq.pre_norm.weight": true,
+              "vq.mu.weight": true,
+              "vq.logvar.weight": true
+            },
+            "state": {
+              "encoder.out_proj.weight": true,
+              "encoder.out_proj.bias": true,
+              "vq.pre_norm.weight": true,
+              "vq.mu.weight": true,
+              "vq.logvar.weight": true
+            },
+            "weighted_kl": {
+              "encoder.out_proj.weight": true,
+              "encoder.out_proj.bias": true,
+              "vq.pre_norm.weight": true,
+              "vq.mu.weight": true,
+              "vq.logvar.weight": true
+            }
+          },
+          "posterior_sampling": "sampled",
+          "pairwise_cosines": {
+            "image__state": 0.024383315816521645,
+            "image__weighted_kl": 0.04591125249862671,
+            "state__weighted_kl": -0.11713358759880066
+          },
+          "scope": "Actual training batch and consumed epsilon. Gradients of batch-mean losses before clipping; selected decoder z is distinct from pre-LN nodes. KL has no downstream path through sampled z, but does through mu in mu_only. Parameter probes cover out_proj and VAE only. Normal backward follows."
+        },
+        {
+          "step_before_update": 1,
+          "lr_used": 6e-07,
+          "losses": {
+            "image": 0.24753257632255554,
+            "state": 0.22530722618103027,
+            "weighted_kl": 0.0012461127480491996
+          },
+          "node_gradient_norms": {
+            "image": 7.076933979988098e-05,
+            "state": 0.00026389083359390497,
+            "weighted_kl": 2.1733301309723174e-06
+          },
+          "selected_z_gradient_norms": {
+            "image": 0.013270622119307518,
+            "state": 0.04179827496409416,
+            "weighted_kl": null
+          },
+          "parameter_gradient_norms": {
+            "image": {
+              "encoder.out_proj.weight": 0.10995256155729294,
+              "encoder.out_proj.bias": 0.00011091004853369668,
+              "vq.pre_norm.weight": 0.008812041953206062,
+              "vq.mu.weight": 0.12677431106567383,
+              "vq.logvar.weight": 0.0013752508675679564
+            },
+            "state": {
+              "encoder.out_proj.weight": 0.3711799681186676,
+              "encoder.out_proj.bias": 0.0003949630481656641,
+              "vq.pre_norm.weight": 0.03439560905098915,
+              "vq.mu.weight": 0.3083987832069397,
+              "vq.logvar.weight": 0.15396277606487274
+            },
+            "weighted_kl": {
+              "encoder.out_proj.weight": 0.003946379292756319,
+              "encoder.out_proj.bias": 4.288159288989846e-06,
+              "vq.pre_norm.weight": 0.00036363789695315063,
+              "vq.mu.weight": 0.0004508507263381034,
+              "vq.logvar.weight": 0.0004738199932035059
+            }
+          },
+          "parameter_gradient_connected": {
+            "image": {
+              "encoder.out_proj.weight": true,
+              "encoder.out_proj.bias": true,
+              "vq.pre_norm.weight": true,
+              "vq.mu.weight": true,
+              "vq.logvar.weight": true
+            },
+            "state": {
+              "encoder.out_proj.weight": true,
+              "encoder.out_proj.bias": true,
+              "vq.pre_norm.weight": true,
+              "vq.mu.weight": true,
+              "vq.logvar.weight": true
+            },
+            "weighted_kl": {
+              "encoder.out_proj.weight": true,
+              "encoder.out_proj.bias": true,
+              "vq.pre_norm.weight": true,
+              "vq.mu.weight": true,
+              "vq.logvar.weight": true
+            }
+          },
+          "posterior_sampling": "sampled",
+          "pairwise_cosines": {
+            "image__state": 0.07942992448806763,
+            "image__weighted_kl": 0.23253805935382843,
+            "state__weighted_kl": -0.16302114725112915
+          },
+          "scope": "Actual training batch and consumed epsilon. Gradients of batch-mean losses before clipping; selected decoder z is distinct from pre-LN nodes. KL has no downstream path through sampled z, but does through mu in mu_only. Parameter probes cover out_proj and VAE only. Normal backward follows."
+        }
+      ],
+      "training_geometry_B4_different_batches": [
+        {
+          "step_before_update": 0,
+          "layers": {
+            "cross_attention_queries": {
+              "samples": 4,
+              "dimensions": 1024,
+              "mean_vector_norm": 52.432702647915676,
+              "mean_sample_norm": 54.68290686942608,
+              "coordinate_std_mean": 1.7083857932733695,
+              "between_example_variance_sum": 267.2934470677615,
+              "between_example_variance_fraction": 0.08861099415252131,
+              "radial_fraction_of_between_example_variation": 0.1006412642600511,
+              "coordinate_centered_direction_variance_sum": 0.0811462587366545
+            },
+            "encoder_layer_23_queries": {
+              "samples": 4,
+              "dimensions": 1024,
+              "mean_vector_norm": 1025.1653124618254,
+              "mean_sample_norm": 1081.5102591203377,
+              "coordinate_std_mean": 33.77381432359992,
+              "between_example_variance_sum": 141342.36575335677,
+              "between_example_variance_fraction": 0.11854535004482038,
+              "radial_fraction_of_between_example_variation": 0.21186937233742026,
+              "coordinate_centered_direction_variance_sum": 0.10816253621094936
+            },
+            "pre_norm_nodes": {
+              "samples": 4,
+              "dimensions": 32,
+              "mean_vector_norm": 578.149251787572,
+              "mean_sample_norm": 673.483762888364,
+              "coordinate_std_mean": 119.00849979196741,
+              "between_example_variance_sum": 122739.54605102539,
+              "between_example_variance_fraction": 0.26857897723763496,
+              "radial_fraction_of_between_example_variation": 0.052050265878794515,
+              "coordinate_centered_direction_variance_sum": 0.2646155970651107
+            },
+            "vae_layernorm_output": {
+              "samples": 4,
+              "dimensions": 32,
+              "mean_vector_norm": 5.583483705386389,
+              "mean_sample_norm": 6.455398343165328,
+              "coordinate_std_mean": 1.1409595319678223,
+              "between_example_variance_sum": 10.499824886073903,
+              "between_example_variance_fraction": 0.2519447119015139,
+              "radial_fraction_of_between_example_variation": 0.026404432964708346,
+              "coordinate_centered_direction_variance_sum": 0.2528026632909035
+            },
+            "posterior_mu": {
+              "samples": 4,
+              "dimensions": 32,
+              "mean_vector_norm": 2.7783550288626935,
+              "mean_sample_norm": 3.3555378387970727,
+              "coordinate_std_mean": 0.5923255119769415,
+              "between_example_variance_sum": 5.088899471309875,
+              "between_example_variance_fraction": 0.3973171014307412,
+              "radial_fraction_of_between_example_variation": 0.5839700396700359,
+              "coordinate_centered_direction_variance_sum": 0.5253065135556756
+            }
+          }
+        },
+        {
+          "step_before_update": 1,
+          "layers": {
+            "cross_attention_queries": {
+              "samples": 4,
+              "dimensions": 1024,
+              "mean_vector_norm": 47.34148938000146,
+              "mean_sample_norm": 49.665908698348105,
+              "coordinate_std_mean": 1.5517980837332939,
+              "between_example_variance_sum": 319.9919515065069,
+              "between_example_variance_fraction": 0.12493787326679302,
+              "radial_fraction_of_between_example_variation": 0.30014948942826264,
+              "coordinate_centered_direction_variance_sum": 0.09362960248816801
+            },
+            "encoder_layer_23_queries": {
+              "samples": 4,
+              "dimensions": 1024,
+              "mean_vector_norm": 935.9032634301792,
+              "mean_sample_norm": 986.0727544118224,
+              "coordinate_std_mean": 30.69951512237313,
+              "between_example_variance_sum": 120027.36739324078,
+              "between_example_variance_fraction": 0.1205163884428101,
+              "radial_fraction_of_between_example_variation": 0.16793930848531244,
+              "coordinate_centered_direction_variance_sum": 0.09681988651340187
+            },
+            "pre_norm_nodes": {
+              "samples": 4,
+              "dimensions": 32,
+              "mean_vector_norm": 604.710875934155,
+              "mean_sample_norm": 676.0203102336047,
+              "coordinate_std_mean": 119.482772551855,
+              "between_example_variance_sum": 97174.80976486206,
+              "between_example_variance_fraction": 0.20994879245463127,
+              "radial_fraction_of_between_example_variation": 0.029242142473035172,
+              "coordinate_centered_direction_variance_sum": 0.19387023442764267
+            },
+            "vae_layernorm_output": {
+              "samples": 4,
+              "dimensions": 32,
+              "mean_vector_norm": 5.775233654394263,
+              "mean_sample_norm": 6.410418706708008,
+              "coordinate_std_mean": 1.1329473203664566,
+              "between_example_variance_sum": 7.741679308767766,
+              "between_example_variance_fraction": 0.1883849307731262,
+              "radial_fraction_of_between_example_variation": 0.006465006955369523,
+              "coordinate_centered_direction_variance_sum": 0.18807321188906911
+            },
+            "posterior_mu": {
+              "samples": 4,
+              "dimensions": 32,
+              "mean_vector_norm": 1.456845032219539,
+              "mean_sample_norm": 2.338028194426194,
+              "coordinate_std_mean": 0.41230469467110725,
+              "between_example_variance_sum": 3.3888442298537305,
+              "between_example_variance_fraction": 0.6148966835425121,
+              "radial_fraction_of_between_example_variation": 0.008846127824570747,
+              "coordinate_centered_direction_variance_sum": 0.6036896636544651
+            }
+          }
+        }
+      ],
+      "all_six_metrics": [
+        {
+          "step": 1,
+          "train_loss": 0.5162972211837769,
+          "metrics": {
+            "train_loss": 0.5162972211837769,
+            "train/recon_loss": 0.35106831789016724,
+            "train/vq_loss": 0.001593732158653438,
+            "train/perplexity": 0.0,
+            "train/cos_sim_metric": 0.7755417823791504,
+            "train/l1_loss_metric": 0.39677637815475464,
+            "train/state_loss": 0.16363516449928284,
+            "train/lr": 3.000000106112566e-07
+          }
+        },
+        {
+          "step": 2,
+          "train_loss": 0.4740859270095825,
+          "metrics": {
+            "train_loss": 0.4740859270095825,
+            "train/recon_loss": 0.24753257632255554,
+            "train/vq_loss": 0.0012461127480491996,
+            "train/perplexity": 0.0,
+            "train/cos_sim_metric": 0.8903855085372925,
+            "train/l1_loss_metric": 0.2922977805137634,
+            "train/state_loss": 0.22530722618103027,
+            "train/lr": 6.000000212225132e-07
+          }
+        },
+        {
+          "step": 3,
+          "train_loss": 0.607051432132721,
+          "metrics": {
+            "train_loss": 0.607051432132721,
+            "train/recon_loss": 0.2986307144165039,
+            "train/vq_loss": 0.0014599082060158253,
+            "train/perplexity": 0.0,
+            "train/cos_sim_metric": 0.833094596862793,
+            "train/l1_loss_metric": 0.34408921003341675,
+            "train/state_loss": 0.3069608211517334,
+            "train/lr": 8.999999749903509e-07
+          }
+        },
+        {
+          "step": 4,
+          "train_loss": 0.5282306671142578,
+          "metrics": {
+            "train_loss": 0.5282306671142578,
+            "train/recon_loss": 0.32720810174942017,
+            "train/vq_loss": 0.0013642649864777923,
+            "train/perplexity": 0.0,
+            "train/cos_sim_metric": 0.8166038990020752,
+            "train/l1_loss_metric": 0.37316232919692993,
+            "train/state_loss": 0.19965830445289612,
+            "train/lr": 1.2000000424450263e-06
+          }
+        },
+        {
+          "step": 5,
+          "train_loss": 0.5199544429779053,
+          "metrics": {
+            "train_loss": 0.5199544429779053,
+            "train/recon_loss": 0.29210519790649414,
+            "train/vq_loss": 0.0014008200960233808,
+            "train/perplexity": 0.0,
+            "train/cos_sim_metric": 0.8414217233657837,
+            "train/l1_loss_metric": 0.33743542432785034,
+            "train/state_loss": 0.2264484465122223,
+            "train/lr": 1.500000053056283e-06
+          }
+        },
+        {
+          "step": 6,
+          "train_loss": 0.5895071029663086,
+          "metrics": {
+            "train_loss": 0.5895071029663086,
+            "train/recon_loss": 0.4157784879207611,
+            "train/vq_loss": 0.0017547423485666513,
+            "train/perplexity": 0.0,
+            "train/cos_sim_metric": 0.7242403030395508,
+            "train/l1_loss_metric": 0.4627671241760254,
+            "train/state_loss": 0.17197385430335999,
+            "train/lr": 1.7999999499807018e-06
+          }
+        }
+      ],
+      "val6_8rows": {
+        "step": 6,
+        "samples": 8,
+        "mu_variance_sum": 6.285365968265696,
+        "noise_variance_sum": 18.616137794588017,
+        "noise_fraction": 0.7475909074358088,
+        "pre_norm_node_coordinate_std_mean": 121.5597132859914,
+        "mean_gap": 0.1030871793627739,
+        "swap_gap": 0.15508480370044708,
+        "real_visual_mse": 0.2850922644138336
+      },
+      "data_augmentation_epsilon_match": true,
+      "same_val8_ids": true
+    }
+  },
+  "preflight_val8_identity": [
+    [
+      15387,
+      128
+    ],
+    [
+      22150,
+      138
+    ],
+    [
+      3648,
+      10
+    ],
+    [
+      5397,
+      326
+    ],
+    [
+      23844,
+      164
+    ],
+    [
+      747,
+      31
+    ],
+    [
+      15617,
+      27
+    ],
+    [
+      19993,
+      343
+    ]
+  ],
+  "original_v2_bridge": {
+    "first_batch_loss_exact": true,
+    "per_step_loss_difference_vs_original": [
+      0.0,
+      -1.4066696166992188e-05,
+      6.151199340820312e-05,
+      -0.0004706382751464844,
+      -0.0004006624221801758,
+      -0.00012600421905517578
+    ],
+    "maximum_absolute_loss_difference": 0.0004706382751464844,
+    "scope": "NativeBF16/medium with unchanged init and random/input streams. Update trajectories are close but not bitwise identical; this test does not establish the exact numerical source of that drift."
+  },
+  "saved_tensor_checkpoint_inventory": {
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114": [
+      "baseline/checkpoints/final.ckpt",
+      "evaluations/final-evaluator-smoke-v2-20261114/local10000/posterior-codes.pt",
+      "evaluations/final-evaluator-smoke-v2-20261114/official/posterior-codes.pt",
+      "evaluations/final-evaluator-smoke-v2-20261114/two-pair-smoke-cache.pt",
+      "evaluations/final3000-highest-fp32-v2/baseline/posterior-codes.pt",
+      "evaluations/final3000-highest-fp32-v2/kl_mse/posterior-codes.pt",
+      "evaluations/final3000-highest-fp32-v2/kl_only/posterior-codes.pt",
+      "evaluations/final3000-highest-fp32-v2/mse_only/posterior-codes.pt",
+      "evaluations/final3000-highest-fp32-v2/official/posterior-codes.pt",
+      "evaluations/final3000-highest-fp32/features512-highest-fp32.pt",
+      "evaluations/matched-state-probes-fp32-20261114/baseline3000-posterior-means.pt",
+      "evaluations/matched-state-probes-fp32-20261114/baseline3000-readouts.pt",
+      "evaluations/matched-state-probes-fp32-20261114/combined3000-posterior-means.pt",
+      "evaluations/matched-state-probes-fp32-20261114/combined3000-readouts.pt",
+      "evaluations/matched-state-probes-fp32-20261114/official-posterior-means.pt",
+      "evaluations/matched-state-probes-fp32-20261114/official-readouts.pt",
+      "evaluations/matched-state-probes-fp32-20261114/old10000-posterior-means.pt",
+      "evaluations/matched-state-probes-fp32-20261114/old10000-readouts.pt",
+      "evaluations/matched-state-probes-fp32-20261114/train2048-highest-fp32-features.pt",
+      "kl_mse/checkpoints/final.ckpt",
+      "kl_only/checkpoints/final.ckpt",
+      "mse_only/checkpoints/final.ckpt"
+    ],
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-causal-v2-preflight-20261114": [],
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-causal-v2-b4-20261114": []
+  },
+  "source_file_sha256": {
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/baseline-preflight/z_validation_step000006.json": "e11c82e3bbba9d92db4190c60f82b4f167d8dd38b3d15f8adc34c386e1e5aa3b",
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/baseline/z_validation_step000500.json": "9908d11b3a38735fd10bd4becdbb811b57b3ce361039deae82b6d5e76bba8b6b",
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/baseline/z_validation_step001000.json": "6d4372265520ee6bceb34929d7d7f2ba489023ee5867bdaf3b339592643dec74",
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/baseline/z_validation_step001500.json": "eb923203692d003936619cc7631a150a6e0c38b4a5edcecc5ef5848d6fa255b8",
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/baseline/z_validation_step002000.json": "56aaf668ab14f9193f9f9907fd2ce0b704eb02857f3a95a5c3a7b954cd0572ce",
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/baseline/z_validation_step002500.json": "b2f06d21a2771db8acf0b152268521d37a9d98813dce3727aad1268ab5ca4967",
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/baseline/z_validation_step003000.json": "8fd7aa942e8f14e9643b9984b50cd46c49ba90e656aa96f93e2d1473b14a0217",
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/baseline/loss_gradient_components.jsonl": "a7625ab5bd7181f95aa11eccab10073ded06e5b52e326ffd8986051aabe95865",
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/kl_only-preflight/z_validation_step000006.json": "b3985ac0b81f7a72aed607f268cd7d39b1f19e36946698fde88784b5edf447a7",
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/kl_only/z_validation_step000500.json": "e636a8362b41c4a5dbb4d8d0db94e9969c618348cb2b82ace0efba07101674d4",
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/kl_only/z_validation_step001000.json": "f4922c5e7d0cdf60734e5fbfb425bcc5c99cfadad1e509239fff684bf9406e76",
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/kl_only/z_validation_step001500.json": "095425eaca5c9a67c6963b5a1df4dcefca496133555f5e5589120f190d1ca9eb",
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/kl_only/z_validation_step002000.json": "8bd2955c410dba3aaa7dbab65a2bb96a79e7601f274669b1542d7404f2c539bf",
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/kl_only/z_validation_step002500.json": "ee8f9b16e1c09be5ac32c96dd7f9f3d3f7138629f9364d40ba3f0f1f7bc4f378",
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/kl_only/z_validation_step003000.json": "92bf87d7595ca7a217870a2ed605d1f7ce4b4a0e88524bf99bf18ca71015300c",
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/kl_only/loss_gradient_components.jsonl": "13842da5abd55805672bc473d365a6788df0673437de671a6d43090b02e513ee",
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/mse_only-preflight/z_validation_step000006.json": "9d2d69fab0c4e373145999a4f343d218c6cdd8aa2e0d12e162a2b51b9014a53c",
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/mse_only/z_validation_step000500.json": "75e67c4b6ad0c48980076217e8ef9d3e00cf8ca3e608a0e068b3c3f12a97d2c4",
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/mse_only/z_validation_step001000.json": "cdc4aac60a2052bcff4e95df2a1d53eefadbd63d11c59e56d81db70f9203242e",
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/mse_only/z_validation_step001500.json": "6c4864ca2edf4ba62689a709f93f2eddd7fc19ec48c9d0cb19a2aa0f7ff0ea6d",
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/mse_only/z_validation_step002000.json": "6dcb44a725e4fd6b4d8cb18d66fabfbf2137a1c2efbe0c7fdb345930c2dc002e",
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/mse_only/z_validation_step002500.json": "385e14ed3f8b17f9ddfd20fe065b43f5ce3a9d3f972f87d1b33eac113f7bcfe7",
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/mse_only/z_validation_step003000.json": "8836394e7749d21fc8d20a0704c4a168889ac0fb3b5898a002f0632fa3ffb312",
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/mse_only/loss_gradient_components.jsonl": "d0e1590e1c379c7db0d21887e85f8c8780b69a4280baf9eab7b84800d54009e1",
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/kl_mse-preflight/z_validation_step000006.json": "e699a3731f348494ff7e0c815d4f7ceafabec404d82ae1dba062bfdf355c5718",
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/kl_mse/z_validation_step000500.json": "a247a31365b3ce984ca5836631d3af719d84e9c572d92657673169a95b7e8fb1",
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/kl_mse/z_validation_step001000.json": "423dabd32174b0653da3b33c6089a49e7bd35febbe32cfaf8e72f3e9d4356ca3",
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/kl_mse/z_validation_step001500.json": "a751e71db4b45b8794ba2af5ebedddc96fc13702a6ea444fbbba5c4a4149583a",
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/kl_mse/z_validation_step002000.json": "9f11749729d8103859b7cd8cc9588312cca43e53fe8bfb19a3f6d071935eb288",
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/kl_mse/z_validation_step002500.json": "9e932a6a5fd16557d07684fb06579113c6281a979532b6980736097a8c66d91e",
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/kl_mse/z_validation_step003000.json": "412a16f2c2506014a950a44b1a698f79fd03e075ea0192b6416ddada3715bcd5",
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/kl_mse/loss_gradient_components.jsonl": "c5a2cb627810a17e2bda34201b54c847877206ecd52cc6811e40a0700ef26afb",
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-causal-v2-preflight-20261114/baseline_replay/training_stream.jsonl": "c4ae3ed1834f2c66f757e516fdf5559b74af00a32639311a541b2cf1b056364e",
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-causal-v2-preflight-20261114/baseline_replay/z_validation_step000006.json": "fc018acfc847f522fb08acdd3c34c83343407916cf8c76f6b70736b0bfe57f13",
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-causal-v2-preflight-20261114/baseline_replay/training_geometry.jsonl": "faef31f50a61502cddd2eac4bb6dbff08a71289c6ef4034184a985d37595d797",
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-causal-v2-preflight-20261114/baseline_replay/progress.jsonl": "5215d4d56f329d7ab4d1e9bce7ecd788ec284e9a04ffa4feaf3c8f0ef3e80fe9",
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-causal-v2-preflight-20261114/baseline_replay/observed_factors.json": "8e24366e98f3094a33b067b3b5aa2febead95f3edc1e8674a24dbdec1e4bddf5",
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-causal-v2-preflight-20261114/baseline_replay/component_initialization.json": "9680fa9eb4e3cbd0ffc8227696f10de9336ac1e387219db8bddcd19037ce367d",
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-causal-v2-preflight-20261114/baseline_replay/loss_gradient_components.jsonl": "4ef0d7ea3fbed6f32268f913ef92b72ae580ea44c73af9b80fb3a1a55cd2f0f9",
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-causal-v2-preflight-20261114/beta_zero/training_stream.jsonl": "c4ae3ed1834f2c66f757e516fdf5559b74af00a32639311a541b2cf1b056364e",
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-causal-v2-preflight-20261114/beta_zero/z_validation_step000006.json": "e0a6ebf2d021026a656fe378e59ecb538ca6962dce4b9cf0f4360e53bc48cf3d",
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-causal-v2-preflight-20261114/beta_zero/training_geometry.jsonl": "14a078527994e05bff6cd3e493f1c75ddd1d6846ed6b135e836f8e7ae1d9cc16",
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-causal-v2-preflight-20261114/beta_zero/progress.jsonl": "0b7075ce7ad99a1dead6e747b903b789a46465ac8439120f7ed26a2a2a33eef8",
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-causal-v2-preflight-20261114/beta_zero/observed_factors.json": "3f85a6f0eefc85a9849b2eded04cdcee37911f2a35857f9af8283f06283d2604",
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-causal-v2-preflight-20261114/beta_zero/component_initialization.json": "9680fa9eb4e3cbd0ffc8227696f10de9336ac1e387219db8bddcd19037ce367d",
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-causal-v2-preflight-20261114/beta_zero/loss_gradient_components.jsonl": "fea8fa43e33032317557b22c578b8ab4cf550f9ecc5c863fbba6ffefcbdf0d63",
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-causal-v2-preflight-20261114/mu_only/training_stream.jsonl": "72b4cc2429aed0f8b2ac7226b2aec8add616787c876f7a7dfa6126a058aa7f49",
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-causal-v2-preflight-20261114/mu_only/z_validation_step000006.json": "ebe3e486d7a9341f994e9d2fcdda75fa90ebeb47d32781e9ffb85607ecfba781",
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-causal-v2-preflight-20261114/mu_only/training_geometry.jsonl": "0540526988b8609ba97e9afc8e127843ec9c0fd13cd8335caed91ed151f57e4d",
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-causal-v2-preflight-20261114/mu_only/progress.jsonl": "a3aa5e8988ea7855fd17ef81303fef06b6152504650dddf3f8237de79619c3e1",
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-causal-v2-preflight-20261114/mu_only/observed_factors.json": "4b6a94f188e103d1f4640efe768aaeca9a4496a083da2f06b6bc224733fa8b75",
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-causal-v2-preflight-20261114/mu_only/component_initialization.json": "9680fa9eb4e3cbd0ffc8227696f10de9336ac1e387219db8bddcd19037ce367d",
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-causal-v2-preflight-20261114/mu_only/loss_gradient_components.jsonl": "c0654ff792ed3b0a87abfd593516c8d9e9273e8712db7131c96e760a44af6afe",
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-causal-v2-preflight-20261114/g_zero/training_stream.jsonl": "c4ae3ed1834f2c66f757e516fdf5559b74af00a32639311a541b2cf1b056364e",
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-causal-v2-preflight-20261114/g_zero/z_validation_step000006.json": "84fc069c05fcde4029059acaa30cc708ea862181a802034051ca328668270bae",
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-causal-v2-preflight-20261114/g_zero/training_geometry.jsonl": "546c62106c48d2b91694d5812d171642b3d99b269eae93650051c4a6b4803f02",
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-causal-v2-preflight-20261114/g_zero/progress.jsonl": "a9408e232317c4cb355867603f386d6a043ed030b0929c02a055aede70401ff5",
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-causal-v2-preflight-20261114/g_zero/observed_factors.json": "6e33775da4f62afe156873aeba1c49835e18725ecf3a901c6ea9c2d3db25f92a",
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-causal-v2-preflight-20261114/g_zero/component_initialization.json": "9680fa9eb4e3cbd0ffc8227696f10de9336ac1e387219db8bddcd19037ce367d",
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-causal-v2-preflight-20261114/g_zero/loss_gradient_components.jsonl": "50e840e0cbcccac5f267b28116200c446645626cd5cbe82f39af2caf00dc5a00",
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-causal-v2-preflight-20261114/official_init/training_stream.jsonl": "c4ae3ed1834f2c66f757e516fdf5559b74af00a32639311a541b2cf1b056364e",
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-causal-v2-preflight-20261114/official_init/z_validation_step000006.json": "75b526990031e16583e7c1bd1ed15ea675417d873a6ae845549deb7da5952afe",
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-causal-v2-preflight-20261114/official_init/training_geometry.jsonl": "48cacefb761caeae0e674016be2612b00b8cdc2c4ed1b18f4276de0514539f00",
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-causal-v2-preflight-20261114/official_init/progress.jsonl": "3f58929903bd9a4c652996bb78adaaa1b55e85de16a993b1fdb49365d3767572",
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-causal-v2-preflight-20261114/official_init/observed_factors.json": "548eba240afe42306feaf63b70fdae8e9af5266859b5590c00f23c765f1c1937",
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-causal-v2-preflight-20261114/official_init/component_initialization.json": "fd422f8a7dd64df9a563ce533947607b29cb365fb887f8982e502911a118fa8d",
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-causal-v2-preflight-20261114/official_init/loss_gradient_components.jsonl": "91f3bd76fd839df831b4130ed916224b76eca2ae241abbfac579cf85728659b5",
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-causal-v2-preflight-20261114/preflight_summary.json": "e1c910371754f1c58566553092c2511290ff2f80698f75c72c185fae6747d03e"
+  },
+  "limits": [
+    "Original 500..2500 checkpoints and latent code matrices are absent from the inspected run roots. Scalar variance cannot reconstruct directional rank.",
+    "v2 geometry records only actual B4 before updates0,1. Their inputs differ; B4 covariance rank cannot exceed3 regardless of representation.",
+    "Preflight validation uses8 fixed rows; original full-run validation uses512. Do not interpret their variance difference as a matched learning curve.",
+    "First established small-variation fixed512 observation is update500 in all4arms. Collapse onset update and rank trajectory remain unknown.",
+    "Causal v2 six-update cases validate mechanisms and data matching, not long-term causal performance.",
+    "Official_init loads439 released encoder/VAE/image-decoder tensors with fresh local16D g and optimizer; it is not a released optimizer or state-head replay.",
+    "No existing continuation, model, optimizer, or training script was changed. No GPU or training used."
+  ]
+}

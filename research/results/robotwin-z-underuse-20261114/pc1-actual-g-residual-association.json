@@ -1,0 +1,157 @@
+{
+  "scope": "CPU association using train2048 PCA basis and heldout512 actual native-parity-verified g predictions; no parameter or GPU updates",
+  "target_equals_previous_probe": true,
+  "identities_match": true,
+  "matched_probe_vs_native_eval_mu_max_difference": 0.0,
+  "actual_g_residual_geometry": {
+    "samples": 512,
+    "mean": {
+      "left_x": 0.04954150689468406,
+      "left_y": -0.04038797531211458,
+      "left_z": 0.01433003954502965,
+      "left_qw": -0.001935889051878803,
+      "left_qx": 0.006763529680341773,
+      "left_qy": -0.019003469344458956,
+      "left_qz": 0.004724066267613125,
+      "left_gripper": -0.25526341019610754,
+      "right_x": -0.03818908167056634,
+      "right_y": 0.015340061364895519,
+      "right_z": -0.013285537360047783,
+      "right_qw": -0.01216642892791242,
+      "right_qx": -0.013411942851651815,
+      "right_qy": 0.02995998141735079,
+      "right_qz": -0.012641124134233905,
+      "right_gripper": -0.11563449989625951
+    },
+    "variance": {
+      "left_x": 0.025184524275844836,
+      "left_y": 0.019604319499304194,
+      "left_z": 0.009517430740298247,
+      "left_qw": 0.012393521095683492,
+      "left_qx": 0.0209849933867164,
+      "left_qy": 0.01977713588772701,
+      "left_qz": 0.014876737507849307,
+      "left_gripper": 0.3344055469210263,
+      "right_x": 0.024771562178348163,
+      "right_y": 0.023382999405652593,
+      "right_z": 0.016329446008201524,
+      "right_qw": 0.015989499157559445,
+      "right_qx": 0.024155033934822653,
+      "right_qy": 0.021101578350069292,
+      "right_qz": 0.012552919395342617,
+      "right_gripper": 0.30917461854439693
+    },
+    "second_moment": {
+      "left_x": 0.027638885181240875,
+      "left_y": 0.021235508049116156,
+      "left_z": 0.009722780773660365,
+      "left_qw": 0.012397268762104686,
+      "left_qx": 0.02103073872045328,
+      "left_qy": 0.0201382677348528,
+      "left_qz": 0.014899054309950126,
+      "left_gripper": 0.3995649555059723,
+      "right_x": 0.02622996813718935,
+      "right_y": 0.02361831688833135,
+      "right_z": 0.01650595151114673,
+      "right_qw": 0.01613752115041741,
+      "right_qx": 0.02433491414587863,
+      "right_qy": 0.02199917883659733,
+      "right_qz": 0.012712717414719734,
+      "right_gripper": 0.32254595611065473
+    },
+    "mean_square_16d": 0.06191949895201787,
+    "centered_variance_trace": 0.9042018662888429,
+    "pc1_fraction": 0.3772991518629938,
+    "pc1_plus_pc2_fraction": 0.720362859346685,
+    "participation_ratio": 3.7105593393921987,
+    "dimensions_95pct": 10,
+    "covariance_eigenvalues": [
+      0.34115459726371655,
+      0.3101988445627233,
+      0.06267620569403971,
+      0.03133082644184411,
+      0.027550808554003905,
+      0.02572591216321136,
+      0.019736646446281494,
+      0.01830704396677075,
+      0.013862405053399128,
+      0.013070211442959742,
+      0.01139955928819277,
+      0.00831038705004185,
+      0.0060273714188749244,
+      0.0058496314096320775,
+      0.0050880342073233555,
+      0.003913381325827867
+    ],
+    "groups": {
+      "XYZ": {
+        "mean_squared_per_coordinate": 0.020825235090114136,
+        "second_moment_fraction": 0.12612284160833478,
+        "centered_variance_fraction": 0.1313758426480648,
+        "contribution_to_16d_MSE": 0.007809463158792801
+      },
+      "quaternion": {
+        "mean_squared_per_coordinate": 0.01795620763437175,
+        "second_moment_fraction": 0.14499638997633219,
+        "centered_variance_fraction": 0.15685813533862233,
+        "contribution_to_16d_MSE": 0.008978103817185876
+      },
+      "gripper": {
+        "mean_squared_per_coordinate": 0.36105545580831355,
+        "second_moment_fraction": 0.728880768415333,
+        "centered_variance_fraction": 0.711766022013313,
+        "contribution_to_16d_MSE": 0.045131931976039194
+      }
+    }
+  },
+  "correlation_PC1_with_actual_g_residual": {
+    "left_x": -0.029079034902939366,
+    "left_y": 0.18238959417372966,
+    "left_z": -0.07373243727468808,
+    "left_qw": 0.06797698454828602,
+    "left_qx": 0.0018426959730389158,
+    "left_qy": 0.046461717900177196,
+    "left_qz": -0.030136378923093045,
+    "left_gripper": -0.011687871833245678,
+    "right_x": 0.005740679846416299,
+    "right_y": -0.11666699420213465,
+    "right_z": 0.025084591521756874,
+    "right_qw": 0.05678610613489543,
+    "right_qx": 0.0958136844132981,
+    "right_qy": -0.11497517041285261,
+    "right_qz": 0.0443445996160157,
+    "right_gripper": -0.03152848975072859
+  },
+  "group_mu_gradients": {
+    "xyz": {
+      "mean_gradient_norm": 0.00505290931003686,
+      "fraction_gradient_energy_parallel_to_train_mu_PC1": 0.1971868046699002,
+      "mean_signed_PC1_gradient": -0.0009347208665862056,
+      "mean_absolute_PC1_gradient": 0.0019235118061325534
+    },
+    "quaternion": {
+      "mean_gradient_norm": 0.003569581470809327,
+      "fraction_gradient_energy_parallel_to_train_mu_PC1": 0.051041020907549015,
+      "mean_signed_PC1_gradient": -3.277200108418911e-05,
+      "mean_absolute_PC1_gradient": 0.0005829512012166636
+    },
+    "gripper": {
+      "mean_gradient_norm": 0.019145911631302397,
+      "fraction_gradient_energy_parallel_to_train_mu_PC1": 0.08957603522203429,
+      "mean_signed_PC1_gradient": -0.0011393993810008903,
+      "mean_absolute_PC1_gradient": 0.0044709453611097485
+    }
+  },
+  "source_sha256": {
+    "actual_g_results": "545612b18e6fd15407126379e54d431db79ac78f06f86198a75c87a52df39ce7",
+    "actual_g_predictions": "4bee4f85c0881c453e31fea3dd272d00800beff467ad109594858dbb514159b8",
+    "train_mu": "7b146dd1bdb404ed5f7726ba204cfa098225f35b80776b61ad6c8333e2a8053d",
+    "actual_val_mu": "696c60dae07d78855651cf6d957af7b776f3cffae5827fd913e56c2ef2f0ebb9"
+  },
+  "limits": [
+    "Actual g residual is evaluated at deterministic posterior mean, not sampled training z.",
+    "Per-example gradient projection at mu is a diagnostic of native g; not encoder-parameter gradient or Adam update.",
+    "Correlation does not establish a causal origin of concentration. PCA basis fit on train2048 only."
+  ],
+  "cuda_initialized": false
+}

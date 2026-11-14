@@ -1,0 +1,153 @@
+{
+  "scope": "Independent CPU review of completed recovery GPU preflight artifacts, no GPU launch",
+  "arms": {
+    "seed43_replay": {
+      "resume": {
+        "verified": true,
+        "replayed_batches": 500,
+        "original_uncommitted_steps_ignored": 500,
+        "committed_original_prefix_steps": 500,
+        "new_segment_steps": 6,
+        "checks": {
+          "prefix500": true,
+          "boundary501": true,
+          "own_model": true,
+          "own_optimizer": true,
+          "own_checkpoint": true,
+          "resume_offset500": true,
+          "historical_cpu_scope": true
+        },
+        "restored_model_sha256": "4b2fd315325c3739691c9bb7f3628e5f042215d9993ca9d5e245dea0901a33fc",
+        "restored_optimizer_sha256": "6385bd31e20a3ac8f335baecd285d5e08fce8efde5a0293fd5eb5641412c8474",
+        "resume_checkpoint_sha256": "666ace5494f4e3034f7cf5a1b46d6443f78457fb7de60d6b75f500e24d40e1bf"
+      },
+      "absolute_step": 3506,
+      "repeated_evaluation_restoration": {
+        "completed_evaluations": 3,
+        "precision_restored": "medium",
+        "all_rng_unchanged": true
+      },
+      "protocol_sha256": "9d2ea2b9fdc1a8d6066ff89122d4ec73ec9da0e7fa60c811acaf8615b9fe5316",
+      "summary_sha256": "21299d2e9495fc069e71dc8d797ce6531c4e47819f6ecffd661705201b1a1da4"
+    },
+    "seed43_new": {
+      "resume": {
+        "verified": true,
+        "replayed_batches": 500,
+        "original_uncommitted_steps_ignored": 500,
+        "committed_original_prefix_steps": 500,
+        "new_segment_steps": 6,
+        "checks": {
+          "prefix500": true,
+          "boundary501": true,
+          "own_model": true,
+          "own_optimizer": true,
+          "own_checkpoint": true,
+          "resume_offset500": true,
+          "historical_cpu_scope": true
+        },
+        "restored_model_sha256": "1a73e8989262f4ce0b9c923e01ddd42f3e1d3e172b40bb6478599e58c5213ec2",
+        "restored_optimizer_sha256": "58b41b0c14b4f2328702e2cecb53c49c2a3f9a3d30528b47b0baa96ee4d37685",
+        "resume_checkpoint_sha256": "4ef94204314778be1901136820fee6d7630632a958d66101d84f9bddebdf5bf3"
+      },
+      "absolute_step": 3506,
+      "repeated_evaluation_restoration": {
+        "completed_evaluations": 3,
+        "precision_restored": "medium",
+        "all_rng_unchanged": true
+      },
+      "protocol_sha256": "8df7144be6fff2651d85c8af400c6fd8cfd839ce85f92a02f9c9ebdc28a05b0e",
+      "summary_sha256": "adfc3df9ab83dd57352d3f5d61472b58f33b812c203290bf01a5db0849651351"
+    },
+    "seed44_replay": {
+      "resume": {
+        "verified": true,
+        "replayed_batches": 500,
+        "original_uncommitted_steps_ignored": 500,
+        "committed_original_prefix_steps": 500,
+        "new_segment_steps": 6,
+        "checks": {
+          "prefix500": true,
+          "boundary501": true,
+          "own_model": true,
+          "own_optimizer": true,
+          "own_checkpoint": true,
+          "resume_offset500": true,
+          "historical_cpu_scope": true
+        },
+        "restored_model_sha256": "9e68cad9558d0b17afef8a5e1997503d7ac4892b4059a59e36e7db209a598099",
+        "restored_optimizer_sha256": "87f7ae91b8133772bcff48eb40aed10264449e56770cf54dcf8c2af228ec562c",
+        "resume_checkpoint_sha256": "68a9730e6289b7378d4c3a5267352975b3943d7b9c7979cb61e1ee9653098b2b"
+      },
+      "absolute_step": 3506,
+      "repeated_evaluation_restoration": {
+        "completed_evaluations": 3,
+        "precision_restored": "medium",
+        "all_rng_unchanged": true
+      },
+      "protocol_sha256": "de82c76857a7a91b5b0320043f207092cf9f625909922e54e5353d47a7aa9853",
+      "summary_sha256": "5f7f03a9209b74f8af0d0fbb4144f3a5a4463f99e09856389767b02bd9dee8bd"
+    },
+    "seed44_new": {
+      "resume": {
+        "verified": true,
+        "replayed_batches": 500,
+        "original_uncommitted_steps_ignored": 500,
+        "committed_original_prefix_steps": 500,
+        "new_segment_steps": 6,
+        "checks": {
+          "prefix500": true,
+          "boundary501": true,
+          "own_model": true,
+          "own_optimizer": true,
+          "own_checkpoint": true,
+          "resume_offset500": true,
+          "historical_cpu_scope": true
+        },
+        "restored_model_sha256": "1bdd45913bb949620df2f6a60eff7525175c364e4933ff165ef5d186643d0b2d",
+        "restored_optimizer_sha256": "eeecf9f47a4eb85489d0e0169a4dc5cf896bfce9ba3bb88dbbfdf416ba3da43e",
+        "resume_checkpoint_sha256": "f94a396ccb63ee67d648d8ee07d96dff88a45e38da90d565c935b4e3cc96fd2e"
+      },
+      "absolute_step": 3506,
+      "repeated_evaluation_restoration": {
+        "completed_evaluations": 3,
+        "precision_restored": "medium",
+        "all_rng_unchanged": true
+      },
+      "protocol_sha256": "63f602cec995a08fbd77faaed9d5de3d809d8bdf70e403781df2c14b9eb9800a",
+      "summary_sha256": "fbd787d3e430bfae88c8d9ff36937db7983e477bc5dd41d54c065f22898a8702"
+    }
+  },
+  "paired_cuda_epsilon": {
+    "43": {
+      "shared_local_step": 506,
+      "matched": true,
+      "first_mismatches": [],
+      "same_data_steps": []
+    },
+    "44": {
+      "shared_local_step": 506,
+      "matched": true,
+      "first_mismatches": [],
+      "same_data_steps": []
+    },
+    "different_seeds": {
+      "shared_local_step": 506,
+      "epsilon_streams_differ": true,
+      "augmentation_streams_differ": true
+    }
+  },
+  "paired_cpu_augmentation": {
+    "43": {
+      "shared_local_step": 506,
+      "matched": true,
+      "first_mismatches": []
+    },
+    "44": {
+      "shared_local_step": 506,
+      "matched": true,
+      "first_mismatches": []
+    }
+  },
+  "all_checks_passed": true
+}

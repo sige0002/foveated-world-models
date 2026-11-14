@@ -1,0 +1,54 @@
+{
+  "repository": "huggingface/lerobot",
+  "commit": "fe1c54594f6ba275fccf210b9f7b11f0e2324b89",
+  "files": [
+    {
+      "path": "lam_core/core/lam_model.py",
+      "git_blob_sha": "0fda728cfe6591c8184bf942ec70b834c84d0364"
+    },
+    {
+      "path": "lam_core/core/vq.py",
+      "git_blob_sha": "c6811d0aeaa60d3efb6c7090bd47f06dbb439ca8"
+    },
+    {
+      "path": "lam_core/core/utils/lam_encoder.py",
+      "git_blob_sha": "88bd80b566dd4a0c979c54a6f7fec718678b09c9"
+    },
+    {
+      "path": "lam_core/core/utils/lam_decoder.py",
+      "git_blob_sha": "66d0976066dd09c302950ad08de270195a53f03f"
+    },
+    {
+      "path": "lam_core/core/utils/modules.py",
+      "git_blob_sha": "79631087d50abdb6d6c87adb0bce54a73bb463e3"
+    },
+    {
+      "path": "lam_core/core/utils/pos_embs.py",
+      "git_blob_sha": "a391387985413427eb8b845cc340a97d1d27f8ee"
+    },
+    {
+      "path": "lam_core/core/vjepa_encoder.py",
+      "git_blob_sha": "81976bd88491a36d9f96b50a1fe951d1954ee8ad"
+    },
+    {
+      "path": "latent_world/runtime/freeze_policy.py",
+      "git_blob_sha": "61e26aed33b3a894bad72c6cbeb0aab310a91774"
+    },
+    {
+      "path": "vlas/lawam.py",
+      "git_blob_sha": "3e46f8cb1ab1ae0e1d141adb57a10ff42ac86a1d"
+    },
+    {
+      "path": "docs/source/lawam.mdx",
+      "git_blob_sha": "252bf573997305a3104e736470c288cb2b3b7517"
+    },
+    {
+      "path": "configuration_lawam.py",
+      "git_blob_sha": "c4fc82b02c219ffbac48f1790afc3d11bee1f149"
+    },
+    {
+      "path": "modeling_lawam.py",
+      "git_blob_sha": "db153e8e35775ebf8743e17d8451cd573332f092"
+    }
+  ]
+}

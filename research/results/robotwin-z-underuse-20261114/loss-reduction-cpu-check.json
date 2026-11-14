@@ -1,0 +1,60 @@
+{
+  "scope": "CPU execution of pinned official loss functions on deterministic synthetic inputs, plus existing matched512 normalized-state cache; no GPU/training",
+  "kl_check": {
+    "latent_dimensions": 32,
+    "batch": 2,
+    "mu": 1,
+    "logvar": 0,
+    "raw_kl_sum32_mean_batch": 16.0,
+    "beta1e5_weighted_loss": 0.00015999999595806003,
+    "beta5e5_weighted_loss": 0.0007999999797903001,
+    "weighted_kl_gradient_ratio": 5.0
+  },
+  "masked_g_check": {
+    "batch": 4,
+    "padded_dimensions": 32,
+    "valid_dimensions": 16,
+    "valid_error": 1,
+    "invalid_error": 1000,
+    "loss": 1.0,
+    "valid_gradient": -0.03125,
+    "invalid_gradient": -0.0
+  },
+  "fixed512_state": {
+    "samples": 512,
+    "valid_dimensions": 16,
+    "all_padding_excluded": true,
+    "delta_exactly_normalized_future_minus_current": true,
+    "zero_predictor_state_mse": 0.1596994194901934,
+    "coordinates": {
+      "XYZ": {
+        "dimensions": 6,
+        "zero_predictor_mse_per_coordinate": 0.032362120940261696,
+        "contribution_to_16d_mean": 0.012135795352598136,
+        "fraction_of_zero_predictor_squared_error": 0.075991480691283,
+        "fraction_abs_delta_gt1": 0.0
+      },
+      "quaternion": {
+        "dimensions": 8,
+        "zero_predictor_mse_per_coordinate": 0.022958247485853633,
+        "contribution_to_16d_mean": 0.011479123742926818,
+        "fraction_of_zero_predictor_squared_error": 0.07187955835764144,
+        "fraction_abs_delta_gt1": 0.0
+      },
+      "gripper": {
+        "dimensions": 2,
+        "zero_predictor_mse_per_coordinate": 1.0886760031573475,
+        "contribution_to_16d_mean": 0.1360845003946684,
+        "fraction_of_zero_predictor_squared_error": 0.8521289609510754,
+        "fraction_abs_delta_gt1": 0.2958984375
+      }
+    },
+    "tanh_irreducible_mse_floor": 0.030720148294778572,
+    "two_tanh_irreducible_mse_floor": 0.0
+  },
+  "cuda_initialized": false,
+  "limits": [
+    "Group target energy does not by itself measure learned g error, gradient norm, causal cause, or mutual information.",
+    "5x weighted KL gradient only holds at the SAME mu/logvar/graph and before total-gradient clipping/Adam; not necessarily 5x total gradient or parameter update."
+  ]
+}

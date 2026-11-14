@@ -1,0 +1,275 @@
+{
+  "version": 1,
+  "created_at": "2026-11-13T21:12:31.248206+00:00",
+  "policy": {
+    "max_groups": 1,
+    "arms": [
+      "baseline_replay",
+      "beta_zero",
+      "mu_only",
+      "g_zero"
+    ],
+    "batch_size": 4,
+    "steps": 3000,
+    "seed": 42,
+    "warmup_steps": 1000,
+    "relative_candidate_threshold": 0.01,
+    "ci_lower_must_exceed": 0.0,
+    "initial_ram_available_bytes": 96636764160,
+    "ssd_free_bytes": 75161927680,
+    "estimated_ram_per_pending_arm_bytes": 21474836480,
+    "ram_reserve_bytes": 10737418240,
+    "main_training_allowed": false,
+    "official_init_allowed": false,
+    "automatic_restarts_allowed": false
+  },
+  "limitations": "The 1%/positive-CI rule only allocates the next bounded diagnostic budget. It is not a success criterion or proof that z is useful/useless. It uses the overall512-pair group, one seed and fixed intervention/bootstrap choices, without multiple-comparison correction. All causal3000 outcomes require subsequent review; no additional round is automatic.",
+  "coordinator": "/home/sadasue/foveated-world-models/research/continue_robotwin_causal_diagnostics.py",
+  "output": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-causal-v2-b4-20261114",
+  "original_output_paths": [
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/baseline",
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/kl_only",
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/mse_only",
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/kl_mse",
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/evaluations/final3000-highest-fp32"
+  ],
+  "original_processes": [
+    {
+      "pid": 84620,
+      "state": "S",
+      "start_ticks": "650831",
+      "command": [
+        "/home/sadasue/foveated-world-models/.venv/bin/python",
+        "-u",
+        "/home/sadasue/foveated-world-models/research/train_robotwin_stage1.py",
+        "--config",
+        "/home/sadasue/foveated-world-models/configs/robotwin_loss_ablation_20261114/baseline.yaml",
+        "--output",
+        "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/baseline"
+      ]
+    },
+    {
+      "pid": 84621,
+      "state": "S",
+      "start_ticks": "650831",
+      "command": [
+        "/home/sadasue/foveated-world-models/.venv/bin/python",
+        "-u",
+        "/home/sadasue/foveated-world-models/research/train_robotwin_stage1.py",
+        "--config",
+        "/home/sadasue/foveated-world-models/configs/robotwin_loss_ablation_20261114/kl_only.yaml",
+        "--output",
+        "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/kl_only"
+      ]
+    },
+    {
+      "pid": 84622,
+      "state": "S",
+      "start_ticks": "650831",
+      "command": [
+        "/home/sadasue/foveated-world-models/.venv/bin/python",
+        "-u",
+        "/home/sadasue/foveated-world-models/research/train_robotwin_stage1.py",
+        "--config",
+        "/home/sadasue/foveated-world-models/configs/robotwin_loss_ablation_20261114/mse_only.yaml",
+        "--output",
+        "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/mse_only"
+      ]
+    },
+    {
+      "pid": 84623,
+      "state": "S",
+      "start_ticks": "650831",
+      "command": [
+        "/home/sadasue/foveated-world-models/.venv/bin/python",
+        "-u",
+        "/home/sadasue/foveated-world-models/research/train_robotwin_stage1.py",
+        "--config",
+        "/home/sadasue/foveated-world-models/configs/robotwin_loss_ablation_20261114/kl_mse.yaml",
+        "--output",
+        "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/kl_mse"
+      ]
+    },
+    {
+      "pid": 126286,
+      "state": "S",
+      "start_ticks": "991497",
+      "command": [
+        "/home/sadasue/foveated-world-models/.venv/bin/python",
+        "-u",
+        "/home/sadasue/foveated-world-models/research/evaluate_robotwin_loss_ablation_fp32.py",
+        "--runs-root",
+        "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114",
+        "--output",
+        "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/evaluations/final3000-highest-fp32",
+        "--batch-size",
+        "2",
+        "--bootstrap",
+        "4000",
+        "--wait-for-checkpoints"
+      ]
+    }
+  ],
+  "original_runs": {
+    "baseline": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/baseline",
+    "kl_only": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/kl_only",
+    "mse_only": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/mse_only",
+    "kl_mse": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/kl_mse"
+  },
+  "evaluation_directory": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/evaluations/final3000-highest-fp32",
+  "evaluation_pins": {
+    "script_sha256": "e9c1282f15e01832d4c12a01b8e74fdf5229bbf8859d5e48e71c1a84b11b5b01",
+    "config_sha256": {
+      "baseline": "7c3d11251a5f309ea87ecf69e248060a5e8c7d15fefabeb16eda54c5f0e6526a",
+      "kl_only": "2cf347dfd43a71c271ed0cffb74b3dea62594637065c54bff67f3b0668a191f2",
+      "mse_only": "e2b82f053b42a09e494c2884e8ebb669012305ebb97e6f88fb6d1838cd1a897a",
+      "kl_mse": "dcd5f203c0400128b68384ece57926dd6fef005e931242397a07609d1fa5594f"
+    },
+    "source_commit": "c12168d9077edea67fe7c1b70d08b80b8e65a9c8",
+    "local_patch_sha256": "7fa893260a313e977a4e4476a794a51badb17493ca16a97601d21f87db0df808",
+    "source_files_sha256": {
+      "lam_model.py": "f68daabe8799cfa9b999d11c49f52136cca1897f71677eccb69e4941de2fec3d",
+      "lam_lightinng.py": "d87ef89cc72544d36217e2215392fe257a9161daf10b8036a96026f32682e9bb",
+      "utils/lam_decoder.py": "a7f2ab08e925d6b2a38bdbff2433cdcac5880d173a463ce61797f7a617132a21"
+    },
+    "verified_visual_source_equivalence": {
+      "latent_action_model/core/utils/lam_encoder.py": "db55c9946db8acc1474b01380e182f151a562abdcea8daa1a8bc575daffd115d",
+      "latent_action_model/core/utils/modules.py": "f100161a90f66cad89af39f615c58ece34316e643c6f21d561122a29ee877c44",
+      "latent_action_model/core/utils/pos_embs.py": "756b578d7c691d85f1b1ebcc99a7375df60fe227ae88330084a506b5e9c83875",
+      "latent_action_model/core/vq.py": "827f96892efd9b10f6942ea78ab294ff39b0a91a32a61cbdd93cac46e6f9a5ff",
+      "latent_action_model/core/vjepa_encoder.py": "da3ebc54fe9b28a1ab0b1c4abf82bf0877a7fd12c41579115776c1fa2fe1dc93",
+      "latent_action_model/data_loader/video_aug.py": "e425cf9ea33ae6abe583c13afe86e1337eec309ed293e32cccb2f69daf9fb69b",
+      "latent_action_model/core/utils/lam_decoder.py:modulate": "806c612a9260426c2af3ac2e3c698c939c16c7f8e2125afce2108aff2bb32917",
+      "latent_action_model/core/utils/lam_decoder.py:AdaLNBlock": "5c8fa9591904236897347033640b83e1d06a4ccc5451af5789f100e6dd03163b",
+      "latent_action_model/core/utils/lam_decoder.py:LAMDecoder_v2": "18d5ccf5076b498599dc6b514a847c4130be4cb4c32c2376ee701d2953b7ba21"
+    },
+    "validation_pair_and_donor_sha256": "1c04ef52284a2e86b4e60b80de8b54dae93cbe00f11792fe67de9149a9eacd75",
+    "dataset_info_sha256": "08eb275079446a3a1d08d27c8143bd73a34cbfe9ad81e01ddda6d902408a22dc",
+    "release_config_sha256": "e5f98738d1c6dc8d8643d5a73d44ebd46385fbb2fc4031d46a02ad384a353449"
+  },
+  "runner": "/home/sadasue/foveated-world-models/research/train_robotwin_stage1_causal_v2.py",
+  "runner_sha256": "e1d7db1efca25cdff88a7299e7f5cd31c016b0c11a661fd212c73df67647aa22",
+  "configs": {
+    "baseline_replay": {
+      "path": "/home/sadasue/foveated-world-models/configs/robotwin_causal_ablation_20261114/baseline_replay.yaml",
+      "sha256": "0a273fe271b63b6c18ae2f9e0251e42d9775ed4c7c74496bb7433e3892ab4757",
+      "factors": {
+        "image_loss": "smooth_l1",
+        "kl_beta": 5e-05,
+        "lambda_aux": 1.0,
+        "posterior_sampling": "sampled",
+        "initialization": "fresh"
+      }
+    },
+    "beta_zero": {
+      "path": "/home/sadasue/foveated-world-models/configs/robotwin_causal_ablation_20261114/beta_zero.yaml",
+      "sha256": "2f3b573e5b720d7a35e7595ebfc235c1c47cb8b82125eb29dd92a85ea5521dc4",
+      "factors": {
+        "image_loss": "smooth_l1",
+        "kl_beta": 0.0,
+        "lambda_aux": 1.0,
+        "posterior_sampling": "sampled",
+        "initialization": "fresh"
+      }
+    },
+    "mu_only": {
+      "path": "/home/sadasue/foveated-world-models/configs/robotwin_causal_ablation_20261114/mu_only.yaml",
+      "sha256": "1c77a4b61a1e2e5e53a5ba30c2af27fce59721efd221c46b78198ccb117f4916",
+      "factors": {
+        "image_loss": "smooth_l1",
+        "kl_beta": 5e-05,
+        "lambda_aux": 1.0,
+        "posterior_sampling": "mu_only",
+        "initialization": "fresh"
+      }
+    },
+    "g_zero": {
+      "path": "/home/sadasue/foveated-world-models/configs/robotwin_causal_ablation_20261114/g_zero.yaml",
+      "sha256": "3b1fe66a3140bbfa24e7df67e79fb958d5de6f10cc7d317795afe767e60abfe8",
+      "factors": {
+        "image_loss": "smooth_l1",
+        "kl_beta": 5e-05,
+        "lambda_aux": 0.0,
+        "posterior_sampling": "sampled",
+        "initialization": "fresh"
+      }
+    }
+  },
+  "expected_initial_sha256": "c933311d638c1b880d370ff85195220bdd06394cdb4ef62710fa8fa4d522e8a0",
+  "pinned_files": {
+    "/home/sadasue/.local/share/uv/python/cpython-3.12.12-linux-aarch64-gnu/bin/python3.12": "83adeaaf85896eb0fe8cf1bbce7f827271cc24e94b164c5edcfef2168b3950a5",
+    "/home/sadasue/foveated-world-models/configs/robotwin_causal_ablation_20261114/baseline_replay.yaml": "0a273fe271b63b6c18ae2f9e0251e42d9775ed4c7c74496bb7433e3892ab4757",
+    "/home/sadasue/foveated-world-models/configs/robotwin_causal_ablation_20261114/beta_zero.yaml": "2f3b573e5b720d7a35e7595ebfc235c1c47cb8b82125eb29dd92a85ea5521dc4",
+    "/home/sadasue/foveated-world-models/configs/robotwin_causal_ablation_20261114/g_zero.yaml": "3b1fe66a3140bbfa24e7df67e79fb958d5de6f10cc7d317795afe767e60abfe8",
+    "/home/sadasue/foveated-world-models/configs/robotwin_causal_ablation_20261114/mu_only.yaml": "1c77a4b61a1e2e5e53a5ba30c2af27fce59721efd221c46b78198ccb117f4916",
+    "/home/sadasue/foveated-world-models/research/continue_robotwin_causal_diagnostics.py": "359774b22ba7147ac1e767ec8ed707ba7fa0eb2352e57c03424e23e77715da2c",
+    "/home/sadasue/foveated-world-models/research/evaluate_robotwin_loss_ablation_fp32.py": "e9c1282f15e01832d4c12a01b8e74fdf5229bbf8859d5e48e71c1a84b11b5b01",
+    "/home/sadasue/foveated-world-models/research/results/robotwin-z-underuse-20261114/causal-v2-preflight-summary.json": "e1c910371754f1c58566553092c2511290ff2f80698f75c72c185fae6747d03e",
+    "/home/sadasue/foveated-world-models/research/train_robotwin_stage1.py": "9ecbea0151c1f902647dc9e41a5a17a431ab5c4319da658b9d0cdeb5104cba27",
+    "/home/sadasue/foveated-world-models/research/train_robotwin_stage1_causal_v2.py": "e1d7db1efca25cdff88a7299e7f5cd31c016b0c11a661fd212c73df67647aa22",
+    "/media/sadasue/SSD1/foveated-world-models/research/official-data-contract-audit-20261113/LaWAM-robotwin-delta2/latent_action_model/config/dino_large_vae.yaml": "8098a296ab0fb8ed56e4c0e2b2a7e53251be29edc11089568372a70dba2e888b",
+    "/media/sadasue/SSD1/foveated-world-models/research/official-data-contract-audit-20261113/LaWAM-robotwin-delta2/latent_action_model/core/__init__.py": "acdc690a221f007164af53352d08af7657089851bf13985edd0bf5464f3115cb",
+    "/media/sadasue/SSD1/foveated-world-models/research/official-data-contract-audit-20261113/LaWAM-robotwin-delta2/latent_action_model/core/lam_lightinng.py": "d87ef89cc72544d36217e2215392fe257a9161daf10b8036a96026f32682e9bb",
+    "/media/sadasue/SSD1/foveated-world-models/research/official-data-contract-audit-20261113/LaWAM-robotwin-delta2/latent_action_model/core/lam_model.py": "f68daabe8799cfa9b999d11c49f52136cca1897f71677eccb69e4941de2fec3d",
+    "/media/sadasue/SSD1/foveated-world-models/research/official-data-contract-audit-20261113/LaWAM-robotwin-delta2/latent_action_model/core/utils/dpt_head.py": "9e176eb3907a5714aef8dc2c9ed0f40ef84e7b70eb73ef597baf961de59994c5",
+    "/media/sadasue/SSD1/foveated-world-models/research/official-data-contract-audit-20261113/LaWAM-robotwin-delta2/latent_action_model/core/utils/lam_decoder.py": "a7f2ab08e925d6b2a38bdbff2433cdcac5880d173a463ce61797f7a617132a21",
+    "/media/sadasue/SSD1/foveated-world-models/research/official-data-contract-audit-20261113/LaWAM-robotwin-delta2/latent_action_model/core/utils/lam_encoder.py": "db55c9946db8acc1474b01380e182f151a562abdcea8daa1a8bc575daffd115d",
+    "/media/sadasue/SSD1/foveated-world-models/research/official-data-contract-audit-20261113/LaWAM-robotwin-delta2/latent_action_model/core/utils/modules.py": "f100161a90f66cad89af39f615c58ece34316e643c6f21d561122a29ee877c44",
+    "/media/sadasue/SSD1/foveated-world-models/research/official-data-contract-audit-20261113/LaWAM-robotwin-delta2/latent_action_model/core/utils/pos_embs.py": "756b578d7c691d85f1b1ebcc99a7375df60fe227ae88330084a506b5e9c83875",
+    "/media/sadasue/SSD1/foveated-world-models/research/official-data-contract-audit-20261113/LaWAM-robotwin-delta2/latent_action_model/core/utils/utils.py": "69ebc8746b99010692ddc4622d154fe2c48a476f8e64c8784805149dcd4d7bfd",
+    "/media/sadasue/SSD1/foveated-world-models/research/official-data-contract-audit-20261113/LaWAM-robotwin-delta2/latent_action_model/core/utils/vision_transformer.py": "acf7bcc52b0bd7c465364814f8d930819f95dbce31606e0cffd0030c4430dccb",
+    "/media/sadasue/SSD1/foveated-world-models/research/official-data-contract-audit-20261113/LaWAM-robotwin-delta2/latent_action_model/core/vjepa_encoder.py": "da3ebc54fe9b28a1ab0b1c4abf82bf0877a7fd12c41579115776c1fa2fe1dc93",
+    "/media/sadasue/SSD1/foveated-world-models/research/official-data-contract-audit-20261113/LaWAM-robotwin-delta2/latent_action_model/core/vq.py": "827f96892efd9b10f6942ea78ab294ff39b0a91a32a61cbdd93cac46e6f9a5ff",
+    "/media/sadasue/SSD1/foveated-world-models/research/official-data-contract-audit-20261113/LaWAM-robotwin-delta2/latent_action_model/data_loader/__init__.py": "236e17132e8aa858c86d1b2687aecbc4750b564fcb31789f6329908bba82773b",
+    "/media/sadasue/SSD1/foveated-world-models/research/official-data-contract-audit-20261113/LaWAM-robotwin-delta2/latent_action_model/data_loader/collate.py": "5953e9b334dce0eb1cb461c92c118f2d6ad4743f19f75fd74311aa86b6b20645",
+    "/media/sadasue/SSD1/foveated-world-models/research/official-data-contract-audit-20261113/LaWAM-robotwin-delta2/latent_action_model/data_loader/lerobot_datamodule.py": "c7cf101217ac16ebc3d9012ab98dc2f2f34f83f9dc990a1c8f4ded7adbd2ac11",
+    "/media/sadasue/SSD1/foveated-world-models/research/official-data-contract-audit-20261113/LaWAM-robotwin-delta2/latent_action_model/data_loader/lerobot_dataset.py": "0a11ed9c81f3d921056652cd38c665669504c87c861caff13c6c31f3427dd62b",
+    "/media/sadasue/SSD1/foveated-world-models/research/official-data-contract-audit-20261113/LaWAM-robotwin-delta2/latent_action_model/data_loader/video_aug.py": "e425cf9ea33ae6abe583c13afe86e1337eec309ed293e32cccb2f69daf9fb69b",
+    "/media/sadasue/SSD1/foveated-world-models/research/official-data-contract-audit-20261113/LaWAM-robotwin-delta2/latent_action_model/main.py": "af53cd65c22cdf1ed1dcab3aa9359e25c14cb52a72622386404b6cffa93295ac",
+    "/media/sadasue/SSD1/foveated-world-models/research/official-data-contract-audit-20261113/LaWAM-robotwin-delta2/latent_action_model/precompute_dataset_cache.py": "1f6b69edf82103863204fc79d3cbad8ac8b7f96da006df4dc5a6ca1d017fbde5",
+    "/media/sadasue/SSD1/foveated-world-models/research/official-data-contract-audit-20261113/robotwin-qfix-data/robotwin_merged/meta/episodes/chunk-000/file-000.parquet": "1cdef62eb5eb7b7a39e0fad51f250150351359090dc03ea4203a8e62dfcef072",
+    "/media/sadasue/SSD1/foveated-world-models/research/official-data-contract-audit-20261113/robotwin-qfix-data/robotwin_merged/meta/info.json": "08eb275079446a3a1d08d27c8143bd73a34cbfe9ad81e01ddda6d902408a22dc",
+    "/media/sadasue/SSD1/foveated-world-models/research/official-data-contract-audit-20261113/robotwin-qfix-data/robotwin_merged/qfix/audit.json": "213c27b784043042172915c21b5c6522658d9ecf623c514597f62d805ee22a4e",
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/baseline/data_contract.json": "0f350c2628580a43ea6d94720b0b99e8a43df30540b5cee6e6811ebc13ee8b7a",
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/baseline/episode_split.json": "c75f6d4ea34a34e8e2d67682da3fc3ebc00d733957486fea6f954931b0a9ed35",
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/baseline/initial_state_fingerprint.json": "f15119e7f230832b7b2e9dfff6b4e8855ff8f85218257971d20cc12544dbf00e",
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/baseline/requested_config.yaml": "fe364b7038db0289e265e1726f4dfc79d24cdc30ee66a76eded5206fd6feafee",
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/baseline/resolved_config.yaml": "7c3d11251a5f309ea87ecf69e248060a5e8c7d15fefabeb16eda54c5f0e6526a",
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/baseline/train_robotwin_stage1.py": "9ecbea0151c1f902647dc9e41a5a17a431ab5c4319da658b9d0cdeb5104cba27",
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/baseline/z_validation_step000500.json": "9908d11b3a38735fd10bd4becdbb811b57b3ce361039deae82b6d5e76bba8b6b",
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/evaluations/final3000-highest-fp32/evaluator-launch.json": "7802643054dd028c396648a8b04b0c70cebba274082e5aacef02f0a8c3c6c52a",
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/evaluations/final3000-highest-fp32/launch-pins.json": "badcb9cb8b89482f03b4092a9fa9132e30c963a464b86276cdced79d16784f37",
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/kl_mse/data_contract.json": "0f350c2628580a43ea6d94720b0b99e8a43df30540b5cee6e6811ebc13ee8b7a",
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/kl_mse/episode_split.json": "c75f6d4ea34a34e8e2d67682da3fc3ebc00d733957486fea6f954931b0a9ed35",
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/kl_mse/initial_state_fingerprint.json": "a35c158772a9b79f2a3cdc5b3207eeb1db2ef7b6c49c03eb5e82aa068325de48",
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/kl_mse/requested_config.yaml": "e6bddbaf1474f39975084b2dc6a741139daa444c28aaed3f91f0f589d7885baa",
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/kl_mse/resolved_config.yaml": "dcd5f203c0400128b68384ece57926dd6fef005e931242397a07609d1fa5594f",
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/kl_mse/train_robotwin_stage1.py": "9ecbea0151c1f902647dc9e41a5a17a431ab5c4319da658b9d0cdeb5104cba27",
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/kl_mse/z_validation_step000500.json": "a247a31365b3ce984ca5836631d3af719d84e9c572d92657673169a95b7e8fb1",
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/kl_only/data_contract.json": "0f350c2628580a43ea6d94720b0b99e8a43df30540b5cee6e6811ebc13ee8b7a",
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/kl_only/episode_split.json": "c75f6d4ea34a34e8e2d67682da3fc3ebc00d733957486fea6f954931b0a9ed35",
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/kl_only/initial_state_fingerprint.json": "eb7a51787bc67bbe84e4f5566e20a244ba5a7029f03fb8392f7e24e8019ee434",
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/kl_only/requested_config.yaml": "99ce9ff1ac763cbf69bdb7465b2d946ce9dc444d51e08a7d5a99f32446c65ed2",
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/kl_only/resolved_config.yaml": "2cf347dfd43a71c271ed0cffb74b3dea62594637065c54bff67f3b0668a191f2",
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/kl_only/train_robotwin_stage1.py": "9ecbea0151c1f902647dc9e41a5a17a431ab5c4319da658b9d0cdeb5104cba27",
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/kl_only/z_validation_step000500.json": "e636a8362b41c4a5dbb4d8d0db94e9969c618348cb2b82ace0efba07101674d4",
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/mse_only/data_contract.json": "0f350c2628580a43ea6d94720b0b99e8a43df30540b5cee6e6811ebc13ee8b7a",
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/mse_only/episode_split.json": "c75f6d4ea34a34e8e2d67682da3fc3ebc00d733957486fea6f954931b0a9ed35",
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/mse_only/initial_state_fingerprint.json": "eaf5ad8c829e3f9e7120968620db759b6157863a5dfc4d63c46e2e56b0c0717e",
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/mse_only/requested_config.yaml": "300c60085fec0e2bcb131eea9409141dcbdad0e56f65fa67611565c71d4991ac",
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/mse_only/resolved_config.yaml": "e2b82f053b42a09e494c2884e8ebb669012305ebb97e6f88fb6d1838cd1a897a",
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/mse_only/train_robotwin_stage1.py": "9ecbea0151c1f902647dc9e41a5a17a431ab5c4319da658b9d0cdeb5104cba27",
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/mse_only/z_validation_step000500.json": "75e67c4b6ad0c48980076217e8ef9d3e00cf8ca3e608a0e068b3c3f12a97d2c4",
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/training_launch.json": "15ce4b33a533a0e0c06e5a7b7d5b834c687d027d60e86ff34bd63a8e72762a95"
+  },
+  "pinned_mount": {
+    "target": "/media/sadasue/SSD1",
+    "source": "/dev/sda1",
+    "fstype": "ext4"
+  },
+  "python": "/home/sadasue/foveated-world-models/.venv/bin/python",
+  "training_source": "/media/sadasue/SSD1/foveated-world-models/research/official-data-contract-audit-20261113/LaWAM-robotwin-delta2",
+  "source_commit": "c12168d9077edea67fe7c1b70d08b80b8e65a9c8",
+  "source_patch_sha256": "7fa893260a313e977a4e4476a794a51badb17493ca16a97601d21f87db0df808",
+  "validation": "All four selected arms passed six-update GPU preflight; candidate rule has synthetic tests."
+}

@@ -1,0 +1,10 @@
+{
+  "status": "stopped_at_user_request",
+  "verified_at": "2026-11-13T19:40:19.243049+00:00",
+  "pid": 63071,
+  "active_process_group_members": [],
+  "last_logged_step": 60,
+  "checkpoint_files": [],
+  "next_config_validation_and_checkpoint_interval": 5000,
+  "restart_authorized": false
+}

@@ -1,0 +1,1189 @@
+{
+  "complete": true,
+  "reports": {
+    "baseline": {
+      "checkpoint": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/baseline/checkpoints/final.ckpt",
+      "checkpoint_sha256": "b547b19b8f620df3c3680e074e3047178f0a539d90da02ef4cfb80a607401b9b",
+      "global_step": 3000,
+      "strictly_loaded_state_tensors": 660,
+      "renamed_checkpoint_keys": {},
+      "state_output_scale": 2.0,
+      "comparisons": {
+        "native_repeated_current": {
+          "max_abs": 0.0,
+          "rms": 0.0,
+          "equal": true,
+          "shape": [
+            2,
+            1,
+            256,
+            768
+          ],
+          "strides": [
+            [
+              786432,
+              196608,
+              768,
+              1
+            ],
+            [
+              786432,
+              196608,
+              768,
+              1
+            ]
+          ]
+        },
+        "native_repeated_prediction": {
+          "max_abs": 0.0,
+          "rms": 0.0,
+          "equal": true,
+          "shape": [
+            2,
+            1,
+            256,
+            768
+          ],
+          "strides": [
+            [
+              196608,
+              196608,
+              768,
+              1
+            ],
+            [
+              196608,
+              196608,
+              768,
+              1
+            ]
+          ]
+        },
+        "cached_current_vs_native": {
+          "max_abs": 0.0,
+          "rms": 0.0,
+          "equal": true,
+          "shape": [
+            2,
+            1,
+            256,
+            768
+          ],
+          "strides": [
+            [
+              196608,
+              196608,
+              768,
+              1
+            ],
+            [
+              786432,
+              196608,
+              768,
+              1
+            ]
+          ]
+        },
+        "cached_future_vs_native": {
+          "max_abs": 0.0,
+          "rms": 0.0,
+          "equal": true,
+          "shape": [
+            2,
+            1,
+            256,
+            768
+          ],
+          "strides": [
+            [
+              196608,
+              196608,
+              768,
+              1
+            ],
+            [
+              786432,
+              196608,
+              768,
+              1
+            ]
+          ]
+        },
+        "recomputed_current_vs_native": {
+          "max_abs": 0.0,
+          "rms": 0.0,
+          "equal": true,
+          "shape": [
+            2,
+            1,
+            256,
+            768
+          ],
+          "strides": [
+            [
+              786432,
+              196608,
+              768,
+              1
+            ],
+            [
+              786432,
+              196608,
+              768,
+              1
+            ]
+          ]
+        },
+        "cached_mu_vs_native": {
+          "max_abs": 0.0,
+          "rms": 0.0,
+          "equal": true,
+          "shape": [
+            2,
+            1,
+            32
+          ],
+          "strides": [
+            [
+              32,
+              32,
+              1
+            ],
+            [
+              32,
+              32,
+              1
+            ]
+          ]
+        },
+        "direct_mu_vs_native": {
+          "max_abs": 0.0,
+          "rms": 0.0,
+          "equal": true,
+          "shape": [
+            2,
+            1,
+            32
+          ],
+          "strides": [
+            [
+              32,
+              32,
+              1
+            ],
+            [
+              32,
+              32,
+              1
+            ]
+          ]
+        },
+        "cached_prediction_vs_native": {
+          "max_abs": 3.337860107421875e-06,
+          "rms": 3.1626641888048433e-07,
+          "equal": false,
+          "shape": [
+            2,
+            1,
+            256,
+            768
+          ],
+          "strides": [
+            [
+              196608,
+              196608,
+              768,
+              1
+            ],
+            [
+              196608,
+              196608,
+              768,
+              1
+            ]
+          ]
+        },
+        "direct_prediction_vs_native": {
+          "max_abs": 0.0,
+          "rms": 0.0,
+          "equal": true,
+          "shape": [
+            2,
+            1,
+            256,
+            768
+          ],
+          "strides": [
+            [
+              196608,
+              196608,
+              768,
+              1
+            ],
+            [
+              196608,
+              196608,
+              768,
+              1
+            ]
+          ]
+        },
+        "layout_matched_prediction_vs_native": {
+          "max_abs": 0.0,
+          "rms": 0.0,
+          "equal": true,
+          "shape": [
+            2,
+            1,
+            256,
+            768
+          ],
+          "strides": [
+            [
+              196608,
+              196608,
+              768,
+              1
+            ],
+            [
+              196608,
+              196608,
+              768,
+              1
+            ]
+          ]
+        },
+        "contiguous_native_prediction_vs_native": {
+          "max_abs": 3.337860107421875e-06,
+          "rms": 3.1626641888048433e-07,
+          "equal": false,
+          "shape": [
+            2,
+            1,
+            256,
+            768
+          ],
+          "strides": [
+            [
+              196608,
+              196608,
+              768,
+              1
+            ],
+            [
+              196608,
+              196608,
+              768,
+              1
+            ]
+          ]
+        }
+      },
+      "unchanged": true,
+      "module_hashes_before": {
+        "vision_encoder": {
+          "sha256": "9fd7d85de8123367063fa6e748a19f492745dffcb0ff0d821e281e3afa96093a",
+          "state_tensors": 211
+        },
+        "decoder": {
+          "sha256": "0f2555299aed40a3b2e132a09ef608b147d8378651686f74187d4123ae921059",
+          "state_tensors": 128
+        },
+        "state_decoder": {
+          "sha256": "234dd01eb0edcbeaf865a3f88995236c54a54f8a304e9ac924e754758c1835de",
+          "state_tensors": 10
+        },
+        "encoder": {
+          "sha256": "74f2576ea67ab685fcc70c4ccab16ab31dee0ae7714f5bd8d74e15a312a76f4c",
+          "state_tensors": 305
+        },
+        "vq": {
+          "sha256": "1cd18e7cad08879f98bc19f94db175daa5f8548d2fbb62f158ea713b7175410c",
+          "state_tensors": 6
+        }
+      },
+      "module_hashes_after": {
+        "vision_encoder": {
+          "sha256": "9fd7d85de8123367063fa6e748a19f492745dffcb0ff0d821e281e3afa96093a",
+          "state_tensors": 211
+        },
+        "decoder": {
+          "sha256": "0f2555299aed40a3b2e132a09ef608b147d8378651686f74187d4123ae921059",
+          "state_tensors": 128
+        },
+        "state_decoder": {
+          "sha256": "234dd01eb0edcbeaf865a3f88995236c54a54f8a304e9ac924e754758c1835de",
+          "state_tensors": 10
+        },
+        "encoder": {
+          "sha256": "74f2576ea67ab685fcc70c4ccab16ab31dee0ae7714f5bd8d74e15a312a76f4c",
+          "state_tensors": 305
+        },
+        "vq": {
+          "sha256": "1cd18e7cad08879f98bc19f94db175daa5f8548d2fbb62f158ea713b7175410c",
+          "state_tensors": 6
+        }
+      }
+    },
+    "kl_mse": {
+      "checkpoint": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/kl_mse/checkpoints/final.ckpt",
+      "checkpoint_sha256": "157e4cf9b2906c9260096e19b406b80b1014811a77202b1091442053e431d10e",
+      "global_step": 3000,
+      "strictly_loaded_state_tensors": 660,
+      "renamed_checkpoint_keys": {},
+      "state_output_scale": 2.0,
+      "comparisons": {
+        "native_repeated_current": {
+          "max_abs": 0.0,
+          "rms": 0.0,
+          "equal": true,
+          "shape": [
+            2,
+            1,
+            256,
+            768
+          ],
+          "strides": [
+            [
+              786432,
+              196608,
+              768,
+              1
+            ],
+            [
+              786432,
+              196608,
+              768,
+              1
+            ]
+          ]
+        },
+        "native_repeated_prediction": {
+          "max_abs": 0.0,
+          "rms": 0.0,
+          "equal": true,
+          "shape": [
+            2,
+            1,
+            256,
+            768
+          ],
+          "strides": [
+            [
+              196608,
+              196608,
+              768,
+              1
+            ],
+            [
+              196608,
+              196608,
+              768,
+              1
+            ]
+          ]
+        },
+        "cached_current_vs_native": {
+          "max_abs": 0.0,
+          "rms": 0.0,
+          "equal": true,
+          "shape": [
+            2,
+            1,
+            256,
+            768
+          ],
+          "strides": [
+            [
+              196608,
+              196608,
+              768,
+              1
+            ],
+            [
+              786432,
+              196608,
+              768,
+              1
+            ]
+          ]
+        },
+        "cached_future_vs_native": {
+          "max_abs": 0.0,
+          "rms": 0.0,
+          "equal": true,
+          "shape": [
+            2,
+            1,
+            256,
+            768
+          ],
+          "strides": [
+            [
+              196608,
+              196608,
+              768,
+              1
+            ],
+            [
+              786432,
+              196608,
+              768,
+              1
+            ]
+          ]
+        },
+        "recomputed_current_vs_native": {
+          "max_abs": 0.0,
+          "rms": 0.0,
+          "equal": true,
+          "shape": [
+            2,
+            1,
+            256,
+            768
+          ],
+          "strides": [
+            [
+              786432,
+              196608,
+              768,
+              1
+            ],
+            [
+              786432,
+              196608,
+              768,
+              1
+            ]
+          ]
+        },
+        "cached_mu_vs_native": {
+          "max_abs": 0.0,
+          "rms": 0.0,
+          "equal": true,
+          "shape": [
+            2,
+            1,
+            32
+          ],
+          "strides": [
+            [
+              32,
+              32,
+              1
+            ],
+            [
+              32,
+              32,
+              1
+            ]
+          ]
+        },
+        "direct_mu_vs_native": {
+          "max_abs": 0.0,
+          "rms": 0.0,
+          "equal": true,
+          "shape": [
+            2,
+            1,
+            32
+          ],
+          "strides": [
+            [
+              32,
+              32,
+              1
+            ],
+            [
+              32,
+              32,
+              1
+            ]
+          ]
+        },
+        "cached_prediction_vs_native": {
+          "max_abs": 2.86102294921875e-06,
+          "rms": 2.8394401296341896e-07,
+          "equal": false,
+          "shape": [
+            2,
+            1,
+            256,
+            768
+          ],
+          "strides": [
+            [
+              196608,
+              196608,
+              768,
+              1
+            ],
+            [
+              196608,
+              196608,
+              768,
+              1
+            ]
+          ]
+        },
+        "direct_prediction_vs_native": {
+          "max_abs": 0.0,
+          "rms": 0.0,
+          "equal": true,
+          "shape": [
+            2,
+            1,
+            256,
+            768
+          ],
+          "strides": [
+            [
+              196608,
+              196608,
+              768,
+              1
+            ],
+            [
+              196608,
+              196608,
+              768,
+              1
+            ]
+          ]
+        },
+        "layout_matched_prediction_vs_native": {
+          "max_abs": 0.0,
+          "rms": 0.0,
+          "equal": true,
+          "shape": [
+            2,
+            1,
+            256,
+            768
+          ],
+          "strides": [
+            [
+              196608,
+              196608,
+              768,
+              1
+            ],
+            [
+              196608,
+              196608,
+              768,
+              1
+            ]
+          ]
+        },
+        "contiguous_native_prediction_vs_native": {
+          "max_abs": 2.86102294921875e-06,
+          "rms": 2.8394401296341896e-07,
+          "equal": false,
+          "shape": [
+            2,
+            1,
+            256,
+            768
+          ],
+          "strides": [
+            [
+              196608,
+              196608,
+              768,
+              1
+            ],
+            [
+              196608,
+              196608,
+              768,
+              1
+            ]
+          ]
+        }
+      },
+      "unchanged": true,
+      "module_hashes_before": {
+        "vision_encoder": {
+          "sha256": "9fd7d85de8123367063fa6e748a19f492745dffcb0ff0d821e281e3afa96093a",
+          "state_tensors": 211
+        },
+        "decoder": {
+          "sha256": "86a5029d5aab1c234eb470052033c00d8493a2be15681ac1bcce87ab952929f7",
+          "state_tensors": 128
+        },
+        "state_decoder": {
+          "sha256": "05bf2ee75db4fcde619275dfda1a79e92e98f9c789b04a7011ee30e5f7872f26",
+          "state_tensors": 10
+        },
+        "encoder": {
+          "sha256": "510b950bfff361c0c90808d15671584e03f32c268f83dfe88838d2260e7df6e7",
+          "state_tensors": 305
+        },
+        "vq": {
+          "sha256": "c3a5ae0d13192aa0707fa92014fd0d030b3828001068893753e274bb8820657a",
+          "state_tensors": 6
+        }
+      },
+      "module_hashes_after": {
+        "vision_encoder": {
+          "sha256": "9fd7d85de8123367063fa6e748a19f492745dffcb0ff0d821e281e3afa96093a",
+          "state_tensors": 211
+        },
+        "decoder": {
+          "sha256": "86a5029d5aab1c234eb470052033c00d8493a2be15681ac1bcce87ab952929f7",
+          "state_tensors": 128
+        },
+        "state_decoder": {
+          "sha256": "05bf2ee75db4fcde619275dfda1a79e92e98f9c789b04a7011ee30e5f7872f26",
+          "state_tensors": 10
+        },
+        "encoder": {
+          "sha256": "510b950bfff361c0c90808d15671584e03f32c268f83dfe88838d2260e7df6e7",
+          "state_tensors": 305
+        },
+        "vq": {
+          "sha256": "c3a5ae0d13192aa0707fa92014fd0d030b3828001068893753e274bb8820657a",
+          "state_tensors": 6
+        }
+      }
+    },
+    "official": {
+      "checkpoint": "/media/sadasue/SSD1/foveated-world-models/models/lawam-lam-bd993da/checkpoints/pytorch_model.pt",
+      "checkpoint_sha256": "57c31dcba13c2998c4e866cdcfc427f14ae3c1b762a586778276e2100b48af88",
+      "global_step": null,
+      "strictly_loaded_state_tensors": 660,
+      "renamed_checkpoint_keys": {
+        "lam.vision_encoder.model.layer.0.norm1.weight": "lam.vision_encoder.model.model.layer.0.norm1.weight",
+        "lam.vision_encoder.model.layer.0.norm1.bias": "lam.vision_encoder.model.model.layer.0.norm1.bias",
+        "lam.vision_encoder.model.layer.0.attention.k_proj.weight": "lam.vision_encoder.model.model.layer.0.attention.k_proj.weight",
+        "lam.vision_encoder.model.layer.0.attention.v_proj.weight": "lam.vision_encoder.model.model.layer.0.attention.v_proj.weight",
+        "lam.vision_encoder.model.layer.0.attention.v_proj.bias": "lam.vision_encoder.model.model.layer.0.attention.v_proj.bias",
+        "lam.vision_encoder.model.layer.0.attention.q_proj.weight": "lam.vision_encoder.model.model.layer.0.attention.q_proj.weight",
+        "lam.vision_encoder.model.layer.0.attention.q_proj.bias": "lam.vision_encoder.model.model.layer.0.attention.q_proj.bias",
+        "lam.vision_encoder.model.layer.0.attention.o_proj.weight": "lam.vision_encoder.model.model.layer.0.attention.o_proj.weight",
+        "lam.vision_encoder.model.layer.0.attention.o_proj.bias": "lam.vision_encoder.model.model.layer.0.attention.o_proj.bias",
+        "lam.vision_encoder.model.layer.0.layer_scale1.lambda1": "lam.vision_encoder.model.model.layer.0.layer_scale1.lambda1",
+        "lam.vision_encoder.model.layer.0.norm2.weight": "lam.vision_encoder.model.model.layer.0.norm2.weight",
+        "lam.vision_encoder.model.layer.0.norm2.bias": "lam.vision_encoder.model.model.layer.0.norm2.bias",
+        "lam.vision_encoder.model.layer.0.mlp.up_proj.weight": "lam.vision_encoder.model.model.layer.0.mlp.up_proj.weight",
+        "lam.vision_encoder.model.layer.0.mlp.up_proj.bias": "lam.vision_encoder.model.model.layer.0.mlp.up_proj.bias",
+        "lam.vision_encoder.model.layer.0.mlp.down_proj.weight": "lam.vision_encoder.model.model.layer.0.mlp.down_proj.weight",
+        "lam.vision_encoder.model.layer.0.mlp.down_proj.bias": "lam.vision_encoder.model.model.layer.0.mlp.down_proj.bias",
+        "lam.vision_encoder.model.layer.0.layer_scale2.lambda1": "lam.vision_encoder.model.model.layer.0.layer_scale2.lambda1",
+        "lam.vision_encoder.model.layer.1.norm1.weight": "lam.vision_encoder.model.model.layer.1.norm1.weight",
+        "lam.vision_encoder.model.layer.1.norm1.bias": "lam.vision_encoder.model.model.layer.1.norm1.bias",
+        "lam.vision_encoder.model.layer.1.attention.k_proj.weight": "lam.vision_encoder.model.model.layer.1.attention.k_proj.weight",
+        "lam.vision_encoder.model.layer.1.attention.v_proj.weight": "lam.vision_encoder.model.model.layer.1.attention.v_proj.weight",
+        "lam.vision_encoder.model.layer.1.attention.v_proj.bias": "lam.vision_encoder.model.model.layer.1.attention.v_proj.bias",
+        "lam.vision_encoder.model.layer.1.attention.q_proj.weight": "lam.vision_encoder.model.model.layer.1.attention.q_proj.weight",
+        "lam.vision_encoder.model.layer.1.attention.q_proj.bias": "lam.vision_encoder.model.model.layer.1.attention.q_proj.bias",
+        "lam.vision_encoder.model.layer.1.attention.o_proj.weight": "lam.vision_encoder.model.model.layer.1.attention.o_proj.weight",
+        "lam.vision_encoder.model.layer.1.attention.o_proj.bias": "lam.vision_encoder.model.model.layer.1.attention.o_proj.bias",
+        "lam.vision_encoder.model.layer.1.layer_scale1.lambda1": "lam.vision_encoder.model.model.layer.1.layer_scale1.lambda1",
+        "lam.vision_encoder.model.layer.1.norm2.weight": "lam.vision_encoder.model.model.layer.1.norm2.weight",
+        "lam.vision_encoder.model.layer.1.norm2.bias": "lam.vision_encoder.model.model.layer.1.norm2.bias",
+        "lam.vision_encoder.model.layer.1.mlp.up_proj.weight": "lam.vision_encoder.model.model.layer.1.mlp.up_proj.weight",
+        "lam.vision_encoder.model.layer.1.mlp.up_proj.bias": "lam.vision_encoder.model.model.layer.1.mlp.up_proj.bias",
+        "lam.vision_encoder.model.layer.1.mlp.down_proj.weight": "lam.vision_encoder.model.model.layer.1.mlp.down_proj.weight",
+        "lam.vision_encoder.model.layer.1.mlp.down_proj.bias": "lam.vision_encoder.model.model.layer.1.mlp.down_proj.bias",
+        "lam.vision_encoder.model.layer.1.layer_scale2.lambda1": "lam.vision_encoder.model.model.layer.1.layer_scale2.lambda1",
+        "lam.vision_encoder.model.layer.2.norm1.weight": "lam.vision_encoder.model.model.layer.2.norm1.weight",
+        "lam.vision_encoder.model.layer.2.norm1.bias": "lam.vision_encoder.model.model.layer.2.norm1.bias",
+        "lam.vision_encoder.model.layer.2.attention.k_proj.weight": "lam.vision_encoder.model.model.layer.2.attention.k_proj.weight",
+        "lam.vision_encoder.model.layer.2.attention.v_proj.weight": "lam.vision_encoder.model.model.layer.2.attention.v_proj.weight",
+        "lam.vision_encoder.model.layer.2.attention.v_proj.bias": "lam.vision_encoder.model.model.layer.2.attention.v_proj.bias",
+        "lam.vision_encoder.model.layer.2.attention.q_proj.weight": "lam.vision_encoder.model.model.layer.2.attention.q_proj.weight",
+        "lam.vision_encoder.model.layer.2.attention.q_proj.bias": "lam.vision_encoder.model.model.layer.2.attention.q_proj.bias",
+        "lam.vision_encoder.model.layer.2.attention.o_proj.weight": "lam.vision_encoder.model.model.layer.2.attention.o_proj.weight",
+        "lam.vision_encoder.model.layer.2.attention.o_proj.bias": "lam.vision_encoder.model.model.layer.2.attention.o_proj.bias",
+        "lam.vision_encoder.model.layer.2.layer_scale1.lambda1": "lam.vision_encoder.model.model.layer.2.layer_scale1.lambda1",
+        "lam.vision_encoder.model.layer.2.norm2.weight": "lam.vision_encoder.model.model.layer.2.norm2.weight",
+        "lam.vision_encoder.model.layer.2.norm2.bias": "lam.vision_encoder.model.model.layer.2.norm2.bias",
+        "lam.vision_encoder.model.layer.2.mlp.up_proj.weight": "lam.vision_encoder.model.model.layer.2.mlp.up_proj.weight",
+        "lam.vision_encoder.model.layer.2.mlp.up_proj.bias": "lam.vision_encoder.model.model.layer.2.mlp.up_proj.bias",
+        "lam.vision_encoder.model.layer.2.mlp.down_proj.weight": "lam.vision_encoder.model.model.layer.2.mlp.down_proj.weight",
+        "lam.vision_encoder.model.layer.2.mlp.down_proj.bias": "lam.vision_encoder.model.model.layer.2.mlp.down_proj.bias",
+        "lam.vision_encoder.model.layer.2.layer_scale2.lambda1": "lam.vision_encoder.model.model.layer.2.layer_scale2.lambda1",
+        "lam.vision_encoder.model.layer.3.norm1.weight": "lam.vision_encoder.model.model.layer.3.norm1.weight",
+        "lam.vision_encoder.model.layer.3.norm1.bias": "lam.vision_encoder.model.model.layer.3.norm1.bias",
+        "lam.vision_encoder.model.layer.3.attention.k_proj.weight": "lam.vision_encoder.model.model.layer.3.attention.k_proj.weight",
+        "lam.vision_encoder.model.layer.3.attention.v_proj.weight": "lam.vision_encoder.model.model.layer.3.attention.v_proj.weight",
+        "lam.vision_encoder.model.layer.3.attention.v_proj.bias": "lam.vision_encoder.model.model.layer.3.attention.v_proj.bias",
+        "lam.vision_encoder.model.layer.3.attention.q_proj.weight": "lam.vision_encoder.model.model.layer.3.attention.q_proj.weight",
+        "lam.vision_encoder.model.layer.3.attention.q_proj.bias": "lam.vision_encoder.model.model.layer.3.attention.q_proj.bias",
+        "lam.vision_encoder.model.layer.3.attention.o_proj.weight": "lam.vision_encoder.model.model.layer.3.attention.o_proj.weight",
+        "lam.vision_encoder.model.layer.3.attention.o_proj.bias": "lam.vision_encoder.model.model.layer.3.attention.o_proj.bias",
+        "lam.vision_encoder.model.layer.3.layer_scale1.lambda1": "lam.vision_encoder.model.model.layer.3.layer_scale1.lambda1",
+        "lam.vision_encoder.model.layer.3.norm2.weight": "lam.vision_encoder.model.model.layer.3.norm2.weight",
+        "lam.vision_encoder.model.layer.3.norm2.bias": "lam.vision_encoder.model.model.layer.3.norm2.bias",
+        "lam.vision_encoder.model.layer.3.mlp.up_proj.weight": "lam.vision_encoder.model.model.layer.3.mlp.up_proj.weight",
+        "lam.vision_encoder.model.layer.3.mlp.up_proj.bias": "lam.vision_encoder.model.model.layer.3.mlp.up_proj.bias",
+        "lam.vision_encoder.model.layer.3.mlp.down_proj.weight": "lam.vision_encoder.model.model.layer.3.mlp.down_proj.weight",
+        "lam.vision_encoder.model.layer.3.mlp.down_proj.bias": "lam.vision_encoder.model.model.layer.3.mlp.down_proj.bias",
+        "lam.vision_encoder.model.layer.3.layer_scale2.lambda1": "lam.vision_encoder.model.model.layer.3.layer_scale2.lambda1",
+        "lam.vision_encoder.model.layer.4.norm1.weight": "lam.vision_encoder.model.model.layer.4.norm1.weight",
+        "lam.vision_encoder.model.layer.4.norm1.bias": "lam.vision_encoder.model.model.layer.4.norm1.bias",
+        "lam.vision_encoder.model.layer.4.attention.k_proj.weight": "lam.vision_encoder.model.model.layer.4.attention.k_proj.weight",
+        "lam.vision_encoder.model.layer.4.attention.v_proj.weight": "lam.vision_encoder.model.model.layer.4.attention.v_proj.weight",
+        "lam.vision_encoder.model.layer.4.attention.v_proj.bias": "lam.vision_encoder.model.model.layer.4.attention.v_proj.bias",
+        "lam.vision_encoder.model.layer.4.attention.q_proj.weight": "lam.vision_encoder.model.model.layer.4.attention.q_proj.weight",
+        "lam.vision_encoder.model.layer.4.attention.q_proj.bias": "lam.vision_encoder.model.model.layer.4.attention.q_proj.bias",
+        "lam.vision_encoder.model.layer.4.attention.o_proj.weight": "lam.vision_encoder.model.model.layer.4.attention.o_proj.weight",
+        "lam.vision_encoder.model.layer.4.attention.o_proj.bias": "lam.vision_encoder.model.model.layer.4.attention.o_proj.bias",
+        "lam.vision_encoder.model.layer.4.layer_scale1.lambda1": "lam.vision_encoder.model.model.layer.4.layer_scale1.lambda1",
+        "lam.vision_encoder.model.layer.4.norm2.weight": "lam.vision_encoder.model.model.layer.4.norm2.weight",
+        "lam.vision_encoder.model.layer.4.norm2.bias": "lam.vision_encoder.model.model.layer.4.norm2.bias",
+        "lam.vision_encoder.model.layer.4.mlp.up_proj.weight": "lam.vision_encoder.model.model.layer.4.mlp.up_proj.weight",
+        "lam.vision_encoder.model.layer.4.mlp.up_proj.bias": "lam.vision_encoder.model.model.layer.4.mlp.up_proj.bias",
+        "lam.vision_encoder.model.layer.4.mlp.down_proj.weight": "lam.vision_encoder.model.model.layer.4.mlp.down_proj.weight",
+        "lam.vision_encoder.model.layer.4.mlp.down_proj.bias": "lam.vision_encoder.model.model.layer.4.mlp.down_proj.bias",
+        "lam.vision_encoder.model.layer.4.layer_scale2.lambda1": "lam.vision_encoder.model.model.layer.4.layer_scale2.lambda1",
+        "lam.vision_encoder.model.layer.5.norm1.weight": "lam.vision_encoder.model.model.layer.5.norm1.weight",
+        "lam.vision_encoder.model.layer.5.norm1.bias": "lam.vision_encoder.model.model.layer.5.norm1.bias",
+        "lam.vision_encoder.model.layer.5.attention.k_proj.weight": "lam.vision_encoder.model.model.layer.5.attention.k_proj.weight",
+        "lam.vision_encoder.model.layer.5.attention.v_proj.weight": "lam.vision_encoder.model.model.layer.5.attention.v_proj.weight",
+        "lam.vision_encoder.model.layer.5.attention.v_proj.bias": "lam.vision_encoder.model.model.layer.5.attention.v_proj.bias",
+        "lam.vision_encoder.model.layer.5.attention.q_proj.weight": "lam.vision_encoder.model.model.layer.5.attention.q_proj.weight",
+        "lam.vision_encoder.model.layer.5.attention.q_proj.bias": "lam.vision_encoder.model.model.layer.5.attention.q_proj.bias",
+        "lam.vision_encoder.model.layer.5.attention.o_proj.weight": "lam.vision_encoder.model.model.layer.5.attention.o_proj.weight",
+        "lam.vision_encoder.model.layer.5.attention.o_proj.bias": "lam.vision_encoder.model.model.layer.5.attention.o_proj.bias",
+        "lam.vision_encoder.model.layer.5.layer_scale1.lambda1": "lam.vision_encoder.model.model.layer.5.layer_scale1.lambda1",
+        "lam.vision_encoder.model.layer.5.norm2.weight": "lam.vision_encoder.model.model.layer.5.norm2.weight",
+        "lam.vision_encoder.model.layer.5.norm2.bias": "lam.vision_encoder.model.model.layer.5.norm2.bias",
+        "lam.vision_encoder.model.layer.5.mlp.up_proj.weight": "lam.vision_encoder.model.model.layer.5.mlp.up_proj.weight",
+        "lam.vision_encoder.model.layer.5.mlp.up_proj.bias": "lam.vision_encoder.model.model.layer.5.mlp.up_proj.bias",
+        "lam.vision_encoder.model.layer.5.mlp.down_proj.weight": "lam.vision_encoder.model.model.layer.5.mlp.down_proj.weight",
+        "lam.vision_encoder.model.layer.5.mlp.down_proj.bias": "lam.vision_encoder.model.model.layer.5.mlp.down_proj.bias",
+        "lam.vision_encoder.model.layer.5.layer_scale2.lambda1": "lam.vision_encoder.model.model.layer.5.layer_scale2.lambda1",
+        "lam.vision_encoder.model.layer.6.norm1.weight": "lam.vision_encoder.model.model.layer.6.norm1.weight",
+        "lam.vision_encoder.model.layer.6.norm1.bias": "lam.vision_encoder.model.model.layer.6.norm1.bias",
+        "lam.vision_encoder.model.layer.6.attention.k_proj.weight": "lam.vision_encoder.model.model.layer.6.attention.k_proj.weight",
+        "lam.vision_encoder.model.layer.6.attention.v_proj.weight": "lam.vision_encoder.model.model.layer.6.attention.v_proj.weight",
+        "lam.vision_encoder.model.layer.6.attention.v_proj.bias": "lam.vision_encoder.model.model.layer.6.attention.v_proj.bias",
+        "lam.vision_encoder.model.layer.6.attention.q_proj.weight": "lam.vision_encoder.model.model.layer.6.attention.q_proj.weight",
+        "lam.vision_encoder.model.layer.6.attention.q_proj.bias": "lam.vision_encoder.model.model.layer.6.attention.q_proj.bias",
+        "lam.vision_encoder.model.layer.6.attention.o_proj.weight": "lam.vision_encoder.model.model.layer.6.attention.o_proj.weight",
+        "lam.vision_encoder.model.layer.6.attention.o_proj.bias": "lam.vision_encoder.model.model.layer.6.attention.o_proj.bias",
+        "lam.vision_encoder.model.layer.6.layer_scale1.lambda1": "lam.vision_encoder.model.model.layer.6.layer_scale1.lambda1",
+        "lam.vision_encoder.model.layer.6.norm2.weight": "lam.vision_encoder.model.model.layer.6.norm2.weight",
+        "lam.vision_encoder.model.layer.6.norm2.bias": "lam.vision_encoder.model.model.layer.6.norm2.bias",
+        "lam.vision_encoder.model.layer.6.mlp.up_proj.weight": "lam.vision_encoder.model.model.layer.6.mlp.up_proj.weight",
+        "lam.vision_encoder.model.layer.6.mlp.up_proj.bias": "lam.vision_encoder.model.model.layer.6.mlp.up_proj.bias",
+        "lam.vision_encoder.model.layer.6.mlp.down_proj.weight": "lam.vision_encoder.model.model.layer.6.mlp.down_proj.weight",
+        "lam.vision_encoder.model.layer.6.mlp.down_proj.bias": "lam.vision_encoder.model.model.layer.6.mlp.down_proj.bias",
+        "lam.vision_encoder.model.layer.6.layer_scale2.lambda1": "lam.vision_encoder.model.model.layer.6.layer_scale2.lambda1",
+        "lam.vision_encoder.model.layer.7.norm1.weight": "lam.vision_encoder.model.model.layer.7.norm1.weight",
+        "lam.vision_encoder.model.layer.7.norm1.bias": "lam.vision_encoder.model.model.layer.7.norm1.bias",
+        "lam.vision_encoder.model.layer.7.attention.k_proj.weight": "lam.vision_encoder.model.model.layer.7.attention.k_proj.weight",
+        "lam.vision_encoder.model.layer.7.attention.v_proj.weight": "lam.vision_encoder.model.model.layer.7.attention.v_proj.weight",
+        "lam.vision_encoder.model.layer.7.attention.v_proj.bias": "lam.vision_encoder.model.model.layer.7.attention.v_proj.bias",
+        "lam.vision_encoder.model.layer.7.attention.q_proj.weight": "lam.vision_encoder.model.model.layer.7.attention.q_proj.weight",
+        "lam.vision_encoder.model.layer.7.attention.q_proj.bias": "lam.vision_encoder.model.model.layer.7.attention.q_proj.bias",
+        "lam.vision_encoder.model.layer.7.attention.o_proj.weight": "lam.vision_encoder.model.model.layer.7.attention.o_proj.weight",
+        "lam.vision_encoder.model.layer.7.attention.o_proj.bias": "lam.vision_encoder.model.model.layer.7.attention.o_proj.bias",
+        "lam.vision_encoder.model.layer.7.layer_scale1.lambda1": "lam.vision_encoder.model.model.layer.7.layer_scale1.lambda1",
+        "lam.vision_encoder.model.layer.7.norm2.weight": "lam.vision_encoder.model.model.layer.7.norm2.weight",
+        "lam.vision_encoder.model.layer.7.norm2.bias": "lam.vision_encoder.model.model.layer.7.norm2.bias",
+        "lam.vision_encoder.model.layer.7.mlp.up_proj.weight": "lam.vision_encoder.model.model.layer.7.mlp.up_proj.weight",
+        "lam.vision_encoder.model.layer.7.mlp.up_proj.bias": "lam.vision_encoder.model.model.layer.7.mlp.up_proj.bias",
+        "lam.vision_encoder.model.layer.7.mlp.down_proj.weight": "lam.vision_encoder.model.model.layer.7.mlp.down_proj.weight",
+        "lam.vision_encoder.model.layer.7.mlp.down_proj.bias": "lam.vision_encoder.model.model.layer.7.mlp.down_proj.bias",
+        "lam.vision_encoder.model.layer.7.layer_scale2.lambda1": "lam.vision_encoder.model.model.layer.7.layer_scale2.lambda1",
+        "lam.vision_encoder.model.layer.8.norm1.weight": "lam.vision_encoder.model.model.layer.8.norm1.weight",
+        "lam.vision_encoder.model.layer.8.norm1.bias": "lam.vision_encoder.model.model.layer.8.norm1.bias",
+        "lam.vision_encoder.model.layer.8.attention.k_proj.weight": "lam.vision_encoder.model.model.layer.8.attention.k_proj.weight",
+        "lam.vision_encoder.model.layer.8.attention.v_proj.weight": "lam.vision_encoder.model.model.layer.8.attention.v_proj.weight",
+        "lam.vision_encoder.model.layer.8.attention.v_proj.bias": "lam.vision_encoder.model.model.layer.8.attention.v_proj.bias",
+        "lam.vision_encoder.model.layer.8.attention.q_proj.weight": "lam.vision_encoder.model.model.layer.8.attention.q_proj.weight",
+        "lam.vision_encoder.model.layer.8.attention.q_proj.bias": "lam.vision_encoder.model.model.layer.8.attention.q_proj.bias",
+        "lam.vision_encoder.model.layer.8.attention.o_proj.weight": "lam.vision_encoder.model.model.layer.8.attention.o_proj.weight",
+        "lam.vision_encoder.model.layer.8.attention.o_proj.bias": "lam.vision_encoder.model.model.layer.8.attention.o_proj.bias",
+        "lam.vision_encoder.model.layer.8.layer_scale1.lambda1": "lam.vision_encoder.model.model.layer.8.layer_scale1.lambda1",
+        "lam.vision_encoder.model.layer.8.norm2.weight": "lam.vision_encoder.model.model.layer.8.norm2.weight",
+        "lam.vision_encoder.model.layer.8.norm2.bias": "lam.vision_encoder.model.model.layer.8.norm2.bias",
+        "lam.vision_encoder.model.layer.8.mlp.up_proj.weight": "lam.vision_encoder.model.model.layer.8.mlp.up_proj.weight",
+        "lam.vision_encoder.model.layer.8.mlp.up_proj.bias": "lam.vision_encoder.model.model.layer.8.mlp.up_proj.bias",
+        "lam.vision_encoder.model.layer.8.mlp.down_proj.weight": "lam.vision_encoder.model.model.layer.8.mlp.down_proj.weight",
+        "lam.vision_encoder.model.layer.8.mlp.down_proj.bias": "lam.vision_encoder.model.model.layer.8.mlp.down_proj.bias",
+        "lam.vision_encoder.model.layer.8.layer_scale2.lambda1": "lam.vision_encoder.model.model.layer.8.layer_scale2.lambda1",
+        "lam.vision_encoder.model.layer.9.norm1.weight": "lam.vision_encoder.model.model.layer.9.norm1.weight",
+        "lam.vision_encoder.model.layer.9.norm1.bias": "lam.vision_encoder.model.model.layer.9.norm1.bias",
+        "lam.vision_encoder.model.layer.9.attention.k_proj.weight": "lam.vision_encoder.model.model.layer.9.attention.k_proj.weight",
+        "lam.vision_encoder.model.layer.9.attention.v_proj.weight": "lam.vision_encoder.model.model.layer.9.attention.v_proj.weight",
+        "lam.vision_encoder.model.layer.9.attention.v_proj.bias": "lam.vision_encoder.model.model.layer.9.attention.v_proj.bias",
+        "lam.vision_encoder.model.layer.9.attention.q_proj.weight": "lam.vision_encoder.model.model.layer.9.attention.q_proj.weight",
+        "lam.vision_encoder.model.layer.9.attention.q_proj.bias": "lam.vision_encoder.model.model.layer.9.attention.q_proj.bias",
+        "lam.vision_encoder.model.layer.9.attention.o_proj.weight": "lam.vision_encoder.model.model.layer.9.attention.o_proj.weight",
+        "lam.vision_encoder.model.layer.9.attention.o_proj.bias": "lam.vision_encoder.model.model.layer.9.attention.o_proj.bias",
+        "lam.vision_encoder.model.layer.9.layer_scale1.lambda1": "lam.vision_encoder.model.model.layer.9.layer_scale1.lambda1",
+        "lam.vision_encoder.model.layer.9.norm2.weight": "lam.vision_encoder.model.model.layer.9.norm2.weight",
+        "lam.vision_encoder.model.layer.9.norm2.bias": "lam.vision_encoder.model.model.layer.9.norm2.bias",
+        "lam.vision_encoder.model.layer.9.mlp.up_proj.weight": "lam.vision_encoder.model.model.layer.9.mlp.up_proj.weight",
+        "lam.vision_encoder.model.layer.9.mlp.up_proj.bias": "lam.vision_encoder.model.model.layer.9.mlp.up_proj.bias",
+        "lam.vision_encoder.model.layer.9.mlp.down_proj.weight": "lam.vision_encoder.model.model.layer.9.mlp.down_proj.weight",
+        "lam.vision_encoder.model.layer.9.mlp.down_proj.bias": "lam.vision_encoder.model.model.layer.9.mlp.down_proj.bias",
+        "lam.vision_encoder.model.layer.9.layer_scale2.lambda1": "lam.vision_encoder.model.model.layer.9.layer_scale2.lambda1",
+        "lam.vision_encoder.model.layer.10.norm1.weight": "lam.vision_encoder.model.model.layer.10.norm1.weight",
+        "lam.vision_encoder.model.layer.10.norm1.bias": "lam.vision_encoder.model.model.layer.10.norm1.bias",
+        "lam.vision_encoder.model.layer.10.attention.k_proj.weight": "lam.vision_encoder.model.model.layer.10.attention.k_proj.weight",
+        "lam.vision_encoder.model.layer.10.attention.v_proj.weight": "lam.vision_encoder.model.model.layer.10.attention.v_proj.weight",
+        "lam.vision_encoder.model.layer.10.attention.v_proj.bias": "lam.vision_encoder.model.model.layer.10.attention.v_proj.bias",
+        "lam.vision_encoder.model.layer.10.attention.q_proj.weight": "lam.vision_encoder.model.model.layer.10.attention.q_proj.weight",
+        "lam.vision_encoder.model.layer.10.attention.q_proj.bias": "lam.vision_encoder.model.model.layer.10.attention.q_proj.bias",
+        "lam.vision_encoder.model.layer.10.attention.o_proj.weight": "lam.vision_encoder.model.model.layer.10.attention.o_proj.weight",
+        "lam.vision_encoder.model.layer.10.attention.o_proj.bias": "lam.vision_encoder.model.model.layer.10.attention.o_proj.bias",
+        "lam.vision_encoder.model.layer.10.layer_scale1.lambda1": "lam.vision_encoder.model.model.layer.10.layer_scale1.lambda1",
+        "lam.vision_encoder.model.layer.10.norm2.weight": "lam.vision_encoder.model.model.layer.10.norm2.weight",
+        "lam.vision_encoder.model.layer.10.norm2.bias": "lam.vision_encoder.model.model.layer.10.norm2.bias",
+        "lam.vision_encoder.model.layer.10.mlp.up_proj.weight": "lam.vision_encoder.model.model.layer.10.mlp.up_proj.weight",
+        "lam.vision_encoder.model.layer.10.mlp.up_proj.bias": "lam.vision_encoder.model.model.layer.10.mlp.up_proj.bias",
+        "lam.vision_encoder.model.layer.10.mlp.down_proj.weight": "lam.vision_encoder.model.model.layer.10.mlp.down_proj.weight",
+        "lam.vision_encoder.model.layer.10.mlp.down_proj.bias": "lam.vision_encoder.model.model.layer.10.mlp.down_proj.bias",
+        "lam.vision_encoder.model.layer.10.layer_scale2.lambda1": "lam.vision_encoder.model.model.layer.10.layer_scale2.lambda1",
+        "lam.vision_encoder.model.layer.11.norm1.weight": "lam.vision_encoder.model.model.layer.11.norm1.weight",
+        "lam.vision_encoder.model.layer.11.norm1.bias": "lam.vision_encoder.model.model.layer.11.norm1.bias",
+        "lam.vision_encoder.model.layer.11.attention.k_proj.weight": "lam.vision_encoder.model.model.layer.11.attention.k_proj.weight",
+        "lam.vision_encoder.model.layer.11.attention.v_proj.weight": "lam.vision_encoder.model.model.layer.11.attention.v_proj.weight",
+        "lam.vision_encoder.model.layer.11.attention.v_proj.bias": "lam.vision_encoder.model.model.layer.11.attention.v_proj.bias",
+        "lam.vision_encoder.model.layer.11.attention.q_proj.weight": "lam.vision_encoder.model.model.layer.11.attention.q_proj.weight",
+        "lam.vision_encoder.model.layer.11.attention.q_proj.bias": "lam.vision_encoder.model.model.layer.11.attention.q_proj.bias",
+        "lam.vision_encoder.model.layer.11.attention.o_proj.weight": "lam.vision_encoder.model.model.layer.11.attention.o_proj.weight",
+        "lam.vision_encoder.model.layer.11.attention.o_proj.bias": "lam.vision_encoder.model.model.layer.11.attention.o_proj.bias",
+        "lam.vision_encoder.model.layer.11.layer_scale1.lambda1": "lam.vision_encoder.model.model.layer.11.layer_scale1.lambda1",
+        "lam.vision_encoder.model.layer.11.norm2.weight": "lam.vision_encoder.model.model.layer.11.norm2.weight",
+        "lam.vision_encoder.model.layer.11.norm2.bias": "lam.vision_encoder.model.model.layer.11.norm2.bias",
+        "lam.vision_encoder.model.layer.11.mlp.up_proj.weight": "lam.vision_encoder.model.model.layer.11.mlp.up_proj.weight",
+        "lam.vision_encoder.model.layer.11.mlp.up_proj.bias": "lam.vision_encoder.model.model.layer.11.mlp.up_proj.bias",
+        "lam.vision_encoder.model.layer.11.mlp.down_proj.weight": "lam.vision_encoder.model.model.layer.11.mlp.down_proj.weight",
+        "lam.vision_encoder.model.layer.11.mlp.down_proj.bias": "lam.vision_encoder.model.model.layer.11.mlp.down_proj.bias",
+        "lam.vision_encoder.model.layer.11.layer_scale2.lambda1": "lam.vision_encoder.model.model.layer.11.layer_scale2.lambda1"
+      },
+      "state_output_scale": 1.0,
+      "comparisons": {
+        "native_repeated_current": {
+          "max_abs": 0.0,
+          "rms": 0.0,
+          "equal": true,
+          "shape": [
+            2,
+            1,
+            256,
+            768
+          ],
+          "strides": [
+            [
+              786432,
+              196608,
+              768,
+              1
+            ],
+            [
+              786432,
+              196608,
+              768,
+              1
+            ]
+          ]
+        },
+        "native_repeated_prediction": {
+          "max_abs": 0.0,
+          "rms": 0.0,
+          "equal": true,
+          "shape": [
+            2,
+            1,
+            256,
+            768
+          ],
+          "strides": [
+            [
+              196608,
+              196608,
+              768,
+              1
+            ],
+            [
+              196608,
+              196608,
+              768,
+              1
+            ]
+          ]
+        },
+        "cached_current_vs_native": {
+          "max_abs": 0.0,
+          "rms": 0.0,
+          "equal": true,
+          "shape": [
+            2,
+            1,
+            256,
+            768
+          ],
+          "strides": [
+            [
+              196608,
+              196608,
+              768,
+              1
+            ],
+            [
+              786432,
+              196608,
+              768,
+              1
+            ]
+          ]
+        },
+        "cached_future_vs_native": {
+          "max_abs": 0.0,
+          "rms": 0.0,
+          "equal": true,
+          "shape": [
+            2,
+            1,
+            256,
+            768
+          ],
+          "strides": [
+            [
+              196608,
+              196608,
+              768,
+              1
+            ],
+            [
+              786432,
+              196608,
+              768,
+              1
+            ]
+          ]
+        },
+        "recomputed_current_vs_native": {
+          "max_abs": 0.0,
+          "rms": 0.0,
+          "equal": true,
+          "shape": [
+            2,
+            1,
+            256,
+            768
+          ],
+          "strides": [
+            [
+              786432,
+              196608,
+              768,
+              1
+            ],
+            [
+              786432,
+              196608,
+              768,
+              1
+            ]
+          ]
+        },
+        "cached_mu_vs_native": {
+          "max_abs": 0.0,
+          "rms": 0.0,
+          "equal": true,
+          "shape": [
+            2,
+            1,
+            32
+          ],
+          "strides": [
+            [
+              32,
+              32,
+              1
+            ],
+            [
+              32,
+              32,
+              1
+            ]
+          ]
+        },
+        "direct_mu_vs_native": {
+          "max_abs": 0.0,
+          "rms": 0.0,
+          "equal": true,
+          "shape": [
+            2,
+            1,
+            32
+          ],
+          "strides": [
+            [
+              32,
+              32,
+              1
+            ],
+            [
+              32,
+              32,
+              1
+            ]
+          ]
+        },
+        "cached_prediction_vs_native": {
+          "max_abs": 9.5367431640625e-06,
+          "rms": 3.904741317939366e-07,
+          "equal": false,
+          "shape": [
+            2,
+            1,
+            256,
+            768
+          ],
+          "strides": [
+            [
+              196608,
+              196608,
+              768,
+              1
+            ],
+            [
+              196608,
+              196608,
+              768,
+              1
+            ]
+          ]
+        },
+        "direct_prediction_vs_native": {
+          "max_abs": 0.0,
+          "rms": 0.0,
+          "equal": true,
+          "shape": [
+            2,
+            1,
+            256,
+            768
+          ],
+          "strides": [
+            [
+              196608,
+              196608,
+              768,
+              1
+            ],
+            [
+              196608,
+              196608,
+              768,
+              1
+            ]
+          ]
+        },
+        "layout_matched_prediction_vs_native": {
+          "max_abs": 0.0,
+          "rms": 0.0,
+          "equal": true,
+          "shape": [
+            2,
+            1,
+            256,
+            768
+          ],
+          "strides": [
+            [
+              196608,
+              196608,
+              768,
+              1
+            ],
+            [
+              196608,
+              196608,
+              768,
+              1
+            ]
+          ]
+        },
+        "contiguous_native_prediction_vs_native": {
+          "max_abs": 9.5367431640625e-06,
+          "rms": 3.904741317939366e-07,
+          "equal": false,
+          "shape": [
+            2,
+            1,
+            256,
+            768
+          ],
+          "strides": [
+            [
+              196608,
+              196608,
+              768,
+              1
+            ],
+            [
+              196608,
+              196608,
+              768,
+              1
+            ]
+          ]
+        }
+      },
+      "unchanged": true,
+      "module_hashes_before": {
+        "vision_encoder": {
+          "sha256": "9fd7d85de8123367063fa6e748a19f492745dffcb0ff0d821e281e3afa96093a",
+          "state_tensors": 211
+        },
+        "decoder": {
+          "sha256": "e59a2e640d0c8567d8aa5a7ab0ea9acd6c944a5b489c5267134e46f780ee4857",
+          "state_tensors": 128
+        },
+        "state_decoder": {
+          "sha256": "866ab99efb4e551783e90fe281744c173ecf59b0c69deb5ea3630e49c76f894c",
+          "state_tensors": 10
+        },
+        "encoder": {
+          "sha256": "d9b9e4a8a023179e1f61aa8ef09492f4f69711c664521237c0ac747699a9fd97",
+          "state_tensors": 305
+        },
+        "vq": {
+          "sha256": "1bf5cdab6ae0ad4871a8f7b47b796880456b2152af3b0aaf792e4465dca51e85",
+          "state_tensors": 6
+        }
+      },
+      "module_hashes_after": {
+        "vision_encoder": {
+          "sha256": "9fd7d85de8123367063fa6e748a19f492745dffcb0ff0d821e281e3afa96093a",
+          "state_tensors": 211
+        },
+        "decoder": {
+          "sha256": "e59a2e640d0c8567d8aa5a7ab0ea9acd6c944a5b489c5267134e46f780ee4857",
+          "state_tensors": 128
+        },
+        "state_decoder": {
+          "sha256": "866ab99efb4e551783e90fe281744c173ecf59b0c69deb5ea3630e49c76f894c",
+          "state_tensors": 10
+        },
+        "encoder": {
+          "sha256": "d9b9e4a8a023179e1f61aa8ef09492f4f69711c664521237c0ac747699a9fd97",
+          "state_tensors": 305
+        },
+        "vq": {
+          "sha256": "1bf5cdab6ae0ad4871a8f7b47b796880456b2152af3b0aaf792e4465dca51e85",
+          "state_tensors": 6
+        }
+      }
+    }
+  },
+  "script_sha256": "26d03423f98e6a26ef3ecefca386de9ebd8170e38e007582e88d37b5d2019a7a",
+  "original_evaluator_sha256": "e9c1282f15e01832d4c12a01b8e74fdf5229bbf8859d5e48e71c1a84b11b5b01",
+  "cache_sha256": "eafacc5cea01814ec8c12f3e0420348a9da7bc12deeaf7cd9f0bb3d952733c15",
+  "elapsed_seconds": 73.71869205300027,
+  "samples": 2,
+  "precision": "highest FP32; TF32 disabled; inference_mode",
+  "scope": "Frozen B2 computation-route diagnosis only; no optimizer or updates."
+}

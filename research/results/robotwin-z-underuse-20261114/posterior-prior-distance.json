@@ -1,0 +1,36 @@
+{
+  "kl_mse": {
+    "mean_conditional_kl_to_standard_normal": 50.67073536011566,
+    "mean_mu_square_sum": 0.9445829872021445,
+    "mu_variance_sum": 0.20081080417680403,
+    "mean_noise_variance_sum": 0.5416026817504087,
+    "mean_noise_per_axis_min_median_max": [
+      0.006988249068014503,
+      0.016253494960121975,
+      0.033052762748908976
+    ],
+    "axes_mean_noise_gt_0_5": 0,
+    "mean_axis_KL_min_median_max": [
+      1.235569861790493,
+      1.5811774423645382,
+      2.0139385032576316
+    ]
+  },
+  "official": {
+    "mean_conditional_kl_to_standard_normal": 29.59060799135846,
+    "mean_mu_square_sum": 9.34939035807216,
+    "mu_variance_sum": 6.962631886860854,
+    "mean_noise_variance_sum": 18.836487302307383,
+    "mean_noise_per_axis_min_median_max": [
+      0.0006670104180250677,
+      0.8769469225716797,
+      0.9690338809888799
+    ],
+    "axes_mean_noise_gt_0_5": 21,
+    "mean_axis_KL_min_median_max": [
+      0.0025092580810279954,
+      0.006962060328595794,
+      3.8620550948980403
+    ]
+  }
+}

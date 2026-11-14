@@ -1,0 +1,79 @@
+{
+  "at": "2026-11-14T02:08:50.440975+00:00",
+  "runner_sha256": "17f4279f2761dcdfc9ce3e620d15e63bfad5e4f343b42a5225790a3f0d50f801",
+  "manifest_sha256": "66a764c37a03a84db19689652ea99ed019f8533000cefa763756c6286dd6f261",
+  "starting_global_step": 3000,
+  "additional_steps": 3000,
+  "batch_size": 4,
+  "scope": "four authorized short continuation comparisons; main batch64 training remains stopped",
+  "jobs": [
+    {
+      "arm": "seed43_replay",
+      "pid": 343513,
+      "command": [
+        "/home/sadasue/foveated-world-models/.venv/bin/python",
+        "-u",
+        "/home/sadasue/foveated-world-models/research/train_robotwin_data_step_continuation.py",
+        "--manifest",
+        "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-data-step-continuation-b4-20261114/manifest.json",
+        "--arm",
+        "seed43_replay",
+        "--output",
+        "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-data-step-continuation-b4-20261114/seed43_replay"
+      ],
+      "output": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-data-step-continuation-b4-20261114/seed43_replay",
+      "log": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-data-step-continuation-b4-20261114/seed43_replay.log"
+    },
+    {
+      "arm": "seed43_new",
+      "pid": 343514,
+      "command": [
+        "/home/sadasue/foveated-world-models/.venv/bin/python",
+        "-u",
+        "/home/sadasue/foveated-world-models/research/train_robotwin_data_step_continuation.py",
+        "--manifest",
+        "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-data-step-continuation-b4-20261114/manifest.json",
+        "--arm",
+        "seed43_new",
+        "--output",
+        "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-data-step-continuation-b4-20261114/seed43_new"
+      ],
+      "output": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-data-step-continuation-b4-20261114/seed43_new",
+      "log": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-data-step-continuation-b4-20261114/seed43_new.log"
+    },
+    {
+      "arm": "seed44_replay",
+      "pid": 343515,
+      "command": [
+        "/home/sadasue/foveated-world-models/.venv/bin/python",
+        "-u",
+        "/home/sadasue/foveated-world-models/research/train_robotwin_data_step_continuation.py",
+        "--manifest",
+        "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-data-step-continuation-b4-20261114/manifest.json",
+        "--arm",
+        "seed44_replay",
+        "--output",
+        "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-data-step-continuation-b4-20261114/seed44_replay"
+      ],
+      "output": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-data-step-continuation-b4-20261114/seed44_replay",
+      "log": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-data-step-continuation-b4-20261114/seed44_replay.log"
+    },
+    {
+      "arm": "seed44_new",
+      "pid": 343516,
+      "command": [
+        "/home/sadasue/foveated-world-models/.venv/bin/python",
+        "-u",
+        "/home/sadasue/foveated-world-models/research/train_robotwin_data_step_continuation.py",
+        "--manifest",
+        "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-data-step-continuation-b4-20261114/manifest.json",
+        "--arm",
+        "seed44_new",
+        "--output",
+        "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-data-step-continuation-b4-20261114/seed44_new"
+      ],
+      "output": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-data-step-continuation-b4-20261114/seed44_new",
+      "log": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-data-step-continuation-b4-20261114/seed44_new.log"
+    }
+  ]
+}

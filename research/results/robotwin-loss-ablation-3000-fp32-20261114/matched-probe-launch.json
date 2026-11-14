@@ -1,0 +1,16 @@
+{
+  "at": "2026-11-14T01:56:21.061922+00:00",
+  "command": [
+    "/home/sadasue/foveated-world-models/.venv/bin/python",
+    "-u",
+    "/home/sadasue/foveated-world-models/research/evaluate_robotwin_matched_state_probes.py",
+    "--output",
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/evaluations/matched-state-probes-fp32-20261114",
+    "--batch-size",
+    "16"
+  ],
+  "script_sha256": "828e5a59d4a850d9700b2d6668b9ab036a881ca38596e7336e50833cab79cc99",
+  "scope": "Frozen four-model matched2048/512 state readouts; no backbone training",
+  "gpu_before": "NVIDIA GB10, 0 %\n",
+  "pid": 334149
+}

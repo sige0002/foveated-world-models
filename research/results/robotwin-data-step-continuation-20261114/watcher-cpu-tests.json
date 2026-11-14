@@ -1,0 +1,20 @@
+{
+  "script_sha256": "19251fae9a3076365213e3a24b32683b48a3d2e48c81664f4ddae3eebcbec2df",
+  "scope": "Synthetic CPU tests only; no training process or real artifact was modified, watcher not launched.",
+  "checks": {
+    "unfinished_line_ignored": true,
+    "noncontiguous_stream_rejected": true,
+    "paired_seeds_match_and_distinct_seeds_differ": true,
+    "epsilon_mismatch_detected": true,
+    "paired_new_minus_replay_sign_and_constant_CI": true,
+    "paired_each_arm_minus_initial_sign_and_CI": true,
+    "initial_ID_mismatch_rejected": true,
+    "donor_mismatch_rejected": true,
+    "nonfinite_metric_rejected": true
+  },
+  "source_review": {
+    "complete_requires_final_checkpoint_exists": true,
+    "initial_checkpoint_matches_continuation_manifest": true,
+    "initial_reference_hash_saved_each_comparison": true
+  }
+}

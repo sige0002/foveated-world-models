@@ -1,0 +1,57 @@
+{
+  "scope": "CPU-only static audit; no learning or GPU execution. New runner runtime verification pending.",
+  "decision": "The inspected active data/augmentation/forward path permits source-based reconstruction from the same main seed and full original loader iteration. Historical CPU RNG/augmented-pixel equality cannot be directly verified from v1 artifacts.",
+  "source_sha256": {
+    "/home/sadasue/foveated-world-models/research/train_robotwin_data_step_continuation.py": "17f4279f2761dcdfc9ce3e620d15e63bfad5e4f343b42a5225790a3f0d50f801",
+    "/media/sadasue/SSD1/foveated-world-models/research/official-data-contract-audit-20261113/LaWAM-robotwin-delta2/latent_action_model/data_loader/video_aug.py": "e425cf9ea33ae6abe583c13afe86e1337eec309ed293e32cccb2f69daf9fb69b",
+    "/media/sadasue/SSD1/foveated-world-models/research/official-data-contract-audit-20261113/LaWAM-robotwin-delta2/latent_action_model/data_loader/lerobot_dataset.py": "0a11ed9c81f3d921056652cd38c665669504c87c861caff13c6c31f3427dd62b",
+    "/media/sadasue/SSD1/foveated-world-models/research/official-data-contract-audit-20261113/LaWAM-robotwin-delta2/latent_action_model/data_loader/lerobot_datamodule.py": "c7cf101217ac16ebc3d9012ab98dc2f2f34f83f9dc990a1c8f4ded7adbd2ac11",
+    "/media/sadasue/SSD1/foveated-world-models/research/official-data-contract-audit-20261113/LaWAM-robotwin-delta2/latent_action_model/data_loader/collate.py": "5953e9b334dce0eb1cb461c92c118f2d6ad4743f19f75fd74311aa86b6b20645",
+    "/media/sadasue/SSD1/foveated-world-models/research/official-data-contract-audit-20261113/LaWAM-robotwin-delta2/starVLA/dataloader/gr00t_lerobot/data_config.py": "949ad078f1cd11a481ef6feb5c2d21487168ba42d8648323459aecf62f194cfa",
+    "/media/sadasue/SSD1/foveated-world-models/research/official-data-contract-audit-20261113/LaWAM-robotwin-delta2/starVLA/dataloader/gr00t_lerobot/data_config_lam.py": "9b2f62785ad62a17d3acf7f06fd030e69ad83ca7adad9088bdbfe33a7cd5d09f",
+    "/media/sadasue/SSD1/foveated-world-models/research/official-data-contract-audit-20261113/LaWAM-robotwin-delta2/starVLA/dataloader/gr00t_lerobot/datasets.py": "94c63dd38dd443095dee71cb51e736a00932fcb1da1fcc3eb7333d473b1151fd",
+    "/media/sadasue/SSD1/foveated-world-models/research/official-data-contract-audit-20261113/LaWAM-robotwin-delta2/starVLA/dataloader/gr00t_lerobot/transform/video.py": "0aefc2a51c004b9c57eedb86e781e68865a5be32108a92307e81ea5120a23e8a",
+    "/media/sadasue/SSD1/foveated-world-models/research/official-data-contract-audit-20261113/LaWAM-robotwin-delta2/latent_action_model/core/lam_model.py": "f68daabe8799cfa9b999d11c49f52136cca1897f71677eccb69e4941de2fec3d",
+    "/home/sadasue/foveated-world-models/.venv/lib/python3.12/site-packages/torchvision/transforms/v2/_geometry.py": "f984a2ad8cff66a5bb7ab83755c90e3088fea605204ce657d8e98aa7d4370901",
+    "/home/sadasue/foveated-world-models/.venv/lib/python3.12/site-packages/torchvision/transforms/v2/_color.py": "f90d912be8e18d517171cda31cce53ac6ceffe09d71883ab5489c591c55dc5a7"
+  },
+  "findings": [
+    {
+      "path": "ManifestDataset.__getitem__ -> LeRobotLAMDataset._try_get_sample",
+      "finding": "Explicit manifest validates episode/base. Direct private method bypasses __getitem__ random retry fallback. In-order loader uses deterministic indexed sampling."
+    },
+    {
+      "path": "datasets.py:_create_rng / sample_step / _select_video_keys_for_sample",
+      "finding": "Fresh numpy Generator seeded from epoch,index,mixture seed and optional salt. It does not advance global numpy RNG."
+    },
+    {
+      "path": "data_config_lam.py + RobotwinEEF transforms + lam_collate",
+      "finding": "Active video conversion/center aspect crop/resize, state normalization and collation are deterministic. Worker init only limits thread counts."
+    },
+    {
+      "path": "torchvision v2 RandomResizedCrop.make_params / ColorJitter.make_params",
+      "finding": "Parameters consume MAIN TORCH CPU RNG even when image pixels are CUDA tensors. Shape and CPU RNG determine rejection count/crop/jitter. Historical augmentation_rng_* fields were CUDA state, not CPU parameter evidence."
+    },
+    {
+      "path": "original runner DataLoader and second seed_everything",
+      "finding": "Explicit private DataLoader generator seed+12001 isolates worker/base seed draws from main CPU RNG. Same seed reset occurs immediately before actual iteration, after model/dataset construction."
+    },
+    {
+      "path": "lam_model.py:_run / VAE",
+      "finding": "Autocast explicitly disabled around vq(nodes.float()), so epsilon is FP32 shape(4,1,32). before_vae diagnostic fork_rng restores auxiliary draw. Frozen DINO eval, dropout0, remaining active losses/optimizer do not draw RNG."
+    },
+    {
+      "path": "evaluate",
+      "finding": "torch.random.fork_rng saves main CPU and CUDA states; Python/numpy saved explicitly. Precision failure is independent of RNG restoration."
+    }
+  ],
+  "recovery_requirements": [
+    "Reuse original loader from batch1 through500 and continue the SAME iterator at501; identical B4/2worker/in_order/generator/seed/path.",
+    "Replay both actual augmentations and one matching FP32 CUDA epsilon per batch, require all old data/epsilon/CUDA hashes and prefix cumulative hashes.",
+    "After epsilon500 require current CUDA state equals historical501 augmentation_rng_before. Step500 augmentation_rng_after is before epsilon500 and is not this boundary.",
+    "Normalize in-memory tuple pair identities before comparing with JSON list pair identities.",
+    "Persist CPU/CUDA/Python/numpy and loader generator RNG plus data offset in subsequent checkpoints; label historical CPU equality as reconstructed not observed.",
+    "Watcher must compare common original3000 fingerprints across arms separately from differing own3500 resume fingerprints; use only old1..500 plus new501 onward."
+  ],
+  "checkpoint_audit": "recovery-checkpoint-and-stream-audit.json"
+}

@@ -1,0 +1,44 @@
+{
+  "scope": "Overlapping literal keyword matches, not mutually exclusive task families.",
+  "action_config_skill_counts": {
+    "": 27500
+  },
+  "examples": [
+    {
+      "keyword": "bottle",
+      "draws_with_keyword": 1815,
+      "example": "Transfer the yellow bottle body with tapered neck, the blue-accented cylindrical bottle, and the hand-sized drinking bottle into the black garbage bin using your arms, one by one.",
+      "example_draws": 5
+    },
+    {
+      "keyword": "hammer",
+      "draws_with_keyword": 128,
+      "example": "Pick the handheld medium claw hammer and strike the block.",
+      "example_draws": 3
+    },
+    {
+      "keyword": "drawer",
+      "draws_with_keyword": 294,
+      "example": "Open the storage cabinet's drawer and carefully drop the light teal toycar with white roof into it.",
+      "example_draws": 4
+    },
+    {
+      "keyword": "pour",
+      "draws_with_keyword": 150,
+      "example": "Lift up the tabletrashbin, then pour balls.",
+      "example_draws": 4
+    },
+    {
+      "keyword": "switch",
+      "draws_with_keyword": 164,
+      "example": "Lift, switch arms, and place the red block.",
+      "example_draws": 9
+    },
+    {
+      "keyword": "stack",
+      "draws_with_keyword": 1081,
+      "example": "Move red block, green block, and blue block to the center. Stack blue block on green block and green block on red block.",
+      "example_draws": 20
+    }
+  ]
+}

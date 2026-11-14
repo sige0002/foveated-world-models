@@ -1,0 +1,218 @@
+{
+  "checked_at": "2026-11-14T04:18:43.293944+00:00",
+  "launch": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-data-step-continuation-b4-20261114/recovery-v2/recovery_training_launch.json",
+  "launch_sha256": "a1f660d8eb669af8a5c6cbbe49327809cd80b3683106234887c8770ca213316f",
+  "runner_sha256": "740f09a77ad3b9147a0c328d86f343259c2f808a96f4c6a24352eef4499437f9",
+  "arms": {
+    "seed43_replay": {
+      "resume_replay_verification": {
+        "verified_prefix_batches": 500,
+        "boundary_next_local_step": 501,
+        "boundary_cuda_rng_sha256": "10b7cd2eb9b388386774de50341785e7042fc1ef2b5498d6d306591512a7779f",
+        "boundary_matches_old501": true,
+        "restored_model_sha256": "4b2fd315325c3739691c9bb7f3628e5f042215d9993ca9d5e245dea0901a33fc",
+        "restored_optimizer_sha256": "6385bd31e20a3ac8f335baecd285d5e08fce8efde5a0293fd5eb5641412c8474",
+        "model_unchanged_by_replay": true,
+        "optimizer_unchanged_by_replay": true,
+        "cpu_rng_sha256": "8c53b97fd4b8842286430d173e3e80e76a206ef1008ab0322e63d980d0bef65d",
+        "python_numpy_rng_sha256": "3121174f37f806d7b942487ab5f19fdd8b6c6b164c08df201700be773f155090",
+        "cpu_and_pixel_historical_hashes_available": false
+      },
+      "local_steps": [
+        501,
+        502,
+        503,
+        504,
+        505,
+        506
+      ],
+      "all_new_input_hashes_match_own_preflight": {
+        "data_sha256": true,
+        "epsilon_sha256": true,
+        "cpu_rng_before_augmentation_sha256": true,
+        "cpu_rng_after_augmentation_sha256": true,
+        "augmentation_pixels_sha256": true
+      },
+      "full_minus_preflight_loss_by_step": [
+        0.0,
+        0.0,
+        0.0,
+        -2.002716064453125e-05,
+        1.519918441772461e-06,
+        -4.163384437561035e-05
+      ],
+      "maximum_absolute_loss_difference": 4.163384437561035e-05,
+      "current_progress": {
+        "phase": "training",
+        "pid": 436057,
+        "local_step": 520,
+        "absolute_step": 3520,
+        "loss": 0.26661303639411926,
+        "gradient_norm_before_clip": 0.819478452205658,
+        "lr": 0.0003,
+        "seconds_per_update_recent": 2.8193849830022373,
+        "elapsed_seconds": 88.79260534200148,
+        "cuda_peak_allocated_bytes": 13217651712,
+        "cuda_peak_reserved_bytes": 13813940224
+      }
+    },
+    "seed43_new": {
+      "resume_replay_verification": {
+        "verified_prefix_batches": 500,
+        "boundary_next_local_step": 501,
+        "boundary_cuda_rng_sha256": "10b7cd2eb9b388386774de50341785e7042fc1ef2b5498d6d306591512a7779f",
+        "boundary_matches_old501": true,
+        "restored_model_sha256": "1a73e8989262f4ce0b9c923e01ddd42f3e1d3e172b40bb6478599e58c5213ec2",
+        "restored_optimizer_sha256": "58b41b0c14b4f2328702e2cecb53c49c2a3f9a3d30528b47b0baa96ee4d37685",
+        "model_unchanged_by_replay": true,
+        "optimizer_unchanged_by_replay": true,
+        "cpu_rng_sha256": "8c53b97fd4b8842286430d173e3e80e76a206ef1008ab0322e63d980d0bef65d",
+        "python_numpy_rng_sha256": "3121174f37f806d7b942487ab5f19fdd8b6c6b164c08df201700be773f155090",
+        "cpu_and_pixel_historical_hashes_available": false
+      },
+      "local_steps": [
+        501,
+        502,
+        503,
+        504,
+        505,
+        506
+      ],
+      "all_new_input_hashes_match_own_preflight": {
+        "data_sha256": true,
+        "epsilon_sha256": true,
+        "cpu_rng_before_augmentation_sha256": true,
+        "cpu_rng_after_augmentation_sha256": true,
+        "augmentation_pixels_sha256": true
+      },
+      "full_minus_preflight_loss_by_step": [
+        0.0,
+        -2.7686357498168945e-05,
+        -1.8358230590820312e-05,
+        3.3229589462280273e-05,
+        -4.976987838745117e-06,
+        -7.921457290649414e-05
+      ],
+      "maximum_absolute_loss_difference": 7.921457290649414e-05,
+      "current_progress": {
+        "phase": "training",
+        "pid": 436058,
+        "local_step": 520,
+        "absolute_step": 3520,
+        "loss": 0.42355674505233765,
+        "gradient_norm_before_clip": 0.7579216957092285,
+        "lr": 0.0003,
+        "seconds_per_update_recent": 2.9022406745025364,
+        "elapsed_seconds": 75.89243583300413,
+        "cuda_peak_allocated_bytes": 13217651712,
+        "cuda_peak_reserved_bytes": 13813940224
+      }
+    },
+    "seed44_replay": {
+      "resume_replay_verification": {
+        "verified_prefix_batches": 500,
+        "boundary_next_local_step": 501,
+        "boundary_cuda_rng_sha256": "c09560e24844adb44ae73026fd110377338e5548291a16ca67fb68c1637135f8",
+        "boundary_matches_old501": true,
+        "restored_model_sha256": "9e68cad9558d0b17afef8a5e1997503d7ac4892b4059a59e36e7db209a598099",
+        "restored_optimizer_sha256": "87f7ae91b8133772bcff48eb40aed10264449e56770cf54dcf8c2af228ec562c",
+        "model_unchanged_by_replay": true,
+        "optimizer_unchanged_by_replay": true,
+        "cpu_rng_sha256": "71bcb86f209356d8b5df04fb0c7d9f8f5dab75c9438fbe5dff65d73d9d29616f",
+        "python_numpy_rng_sha256": "d426b467de729229da01a88a849278769a19d11a0f6651081aa8e99a97ff834c",
+        "cpu_and_pixel_historical_hashes_available": false
+      },
+      "local_steps": [
+        501,
+        502,
+        503,
+        504,
+        505,
+        506
+      ],
+      "all_new_input_hashes_match_own_preflight": {
+        "data_sha256": true,
+        "epsilon_sha256": true,
+        "cpu_rng_before_augmentation_sha256": true,
+        "cpu_rng_after_augmentation_sha256": true,
+        "augmentation_pixels_sha256": true
+      },
+      "full_minus_preflight_loss_by_step": [
+        0.0,
+        5.003809928894043e-05,
+        0.00020870566368103027,
+        4.76837158203125e-06,
+        -4.172325134277344e-05,
+        4.851818084716797e-05
+      ],
+      "maximum_absolute_loss_difference": 0.00020870566368103027,
+      "current_progress": {
+        "phase": "training",
+        "pid": 436059,
+        "local_step": 520,
+        "absolute_step": 3520,
+        "loss": 0.4148331880569458,
+        "gradient_norm_before_clip": 0.6384824514389038,
+        "lr": 0.0003,
+        "seconds_per_update_recent": 2.7991303499984497,
+        "elapsed_seconds": 88.87874480599567,
+        "cuda_peak_allocated_bytes": 13217651712,
+        "cuda_peak_reserved_bytes": 13813940224
+      }
+    },
+    "seed44_new": {
+      "resume_replay_verification": {
+        "verified_prefix_batches": 500,
+        "boundary_next_local_step": 501,
+        "boundary_cuda_rng_sha256": "c09560e24844adb44ae73026fd110377338e5548291a16ca67fb68c1637135f8",
+        "boundary_matches_old501": true,
+        "restored_model_sha256": "1bdd45913bb949620df2f6a60eff7525175c364e4933ff165ef5d186643d0b2d",
+        "restored_optimizer_sha256": "eeecf9f47a4eb85489d0e0169a4dc5cf896bfce9ba3bb88dbbfdf416ba3da43e",
+        "model_unchanged_by_replay": true,
+        "optimizer_unchanged_by_replay": true,
+        "cpu_rng_sha256": "71bcb86f209356d8b5df04fb0c7d9f8f5dab75c9438fbe5dff65d73d9d29616f",
+        "python_numpy_rng_sha256": "d426b467de729229da01a88a849278769a19d11a0f6651081aa8e99a97ff834c",
+        "cpu_and_pixel_historical_hashes_available": false
+      },
+      "local_steps": [
+        501,
+        502,
+        503,
+        504,
+        505,
+        506
+      ],
+      "all_new_input_hashes_match_own_preflight": {
+        "data_sha256": true,
+        "epsilon_sha256": true,
+        "cpu_rng_before_augmentation_sha256": true,
+        "cpu_rng_after_augmentation_sha256": true,
+        "augmentation_pixels_sha256": true
+      },
+      "full_minus_preflight_loss_by_step": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.4334917068481445e-05,
+        2.8967857360839844e-05
+      ],
+      "maximum_absolute_loss_difference": 2.8967857360839844e-05,
+      "current_progress": {
+        "phase": "training",
+        "pid": 436060,
+        "local_step": 520,
+        "absolute_step": 3520,
+        "loss": 0.42668765783309937,
+        "gradient_norm_before_clip": 0.939894437789917,
+        "lr": 0.0003,
+        "seconds_per_update_recent": 3.007541326500359,
+        "elapsed_seconds": 86.60106713300047,
+        "cuda_peak_allocated_bytes": 13217651712,
+        "cuda_peak_reserved_bytes": 13813940224
+      }
+    }
+  },
+  "scope": "Read-only verification of completed resumed updates501..506 against the corresponding recovery preflight. Historical legacy CPU/pixel hashes did not exist.",
+  "numerical_scope": "Exact input/RNG/pixel agreement is established for the new prefix. Repeated GPU training losses need not be bitwise equal; this report does not establish a cause of any numerical difference."
+}

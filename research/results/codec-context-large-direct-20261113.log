@@ -1,0 +1,5 @@
+/home/sadasue/foveated-world-models/.venv/lib/python3.12/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+{'step': 200, 'objective': 1.0422301292419434, 'sample_mse': 0.10364842665148899, 'mean_mse': 0.10364842665148899, 'decode_mean_latent_mse': 0.10364842665148899}
+{'step': 400, 'objective': 0.7648041248321533, 'sample_mse': 0.09907470847247168, 'mean_mse': 0.09907470847247168, 'decode_mean_latent_mse': 0.09907470847247168}
+{'dev64': {'sample_mse': 0.09907470847247168, 'mean_mse': 0.09907470847247168, 'decode_mean_latent_mse': 0.09907470847247168}, 'observed96': {'sample_mse': 0.08526975453908865, 'mean_mse': 0.08526975453908865, 'decode_mean_latent_mse': 0.08526975453908865}}

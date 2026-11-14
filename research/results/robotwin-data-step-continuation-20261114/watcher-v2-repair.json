@@ -1,0 +1,30 @@
+{
+  "launch": {
+    "at": "2026-11-14T02:47:32.394383+00:00",
+    "pid": 372533,
+    "start_ticks": 3076347,
+    "command": [
+      "/home/sadasue/foveated-world-models/.venv/bin/python",
+      "-u",
+      "/home/sadasue/foveated-world-models/research/watch_robotwin_data_step_continuation_v2.py",
+      "--group",
+      "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-data-step-continuation-b4-20261114",
+      "--watch"
+    ],
+    "script_sha256": "667697619525983f6478ff260b40d4f636977afe5cb7887f91349289fba32e49",
+    "log": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-data-step-continuation-b4-20261114/paired-analysis/watcher-v2.log",
+    "scope": "Replacement CPU watcher only; model/training processes unchanged. Actual step3500 comparison passed before launch.",
+    "archive": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-data-step-continuation-b4-20261114/paired-analysis/archive-v1-variable-shadowing"
+  },
+  "actual_step3500_snapshot_passed": true,
+  "compact_status_bytes": 4600,
+  "old_status_bytes": 912246,
+  "source_archive_sha256": "19251fae9a3076365213e3a24b32683b48a3d2e48c81664f4ddae3eebcbec2df",
+  "regression_checks": {
+    "initial_fingerprint_dictionary_not_evaluation_report": true,
+    "all_four_initial_hashes_equal": true,
+    "paired_512_415_bootstrap4000_written": true,
+    "initial3000_contrasts_all_four_written": true,
+    "same_seed_epsilon_and_augmentation_match": true
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "checks": [
+    "raw zero before fitted scaler differs from train-mean replacement",
+    "unpenalized intercept preserves constant target at large ridge penalty",
+    "evaluation prediction does not refit or mutate scaling",
+    "fivefold17alpha selection returns finite risks",
+    "XYZ physical unit conversion and component denominators verified"
+  ],
+  "raw_zero_prediction": 7.000000000010534,
+  "train_mean_replacement_prediction": 16.933520942521447,
+  "GPU_or_training_started": false
+}

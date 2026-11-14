@@ -1,0 +1,2372 @@
+{
+  "complete": true,
+  "scope": "Six-update runtime and control checks only, not a causal performance result. No3000-update causal arm launched. Four original loss-ablation jobs were not stopped or modified.",
+  "runner": "/home/sadasue/foveated-world-models/research/train_robotwin_stage1_causal_v2.py",
+  "runner_sha256": "e1d7db1efca25cdff88a7299e7f5cd31c016b0c11a661fd212c73df67647aa22",
+  "original_running_runner_sha256": "9ecbea0151c1f902647dc9e41a5a17a431ab5c4319da658b9d0cdeb5104cba27",
+  "experiments": {
+    "baseline_replay": {
+      "path": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-causal-v2-preflight-20261114/baseline_replay",
+      "passed": true,
+      "steps": 6,
+      "observed_factors": {
+        "arm": "baseline_replay",
+        "image_loss": "smooth_l1",
+        "kl_beta": 5e-05,
+        "lambda_aux": 1.0,
+        "posterior_sampling": "sampled",
+        "initialization": "fresh",
+        "state_decoder_initialization": "fresh local g; official14 state head is never loaded",
+        "epsilon_policy": "Always consume and verify the original upstream Gaussian draw, including mu_only",
+        "main_training": false,
+        "parent_runner_sha256": "9ecbea0151c1f902647dc9e41a5a17a431ab5c4319da658b9d0cdeb5104cba27",
+        "runner_sha256": "e1d7db1efca25cdff88a7299e7f5cd31c016b0c11a661fd212c73df67647aa22"
+      },
+      "initial_state_sha256": "c933311d638c1b880d370ff85195220bdd06394cdb4ef62710fa8fa4d522e8a0",
+      "fresh_seeded_components_identical": true,
+      "all_six_data_augmentation_epsilon_hashes_equal_to_original_baseline": true,
+      "seconds_per_update_excluding_first": 3.1531621319991245,
+      "cuda_peak_allocated_gib": 13.31923532485962,
+      "cuda_peak_reserved_gib": 13.73828125,
+      "first_actual_training_loss_gradient_components": {
+        "step_before_update": 0,
+        "lr_used": 3e-07,
+        "losses": {
+          "image": 1.003886103630066,
+          "state": 0.2287617176771164,
+          "weighted_kl": 0.00043045624624937773
+        },
+        "node_gradient_norms": {
+          "image": 0.0,
+          "state": 0.01962883397936821,
+          "weighted_kl": 3.0112601962173358e-05
+        },
+        "selected_z_gradient_norms": {
+          "image": 0.0,
+          "state": 0.04641728475689888,
+          "weighted_kl": null
+        },
+        "parameter_gradient_norms": {
+          "image": {
+            "encoder.out_proj.weight": 0.0,
+            "encoder.out_proj.bias": 0.0,
+            "vq.pre_norm.weight": 0.0,
+            "vq.mu.weight": 0.0,
+            "vq.logvar.weight": 0.0
+          },
+          "state": {
+            "encoder.out_proj.weight": 2.032872200012207,
+            "encoder.out_proj.bias": 0.026011938229203224,
+            "vq.pre_norm.weight": 0.0511040985584259,
+            "vq.mu.weight": 0.34304550290107727,
+            "vq.logvar.weight": 0.2378017157316208
+          },
+          "weighted_kl": {
+            "encoder.out_proj.weight": 0.004653416574001312,
+            "encoder.out_proj.bias": 5.978272020001896e-05,
+            "vq.pre_norm.weight": 0.0002573586243670434,
+            "vq.mu.weight": 0.0009222939261235297,
+            "vq.logvar.weight": 0.000664093007799238
+          }
+        },
+        "parameter_gradient_connected": {
+          "image": {
+            "encoder.out_proj.weight": true,
+            "encoder.out_proj.bias": true,
+            "vq.pre_norm.weight": true,
+            "vq.mu.weight": true,
+            "vq.logvar.weight": true
+          },
+          "state": {
+            "encoder.out_proj.weight": true,
+            "encoder.out_proj.bias": true,
+            "vq.pre_norm.weight": true,
+            "vq.mu.weight": true,
+            "vq.logvar.weight": true
+          },
+          "weighted_kl": {
+            "encoder.out_proj.weight": true,
+            "encoder.out_proj.bias": true,
+            "vq.pre_norm.weight": true,
+            "vq.mu.weight": true,
+            "vq.logvar.weight": true
+          }
+        },
+        "posterior_sampling": "sampled",
+        "pairwise_cosines": {
+          "image__state": null,
+          "image__weighted_kl": null,
+          "state__weighted_kl": 0.4026709794998169
+        },
+        "scope": "Actual training batch and consumed epsilon. Gradients of batch-mean losses before clipping; selected decoder z is distinct from pre-LN nodes. KL has no downstream path through sampled z, but does through mu in mu_only. Parameter probes cover out_proj and VAE only. Normal backward follows."
+      },
+      "last_training_loss": 1.211888313293457,
+      "validation_loss": 1.1859688758850098,
+      "component_initialization": {
+        "scope": "fresh",
+        "fresh_seeded_components": {
+          "encoder": {
+            "sha256": "3a9a2c8a94beae21a06366dbe8c66997a8e3bab6ce898ce950c062d694a94034",
+            "state_tensors": 305
+          },
+          "vq": {
+            "sha256": "3868cdf0d2ea6db42b0b107362dbb3341aac2012d4083b97ae79c811eb8fbde5",
+            "state_tensors": 6
+          },
+          "decoder": {
+            "sha256": "cd7bf293c1a37107ad612fd43ec6bcbeafb64946a6ae3347e4cf94b5f0bff8ac",
+            "state_tensors": 128
+          },
+          "local_g": {
+            "sha256": "22fb959b28612f62f970e1dee409849f83ca39a2f400b273156295f4a25523e5",
+            "state_tensors": 10
+          }
+        },
+        "effective_components": {
+          "encoder": {
+            "sha256": "3a9a2c8a94beae21a06366dbe8c66997a8e3bab6ce898ce950c062d694a94034",
+            "state_tensors": 305
+          },
+          "vq": {
+            "sha256": "3868cdf0d2ea6db42b0b107362dbb3341aac2012d4083b97ae79c811eb8fbde5",
+            "state_tensors": 6
+          },
+          "decoder": {
+            "sha256": "cd7bf293c1a37107ad612fd43ec6bcbeafb64946a6ae3347e4cf94b5f0bff8ac",
+            "state_tensors": 128
+          },
+          "local_g": {
+            "sha256": "22fb959b28612f62f970e1dee409849f83ca39a2f400b273156295f4a25523e5",
+            "state_tensors": 10
+          }
+        }
+      },
+      "training_geometry_file": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-causal-v2-preflight-20261114/baseline_replay/training_geometry.jsonl",
+      "first_actual_training_geometry": {
+        "step_before_update": 0,
+        "layers": {
+          "cross_attention_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 32.30791717610462,
+            "mean_sample_norm": 32.34029777942203,
+            "coordinate_std_mean": 1.0106288870509124,
+            "between_example_variance_sum": 2.0934569315910814,
+            "between_example_variance_fraction": 0.002001593843799745,
+            "radial_fraction_of_between_example_variation": 0.00020253154061435037,
+            "coordinate_centered_direction_variance_sum": 0.0020015714138020553
+          },
+          "encoder_layer_0_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 34.79323044304234,
+            "mean_sample_norm": 34.85744380441757,
+            "coordinate_std_mean": 1.0891805245567288,
+            "between_example_variance_sum": 4.473113384739653,
+            "between_example_variance_fraction": 0.0036814475482560213,
+            "radial_fraction_of_between_example_variation": 4.759492165096058e-05,
+            "coordinate_centered_direction_variance_sum": 0.0036793510546635167
+          },
+          "encoder_layer_1_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 37.719517868413966,
+            "mean_sample_norm": 37.814620269987685,
+            "coordinate_std_mean": 1.1813035104344625,
+            "between_example_variance_sum": 7.18774180769771,
+            "between_example_variance_fraction": 0.005026569435044094,
+            "radial_fraction_of_between_example_variation": 0.0004941701353175274,
+            "coordinate_centered_direction_variance_sum": 0.005016726164014343
+          },
+          "encoder_layer_2_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 40.07201412234702,
+            "mean_sample_norm": 40.19187334743176,
+            "coordinate_std_mean": 1.2558824318039468,
+            "between_example_variance_sum": 9.624017782508833,
+            "between_example_variance_fraction": 0.005957704204553919,
+            "radial_fraction_of_between_example_variation": 0.0003164146154935963,
+            "coordinate_centered_direction_variance_sum": 0.005951173245794456
+          },
+          "encoder_layer_3_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 42.9534873646341,
+            "mean_sample_norm": 43.09721933266408,
+            "coordinate_std_mean": 1.3463202064941147,
+            "between_example_variance_sum": 12.370559169824292,
+            "between_example_variance_fraction": 0.006660246269576942,
+            "radial_fraction_of_between_example_variation": 0.00031500437911462085,
+            "coordinate_centered_direction_variance_sum": 0.006657511256863728
+          },
+          "encoder_layer_4_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 44.747412897567884,
+            "mean_sample_norm": 44.919273425064354,
+            "coordinate_std_mean": 1.4025591253323872,
+            "between_example_variance_sum": 15.416832783485217,
+            "between_example_variance_fraction": 0.0076406143675582005,
+            "radial_fraction_of_between_example_variation": 0.0010227022460793979,
+            "coordinate_centered_direction_variance_sum": 0.0076481052984238365
+          },
+          "encoder_layer_5_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 47.056466002569294,
+            "mean_sample_norm": 47.25883900273969,
+            "coordinate_std_mean": 1.476634045256767,
+            "between_example_variance_sum": 19.093539391939196,
+            "between_example_variance_fraction": 0.008549073451764828,
+            "radial_fraction_of_between_example_variation": 0.0010404476658438801,
+            "coordinate_centered_direction_variance_sum": 0.008536131634519701
+          },
+          "encoder_layer_6_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 49.36784493653257,
+            "mean_sample_norm": 49.59159060554772,
+            "coordinate_std_mean": 1.5496895656251066,
+            "between_example_variance_sum": 22.146763198556172,
+            "between_example_variance_fraction": 0.009005198693185883,
+            "radial_fraction_of_between_example_variation": 0.00042695273978364404,
+            "coordinate_centered_direction_variance_sum": 0.008975479805719453
+          },
+          "encoder_layer_7_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 51.44673662422977,
+            "mean_sample_norm": 51.69393102948899,
+            "coordinate_std_mean": 1.6153128808319883,
+            "between_example_variance_sum": 25.52673182383856,
+            "between_example_variance_fraction": 0.009552368550239347,
+            "radial_fraction_of_between_example_variation": 0.0007691496150764693,
+            "coordinate_centered_direction_variance_sum": 0.009503827418646216
+          },
+          "encoder_layer_8_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 53.512163368995104,
+            "mean_sample_norm": 53.78526500867448,
+            "coordinate_std_mean": 1.6807597445926257,
+            "between_example_variance_sum": 29.319363551943493,
+            "between_example_variance_fraction": 0.010135040115237285,
+            "radial_fraction_of_between_example_variation": 0.00038980694840178487,
+            "coordinate_centered_direction_variance_sum": 0.010088041580533677
+          },
+          "encoder_layer_9_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 55.18024942444754,
+            "mean_sample_norm": 55.474155243340604,
+            "coordinate_std_mean": 1.7335098848780668,
+            "between_example_variance_sum": 32.53903630750763,
+            "between_example_variance_fraction": 0.01057355146352376,
+            "radial_fraction_of_between_example_variation": 0.000565948387246412,
+            "coordinate_centered_direction_variance_sum": 0.010533566092681648
+          },
+          "encoder_layer_10_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 56.39433291328746,
+            "mean_sample_norm": 56.71314340316065,
+            "coordinate_std_mean": 1.7722601683980006,
+            "between_example_variance_sum": 36.06928468626544,
+            "between_example_variance_fraction": 0.011214213421806422,
+            "radial_fraction_of_between_example_variation": 0.0005218421570944696,
+            "coordinate_centered_direction_variance_sum": 0.011182835482194982
+          },
+          "encoder_layer_11_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 58.14703618778064,
+            "mean_sample_norm": 58.480641345390396,
+            "coordinate_std_mean": 1.8275008723679527,
+            "between_example_variance_sum": 38.9183954971099,
+            "between_example_variance_fraction": 0.011379660407249173,
+            "radial_fraction_of_between_example_variation": 0.0007435599847388889,
+            "coordinate_centered_direction_variance_sum": 0.011357154718422439
+          },
+          "encoder_layer_12_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 59.86257873144707,
+            "mean_sample_norm": 60.2156712582979,
+            "coordinate_std_mean": 1.8815816821280682,
+            "between_example_variance_sum": 42.430680827529834,
+            "between_example_variance_fraction": 0.011701919595062048,
+            "radial_fraction_of_between_example_variation": 0.0008657084534103931,
+            "coordinate_centered_direction_variance_sum": 0.011672037010869999
+          },
+          "encoder_layer_13_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 62.12971194344147,
+            "mean_sample_norm": 62.49734271971012,
+            "coordinate_std_mean": 1.9529556507898869,
+            "between_example_variance_sum": 45.84154096143323,
+            "between_example_variance_fraction": 0.01173635793015059,
+            "radial_fraction_of_between_example_variation": 0.0009426862363780781,
+            "coordinate_centered_direction_variance_sum": 0.011719159529655696
+          },
+          "encoder_layer_14_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 63.39208563201631,
+            "mean_sample_norm": 63.77711738846831,
+            "coordinate_std_mean": 1.9928619779293242,
+            "between_example_variance_sum": 48.98903850384639,
+            "between_example_variance_fraction": 0.012043881940564946,
+            "radial_fraction_of_between_example_variation": 0.0010186020763890888,
+            "coordinate_centered_direction_variance_sum": 0.01203204413600413
+          },
+          "encoder_layer_15_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 64.40746745483806,
+            "mean_sample_norm": 64.81433788331174,
+            "coordinate_std_mean": 2.025027184884255,
+            "between_example_variance_sum": 52.61717636303419,
+            "between_example_variance_fraction": 0.012525098759624754,
+            "radial_fraction_of_between_example_variation": 0.0006261056829100125,
+            "coordinate_centered_direction_variance_sum": 0.012504259898432978
+          },
+          "encoder_layer_16_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 66.40827702926055,
+            "mean_sample_norm": 66.8279007166671,
+            "coordinate_std_mean": 2.0874194360378686,
+            "between_example_variance_sum": 55.95371956492559,
+            "between_example_variance_fraction": 0.012528785707984347,
+            "radial_fraction_of_between_example_variation": 0.000566648925030743,
+            "coordinate_centered_direction_variance_sum": 0.012507894708209063
+          },
+          "encoder_layer_17_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 68.29569486337253,
+            "mean_sample_norm": 68.72609846835232,
+            "coordinate_std_mean": 2.1467619823757444,
+            "between_example_variance_sum": 59.00339154508462,
+            "between_example_variance_fraction": 0.012491970652439746,
+            "radial_fraction_of_between_example_variation": 0.00047088495847548195,
+            "coordinate_centered_direction_variance_sum": 0.01247001630811713
+          },
+          "encoder_layer_18_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 70.00236049775883,
+            "mean_sample_norm": 70.44920022683857,
+            "coordinate_std_mean": 2.2005137948252025,
+            "between_example_variance_sum": 62.7812907705166,
+            "between_example_variance_fraction": 0.012649582304440396,
+            "radial_fraction_of_between_example_variation": 0.0007590484515520229,
+            "coordinate_centered_direction_variance_sum": 0.012632353361122641
+          },
+          "encoder_layer_19_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 71.51624769490138,
+            "mean_sample_norm": 71.97389666387095,
+            "coordinate_std_mean": 2.247781315730376,
+            "between_example_variance_sum": 65.70784832269037,
+            "between_example_variance_fraction": 0.01268422341684617,
+            "radial_fraction_of_between_example_variation": 0.0011680884683610885,
+            "coordinate_centered_direction_variance_sum": 0.012673898976470616
+          },
+          "encoder_layer_20_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 73.34638990310536,
+            "mean_sample_norm": 73.81660930286202,
+            "coordinate_std_mean": 2.3056266133528314,
+            "between_example_variance_sum": 69.25593569418409,
+            "between_example_variance_fraction": 0.012709962532645102,
+            "radial_fraction_of_between_example_variation": 0.0009524229762983286,
+            "coordinate_centered_direction_variance_sum": 0.012687009838437447
+          },
+          "encoder_layer_21_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 74.96034427054897,
+            "mean_sample_norm": 75.446629607501,
+            "coordinate_std_mean": 2.3566292261117026,
+            "between_example_variance_sum": 73.19274980769782,
+            "between_example_variance_fraction": 0.012858325217125396,
+            "radial_fraction_of_between_example_variation": 0.0011706490730566722,
+            "coordinate_centered_direction_variance_sum": 0.012832205714848856
+          },
+          "encoder_layer_22_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 76.32767259651959,
+            "mean_sample_norm": 76.8370075056672,
+            "coordinate_std_mean": 2.399979899311725,
+            "between_example_variance_sum": 78.04860032633634,
+            "between_example_variance_fraction": 0.01321969850503511,
+            "radial_fraction_of_between_example_variation": 0.0007187592876782198,
+            "coordinate_centered_direction_variance_sum": 0.013198695226061964
+          },
+          "encoder_layer_23_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 77.91181337159384,
+            "mean_sample_norm": 78.4380772026613,
+            "coordinate_std_mean": 2.4495768610710624,
+            "between_example_variance_sum": 82.31536035659579,
+            "between_example_variance_fraction": 0.013379029180038563,
+            "radial_fraction_of_between_example_variation": 0.0005259132766372351,
+            "coordinate_centered_direction_variance_sum": 0.013368562866221415
+          },
+          "pre_norm_nodes": {
+            "samples": 4,
+            "dimensions": 32,
+            "mean_vector_norm": 8.525528433921451,
+            "mean_sample_norm": 8.568396336628066,
+            "coordinate_std_mean": 1.5051553990991715,
+            "between_example_variance_sum": 0.8356866678223014,
+            "between_example_variance_fraction": 0.011366743887710189,
+            "radial_fraction_of_between_example_variation": 0.13648902913808228,
+            "coordinate_centered_direction_variance_sum": 0.010210013815019396
+          },
+          "vae_layernorm_output": {
+            "samples": 4,
+            "dimensions": 32,
+            "mean_vector_norm": 5.627889571715651,
+            "mean_sample_norm": 5.656841875860395,
+            "coordinate_std_mean": 0.9999978126302289,
+            "between_example_variance_sum": 0.32671897706364916,
+            "between_example_variance_fraction": 0.010210012699335934,
+            "radial_fraction_of_between_example_variation": 0.0004954942596495397,
+            "coordinate_centered_direction_variance_sum": 0.010210013597525817
+          },
+          "posterior_mu": {
+            "samples": 4,
+            "dimensions": 32,
+            "mean_vector_norm": 3.277459551006616,
+            "mean_sample_norm": 3.293254328497568,
+            "coordinate_std_mean": 0.5788461966931768,
+            "between_example_variance_sum": 0.10534872473439424,
+            "between_example_variance_fraction": 0.00971216486211509,
+            "radial_fraction_of_between_example_variation": 0.019097678390940197,
+            "coordinate_centered_direction_variance_sum": 0.009500551311636001
+          },
+          "decoder_z": {
+            "samples": 4,
+            "dimensions": 32,
+            "mean_vector_norm": 4.626608942332503,
+            "mean_sample_norm": 7.175088888198259,
+            "coordinate_std_mean": 1.2600239483371767,
+            "between_example_variance_sum": 31.28549331924969,
+            "between_example_variance_fraction": 0.5937539839284895,
+            "radial_fraction_of_between_example_variation": 0.04680968841589344,
+            "coordinate_centered_direction_variance_sum": 0.5881244374467669
+          }
+        },
+        "scope": "Across-example geometry in the actual B4 training batch; both current and future vary. Radial fractions are about the batch mean, not a fixed-current intervention."
+      },
+      "recorded_module_gradient_norm_lower_bound_initial": 6.344389760079531,
+      "gradient_norm_scope": "Recorded combined module norms exclude VAE parameters; this is a lower bound on full optimizer gradient norm, not an exact clipping coefficient.",
+      "executed_requested_config_sha256": "6b4a8f2828d29c69845b94635ec59e8a783230bbb6271b869c1800cecce815ed",
+      "prepared_config_sha256": "0a273fe271b63b6c18ae2f9e0251e42d9775ed4c7c74496bb7433e3892ab4757"
+    },
+    "beta_zero": {
+      "path": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-causal-v2-preflight-20261114/beta_zero",
+      "passed": true,
+      "steps": 6,
+      "observed_factors": {
+        "arm": "beta_zero",
+        "image_loss": "smooth_l1",
+        "kl_beta": 0.0,
+        "lambda_aux": 1.0,
+        "posterior_sampling": "sampled",
+        "initialization": "fresh",
+        "state_decoder_initialization": "fresh local g; official14 state head is never loaded",
+        "epsilon_policy": "Always consume and verify the original upstream Gaussian draw, including mu_only",
+        "main_training": false,
+        "parent_runner_sha256": "9ecbea0151c1f902647dc9e41a5a17a431ab5c4319da658b9d0cdeb5104cba27",
+        "runner_sha256": "e1d7db1efca25cdff88a7299e7f5cd31c016b0c11a661fd212c73df67647aa22"
+      },
+      "initial_state_sha256": "c933311d638c1b880d370ff85195220bdd06394cdb4ef62710fa8fa4d522e8a0",
+      "fresh_seeded_components_identical": true,
+      "all_six_data_augmentation_epsilon_hashes_equal_to_original_baseline": true,
+      "seconds_per_update_excluding_first": 3.165805986000123,
+      "cuda_peak_allocated_gib": 13.31923532485962,
+      "cuda_peak_reserved_gib": 13.73828125,
+      "first_actual_training_loss_gradient_components": {
+        "step_before_update": 0,
+        "lr_used": 3e-07,
+        "losses": {
+          "image": 1.003886103630066,
+          "state": 0.2287617176771164,
+          "weighted_kl": 0.0
+        },
+        "node_gradient_norms": {
+          "image": 0.0,
+          "state": 0.01962883397936821,
+          "weighted_kl": 0.0
+        },
+        "selected_z_gradient_norms": {
+          "image": 0.0,
+          "state": 0.04641728475689888,
+          "weighted_kl": null
+        },
+        "parameter_gradient_norms": {
+          "image": {
+            "encoder.out_proj.weight": 0.0,
+            "encoder.out_proj.bias": 0.0,
+            "vq.pre_norm.weight": 0.0,
+            "vq.mu.weight": 0.0,
+            "vq.logvar.weight": 0.0
+          },
+          "state": {
+            "encoder.out_proj.weight": 2.032872200012207,
+            "encoder.out_proj.bias": 0.026011938229203224,
+            "vq.pre_norm.weight": 0.0511040985584259,
+            "vq.mu.weight": 0.34304550290107727,
+            "vq.logvar.weight": 0.2378017157316208
+          },
+          "weighted_kl": {
+            "encoder.out_proj.weight": 0.0,
+            "encoder.out_proj.bias": 0.0,
+            "vq.pre_norm.weight": 0.0,
+            "vq.mu.weight": 0.0,
+            "vq.logvar.weight": 0.0
+          }
+        },
+        "parameter_gradient_connected": {
+          "image": {
+            "encoder.out_proj.weight": true,
+            "encoder.out_proj.bias": true,
+            "vq.pre_norm.weight": true,
+            "vq.mu.weight": true,
+            "vq.logvar.weight": true
+          },
+          "state": {
+            "encoder.out_proj.weight": true,
+            "encoder.out_proj.bias": true,
+            "vq.pre_norm.weight": true,
+            "vq.mu.weight": true,
+            "vq.logvar.weight": true
+          },
+          "weighted_kl": {
+            "encoder.out_proj.weight": true,
+            "encoder.out_proj.bias": true,
+            "vq.pre_norm.weight": true,
+            "vq.mu.weight": true,
+            "vq.logvar.weight": true
+          }
+        },
+        "posterior_sampling": "sampled",
+        "pairwise_cosines": {
+          "image__state": null,
+          "image__weighted_kl": null,
+          "state__weighted_kl": null
+        },
+        "scope": "Actual training batch and consumed epsilon. Gradients of batch-mean losses before clipping; selected decoder z is distinct from pre-LN nodes. KL has no downstream path through sampled z, but does through mu in mu_only. Parameter probes cover out_proj and VAE only. Normal backward follows."
+      },
+      "last_training_loss": 1.2117480039596558,
+      "validation_loss": 1.185892105102539,
+      "component_initialization": {
+        "scope": "fresh",
+        "fresh_seeded_components": {
+          "encoder": {
+            "sha256": "3a9a2c8a94beae21a06366dbe8c66997a8e3bab6ce898ce950c062d694a94034",
+            "state_tensors": 305
+          },
+          "vq": {
+            "sha256": "3868cdf0d2ea6db42b0b107362dbb3341aac2012d4083b97ae79c811eb8fbde5",
+            "state_tensors": 6
+          },
+          "decoder": {
+            "sha256": "cd7bf293c1a37107ad612fd43ec6bcbeafb64946a6ae3347e4cf94b5f0bff8ac",
+            "state_tensors": 128
+          },
+          "local_g": {
+            "sha256": "22fb959b28612f62f970e1dee409849f83ca39a2f400b273156295f4a25523e5",
+            "state_tensors": 10
+          }
+        },
+        "effective_components": {
+          "encoder": {
+            "sha256": "3a9a2c8a94beae21a06366dbe8c66997a8e3bab6ce898ce950c062d694a94034",
+            "state_tensors": 305
+          },
+          "vq": {
+            "sha256": "3868cdf0d2ea6db42b0b107362dbb3341aac2012d4083b97ae79c811eb8fbde5",
+            "state_tensors": 6
+          },
+          "decoder": {
+            "sha256": "cd7bf293c1a37107ad612fd43ec6bcbeafb64946a6ae3347e4cf94b5f0bff8ac",
+            "state_tensors": 128
+          },
+          "local_g": {
+            "sha256": "22fb959b28612f62f970e1dee409849f83ca39a2f400b273156295f4a25523e5",
+            "state_tensors": 10
+          }
+        }
+      },
+      "training_geometry_file": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-causal-v2-preflight-20261114/beta_zero/training_geometry.jsonl",
+      "first_actual_training_geometry": {
+        "step_before_update": 0,
+        "layers": {
+          "cross_attention_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 32.30791717610462,
+            "mean_sample_norm": 32.34029777942203,
+            "coordinate_std_mean": 1.0106288870509124,
+            "between_example_variance_sum": 2.0934569315910814,
+            "between_example_variance_fraction": 0.002001593843799745,
+            "radial_fraction_of_between_example_variation": 0.00020253154061435037,
+            "coordinate_centered_direction_variance_sum": 0.0020015714138020553
+          },
+          "encoder_layer_0_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 34.79323044304234,
+            "mean_sample_norm": 34.85744380441757,
+            "coordinate_std_mean": 1.0891805245567288,
+            "between_example_variance_sum": 4.473113384739653,
+            "between_example_variance_fraction": 0.0036814475482560213,
+            "radial_fraction_of_between_example_variation": 4.759492165096058e-05,
+            "coordinate_centered_direction_variance_sum": 0.0036793510546635167
+          },
+          "encoder_layer_1_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 37.719517868413966,
+            "mean_sample_norm": 37.814620269987685,
+            "coordinate_std_mean": 1.1813035104344625,
+            "between_example_variance_sum": 7.18774180769771,
+            "between_example_variance_fraction": 0.005026569435044094,
+            "radial_fraction_of_between_example_variation": 0.0004941701353175274,
+            "coordinate_centered_direction_variance_sum": 0.005016726164014343
+          },
+          "encoder_layer_2_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 40.07201412234702,
+            "mean_sample_norm": 40.19187334743176,
+            "coordinate_std_mean": 1.2558824318039468,
+            "between_example_variance_sum": 9.624017782508833,
+            "between_example_variance_fraction": 0.005957704204553919,
+            "radial_fraction_of_between_example_variation": 0.0003164146154935963,
+            "coordinate_centered_direction_variance_sum": 0.005951173245794456
+          },
+          "encoder_layer_3_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 42.9534873646341,
+            "mean_sample_norm": 43.09721933266408,
+            "coordinate_std_mean": 1.3463202064941147,
+            "between_example_variance_sum": 12.370559169824292,
+            "between_example_variance_fraction": 0.006660246269576942,
+            "radial_fraction_of_between_example_variation": 0.00031500437911462085,
+            "coordinate_centered_direction_variance_sum": 0.006657511256863728
+          },
+          "encoder_layer_4_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 44.747412897567884,
+            "mean_sample_norm": 44.919273425064354,
+            "coordinate_std_mean": 1.4025591253323872,
+            "between_example_variance_sum": 15.416832783485217,
+            "between_example_variance_fraction": 0.0076406143675582005,
+            "radial_fraction_of_between_example_variation": 0.0010227022460793979,
+            "coordinate_centered_direction_variance_sum": 0.0076481052984238365
+          },
+          "encoder_layer_5_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 47.056466002569294,
+            "mean_sample_norm": 47.25883900273969,
+            "coordinate_std_mean": 1.476634045256767,
+            "between_example_variance_sum": 19.093539391939196,
+            "between_example_variance_fraction": 0.008549073451764828,
+            "radial_fraction_of_between_example_variation": 0.0010404476658438801,
+            "coordinate_centered_direction_variance_sum": 0.008536131634519701
+          },
+          "encoder_layer_6_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 49.36784493653257,
+            "mean_sample_norm": 49.59159060554772,
+            "coordinate_std_mean": 1.5496895656251066,
+            "between_example_variance_sum": 22.146763198556172,
+            "between_example_variance_fraction": 0.009005198693185883,
+            "radial_fraction_of_between_example_variation": 0.00042695273978364404,
+            "coordinate_centered_direction_variance_sum": 0.008975479805719453
+          },
+          "encoder_layer_7_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 51.44673662422977,
+            "mean_sample_norm": 51.69393102948899,
+            "coordinate_std_mean": 1.6153128808319883,
+            "between_example_variance_sum": 25.52673182383856,
+            "between_example_variance_fraction": 0.009552368550239347,
+            "radial_fraction_of_between_example_variation": 0.0007691496150764693,
+            "coordinate_centered_direction_variance_sum": 0.009503827418646216
+          },
+          "encoder_layer_8_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 53.512163368995104,
+            "mean_sample_norm": 53.78526500867448,
+            "coordinate_std_mean": 1.6807597445926257,
+            "between_example_variance_sum": 29.319363551943493,
+            "between_example_variance_fraction": 0.010135040115237285,
+            "radial_fraction_of_between_example_variation": 0.00038980694840178487,
+            "coordinate_centered_direction_variance_sum": 0.010088041580533677
+          },
+          "encoder_layer_9_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 55.18024942444754,
+            "mean_sample_norm": 55.474155243340604,
+            "coordinate_std_mean": 1.7335098848780668,
+            "between_example_variance_sum": 32.53903630750763,
+            "between_example_variance_fraction": 0.01057355146352376,
+            "radial_fraction_of_between_example_variation": 0.000565948387246412,
+            "coordinate_centered_direction_variance_sum": 0.010533566092681648
+          },
+          "encoder_layer_10_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 56.39433291328746,
+            "mean_sample_norm": 56.71314340316065,
+            "coordinate_std_mean": 1.7722601683980006,
+            "between_example_variance_sum": 36.06928468626544,
+            "between_example_variance_fraction": 0.011214213421806422,
+            "radial_fraction_of_between_example_variation": 0.0005218421570944696,
+            "coordinate_centered_direction_variance_sum": 0.011182835482194982
+          },
+          "encoder_layer_11_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 58.14703618778064,
+            "mean_sample_norm": 58.480641345390396,
+            "coordinate_std_mean": 1.8275008723679527,
+            "between_example_variance_sum": 38.9183954971099,
+            "between_example_variance_fraction": 0.011379660407249173,
+            "radial_fraction_of_between_example_variation": 0.0007435599847388889,
+            "coordinate_centered_direction_variance_sum": 0.011357154718422439
+          },
+          "encoder_layer_12_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 59.86257873144707,
+            "mean_sample_norm": 60.2156712582979,
+            "coordinate_std_mean": 1.8815816821280682,
+            "between_example_variance_sum": 42.430680827529834,
+            "between_example_variance_fraction": 0.011701919595062048,
+            "radial_fraction_of_between_example_variation": 0.0008657084534103931,
+            "coordinate_centered_direction_variance_sum": 0.011672037010869999
+          },
+          "encoder_layer_13_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 62.12971194344147,
+            "mean_sample_norm": 62.49734271971012,
+            "coordinate_std_mean": 1.9529556507898869,
+            "between_example_variance_sum": 45.84154096143323,
+            "between_example_variance_fraction": 0.01173635793015059,
+            "radial_fraction_of_between_example_variation": 0.0009426862363780781,
+            "coordinate_centered_direction_variance_sum": 0.011719159529655696
+          },
+          "encoder_layer_14_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 63.39208563201631,
+            "mean_sample_norm": 63.77711738846831,
+            "coordinate_std_mean": 1.9928619779293242,
+            "between_example_variance_sum": 48.98903850384639,
+            "between_example_variance_fraction": 0.012043881940564946,
+            "radial_fraction_of_between_example_variation": 0.0010186020763890888,
+            "coordinate_centered_direction_variance_sum": 0.01203204413600413
+          },
+          "encoder_layer_15_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 64.40746745483806,
+            "mean_sample_norm": 64.81433788331174,
+            "coordinate_std_mean": 2.025027184884255,
+            "between_example_variance_sum": 52.61717636303419,
+            "between_example_variance_fraction": 0.012525098759624754,
+            "radial_fraction_of_between_example_variation": 0.0006261056829100125,
+            "coordinate_centered_direction_variance_sum": 0.012504259898432978
+          },
+          "encoder_layer_16_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 66.40827702926055,
+            "mean_sample_norm": 66.8279007166671,
+            "coordinate_std_mean": 2.0874194360378686,
+            "between_example_variance_sum": 55.95371956492559,
+            "between_example_variance_fraction": 0.012528785707984347,
+            "radial_fraction_of_between_example_variation": 0.000566648925030743,
+            "coordinate_centered_direction_variance_sum": 0.012507894708209063
+          },
+          "encoder_layer_17_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 68.29569486337253,
+            "mean_sample_norm": 68.72609846835232,
+            "coordinate_std_mean": 2.1467619823757444,
+            "between_example_variance_sum": 59.00339154508462,
+            "between_example_variance_fraction": 0.012491970652439746,
+            "radial_fraction_of_between_example_variation": 0.00047088495847548195,
+            "coordinate_centered_direction_variance_sum": 0.01247001630811713
+          },
+          "encoder_layer_18_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 70.00236049775883,
+            "mean_sample_norm": 70.44920022683857,
+            "coordinate_std_mean": 2.2005137948252025,
+            "between_example_variance_sum": 62.7812907705166,
+            "between_example_variance_fraction": 0.012649582304440396,
+            "radial_fraction_of_between_example_variation": 0.0007590484515520229,
+            "coordinate_centered_direction_variance_sum": 0.012632353361122641
+          },
+          "encoder_layer_19_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 71.51624769490138,
+            "mean_sample_norm": 71.97389666387095,
+            "coordinate_std_mean": 2.247781315730376,
+            "between_example_variance_sum": 65.70784832269037,
+            "between_example_variance_fraction": 0.01268422341684617,
+            "radial_fraction_of_between_example_variation": 0.0011680884683610885,
+            "coordinate_centered_direction_variance_sum": 0.012673898976470616
+          },
+          "encoder_layer_20_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 73.34638990310536,
+            "mean_sample_norm": 73.81660930286202,
+            "coordinate_std_mean": 2.3056266133528314,
+            "between_example_variance_sum": 69.25593569418409,
+            "between_example_variance_fraction": 0.012709962532645102,
+            "radial_fraction_of_between_example_variation": 0.0009524229762983286,
+            "coordinate_centered_direction_variance_sum": 0.012687009838437447
+          },
+          "encoder_layer_21_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 74.96034427054897,
+            "mean_sample_norm": 75.446629607501,
+            "coordinate_std_mean": 2.3566292261117026,
+            "between_example_variance_sum": 73.19274980769782,
+            "between_example_variance_fraction": 0.012858325217125396,
+            "radial_fraction_of_between_example_variation": 0.0011706490730566722,
+            "coordinate_centered_direction_variance_sum": 0.012832205714848856
+          },
+          "encoder_layer_22_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 76.32767259651959,
+            "mean_sample_norm": 76.8370075056672,
+            "coordinate_std_mean": 2.399979899311725,
+            "between_example_variance_sum": 78.04860032633634,
+            "between_example_variance_fraction": 0.01321969850503511,
+            "radial_fraction_of_between_example_variation": 0.0007187592876782198,
+            "coordinate_centered_direction_variance_sum": 0.013198695226061964
+          },
+          "encoder_layer_23_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 77.91181337159384,
+            "mean_sample_norm": 78.4380772026613,
+            "coordinate_std_mean": 2.4495768610710624,
+            "between_example_variance_sum": 82.31536035659579,
+            "between_example_variance_fraction": 0.013379029180038563,
+            "radial_fraction_of_between_example_variation": 0.0005259132766372351,
+            "coordinate_centered_direction_variance_sum": 0.013368562866221415
+          },
+          "pre_norm_nodes": {
+            "samples": 4,
+            "dimensions": 32,
+            "mean_vector_norm": 8.525528433921451,
+            "mean_sample_norm": 8.568396336628066,
+            "coordinate_std_mean": 1.5051553990991715,
+            "between_example_variance_sum": 0.8356866678223014,
+            "between_example_variance_fraction": 0.011366743887710189,
+            "radial_fraction_of_between_example_variation": 0.13648902913808228,
+            "coordinate_centered_direction_variance_sum": 0.010210013815019396
+          },
+          "vae_layernorm_output": {
+            "samples": 4,
+            "dimensions": 32,
+            "mean_vector_norm": 5.627889571715651,
+            "mean_sample_norm": 5.656841875860395,
+            "coordinate_std_mean": 0.9999978126302289,
+            "between_example_variance_sum": 0.32671897706364916,
+            "between_example_variance_fraction": 0.010210012699335934,
+            "radial_fraction_of_between_example_variation": 0.0004954942596495397,
+            "coordinate_centered_direction_variance_sum": 0.010210013597525817
+          },
+          "posterior_mu": {
+            "samples": 4,
+            "dimensions": 32,
+            "mean_vector_norm": 3.277459551006616,
+            "mean_sample_norm": 3.293254328497568,
+            "coordinate_std_mean": 0.5788461966931768,
+            "between_example_variance_sum": 0.10534872473439424,
+            "between_example_variance_fraction": 0.00971216486211509,
+            "radial_fraction_of_between_example_variation": 0.019097678390940197,
+            "coordinate_centered_direction_variance_sum": 0.009500551311636001
+          },
+          "decoder_z": {
+            "samples": 4,
+            "dimensions": 32,
+            "mean_vector_norm": 4.626608942332503,
+            "mean_sample_norm": 7.175088888198259,
+            "coordinate_std_mean": 1.2600239483371767,
+            "between_example_variance_sum": 31.28549331924969,
+            "between_example_variance_fraction": 0.5937539839284895,
+            "radial_fraction_of_between_example_variation": 0.04680968841589344,
+            "coordinate_centered_direction_variance_sum": 0.5881244374467669
+          }
+        },
+        "scope": "Across-example geometry in the actual B4 training batch; both current and future vary. Radial fractions are about the batch mean, not a fixed-current intervention."
+      },
+      "recorded_module_gradient_norm_lower_bound_initial": 6.338732160257776,
+      "gradient_norm_scope": "Recorded combined module norms exclude VAE parameters; this is a lower bound on full optimizer gradient norm, not an exact clipping coefficient.",
+      "executed_requested_config_sha256": "1f209f084e0c727e22bc9ca735d59fd2de7d8c7bfb3948474cdcb1f5f69fef5a",
+      "prepared_config_sha256": "2f3b573e5b720d7a35e7595ebfc235c1c47cb8b82125eb29dd92a85ea5521dc4"
+    },
+    "mu_only": {
+      "path": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-causal-v2-preflight-20261114/mu_only",
+      "passed": true,
+      "steps": 6,
+      "observed_factors": {
+        "arm": "mu_only",
+        "image_loss": "smooth_l1",
+        "kl_beta": 5e-05,
+        "lambda_aux": 1.0,
+        "posterior_sampling": "mu_only",
+        "initialization": "fresh",
+        "state_decoder_initialization": "fresh local g; official14 state head is never loaded",
+        "epsilon_policy": "Always consume and verify the original upstream Gaussian draw, including mu_only",
+        "main_training": false,
+        "parent_runner_sha256": "9ecbea0151c1f902647dc9e41a5a17a431ab5c4319da658b9d0cdeb5104cba27",
+        "runner_sha256": "e1d7db1efca25cdff88a7299e7f5cd31c016b0c11a661fd212c73df67647aa22"
+      },
+      "initial_state_sha256": "c933311d638c1b880d370ff85195220bdd06394cdb4ef62710fa8fa4d522e8a0",
+      "fresh_seeded_components_identical": true,
+      "all_six_data_augmentation_epsilon_hashes_equal_to_original_baseline": true,
+      "seconds_per_update_excluding_first": 3.166895538000972,
+      "cuda_peak_allocated_gib": 13.319233894348145,
+      "cuda_peak_reserved_gib": 13.73828125,
+      "first_actual_training_loss_gradient_components": {
+        "step_before_update": 0,
+        "lr_used": 3e-07,
+        "losses": {
+          "image": 1.003886103630066,
+          "state": 0.1064852774143219,
+          "weighted_kl": 0.00043045624624937773
+        },
+        "node_gradient_norms": {
+          "image": 0.0,
+          "state": 0.011288370005786419,
+          "weighted_kl": 3.0112601962173358e-05
+        },
+        "selected_z_gradient_norms": {
+          "image": 0.0,
+          "state": 0.0320391021668911,
+          "weighted_kl": 8.233729749917984e-05
+        },
+        "parameter_gradient_norms": {
+          "image": {
+            "encoder.out_proj.weight": 0.0,
+            "encoder.out_proj.bias": 0.0,
+            "vq.pre_norm.weight": 0.0,
+            "vq.mu.weight": 0.0,
+            "vq.logvar.weight": 0.0
+          },
+          "state": {
+            "encoder.out_proj.weight": 1.4964457750320435,
+            "encoder.out_proj.bias": 0.019202820956707,
+            "vq.pre_norm.weight": 0.03194732218980789,
+            "vq.mu.weight": 0.29645830392837524,
+            "vq.logvar.weight": 0.0
+          },
+          "weighted_kl": {
+            "encoder.out_proj.weight": 0.004653416574001312,
+            "encoder.out_proj.bias": 5.978272020001896e-05,
+            "vq.pre_norm.weight": 0.0002573586243670434,
+            "vq.mu.weight": 0.0009222939261235297,
+            "vq.logvar.weight": 0.000664093007799238
+          }
+        },
+        "parameter_gradient_connected": {
+          "image": {
+            "encoder.out_proj.weight": true,
+            "encoder.out_proj.bias": true,
+            "vq.pre_norm.weight": true,
+            "vq.mu.weight": true,
+            "vq.logvar.weight": false
+          },
+          "state": {
+            "encoder.out_proj.weight": true,
+            "encoder.out_proj.bias": true,
+            "vq.pre_norm.weight": true,
+            "vq.mu.weight": true,
+            "vq.logvar.weight": false
+          },
+          "weighted_kl": {
+            "encoder.out_proj.weight": true,
+            "encoder.out_proj.bias": true,
+            "vq.pre_norm.weight": true,
+            "vq.mu.weight": true,
+            "vq.logvar.weight": true
+          }
+        },
+        "posterior_sampling": "mu_only",
+        "pairwise_cosines": {
+          "image__state": null,
+          "image__weighted_kl": null,
+          "state__weighted_kl": 0.5183570384979248
+        },
+        "scope": "Actual training batch and consumed epsilon. Gradients of batch-mean losses before clipping; selected decoder z is distinct from pre-LN nodes. KL has no downstream path through sampled z, but does through mu in mu_only. Parameter probes cover out_proj and VAE only. Normal backward follows."
+      },
+      "last_training_loss": 1.1333487033843994,
+      "validation_loss": 1.1839241981506348,
+      "component_initialization": {
+        "scope": "fresh",
+        "fresh_seeded_components": {
+          "encoder": {
+            "sha256": "3a9a2c8a94beae21a06366dbe8c66997a8e3bab6ce898ce950c062d694a94034",
+            "state_tensors": 305
+          },
+          "vq": {
+            "sha256": "3868cdf0d2ea6db42b0b107362dbb3341aac2012d4083b97ae79c811eb8fbde5",
+            "state_tensors": 6
+          },
+          "decoder": {
+            "sha256": "cd7bf293c1a37107ad612fd43ec6bcbeafb64946a6ae3347e4cf94b5f0bff8ac",
+            "state_tensors": 128
+          },
+          "local_g": {
+            "sha256": "22fb959b28612f62f970e1dee409849f83ca39a2f400b273156295f4a25523e5",
+            "state_tensors": 10
+          }
+        },
+        "effective_components": {
+          "encoder": {
+            "sha256": "3a9a2c8a94beae21a06366dbe8c66997a8e3bab6ce898ce950c062d694a94034",
+            "state_tensors": 305
+          },
+          "vq": {
+            "sha256": "3868cdf0d2ea6db42b0b107362dbb3341aac2012d4083b97ae79c811eb8fbde5",
+            "state_tensors": 6
+          },
+          "decoder": {
+            "sha256": "cd7bf293c1a37107ad612fd43ec6bcbeafb64946a6ae3347e4cf94b5f0bff8ac",
+            "state_tensors": 128
+          },
+          "local_g": {
+            "sha256": "22fb959b28612f62f970e1dee409849f83ca39a2f400b273156295f4a25523e5",
+            "state_tensors": 10
+          }
+        }
+      },
+      "training_geometry_file": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-causal-v2-preflight-20261114/mu_only/training_geometry.jsonl",
+      "first_actual_training_geometry": {
+        "step_before_update": 0,
+        "layers": {
+          "cross_attention_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 32.30791717610462,
+            "mean_sample_norm": 32.34029777942203,
+            "coordinate_std_mean": 1.0106288870509124,
+            "between_example_variance_sum": 2.0934569315910814,
+            "between_example_variance_fraction": 0.002001593843799745,
+            "radial_fraction_of_between_example_variation": 0.00020253154061435037,
+            "coordinate_centered_direction_variance_sum": 0.0020015714138020553
+          },
+          "encoder_layer_0_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 34.79323044304234,
+            "mean_sample_norm": 34.85744380441757,
+            "coordinate_std_mean": 1.0891805245567288,
+            "between_example_variance_sum": 4.473113384739653,
+            "between_example_variance_fraction": 0.0036814475482560213,
+            "radial_fraction_of_between_example_variation": 4.759492165096058e-05,
+            "coordinate_centered_direction_variance_sum": 0.0036793510546635167
+          },
+          "encoder_layer_1_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 37.719517868413966,
+            "mean_sample_norm": 37.814620269987685,
+            "coordinate_std_mean": 1.1813035104344625,
+            "between_example_variance_sum": 7.18774180769771,
+            "between_example_variance_fraction": 0.005026569435044094,
+            "radial_fraction_of_between_example_variation": 0.0004941701353175274,
+            "coordinate_centered_direction_variance_sum": 0.005016726164014343
+          },
+          "encoder_layer_2_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 40.07201412234702,
+            "mean_sample_norm": 40.19187334743176,
+            "coordinate_std_mean": 1.2558824318039468,
+            "between_example_variance_sum": 9.624017782508833,
+            "between_example_variance_fraction": 0.005957704204553919,
+            "radial_fraction_of_between_example_variation": 0.0003164146154935963,
+            "coordinate_centered_direction_variance_sum": 0.005951173245794456
+          },
+          "encoder_layer_3_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 42.9534873646341,
+            "mean_sample_norm": 43.09721933266408,
+            "coordinate_std_mean": 1.3463202064941147,
+            "between_example_variance_sum": 12.370559169824292,
+            "between_example_variance_fraction": 0.006660246269576942,
+            "radial_fraction_of_between_example_variation": 0.00031500437911462085,
+            "coordinate_centered_direction_variance_sum": 0.006657511256863728
+          },
+          "encoder_layer_4_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 44.747412897567884,
+            "mean_sample_norm": 44.919273425064354,
+            "coordinate_std_mean": 1.4025591253323872,
+            "between_example_variance_sum": 15.416832783485217,
+            "between_example_variance_fraction": 0.0076406143675582005,
+            "radial_fraction_of_between_example_variation": 0.0010227022460793979,
+            "coordinate_centered_direction_variance_sum": 0.0076481052984238365
+          },
+          "encoder_layer_5_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 47.056466002569294,
+            "mean_sample_norm": 47.25883900273969,
+            "coordinate_std_mean": 1.476634045256767,
+            "between_example_variance_sum": 19.093539391939196,
+            "between_example_variance_fraction": 0.008549073451764828,
+            "radial_fraction_of_between_example_variation": 0.0010404476658438801,
+            "coordinate_centered_direction_variance_sum": 0.008536131634519701
+          },
+          "encoder_layer_6_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 49.36784493653257,
+            "mean_sample_norm": 49.59159060554772,
+            "coordinate_std_mean": 1.5496895656251066,
+            "between_example_variance_sum": 22.146763198556172,
+            "between_example_variance_fraction": 0.009005198693185883,
+            "radial_fraction_of_between_example_variation": 0.00042695273978364404,
+            "coordinate_centered_direction_variance_sum": 0.008975479805719453
+          },
+          "encoder_layer_7_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 51.44673662422977,
+            "mean_sample_norm": 51.69393102948899,
+            "coordinate_std_mean": 1.6153128808319883,
+            "between_example_variance_sum": 25.52673182383856,
+            "between_example_variance_fraction": 0.009552368550239347,
+            "radial_fraction_of_between_example_variation": 0.0007691496150764693,
+            "coordinate_centered_direction_variance_sum": 0.009503827418646216
+          },
+          "encoder_layer_8_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 53.512163368995104,
+            "mean_sample_norm": 53.78526500867448,
+            "coordinate_std_mean": 1.6807597445926257,
+            "between_example_variance_sum": 29.319363551943493,
+            "between_example_variance_fraction": 0.010135040115237285,
+            "radial_fraction_of_between_example_variation": 0.00038980694840178487,
+            "coordinate_centered_direction_variance_sum": 0.010088041580533677
+          },
+          "encoder_layer_9_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 55.18024942444754,
+            "mean_sample_norm": 55.474155243340604,
+            "coordinate_std_mean": 1.7335098848780668,
+            "between_example_variance_sum": 32.53903630750763,
+            "between_example_variance_fraction": 0.01057355146352376,
+            "radial_fraction_of_between_example_variation": 0.000565948387246412,
+            "coordinate_centered_direction_variance_sum": 0.010533566092681648
+          },
+          "encoder_layer_10_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 56.39433291328746,
+            "mean_sample_norm": 56.71314340316065,
+            "coordinate_std_mean": 1.7722601683980006,
+            "between_example_variance_sum": 36.06928468626544,
+            "between_example_variance_fraction": 0.011214213421806422,
+            "radial_fraction_of_between_example_variation": 0.0005218421570944696,
+            "coordinate_centered_direction_variance_sum": 0.011182835482194982
+          },
+          "encoder_layer_11_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 58.14703618778064,
+            "mean_sample_norm": 58.480641345390396,
+            "coordinate_std_mean": 1.8275008723679527,
+            "between_example_variance_sum": 38.9183954971099,
+            "between_example_variance_fraction": 0.011379660407249173,
+            "radial_fraction_of_between_example_variation": 0.0007435599847388889,
+            "coordinate_centered_direction_variance_sum": 0.011357154718422439
+          },
+          "encoder_layer_12_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 59.86257873144707,
+            "mean_sample_norm": 60.2156712582979,
+            "coordinate_std_mean": 1.8815816821280682,
+            "between_example_variance_sum": 42.430680827529834,
+            "between_example_variance_fraction": 0.011701919595062048,
+            "radial_fraction_of_between_example_variation": 0.0008657084534103931,
+            "coordinate_centered_direction_variance_sum": 0.011672037010869999
+          },
+          "encoder_layer_13_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 62.12971194344147,
+            "mean_sample_norm": 62.49734271971012,
+            "coordinate_std_mean": 1.9529556507898869,
+            "between_example_variance_sum": 45.84154096143323,
+            "between_example_variance_fraction": 0.01173635793015059,
+            "radial_fraction_of_between_example_variation": 0.0009426862363780781,
+            "coordinate_centered_direction_variance_sum": 0.011719159529655696
+          },
+          "encoder_layer_14_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 63.39208563201631,
+            "mean_sample_norm": 63.77711738846831,
+            "coordinate_std_mean": 1.9928619779293242,
+            "between_example_variance_sum": 48.98903850384639,
+            "between_example_variance_fraction": 0.012043881940564946,
+            "radial_fraction_of_between_example_variation": 0.0010186020763890888,
+            "coordinate_centered_direction_variance_sum": 0.01203204413600413
+          },
+          "encoder_layer_15_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 64.40746745483806,
+            "mean_sample_norm": 64.81433788331174,
+            "coordinate_std_mean": 2.025027184884255,
+            "between_example_variance_sum": 52.61717636303419,
+            "between_example_variance_fraction": 0.012525098759624754,
+            "radial_fraction_of_between_example_variation": 0.0006261056829100125,
+            "coordinate_centered_direction_variance_sum": 0.012504259898432978
+          },
+          "encoder_layer_16_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 66.40827702926055,
+            "mean_sample_norm": 66.8279007166671,
+            "coordinate_std_mean": 2.0874194360378686,
+            "between_example_variance_sum": 55.95371956492559,
+            "between_example_variance_fraction": 0.012528785707984347,
+            "radial_fraction_of_between_example_variation": 0.000566648925030743,
+            "coordinate_centered_direction_variance_sum": 0.012507894708209063
+          },
+          "encoder_layer_17_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 68.29569486337253,
+            "mean_sample_norm": 68.72609846835232,
+            "coordinate_std_mean": 2.1467619823757444,
+            "between_example_variance_sum": 59.00339154508462,
+            "between_example_variance_fraction": 0.012491970652439746,
+            "radial_fraction_of_between_example_variation": 0.00047088495847548195,
+            "coordinate_centered_direction_variance_sum": 0.01247001630811713
+          },
+          "encoder_layer_18_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 70.00236049775883,
+            "mean_sample_norm": 70.44920022683857,
+            "coordinate_std_mean": 2.2005137948252025,
+            "between_example_variance_sum": 62.7812907705166,
+            "between_example_variance_fraction": 0.012649582304440396,
+            "radial_fraction_of_between_example_variation": 0.0007590484515520229,
+            "coordinate_centered_direction_variance_sum": 0.012632353361122641
+          },
+          "encoder_layer_19_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 71.51624769490138,
+            "mean_sample_norm": 71.97389666387095,
+            "coordinate_std_mean": 2.247781315730376,
+            "between_example_variance_sum": 65.70784832269037,
+            "between_example_variance_fraction": 0.01268422341684617,
+            "radial_fraction_of_between_example_variation": 0.0011680884683610885,
+            "coordinate_centered_direction_variance_sum": 0.012673898976470616
+          },
+          "encoder_layer_20_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 73.34638990310536,
+            "mean_sample_norm": 73.81660930286202,
+            "coordinate_std_mean": 2.3056266133528314,
+            "between_example_variance_sum": 69.25593569418409,
+            "between_example_variance_fraction": 0.012709962532645102,
+            "radial_fraction_of_between_example_variation": 0.0009524229762983286,
+            "coordinate_centered_direction_variance_sum": 0.012687009838437447
+          },
+          "encoder_layer_21_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 74.96034427054897,
+            "mean_sample_norm": 75.446629607501,
+            "coordinate_std_mean": 2.3566292261117026,
+            "between_example_variance_sum": 73.19274980769782,
+            "between_example_variance_fraction": 0.012858325217125396,
+            "radial_fraction_of_between_example_variation": 0.0011706490730566722,
+            "coordinate_centered_direction_variance_sum": 0.012832205714848856
+          },
+          "encoder_layer_22_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 76.32767259651959,
+            "mean_sample_norm": 76.8370075056672,
+            "coordinate_std_mean": 2.399979899311725,
+            "between_example_variance_sum": 78.04860032633634,
+            "between_example_variance_fraction": 0.01321969850503511,
+            "radial_fraction_of_between_example_variation": 0.0007187592876782198,
+            "coordinate_centered_direction_variance_sum": 0.013198695226061964
+          },
+          "encoder_layer_23_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 77.91181337159384,
+            "mean_sample_norm": 78.4380772026613,
+            "coordinate_std_mean": 2.4495768610710624,
+            "between_example_variance_sum": 82.31536035659579,
+            "between_example_variance_fraction": 0.013379029180038563,
+            "radial_fraction_of_between_example_variation": 0.0005259132766372351,
+            "coordinate_centered_direction_variance_sum": 0.013368562866221415
+          },
+          "pre_norm_nodes": {
+            "samples": 4,
+            "dimensions": 32,
+            "mean_vector_norm": 8.525528433921451,
+            "mean_sample_norm": 8.568396336628066,
+            "coordinate_std_mean": 1.5051553990991715,
+            "between_example_variance_sum": 0.8356866678223014,
+            "between_example_variance_fraction": 0.011366743887710189,
+            "radial_fraction_of_between_example_variation": 0.13648902913808228,
+            "coordinate_centered_direction_variance_sum": 0.010210013815019396
+          },
+          "vae_layernorm_output": {
+            "samples": 4,
+            "dimensions": 32,
+            "mean_vector_norm": 5.627889571715651,
+            "mean_sample_norm": 5.656841875860395,
+            "coordinate_std_mean": 0.9999978126302289,
+            "between_example_variance_sum": 0.32671897706364916,
+            "between_example_variance_fraction": 0.010210012699335934,
+            "radial_fraction_of_between_example_variation": 0.0004954942596495397,
+            "coordinate_centered_direction_variance_sum": 0.010210013597525817
+          },
+          "posterior_mu": {
+            "samples": 4,
+            "dimensions": 32,
+            "mean_vector_norm": 3.277459551006616,
+            "mean_sample_norm": 3.293254328497568,
+            "coordinate_std_mean": 0.5788461966931768,
+            "between_example_variance_sum": 0.10534872473439424,
+            "between_example_variance_fraction": 0.00971216486211509,
+            "radial_fraction_of_between_example_variation": 0.019097678390940197,
+            "coordinate_centered_direction_variance_sum": 0.009500551311636001
+          },
+          "decoder_z": {
+            "samples": 4,
+            "dimensions": 32,
+            "mean_vector_norm": 3.277459551006616,
+            "mean_sample_norm": 3.293254328497568,
+            "coordinate_std_mean": 0.5788461966931768,
+            "between_example_variance_sum": 0.10534872473439424,
+            "between_example_variance_fraction": 0.00971216486211509,
+            "radial_fraction_of_between_example_variation": 0.019097678390940197,
+            "coordinate_centered_direction_variance_sum": 0.009500551311636001
+          }
+        },
+        "scope": "Across-example geometry in the actual B4 training batch; both current and future vary. Radial fractions are about the batch mean, not a fixed-current intervention."
+      },
+      "recorded_module_gradient_norm_lower_bound_initial": 4.017526709188601,
+      "gradient_norm_scope": "Recorded combined module norms exclude VAE parameters; this is a lower bound on full optimizer gradient norm, not an exact clipping coefficient.",
+      "executed_requested_config_sha256": "8b95f0ded0c7e74e9727bbfe95dccf94632b6194ff43676b9348d53f2194faee",
+      "prepared_config_sha256": "1c77a4b61a1e2e5e53a5ba30c2af27fce59721efd221c46b78198ccb117f4916"
+    },
+    "g_zero": {
+      "path": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-causal-v2-preflight-20261114/g_zero",
+      "passed": true,
+      "steps": 6,
+      "observed_factors": {
+        "arm": "g_zero",
+        "image_loss": "smooth_l1",
+        "kl_beta": 5e-05,
+        "lambda_aux": 0.0,
+        "posterior_sampling": "sampled",
+        "initialization": "fresh",
+        "state_decoder_initialization": "fresh local g; official14 state head is never loaded",
+        "epsilon_policy": "Always consume and verify the original upstream Gaussian draw, including mu_only",
+        "main_training": false,
+        "parent_runner_sha256": "9ecbea0151c1f902647dc9e41a5a17a431ab5c4319da658b9d0cdeb5104cba27",
+        "runner_sha256": "e1d7db1efca25cdff88a7299e7f5cd31c016b0c11a661fd212c73df67647aa22"
+      },
+      "initial_state_sha256": "c933311d638c1b880d370ff85195220bdd06394cdb4ef62710fa8fa4d522e8a0",
+      "fresh_seeded_components_identical": true,
+      "all_six_data_augmentation_epsilon_hashes_equal_to_original_baseline": true,
+      "seconds_per_update_excluding_first": 3.1345085259999905,
+      "cuda_peak_allocated_gib": 13.31923532485962,
+      "cuda_peak_reserved_gib": 13.73828125,
+      "first_actual_training_loss_gradient_components": {
+        "step_before_update": 0,
+        "lr_used": 3e-07,
+        "losses": {
+          "image": 1.003886103630066,
+          "state": 0.0,
+          "weighted_kl": 0.00043045624624937773
+        },
+        "node_gradient_norms": {
+          "image": 0.0,
+          "state": 0.0,
+          "weighted_kl": 3.0112601962173358e-05
+        },
+        "selected_z_gradient_norms": {
+          "image": 0.0,
+          "state": 0.0,
+          "weighted_kl": null
+        },
+        "parameter_gradient_norms": {
+          "image": {
+            "encoder.out_proj.weight": 0.0,
+            "encoder.out_proj.bias": 0.0,
+            "vq.pre_norm.weight": 0.0,
+            "vq.mu.weight": 0.0,
+            "vq.logvar.weight": 0.0
+          },
+          "state": {
+            "encoder.out_proj.weight": 0.0,
+            "encoder.out_proj.bias": 0.0,
+            "vq.pre_norm.weight": 0.0,
+            "vq.mu.weight": 0.0,
+            "vq.logvar.weight": 0.0
+          },
+          "weighted_kl": {
+            "encoder.out_proj.weight": 0.004653416574001312,
+            "encoder.out_proj.bias": 5.978272020001896e-05,
+            "vq.pre_norm.weight": 0.0002573586243670434,
+            "vq.mu.weight": 0.0009222939261235297,
+            "vq.logvar.weight": 0.000664093007799238
+          }
+        },
+        "parameter_gradient_connected": {
+          "image": {
+            "encoder.out_proj.weight": true,
+            "encoder.out_proj.bias": true,
+            "vq.pre_norm.weight": true,
+            "vq.mu.weight": true,
+            "vq.logvar.weight": true
+          },
+          "state": {
+            "encoder.out_proj.weight": true,
+            "encoder.out_proj.bias": true,
+            "vq.pre_norm.weight": true,
+            "vq.mu.weight": true,
+            "vq.logvar.weight": true
+          },
+          "weighted_kl": {
+            "encoder.out_proj.weight": true,
+            "encoder.out_proj.bias": true,
+            "vq.pre_norm.weight": true,
+            "vq.mu.weight": true,
+            "vq.logvar.weight": true
+          }
+        },
+        "posterior_sampling": "sampled",
+        "pairwise_cosines": {
+          "image__state": null,
+          "image__weighted_kl": null,
+          "state__weighted_kl": null
+        },
+        "scope": "Actual training batch and consumed epsilon. Gradients of batch-mean losses before clipping; selected decoder z is distinct from pre-LN nodes. KL has no downstream path through sampled z, but does through mu in mu_only. Parameter probes cover out_proj and VAE only. Normal backward follows."
+      },
+      "last_training_loss": 1.0081074237823486,
+      "validation_loss": 0.9987934827804565,
+      "component_initialization": {
+        "scope": "fresh",
+        "fresh_seeded_components": {
+          "encoder": {
+            "sha256": "3a9a2c8a94beae21a06366dbe8c66997a8e3bab6ce898ce950c062d694a94034",
+            "state_tensors": 305
+          },
+          "vq": {
+            "sha256": "3868cdf0d2ea6db42b0b107362dbb3341aac2012d4083b97ae79c811eb8fbde5",
+            "state_tensors": 6
+          },
+          "decoder": {
+            "sha256": "cd7bf293c1a37107ad612fd43ec6bcbeafb64946a6ae3347e4cf94b5f0bff8ac",
+            "state_tensors": 128
+          },
+          "local_g": {
+            "sha256": "22fb959b28612f62f970e1dee409849f83ca39a2f400b273156295f4a25523e5",
+            "state_tensors": 10
+          }
+        },
+        "effective_components": {
+          "encoder": {
+            "sha256": "3a9a2c8a94beae21a06366dbe8c66997a8e3bab6ce898ce950c062d694a94034",
+            "state_tensors": 305
+          },
+          "vq": {
+            "sha256": "3868cdf0d2ea6db42b0b107362dbb3341aac2012d4083b97ae79c811eb8fbde5",
+            "state_tensors": 6
+          },
+          "decoder": {
+            "sha256": "cd7bf293c1a37107ad612fd43ec6bcbeafb64946a6ae3347e4cf94b5f0bff8ac",
+            "state_tensors": 128
+          },
+          "local_g": {
+            "sha256": "22fb959b28612f62f970e1dee409849f83ca39a2f400b273156295f4a25523e5",
+            "state_tensors": 10
+          }
+        }
+      },
+      "training_geometry_file": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-causal-v2-preflight-20261114/g_zero/training_geometry.jsonl",
+      "first_actual_training_geometry": {
+        "step_before_update": 0,
+        "layers": {
+          "cross_attention_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 32.30791717610462,
+            "mean_sample_norm": 32.34029777942203,
+            "coordinate_std_mean": 1.0106288870509124,
+            "between_example_variance_sum": 2.0934569315910814,
+            "between_example_variance_fraction": 0.002001593843799745,
+            "radial_fraction_of_between_example_variation": 0.00020253154061435037,
+            "coordinate_centered_direction_variance_sum": 0.0020015714138020553
+          },
+          "encoder_layer_0_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 34.79323044304234,
+            "mean_sample_norm": 34.85744380441757,
+            "coordinate_std_mean": 1.0891805245567288,
+            "between_example_variance_sum": 4.473113384739653,
+            "between_example_variance_fraction": 0.0036814475482560213,
+            "radial_fraction_of_between_example_variation": 4.759492165096058e-05,
+            "coordinate_centered_direction_variance_sum": 0.0036793510546635167
+          },
+          "encoder_layer_1_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 37.719517868413966,
+            "mean_sample_norm": 37.814620269987685,
+            "coordinate_std_mean": 1.1813035104344625,
+            "between_example_variance_sum": 7.18774180769771,
+            "between_example_variance_fraction": 0.005026569435044094,
+            "radial_fraction_of_between_example_variation": 0.0004941701353175274,
+            "coordinate_centered_direction_variance_sum": 0.005016726164014343
+          },
+          "encoder_layer_2_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 40.07201412234702,
+            "mean_sample_norm": 40.19187334743176,
+            "coordinate_std_mean": 1.2558824318039468,
+            "between_example_variance_sum": 9.624017782508833,
+            "between_example_variance_fraction": 0.005957704204553919,
+            "radial_fraction_of_between_example_variation": 0.0003164146154935963,
+            "coordinate_centered_direction_variance_sum": 0.005951173245794456
+          },
+          "encoder_layer_3_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 42.9534873646341,
+            "mean_sample_norm": 43.09721933266408,
+            "coordinate_std_mean": 1.3463202064941147,
+            "between_example_variance_sum": 12.370559169824292,
+            "between_example_variance_fraction": 0.006660246269576942,
+            "radial_fraction_of_between_example_variation": 0.00031500437911462085,
+            "coordinate_centered_direction_variance_sum": 0.006657511256863728
+          },
+          "encoder_layer_4_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 44.747412897567884,
+            "mean_sample_norm": 44.919273425064354,
+            "coordinate_std_mean": 1.4025591253323872,
+            "between_example_variance_sum": 15.416832783485217,
+            "between_example_variance_fraction": 0.0076406143675582005,
+            "radial_fraction_of_between_example_variation": 0.0010227022460793979,
+            "coordinate_centered_direction_variance_sum": 0.0076481052984238365
+          },
+          "encoder_layer_5_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 47.056466002569294,
+            "mean_sample_norm": 47.25883900273969,
+            "coordinate_std_mean": 1.476634045256767,
+            "between_example_variance_sum": 19.093539391939196,
+            "between_example_variance_fraction": 0.008549073451764828,
+            "radial_fraction_of_between_example_variation": 0.0010404476658438801,
+            "coordinate_centered_direction_variance_sum": 0.008536131634519701
+          },
+          "encoder_layer_6_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 49.36784493653257,
+            "mean_sample_norm": 49.59159060554772,
+            "coordinate_std_mean": 1.5496895656251066,
+            "between_example_variance_sum": 22.146763198556172,
+            "between_example_variance_fraction": 0.009005198693185883,
+            "radial_fraction_of_between_example_variation": 0.00042695273978364404,
+            "coordinate_centered_direction_variance_sum": 0.008975479805719453
+          },
+          "encoder_layer_7_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 51.44673662422977,
+            "mean_sample_norm": 51.69393102948899,
+            "coordinate_std_mean": 1.6153128808319883,
+            "between_example_variance_sum": 25.52673182383856,
+            "between_example_variance_fraction": 0.009552368550239347,
+            "radial_fraction_of_between_example_variation": 0.0007691496150764693,
+            "coordinate_centered_direction_variance_sum": 0.009503827418646216
+          },
+          "encoder_layer_8_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 53.512163368995104,
+            "mean_sample_norm": 53.78526500867448,
+            "coordinate_std_mean": 1.6807597445926257,
+            "between_example_variance_sum": 29.319363551943493,
+            "between_example_variance_fraction": 0.010135040115237285,
+            "radial_fraction_of_between_example_variation": 0.00038980694840178487,
+            "coordinate_centered_direction_variance_sum": 0.010088041580533677
+          },
+          "encoder_layer_9_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 55.18024942444754,
+            "mean_sample_norm": 55.474155243340604,
+            "coordinate_std_mean": 1.7335098848780668,
+            "between_example_variance_sum": 32.53903630750763,
+            "between_example_variance_fraction": 0.01057355146352376,
+            "radial_fraction_of_between_example_variation": 0.000565948387246412,
+            "coordinate_centered_direction_variance_sum": 0.010533566092681648
+          },
+          "encoder_layer_10_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 56.39433291328746,
+            "mean_sample_norm": 56.71314340316065,
+            "coordinate_std_mean": 1.7722601683980006,
+            "between_example_variance_sum": 36.06928468626544,
+            "between_example_variance_fraction": 0.011214213421806422,
+            "radial_fraction_of_between_example_variation": 0.0005218421570944696,
+            "coordinate_centered_direction_variance_sum": 0.011182835482194982
+          },
+          "encoder_layer_11_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 58.14703618778064,
+            "mean_sample_norm": 58.480641345390396,
+            "coordinate_std_mean": 1.8275008723679527,
+            "between_example_variance_sum": 38.9183954971099,
+            "between_example_variance_fraction": 0.011379660407249173,
+            "radial_fraction_of_between_example_variation": 0.0007435599847388889,
+            "coordinate_centered_direction_variance_sum": 0.011357154718422439
+          },
+          "encoder_layer_12_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 59.86257873144707,
+            "mean_sample_norm": 60.2156712582979,
+            "coordinate_std_mean": 1.8815816821280682,
+            "between_example_variance_sum": 42.430680827529834,
+            "between_example_variance_fraction": 0.011701919595062048,
+            "radial_fraction_of_between_example_variation": 0.0008657084534103931,
+            "coordinate_centered_direction_variance_sum": 0.011672037010869999
+          },
+          "encoder_layer_13_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 62.12971194344147,
+            "mean_sample_norm": 62.49734271971012,
+            "coordinate_std_mean": 1.9529556507898869,
+            "between_example_variance_sum": 45.84154096143323,
+            "between_example_variance_fraction": 0.01173635793015059,
+            "radial_fraction_of_between_example_variation": 0.0009426862363780781,
+            "coordinate_centered_direction_variance_sum": 0.011719159529655696
+          },
+          "encoder_layer_14_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 63.39208563201631,
+            "mean_sample_norm": 63.77711738846831,
+            "coordinate_std_mean": 1.9928619779293242,
+            "between_example_variance_sum": 48.98903850384639,
+            "between_example_variance_fraction": 0.012043881940564946,
+            "radial_fraction_of_between_example_variation": 0.0010186020763890888,
+            "coordinate_centered_direction_variance_sum": 0.01203204413600413
+          },
+          "encoder_layer_15_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 64.40746745483806,
+            "mean_sample_norm": 64.81433788331174,
+            "coordinate_std_mean": 2.025027184884255,
+            "between_example_variance_sum": 52.61717636303419,
+            "between_example_variance_fraction": 0.012525098759624754,
+            "radial_fraction_of_between_example_variation": 0.0006261056829100125,
+            "coordinate_centered_direction_variance_sum": 0.012504259898432978
+          },
+          "encoder_layer_16_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 66.40827702926055,
+            "mean_sample_norm": 66.8279007166671,
+            "coordinate_std_mean": 2.0874194360378686,
+            "between_example_variance_sum": 55.95371956492559,
+            "between_example_variance_fraction": 0.012528785707984347,
+            "radial_fraction_of_between_example_variation": 0.000566648925030743,
+            "coordinate_centered_direction_variance_sum": 0.012507894708209063
+          },
+          "encoder_layer_17_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 68.29569486337253,
+            "mean_sample_norm": 68.72609846835232,
+            "coordinate_std_mean": 2.1467619823757444,
+            "between_example_variance_sum": 59.00339154508462,
+            "between_example_variance_fraction": 0.012491970652439746,
+            "radial_fraction_of_between_example_variation": 0.00047088495847548195,
+            "coordinate_centered_direction_variance_sum": 0.01247001630811713
+          },
+          "encoder_layer_18_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 70.00236049775883,
+            "mean_sample_norm": 70.44920022683857,
+            "coordinate_std_mean": 2.2005137948252025,
+            "between_example_variance_sum": 62.7812907705166,
+            "between_example_variance_fraction": 0.012649582304440396,
+            "radial_fraction_of_between_example_variation": 0.0007590484515520229,
+            "coordinate_centered_direction_variance_sum": 0.012632353361122641
+          },
+          "encoder_layer_19_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 71.51624769490138,
+            "mean_sample_norm": 71.97389666387095,
+            "coordinate_std_mean": 2.247781315730376,
+            "between_example_variance_sum": 65.70784832269037,
+            "between_example_variance_fraction": 0.01268422341684617,
+            "radial_fraction_of_between_example_variation": 0.0011680884683610885,
+            "coordinate_centered_direction_variance_sum": 0.012673898976470616
+          },
+          "encoder_layer_20_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 73.34638990310536,
+            "mean_sample_norm": 73.81660930286202,
+            "coordinate_std_mean": 2.3056266133528314,
+            "between_example_variance_sum": 69.25593569418409,
+            "between_example_variance_fraction": 0.012709962532645102,
+            "radial_fraction_of_between_example_variation": 0.0009524229762983286,
+            "coordinate_centered_direction_variance_sum": 0.012687009838437447
+          },
+          "encoder_layer_21_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 74.96034427054897,
+            "mean_sample_norm": 75.446629607501,
+            "coordinate_std_mean": 2.3566292261117026,
+            "between_example_variance_sum": 73.19274980769782,
+            "between_example_variance_fraction": 0.012858325217125396,
+            "radial_fraction_of_between_example_variation": 0.0011706490730566722,
+            "coordinate_centered_direction_variance_sum": 0.012832205714848856
+          },
+          "encoder_layer_22_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 76.32767259651959,
+            "mean_sample_norm": 76.8370075056672,
+            "coordinate_std_mean": 2.399979899311725,
+            "between_example_variance_sum": 78.04860032633634,
+            "between_example_variance_fraction": 0.01321969850503511,
+            "radial_fraction_of_between_example_variation": 0.0007187592876782198,
+            "coordinate_centered_direction_variance_sum": 0.013198695226061964
+          },
+          "encoder_layer_23_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 77.91181337159384,
+            "mean_sample_norm": 78.4380772026613,
+            "coordinate_std_mean": 2.4495768610710624,
+            "between_example_variance_sum": 82.31536035659579,
+            "between_example_variance_fraction": 0.013379029180038563,
+            "radial_fraction_of_between_example_variation": 0.0005259132766372351,
+            "coordinate_centered_direction_variance_sum": 0.013368562866221415
+          },
+          "pre_norm_nodes": {
+            "samples": 4,
+            "dimensions": 32,
+            "mean_vector_norm": 8.525528433921451,
+            "mean_sample_norm": 8.568396336628066,
+            "coordinate_std_mean": 1.5051553990991715,
+            "between_example_variance_sum": 0.8356866678223014,
+            "between_example_variance_fraction": 0.011366743887710189,
+            "radial_fraction_of_between_example_variation": 0.13648902913808228,
+            "coordinate_centered_direction_variance_sum": 0.010210013815019396
+          },
+          "vae_layernorm_output": {
+            "samples": 4,
+            "dimensions": 32,
+            "mean_vector_norm": 5.627889571715651,
+            "mean_sample_norm": 5.656841875860395,
+            "coordinate_std_mean": 0.9999978126302289,
+            "between_example_variance_sum": 0.32671897706364916,
+            "between_example_variance_fraction": 0.010210012699335934,
+            "radial_fraction_of_between_example_variation": 0.0004954942596495397,
+            "coordinate_centered_direction_variance_sum": 0.010210013597525817
+          },
+          "posterior_mu": {
+            "samples": 4,
+            "dimensions": 32,
+            "mean_vector_norm": 3.277459551006616,
+            "mean_sample_norm": 3.293254328497568,
+            "coordinate_std_mean": 0.5788461966931768,
+            "between_example_variance_sum": 0.10534872473439424,
+            "between_example_variance_fraction": 0.00971216486211509,
+            "radial_fraction_of_between_example_variation": 0.019097678390940197,
+            "coordinate_centered_direction_variance_sum": 0.009500551311636001
+          },
+          "decoder_z": {
+            "samples": 4,
+            "dimensions": 32,
+            "mean_vector_norm": 4.626608942332503,
+            "mean_sample_norm": 7.175088888198259,
+            "coordinate_std_mean": 1.2600239483371767,
+            "between_example_variance_sum": 31.28549331924969,
+            "between_example_variance_fraction": 0.5937539839284895,
+            "radial_fraction_of_between_example_variation": 0.04680968841589344,
+            "coordinate_centered_direction_variance_sum": 0.5881244374467669
+          }
+        },
+        "scope": "Across-example geometry in the actual B4 training batch; both current and future vary. Radial fractions are about the batch mean, not a fixed-current intervention."
+      },
+      "recorded_module_gradient_norm_lower_bound_initial": 0.5439923810034908,
+      "gradient_norm_scope": "Recorded combined module norms exclude VAE parameters; this is a lower bound on full optimizer gradient norm, not an exact clipping coefficient.",
+      "executed_requested_config_sha256": "523362603ba1c163cc9d92be202ca27b0151a545ed3a7106995d9ee43c4934fc",
+      "prepared_config_sha256": "3b1fe66a3140bbfa24e7df67e79fb958d5de6f10cc7d317795afe767e60abfe8"
+    },
+    "official_init": {
+      "path": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-causal-v2-preflight-20261114/official_init",
+      "passed": true,
+      "steps": 6,
+      "observed_factors": {
+        "arm": "official_init",
+        "image_loss": "smooth_l1",
+        "kl_beta": 5e-05,
+        "lambda_aux": 1.0,
+        "posterior_sampling": "sampled",
+        "initialization": "released_encoder_vae_visual_decoder",
+        "state_decoder_initialization": "fresh local g; official14 state head is never loaded",
+        "epsilon_policy": "Always consume and verify the original upstream Gaussian draw, including mu_only",
+        "main_training": false,
+        "parent_runner_sha256": "9ecbea0151c1f902647dc9e41a5a17a431ab5c4319da658b9d0cdeb5104cba27",
+        "runner_sha256": "e1d7db1efca25cdff88a7299e7f5cd31c016b0c11a661fd212c73df67647aa22"
+      },
+      "initial_state_sha256": "b53fe330348ed5deef6edd3571da34427397b593e5e05b8eb055bf1c20ddcbb6",
+      "fresh_seeded_components_identical": true,
+      "all_six_data_augmentation_epsilon_hashes_equal_to_original_baseline": true,
+      "seconds_per_update_excluding_first": 3.1637473890004912,
+      "cuda_peak_allocated_gib": 13.31923532485962,
+      "cuda_peak_reserved_gib": 13.73828125,
+      "first_actual_training_loss_gradient_components": {
+        "step_before_update": 0,
+        "lr_used": 3e-07,
+        "losses": {
+          "image": 0.35106831789016724,
+          "state": 0.16363516449928284,
+          "weighted_kl": 0.001593732158653438
+        },
+        "node_gradient_norms": {
+          "image": 0.00012735018390230834,
+          "state": 0.0002367213019169867,
+          "weighted_kl": 2.1785986064060125e-06
+        },
+        "selected_z_gradient_norms": {
+          "image": 0.020367465913295746,
+          "state": 0.03891047090291977,
+          "weighted_kl": null
+        },
+        "parameter_gradient_norms": {
+          "image": {
+            "encoder.out_proj.weight": 0.1370714008808136,
+            "encoder.out_proj.bias": 0.00012440096179489046,
+            "vq.pre_norm.weight": 0.0134005481377244,
+            "vq.mu.weight": 0.13249897956848145,
+            "vq.logvar.weight": 0.002315755467861891
+          },
+          "state": {
+            "encoder.out_proj.weight": 0.38714170455932617,
+            "encoder.out_proj.bias": 0.0003432708326727152,
+            "vq.pre_norm.weight": 0.030703993514180183,
+            "vq.mu.weight": 0.3037579357624054,
+            "vq.logvar.weight": 0.10726761817932129
+          },
+          "weighted_kl": {
+            "encoder.out_proj.weight": 0.00430279690772295,
+            "encoder.out_proj.bias": 4.224143594910856e-06,
+            "vq.pre_norm.weight": 0.0005241341423243284,
+            "vq.mu.weight": 0.0008575704996474087,
+            "vq.logvar.weight": 0.0004674950032494962
+          }
+        },
+        "parameter_gradient_connected": {
+          "image": {
+            "encoder.out_proj.weight": true,
+            "encoder.out_proj.bias": true,
+            "vq.pre_norm.weight": true,
+            "vq.mu.weight": true,
+            "vq.logvar.weight": true
+          },
+          "state": {
+            "encoder.out_proj.weight": true,
+            "encoder.out_proj.bias": true,
+            "vq.pre_norm.weight": true,
+            "vq.mu.weight": true,
+            "vq.logvar.weight": true
+          },
+          "weighted_kl": {
+            "encoder.out_proj.weight": true,
+            "encoder.out_proj.bias": true,
+            "vq.pre_norm.weight": true,
+            "vq.mu.weight": true,
+            "vq.logvar.weight": true
+          }
+        },
+        "posterior_sampling": "sampled",
+        "pairwise_cosines": {
+          "image__state": 0.024383315816521645,
+          "image__weighted_kl": 0.04591125249862671,
+          "state__weighted_kl": -0.11713358759880066
+        },
+        "scope": "Actual training batch and consumed epsilon. Gradients of batch-mean losses before clipping; selected decoder z is distinct from pre-LN nodes. KL has no downstream path through sampled z, but does through mu in mu_only. Parameter probes cover out_proj and VAE only. Normal backward follows."
+      },
+      "last_training_loss": 0.5895071029663086,
+      "validation_loss": 0.49442729353904724,
+      "component_initialization": {
+        "scope": "released_encoder_vae_visual_decoder",
+        "fresh_seeded_components": {
+          "encoder": {
+            "sha256": "3a9a2c8a94beae21a06366dbe8c66997a8e3bab6ce898ce950c062d694a94034",
+            "state_tensors": 305
+          },
+          "vq": {
+            "sha256": "3868cdf0d2ea6db42b0b107362dbb3341aac2012d4083b97ae79c811eb8fbde5",
+            "state_tensors": 6
+          },
+          "decoder": {
+            "sha256": "cd7bf293c1a37107ad612fd43ec6bcbeafb64946a6ae3347e4cf94b5f0bff8ac",
+            "state_tensors": 128
+          },
+          "local_g": {
+            "sha256": "22fb959b28612f62f970e1dee409849f83ca39a2f400b273156295f4a25523e5",
+            "state_tensors": 10
+          }
+        },
+        "released_checkpoint": "/media/sadasue/SSD1/foveated-world-models/models/lawam-lam-bd993da/checkpoints/pytorch_model.pt",
+        "released_checkpoint_sha256": "57c31dcba13c2998c4e866cdcfc427f14ae3c1b762a586778276e2100b48af88",
+        "strictly_loaded_state_tensors": 439,
+        "cpu_rng_unchanged_by_load": true,
+        "local_g_unchanged_by_load": true,
+        "effective_components": {
+          "encoder": {
+            "sha256": "5d4164b960af34289eabfe17022ab180854b65b36ded10c7c3f10fb229ffd818",
+            "state_tensors": 305
+          },
+          "vq": {
+            "sha256": "42c11bf624004c39b5bf83a73080930a02b37fcb04f695d949b8c12efcd5009b",
+            "state_tensors": 6
+          },
+          "decoder": {
+            "sha256": "ff1769ea8f57b83e1d7f9060b99d40252cb3da11a408e2ff2e0e8ef0af7956bf",
+            "state_tensors": 128
+          },
+          "local_g": {
+            "sha256": "22fb959b28612f62f970e1dee409849f83ca39a2f400b273156295f4a25523e5",
+            "state_tensors": 10
+          }
+        }
+      },
+      "training_geometry_file": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-causal-v2-preflight-20261114/official_init/training_geometry.jsonl",
+      "first_actual_training_geometry": {
+        "step_before_update": 0,
+        "layers": {
+          "cross_attention_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 52.432702647915676,
+            "mean_sample_norm": 54.68290686942608,
+            "coordinate_std_mean": 1.7083857932733695,
+            "between_example_variance_sum": 267.2934470677615,
+            "between_example_variance_fraction": 0.08861099415252131,
+            "radial_fraction_of_between_example_variation": 0.1006412642600511,
+            "coordinate_centered_direction_variance_sum": 0.0811462587366545
+          },
+          "encoder_layer_0_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 150.0162178747534,
+            "mean_sample_norm": 152.68324458721202,
+            "coordinate_std_mean": 4.767812521649289,
+            "between_example_variance_sum": 831.6446957208838,
+            "between_example_variance_fraction": 0.035637063308757704,
+            "radial_fraction_of_between_example_variation": 0.031939564843178614,
+            "coordinate_centered_direction_variance_sum": 0.03477619936029862
+          },
+          "encoder_layer_1_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 580.1094138450861,
+            "mean_sample_norm": 595.6443258027825,
+            "coordinate_std_mean": 18.602800902659716,
+            "between_example_variance_sum": 24042.989655080222,
+            "between_example_variance_fraction": 0.06668051939164961,
+            "radial_fraction_of_between_example_variation": 0.2390391023788953,
+            "coordinate_centered_direction_variance_sum": 0.051871481554446576
+          },
+          "encoder_layer_2_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 795.1941616299672,
+            "mean_sample_norm": 809.4140813866145,
+            "coordinate_std_mean": 25.27787773145198,
+            "between_example_variance_sum": 35769.572632536656,
+            "between_example_variance_fraction": 0.053538982923292185,
+            "radial_fraction_of_between_example_variation": 0.3728572644080242,
+            "coordinate_centered_direction_variance_sum": 0.03556290032249367
+          },
+          "encoder_layer_3_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 869.6577485888764,
+            "mean_sample_norm": 884.9489855951012,
+            "coordinate_std_mean": 27.63695969638558,
+            "between_example_variance_sum": 47752.67951522906,
+            "between_example_variance_fraction": 0.05938964891031662,
+            "radial_fraction_of_between_example_variation": 0.4662504316503448,
+            "coordinate_centered_direction_variance_sum": 0.03606742589515399
+          },
+          "encoder_layer_4_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 898.2848671950006,
+            "mean_sample_norm": 914.7110968090492,
+            "coordinate_std_mean": 28.564645964187932,
+            "between_example_variance_sum": 52774.67120635224,
+            "between_example_variance_fraction": 0.061387998298447516,
+            "radial_fraction_of_between_example_variation": 0.4696158274577071,
+            "coordinate_centered_direction_variance_sum": 0.03741324985965486
+          },
+          "encoder_layer_5_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 913.5901288899178,
+            "mean_sample_norm": 931.7128185895922,
+            "coordinate_std_mean": 29.092674279705623,
+            "between_example_variance_sum": 56375.0786286623,
+            "between_example_variance_fraction": 0.06327013080185682,
+            "radial_fraction_of_between_example_variation": 0.44274659020240187,
+            "coordinate_centered_direction_variance_sum": 0.04024353893446393
+          },
+          "encoder_layer_6_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 930.0016590373655,
+            "mean_sample_norm": 950.9456735431585,
+            "coordinate_std_mean": 29.687571672728726,
+            "between_example_variance_sum": 62783.69606730087,
+            "between_example_variance_fraction": 0.06767768744111784,
+            "radial_fraction_of_between_example_variation": 0.4125137457920128,
+            "coordinate_centered_direction_variance_sum": 0.0453437101751241
+          },
+          "encoder_layer_7_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 937.0572312057994,
+            "mean_sample_norm": 960.534807596762,
+            "coordinate_std_mean": 29.980660753705333,
+            "between_example_variance_sum": 67447.84891297002,
+            "between_example_variance_fraction": 0.071333822866684,
+            "radial_fraction_of_between_example_variation": 0.38043418024099734,
+            "coordinate_centered_direction_variance_sum": 0.04988008477157018
+          },
+          "encoder_layer_8_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 945.3837129885852,
+            "mean_sample_norm": 971.0651630524181,
+            "coordinate_std_mean": 30.306480841608412,
+            "between_example_variance_sum": 72276.72490764703,
+            "between_example_variance_fraction": 0.07481852805050353,
+            "radial_fraction_of_between_example_variation": 0.36042567121309266,
+            "coordinate_centered_direction_variance_sum": 0.05383250913089882
+          },
+          "encoder_layer_9_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 945.2795527847904,
+            "mean_sample_norm": 973.6216856171002,
+            "coordinate_std_mean": 30.38359959812882,
+            "between_example_variance_sum": 76632.22914982727,
+            "between_example_variance_fraction": 0.07898717961558956,
+            "radial_fraction_of_between_example_variation": 0.3359073095603346,
+            "coordinate_centered_direction_variance_sum": 0.0594093458152216
+          },
+          "encoder_layer_10_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 949.9668009280462,
+            "mean_sample_norm": 980.8346645542968,
+            "coordinate_std_mean": 30.60812060041784,
+            "between_example_variance_sum": 80870.37194337187,
+            "between_example_variance_fraction": 0.0822432340025441,
+            "radial_fraction_of_between_example_variation": 0.3080884728558255,
+            "coordinate_centered_direction_variance_sum": 0.06404475932121757
+          },
+          "encoder_layer_11_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 955.8754541445968,
+            "mean_sample_norm": 989.1873558670313,
+            "coordinate_std_mean": 30.868356908886696,
+            "between_example_variance_sum": 85487.32000457324,
+            "between_example_variance_fraction": 0.0855570315452764,
+            "radial_fraction_of_between_example_variation": 0.28716906006182785,
+            "coordinate_centered_direction_variance_sum": 0.06845043172871756
+          },
+          "encoder_layer_12_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 962.3335036381523,
+            "mean_sample_norm": 997.201284469912,
+            "coordinate_std_mean": 31.120689087589696,
+            "between_example_variance_sum": 88767.54476213804,
+            "between_example_variance_fraction": 0.08746834963865859,
+            "radial_fraction_of_between_example_variation": 0.27975585012502246,
+            "coordinate_centered_direction_variance_sum": 0.07156171445603628
+          },
+          "encoder_layer_13_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 967.5735837192391,
+            "mean_sample_norm": 1004.1475625115818,
+            "coordinate_std_mean": 31.339054192403786,
+            "between_example_variance_sum": 92565.94890005863,
+            "between_example_variance_fraction": 0.08997777519443075,
+            "radial_fraction_of_between_example_variation": 0.2687877042297464,
+            "coordinate_centered_direction_variance_sum": 0.07447539691014238
+          },
+          "encoder_layer_14_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 974.6261334273304,
+            "mean_sample_norm": 1012.5036671693695,
+            "coordinate_std_mean": 31.600834030037355,
+            "between_example_variance_sum": 96118.16049237603,
+            "between_example_variance_fraction": 0.09188991405418544,
+            "radial_fraction_of_between_example_variation": 0.26442113120566096,
+            "coordinate_centered_direction_variance_sum": 0.07653301998173472
+          },
+          "encoder_layer_15_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 979.1144176711424,
+            "mean_sample_norm": 1018.6520691438274,
+            "coordinate_std_mean": 31.79684017620555,
+            "between_example_variance_sum": 99717.26650020765,
+            "between_example_variance_fraction": 0.09421667918610516,
+            "radial_fraction_of_between_example_variation": 0.253869521033569,
+            "coordinate_centered_direction_variance_sum": 0.07950474499393448
+          },
+          "encoder_layer_16_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 986.6245419359793,
+            "mean_sample_norm": 1027.010366234555,
+            "coordinate_std_mean": 32.060822911715356,
+            "between_example_variance_sum": 101965.34312326397,
+            "between_example_variance_fraction": 0.09481678962547087,
+            "radial_fraction_of_between_example_variation": 0.2490801225096191,
+            "coordinate_centered_direction_variance_sum": 0.08075870550017902
+          },
+          "encoder_layer_17_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 992.4354799796815,
+            "mean_sample_norm": 1035.0474659153979,
+            "coordinate_std_mean": 32.314627256448404,
+            "between_example_variance_sum": 107003.3304434109,
+            "between_example_variance_fraction": 0.09799454382588929,
+            "radial_fraction_of_between_example_variation": 0.23967273216250234,
+            "coordinate_centered_direction_variance_sum": 0.08468588334114033
+          },
+          "encoder_layer_18_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 1000.0955901194219,
+            "mean_sample_norm": 1044.538636692957,
+            "coordinate_std_mean": 32.61270483165406,
+            "between_example_variance_sum": 112739.10759954338,
+            "between_example_variance_fraction": 0.10129934274040968,
+            "radial_fraction_of_between_example_variation": 0.24269547309881256,
+            "coordinate_centered_direction_variance_sum": 0.08789260505858451
+          },
+          "encoder_layer_19_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 1004.0444155689222,
+            "mean_sample_norm": 1050.2375271099859,
+            "coordinate_std_mean": 32.79331481520955,
+            "between_example_variance_sum": 117274.70095740719,
+            "between_example_variance_fraction": 0.1042089893935366,
+            "radial_fraction_of_between_example_variation": 0.24004012597528593,
+            "coordinate_centered_direction_variance_sum": 0.09104920816200283
+          },
+          "encoder_layer_20_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 1010.8296176794386,
+            "mean_sample_norm": 1058.4440642240202,
+            "coordinate_std_mean": 33.051311211655296,
+            "between_example_variance_sum": 121497.51041169673,
+            "between_example_variance_fraction": 0.10627155660605143,
+            "radial_fraction_of_between_example_variation": 0.23936266714167592,
+            "coordinate_centered_direction_variance_sum": 0.09344660976216594
+          },
+          "encoder_layer_21_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 1013.9909956383381,
+            "mean_sample_norm": 1063.148323032356,
+            "coordinate_std_mean": 33.199546173922535,
+            "between_example_variance_sum": 125235.8784602515,
+            "between_example_variance_fraction": 0.10857846356143197,
+            "radial_fraction_of_between_example_variation": 0.2364121370525519,
+            "coordinate_centered_direction_variance_sum": 0.09627372415531849
+          },
+          "encoder_layer_22_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 1020.2703000955165,
+            "mean_sample_norm": 1072.0843513386696,
+            "coordinate_std_mean": 33.47876713872277,
+            "between_example_variance_sum": 131115.06476478366,
+            "between_example_variance_fraction": 0.11186657000180351,
+            "radial_fraction_of_between_example_variation": 0.22547140041588454,
+            "coordinate_centered_direction_variance_sum": 0.10062520950685858
+          },
+          "encoder_layer_23_queries": {
+            "samples": 4,
+            "dimensions": 1024,
+            "mean_vector_norm": 1025.1653124618254,
+            "mean_sample_norm": 1081.5102591203377,
+            "coordinate_std_mean": 33.77381432359992,
+            "between_example_variance_sum": 141342.36575335677,
+            "between_example_variance_fraction": 0.11854535004482038,
+            "radial_fraction_of_between_example_variation": 0.21186937233742026,
+            "coordinate_centered_direction_variance_sum": 0.10816253621094936
+          },
+          "pre_norm_nodes": {
+            "samples": 4,
+            "dimensions": 32,
+            "mean_vector_norm": 578.149251787572,
+            "mean_sample_norm": 673.483762888364,
+            "coordinate_std_mean": 119.00849979196741,
+            "between_example_variance_sum": 122739.54605102539,
+            "between_example_variance_fraction": 0.26857897723763496,
+            "radial_fraction_of_between_example_variation": 0.052050265878794515,
+            "coordinate_centered_direction_variance_sum": 0.2646155970651107
+          },
+          "vae_layernorm_output": {
+            "samples": 4,
+            "dimensions": 32,
+            "mean_vector_norm": 5.583483705386389,
+            "mean_sample_norm": 6.455398343165328,
+            "coordinate_std_mean": 1.1409595319678223,
+            "between_example_variance_sum": 10.499824886073903,
+            "between_example_variance_fraction": 0.2519447119015139,
+            "radial_fraction_of_between_example_variation": 0.026404432964708346,
+            "coordinate_centered_direction_variance_sum": 0.2528026632909035
+          },
+          "posterior_mu": {
+            "samples": 4,
+            "dimensions": 32,
+            "mean_vector_norm": 2.7783550288626935,
+            "mean_sample_norm": 3.3555378387970727,
+            "coordinate_std_mean": 0.5923255119769415,
+            "between_example_variance_sum": 5.088899471309875,
+            "between_example_variance_fraction": 0.3973171014307412,
+            "radial_fraction_of_between_example_variation": 0.5839700396700359,
+            "coordinate_centered_direction_variance_sum": 0.5253065135556756
+          },
+          "decoder_z": {
+            "samples": 4,
+            "dimensions": 32,
+            "mean_vector_norm": 3.716668503299148,
+            "mean_sample_norm": 5.150511058354381,
+            "coordinate_std_mean": 0.9033576176437875,
+            "between_example_variance_sum": 13.79343335464382,
+            "between_example_variance_fraction": 0.49963430712744256,
+            "radial_fraction_of_between_example_variation": 0.12585789232976025,
+            "coordinate_centered_direction_variance_sum": 0.5148715403474082
+          }
+        },
+        "scope": "Across-example geometry in the actual B4 training batch; both current and future vary. Radial fractions are about the batch mean, not a fixed-current intervention."
+      },
+      "recorded_module_gradient_norm_lower_bound_initial": 2.8727971061075626,
+      "gradient_norm_scope": "Recorded combined module norms exclude VAE parameters; this is a lower bound on full optimizer gradient norm, not an exact clipping coefficient.",
+      "executed_requested_config_sha256": "94a695e8a6c998ed34eca55caae6c50bec41f5e504638f65044fd0754c5ebb18",
+      "prepared_config_sha256": "c67396ee726ae39ec0a6579b337cd7f62d6b9043db44e0c15e473f074e73491e"
+    }
+  },
+  "baseline_replay_numerical_comparison": {
+    "first_batch_loss_exact": true,
+    "per_step_loss_difference_vs_original": [
+      0.0,
+      -1.4066696166992188e-05,
+      6.151199340820312e-05,
+      -0.0004706382751464844,
+      -0.0004006624221801758,
+      -0.00012600421905517578
+    ],
+    "maximum_absolute_loss_difference": 0.0004706382751464844,
+    "scope": "NativeBF16/medium with unchanged init and random/input streams. Update trajectories are close but not bitwise identical; this test does not establish the exact numerical source of that drift."
+  },
+  "prepared_3000_configs": "/home/sadasue/foveated-world-models/configs/robotwin_causal_ablation_20261114",
+  "prepared_next_matched_group": [
+    "baseline_replay",
+    "beta_zero",
+    "mu_only",
+    "g_zero"
+  ],
+  "official_init_schedule": "Prepared and preflight passed; defer actual3000 updates until a slot is available and root authorizes launch.",
+  "prepared_config_metadata_note": "After preflight, matched_control labels were corrected to require a new v2 baseline_replay. No model/data/optimizer/trainer/factor fields changed; executed config snapshots are preserved.",
+  "main_training_started": false
+}

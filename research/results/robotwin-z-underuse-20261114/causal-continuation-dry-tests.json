@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "mock_launch_cases": [
+    {
+      "case": "full_mock_group",
+      "mock_spawns": 4,
+      "durable_intent_before_spawn": true,
+      "partial_record_wait": true,
+      "duplicate_launch_refused": true
+    },
+    {
+      "case": "headroom_loss_after_one",
+      "mock_spawns": 1,
+      "durable_intent_before_spawn": true,
+      "partial_record_wait": true,
+      "duplicate_launch_refused": true
+    }
+  ],
+  "actual_training_jobs_launched": 0,
+  "torch_imported": false
+}

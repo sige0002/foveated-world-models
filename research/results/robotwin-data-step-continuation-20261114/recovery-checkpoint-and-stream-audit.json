@@ -1,0 +1,321 @@
+{
+  "CUDA_initialized": false,
+  "arms": {
+    "seed43_replay": {
+      "last_logged_local_step": 1000,
+      "checkpoint_global_step": 3500,
+      "checkpoint_local_updates": 500,
+      "scheduler_step": 3500,
+      "optimizer_step_values": [
+        3500.0
+      ],
+      "keys": [
+        "global_step",
+        "state_dict",
+        "optimizer_states",
+        "lr_schedulers",
+        "hyper_parameters",
+        "data_contract",
+        "continuation"
+      ],
+      "step500": {
+        "local_step": 500,
+        "absolute_step": 3500,
+        "pairs": [
+          [
+            10924,
+            9
+          ],
+          [
+            8817,
+            216
+          ],
+          [
+            25140,
+            459
+          ],
+          [
+            6260,
+            113
+          ]
+        ],
+        "data_sha256": "333a71df51c967f997c03639468c57ed16c32dbf96a177f1f7f456c523d0f4f5",
+        "epsilon_sha256": "822f34dc7723528df2bcd16fec2942d0c983125247ae06247f69c9c7bf52ab03",
+        "augmentation_rng_before_sha256": "dcb486e0eed075eb3c7894ddbdbdac3d9423db6657e2e6493da98032f5b86f5d",
+        "augmentation_rng_after_sha256": "dcb486e0eed075eb3c7894ddbdbdac3d9423db6657e2e6493da98032f5b86f5d",
+        "augmentation_rng_sha256": "afc05791d5f525178de87ab718af3c57e0e0f4baa81b46446a80fa5fe28cddb4",
+        "cumulative_data_sha256": "bdd8683a34931648d19e1002198b45b07efa5b76eef8d2af7ea70031c4e2d05e",
+        "cumulative_epsilon_sha256": "f85b4182a18fd36598ce4dbd76af07932e34b0485273055a4be4ad99070aea5b",
+        "cumulative_augmentation_rng_sha256": "fc928818f9fd55b073d08783d3a19dd13748249d2a3ee10059192ac7c7713034"
+      },
+      "step501": {
+        "local_step": 501,
+        "absolute_step": 3501,
+        "pairs": [
+          [
+            22272,
+            288
+          ],
+          [
+            25194,
+            239
+          ],
+          [
+            6284,
+            50
+          ],
+          [
+            25863,
+            640
+          ]
+        ],
+        "data_sha256": "2ca2dac1013aad78d0289708ca4e7da13e140831e25c07222d51ead7dded26cf",
+        "epsilon_sha256": "b41cdc235ecfaf7b516744664a285c91f7ababb0fe31bb135b64ec0a78cac4d8",
+        "augmentation_rng_before_sha256": "10b7cd2eb9b388386774de50341785e7042fc1ef2b5498d6d306591512a7779f",
+        "augmentation_rng_after_sha256": "10b7cd2eb9b388386774de50341785e7042fc1ef2b5498d6d306591512a7779f",
+        "augmentation_rng_sha256": "10328d461e2a19bb3b29ce10fbeef4445fc1f9ad4b633a0a170c1e088672f924",
+        "cumulative_data_sha256": "852870f6480ec2ff6f42bc36e4e0c4a287268c3904ebb2ad2cbf544dc94b1e0a",
+        "cumulative_epsilon_sha256": "1ac9d9e1b838b78cb03d39ff75ef638ccf696658f6c17512b9f351829da15684",
+        "cumulative_augmentation_rng_sha256": "833fa3d8081e4a52c3c97feeae81c2ca427d73294a68258274876210ed940328"
+      },
+      "boundary500_after_equals501_before": false
+    },
+    "seed43_new": {
+      "last_logged_local_step": 1000,
+      "checkpoint_global_step": 3500,
+      "checkpoint_local_updates": 500,
+      "scheduler_step": 3500,
+      "optimizer_step_values": [
+        3500.0
+      ],
+      "keys": [
+        "global_step",
+        "state_dict",
+        "optimizer_states",
+        "lr_schedulers",
+        "hyper_parameters",
+        "data_contract",
+        "continuation"
+      ],
+      "step500": {
+        "local_step": 500,
+        "absolute_step": 3500,
+        "pairs": [
+          [
+            11090,
+            5
+          ],
+          [
+            18753,
+            59
+          ],
+          [
+            22175,
+            30
+          ],
+          [
+            12636,
+            127
+          ]
+        ],
+        "data_sha256": "25d933d5793fc78a1841f789f17fe70eb0c125179eb328b340a0933b1ac6b679",
+        "epsilon_sha256": "822f34dc7723528df2bcd16fec2942d0c983125247ae06247f69c9c7bf52ab03",
+        "augmentation_rng_before_sha256": "dcb486e0eed075eb3c7894ddbdbdac3d9423db6657e2e6493da98032f5b86f5d",
+        "augmentation_rng_after_sha256": "dcb486e0eed075eb3c7894ddbdbdac3d9423db6657e2e6493da98032f5b86f5d",
+        "augmentation_rng_sha256": "afc05791d5f525178de87ab718af3c57e0e0f4baa81b46446a80fa5fe28cddb4",
+        "cumulative_data_sha256": "38cefe83f5925f91a957d0ba9738fcaa3f1fc31b63fb61475bf48421b50fbc01",
+        "cumulative_epsilon_sha256": "f85b4182a18fd36598ce4dbd76af07932e34b0485273055a4be4ad99070aea5b",
+        "cumulative_augmentation_rng_sha256": "fc928818f9fd55b073d08783d3a19dd13748249d2a3ee10059192ac7c7713034"
+      },
+      "step501": {
+        "local_step": 501,
+        "absolute_step": 3501,
+        "pairs": [
+          [
+            19306,
+            534
+          ],
+          [
+            8178,
+            104
+          ],
+          [
+            20406,
+            121
+          ],
+          [
+            1982,
+            162
+          ]
+        ],
+        "data_sha256": "e9c80366e51d96fdf26cd100d06cac2272e41f5ec9dc7a7d60c456f4ea1b1515",
+        "epsilon_sha256": "b41cdc235ecfaf7b516744664a285c91f7ababb0fe31bb135b64ec0a78cac4d8",
+        "augmentation_rng_before_sha256": "10b7cd2eb9b388386774de50341785e7042fc1ef2b5498d6d306591512a7779f",
+        "augmentation_rng_after_sha256": "10b7cd2eb9b388386774de50341785e7042fc1ef2b5498d6d306591512a7779f",
+        "augmentation_rng_sha256": "10328d461e2a19bb3b29ce10fbeef4445fc1f9ad4b633a0a170c1e088672f924",
+        "cumulative_data_sha256": "ceec3ba94af422ba0c8136172fdd2b13468d9862e4d70fbf6f70a585f81c73c0",
+        "cumulative_epsilon_sha256": "1ac9d9e1b838b78cb03d39ff75ef638ccf696658f6c17512b9f351829da15684",
+        "cumulative_augmentation_rng_sha256": "833fa3d8081e4a52c3c97feeae81c2ca427d73294a68258274876210ed940328"
+      },
+      "boundary500_after_equals501_before": false
+    },
+    "seed44_replay": {
+      "last_logged_local_step": 1000,
+      "checkpoint_global_step": 3500,
+      "checkpoint_local_updates": 500,
+      "scheduler_step": 3500,
+      "optimizer_step_values": [
+        3500.0
+      ],
+      "keys": [
+        "global_step",
+        "state_dict",
+        "optimizer_states",
+        "lr_schedulers",
+        "hyper_parameters",
+        "data_contract",
+        "continuation"
+      ],
+      "step500": {
+        "local_step": 500,
+        "absolute_step": 3500,
+        "pairs": [
+          [
+            9373,
+            84
+          ],
+          [
+            18424,
+            132
+          ],
+          [
+            1327,
+            167
+          ],
+          [
+            4990,
+            55
+          ]
+        ],
+        "data_sha256": "cbcba31722ad32d3ca1ef508f126a26289b1e1b6713f5db0c3be17acf3e70b22",
+        "epsilon_sha256": "3f61f33b7740b95cb772ac7274e7f9706ed489a4a5898494e5b82da84cdb56b7",
+        "augmentation_rng_before_sha256": "03574a2d553b965c4585178ea3c11c8026b432afc238bc1195166d0a25fabca7",
+        "augmentation_rng_after_sha256": "03574a2d553b965c4585178ea3c11c8026b432afc238bc1195166d0a25fabca7",
+        "augmentation_rng_sha256": "fe98b1485eddc8b5d5bf6432ae376b73d2e3ae5cbffac3aa091ac1efde7af7dd",
+        "cumulative_data_sha256": "0b075374fa2aea45cf0f8a4bf6cc81061606814e9f9610302d76941ac424f20a",
+        "cumulative_epsilon_sha256": "b89b434e401e469a924da914d65b2d19e93dc0186f13f56f1109ce97f1782f3e",
+        "cumulative_augmentation_rng_sha256": "2b5811f34bfe0a18556df77abc39959d89f59278cecebf4b5c1f8345fe02b112"
+      },
+      "step501": {
+        "local_step": 501,
+        "absolute_step": 3501,
+        "pairs": [
+          [
+            7491,
+            43
+          ],
+          [
+            23020,
+            464
+          ],
+          [
+            13396,
+            65
+          ],
+          [
+            19659,
+            310
+          ]
+        ],
+        "data_sha256": "3a905422750052f09e2a10b3e7240da43b859d9be492d4acabffe7b7b72a3801",
+        "epsilon_sha256": "d32667dd8487460fc0c7ca82f2297b8c0fb513996a311896702eae58f3be9be6",
+        "augmentation_rng_before_sha256": "c09560e24844adb44ae73026fd110377338e5548291a16ca67fb68c1637135f8",
+        "augmentation_rng_after_sha256": "c09560e24844adb44ae73026fd110377338e5548291a16ca67fb68c1637135f8",
+        "augmentation_rng_sha256": "b9849b282e7824927fd6bbaef96f158d5617854c5d4d7de04bbcd5df7380b55b",
+        "cumulative_data_sha256": "3502f0cdfa0891ff3c07070cf8f9a8fdc25e0cdec5e6b1b7d88a7f3836082d2c",
+        "cumulative_epsilon_sha256": "cd6a00d2201230d5a035fac85936f02d96a15d53742153b6ca348cdf3df026fb",
+        "cumulative_augmentation_rng_sha256": "dd653a5f732534ea4f33aa71c7a190e3b3cc1ad0ad1761b50beebee2837038e3"
+      },
+      "boundary500_after_equals501_before": false
+    },
+    "seed44_new": {
+      "last_logged_local_step": 1000,
+      "checkpoint_global_step": 3500,
+      "checkpoint_local_updates": 500,
+      "scheduler_step": 3500,
+      "optimizer_step_values": [
+        3500.0
+      ],
+      "keys": [
+        "global_step",
+        "state_dict",
+        "optimizer_states",
+        "lr_schedulers",
+        "hyper_parameters",
+        "data_contract",
+        "continuation"
+      ],
+      "step500": {
+        "local_step": 500,
+        "absolute_step": 3500,
+        "pairs": [
+          [
+            12803,
+            228
+          ],
+          [
+            13111,
+            119
+          ],
+          [
+            25349,
+            89
+          ],
+          [
+            22725,
+            133
+          ]
+        ],
+        "data_sha256": "fd6f93127c4930150ce8b30dccb78ad2506c51969cdd9c27fd3e1f7c34806188",
+        "epsilon_sha256": "3f61f33b7740b95cb772ac7274e7f9706ed489a4a5898494e5b82da84cdb56b7",
+        "augmentation_rng_before_sha256": "03574a2d553b965c4585178ea3c11c8026b432afc238bc1195166d0a25fabca7",
+        "augmentation_rng_after_sha256": "03574a2d553b965c4585178ea3c11c8026b432afc238bc1195166d0a25fabca7",
+        "augmentation_rng_sha256": "fe98b1485eddc8b5d5bf6432ae376b73d2e3ae5cbffac3aa091ac1efde7af7dd",
+        "cumulative_data_sha256": "d81b60b34af939a735ebf9795739c0df318f11bf636c002c9f093ac857403471",
+        "cumulative_epsilon_sha256": "b89b434e401e469a924da914d65b2d19e93dc0186f13f56f1109ce97f1782f3e",
+        "cumulative_augmentation_rng_sha256": "2b5811f34bfe0a18556df77abc39959d89f59278cecebf4b5c1f8345fe02b112"
+      },
+      "step501": {
+        "local_step": 501,
+        "absolute_step": 3501,
+        "pairs": [
+          [
+            18613,
+            111
+          ],
+          [
+            23566,
+            88
+          ],
+          [
+            23146,
+            393
+          ],
+          [
+            4059,
+            76
+          ]
+        ],
+        "data_sha256": "a5ac03510738762f05b48b1ea75807702c330227cf7e3b8bcc2ede02258be960",
+        "epsilon_sha256": "d32667dd8487460fc0c7ca82f2297b8c0fb513996a311896702eae58f3be9be6",
+        "augmentation_rng_before_sha256": "c09560e24844adb44ae73026fd110377338e5548291a16ca67fb68c1637135f8",
+        "augmentation_rng_after_sha256": "c09560e24844adb44ae73026fd110377338e5548291a16ca67fb68c1637135f8",
+        "augmentation_rng_sha256": "b9849b282e7824927fd6bbaef96f158d5617854c5d4d7de04bbcd5df7380b55b",
+        "cumulative_data_sha256": "e90d14197391cfde6b279447ce8658382eec89d5609b69a7a38ee5ac9625b766",
+        "cumulative_epsilon_sha256": "cd6a00d2201230d5a035fac85936f02d96a15d53742153b6ca348cdf3df026fb",
+        "cumulative_augmentation_rng_sha256": "dd653a5f732534ea4f33aa71c7a190e3b3cc1ad0ad1761b50beebee2837038e3"
+      },
+      "boundary500_after_equals501_before": false
+    }
+  }
+}

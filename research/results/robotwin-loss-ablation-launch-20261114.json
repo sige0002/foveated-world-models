@@ -1,0 +1,92 @@
+{
+  "phase": "short_controlled_training",
+  "started_at": "2026-11-13T20:03:17.232341+00:00",
+  "runner_sha256": "9ecbea0151c1f902647dc9e41a5a17a431ab5c4319da658b9d0cdeb5104cba27",
+  "steps_per_arm": 3000,
+  "batch_size": 4,
+  "preflight": [
+    {
+      "arm": "baseline",
+      "seconds_per_update": 2.505990581000333,
+      "peak_allocated_bytes": 14293530112
+    },
+    {
+      "arm": "kl_only",
+      "seconds_per_update": 2.4894565009999496,
+      "peak_allocated_bytes": 14293530112
+    },
+    {
+      "arm": "mse_only",
+      "seconds_per_update": 2.526145871999688,
+      "peak_allocated_bytes": 14293530112
+    },
+    {
+      "arm": "kl_mse",
+      "seconds_per_update": 2.531511586000306,
+      "peak_allocated_bytes": 14293530112
+    }
+  ],
+  "jobs": [
+    {
+      "arm": "baseline",
+      "pid": 84620,
+      "command": [
+        "/home/sadasue/foveated-world-models/.venv/bin/python",
+        "-u",
+        "/home/sadasue/foveated-world-models/research/train_robotwin_stage1.py",
+        "--config",
+        "/home/sadasue/foveated-world-models/configs/robotwin_loss_ablation_20261114/baseline.yaml",
+        "--output",
+        "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/baseline"
+      ],
+      "output": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/baseline",
+      "log": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/baseline.log"
+    },
+    {
+      "arm": "kl_only",
+      "pid": 84621,
+      "command": [
+        "/home/sadasue/foveated-world-models/.venv/bin/python",
+        "-u",
+        "/home/sadasue/foveated-world-models/research/train_robotwin_stage1.py",
+        "--config",
+        "/home/sadasue/foveated-world-models/configs/robotwin_loss_ablation_20261114/kl_only.yaml",
+        "--output",
+        "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/kl_only"
+      ],
+      "output": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/kl_only",
+      "log": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/kl_only.log"
+    },
+    {
+      "arm": "mse_only",
+      "pid": 84622,
+      "command": [
+        "/home/sadasue/foveated-world-models/.venv/bin/python",
+        "-u",
+        "/home/sadasue/foveated-world-models/research/train_robotwin_stage1.py",
+        "--config",
+        "/home/sadasue/foveated-world-models/configs/robotwin_loss_ablation_20261114/mse_only.yaml",
+        "--output",
+        "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/mse_only"
+      ],
+      "output": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/mse_only",
+      "log": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/mse_only.log"
+    },
+    {
+      "arm": "kl_mse",
+      "pid": 84623,
+      "command": [
+        "/home/sadasue/foveated-world-models/.venv/bin/python",
+        "-u",
+        "/home/sadasue/foveated-world-models/research/train_robotwin_stage1.py",
+        "--config",
+        "/home/sadasue/foveated-world-models/configs/robotwin_loss_ablation_20261114/kl_mse.yaml",
+        "--output",
+        "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/kl_mse"
+      ],
+      "output": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/kl_mse",
+      "log": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/kl_mse.log"
+    }
+  ],
+  "full_30000_run": "remains_stopped"
+}

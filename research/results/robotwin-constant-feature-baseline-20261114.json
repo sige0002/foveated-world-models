@@ -1,0 +1,37 @@
+{
+  "cache": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/evaluations/final3000-highest-fp32/features512-highest-fp32.pt",
+  "input_sha256": {
+    "cache": "eafacc5cea01814ec8c12f3e0420348a9da7bc12deeaf7cd9f0bb3d952733c15",
+    "script": "043b37051b660a83ee69e5ee46cf3022e02007e88cd559039ede7d0129161697",
+    "official_results": "3842f1e74dea605fdcad3d006187faa0dd979cbeccdccbd8679625529d2db55e",
+    "kl_mse_results": "774706c1b6563705c22350a1b8db9ba15a1dedcc753b2953cbcd6d9a8c684113"
+  },
+  "row_identity_sha256": "1c04ef52284a2e86b4e60b80de8b54dae93cbe00f11792fe67de9149a9eacd75",
+  "samples": 512,
+  "target_shape": [
+    512,
+    1,
+    256,
+    768
+  ],
+  "chunk_size": 8,
+  "oracle_constant_output_mse": 0.5795695303737027,
+  "comparisons": {
+    "official": {
+      "real_visual_mse": 0.31342677423737086,
+      "oracle_constant_minus_real_mse": 0.26614275613633187,
+      "relative_reduction_from_oracle_constant": 0.459207639788663,
+      "strictly_better_than_any_single_constant_on_these_rows": true
+    },
+    "kl_mse": {
+      "real_visual_mse": 0.35814697755267844,
+      "oracle_constant_minus_real_mse": 0.2214225528210243,
+      "relative_reduction_from_oracle_constant": 0.3820465728732365,
+      "strictly_better_than_any_single_constant_on_these_rows": true
+    }
+  },
+  "method": "Min_c mean_i mean_coordinates((y_i-c)^2); c=mean_i(y_i), retaining the full spatial/channel shape. Two-pass chunked CPU float64; source tensors float32 via mmap.",
+  "interpretation": "The constant is fitted to all evaluation targets, so it is an optimistic oracle lower bound for any single constant output on these exact rows. It is not a held-out trained baseline.",
+  "limits": "Outperforming this lower bound excludes a fully identical future-feature output across these rows, but does not prove adequate motion/action prediction or exclude latent representation collapse. The decoder can use current-image features independently of z.",
+  "cuda_initialized": false
+}

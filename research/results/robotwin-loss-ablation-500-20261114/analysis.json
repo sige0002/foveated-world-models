@@ -1,0 +1,811 @@
+{
+  "generated_at": "2026-11-13T20:37:42.902055+00:00",
+  "step": 500,
+  "samples": 512,
+  "episodes": 415,
+  "status": "early_snapshot_no_demonstrated_per_example_z_benefit",
+  "summary_sha256": "7d0fca25e21d9883067ff07cb664d57482887613cbfa0c68045c57c5dfc168fc",
+  "training_pairing_verified": true,
+  "validation_pairing_verified": true,
+  "bootstrap": {
+    "draws": 4000,
+    "seed": 1942,
+    "unit": "episode",
+    "paired_across_arms": true
+  },
+  "precision": {
+    "encoder_decoder": "BF16 autocast",
+    "VAE": "FP32",
+    "reported_MSE_arithmetic": "FP32",
+    "required_final_gate": "Matched highest-FP32 frozen encoder/VAE/decoder inference on identical feature inputs and validation pairs; replay real, mean and different-episode swap controls."
+  },
+  "arms": {
+    "baseline": {
+      "factors": {
+        "image_loss": "smooth_l1",
+        "kl_beta": 5e-05
+      },
+      "metrics_and_CIs": {
+        "real_visual_mse": {
+          "estimate": 0.5341762563912198,
+          "samples": 512,
+          "episodes": 415,
+          "ci95": [
+            0.5230623198266704,
+            0.5456820299607135
+          ]
+        },
+        "real_state_mse": {
+          "estimate": 0.09247615825006505,
+          "samples": 512,
+          "episodes": 415,
+          "ci95": [
+            0.08623866677152618,
+            0.0985952510160222
+          ]
+        },
+        "mean_minus_real_visual_mse": {
+          "estimate": -3.5381526686251163e-06,
+          "samples": 512,
+          "episodes": 415,
+          "ci95": [
+            -5.4574203293566635e-06,
+            -1.5348967519001558e-06
+          ]
+        },
+        "swapped_minus_real_visual_mse": {
+          "estimate": 6.829504854977131e-07,
+          "samples": 512,
+          "episodes": 415,
+          "ci95": [
+            -1.4086175750900098e-06,
+            2.8297283936230713e-06
+          ]
+        },
+        "mean_minus_real_state_mse": {
+          "estimate": 6.6523352870717645e-06,
+          "samples": 512,
+          "episodes": 415,
+          "ci95": [
+            -5.340839130894013e-06,
+            1.86526021363492e-05
+          ]
+        },
+        "swapped_minus_real_state_mse": {
+          "estimate": -2.263802343804855e-06,
+          "samples": 512,
+          "episodes": 415,
+          "ci95": [
+            -1.635449337786515e-05,
+            1.2421707770416245e-05
+          ]
+        },
+        "zero_minus_real_visual_mse": {
+          "estimate": 0.11103280051611364,
+          "samples": 512,
+          "episodes": 415,
+          "ci95": [
+            0.10898729498686789,
+            0.11311449030597953
+          ]
+        }
+      },
+      "geometry": {
+        "mu_variance_sum": 2.2076812991272133e-05,
+        "noise_variance_sum": 14.240773856764818,
+        "noise_fraction": 0.9999984497486591,
+        "pre_norm_node_coordinate_std_mean": 120.32904963610925,
+        "pre_norm_node_variance_fraction": 2.317898651779572e-06
+      },
+      "persistence_visual_mse": 0.5075035095214844,
+      "gradient_before_update500": {
+        "step_before_update": 499,
+        "lr_used": 0.00015,
+        "losses": {
+          "image": 0.4249701499938965,
+          "state": 0.12746024131774902,
+          "weighted_kl": 0.0005341779324226081
+        },
+        "node_gradient_norms": {
+          "image": 6.00736075284658e-06,
+          "state": 0.00011858103243866935,
+          "weighted_kl": 3.500577179238462e-07
+        },
+        "pairwise_cosines": {
+          "image__state": 0.021901199594140053,
+          "image__weighted_kl": 0.17900002002716064,
+          "state__weighted_kl": 0.2049826830625534
+        },
+        "scope": "Actual training batch and sampled epsilon, gradients of each loss at the float32 VAE input activation; normal backward follows."
+      },
+      "gradient_norm_ratios": {
+        "state_over_image": 19.7392894013365,
+        "weighted_kl_over_image": 0.05827146601075552,
+        "weighted_kl_over_state": 0.002952054900558381
+      },
+      "both_visual_intervention_CIs_positive": false,
+      "FP32_precision_confirmed": false
+    },
+    "kl_only": {
+      "factors": {
+        "image_loss": "smooth_l1",
+        "kl_beta": 1e-05
+      },
+      "metrics_and_CIs": {
+        "real_visual_mse": {
+          "estimate": 0.5340532732661813,
+          "samples": 512,
+          "episodes": 415,
+          "ci95": [
+            0.522969808474611,
+            0.5455570641639541
+          ]
+        },
+        "real_state_mse": {
+          "estimate": 0.09206921648910793,
+          "samples": 512,
+          "episodes": 415,
+          "ci95": [
+            0.08566350132469912,
+            0.09835041052383392
+          ]
+        },
+        "mean_minus_real_visual_mse": {
+          "estimate": 2.0960578694939613e-06,
+          "samples": 512,
+          "episodes": 415,
+          "ci95": [
+            3.7608222222663984e-07,
+            3.789272090651987e-06
+          ]
+        },
+        "swapped_minus_real_visual_mse": {
+          "estimate": 7.67875462770462e-07,
+          "samples": 512,
+          "episodes": 415,
+          "ci95": [
+            -1.383786373405495e-06,
+            2.958614428600025e-06
+          ]
+        },
+        "mean_minus_real_state_mse": {
+          "estimate": -6.284666596911848e-06,
+          "samples": 512,
+          "episodes": 415,
+          "ci95": [
+            -2.0896867826521238e-05,
+            7.515275017388626e-06
+          ]
+        },
+        "swapped_minus_real_state_mse": {
+          "estimate": -3.3840551623143256e-06,
+          "samples": 512,
+          "episodes": 415,
+          "ci95": [
+            -1.67816940721858e-05,
+            1.0246560583673199e-05
+          ]
+        },
+        "zero_minus_real_visual_mse": {
+          "estimate": 0.11554719274863601,
+          "samples": 512,
+          "episodes": 415,
+          "ci95": [
+            0.11346438699088629,
+            0.11767093050481243
+          ]
+        }
+      },
+      "geometry": {
+        "mu_variance_sum": 2.6303360665131e-05,
+        "noise_variance_sum": 14.151678596090765,
+        "noise_fraction": 0.9999981413292002,
+        "pre_norm_node_coordinate_std_mean": 118.81905280152553,
+        "pre_norm_node_variance_fraction": 2.6792994003534074e-06
+      },
+      "persistence_visual_mse": 0.5075035095214844,
+      "gradient_before_update500": {
+        "step_before_update": 499,
+        "lr_used": 0.00015,
+        "losses": {
+          "image": 0.42453426122665405,
+          "state": 0.13086824119091034,
+          "weighted_kl": 0.00010617816587910056
+        },
+        "node_gradient_norms": {
+          "image": 5.8721952882478945e-06,
+          "state": 0.00012243737000972033,
+          "weighted_kl": 6.9784420020369e-08
+        },
+        "pairwise_cosines": {
+          "image__state": -0.08622334152460098,
+          "image__weighted_kl": 0.14799825847148895,
+          "state__weighted_kl": 0.1481257677078247
+        },
+        "scope": "Actual training batch and sampled epsilon, gradients of each loss at the float32 VAE input activation; normal backward follows."
+      },
+      "gradient_norm_ratios": {
+        "state_over_image": 20.850357319477425,
+        "weighted_kl_over_image": 0.011883872486330542,
+        "weighted_kl_over_state": 0.0005699601356581638
+      },
+      "both_visual_intervention_CIs_positive": false,
+      "FP32_precision_confirmed": false
+    },
+    "mse_only": {
+      "factors": {
+        "image_loss": "l2",
+        "kl_beta": 5e-05
+      },
+      "metrics_and_CIs": {
+        "real_visual_mse": {
+          "estimate": 0.4830921565880999,
+          "samples": 512,
+          "episodes": 415,
+          "ci95": [
+            0.4723622284057115,
+            0.4944178688163412
+          ]
+        },
+        "real_state_mse": {
+          "estimate": 0.09605242958423332,
+          "samples": 512,
+          "episodes": 415,
+          "ci95": [
+            0.08929289437339102,
+            0.10269131009120663
+          ]
+        },
+        "mean_minus_real_visual_mse": {
+          "estimate": 1.0896474123001099e-06,
+          "samples": 512,
+          "episodes": 415,
+          "ci95": [
+            -6.35013384654734e-07,
+            2.7772688307144688e-06
+          ]
+        },
+        "swapped_minus_real_visual_mse": {
+          "estimate": 7.726484909653664e-07,
+          "samples": 512,
+          "episodes": 415,
+          "ci95": [
+            -1.4824531102690714e-06,
+            2.986341755464121e-06
+          ]
+        },
+        "mean_minus_real_state_mse": {
+          "estimate": -7.493945304304361e-06,
+          "samples": 512,
+          "episodes": 415,
+          "ci95": [
+            -2.1404468833497615e-05,
+            5.920573231126786e-06
+          ]
+        },
+        "swapped_minus_real_state_mse": {
+          "estimate": -1.6806396160973236e-05,
+          "samples": 512,
+          "episodes": 415,
+          "ci95": [
+            -3.02488158980996e-05,
+            -3.660567496462252e-06
+          ]
+        },
+        "zero_minus_real_visual_mse": {
+          "estimate": 0.23480944125913084,
+          "samples": 512,
+          "episodes": 415,
+          "ci95": [
+            0.23237001769829058,
+            0.2372986140277883
+          ]
+        }
+      },
+      "geometry": {
+        "mu_variance_sum": 1.809128179989442e-05,
+        "noise_variance_sum": 14.063409085454428,
+        "noise_fraction": 0.9999987135936658,
+        "pre_norm_node_coordinate_std_mean": 128.32024340477818,
+        "pre_norm_node_variance_fraction": 1.7534113910251263e-06
+      },
+      "persistence_visual_mse": 0.5075035095214844,
+      "gradient_before_update500": {
+        "step_before_update": 499,
+        "lr_used": 0.00015,
+        "losses": {
+          "image": 0.5005330443382263,
+          "state": 0.13057836890220642,
+          "weighted_kl": 0.0006022218731231987
+        },
+        "node_gradient_norms": {
+          "image": 1.3149648111721035e-05,
+          "state": 0.00010729868517955765,
+          "weighted_kl": 3.5301414413879684e-07
+        },
+        "pairwise_cosines": {
+          "image__state": 0.09010933339595795,
+          "image__weighted_kl": 0.08236060291528702,
+          "state__weighted_kl": 0.14118514955043793
+        },
+        "scope": "Actual training batch and sampled epsilon, gradients of each loss at the float32 VAE input activation; normal backward follows."
+      },
+      "gradient_norm_ratios": {
+        "state_over_image": 8.159814184222633,
+        "weighted_kl_over_image": 0.02684590044840326,
+        "weighted_kl_over_state": 0.0032900136991245487
+      },
+      "both_visual_intervention_CIs_positive": false,
+      "FP32_precision_confirmed": false
+    },
+    "kl_mse": {
+      "factors": {
+        "image_loss": "l2",
+        "kl_beta": 1e-05
+      },
+      "metrics_and_CIs": {
+        "real_visual_mse": {
+          "estimate": 0.4827091089100577,
+          "samples": 512,
+          "episodes": 415,
+          "ci95": [
+            0.4719510314142968,
+            0.4940234031076732
+          ]
+        },
+        "real_state_mse": {
+          "estimate": 0.09362301839610154,
+          "samples": 512,
+          "episodes": 415,
+          "ci95": [
+            0.08714643706066569,
+            0.09995833393542378
+          ]
+        },
+        "mean_minus_real_visual_mse": {
+          "estimate": -5.337555194273591e-06,
+          "samples": 512,
+          "episodes": 415,
+          "ci95": [
+            -7.001399422636893e-06,
+            -3.6676699777584747e-06
+          ]
+        },
+        "swapped_minus_real_visual_mse": {
+          "estimate": -1.270294887945056e-06,
+          "samples": 512,
+          "episodes": 415,
+          "ci95": [
+            -3.1082964303274946e-06,
+            5.478743790029828e-07
+          ]
+        },
+        "mean_minus_real_state_mse": {
+          "estimate": -3.391965583432466e-05,
+          "samples": 512,
+          "episodes": 415,
+          "ci95": [
+            -4.858562967364582e-05,
+            -2.018907632921675e-05
+          ]
+        },
+        "swapped_minus_real_state_mse": {
+          "estimate": -9.956662324839272e-06,
+          "samples": 512,
+          "episodes": 415,
+          "ci95": [
+            -2.404882581846003e-05,
+            3.863122916694471e-06
+          ]
+        },
+        "zero_minus_real_visual_mse": {
+          "estimate": 0.23651408817386255,
+          "samples": 512,
+          "episodes": 415,
+          "ci95": [
+            0.2340450433745717,
+            0.23902662888197235
+          ]
+        }
+      },
+      "geometry": {
+        "mu_variance_sum": 2.8035110931899495e-05,
+        "noise_variance_sum": 13.989136606608648,
+        "noise_fraction": 0.9999979959410266,
+        "pre_norm_node_coordinate_std_mean": 125.8255256505817,
+        "pre_norm_node_variance_fraction": 2.4638511649341555e-06
+      },
+      "persistence_visual_mse": 0.5075035095214844,
+      "gradient_before_update500": {
+        "step_before_update": 499,
+        "lr_used": 0.00015,
+        "losses": {
+          "image": 0.500240683555603,
+          "state": 0.12331371009349823,
+          "weighted_kl": 0.00012336377403698862
+        },
+        "node_gradient_norms": {
+          "image": 1.2542112926894333e-05,
+          "state": 0.00010701407154556364,
+          "weighted_kl": 7.23555899639905e-08
+        },
+        "pairwise_cosines": {
+          "image__state": -0.00044385818182490766,
+          "image__weighted_kl": 0.1409022957086563,
+          "state__weighted_kl": 0.2039077877998352
+        },
+        "scope": "Actual training batch and sampled epsilon, gradients of each loss at the float32 VAE input activation; normal backward follows."
+      },
+      "gradient_norm_ratios": {
+        "state_over_image": 8.532379844554818,
+        "weighted_kl_over_image": 0.005769011201361199,
+        "weighted_kl_over_state": 0.00067613154904758
+      },
+      "both_visual_intervention_CIs_positive": false,
+      "FP32_precision_confirmed": false
+    }
+  },
+  "factorial": {
+    "kl_only_minus_baseline": {
+      "coefficients": {
+        "kl_only": 1,
+        "baseline": -1
+      },
+      "metrics": {
+        "real_visual_mse": {
+          "estimate_from_aggregate": -0.00012296438217163086,
+          "ci95": [
+            -0.00016971937500298874,
+            -7.66879887748062e-05
+          ],
+          "preferred_sign": "negative",
+          "paired_training_verified": true,
+          "estimate": -0.000122983125038445,
+          "samples": 512,
+          "episodes": 415
+        },
+        "real_state_mse": {
+          "estimate_from_aggregate": -0.00040693581104278564,
+          "ci95": [
+            -0.0008195654999743462,
+            2.657802872150593e-05
+          ],
+          "preferred_sign": "negative",
+          "paired_training_verified": true,
+          "estimate": -0.00040694176095712464,
+          "samples": 512,
+          "episodes": 415
+        },
+        "mean_minus_real_visual_mse": {
+          "estimate_from_aggregate": 5.634210538119078e-06,
+          "ci95": [
+            3.0740299572129804e-06,
+            8.069803475902937e-06
+          ],
+          "preferred_sign": "positive",
+          "paired_training_verified": true,
+          "estimate": 5.634210538119078e-06,
+          "samples": 512,
+          "episodes": 415
+        },
+        "swapped_minus_real_visual_mse": {
+          "estimate_from_aggregate": 8.492497727274895e-08,
+          "ci95": [
+            -2.8777331875671235e-06,
+            3.036485479669533e-06
+          ],
+          "preferred_sign": "positive",
+          "paired_training_verified": true,
+          "estimate": 8.492497727274895e-08,
+          "samples": 512,
+          "episodes": 415
+        }
+      }
+    },
+    "mse_only_minus_baseline": {
+      "coefficients": {
+        "mse_only": 1,
+        "baseline": -1
+      },
+      "metrics": {
+        "real_visual_mse": {
+          "estimate_from_aggregate": -0.05108407139778137,
+          "ci95": [
+            -0.05275280944398612,
+            -0.04952329295411245
+          ],
+          "preferred_sign": "negative",
+          "paired_training_verified": true,
+          "estimate": -0.0510840998031199,
+          "samples": 512,
+          "episodes": 415
+        },
+        "real_state_mse": {
+          "estimate_from_aggregate": 0.0035762712359428406,
+          "ci95": [
+            0.002726647240630966,
+            0.00442355920609277
+          ],
+          "preferred_sign": "negative",
+          "paired_training_verified": true,
+          "estimate": 0.0035762713341682684,
+          "samples": 512,
+          "episodes": 415
+        },
+        "mean_minus_real_visual_mse": {
+          "estimate_from_aggregate": 4.627800080925226e-06,
+          "ci95": [
+            2.192332827206488e-06,
+            7.109628478857748e-06
+          ],
+          "preferred_sign": "positive",
+          "paired_training_verified": true,
+          "estimate": 4.627800080925226e-06,
+          "samples": 512,
+          "episodes": 415
+        },
+        "swapped_minus_real_visual_mse": {
+          "estimate_from_aggregate": 8.969800546765327e-08,
+          "ci95": [
+            -2.815521697214642e-06,
+            2.9125788602232155e-06
+          ],
+          "preferred_sign": "positive",
+          "paired_training_verified": true,
+          "estimate": 8.969800546765327e-08,
+          "samples": 512,
+          "episodes": 415
+        }
+      }
+    },
+    "both_minus_baseline": {
+      "coefficients": {
+        "kl_mse": 1,
+        "baseline": -1
+      },
+      "metrics": {
+        "real_visual_mse": {
+          "estimate_from_aggregate": -0.05146715044975281,
+          "ci95": [
+            -0.05313565909170604,
+            -0.04989120331173244
+          ],
+          "preferred_sign": "negative",
+          "paired_training_verified": true,
+          "estimate": -0.0514671474811621,
+          "samples": 512,
+          "episodes": 415
+        },
+        "real_state_mse": {
+          "estimate_from_aggregate": 0.001146860420703888,
+          "ci95": [
+            0.000698591851399702,
+            0.0016035596691699298
+          ],
+          "preferred_sign": "negative",
+          "paired_training_verified": true,
+          "estimate": 0.001146860146036488,
+          "samples": 512,
+          "episodes": 415
+        },
+        "mean_minus_real_visual_mse": {
+          "estimate_from_aggregate": -1.7994025256484747e-06,
+          "ci95": [
+            -4.318435419732192e-06,
+            6.456229723506042e-07
+          ],
+          "preferred_sign": "positive",
+          "paired_training_verified": true,
+          "estimate": -1.7994025256484747e-06,
+          "samples": 512,
+          "episodes": 415
+        },
+        "swapped_minus_real_visual_mse": {
+          "estimate_from_aggregate": -1.953245373442769e-06,
+          "ci95": [
+            -4.823067508250011e-06,
+            9.012635912313232e-07
+          ],
+          "preferred_sign": "positive",
+          "paired_training_verified": true,
+          "estimate": -1.953245373442769e-06,
+          "samples": 512,
+          "episodes": 415
+        }
+      }
+    },
+    "kl_marginal_effect": {
+      "coefficients": {
+        "kl_only": 0.5,
+        "baseline": -0.5,
+        "kl_mse": 0.5,
+        "mse_only": -0.5
+      },
+      "metrics": {
+        "real_visual_mse": {
+          "estimate_from_aggregate": -0.0002530217170715332,
+          "ci95": [
+            -0.00028167557348426464,
+            -0.00022366460380237384
+          ],
+          "preferred_sign": "negative",
+          "paired_training_verified": true,
+          "estimate": -0.0002530154015403241,
+          "samples": 512,
+          "episodes": 415
+        },
+        "real_state_mse": {
+          "estimate_from_aggregate": -0.0014181733131408691,
+          "ci95": [
+            -0.0016284022991980497,
+            -0.0012009616084843364
+          ],
+          "preferred_sign": "negative",
+          "paired_training_verified": true,
+          "estimate": -0.0014181764745444525,
+          "samples": 512,
+          "episodes": 415
+        },
+        "mean_minus_real_visual_mse": {
+          "estimate_from_aggregate": -3.964960342273116e-07,
+          "ci95": [
+            -2.041199492098454e-06,
+            1.2835042990294694e-06
+          ],
+          "preferred_sign": "positive",
+          "paired_training_verified": true,
+          "estimate": -3.964960342273116e-07,
+          "samples": 512,
+          "episodes": 415
+        },
+        "swapped_minus_real_visual_mse": {
+          "estimate_from_aggregate": -9.790092008188367e-07,
+          "ci95": [
+            -3.231441591874001e-06,
+            1.3270858310249402e-06
+          ],
+          "preferred_sign": "positive",
+          "paired_training_verified": true,
+          "estimate": -9.790092008188367e-07,
+          "samples": 512,
+          "episodes": 415
+        }
+      }
+    },
+    "mse_marginal_effect": {
+      "coefficients": {
+        "mse_only": 0.5,
+        "baseline": -0.5,
+        "kl_mse": 0.5,
+        "kl_only": -0.5
+      },
+      "metrics": {
+        "real_visual_mse": {
+          "estimate_from_aggregate": -0.051214128732681274,
+          "ci95": [
+            -0.05289183154813925,
+            -0.04964761917853984
+          ],
+          "preferred_sign": "negative",
+          "paired_training_verified": true,
+          "estimate": -0.05121413207962178,
+          "samples": 512,
+          "episodes": 415
+        },
+        "real_state_mse": {
+          "estimate_from_aggregate": 0.002565033733844757,
+          "ci95": [
+            0.0020497738064853962,
+            0.003068887743337532
+          ],
+          "preferred_sign": "negative",
+          "paired_training_verified": true,
+          "estimate": 0.0025650366205809405,
+          "samples": 512,
+          "episodes": 415
+        },
+        "mean_minus_real_visual_mse": {
+          "estimate_from_aggregate": -1.402906491421163e-06,
+          "ci95": [
+            -3.1506806881578404e-06,
+            3.5180141742440725e-07
+          ],
+          "preferred_sign": "positive",
+          "paired_training_verified": true,
+          "estimate": -1.402906491421163e-06,
+          "samples": 512,
+          "episodes": 415
+        },
+        "swapped_minus_real_visual_mse": {
+          "estimate_from_aggregate": -9.742361726239324e-07,
+          "ci95": [
+            -3.1323821206526226e-06,
+            1.0758196310617022e-06
+          ],
+          "preferred_sign": "positive",
+          "paired_training_verified": true,
+          "estimate": -9.742361726239324e-07,
+          "samples": 512,
+          "episodes": 415
+        }
+      }
+    },
+    "interaction": {
+      "coefficients": {
+        "kl_mse": 1,
+        "kl_only": -1,
+        "mse_only": -1,
+        "baseline": 1
+      },
+      "metrics": {
+        "real_visual_mse": {
+          "estimate_from_aggregate": -0.0002601146697998047,
+          "ci95": [
+            -0.0003406144203576154,
+            -0.00017789611465619681
+          ],
+          "preferred_sign": "negative",
+          "paired_training_verified": true,
+          "estimate": -0.0002600645530037582,
+          "samples": 512,
+          "episodes": 415
+        },
+        "real_state_mse": {
+          "estimate_from_aggregate": -0.002022475004196167,
+          "ci95": [
+            -0.0028344015241177586,
+            -0.0011880864494520891
+          ],
+          "preferred_sign": "negative",
+          "paired_training_verified": true,
+          "estimate": -0.0020224694271746557,
+          "samples": 512,
+          "episodes": 415
+        },
+        "mean_minus_real_visual_mse": {
+          "estimate_from_aggregate": -1.2061413144692779e-05,
+          "ci95": [
+            -1.5488171785017876e-05,
+            -8.52440536722045e-06
+          ],
+          "preferred_sign": "positive",
+          "paired_training_verified": true,
+          "estimate": -1.2061413144692779e-05,
+          "samples": 512,
+          "episodes": 415
+        },
+        "swapped_minus_real_visual_mse": {
+          "estimate_from_aggregate": -2.1278683561831713e-06,
+          "ci95": [
+            -6.056584802457981e-06,
+            1.9094578116108815e-06
+          ],
+          "preferred_sign": "positive",
+          "paired_training_verified": true,
+          "estimate": -2.1278683561831713e-06,
+          "samples": 512,
+          "episodes": 415
+        }
+      }
+    }
+  },
+  "prior_scale_reference": {
+    "official": 122.3064544221046,
+    "local": 19270.43394359292
+  },
+  "interpretation": [
+    "All four arms lack a positive visual swap-minus-real gap whose episode-bootstrap CI excludes zero at step500; no arm demonstrates both positive mean and swap utility.",
+    "MSE improves common future-feature MSE by about 0.051 versus SmoothL1, while its latent intervention gaps remain near zero. Better future prediction is not evidence of per-example z use.",
+    "Large zero-code penalties coexist with tiny mean/swap penalties: removing the shared code offset changes prediction, without establishing that individual future differences are encoded usefully.",
+    "At the sampled training batch immediately before update500, state-loss VAE-input gradient dominates image and weighted-KL norms. Direct weighted-KL domination or image/KL cancellation at this node and batch is unsupported.",
+    "Early underuse appears with pre-LayerNorm coordinate std about119\u2013128, close to the released model scale about122. The much larger local10000 scale about19270 is therefore not required for this early pattern.",
+    "No causal conclusion about historical parameter updates, convergence, generalization across seeds, or final3000 outcomes is supported by this snapshot."
+  ],
+  "limits": [
+    "Bootstrap CIs condition on fixed weights, stored BF16 predictions, the fixed validation mean, and one fixed donor permutation; they do not quantify seed variance, donor randomization, multiple comparisons, or precision bias.",
+    "Do not declare a 1e-6-scale intervention effect genuine solely because its stored-prediction CI excludes zero. FP32 loss arithmetic does not recover information lost in BF16 model operations.",
+    "Gradient records refer to one B4 training batch before update500; validation follows the update. Input-activation gradient norms are not parameter-gradient norms or Adam update magnitudes.",
+    "All arms are still in the1000-update warmup at this snapshot (update500 LR0.00015). Negative early evidence does not prove KL/MSE changes cannot matter later.",
+    "Hash equality verifies recorded streams and initialization, not bitwise deterministic GPU arithmetic."
+  ]
+}

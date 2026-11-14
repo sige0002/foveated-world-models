@@ -1,0 +1,271 @@
+{
+  "status": "detached_evaluator_launched_waiting_for_four_final3000",
+  "command_after_root_clearance": [
+    "/home/sadasue/foveated-world-models/.venv/bin/python",
+    "-u",
+    "/home/sadasue/foveated-world-models/research/evaluate_robotwin_loss_ablation_fp32.py",
+    "--runs-root",
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114",
+    "--output",
+    "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/evaluations/final3000-highest-fp32",
+    "--batch-size",
+    "2",
+    "--bootstrap",
+    "4000",
+    "--wait-for-checkpoints"
+  ],
+  "protocol": {
+    "stage": "prepared_not_executed",
+    "checkpoint_step_required": 3000,
+    "reference_step": 500,
+    "samples": 512,
+    "unique_episodes": 415,
+    "validation_pair_and_donor_sha256": "1c04ef52284a2e86b4e60b80de8b54dae93cbe00f11792fe67de9149a9eacd75",
+    "reference_files": {
+      "baseline": {
+        "path": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/baseline/z_validation_step000500.json",
+        "sha256": "9908d11b3a38735fd10bd4becdbb811b57b3ce361039deae82b6d5e76bba8b6b"
+      },
+      "kl_only": {
+        "path": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/kl_only/z_validation_step000500.json",
+        "sha256": "e636a8362b41c4a5dbb4d8d0db94e9969c618348cb2b82ace0efba07101674d4"
+      },
+      "mse_only": {
+        "path": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/mse_only/z_validation_step000500.json",
+        "sha256": "75e67c4b6ad0c48980076217e8ef9d3e00cf8ca3e608a0e068b3c3f12a97d2c4"
+      },
+      "kl_mse": {
+        "path": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/kl_mse/z_validation_step000500.json",
+        "sha256": "a247a31365b3ce984ca5836631d3af719d84e9c572d92657673169a95b7e8fb1"
+      }
+    },
+    "config_sha256": {
+      "baseline": "7c3d11251a5f309ea87ecf69e248060a5e8c7d15fefabeb16eda54c5f0e6526a",
+      "kl_only": "2cf347dfd43a71c271ed0cffb74b3dea62594637065c54bff67f3b0668a191f2",
+      "mse_only": "e2b82f053b42a09e494c2884e8ebb669012305ebb97e6f88fb6d1838cd1a897a",
+      "kl_mse": "dcd5f203c0400128b68384ece57926dd6fef005e931242397a07609d1fa5594f"
+    },
+    "source": "/media/sadasue/SSD1/foveated-world-models/research/official-data-contract-audit-20261113/LaWAM-robotwin-delta2",
+    "official_source": "/media/sadasue/SSD1/foveated-world-models/research/official-data-contract-audit-20261113/LaWAM",
+    "source_commit": "c12168d9077edea67fe7c1b70d08b80b8e65a9c8",
+    "local_patch_sha256": "7fa893260a313e977a4e4476a794a51badb17493ca16a97601d21f87db0df808",
+    "verified_visual_source_equivalence": {
+      "latent_action_model/core/utils/lam_encoder.py": "db55c9946db8acc1474b01380e182f151a562abdcea8daa1a8bc575daffd115d",
+      "latent_action_model/core/utils/modules.py": "f100161a90f66cad89af39f615c58ece34316e643c6f21d561122a29ee877c44",
+      "latent_action_model/core/utils/pos_embs.py": "756b578d7c691d85f1b1ebcc99a7375df60fe227ae88330084a506b5e9c83875",
+      "latent_action_model/core/vq.py": "827f96892efd9b10f6942ea78ab294ff39b0a91a32a61cbdd93cac46e6f9a5ff",
+      "latent_action_model/core/vjepa_encoder.py": "da3ebc54fe9b28a1ab0b1c4abf82bf0877a7fd12c41579115776c1fa2fe1dc93",
+      "latent_action_model/data_loader/video_aug.py": "e425cf9ea33ae6abe583c13afe86e1337eec309ed293e32cccb2f69daf9fb69b",
+      "latent_action_model/core/utils/lam_decoder.py:modulate": "806c612a9260426c2af3ac2e3c698c939c16c7f8e2125afce2108aff2bb32917",
+      "latent_action_model/core/utils/lam_decoder.py:AdaLNBlock": "5c8fa9591904236897347033640b83e1d06a4ccc5451af5789f100e6dd03163b",
+      "latent_action_model/core/utils/lam_decoder.py:LAMDecoder_v2": "18d5ccf5076b498599dc6b514a847c4130be4cb4c32c2376ee701d2953b7ba21"
+    },
+    "source_files_sha256": {
+      "lam_model.py": "f68daabe8799cfa9b999d11c49f52136cca1897f71677eccb69e4941de2fec3d",
+      "lam_lightinng.py": "d87ef89cc72544d36217e2215392fe257a9161daf10b8036a96026f32682e9bb",
+      "utils/lam_decoder.py": "a7f2ab08e925d6b2a38bdbff2433cdcac5880d173a463ce61797f7a617132a21"
+    },
+    "release": "/media/sadasue/SSD1/foveated-world-models/models/lawam-lam-bd993da",
+    "release_expected_sha256": "57c31dcba13c2998c4e866cdcfc427f14ae3c1b762a586778276e2100b48af88",
+    "release_config_sha256": "e5f98738d1c6dc8d8643d5a73d44ebd46385fbb2fc4031d46a02ad384a353449",
+    "cache": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/evaluations/final3000-highest-fp32/features512-highest-fp32.pt",
+    "output": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/evaluations/final3000-highest-fp32",
+    "mount": {
+      "filesystems": [
+        {
+          "target": "/media/sadasue/SSD1",
+          "source": "/dev/sda1",
+          "fstype": "ext4"
+        }
+      ]
+    },
+    "batch_size": 2,
+    "bootstrap_draws": 4000,
+    "precision": "highest FP32 DINO, encoder, VAE, decoder and state head; no autocast; TF32 disabled",
+    "controls": [
+      "real",
+      "zero",
+      "mean_global512",
+      "swapped_different_episode",
+      "current_only_IDM_x_x",
+      "persistence"
+    ],
+    "official_scope": "Actual released full weights, common visual evaluation only; 14-D state head not scored on 16-D labels.",
+    "interval_scope": "Paired target-episode cluster bootstrap, fixed trained weights, fixed global mean and donor permutation; no seed/precision/donor uncertainty or multiple-comparison correction.",
+    "script_sha256": "e9c1282f15e01832d4c12a01b8e74fdf5229bbf8859d5e48e71c1a84b11b5b01",
+    "dataset_info_sha256": "08eb275079446a3a1d08d27c8143bd73a34cbfe9ad81e01ddda6d902408a22dc",
+    "frame_offset": 48,
+    "ready_checkpoints": {
+      "baseline": false,
+      "kl_only": false,
+      "mse_only": false,
+      "kl_mse": false
+    }
+  },
+  "completed_validation": [
+    "Python syntax compile",
+    "CPU-only prepare: mount, configs, 512 identities, 415 episodes, swap permutation, local/release visual-source parity",
+    "CPU synthetic paired factorial, cluster bootstrap, subset and official-state-exclusion invariants",
+    "Old10000 checkpoint metadata only:660 state tensors and saved hyperparameters match; CUDA stayed uninitialized",
+    "CPU current-only contrast and failed-training-watcher guards",
+    "Bounded GPU smoke local10000+official:660 tensors strict each, exact native/cache parity, unchanged full-module hashes, all controls including current_only, peak2.80GiB,81.0seconds"
+  ],
+  "not_yet_validated": [
+    "Actual final3000 checkpoints not yet ready; final512 FP32 evaluation pending",
+    "Final B2 timing/memory (bounded smoke used B1)"
+  ],
+  "waiting_behavior": "--wait-for-checkpoints waits for all four run_summary complete@3000 plus final.ckpt before importing torch, then waits for host>=16GiB and CUDA>=8GiB free without loading model; does not start or modify training. Fails promptly if watch_status.failed_arms is nonempty while checkpoints are missing.",
+  "outputs": [
+    "feature-cache-manifest.json",
+    "features512-highest-fp32.pt",
+    "<arm>/posterior-codes.pt",
+    "<arm>/results.json",
+    "official/results.json",
+    "training-pairing-step3000.json",
+    "results.json"
+  ],
+  "limits": [
+    "No GPU smoke or checkpoint model loading has been claimed complete.",
+    "No auto-launch before parent clearance.",
+    "Global512 mean, subset selection and donor map fixed before arm comparison; CIs conditional on these choices."
+  ],
+  "smoke_status": "Passed local10000 and official B1x2; process exited0",
+  "launch_pinning": "Initial script/config/source/data hashes saved to launch-pins.json, then revalidated immediately before CUDA/model load; mismatches fail.",
+  "smoke_attempts": [
+    {
+      "attempt": 1,
+      "status": "failed_safely",
+      "error": "Raw lam_collate has uint8 videos but no dec_videos; full checkpoint strict load had passed.",
+      "fix": "Call exact upstream gpu_two_view_video_aug(training=False) to create normalized FP32 current/decoder views.",
+      "log": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/evaluations/final-evaluator-smoke-20261114.log"
+    },
+    {
+      "attempt": 2,
+      "status": "passed",
+      "output": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/evaluations/final-evaluator-smoke-v2-20261114"
+    }
+  ],
+  "launch": {
+    "started_at_utc": "2026-11-13T21:00:03.890408+00:00",
+    "pid": 126286,
+    "command": [
+      "/home/sadasue/foveated-world-models/.venv/bin/python",
+      "-u",
+      "/home/sadasue/foveated-world-models/research/evaluate_robotwin_loss_ablation_fp32.py",
+      "--runs-root",
+      "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114",
+      "--output",
+      "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/evaluations/final3000-highest-fp32",
+      "--batch-size",
+      "2",
+      "--bootstrap",
+      "4000",
+      "--wait-for-checkpoints"
+    ],
+    "cwd": "/home/sadasue/foveated-world-models",
+    "log": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/evaluations/final3000-highest-fp32/evaluator.log",
+    "output": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/evaluations/final3000-highest-fp32",
+    "script_sha256": "e9c1282f15e01832d4c12a01b8e74fdf5229bbf8859d5e48e71c1a84b11b5b01",
+    "configuration_source_pins": {
+      "stage": "prepared_not_executed",
+      "checkpoint_step_required": 3000,
+      "reference_step": 500,
+      "samples": 512,
+      "unique_episodes": 415,
+      "validation_pair_and_donor_sha256": "1c04ef52284a2e86b4e60b80de8b54dae93cbe00f11792fe67de9149a9eacd75",
+      "reference_files": {
+        "baseline": {
+          "path": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/baseline/z_validation_step000500.json",
+          "sha256": "9908d11b3a38735fd10bd4becdbb811b57b3ce361039deae82b6d5e76bba8b6b"
+        },
+        "kl_only": {
+          "path": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/kl_only/z_validation_step000500.json",
+          "sha256": "e636a8362b41c4a5dbb4d8d0db94e9969c618348cb2b82ace0efba07101674d4"
+        },
+        "mse_only": {
+          "path": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/mse_only/z_validation_step000500.json",
+          "sha256": "75e67c4b6ad0c48980076217e8ef9d3e00cf8ca3e608a0e068b3c3f12a97d2c4"
+        },
+        "kl_mse": {
+          "path": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/kl_mse/z_validation_step000500.json",
+          "sha256": "a247a31365b3ce984ca5836631d3af719d84e9c572d92657673169a95b7e8fb1"
+        }
+      },
+      "config_sha256": {
+        "baseline": "7c3d11251a5f309ea87ecf69e248060a5e8c7d15fefabeb16eda54c5f0e6526a",
+        "kl_only": "2cf347dfd43a71c271ed0cffb74b3dea62594637065c54bff67f3b0668a191f2",
+        "mse_only": "e2b82f053b42a09e494c2884e8ebb669012305ebb97e6f88fb6d1838cd1a897a",
+        "kl_mse": "dcd5f203c0400128b68384ece57926dd6fef005e931242397a07609d1fa5594f"
+      },
+      "source": "/media/sadasue/SSD1/foveated-world-models/research/official-data-contract-audit-20261113/LaWAM-robotwin-delta2",
+      "official_source": "/media/sadasue/SSD1/foveated-world-models/research/official-data-contract-audit-20261113/LaWAM",
+      "source_commit": "c12168d9077edea67fe7c1b70d08b80b8e65a9c8",
+      "local_patch_sha256": "7fa893260a313e977a4e4476a794a51badb17493ca16a97601d21f87db0df808",
+      "verified_visual_source_equivalence": {
+        "latent_action_model/core/utils/lam_encoder.py": "db55c9946db8acc1474b01380e182f151a562abdcea8daa1a8bc575daffd115d",
+        "latent_action_model/core/utils/modules.py": "f100161a90f66cad89af39f615c58ece34316e643c6f21d561122a29ee877c44",
+        "latent_action_model/core/utils/pos_embs.py": "756b578d7c691d85f1b1ebcc99a7375df60fe227ae88330084a506b5e9c83875",
+        "latent_action_model/core/vq.py": "827f96892efd9b10f6942ea78ab294ff39b0a91a32a61cbdd93cac46e6f9a5ff",
+        "latent_action_model/core/vjepa_encoder.py": "da3ebc54fe9b28a1ab0b1c4abf82bf0877a7fd12c41579115776c1fa2fe1dc93",
+        "latent_action_model/data_loader/video_aug.py": "e425cf9ea33ae6abe583c13afe86e1337eec309ed293e32cccb2f69daf9fb69b",
+        "latent_action_model/core/utils/lam_decoder.py:modulate": "806c612a9260426c2af3ac2e3c698c939c16c7f8e2125afce2108aff2bb32917",
+        "latent_action_model/core/utils/lam_decoder.py:AdaLNBlock": "5c8fa9591904236897347033640b83e1d06a4ccc5451af5789f100e6dd03163b",
+        "latent_action_model/core/utils/lam_decoder.py:LAMDecoder_v2": "18d5ccf5076b498599dc6b514a847c4130be4cb4c32c2376ee701d2953b7ba21"
+      },
+      "source_files_sha256": {
+        "lam_model.py": "f68daabe8799cfa9b999d11c49f52136cca1897f71677eccb69e4941de2fec3d",
+        "lam_lightinng.py": "d87ef89cc72544d36217e2215392fe257a9161daf10b8036a96026f32682e9bb",
+        "utils/lam_decoder.py": "a7f2ab08e925d6b2a38bdbff2433cdcac5880d173a463ce61797f7a617132a21"
+      },
+      "release": "/media/sadasue/SSD1/foveated-world-models/models/lawam-lam-bd993da",
+      "release_expected_sha256": "57c31dcba13c2998c4e866cdcfc427f14ae3c1b762a586778276e2100b48af88",
+      "release_config_sha256": "e5f98738d1c6dc8d8643d5a73d44ebd46385fbb2fc4031d46a02ad384a353449",
+      "cache": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/evaluations/final3000-highest-fp32/features512-highest-fp32.pt",
+      "output": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/evaluations/final3000-highest-fp32",
+      "mount": {
+        "filesystems": [
+          {
+            "target": "/media/sadasue/SSD1",
+            "source": "/dev/sda1",
+            "fstype": "ext4"
+          }
+        ]
+      },
+      "batch_size": 2,
+      "bootstrap_draws": 4000,
+      "precision": "highest FP32 DINO, encoder, VAE, decoder and state head; no autocast; TF32 disabled",
+      "controls": [
+        "real",
+        "zero",
+        "mean_global512",
+        "swapped_different_episode",
+        "current_only_IDM_x_x",
+        "persistence"
+      ],
+      "official_scope": "Actual released full weights, common visual evaluation only; 14-D state head not scored on 16-D labels.",
+      "interval_scope": "Paired target-episode cluster bootstrap, fixed trained weights, fixed global mean and donor permutation; no seed/precision/donor uncertainty or multiple-comparison correction.",
+      "script_sha256": "e9c1282f15e01832d4c12a01b8e74fdf5229bbf8859d5e48e71c1a84b11b5b01",
+      "dataset_info_sha256": "08eb275079446a3a1d08d27c8143bd73a34cbfe9ad81e01ddda6d902408a22dc",
+      "frame_offset": 48,
+      "ready_checkpoints": {
+        "baseline": false,
+        "kl_only": false,
+        "mse_only": false,
+        "kl_mse": false
+      }
+    },
+    "smoke_results": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/evaluations/final-evaluator-smoke-v2-20261114/results.json",
+    "authorization": "Parent explicitly authorized detached evaluation after successful bounded smoke; no new training.",
+    "mode": "CPU-only waiting until four final3000 checkpoints complete, then frozen FP32 evaluation.",
+    "initial_wait_verification": {
+      "checked_at_utc": "2026-11-13T21:00:17.209263+00:00",
+      "pid": 126286,
+      "state": "S",
+      "alive": true,
+      "latest_log": "{\"phase\": \"waiting_without_CUDA\", \"ready\": {\"baseline\": false, \"kl_only\": false, \"mse_only\": false, \"kl_mse\": false}}",
+      "torch_or_CUDA_shared_libraries_mapped": [],
+      "GPU_process_present": false,
+      "launch_pins_match": true
+    }
+  }
+}

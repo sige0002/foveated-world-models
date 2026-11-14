@@ -1,0 +1,71 @@
+{
+  "complete": true,
+  "lerobot_commit": "fe1c54594f6ba275fccf210b9f7b11f0e2324b89",
+  "upstream_source": "/media/sadasue/SSD1/foveated-world-models/research/official-data-contract-audit-20261113/LaWAM",
+  "modules": {
+    "encoder": {
+      "state_tensors": 305,
+      "fresh_seed42_initialization_exact": true,
+      "output_max_abs_difference": 0.0
+    },
+    "vq": {
+      "state_tensors": 6,
+      "fresh_seed42_initialization_exact": true,
+      "posterior_max_abs_difference": 0.0,
+      "sampled_z_max_abs_difference": 0.0,
+      "kl_max_abs_difference": 0.0,
+      "node_gradient_max_abs_difference": 0.0
+    },
+    "decoder": {
+      "state_tensors": 128,
+      "fresh_seed42_initialization_exact": true,
+      "output_max_abs_difference": 0.0
+    }
+  },
+  "stage1_schedule": [
+    {
+      "update_1_based": 1,
+      "lr_used": 3e-08
+    },
+    {
+      "update_1_based": 2,
+      "lr_used": 6e-08
+    },
+    {
+      "update_1_based": 100,
+      "lr_used": 2.9999999999999997e-06
+    },
+    {
+      "update_1_based": 1000,
+      "lr_used": 2.9999999999999997e-05
+    },
+    {
+      "update_1_based": 5000,
+      "lr_used": 0.00015
+    },
+    {
+      "update_1_based": 9999,
+      "lr_used": 0.00029997
+    },
+    {
+      "update_1_based": 10000,
+      "lr_used": 0.0003
+    },
+    {
+      "update_1_based": 10001,
+      "lr_used": 0.0003
+    },
+    {
+      "update_1_based": 20000,
+      "lr_used": 0.0003
+    },
+    {
+      "update_1_based": 30000,
+      "lr_used": 0.0003
+    }
+  ],
+  "scheduler_source_sha256": "c47ea36c98bd8424acb74adf44e93bf0ea7e7a2f369fccfdc0c423fea7fa788c",
+  "schedule_scope": "Original RLinf configure_optimizers executed on a dummy parameter, all 30k rates checked; no model training.",
+  "parity_scope": "Four cached real pairs, identical local 10k weights, highest FP32. Primitive encoder/VAE/visual decoder; not the complete LeRobot policy pipeline.",
+  "script_sha256": "1a2156db1f453830ba98be45ddc1e6da6d14cd7284f341e13c0b9f8adc726899"
+}

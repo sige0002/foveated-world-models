@@ -1,0 +1,26 @@
+{
+  "script": "/home/sadasue/foveated-world-models/research/evaluate_robotwin_matched_state_probes.py",
+  "scope": "CPU helper and source review only, no model/cache loading or GPU use",
+  "checks": {
+    "syntax": true,
+    "15_CV_fits_no_row_or_episode_leak": true,
+    "fold_local_input_and_target_centering": true,
+    "final_fit_all_training_rows": true,
+    "raw_zero_before_scaler_distinct_from_standardized_zero": true,
+    "position_metric_mapping": true
+  },
+  "source_review": {
+    "shared_train_and_val_ids_states_and_deltas_exact": true,
+    "validation_not_used_to_choose_ridge": true,
+    "official_local_g_forbidden_by_hook": true,
+    "frozen_module_before_after_hash_check": true,
+    "same_weights_as_completed_visual_FP32_evaluation": true
+  },
+  "limitations": [
+    "Runtime cache/model loading and posterior parity are not exercised by this CPU check.",
+    "Standardization can amplify tiny latent variation; linear readout success is not decoder z use."
+  ],
+  "helper_tests_source_sha256": "de7a7ac62d1c68c62110aaac8c1fe146bd89684e8fbfee3583da025868da5c96",
+  "script_sha256": "828e5a59d4a850d9700b2d6668b9ab036a881ca38596e7336e50833cab79cc99",
+  "final_change_review": "Added checkpoint SHA and all module-before hashes against the completed FP32 evaluation for baseline3000, combined3000 and official. Ridge and metric helper code unchanged."
+}

@@ -1,0 +1,68 @@
+{
+  "status": "prepared_CPU_only_not_GPU_preflighted",
+  "files_sha256": {
+    "/home/sadasue/foveated-world-models/research/train_robotwin_g_onset.py": "2f5627d2f894b98afcabb2776c81cb14c8e66a6b33ba37988d42780cc6477010",
+    "/home/sadasue/foveated-world-models/research/robotwin_g_onset_probe.py": "79791c3c08549af89fe2eb405cf6ab28c4c821af6d859a197102c74e45cd307e",
+    "/home/sadasue/foveated-world-models/configs/robotwin_g_onset_20261114/g_on.yaml": "b820a4005d69adf5384b1ccfe1f3e8af6c64bd792698a262b8f7ee97fe094ade",
+    "/home/sadasue/foveated-world-models/configs/robotwin_g_onset_20261114/g_off.yaml": "bc2dcc0f0a876809589b5ab7f47360c29bf242ab6d09da6f7ab8a71a413c1877"
+  },
+  "parent_causal_v2_sha256": "e1d7db1efca25cdff88a7299e7f5cd31c016b0c11a661fd212c73df67647aa22",
+  "input_sha256": {
+    "cache": "eafacc5cea01814ec8c12f3e0420348a9da7bc12deeaf7cd9f0bb3d952733c15",
+    "evaluator": "ff02f76a61305c80bb036d0aca471d675387975cd7ea59454da7479018855758",
+    "original_stream": "cf96064c0ff670e2c33409babbc2aad3b0162ed72ffa878af14dc5af6af757b3",
+    "original_initial_fingerprint": "a35c158772a9b79f2a3cdc5b3207eeb1db2ef7b6c49c03eb5e82aa068325de48"
+  },
+  "expected_initial_trainable_sha256": "c933311d638c1b880d370ff85195220bdd06394cdb4ef62710fa8fa4d522e8a0",
+  "cpu_prepared_outputs": {
+    "g_on": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-g-onset-b4-20261114/prepared-v2/g_on",
+    "g_off": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-g-onset-b4-20261114/prepared-v2/g_off"
+  },
+  "cpu_checks": {
+    "both_prepare_only_completed": true,
+    "CUDA_not_initialized_assert_passed": true,
+    "same_data_contract_split_and_FP32_cache": true,
+    "config_model_factor_difference_only_lambda_aux": true,
+    "geometry_matches_prior_independent_official_and_candidate_audit": true,
+    "AST_compiles": true
+  },
+  "unverified_until_GPU_preflight": [
+    "Model initial trainable hash actual match",
+    "All6 data/augmentation/epsilon hashes and g_on first-step numeric match",
+    "Full FP32 probe RNG/training-flag/parameter-version preservation",
+    "Timing and simultaneous GPU/host memory use"
+  ],
+  "precision_restoration_CPU_check": {
+    "torch": "2.11.0+cu130",
+    "legacy_flags_after_medium_restore": "get_float32_matmul_precision raises mixed-API RuntimeError",
+    "correct_order": "restore legacy flags first, set_float32_matmul_precision(saved) last",
+    "correct_restored_value": "medium",
+    "CUDA_initialized": false,
+    "helper_has_runtime_restoration_assertions": true
+  },
+  "preparation_note": "CPU prepare-v2 ran before the FP32 probe run-method restoration-order fix; prepare_probe itself unchanged. These are read-only CPU preparations, not model runs. Current source hashes above supersede their helper snapshot for GPU preflight.",
+  "estimate": {
+    "prior_original_candidate_seconds_per_update": 2.554929549,
+    "prior_causal_preflight_seconds_per_update": 3.153162132,
+    "500_updates_minutes_per_arm_before_probes": [
+      21.29,
+      26.28
+    ],
+    "rough_FP32_probe_minutes_per_arm": [
+      2,
+      4
+    ],
+    "rough_total_minutes_per_arm": [
+      24,
+      31
+    ],
+    "prior_peak_allocated_GiB": 13.32,
+    "prior_peak_reserved_GiB": 13.98,
+    "actual_new_probe_peak_unmeasured": true,
+    "full_checkpoint_bytes_per_arm_reference": 8030658920,
+    "estimated_two_final_checkpoint_GiB": 14.96,
+    "retention": "one final500 checkpoint perarm; posterior matrices small; shared DINO cache reused not copied"
+  },
+  "main_training_started": false,
+  "GPU_started": false
+}

@@ -1,0 +1,24 @@
+/home/sadasue/foveated-world-models/.venv/lib/python3.12/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+{"step": 1, "mse": 0.08516573905944824, "preclip_gradient_norm": 0.008173088543117046, "elapsed_seconds": 0.5973392550367862}
+{"step": 10, "mse": 0.11151628196239471, "preclip_gradient_norm": 0.01148410513997078, "elapsed_seconds": 3.4068809980526567}
+{"step": 20, "mse": 0.11132492870092392, "preclip_gradient_norm": 0.009402795694768429, "elapsed_seconds": 6.576362097170204}
+{"step": 40, "mse": 0.08051501959562302, "preclip_gradient_norm": 0.005519784055650234, "elapsed_seconds": 12.901653692126274}
+{"step": 60, "mse": 0.10971059650182724, "preclip_gradient_norm": 0.02167293056845665, "elapsed_seconds": 19.21648731501773}
+{"step": 80, "mse": 0.12403909862041473, "preclip_gradient_norm": 0.01659860834479332, "elapsed_seconds": 25.52195145911537}
+{"step": 100, "mse": 0.07772007584571838, "preclip_gradient_norm": 0.003614377463236451, "elapsed_seconds": 31.84792339312844}
+{"step": 120, "mse": 0.08741985261440277, "preclip_gradient_norm": 0.007536217104643583, "elapsed_seconds": 38.12600521813147}
+{"step": 140, "mse": 0.11343540251255035, "preclip_gradient_norm": 0.0070866686291992664, "elapsed_seconds": 44.36632061214186}
+{"step": 160, "mse": 0.10096519440412521, "preclip_gradient_norm": 0.009921767748892307, "elapsed_seconds": 50.64068849012256}
+{"step": 180, "mse": 0.11272852122783661, "preclip_gradient_norm": 0.005797357764095068, "elapsed_seconds": 56.926881939172745}
+{"step": 200, "mse": 0.12439285218715668, "preclip_gradient_norm": 0.008042844943702221, "elapsed_seconds": 63.182966120075434}
+{"step": 220, "mse": 0.08411729335784912, "preclip_gradient_norm": 0.0059710475616157055, "elapsed_seconds": 69.43892587115988}
+{"step": 240, "mse": 0.0907285138964653, "preclip_gradient_norm": 0.004360624589025974, "elapsed_seconds": 75.6843804991804}
+{"step": 260, "mse": 0.11989697068929672, "preclip_gradient_norm": 0.007531061768531799, "elapsed_seconds": 81.95299411308952}
+{"step": 280, "mse": 0.0907834991812706, "preclip_gradient_norm": 0.004443959333002567, "elapsed_seconds": 88.20140616199933}
+{"step": 300, "mse": 0.081454336643219, "preclip_gradient_norm": 0.005306395702064037, "elapsed_seconds": 94.4417220200412}
+{"step": 320, "mse": 0.09774017333984375, "preclip_gradient_norm": 0.0059034922160208225, "elapsed_seconds": 100.62995159602724}
+{"step": 340, "mse": 0.09803169220685959, "preclip_gradient_norm": 0.0043945820070803165, "elapsed_seconds": 106.86193956108764}
+{"step": 360, "mse": 0.08990974724292755, "preclip_gradient_norm": 0.009771090000867844, "elapsed_seconds": 113.07604622212239}
+{"step": 380, "mse": 0.11117544025182724, "preclip_gradient_norm": 0.008341804146766663, "elapsed_seconds": 119.28733613714576}
+{"step": 400, "mse": 0.10689470171928406, "preclip_gradient_norm": 0.006889382842928171, "elapsed_seconds": 125.55820678710006}

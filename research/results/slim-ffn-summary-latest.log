@@ -1,0 +1,63 @@
+{
+  "pending": [],
+  "runs": {
+    "ffn4-seed42": {
+      "mse": {
+        "train": 0.08027585720628849,
+        "dev64": 0.0983791162725538,
+        "observed96": 0.0855736662245666
+      },
+      "parameters": 13410048
+    },
+    "ffn2-seed42": {
+      "mse": {
+        "train": 0.08105241494922666,
+        "dev64": 0.09869070374406874,
+        "observed96": 0.085750884997348
+      },
+      "parameters": 11049216
+    },
+    "ffn4-seed43": {
+      "mse": {
+        "train": 0.08033439449354773,
+        "dev64": 0.09970413288101554,
+        "observed96": 0.08674841572064906
+      },
+      "parameters": 13410048
+    },
+    "ffn2-seed43": {
+      "mse": {
+        "train": 0.08131119371682871,
+        "dev64": 0.10023939306847751,
+        "observed96": 0.08770477610717838
+      },
+      "parameters": 11049216
+    },
+    "ffn4-seed44": {
+      "mse": {
+        "train": 0.07995770254274248,
+        "dev64": 0.09826412657275796,
+        "observed96": 0.08583476043228681
+      },
+      "parameters": 13410048
+    },
+    "ffn2-seed44": {
+      "mse": {
+        "train": 0.08083355960116023,
+        "dev64": 0.09837695298483595,
+        "observed96": 0.08639956395685051
+      },
+      "parameters": 11049216
+    }
+  },
+  "aggregate": {
+    "ffn4_mean_risk": 0.08605228079250082,
+    "ffn2_mean_risk": 0.0866184083537923,
+    "mean_difference": 0.0005661275612914729,
+    "conditional_paired_ci95": [
+      0.0003572610531894801,
+      0.0007960187542873124
+    ],
+    "interpretation": "Mean of three risks, not prediction ensemble. Conditional episode bootstrap excludes seed/training/model-selection uncertainty."
+  }
+}

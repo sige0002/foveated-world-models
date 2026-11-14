@@ -1,0 +1,15 @@
+/home/sadasue/foveated-world-models/.venv/lib/python3.12/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+train CV fold 1 complete
+train CV fold 2 complete
+train CV fold 3 complete
+train CV fold 4 complete
+train CV fold 5 complete
+zero {'train': 0.0005669723336701955, 'validation': 0.42001288663077985, 'observed96': 0.40262879368282417}
+F {'train': 0.0004999347289650058, 'validation': 0.29198174793155957, 'observed96': 0.2755935855833926}
+H42 {'train': 0.00048227674202835046, 'validation': 0.287323143714744, 'observed96': 0.2783217618343718}
+H43 {'train': 0.00047645275903208673, 'validation': 0.28458356622675846, 'observed96': 0.2758782540986904}
+H44 {'train': 0.0004825937622944628, 'validation': 0.28821218284099315, 'observed96': 0.27804468282067407}
+HD42 {'train': 0.000467534262878707, 'validation': 0.285546597911072, 'observed96': 0.2747066940173987}
+HD43 {'train': 0.00046822252744459203, 'validation': 0.28613458974962847, 'observed96': 0.2686634407511496}
+HD44 {'train': 0.0004717933120107707, 'validation': 0.286273625745029, 'observed96': 0.27181055109043195}

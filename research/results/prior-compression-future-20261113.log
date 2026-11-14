@@ -1,0 +1,7 @@
+/home/sadasue/foveated-world-models/.venv/lib/python3.12/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+{'step': 100, 'objective': 0.11831516027450562, 'gradient_norm': 0.041391123086214066}
+{'step': 200, 'objective': 0.14884145557880402, 'gradient_norm': 0.060649409890174866}
+{'step': 300, 'objective': 0.10257041454315186, 'gradient_norm': 0.0523771233856678}
+{'step': 400, 'objective': 0.12777090072631836, 'gradient_norm': 0.08179790526628494}
+{'train': {'prior_teacher_mse': 0.03983207550481893, 'prior_future_mse': 0.11220600207525422, 'final_future_mse': 0.10965440039581154, 'final_teacher_mse': 0.03648376995624858, 'reference_final_mse': 0.08027585720628849, 'reference_prior_mse': 0.10224843382457038}, 'dev64': {'prior_teacher_mse': 0.04520970952580683, 'prior_future_mse': 0.14586982340551913, 'final_future_mse': 0.14013561105821282, 'final_teacher_mse': 0.04367311761598103, 'reference_final_mse': 0.0983791162725538, 'reference_prior_mse': 0.11916549759916961}, 'observed96': {'prior_teacher_mse': 0.044432697216204055, 'prior_future_mse': 0.12581007124390453, 'final_future_mse': 0.12288126364971201, 'final_teacher_mse': 0.04157522338209674, 'reference_final_mse': 0.0855736662245666, 'reference_prior_mse': 0.1042185661693414}}
