@@ -8,6 +8,7 @@ VAL is final3000-highest-fp32/features512-highest-fp32.pt. Both are under
 robotwin-loss-ablation-b4-20261114/evaluations on the experiment drive.
 """
 import argparse
+import copy
 import json
 import time
 from pathlib import Path
@@ -52,19 +53,20 @@ def predictions(model, x, state, z):
 
 
 @torch.no_grad()
-def evaluate(model, cache, ids):
+def evaluate(model, cache, ids, *, training_cache=False, include_swap=True):
     model.eval()
     codes = []
     for ix in ids.split(8):
-        x, y, _, _ = batch(cache, ix, False)
+        x, y, _, _ = batch(cache, ix, training_cache)
         codes.append(model.vq._encode(model.idm(x, y))[0])
     codes = torch.cat(codes)
     swapped = codes.roll(1, 0)
     metrics = {}
-    for name, latent in [('real', codes), ('swapped', swapped)]:
+    variants = [('real', codes), ('swapped', swapped)] if include_swap else [('real', codes)]
+    for name, latent in variants:
         errors = []
         for ix, z in zip(ids.split(8), latent.split(8)):
-            x, y, state, delta = batch(cache, ix, False)
+            x, y, state, delta = batch(cache, ix, training_cache)
             visual, action = predictions(model, x, state, z)
             errors.append(torch.stack([(visual-y).square().mean(), (action-delta).square().mean()]))
         metrics[name] = dict(zip(('visual_mse', 'state_mse'), torch.stack(errors).mean(0).tolist()))
@@ -89,7 +91,15 @@ def run(args):
                             generator=torch.Generator().manual_seed(args.seed + 1))
     result = dict(seed=args.seed, steps=args.steps, batch_size=8, eval_episodes=len(ids),
                   train_identity=train.get('identity_sha256'), val_indices=ids.tolist(), arms={})
+    if args.curves:
+        test_ids = torch.tensor(indices[128:256])
+        assert len(test_ids) == 128
+        train_ids = torch.randperm(len(train['rows']), generator=torch.Generator().manual_seed(2026))[:128]
+        result.update(test_indices=test_ids.tolist(), train_indices=train_ids.tolist(),
+                      selection='minimum validation state_mse, earliest tie')
     for arm in ('raw', 'difference'):
+        curve = []
+        best_loss = float('inf')
         torch.manual_seed(args.seed)
         model = Pilot(arm).cuda()
         optimizer = torch.optim.AdamW(model.parameters(), lr=3e-4, weight_decay=.01)
@@ -104,11 +114,24 @@ def run(args):
             loss.backward()
             nn.utils.clip_grad_norm_(model.parameters(), 1., error_if_nonfinite=True)
             optimizer.step()
+            if args.curves and (step % 100 == 0 or step == args.steps):
+                validation = evaluate(model, val, ids, include_swap=False)['real']
+                training = evaluate(model, train, train_ids, training_cache=True, include_swap=False)['real']
+                curve.append(dict(step=step, train=training, validation=validation))
+                if validation['state_mse'] < best_loss:
+                    best_loss = validation['state_mse']
+                    best_step = step
+                    best_weights = copy.deepcopy(model.state_dict())
+                model.train()
             if step in (2, args.steps):
                 print(arm, step, loss.item(), time.monotonic()-start,
                       torch.cuda.max_memory_allocated(), flush=True)
         seconds = time.monotonic()-start
         result['arms'][arm] = dict(train_seconds=seconds, metrics=evaluate(model, val, ids))
+        if args.curves:
+            model.load_state_dict(best_weights)
+            result['arms'][arm].update(curve=curve, selected_step=best_step,
+                                       test=evaluate(model, val, test_ids))
         del model, optimizer
     print(json.dumps(result['arms'], indent=2))
     args.output.write_text(json.dumps(result, indent=2)+'\n')
@@ -121,4 +144,5 @@ if __name__ == '__main__':
     parser.add_argument('output', type=Path)
     parser.add_argument('--steps', type=int, default=800)
     parser.add_argument('--seed', type=int, default=42)
+    parser.add_argument('--curves', action='store_true')
     run(parser.parse_args())
