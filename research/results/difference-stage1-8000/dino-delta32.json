@@ -1,0 +1,17 @@
+{
+  "state_plus_dino_delta32": {
+    "all": 0.0730771511322384,
+    "position": 0.015175618127137233,
+    "orientation": 0.01710242772018427,
+    "gripper": 0.47068064379575825
+  },
+  "state_only": {
+    "all": 0.0819901716169697,
+    "position": 0.02215567609308045,
+    "orientation": 0.019562599477996323,
+    "gripper": 0.511203946744531
+  },
+  "alpha": 0.001,
+  "train_pairs": 2048,
+  "validation_pairs": 512
+}

@@ -1,0 +1,12 @@
+{
+  "status": "interim, one full-scale training seed per architecture (42)",
+  "dataset": "RoboTwin qfix, 512 previously evaluated validation pairs, 415 unique episodes, disjoint from Stage 1 training",
+  "selection": "latest available numbered difference-IDM checkpoint at evaluation start, 8000 updates",
+  "comparison": "standard-IDM archived FP32 per-pair predictions and posterior means; row and donor identities matched",
+  "timing": "elapsed wall time from the progress logs of the two GB10 runs, including their own intervening validation/checkpoint overhead; bracketed at adjacent archived checkpoints (not a matched FLOP experiment)",
+  "metrics": "mean over pairs and valid components; normalized state deltas; future DINO feature MSE with true posterior mean; no future-blind policy rollout",
+  "intervals": "paired episode cluster bootstrap. 10000 draws, fixed trained models. Crossfit intervals additionally condition on out-of-fold predictions, not repeated seed or training-set uncertainty",
+  "crossfit": "same episode folds for every frozen representation; five outer folds, five inner folds, alpha selected on inner folds only",
+  "probe2048": "separate ridge fit on original 2048 training pairs, episode-wise 5-fold alpha selection; evaluate on 512 validation pairs. Identical protocol for the DINO baseline using train-only PCA.",
+  "dino_control": "spatial average of frozen features at each endpoint, future minus current, 32 training PCA components, concatenated with current state; fold-local PCA for ridge selection"
+}
