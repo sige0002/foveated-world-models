@@ -1,0 +1,44 @@
+{
+  "complete": true,
+  "samples": 512,
+  "train_episodes": 26125,
+  "val_episodes": 1375,
+  "overlap": 0,
+  "cache": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/evaluations/final3000-highest-fp32/features512-highest-fp32.pt",
+  "cache_sha256": "eafacc5cea01814ec8c12f3e0420348a9da7bc12deeaf7cd9f0bb3d952733c15",
+  "split": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/kl_mse/episode_split.json",
+  "split_sha256": "c75f6d4ea34a34e8e2d67682da3fc3ebc00d733957486fea6f954931b0a9ed35",
+  "data_root": "/media/sadasue/SSD1/foveated-world-models/research/official-data-contract-audit-20261113/robotwin-qfix-data",
+  "state_dim": 32,
+  "valid_dim": 16,
+  "state_groups": {
+    "position": [
+      0,
+      1,
+      2,
+      8,
+      9,
+      10
+    ],
+    "orientation": [
+      3,
+      4,
+      5,
+      6,
+      11,
+      12,
+      13,
+      14
+    ],
+    "gripper": [
+      7,
+      15
+    ]
+  },
+  "external_probe": {
+    "interval": 5000,
+    "train_samples": 2048,
+    "cache": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-loss-ablation-b4-20261114/evaluations/matched-state-probes-fp32-20261114/train2048-highest-fp32-features.pt",
+    "sha256": "71f90adbdf5ad66e63472c37c314310eb041409e06b7256ec1643efdb75df96b"
+  }
+}

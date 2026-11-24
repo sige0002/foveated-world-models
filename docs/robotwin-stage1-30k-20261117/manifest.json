@@ -1,0 +1,341 @@
+{
+  "evaluation_results": {
+    "step000000": {
+      "original": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-official-fresh-b64-30k/evaluations/step000000-308b3dbe3115/results.json",
+      "sha256": "a7a9318d962464f3cb60efa802aed391face9f6f2f57c3c0131f19de4be806bb",
+      "checkpoint_sha256": "1d7d9a4095181e4c5321191bbb88ad49fa1c2109d9d515117a347d60945f1d47"
+    },
+    "step001000": {
+      "original": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-official-fresh-b64-30k/evaluations/step001000-19b22e513fe4/results.json",
+      "sha256": "e1e07e2d3a8e4b03d0c2256594a5cbeb93652328382bd3da7dd3cc017ac805d4",
+      "checkpoint_sha256": "58410b7e9f22b92fb7af8f248d70d59ff4b3da9423092741f0296be3d9828c80"
+    },
+    "step002000": {
+      "original": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-official-fresh-b64-30k/evaluations/step002000-e5866558aaf0/results.json",
+      "sha256": "6051c41a410b76b72e66659a98b2f6a7d610a684dc007a90981725db585a26da",
+      "checkpoint_sha256": "d5f4e8050229ee8943cd146bf3cc5b6fbda32759cd8a5a27437911e40f7e7fd8"
+    },
+    "step003000": {
+      "original": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-official-fresh-b64-30k/evaluations/step003000-4ddecf24bfd8/results.json",
+      "sha256": "8b98a669a198a67a2362f4dd1816e57a63c74a9d92dbcc4c6e2668010d6e1733",
+      "checkpoint_sha256": "d84d2145de1c9de3bfa544b91241b8e3eca4de0bd87bdbdc6867e29526b87145"
+    },
+    "step004000": {
+      "original": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-official-fresh-b64-30k/evaluations/step004000-d2e2be79d622/results.json",
+      "sha256": "d632a1969c5cbe33b1fc0cea3f486ecdc3cb20e93124148ab6229b01e4fbb76f",
+      "checkpoint_sha256": "2cdd26533ba7b49b673a3cf566068b0b66271125d853de724e728f9d8bb1ac63"
+    },
+    "step005000": {
+      "original": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-official-fresh-b64-30k/evaluations/step005000-cdf27640482e/results.json",
+      "sha256": "1a0e361e004c08d7245d1bbb5eddd32c1029042f8d3ff1eb05c34f3aa5deb7cc",
+      "checkpoint_sha256": "bb1403305059fcc27c96569b4d1e62ab1479637fa913fa4c552da4e33f62e321"
+    },
+    "step006000": {
+      "original": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-official-fresh-b64-30k/evaluations/step006000-9bd1cd024f5a/results.json",
+      "sha256": "2b29c2f29786b5923f1be83c0c32740a9a1e589cb7f616522b9e198a870c2b00",
+      "checkpoint_sha256": "8df3081d408b3a7f765d75c11c89271d7fadae9a06be49c46ac0711eeac1453f"
+    },
+    "step007000": {
+      "original": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-official-fresh-b64-30k/evaluations/step007000-95147eec435c/results.json",
+      "sha256": "9ade22c4da1688cc02ef4f4fb8b326f0d963c77d2b4765caf1a016f69fda190b",
+      "checkpoint_sha256": "1d1081e4fa079fcb9e011ec1636992f90693eb3291d36a340ce641869ef0125e"
+    },
+    "step008000": {
+      "original": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-official-fresh-b64-30k/evaluations/step008000-50ed18772666/results.json",
+      "sha256": "3c936a0aa5117f2517995cda9e2fe637ed86b3dce8b61880e448786ed9c5b78a",
+      "checkpoint_sha256": "be5614e1969a1ebdebd168fec1bb7b8ada104242d8e10880c759da72a48a1bca"
+    },
+    "step009000": {
+      "original": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-official-fresh-b64-30k/evaluations/step009000-5c74a7d06129/results.json",
+      "sha256": "58a8b146344dd6183b2a9d4278be5a5f435a571e7eb1ab7230fd00a9d1b98050",
+      "checkpoint_sha256": "7d172de97622f892ca8ae2728c1fec4b249f1829647f49e04acc426bb1515a51"
+    },
+    "step010000": {
+      "original": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-official-fresh-b64-30k/evaluations/step010000-bd7e85d7869c/results.json",
+      "sha256": "834c2a9762c97b61aecc5bea1cb8dc25de5013870a32c0ce38dc1814a2474afc",
+      "checkpoint_sha256": "952f6a784f5284f2fadda85813b42e911460cf5d203ed2a747f90bccaa9ab6a6"
+    },
+    "step011000": {
+      "original": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-official-fresh-b64-30k/evaluations/step011000-ffc50c440943/results.json",
+      "sha256": "f677907b211ffc0f4ca5b033b1070d9ad78a016125c284fc9b8c6c0186c6681d",
+      "checkpoint_sha256": "8e833913cce0d012fc838474464e826bf287b62a0378c592773c744818014f9a"
+    },
+    "step012000": {
+      "original": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-official-fresh-b64-30k/evaluations/step012000-21873d91d89c/results.json",
+      "sha256": "913dd3b0c64ad4bb6715d1e155e26a0c74de6fa2d94b00ec08556be2376df3ed",
+      "checkpoint_sha256": "87a5deb0de168969aae1f14ce8ae0053560c02ff5e13dcdcf79bcb8ae0cf1a12"
+    },
+    "step013000": {
+      "original": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-official-fresh-b64-30k/evaluations/step013000-5a2c5936eaa5/results.json",
+      "sha256": "368461af6da047e9c2770e27b516c6a831b2b282ad8d5a797ffe528e42ef9cc3",
+      "checkpoint_sha256": "695ed47f0b49ea4a4d996b3a56222c495bfcaa36ce8adae356478ace305a44d9"
+    },
+    "step014000": {
+      "original": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-official-fresh-b64-30k/evaluations/step014000-4580ea61ba37/results.json",
+      "sha256": "90ca4adb70f23939ca3c741e34e4ab7ab98a04639e363ef27ad738f40870d059",
+      "checkpoint_sha256": "2ad62a0acaedd06dad3e80af20ebe422292e52de814500edda7ab6776c49e74a"
+    },
+    "step015000": {
+      "original": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-official-fresh-b64-30k/evaluations/step015000-178c309babf0/results.json",
+      "sha256": "6ee73ab9bda76e22e7605ed75901e110ae62733d871bdb5eb73ed3cd48e4a91a",
+      "checkpoint_sha256": "91c0744425d063ce9f044a9cf9a0728d088ac4a1a9f68b6fd1598b0a22877333"
+    },
+    "step016000": {
+      "original": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-official-fresh-b64-30k/evaluations/step016000-22e9b9be8fb8/results.json",
+      "sha256": "86eb4f7826091070f599cea26fde0d774de9f14ffa455f9507714e04a90d3ad2",
+      "checkpoint_sha256": "55db360ea9dfa436f3e37b0a663db389db1f887bc173dd0ac7a8ee1b28e4ed15"
+    },
+    "step017000": {
+      "original": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-official-fresh-b64-30k/evaluations/step017000-7e63c06db024/results.json",
+      "sha256": "249e31a50fafe6bad060606e027280fe308c7e230ad256fc52aa7c77f2e87199",
+      "checkpoint_sha256": "66651ec71b3ab702114488bf83206dd546dd5f07d480e099b31384cab8d05fe2"
+    },
+    "step018000": {
+      "original": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-official-fresh-b64-30k/evaluations/step018000-1ef29b55e968/results.json",
+      "sha256": "af57eff3054d4d9102a6458f8b21ce6b2121c0d542eee41724da53f05ba164da",
+      "checkpoint_sha256": "27ceb213b4fec5822e58d97c96a4a98a7150523be0d958e8fd5c894bb01c854c"
+    },
+    "step019000": {
+      "original": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-official-fresh-b64-30k/evaluations/step019000-00d47ba5c3f5/results.json",
+      "sha256": "f8f40fed834f641cfa2231b02a0f34218510ba31ef256ecd7a1d80904b038d9b",
+      "checkpoint_sha256": "66c78e5bf0eab0083761683c6bb970472c171a076dc71ca8cfd1e1bb7dbe031f"
+    },
+    "step020000": {
+      "original": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-official-fresh-b64-30k/evaluations/step020000-bd9d15b0f1eb/results.json",
+      "sha256": "087a21f67c0c5f341c8102062065f52f63bb067feb0bbf4cb448265e516a0358",
+      "checkpoint_sha256": "ec59723b6b4902cb1685025b416d11c2976088b6b060bd175eac83a5351dc301"
+    },
+    "step021000": {
+      "original": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-official-fresh-b64-30k/evaluations/step021000-73bf902883cb/results.json",
+      "sha256": "d6908b52a0b93a7254d0a58a095fb7883578e765bc7a87ed9871025e23212742",
+      "checkpoint_sha256": "50d2ccedb498158038770043b5617caabe03fd7317b7bed31b4d937299d1188c"
+    },
+    "step022000": {
+      "original": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-official-fresh-b64-30k/evaluations/step022000-561f6471e387/results.json",
+      "sha256": "104df5a32c294b8f56fee2113a24edcab9366bd41a60f7cfaed3cff55e194238",
+      "checkpoint_sha256": "d77e56b90301526f84242da87bddb2d1043748e5991c47082e8e5ef0be215be9"
+    },
+    "step023000": {
+      "original": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-official-fresh-b64-30k/evaluations/step023000-ca6c1de0cd3d/results.json",
+      "sha256": "0bcd955f6eef61cd7dc1ee4ec612809238a0d5db6d9ff052a57c8e250adac37d",
+      "checkpoint_sha256": "0985671b8f774897123be1a7e1d7085d737b47324c3de5ca3b982e2f56ff38ef"
+    },
+    "step024000": {
+      "original": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-official-fresh-b64-30k/evaluations/step024000-7e37d503ca1e/results.json",
+      "sha256": "23a8ce1ab2f55d6680458e12d788fd495ea1caa8cae4d7d0ca6cbfe9387391bc",
+      "checkpoint_sha256": "339f8eb433f6a55adaaa285d175cca4643b472d12b035bdf8e9b264c68278c13"
+    },
+    "step025000": {
+      "original": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-official-fresh-b64-30k/evaluations/step025000-550614c1e218/results.json",
+      "sha256": "cd3a8b98132f2010e67a08d472a9919c2e05811eca6bc0d878cf654cd56c9542",
+      "checkpoint_sha256": "40575cfab785f0694ad530919b1c9e3a7573cc2d401abcc0fd6081f69fdbc9ab"
+    },
+    "step026000": {
+      "original": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-official-fresh-b64-30k/evaluations/step026000-0a180e98abfa/results.json",
+      "sha256": "1e3b084bdce897176d5b29b93b25c91e92a670599f16b50a9578261f3c3c417d",
+      "checkpoint_sha256": "1f572123fd326767bb8cd5d00456d0533c70c62dcb29751fba5e0aff7e691141"
+    },
+    "step027000": {
+      "original": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-official-fresh-b64-30k/evaluations/step027000-7a6aba2e5f35/results.json",
+      "sha256": "c2698c8478fb8908aa295db075fdba1467bb92722541c63d0c6cc1f3e21ce329",
+      "checkpoint_sha256": "d54b205e07c7925a33a1940484c028ddaf3b7a295d70a3524b2ce04078f2576c"
+    },
+    "step028000": {
+      "original": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-official-fresh-b64-30k/evaluations/step028000-d1dd1b66bfaf/results.json",
+      "sha256": "b9109fe12e47580fe488156e32c236e28e27160e3b46fd8f820a2b9a8ecf1151",
+      "checkpoint_sha256": "68baae5049a19dc92c9c40779614b7109c5ba0deb9795e91b172938935d1fe8a"
+    },
+    "step029000": {
+      "original": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-official-fresh-b64-30k/evaluations/step029000-3f10295a9a01/results.json",
+      "sha256": "acd3d350340dacdf351e09a994069bab96ebda827969d35e030f54d501a2c64a",
+      "checkpoint_sha256": "f2a130eeefe8002e4950874f278fadf791a7e143b0f58ff40c9e4eb5ad2b8f68"
+    },
+    "step030000": {
+      "original": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-official-fresh-b64-30k/evaluations/step030000-d093bf0900b4/results.json",
+      "sha256": "c01c07aecbf39f526323f75ff3a45e3f9dd9e151e6ddfd21d92d981472201563",
+      "checkpoint_sha256": "17ad6ec1786af67f572daecb127b9a06a90c18088c3e8f540af634cc9d203877"
+    }
+  },
+  "checkpoint_deletion": [
+    {
+      "path": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-official-fresh-b64-30k/checkpoints/step000000.ckpt",
+      "bytes": 2905370325,
+      "sha256_from_completed_evaluation": "1d7d9a4095181e4c5321191bbb88ad49fa1c2109d9d515117a347d60945f1d47",
+      "status": "deleted"
+    },
+    {
+      "path": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-official-fresh-b64-30k/checkpoints/step001000.ckpt",
+      "bytes": 8030681959,
+      "sha256_from_completed_evaluation": "58410b7e9f22b92fb7af8f248d70d59ff4b3da9423092741f0296be3d9828c80",
+      "status": "deleted"
+    },
+    {
+      "path": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-official-fresh-b64-30k/checkpoints/step002000.ckpt",
+      "bytes": 8030682087,
+      "sha256_from_completed_evaluation": "d5f4e8050229ee8943cd146bf3cc5b6fbda32759cd8a5a27437911e40f7e7fd8",
+      "status": "deleted"
+    },
+    {
+      "path": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-official-fresh-b64-30k/checkpoints/step003000.ckpt",
+      "bytes": 8030682087,
+      "sha256_from_completed_evaluation": "d84d2145de1c9de3bfa544b91241b8e3eca4de0bd87bdbdc6867e29526b87145",
+      "status": "deleted"
+    },
+    {
+      "path": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-official-fresh-b64-30k/checkpoints/step004000.ckpt",
+      "bytes": 8030682087,
+      "sha256_from_completed_evaluation": "2cdd26533ba7b49b673a3cf566068b0b66271125d853de724e728f9d8bb1ac63",
+      "status": "deleted"
+    },
+    {
+      "path": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-official-fresh-b64-30k/checkpoints/step005000.ckpt",
+      "bytes": 8030682087,
+      "sha256_from_completed_evaluation": "bb1403305059fcc27c96569b4d1e62ab1479637fa913fa4c552da4e33f62e321",
+      "status": "deleted"
+    },
+    {
+      "path": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-official-fresh-b64-30k/checkpoints/step006000.ckpt",
+      "bytes": 8030682087,
+      "sha256_from_completed_evaluation": "8df3081d408b3a7f765d75c11c89271d7fadae9a06be49c46ac0711eeac1453f",
+      "status": "deleted"
+    },
+    {
+      "path": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-official-fresh-b64-30k/checkpoints/step007000.ckpt",
+      "bytes": 8030682087,
+      "sha256_from_completed_evaluation": "1d1081e4fa079fcb9e011ec1636992f90693eb3291d36a340ce641869ef0125e",
+      "status": "deleted"
+    },
+    {
+      "path": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-official-fresh-b64-30k/checkpoints/step008000.ckpt",
+      "bytes": 8030682087,
+      "sha256_from_completed_evaluation": "be5614e1969a1ebdebd168fec1bb7b8ada104242d8e10880c759da72a48a1bca",
+      "status": "deleted"
+    },
+    {
+      "path": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-official-fresh-b64-30k/checkpoints/step009000.ckpt",
+      "bytes": 8030682087,
+      "sha256_from_completed_evaluation": "7d172de97622f892ca8ae2728c1fec4b249f1829647f49e04acc426bb1515a51",
+      "status": "deleted"
+    },
+    {
+      "path": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-official-fresh-b64-30k/checkpoints/step010000.ckpt",
+      "bytes": 8030682087,
+      "sha256_from_completed_evaluation": "952f6a784f5284f2fadda85813b42e911460cf5d203ed2a747f90bccaa9ab6a6",
+      "status": "deleted"
+    },
+    {
+      "path": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-official-fresh-b64-30k/checkpoints/step011000.ckpt",
+      "bytes": 8030682087,
+      "sha256_from_completed_evaluation": "8e833913cce0d012fc838474464e826bf287b62a0378c592773c744818014f9a",
+      "status": "deleted"
+    },
+    {
+      "path": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-official-fresh-b64-30k/checkpoints/step012000.ckpt",
+      "bytes": 8030682087,
+      "sha256_from_completed_evaluation": "87a5deb0de168969aae1f14ce8ae0053560c02ff5e13dcdcf79bcb8ae0cf1a12",
+      "status": "deleted"
+    },
+    {
+      "path": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-official-fresh-b64-30k/checkpoints/step013000.ckpt",
+      "bytes": 8030682087,
+      "sha256_from_completed_evaluation": "695ed47f0b49ea4a4d996b3a56222c495bfcaa36ce8adae356478ace305a44d9",
+      "status": "deleted"
+    },
+    {
+      "path": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-official-fresh-b64-30k/checkpoints/step014000.ckpt",
+      "bytes": 8030682087,
+      "sha256_from_completed_evaluation": "2ad62a0acaedd06dad3e80af20ebe422292e52de814500edda7ab6776c49e74a",
+      "status": "deleted"
+    },
+    {
+      "path": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-official-fresh-b64-30k/checkpoints/step015000.ckpt",
+      "bytes": 8030682087,
+      "sha256_from_completed_evaluation": "91c0744425d063ce9f044a9cf9a0728d088ac4a1a9f68b6fd1598b0a22877333",
+      "status": "deleted"
+    },
+    {
+      "path": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-official-fresh-b64-30k/checkpoints/step016000.ckpt",
+      "bytes": 8030682087,
+      "sha256_from_completed_evaluation": "55db360ea9dfa436f3e37b0a663db389db1f887bc173dd0ac7a8ee1b28e4ed15",
+      "status": "deleted"
+    },
+    {
+      "path": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-official-fresh-b64-30k/checkpoints/step017000.ckpt",
+      "bytes": 8030682087,
+      "sha256_from_completed_evaluation": "66651ec71b3ab702114488bf83206dd546dd5f07d480e099b31384cab8d05fe2",
+      "status": "deleted"
+    },
+    {
+      "path": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-official-fresh-b64-30k/checkpoints/step018000.ckpt",
+      "bytes": 8030682087,
+      "sha256_from_completed_evaluation": "27ceb213b4fec5822e58d97c96a4a98a7150523be0d958e8fd5c894bb01c854c",
+      "status": "deleted"
+    },
+    {
+      "path": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-official-fresh-b64-30k/checkpoints/step019000.ckpt",
+      "bytes": 8030682087,
+      "sha256_from_completed_evaluation": "66c78e5bf0eab0083761683c6bb970472c171a076dc71ca8cfd1e1bb7dbe031f",
+      "status": "deleted"
+    },
+    {
+      "path": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-official-fresh-b64-30k/checkpoints/step020000.ckpt",
+      "bytes": 8030682087,
+      "sha256_from_completed_evaluation": "ec59723b6b4902cb1685025b416d11c2976088b6b060bd175eac83a5351dc301",
+      "status": "deleted"
+    },
+    {
+      "path": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-official-fresh-b64-30k/checkpoints/step021000.ckpt",
+      "bytes": 8030682087,
+      "sha256_from_completed_evaluation": "50d2ccedb498158038770043b5617caabe03fd7317b7bed31b4d937299d1188c",
+      "status": "deleted"
+    },
+    {
+      "path": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-official-fresh-b64-30k/checkpoints/step022000.ckpt",
+      "bytes": 8030682087,
+      "sha256_from_completed_evaluation": "d77e56b90301526f84242da87bddb2d1043748e5991c47082e8e5ef0be215be9",
+      "status": "deleted"
+    },
+    {
+      "path": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-official-fresh-b64-30k/checkpoints/step023000.ckpt",
+      "bytes": 8030682087,
+      "sha256_from_completed_evaluation": "0985671b8f774897123be1a7e1d7085d737b47324c3de5ca3b982e2f56ff38ef",
+      "status": "deleted"
+    },
+    {
+      "path": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-official-fresh-b64-30k/checkpoints/step024000.ckpt",
+      "bytes": 8030682087,
+      "sha256_from_completed_evaluation": "339f8eb433f6a55adaaa285d175cca4643b472d12b035bdf8e9b264c68278c13",
+      "status": "deleted"
+    },
+    {
+      "path": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-official-fresh-b64-30k/checkpoints/step025000.ckpt",
+      "bytes": 8030682087,
+      "sha256_from_completed_evaluation": "40575cfab785f0694ad530919b1c9e3a7573cc2d401abcc0fd6081f69fdbc9ab",
+      "status": "deleted"
+    },
+    {
+      "path": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-official-fresh-b64-30k/checkpoints/step026000.ckpt",
+      "bytes": 8030682087,
+      "sha256_from_completed_evaluation": "1f572123fd326767bb8cd5d00456d0533c70c62dcb29751fba5e0aff7e691141",
+      "status": "deleted"
+    },
+    {
+      "path": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-official-fresh-b64-30k/checkpoints/step027000.ckpt",
+      "bytes": 8030682087,
+      "sha256_from_completed_evaluation": "d54b205e07c7925a33a1940484c028ddaf3b7a295d70a3524b2ce04078f2576c",
+      "status": "deleted"
+    },
+    {
+      "path": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-official-fresh-b64-30k/checkpoints/step028000.ckpt",
+      "bytes": 8030682087,
+      "sha256_from_completed_evaluation": "68baae5049a19dc92c9c40779614b7109c5ba0deb9795e91b172938935d1fe8a",
+      "status": "deleted"
+    },
+    {
+      "path": "/media/sadasue/SSD1/foveated-world-models/runs/robotwin-official-fresh-b64-30k/checkpoints/step029000.ckpt",
+      "bytes": 8030682087,
+      "sha256_from_completed_evaluation": "f2a130eeefe8002e4950874f278fadf791a7e143b0f58ff40c9e4eb5ad2b8f68",
+      "status": "deleted"
+    }
+  ]
+}

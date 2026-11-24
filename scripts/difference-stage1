@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+set -euo pipefail
+root=$(cd "$(dirname "$0")/.." && pwd)
+if [[ -n ${LAWAM_PYTHON:-} ]]; then
+  python=$LAWAM_PYTHON
+elif [[ -x "$root/.venv-lawam-stage1/bin/python" ]]; then
+  python="$root/.venv-lawam-stage1/bin/python"
+else
+  python=python3
+fi
+exec "$python" "$root/research/difference_cli.py" "$@"

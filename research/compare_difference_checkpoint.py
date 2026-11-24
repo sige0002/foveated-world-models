@@ -13,20 +13,6 @@ from research.evaluate_robotwin_loss_ablation_fp32_v2 import digest, native_rout
 from research.stage1_external_probe import run as probe
 
 
-def elapsed(path):
-    times = {}
-    total = 0.0
-    prev = 0
-    for line in path.read_text().splitlines():
-        row = json.loads(line)
-        step = row["step"]
-        assert step > prev
-        total += (step - prev) * row["seconds_per_update"]
-        times[step] = total
-        prev = step
-    return times
-
-
 def paired(rows, baseline):
     ids = [(r["episode"], r["base"], r["donor_index"]) for r in rows]
     assert ids == [(r["episode"], r["base"], r["donor_index"]) for r in baseline]
@@ -97,31 +83,18 @@ def main():
     assert eval_episodes <= set(split["val"]) and eval_episodes.isdisjoint(
         split["train"]
     )
-    dtime = elapsed(run / "progress.jsonl")[step]
-    times = elapsed(archive / "progress.jsonl")
-    candidates = sorted(k for k in times if k % 1000 == 0)
-    matched = min(candidates, key=lambda k: abs(times[k] - dtime))
-    below = max((k for k in candidates if times[k] <= dtime), default=candidates[0])
-    following = next((k for k in candidates if times[k] >= dtime), candidates[-1])
-    comparisons = {}
+    ref = json.loads((archive / "results" / f"step{step:06d}.json").read_text())
+    assert ref["complete"] and ref["identity"]["step"] == step
     with torch.inference_mode():
         parity = native_route_parity(model, cache, official=False)
         data = evaluate_model(model, cache, 2, out, official=False)
-    for k in sorted({step, matched, below, following}):
-        ref = json.loads((archive / "results" / f"step{k:06d}.json").read_text())
-        assert ref["complete"] and ref["identity"]["step"] == k
-        comparisons[k] = dict(
-            elapsed_seconds=times[k], **paired(data["rows"], ref["rows"])
-        )
     report = dict(
         step=step,
         sha256=ckpt_hash,
-        difference_seconds=dtime,
         cache_sha256=contract["cache_sha256"],
         same_step=step,
-        nearest_logged_time_step=matched,
         parity=parity,
-        comparisons=comparisons,
+        comparisons={step: paired(data["rows"], ref["rows"])},
     )
     (out / "rows.json").write_text(json.dumps(data["rows"]))
     (out / "comparison.json").write_text(json.dumps(report, indent=2))
