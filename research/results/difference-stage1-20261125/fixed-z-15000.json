@@ -1,0 +1,24 @@
+{
+  "8000": {
+    "mu_top_variance_fraction": 0.34125259948303904,
+    "snr_directions_above_one": 11,
+    "mu_entropy_effective_rank": 7.399741403931213,
+    "mu_variance_trace": 6.340857769805088,
+    "noise_variance_trace": 0.877801011302795
+  },
+  "15000": {
+    "mu_top_variance_fraction": 0.24115905206275706,
+    "snr_directions_above_one": 11,
+    "mu_entropy_effective_rank": 8.302741020632084,
+    "mu_variance_trace": 6.21962713694055,
+    "noise_variance_trace": 0.882524991821655,
+    "real_state_mse": 0.008008896373212337,
+    "zero_state_mse": 0.09262609481811523,
+    "swapped_state_mse": 0.08558588474988937,
+    "mean_state_mse": 0.06904113292694092,
+    "no_change_state_mse": 0.1596994400024414
+  },
+  "cache_sha256": "eafacc5cea01814ec8c12f3e0420348a9da7bc12deeaf7cd9f0bb3d952733c15",
+  "checkpoint_sha256": "ca0f6b9b6d9bd5d4cd141d82d7c006a5388d0ae342cdc83de4d7f58ede880b8d",
+  "device": "cuda"
+}
